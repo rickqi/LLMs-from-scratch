@@ -172,6 +172,9 @@ ch0?/0?_user_interface/chainlit.md
 ch0?/0?_user_interface/.files
 *.lock
 
+# Video files (too large for git)
+*.mp4
+
 # Temporary and OS-related files
 temp
 chainlit.md
