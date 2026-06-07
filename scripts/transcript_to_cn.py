@@ -1,43 +1,50 @@
 #!/usr/bin/env python3
 """
-一键：下载 YouTube 视频字幕 → 翻译中文 → 保存学习笔记
+一键：下载全部配套 YouTube 视频字幕 → 保存学习笔记
 
 用法（在你的本地机器上）：
   cd /path/to/LLMs-from-scratch
   source .venv/bin/activate
   pip install yt-dlp
   python scripts/transcript_to_cn.py
+
+然后复制生成的 .md 文件粘贴到 ChatGPT/DeepSeek 翻译：
+  "翻译以下英文技术文稿为简体中文，保留技术术语英文原文"
 """
 
-import subprocess, re, json, sys
+import subprocess, re, sys
 from pathlib import Path
-from datetime import timedelta
 
-VIDEO_URL = "https://www.youtube.com/watch?v=yAcWnfsZhzo"
-VIDEO_ID = "yAcWnfsZhzo"
-TITLE_ZH = "Python 环境配置指南"
-CHAPTER = "第 1 章"
-OUTPUT_FILE = "02-环境配置.md"
+VIDEOS = [
+    {"id": "yAcWnfsZhzo",    "chapter": "第 1 章", "title": "Python 环境配置指南",           "file": "02-环境配置.md"},
+    {"id": "kPGTx4wcm_w",    "chapter": "第 1 章", "title": "LLM 开发生命周期概述",        "file": "03-LLM生命周期.md"},
+    {"id": "341Rb8fJxY0",    "chapter": "第 2 章", "title": "文本数据处理跟练",             "file": "04-文本数据处理.md"},
+    {"id": "-Ll8DtpNtvk",    "chapter": "第 3 章", "title": "注意力机制跟练",              "file": "05-注意力机制.md"},
+    {"id": "PetlIokI9Ao",    "chapter": "第 3 章", "title": "PyTorch Buffers 深入理解",      "file": "06-PyTorch-Buffers.md"},
+    {"id": "YSAkgEarBGE",    "chapter": "第 4 章", "title": "GPT 模型实现跟练",             "file": "07-GPT模型实现.md"},
+    {"id": "Zar2TJv-sE0",    "chapter": "第 5 章", "title": "预训练跟练",                  "file": "08-预训练.md"},
+    {"id": "5PFXJYme4ik",    "chapter": "第 6 章", "title": "分类微调跟练",                "file": "09-分类微调.md"},
+    {"id": "4yNswvhPWCQ",    "chapter": "第 7 章", "title": "指令微调跟练",                "file": "10-指令微调.md"},
+]
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
 DOCS_DIR.mkdir(exist_ok=True)
 
-def download_vtt():
-    print(f"🔽 下载字幕: {VIDEO_URL}")
+def download_vtt(video_id):
+    url = f"https://www.youtube.com/watch?v={video_id}"
+    output = str(DOCS_DIR / f"_{video_id}")
     subprocess.run([
         "yt-dlp", "--no-update",
         "--write-auto-subs", "--sub-langs", "en",
         "--convert-subs", "vtt", "--skip-download",
-        "-o", str(DOCS_DIR / f"_{VIDEO_ID}"),
-        VIDEO_URL
+        "-o", output, url
     ], check=True, capture_output=True)
-
-    vtt_path = next(DOCS_DIR.glob(f"_{VIDEO_ID}*.vtt"), None)
-    if not vtt_path:
-        print("❌ 字幕文件未找到")
-        sys.exit(1)
-    return vtt_path
+    vtt = next(DOCS_DIR.glob(f"_{video_id}*.vtt"), None)
+    if not vtt:
+        print(f"  ⚠️ 字幕未找到: {video_id}")
+        return None
+    return vtt
 
 def parse_vtt(path):
     text = path.read_text(encoding="utf-8")
@@ -45,24 +52,23 @@ def parse_vtt(path):
     for line in text.split("\n"):
         line = line.strip()
         if "-->" in line:
-            t = line.split("-->")[0].strip()
-            segments.append({"time": t, "text": ""})
+            segments.append({"time": line.split("-->")[0].strip(), "text": ""})
         elif segments and line and not line.startswith("WEBVTT") and not line.isdigit():
             clean = re.sub(r"<[^>]+>", "", line)
             if clean:
                 segments[-1]["text"] += " " + clean
     return [s for s in segments if s["text"].strip()]
 
-def to_markdown(segments):
+def to_markdown(segments, video):
     lines = [
-        f"# {CHAPTER}：{TITLE_ZH}（视频笔记）",
+        f"# {video['chapter']}：{video['title']}（视频笔记）",
         "",
-        f"> 🎬 [原视频]({VIDEO_URL})",
-        f"> 📅 自动生成 | ⚠️ 以下为 AI 自动翻译，建议对照原视频核对",
+        f"> 🎬 [原视频](https://www.youtube.com/watch?v={video['id']})",
+        f"> 📅 自动生成 | ⚠️ 英文原文，需手动翻译为中文",
         "",
         "---",
         "",
-        "## 英文原文 + 中文翻译",
+        "## 英文原文（带时间戳）",
         "",
     ]
     for s in segments:
@@ -70,80 +76,33 @@ def to_markdown(segments):
         ts_str = f"{int(ts[0]):02d}:{int(ts[1]):02d}:{int(float(ts[2])):02d}"
         lines.append(f"**[{ts_str}]** {s['text'].strip()}")
         lines.append("")
-    lines.extend(["", "---", "", "## 📝 关键要点（待补充）", "", "- [ ] ", "- [ ] ", "- [ ] "])
+    lines.extend(["", "---", "", "## 📝 中文翻译", "", "> 💡 将以上英文内容粘贴到 ChatGPT/DeepSeek 翻译", "", "## 🎯 关键要点", "", "- [ ] 要点 1", "- [ ] 要点 2", "- [ ] 要点 3"])
     return "\n".join(lines)
 
-def translate_with_deepseek(text):
-    """使用 DeepSeek API 翻译（免费额度可用）"""
-    import requests
-    api_key = "sk-your-key-here"  # 替换你的 API key
-    url = "https://api.deepseek.com/chat/completions"
-    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+success = 0
+for v in VIDEOS:
+    print(f"\n{'='*50}\n  {v['chapter']}: {v['title']}\n{'='*50}")
+    try:
+        vtt = download_vtt(v["id"])
+        if not vtt:
+            continue
+        segs = parse_vtt(vtt)
+        print(f"  📝 解析到 {len(segs)} 个分段")
+        if not segs:
+            print("  ⚠️ 无有效字幕内容")
+            continue
+        md = to_markdown(segs, v)
+        path = DOCS_DIR / v["file"]
+        path.write_text(md, encoding="utf-8")
+        print(f"  💾 已保存: {path}")
+        vtt.unlink()
+        success += 1
+    except Exception as e:
+        print(f"  ❌ 失败: {e}")
 
-    prompt = f"Translate the following English technical transcript to Simplified Chinese. Keep technical terms in English. Output ONLY the Chinese translation, no explanations:\n\n{text}"
-
-    resp = requests.post(url, headers=headers, json={
-        "model": "deepseek-chat",
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.1,
-        "max_tokens": 4096,
-    }, timeout=60)
-
-    if resp.status_code == 200:
-        return resp.json()["choices"][0]["message"]["content"]
-    return f"[翻译失败: {resp.status_code}]"
-
-def translate_en_to_cn(content):
-    """翻译英文 Markdown 为中文"""
-    print("🌐 正在翻译...")
-
-    lines = content.split("\n")
-    result = []
-    translating = False
-
-    for line in lines:
-        if line.startswith("**[") and line.strip().endswith("**"):
-            result.append(line)
-            translating = True
-        elif translating and line.strip():
-            en_text = line.strip()
-            cn_text = translate_with_deepseek(en_text)
-            result.append(f"{en_text}")
-            result.append(f"> 🇨🇳 {cn_text}")
-            result.append("")
-            translating = False
-        else:
-            result.append(line)
-            translating = False
-
-    return "\n".join(result)
-
-# --- main ---
-print("=" * 50)
-print(f"  {TITLE_ZH} → 中文学术笔记")
-print("=" * 50)
-
-vtt = download_vtt()
-print(f"✅ 字幕已下载: {len(vtt.read_text())} 字节")
-
-segs = parse_vtt(vtt)
-print(f"📝 解析到 {len(segs)} 个分段")
-
-md = to_markdown(segs)
-path = DOCS_DIR / OUTPUT_FILE
-path.write_text(md, encoding="utf-8")
-print(f"💾 已保存: {path}")
-
-vtt.unlink()
-print("🧹 已清理临时文件")
-
-print(f"""
-{'='*50}
-✅ 完成！打开 {path} 查看
-
-💡 如需中文翻译（方式任选）：
-   1️⃣ 复制笔记内容 → 粘贴到 ChatGPT / DeepSeek
-      提示词: "翻译以下英文为简体中文，保留技术术语英文"
-   2️⃣ 设置 API key 后重新运行此脚本自动翻译
-{'='*50}
-""")
+print(f"\n{'='*50}")
+print(f"✅ 完成！成功 {success}/{len(VIDEOS)} 个视频")
+print(f"\n📂 文件保存在: {DOCS_DIR}")
+print(f"🌐 翻译步骤：将生成的 .md 文件粘贴到 ChatGPT/DeepSeek")
+print(f"   提示词: '翻译为简体中文，保留技术术语英文原文'")
+print(f"{'='*50}")
