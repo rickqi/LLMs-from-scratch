@@ -1,0 +1,9 @@
+# 第 2 章：处理文本数据
+
+### 主章节代码
+
+- [ch02.ipynb](ch02.ipynb) 包含本章中出现的所有代码
+
+### 可选代码
+
+- [dataloader.ipynb](dataloader.ipynb) 是一个精简 Notebook，包含本章实现的主要数据加载管线

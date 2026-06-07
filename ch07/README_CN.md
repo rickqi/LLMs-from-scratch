@@ -1,0 +1,17 @@
+# 第 7 章：指令跟随微调
+
+## 主章节代码
+
+- [01_main-chapter-code](01_main-chapter-code) 包含主章节代码和练习解答
+
+## 补充材料
+
+- [02_dataset-utilities](02_dataset-utilities) 包含可用于准备指令数据集的工具代码
+- [03_model-evaluation](03_model-evaluation) 包含使用本地 Llama 3 模型和 GPT-4 API 评估指令响应的工具代码
+- [04_preference-tuning-with-dpo](04_preference-tuning-with-dpo) 实现了使用直接偏好优化（Direct Preference Optimization, DPO）进行偏好微调的代码
+- [05_dataset-generation](05_dataset-generation) 包含生成和改进指令微调合成数据集的代码
+- [06_user_interface](06_user_interface) 实现了一个交互式用户界面，用于与预训练后的 LLM 进行对话
+
+## 本章跟练视频
+
+[![视频链接](https://img.youtube.com/vi/4yNswvhPWCQ/0.jpg)](https://www.youtube.com/watch?v=4yNswvhPWCQ)
