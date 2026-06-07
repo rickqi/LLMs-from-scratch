@@ -1,0 +1,4934 @@
+1
+00:00:00,0100 --> 00:00:00,0200
+yeah hi and welcome everyone to this
+大家好，欢迎来到本期
+
+2
+00:00:00,0200 --> 00:00:00,0200
+yeah hi and welcome everyone to this
+大家好，欢迎来到本期
+
+3
+00:00:00,0200 --> 00:00:00,0500
+yeah hi and welcome everyone to this coding Along video for the build a large
+大家好，欢迎来到本期《从零构建大语言模型》一书的编程跟随视频
+
+4
+00:00:00,0500 --> 00:00:00,0500
+coding Along video for the build a large
+《从零构建大语言模型》一书的编程跟随视频
+
+5
+00:00:00,0500 --> 00:00:00,0800
+coding Along video for the build a large language model from scratchbook my name
+《从零构建大语言模型》一书的编程跟随视频，我是作者 Sebastian Raschka
+
+6
+00:00:00,0800 --> 00:00:00,0800
+language model from scratchbook my name
+我是作者 Sebastian Raschka
+
+7
+00:00:00,0800 --> 00:00:00,1000
+language model from scratchbook my name is Sebastian rashka and I'm the author
+我是作者 Sebastian Raschka，也是本书作者，我计划为本书录制
+
+8
+00:00:00,1000 --> 00:00:00,1000
+is Sebastian rashka and I'm the author
+也是本书作者，我计划为本书录制
+
+9
+00:00:00,1000 --> 00:00:00,1300
+is Sebastian rashka and I'm the author of this book and I'm planning to record
+也是本书作者，我计划为本书录制一系列视频作为补充资源。如你所知
+
+10
+00:00:00,1300 --> 00:00:00,1300
+of this book and I'm planning to record
+一系列视频作为补充资源。如你所知
+
+11
+00:00:00,1300 --> 00:00:00,1500
+of this book and I'm planning to record a couple of videos for this book as a
+一系列视频作为补充资源。如你所知，本书共有七章
+
+12
+00:00:00,1500 --> 00:00:00,1500
+a couple of videos for this book as a
+本书共有七章
+
+13
+00:00:00,1500 --> 00:00:00,1800
+a couple of videos for this book as a supplementary resource so as you might
+本书共有七章，视频将涵盖每一章的内容，我希望
+
+14
+00:00:00,1800 --> 00:00:00,1800
+supplementary resource so as you might
+视频将涵盖每一章的内容，我希望
+
+15
+00:00:00,1800 --> 00:00:00,2000
+supplementary resource so as you might know there are seven chapters in this
+视频将涵盖每一章的内容，我希望以更随意但
+
+16
+00:00:00,2000 --> 00:00:00,2000
+know there are seven chapters in this
+以更随意但
+
+17
+00:00:00,2000 --> 00:00:00,2300
+know there are seven chapters in this book and the videos will be from each of
+以更随意但也更有趣的方式讲解部分代码示例
+
+18
+00:00:00,2300 --> 00:00:00,2300
+book and the videos will be from each of
+也更有趣的方式讲解部分代码示例
+
+19
+00:00:00,2300 --> 00:00:00,2400
+book and the videos will be from each of these chapters where I will hopefully
+也更有趣的方式讲解部分代码示例。当然，视频不会像
+
+20
+00:00:00,2400 --> 00:00:00,2500
+these chapters where I will hopefully
+当然，视频不会像
+
+21
+00:00:00,2500 --> 00:00:00,2700
+these chapters where I will hopefully provide a more I would say casual but
+当然，视频不会像书籍本身那样全面，因此
+
+22
+00:00:00,2700 --> 00:00:00,2700
+provide a more I would say casual but
+书籍本身那样全面，因此
+
+23
+00:00:00,2700 --> 00:00:00,2900
+provide a more I would say casual but also interesting take on some of the
+书籍本身那样全面，因此最好与书籍配合使用。话虽如此，我计划
+
+24
+00:00:00,2900 --> 00:00:00,2900
+also interesting take on some of the
+最好与书籍配合使用。话虽如此，我计划
+
+25
+00:00:00,2900 --> 00:00:00,3000
+also interesting take on some of the code examp
+最好与书籍配合使用。话虽如此，我计划为每一章录制视频，但
+
+26
+00:00:00,3000 --> 00:00:00,3000
+code examp
+为每一章录制视频，但
+
+27
+00:00:00,3000 --> 00:00:00,3300
+code examp however of course the videos won't be as
+为每一章录制视频，但第一章（我们来看第一章）
+
+28
+00:00:00,3300 --> 00:00:00,3300
+however of course the videos won't be as
+第一章（我们来看第一章）
+
+29
+00:00:00,3300 --> 00:00:00,3500
+however of course the videos won't be as comprehensive as the book itself so they
+第一章（我们来看第一章）没有代码示例，所以
+
+30
+00:00:00,3500 --> 00:00:00,3500
+comprehensive as the book itself so they
+没有代码示例，所以
+
+31
+00:00:00,3500 --> 00:00:00,3800
+comprehensive as the book itself so they work best in combination with a book
+没有代码示例，所以我想在第一个视频中
+
+32
+00:00:00,3800 --> 00:00:00,3800
+work best in combination with a book
+我想在第一个视频中
+
+33
+00:00:00,3800 --> 00:00:00,4100
+work best in combination with a book that being said um so I'm planning to
+我想在第一个视频中展示如何设置 Python 环境
+
+34
+00:00:00,4100 --> 00:00:00,4100
+that being said um so I'm planning to
+展示如何设置 Python 环境
+
+35
+00:00:00,4100 --> 00:00:00,4300
+that being said um so I'm planning to record videos for each chapter however
+展示如何设置 Python 环境，以便你能运行第 2 到第 7 章的代码
+
+36
+00:00:00,4300 --> 00:00:00,4300
+record videos for each chapter however
+以便你能运行第 2 到第 7 章的代码
+
+37
+00:00:00,4300 --> 00:00:00,4700
+record videos for each chapter however chapter one if we go to chapter one here
+以便你能运行第 2 到第 7 章的代码。当然，有很多不同的
+
+38
+00:00:00,4700 --> 00:00:00,4700
+chapter one if we go to chapter one here
+当然，有很多不同的
+
+39
+00:00:00,4700 --> 00:00:00,4900
+chapter one if we go to chapter one here does not have any code examples so I
+当然，有很多不同的方法可以设置 Python 环境
+
+40
+00:00:00,4900 --> 00:00:00,4900
+does not have any code examples so I
+方法可以设置 Python 环境
+
+41
+00:00:00,4900 --> 00:00:00,5200
+does not have any code examples so I thought for the for this first video I
+方法可以设置 Python 环境，在这个视频中，我计划
+
+42
+00:00:00,5200 --> 00:00:00,5200
+thought for the for this first video I
+在这个视频中，我计划
+
+43
+00:00:00,5200 --> 00:00:00,5400
+thought for the for this first video I would show you how you can set up your
+在这个视频中，我计划展示我的个人偏好
+
+44
+00:00:00,5400 --> 00:00:00,5400
+would show you how you can set up your
+展示我的个人偏好
+
+45
+00:00:00,5400 --> 00:00:00,5600
+would show you how you can set up your python environment so that you can then
+展示我的个人偏好，即如何在新电脑上设置 Python
+
+46
+00:00:00,5600 --> 00:00:00,5600
+python environment so that you can then
+如何在新电脑上设置 Python
+
+47
+00:00:00,5600 --> 00:00:01,0000
+python environment so that you can then run the code for chapters 2 to7
+如何在新电脑上设置 Python。是的，即使我自己有时也会思考
+
+48
+00:00:01,0000 --> 00:00:01,0000
+run the code for chapters 2 to7
+即使我自己有时也会思考
+
+49
+00:00:01,0000 --> 00:00:01,0200
+run the code for chapters 2 to7 and of course there are many different
+即使我自己有时也会思考如何理想地设置 Python
+
+50
+00:00:01,0200 --> 00:00:01,0200
+and of course there are many different
+如何理想地设置 Python
+
+51
+00:00:01,0200 --> 00:00:01,0400
+and of course there are many different ways you can set up a python environment
+如何理想地设置 Python，所以推荐方法会变化，我尽量
+
+52
+00:00:01,0400 --> 00:00:01,0400
+ways you can set up a python environment
+所以推荐方法会变化，我尽量
+
+53
+00:00:01,0400 --> 00:00:01,0600
+ways you can set up a python environment and um here in this video I'm planning
+所以推荐方法会变化，我尽量保持简单，但
+
+54
+00:00:01,0600 --> 00:00:01,0600
+and um here in this video I'm planning
+保持简单，但
+
+55
+00:00:01,0600 --> 00:00:01,0900
+and um here in this video I'm planning to show you my personal preference so
+保持简单，但也使用最新的推荐和工具
+
+56
+00:00:01,0900 --> 00:00:01,0900
+to show you my personal preference so
+也使用最新的推荐和工具
+
+57
+00:00:01,0900 --> 00:00:01,1200
+to show you my personal preference so how I would set up python on a new
+也使用最新的推荐和工具，以提供理想的体验。因此，我在 GitHub 上有一个
+
+58
+00:00:01,1200 --> 00:00:01,1200
+how I would set up python on a new
+因此，我在 GitHub 上有一个
+
+59
+00:00:01,1200 --> 00:00:01,1600
+how I would set up python on a new computer and yeah even I sometimes think
+因此，我在 GitHub 上有一个补充资源。GitHub 是我分享
+
+60
+00:00:01,1600 --> 00:00:01,1600
+computer and yeah even I sometimes think
+补充资源。GitHub 是我分享
+
+61
+00:00:01,1600 --> 00:00:01,1900
+computer and yeah even I sometimes think about how I would ideally set up python
+补充资源。GitHub 是我分享本书部分代码的地方，如果你访问
+
+62
+00:00:01,1900 --> 00:00:01,1900
+about how I would ideally set up python
+本书部分代码的地方，如果你访问
+
+63
+00:00:01,1900 --> 00:00:01,2300
+about how I would ideally set up python so um recommendations change and I try
+本书部分代码的地方，如果你访问我的账户 RBT，然后找到 llm Das 从
+
+64
+00:00:01,2300 --> 00:00:01,2300
+so um recommendations change and I try
+so um recommendations change and I try
+
+65
+00:00:01,2300 --> 00:00:01,2500
+so um recommendations change and I try you know to try to keep it simple but
+so um recommendations change and I try you know to try to keep it simple but
+
+66
+00:00:01,2500 --> 00:00:01,2500
+you know to try to keep it simple but
+you know to try to keep it simple but
+
+67
+00:00:01,2500 --> 00:00:01,2800
+you know to try to keep it simple but also use the latest um I would say
+you know to try to keep it simple but also use the latest um I would say
+
+68
+00:00:01,2800 --> 00:00:01,2800
+also use the latest um I would say
+also use the latest um I would say
+
+69
+00:00:01,2800 --> 00:00:01,3100
+also use the latest um I would say recommendations and tools to provide an
+also use the latest um I would say recommendations and tools to provide an
+
+70
+00:00:01,3100 --> 00:00:01,3100
+recommendations and tools to provide an
+recommendations and tools to provide an
+
+71
+00:00:01,3100 --> 00:00:01,3300
+recommendations and tools to provide an ideal experience so I do have a
+recommendations and tools to provide an ideal experience so I do have a
+
+72
+00:00:01,3300 --> 00:00:01,3300
+ideal experience so I do have a
+ideal experience so I do have a
+
+73
+00:00:01,3300 --> 00:00:01,3600
+ideal experience so I do have a supplementary resource here on GitHub so
+ideal experience so I do have a supplementary resource here on GitHub so
+
+74
+00:00:01,3600 --> 00:00:01,3600
+supplementary resource here on GitHub so
+supplementary resource here on GitHub so
+
+75
+00:00:01,3600 --> 00:00:01,3800
+supplementary resource here on GitHub so GitHub um is a place where I share some
+supplementary resource here on GitHub so GitHub um is a place where I share some
+
+76
+00:00:01,3800 --> 00:00:01,3800
+GitHub um is a place where I share some
+GitHub um is a place where I share some
+
+77
+00:00:01,3800 --> 00:00:01,4100
+GitHub um is a place where I share some of the code for this book and if you go
+GitHub um is a place where I share some of the code for this book and if you go
+
+78
+00:00:01,4100 --> 00:00:01,4100
+of the code for this book and if you go
+of the code for this book and if you go
+
+79
+00:00:01,4100 --> 00:00:01,4600
+of the code for this book and if you go to my account RBT and then llm Das from
+of the code for this book and if you go to my account RBT and then llm Das from
+
+80
+00:00:01,4600 --> 00:00:01,4600
+to my account RBT and then llm Das from
+to my account RBT and then llm Das from
+
+81
+00:00:01,4600 --> 00:00:01,4800
+to my account RBT and then llm Das from scratch um yeah you can get to this
+在我的RBT账户中，然后从头开始构建LLM Das，嗯，是的，你可以访问这个
+
+82
+00:00:01,4800 --> 00:00:01,4800
+scratch um yeah you can get to this
+从头开始，嗯，是的，你可以访问这个
+
+83
+00:00:01,4800 --> 00:00:01,5100
+scratch um yeah you can get to this GitHub repository and then there is this
+从头开始，嗯，是的，你可以访问这个GitHub仓库，然后这里有这个
+
+84
+00:00:01,5100 --> 00:00:01,5100
+GitHub repository and then there is this
+GitHub仓库，然后这里有这个
+
+85
+00:00:01,5100 --> 00:00:01,5400
+GitHub repository and then there is this convenient setup folder that I yeah set
+GitHub仓库，然后这里有这个方便的setup文件夹，我嗯设置了
+
+86
+00:00:01,5400 --> 00:00:01,5400
+convenient setup folder that I yeah set
+方便的setup文件夹，我嗯设置了
+
+87
+00:00:01,5400 --> 00:00:01,5600
+convenient setup folder that I yeah set up here where you can find some
+方便的setup文件夹，我嗯设置在这里，你可以找到一些
+
+88
+00:00:01,5600 --> 00:00:01,5600
+up here where you can find some
+在这里，你可以找到一些
+
+89
+00:00:01,5600 --> 00:00:01,5800
+up here where you can find some recommendations like I mentioned before
+在这里，你可以找到一些建议，就像我之前提到的
+
+90
+00:00:01,5800 --> 00:00:01,5800
+recommendations like I mentioned before
+建议，就像我之前提到的
+
+91
+00:00:01,5800 --> 00:00:02,0100
+recommendations like I mentioned before I will be showing you you can set up
+建议，就像我之前提到的，我会展示你可以设置
+
+92
+00:00:02,0100 --> 00:00:02,0100
+I will be showing you you can set up
+我会展示你可以设置
+
+93
+00:00:02,0100 --> 00:00:02,0300
+I will be showing you you can set up your own computer environment for this
+我会展示你可以为这本书设置自己的计算机环境
+
+94
+00:00:02,0300 --> 00:00:02,0300
+your own computer environment for this
+你自己的计算机环境
+
+95
+00:00:02,0300 --> 00:00:02,0600
+your own computer environment for this book on your own computer um personally
+你自己的计算机环境，嗯，个人来说
+
+96
+00:00:02,0600 --> 00:00:02,0600
+book on your own computer um personally
+这本书在你的电脑上，嗯，个人来说
+
+97
+00:00:02,0600 --> 00:00:02,0900
+book on your own computer um personally I will be using a MacBook mini uh sorry
+这本书在你的电脑上，嗯，个人来说，我会使用一台MacBook mini，呃，抱歉
+
+98
+00:00:02,0900 --> 00:00:02,0900
+I will be using a MacBook mini uh sorry
+我会使用一台MacBook mini，呃，抱歉
+
+99
+00:00:02,0900 --> 00:00:02,1200
+I will be using a MacBook mini uh sorry MacBook Air which is almost 5 years old
+我会使用一台MacBook mini，呃，抱歉，MacBook Air，它已经用了将近5年
+
+100
+00:00:02,1200 --> 00:00:02,1200
+MacBook Air which is almost 5 years old
+MacBook Air，它已经用了将近5年
+
+101
+00:00:02,1200 --> 00:00:02,1400
+MacBook Air which is almost 5 years old now and the code hopefully will run
+MacBook Air，它已经用了将近5年，代码希望能完美运行
+
+102
+00:00:02,1400 --> 00:00:02,1400
+now and the code hopefully will run
+现在，代码希望能完美运行
+
+103
+00:00:02,1400 --> 00:00:02,1600
+now and the code hopefully will run perfectly there because I made sure when
+现在，代码希望能完美运行，因为我确保在写这本书时
+
+104
+00:00:02,1600 --> 00:00:02,1600
+perfectly there because I made sure when
+完美运行，因为我确保在写这本书时
+
+105
+00:00:02,1600 --> 00:00:02,1800
+perfectly there because I made sure when I WR the book that it runs on different
+完美运行，因为我确保在写这本书时，它能在不同的硬件上运行
+
+106
+00:00:02,1800 --> 00:00:02,1800
+I WR the book that it runs on different
+我写这本书时，它能在不同的硬件上运行
+
+107
+00:00:02,1800 --> 00:00:02,2000
+I WR the book that it runs on different different Hardware so the book will
+我写这本书时，它能在不同的硬件上运行，所以这本书会
+
+108
+00:00:02,2000 --> 00:00:02,2000
+different Hardware so the book will
+不同的硬件，所以这本书会
+
+109
+00:00:02,2000 --> 00:00:02,2300
+different Hardware so the book will automatically run on gpus if you have a
+不同的硬件，所以这本书会自动在GPU上运行，如果你有
+
+110
+00:00:02,2300 --> 00:00:02,2300
+automatically run on gpus if you have a
+自动在GPU上运行，如果你有
+
+111
+00:00:02,2300 --> 00:00:02,2500
+automatically run on gpus if you have a GPU but it will also run just fine on
+自动在GPU上运行，如果你有GPU，但它也能在旧硬件上正常运行
+
+112
+00:00:02,2500 --> 00:00:02,2500
+GPU but it will also run just fine on
+GPU，但它也能在旧硬件上正常运行
+
+113
+00:00:02,2500 --> 00:00:02,2800
+GPU but it will also run just fine on older Hardware cuz yeah the goal for
+GPU，但它也能在旧硬件上正常运行，因为嗯，这本书的目标是让它易于访问
+
+114
+00:00:02,2800 --> 00:00:02,2800
+older Hardware cuz yeah the goal for
+旧硬件，因为嗯，这本书的目标是让它易于访问
+
+115
+00:00:02,2800 --> 00:00:02,3000
+older Hardware cuz yeah the goal for this book was to make it accessible to
+旧硬件，因为嗯，这本书的目标是让它适用于不同的操作系统
+
+116
+00:00:02,3000 --> 00:00:02,3000
+this book was to make it accessible to
+这本书的目标是让它适用于不同的操作系统
+
+117
+00:00:02,3000 --> 00:00:02,3200
+this book was to make it accessible to different operating systems different
+这本书的目标是让它适用于不同的操作系统、不同的计算机环境以及所有硬件
+
+118
+00:00:02,3200 --> 00:00:02,3200
+different operating systems different
+不同的操作系统、不同的计算机环境
+
+119
+00:00:02,3200 --> 00:00:02,3500
+different operating systems different computer environments all the hardware
+不同的操作系统、不同的计算机环境以及所有硬件，等等
+
+120
+00:00:02,3500 --> 00:00:02,3500
+computer environments all the hardware
+计算机环境以及所有硬件
+
+121
+00:00:02,3500 --> 00:00:02,3800
+computer environments all the hardware and so forth however if for some reason
+计算机环境以及所有硬件，等等。然而，如果由于某些原因
+
+122
+00:00:02,3800 --> 00:00:02,3800
+and so forth however if for some reason
+等等。然而，如果由于某些原因
+
+123
+00:00:02,3800 --> 00:00:02,4000
+and so forth however if for some reason the setup instruction here doesn't work
+等等。然而，如果由于某些原因，这里的setup指令对你不起作用
+
+124
+00:00:02,4000 --> 00:00:02,4000
+the setup instruction here doesn't work
+这里的setup指令对你不起作用
+
+125
+00:00:02,4000 --> 00:00:02,4200
+the setup instruction here doesn't work for you you may also want to consider
+这里的setup指令对你不起作用，你可能也想考虑
+
+126
+00:00:02,4200 --> 00:00:02,4300
+for you you may also want to consider
+你可能也想考虑
+
+127
+00:00:02,4300 --> 00:00:02,4500
+for you you may also want to consider instead of running things locally to for
+你可能也想考虑，与其在本地运行，不如
+
+128
+00:00:02,4500 --> 00:00:02,4500
+instead of running things locally to for
+与其在本地运行，不如
+
+129
+00:00:02,4500 --> 00:00:02,4700
+instead of running things locally to for example um consider Cloud resources so I
+与其在本地运行，不如例如嗯考虑云资源，所以我
+
+130
+00:00:02,4700 --> 00:00:02,4700
+example um consider Cloud resources so I
+例如嗯考虑云资源，所以我
+
+131
+00:00:02,4700 --> 00:00:02,4900
+example um consider Cloud resources so I can highly recommend for example
+例如嗯考虑云资源，所以我强烈推荐例如
+
+132
+00:00:02,4900 --> 00:00:02,4900
+can highly recommend for example
+强烈推荐例如
+
+133
+00:00:02,4900 --> 00:00:02,5100
+can highly recommend for example lightning Studio which is one of the
+强烈推荐例如lightning Studio，这是最方便的方式之一
+
+134
+00:00:02,5100 --> 00:00:02,5100
+lightning Studio which is one of the
+lightning Studio，这是最方便的方式之一
+
+135
+00:00:02,5100 --> 00:00:02,5300
+lightning Studio which is one of the most convenient ways to run code in the
+lightning Studio，这是最方便的方式之一，可以在浏览器中运行代码
+
+136
+00:00:02,5300 --> 00:00:02,5300
+most convenient ways to run code in the
+最方便的方式之一，可以在浏览器中运行代码
+
+137
+00:00:02,5300 --> 00:00:02,5700
+most convenient ways to run code in the browser or executing code via your
+最方便的方式之一，可以在浏览器中运行代码，或者通过你的浏览器执行代码
+
+138
+00:00:02,5700 --> 00:00:02,5700
+browser or executing code via your
+浏览器中运行代码，或者通过你的浏览器执行代码
+
+139
+00:00:02,5700 --> 00:00:02,5800
+browser or executing code via your browser where it runs on a different
+浏览器中运行代码，或者通过你的浏览器执行代码，代码运行在云中的不同机器上
+
+140
+00:00:02,5800 --> 00:00:02,5800
+browser where it runs on a different
+浏览器，代码运行在云中的不同机器上
+
+141
+00:00:02,5800 --> 00:00:03,0000
+browser where it runs on a different machine in the cloud and there's of
+浏览器，代码运行在云中的不同机器上，当然还有Google Colab
+
+142
+00:00:03,0000 --> 00:00:03,0000
+machine in the cloud and there's of
+云中的不同机器上，当然还有Google Colab
+
+143
+00:00:03,0000 --> 00:00:03,0300
+machine in the cloud and there's of course also Google collab which is also
+云中的不同机器上，当然还有Google Colab，这也是一个非常广泛使用的平台
+
+144
+00:00:03,0300 --> 00:00:03,0300
+course also Google collab which is also
+当然还有Google Colab，这也是一个非常广泛使用的平台
+
+145
+00:00:03,0300 --> 00:00:03,0600
+course also Google collab which is also very widely used um platform to run uh
+当然还有Google Colab，这也是一个非常广泛使用的平台，用于运行Jupyter notebooks
+
+146
+00:00:03,0600 --> 00:00:03,0700
+very widely used um platform to run uh
+非常广泛使用的平台，用于运行Jupyter notebooks
+
+147
+00:00:03,0700 --> 00:00:03,0900
+very widely used um platform to run uh Jupiter notebooks and for this book all
+非常广泛使用的平台，用于运行Jupyter notebooks，对于这本书，所有章节都提供为Jupyter notebooks
+
+148
+00:00:03,0900 --> 00:00:03,0900
+Jupiter notebooks and for this book all
+Jupyter notebooks，对于这本书，所有章节都提供为Jupyter notebooks
+
+149
+00:00:03,0900 --> 00:00:03,1100
+Jupiter notebooks and for this book all the chapters are available as Jupiter
+Jupyter notebooks，对于这本书，所有章节都提供为Jupyter notebooks，你可以上传到Google Colab
+
+150
+00:00:03,1100 --> 00:00:03,1100
+the chapters are available as Jupiter
+章节都提供为Jupyter notebooks，你可以上传到Google Colab
+
+151
+00:00:03,1100 --> 00:00:03,1300
+the chapters are available as Jupiter notebooks which you can upload in Google
+章节都提供为Jupyter notebooks，你可以上传到Google Colab并在那里执行，以防你
+
+152
+00:00:03,1300 --> 00:00:03,1300
+notebooks which you can upload in Google
+notebooks，你可以上传到Google Colab并在那里执行，以防你
+
+153
+00:00:03,1300 --> 00:00:03,1600
+notebooks which you can upload in Google cab and execute there in case you have
+notebooks，你可以上传到Google Colab并在那里执行，以防你在设置自己的计算机环境时遇到任何问题
+
+154
+00:00:03,1600 --> 00:00:03,1600
+cab and execute there in case you have
+Colab并在那里执行，以防你在设置自己的计算机环境时遇到任何问题
+
+155
+00:00:03,1600 --> 00:00:03,1900
+cab and execute there in case you have any problems setting up your own
+Colab并在那里执行，以防你在设置自己的计算机环境时遇到任何问题
+
+156
+00:00:03,1900 --> 00:00:03,1900
+any problems setting up your own
+设置自己的计算机环境时遇到任何问题
+
+157
+00:00:03,1900 --> 00:00:03,2000
+any problems setting up your own computer environment on your own
+设置自己的计算机环境时遇到任何问题
+
+158
+00:00:03,2000 --> 00:00:03,2000
+computer environment on your own
+计算机环境
+
+159
+00:00:03,2000 --> 00:00:03,2200
+computer environment on your own computer but yeah to make this video
+计算机环境在你的电脑上，但是嗯，为了让这个视频
+
+160
+00:00:03,2200 --> 00:00:03,2200
+computer but yeah to make this video
+电脑上，但是嗯，为了让这个视频
+
+161
+00:00:03,2200 --> 00:00:03,2500
+computer but yeah to make this video interesting let me actually show you how
+计算机，但为了让这个视频更有趣，让我实际展示一下如何
+
+162
+00:00:03,2500 --> 00:00:03,2500
+interesting let me actually show you how
+有趣，让我实际展示一下如何
+
+163
+00:00:03,2500 --> 00:00:03,2800
+interesting let me actually show you how I would set up python on my own computer
+有趣，让我实际展示一下如何在我自己的计算机上设置Python
+
+164
+00:00:03,2800 --> 00:00:03,2800
+I would set up python on my own computer
+在我自己的计算机上设置Python
+
+165
+00:00:03,2800 --> 00:00:03,3100
+I would set up python on my own computer so for this actually this is a fresh um
+在我自己的计算机上设置Python，所以实际上这是一个全新的
+
+166
+00:00:03,3100 --> 00:00:03,3100
+so for this actually this is a fresh um
+所以实际上这是一个全新的
+
+167
+00:00:03,3100 --> 00:00:03,3200
+so for this actually this is a fresh um Al environment and setup on this
+所以实际上这是一个全新的AI环境和设置，在这台
+
+168
+00:00:03,3200 --> 00:00:03,3200
+Al environment and setup on this
+AI环境和设置，在这台
+
+169
+00:00:03,3200 --> 00:00:03,3500
+Al environment and setup on this computer just to mimic how you know I
+AI环境和设置在这台计算机上，只是为了模拟你知道我
+
+170
+00:00:03,3500 --> 00:00:03,3500
+computer just to mimic how you know I
+计算机上，只是为了模拟你知道我
+
+171
+00:00:03,3500 --> 00:00:03,3800
+computer just to mimic how you know I would set up python on a new computer in
+计算机上，只是为了模拟你知道我会如何在新计算机上设置Python
+
+172
+00:00:03,3800 --> 00:00:03,3800
+would set up python on a new computer in
+会如何在新计算机上设置Python
+
+173
+00:00:03,3800 --> 00:00:03,4000
+would set up python on a new computer in this case it's Mech OS and I do have a
+会如何在新计算机上设置Python，在这种情况下是Mech OS，我确实有一个
+
+174
+00:00:03,4000 --> 00:00:03,4000
+this case it's Mech OS and I do have a
+在这种情况下是Mech OS，我确实有一个
+
+175
+00:00:03,4000 --> 00:00:03,4300
+this case it's Mech OS and I do have a subfolder here that is called optional
+在这种情况下是Mech OS，我确实有一个子文件夹，叫做可选
+
+176
+00:00:03,4300 --> 00:00:03,4300
+subfolder here that is called optional
+子文件夹，叫做可选
+
+177
+00:00:03,4300 --> 00:00:03,4500
+subfolder here that is called optional python setup preferences so the emphasis
+子文件夹，叫做可选Python设置偏好，所以重点是
+
+178
+00:00:03,4500 --> 00:00:03,4500
+python setup preferences so the emphasis
+Python设置偏好，所以重点是
+
+179
+00:00:03,4500 --> 00:00:03,4900
+python setup preferences so the emphasis is an optional that this is something I
+Python设置偏好，重点是“可选”，这是我所
+
+180
+00:00:03,4900 --> 00:00:03,4900
+is an optional that this is something I
+是“可选”，这是我所
+
+181
+00:00:03,4900 --> 00:00:03,5100
+is an optional that this is something I recommend but you don't have to follow
+是“可选”，这是我推荐的，但你不必遵循
+
+182
+00:00:03,5100 --> 00:00:03,5100
+recommend but you don't have to follow
+推荐的，但你不必遵循
+
+183
+00:00:03,5100 --> 00:00:03,5300
+recommend but you don't have to follow it I mean you can install python Your
+推荐的，但你不必遵循它，我的意思是你可以用你自己的方式安装Python
+
+184
+00:00:03,5300 --> 00:00:03,5300
+it I mean you can install python Your
+它，我的意思是你可以用你自己的方式安装Python
+
+185
+00:00:03,5300 --> 00:00:03,5500
+it I mean you can install python Your Own Way um however this is how I would
+它，我的意思是你可以用你自己的方式安装Python，然而这是我
+
+186
+00:00:03,5500 --> 00:00:03,5600
+Own Way um however this is how I would
+自己的方式，然而这是我
+
+187
+00:00:03,5600 --> 00:00:04,0000
+Own Way um however this is how I would personally do it and um even there there
+自己的方式，然而这是我个人会做的，而且即使在那里
+
+188
+00:00:04,0000 --> 00:00:04,0000
+personally do it and um even there there
+个人会做的，而且即使在那里
+
+189
+00:00:04,0000 --> 00:00:04,0200
+personally do it and um even there there are multiple ways you can do it so I
+个人会做的，而且即使在那里也有多种方法可以做到，所以我
+
+190
+00:00:04,0200 --> 00:00:04,0200
+are multiple ways you can do it so I
+也有多种方法可以做到，所以我
+
+191
+00:00:04,0200 --> 00:00:04,0500
+are multiple ways you can do it so I used to be a cond user for a long time
+也有多种方法可以做到，所以我曾经是cond用户很长时间
+
+192
+00:00:04,0500 --> 00:00:04,0500
+used to be a cond user for a long time
+曾经是cond用户很长时间
+
+193
+00:00:04,0500 --> 00:00:04,0800
+used to be a cond user for a long time so cond is a package manager for python
+曾经是cond用户很长时间，所以cond是Python的包管理器
+
+194
+00:00:04,0800 --> 00:00:04,0800
+so cond is a package manager for python
+所以cond是Python的包管理器
+
+195
+00:00:04,0800 --> 00:00:04,1000
+so cond is a package manager for python and a bit more than that and I used it
+所以cond是Python的包管理器，而且不止于此，我用了它
+
+196
+00:00:04,1000 --> 00:00:04,1000
+and a bit more than that and I used it
+而且不止于此，我用了它
+
+197
+00:00:04,1000 --> 00:00:04,1300
+and a bit more than that and I used it for a long time to manage yeah my python
+而且不止于此，我用了很长时间来管理我的Python
+
+198
+00:00:04,1300 --> 00:00:04,1300
+for a long time to manage yeah my python
+很长时间来管理我的Python
+
+199
+00:00:04,1300 --> 00:00:04,1500
+for a long time to manage yeah my python libraries and in combination with cond I
+很长时间来管理我的Python库，并且结合cond我
+
+200
+00:00:04,1500 --> 00:00:04,1500
+libraries and in combination with cond I
+库，并且结合cond我
+
+201
+00:00:04,1500 --> 00:00:04,1700
+libraries and in combination with cond I also used pip which is like the um
+库，并且结合cond我还使用了pip，这就像是
+
+202
+00:00:04,1700 --> 00:00:04,1700
+also used pip which is like the um
+还使用了pip，这就像是
+
+203
+00:00:04,1700 --> 00:00:04,2000
+also used pip which is like the um Native official way in Python to install
+还使用了pip，这就像是Python中安装包的原生官方方式
+
+204
+00:00:04,2000 --> 00:00:04,2000
+Native official way in Python to install
+Python中安装包的原生官方方式
+
+205
+00:00:04,2000 --> 00:00:04,2300
+Native official way in Python to install packages however recently there's a new
+Python中安装包的原生官方方式，然而最近有一个新的
+
+206
+00:00:04,2300 --> 00:00:04,2300
+packages however recently there's a new
+包，然而最近有一个新的
+
+207
+00:00:04,2300 --> 00:00:04,2500
+packages however recently there's a new package called UV and this one is
+包，然而最近有一个叫做UV的新包，这个
+
+208
+00:00:04,2500 --> 00:00:04,2500
+package called UV and this one is
+叫做UV的新包，这个
+
+209
+00:00:04,2500 --> 00:00:04,2700
+package called UV and this one is essentially providing the same or
+叫做UV的新包，它本质上提供了与pip相同或
+
+210
+00:00:04,2700 --> 00:00:04,2700
+essentially providing the same or
+本质上提供了与pip相同或
+
+211
+00:00:04,2700 --> 00:00:04,3000
+essentially providing the same or similar syntax as pip but but also has
+本质上提供了与pip相同或相似的语法，但也有一些
+
+212
+00:00:04,3000 --> 00:00:04,3000
+similar syntax as pip but but also has
+相似的语法，但也有一些
+
+213
+00:00:04,3000 --> 00:00:04,3200
+similar syntax as pip but but also has some advantages and is very fast so I
+相似的语法，但也有一些优势，而且非常快，所以我
+
+214
+00:00:04,3200 --> 00:00:04,3200
+some advantages and is very fast so I
+优势，而且非常快，所以我
+
+215
+00:00:04,3200 --> 00:00:04,3500
+some advantages and is very fast so I actually recently also moved to just
+优势，而且非常快，所以我实际上最近也转向了只
+
+216
+00:00:04,3500 --> 00:00:04,3500
+actually recently also moved to just
+实际上最近也转向了只
+
+217
+00:00:04,3500 --> 00:00:04,3800
+actually recently also moved to just using UV because it's just much faster
+实际上最近也转向了只使用UV，因为它快得多
+
+218
+00:00:04,3800 --> 00:00:04,3800
+using UV because it's just much faster
+使用UV，因为它快得多
+
+219
+00:00:04,3800 --> 00:00:04,4100
+using UV because it's just much faster and it's a really nicely designed um
+使用UV，因为它快得多，而且设计得非常出色
+
+220
+00:00:04,4100 --> 00:00:04,4100
+and it's a really nicely designed um
+而且设计得非常出色
+
+221
+00:00:04,4100 --> 00:00:04,4300
+and it's a really nicely designed um package manager and yeah the python
+而且设计得非常出色的包管理器，是的，Python
+
+222
+00:00:04,4300 --> 00:00:04,4300
+package manager and yeah the python
+包管理器，是的，Python
+
+223
+00:00:04,4300 --> 00:00:04,4500
+package manager and yeah the python Community is very excited about this a
+包管理器，是的，Python社区对此非常兴奋
+
+224
+00:00:04,4500 --> 00:00:04,4500
+Community is very excited about this a
+社区对此非常兴奋
+
+225
+00:00:04,4500 --> 00:00:04,4700
+Community is very excited about this a lot of people in the python Community
+社区对此非常兴奋，Python社区中的很多人
+
+226
+00:00:04,4700 --> 00:00:04,4700
+lot of people in the python Community
+Python社区中的很多人
+
+227
+00:00:04,4700 --> 00:00:04,4900
+lot of people in the python Community are using this so I also thought I will
+Python社区中的很多人都在使用这个，所以我也觉得我会
+
+228
+00:00:04,4900 --> 00:00:04,4900
+are using this so I also thought I will
+都在使用这个，所以我也觉得我会
+
+229
+00:00:04,4900 --> 00:00:04,5100
+are using this so I also thought I will show you how you can set up your
+都在使用这个，所以我也觉得我会向你展示如何设置你的
+
+230
+00:00:04,5100 --> 00:00:04,5100
+show you how you can set up your
+向你展示如何设置你的
+
+231
+00:00:04,5100 --> 00:00:04,5300
+show you how you can set up your environment using UV and it's actually
+向你展示如何使用UV设置你的环境，实际上这
+
+232
+00:00:04,5300 --> 00:00:04,5300
+environment using UV and it's actually
+环境，实际上这
+
+233
+00:00:04,5300 --> 00:00:04,5500
+environment using UV and it's actually relatively simple it's not more
+环境，实际上这相对简单，并不比使用任何
+
+234
+00:00:04,5500 --> 00:00:04,5500
+relatively simple it's not more
+相对简单，并不比使用任何
+
+235
+00:00:04,5500 --> 00:00:04,5700
+relatively simple it's not more complicated necessarily than using any
+相对简单，并不一定比使用其他方法更复杂
+
+236
+00:00:04,5700 --> 00:00:04,5700
+complicated necessarily than using any
+其他方法更复杂
+
+237
+00:00:04,5700 --> 00:00:04,5800
+complicated necessarily than using any of the other
+其他方法更复杂
+
+238
+00:00:04,5800 --> 00:00:04,5800
+of the other
+其他
+
+239
+00:00:04,5800 --> 00:00:05,0100
+of the other two um that being said there are also
+其他两种方法，话虽如此，也有
+
+240
+00:00:05,0100 --> 00:00:05,0100
+two um that being said there are also
+两种方法，话虽如此，也有
+
+241
+00:00:05,0100 --> 00:00:05,0400
+two um that being said there are also multiple ways you can use UV so there is
+嗯，话虽如此，使用UV也有多种方式，所以
+
+242
+00:00:05,0400 --> 00:00:05,0400
+multiple ways you can use UV so there is
+使用UV有多种方式，所以
+
+243
+00:00:05,0400 --> 00:00:05,0600
+multiple ways you can use UV so there is the UV pip syntax which is very similar
+使用UV有多种方式，所以有UV pip语法，它与
+
+244
+00:00:05,0600 --> 00:00:05,0600
+the UV pip syntax which is very similar
+UV pip语法，它与
+
+245
+00:00:05,0600 --> 00:00:05,0800
+the UV pip syntax which is very similar to the original python pip package
+UV pip语法，它与原始的Python pip包
+
+246
+00:00:05,0800 --> 00:00:05,0800
+to the original python pip package
+原始的Python pip包
+
+247
+00:00:05,0800 --> 00:00:05,1100
+to the original python pip package manager but there's also the native UV
+原始的Python pip包管理器非常相似，但也有原生的UV
+
+248
+00:00:05,1100 --> 00:00:05,1100
+manager but there's also the native UV
+管理器，但也有原生的UV
+
+249
+00:00:05,1100 --> 00:00:05,1400
+manager but there's also the native UV Syntax for this tutorial I will be using
+管理器，但也有原生的UV语法。在本教程中，我将使用
+
+250
+00:00:05,1400 --> 00:00:05,1400
+Syntax for this tutorial I will be using
+语法。在本教程中，我将使用
+
+251
+00:00:05,1400 --> 00:00:05,1600
+Syntax for this tutorial I will be using the UV pip interface because it's a bit
+语法。在本教程中，我将使用UV pip接口，因为它对
+
+252
+00:00:05,1600 --> 00:00:05,1600
+the UV pip interface because it's a bit
+UV pip接口，因为它对
+
+253
+00:00:05,1600 --> 00:00:05,2000
+the UV pip interface because it's a bit more familiar to pip users but if you
+UV pip接口，因为它对pip用户来说更熟悉一些，但如果你
+
+254
+00:00:05,2000 --> 00:00:05,2000
+more familiar to pip users but if you
+pip用户来说更熟悉一些，但如果你
+
+255
+00:00:05,2000 --> 00:00:05,2200
+more familiar to pip users but if you are you know more advanced or you're
+pip用户来说更熟悉一些，但如果你更高级，或者你
+
+256
+00:00:05,2200 --> 00:00:05,2200
+are you know more advanced or you're
+更高级，或者你
+
+257
+00:00:05,2200 --> 00:00:05,2400
+are you know more advanced or you're ready to explore the native syntax also
+更高级，或者你准备好探索原生语法，也
+
+258
+00:00:05,2400 --> 00:00:05,2400
+ready to explore the native syntax also
+准备好探索原生语法，也
+
+259
+00:00:05,2400 --> 00:00:05,2800
+ready to explore the native syntax also feel free to check out this tutorial
+准备好探索原生语法，也欢迎查看本教程
+
+260
+00:00:05,2800 --> 00:00:05,2800
+feel free to check out this tutorial
+欢迎查看本教程
+
+261
+00:00:05,2800 --> 00:00:05,3100
+feel free to check out this tutorial here um so the first step here in our
+欢迎查看本教程。嗯，那么这里的第一步，在我们的
+
+262
+00:00:05,3100 --> 00:00:05,3100
+here um so the first step here in our
+这里。嗯，那么这里的第一步，在我们的
+
+263
+00:00:05,3100 --> 00:00:05,3300
+here um so the first step here in our journey would be of course installing
+这里。嗯，那么这里的第一步，在我们的旅程中，当然是安装
+
+264
+00:00:05,3300 --> 00:00:05,3300
+journey would be of course installing
+旅程中，当然是安装
+
+265
+00:00:05,3300 --> 00:00:05,3500
+journey would be of course installing python itself so we can actually check
+旅程中，当然是安装Python本身。所以我们可以通过
+
+266
+00:00:05,3500 --> 00:00:05,3500
+python itself so we can actually check
+Python本身。所以我们可以通过
+
+267
+00:00:05,3500 --> 00:00:05,3800
+python itself so we can actually check if we have python installed by for
+Python本身。所以我们可以通过例如在终端中输入python --version来检查
+
+268
+00:00:05,3800 --> 00:00:05,3800
+if we have python installed by for
+例如在终端中输入python --version来检查
+
+269
+00:00:05,3800 --> 00:00:05,4100
+if we have python installed by for example typing um python D- version in
+例如在终端中输入python --version来检查我们是否安装了Python。这是在Mac OS上，但我想
+
+270
+00:00:05,4100 --> 00:00:05,4100
+example typing um python D- version in
+我们是否安装了Python。这是在Mac OS上，但我想
+
+271
+00:00:05,4100 --> 00:00:05,4300
+example typing um python D- version in our terminal so this is in Mac OS but I
+我们是否安装了Python。这是在Mac OS上，但我想在Linux和Windows上类似。
+
+272
+00:00:05,4300 --> 00:00:05,4300
+our terminal so this is in Mac OS but I
+在Linux和Windows上类似。
+
+273
+00:00:05,4300 --> 00:00:05,4600
+our terminal so this is in Mac OS but I think it's similar on Linux and windows
+在Linux和Windows上类似。嗯，这里显示python not found，
+
+274
+00:00:05,4600 --> 00:00:05,4600
+think it's similar on Linux and windows
+嗯，这里显示python not found，
+
+275
+00:00:05,4600 --> 00:00:05,4800
+think it's similar on Linux and windows um so here it says python not found
+嗯，这里显示python not found，这意味着我没有像这样设置python命令，让它
+
+276
+00:00:05,4800 --> 00:00:05,4800
+um so here it says python not found
+这意味着我没有像这样设置python命令，让它
+
+277
+00:00:05,4800 --> 00:00:05,5100
+um so here it says python not found which means I don't have python the
+这意味着我没有像这样设置python命令，让它这样工作。我通常尝试的另一件事是输入
+
+278
+00:00:05,5100 --> 00:00:05,5100
+which means I don't have python the
+这样工作。我通常尝试的另一件事是输入
+
+279
+00:00:05,5100 --> 00:00:05,5300
+which means I don't have python the command set up like this that it would
+这样工作。我通常尝试的另一件事是输入python3，
+
+280
+00:00:05,5300 --> 00:00:05,5300
+command set up like this that it would
+输入python3，
+
+281
+00:00:05,5300 --> 00:00:05,5500
+command set up like this that it would work this way another thing I usually
+输入python3，在这里你可以看到，在这种情况下，我
+
+282
+00:00:05,5500 --> 00:00:05,5500
+work this way another thing I usually
+在这里你可以看到，在这种情况下，我
+
+283
+00:00:05,5500 --> 00:00:05,5700
+work this way another thing I usually also try is typing on Python
+在这里你可以看到，在这种情况下，我已经安装了Python，或者我的
+
+284
+00:00:05,5700 --> 00:00:05,5700
+also try is typing on Python
+已经安装了Python，或者我的
+
+285
+00:00:05,5700 --> 00:00:06,0100
+also try is typing on Python 3 and here you can see in this case I
+已经安装了Python，或者我的操作系统已经安装了Python。
+
+286
+00:00:06,0100 --> 00:00:06,0100
+3 and here you can see in this case I
+操作系统已经安装了Python。
+
+287
+00:00:06,0100 --> 00:00:06,0300
+3 and here you can see in this case I already have python installed or my
+操作系统已经安装了Python。实际上，现在当我
+
+288
+00:00:06,0300 --> 00:00:06,0300
+already have python installed or my
+实际上，现在当我
+
+289
+00:00:06,0300 --> 00:00:06,0500
+already have python installed or my operating system has python installed
+实际上，现在当我录制这个时，已经有Python 3.13
+
+290
+00:00:06,0500 --> 00:00:06,0500
+operating system has python installed
+录制这个时，已经有Python 3.13
+
+291
+00:00:06,0500 --> 00:00:06,0700
+operating system has python installed and actually right now while I'm
+录制这个时，已经有Python 3.13可用。这是3.9，这意味着
+
+292
+00:00:06,0700 --> 00:00:06,0700
+and actually right now while I'm
+可用。这是3.9，这意味着
+
+293
+00:00:06,0700 --> 00:00:06,1000
+and actually right now while I'm recording this there is python 3.13
+可用。这是3.9，这意味着它比最新的Python版本落后了四个版本号，
+
+294
+00:00:06,1000 --> 00:00:06,1000
+recording this there is python 3.13
+它比最新的Python版本落后了四个版本号，
+
+295
+00:00:06,1000 --> 00:00:06,1300
+recording this there is python 3.13 available now this is 3.9 which means
+它比最新的Python版本落后了四个版本号，这告诉我这一定是随我的操作系统一起提供的
+
+296
+00:00:06,1300 --> 00:00:06,1300
+available now this is 3.9 which means
+这告诉我这一定是随我的操作系统一起提供的
+
+297
+00:00:06,1300 --> 00:00:06,1600
+available now this is 3.9 which means it's four version numbers behind the
+这告诉我这一定是随我的操作系统一起提供的某个旧版本Python。
+
+298
+00:00:06,1600 --> 00:00:06,1600
+it's four version numbers behind the
+某个旧版本Python。
+
+299
+00:00:06,1600 --> 00:00:06,1800
+it's four version numbers behind the most recent python release and that
+某个旧版本Python。所以通常当你设置一台
+
+300
+00:00:06,1800 --> 00:00:06,1800
+most recent python release and that
+所以通常当你设置一台
+
+301
+00:00:06,1800 --> 00:00:06,2100
+most recent python release and that tells me this must be some old version
+所以通常当你设置一台新电脑时，它已经安装了Python，
+
+302
+00:00:06,2100 --> 00:00:06,2100
+tells me this must be some old version
+新电脑时，它已经安装了Python，
+
+303
+00:00:06,2100 --> 00:00:06,2300
+tells me this must be some old version of python that came with my operating
+新电脑时，它已经安装了Python，但它是供操作系统使用的，
+
+304
+00:00:06,2300 --> 00:00:06,2300
+of python that came with my operating
+但它是供操作系统使用的，
+
+305
+00:00:06,2300 --> 00:00:06,2600
+of python that came with my operating system so usually when you set up um a
+但它是供操作系统使用的，我强烈建议不要修改
+
+306
+00:00:06,2600 --> 00:00:06,2600
+system so usually when you set up um a
+我强烈建议不要修改
+
+307
+00:00:06,2600 --> 00:00:06,2900
+system so usually when you set up um a new computer it already has python on it
+我强烈建议不要修改这个Python版本，也不要直接
+
+308
+00:00:06,2900 --> 00:00:06,2900
+new computer it already has python on it
+这个Python版本，也不要直接
+
+309
+00:00:06,2900 --> 00:00:06,3100
+new computer it already has python on it but it's used by the operating system
+这个Python版本，也不要直接使用它，因为你可能会破坏
+
+310
+00:00:06,3100 --> 00:00:06,3100
+but it's used by the operating system
+使用它，因为你可能会破坏
+
+311
+00:00:06,3100 --> 00:00:06,3300
+but it's used by the operating system and I highly recommend not modifying
+使用它，因为你可能会破坏某些东西，然后它可能会导致
+
+312
+00:00:06,3300 --> 00:00:06,3300
+and I highly recommend not modifying
+某些东西，然后它可能会导致
+
+313
+00:00:06,3300 --> 00:00:06,3500
+and I highly recommend not modifying this python version and also not just
+某些东西，然后它可能会导致你的操作系统出现问题。所以我
+
+314
+00:00:06,3500 --> 00:00:06,3500
+this python version and also not just
+你的操作系统出现问题。所以我
+
+315
+00:00:06,3500 --> 00:00:06,3700
+this python version and also not just working with it because you might break
+this python version and also not just working with it because you might break
+
+316
+00:00:06,3700 --> 00:00:06,3700
+working with it because you might break
+working with it because you might break
+
+317
+00:00:06,3700 --> 00:00:06,3900
+working with it because you might break something and then it could cause
+working with it because you might break something and then it could cause
+
+318
+00:00:06,3900 --> 00:00:06,3900
+something and then it could cause
+something and then it could cause
+
+319
+00:00:06,3900 --> 00:00:06,4100
+something and then it could cause trouble for your operating system so I
+something and then it could cause trouble for your operating system so I
+
+320
+00:00:06,4100 --> 00:00:06,4100
+trouble for your operating system so I
+trouble for your operating system so I
+
+321
+00:00:06,4100 --> 00:00:06,4400
+trouble for your operating system so I highly recommend not touching this
+这会给你的操作系统带来麻烦，所以我强烈建议不要碰这个
+
+322
+00:00:06,4400 --> 00:00:06,4400
+highly recommend not touching this
+强烈建议不要碰这个
+
+323
+00:00:06,4400 --> 00:00:06,4600
+highly recommend not touching this python here at all and so what I
+强烈建议完全不要碰这个python，所以我
+
+324
+00:00:06,4600 --> 00:00:06,4600
+python here at all and so what I
+完全不要碰这个python，所以我
+
+325
+00:00:06,4600 --> 00:00:06,4800
+python here at all and so what I recommend is just installing a separate
+完全不要碰这个python，所以我建议直接安装一个独立的
+
+326
+00:00:06,4800 --> 00:00:06,4800
+recommend is just installing a separate
+建议直接安装一个独立的
+
+327
+00:00:06,4800 --> 00:00:06,5000
+recommend is just installing a separate version of python and you can do that in
+建议直接安装一个独立的python版本，你可以通过多种方式做到这一点
+
+328
+00:00:06,5000 --> 00:00:06,5000
+version of python and you can do that in
+python版本，你可以通过多种方式做到这一点
+
+329
+00:00:06,5000 --> 00:00:06,5300
+version of python and you can do that in multiple ways uh the official way would
+python版本，你可以通过多种方式做到这一点，官方的方式
+
+330
+00:00:06,5300 --> 00:00:06,5300
+multiple ways uh the official way would
+多种方式，官方的方式
+
+331
+00:00:06,5300 --> 00:00:06,5600
+multiple ways uh the official way would be for example going to python.org and
+多种方式，官方的方式例如去python.org
+
+332
+00:00:06,5600 --> 00:00:06,5600
+be for example going to python.org and
+例如去python.org
+
+333
+00:00:06,5600 --> 00:00:06,5800
+be for example going to python.org and yeah installing it from there so they
+例如去python.org并从那里安装，所以他们
+
+334
+00:00:06,5800 --> 00:00:06,5800
+yeah installing it from there so they
+从那里安装，所以他们
+
+335
+00:00:06,5800 --> 00:00:07,0100
+yeah installing it from there so they have a menu here and you can download it
+从那里安装，所以他们这里有一个菜单，你可以下载它
+
+336
+00:00:07,0100 --> 00:00:07,0100
+have a menu here and you can download it
+这里有一个菜单，你可以下载它
+
+337
+00:00:07,0100 --> 00:00:07,0300
+have a menu here and you can download it for different operating systems so I can
+这里有一个菜单，你可以下载它适用于不同的操作系统，所以我可以
+
+338
+00:00:07,0300 --> 00:00:07,0300
+for different operating systems so I can
+适用于不同的操作系统，所以我可以
+
+339
+00:00:07,0300 --> 00:00:07,0500
+for different operating systems so I can for example go to Mac OS and then yeah
+适用于不同的操作系统，所以我可以例如去Mac OS，然后
+
+340
+00:00:07,0500 --> 00:00:07,0500
+for example go to Mac OS and then yeah
+例如去Mac OS，然后
+
+341
+00:00:07,0500 --> 00:00:07,0800
+for example go to Mac OS and then yeah look for the latest release and here it
+例如去Mac OS，然后寻找最新版本，这里
+
+342
+00:00:07,0800 --> 00:00:07,0800
+look for the latest release and here it
+寻找最新版本，这里
+
+343
+00:00:07,0800 --> 00:00:07,0900
+look for the latest release and here it says Python
+寻找最新版本，这里写着Python
+
+344
+00:00:07,0900 --> 00:00:07,0900
+says Python
+写着Python
+
+345
+00:00:07,0900 --> 00:00:07,1200
+says Python 3.13 and another thing I wanted to
+写着Python 3.13，另一件我想
+
+346
+00:00:07,1200 --> 00:00:07,1200
+3.13 and another thing I wanted to
+3.13，另一件我想
+
+347
+00:00:07,1200 --> 00:00:07,1400
+3.13 and another thing I wanted to highlight is I would recommend
+3.13，另一件我想强调的事情是我建议
+
+348
+00:00:07,1400 --> 00:00:07,1400
+highlight is I would recommend
+强调的事情是我建议
+
+349
+00:00:07,1400 --> 00:00:07,1600
+highlight is I would recommend installing a slightly older version of
+强调的事情是我建议安装一个稍微旧一点的
+
+350
+00:00:07,1600 --> 00:00:07,1600
+installing a slightly older version of
+安装一个稍微旧一点的
+
+351
+00:00:07,1600 --> 00:00:07,1800
+installing a slightly older version of python that's because packages like
+安装一个稍微旧一点的python版本，这是因为像
+
+352
+00:00:07,1800 --> 00:00:07,1800
+python that's because packages like
+python版本，这是因为像
+
+353
+00:00:07,1800 --> 00:00:07,2000
+python that's because packages like pytorch which we will be using in this
+python版本，这是因为像pytorch这样的包，我们将在本书中使用
+
+354
+00:00:07,2000 --> 00:00:07,2000
+pytorch which we will be using in this
+pytorch，我们将在本书中使用
+
+355
+00:00:07,2000 --> 00:00:07,2300
+pytorch which we will be using in this book they actually they are not always
+pytorch，我们将在本书中使用，它们实际上并不总是
+
+356
+00:00:07,2300 --> 00:00:07,2300
+book they actually they are not always
+它们实际上并不总是
+
+357
+00:00:07,2300 --> 00:00:07,2500
+book they actually they are not always supporting the latest version of python
+它们实际上并不总是支持最新版本的python
+
+358
+00:00:07,2500 --> 00:00:07,2500
+supporting the latest version of python
+支持最新版本的python
+
+359
+00:00:07,2500 --> 00:00:07,2900
+supporting the latest version of python it usually takes a few months to um yeah
+支持最新版本的python，通常需要几个月的时间来
+
+360
+00:00:07,2900 --> 00:00:07,2900
+it usually takes a few months to um yeah
+通常需要几个月的时间来
+
+361
+00:00:07,2900 --> 00:00:07,3100
+it usually takes a few months to um yeah py torch um supports let's say the
+通常需要几个月的时间来让pytorch支持最新版本的python，所以我建议
+
+362
+00:00:07,3100 --> 00:00:07,3100
+py torch um supports let's say the
+pytorch支持最新版本的python，所以我建议
+
+363
+00:00:07,3100 --> 00:00:07,3300
+py torch um supports let's say the latest release of python so I would
+pytorch支持最新版本的python，所以我建议为了安全起见
+
+364
+00:00:07,3300 --> 00:00:07,3300
+latest release of python so I would
+为了安全起见
+
+365
+00:00:07,3300 --> 00:00:07,3600
+latest release of python so I would recommend to be on the safe side to
+为了安全起见，采用一个落后一个或两个
+
+366
+00:00:07,3600 --> 00:00:07,3600
+recommend to be on the safe side to
+采用一个落后一个或两个
+
+367
+00:00:07,3600 --> 00:00:07,3800
+recommend to be on the safe side to adopt a version that is one or two
+采用一个落后一个或两个版本号的版本，例如
+
+368
+00:00:07,3800 --> 00:00:07,3800
+adopt a version that is one or two
+版本号的版本，例如
+
+369
+00:00:07,3800 --> 00:00:07,4000
+adopt a version that is one or two version numbers behind for example
+版本号的版本，例如python 3.12或3.11，实际上你
+
+370
+00:00:07,4000 --> 00:00:07,4000
+version numbers behind for example
+python 3.12或3.11，实际上你
+
+371
+00:00:07,4000 --> 00:00:07,4400
+version numbers behind for example python 3.12 or 3.11 and you actually
+python 3.12或3.11，实际上你不会错过任何东西，因为
+
+372
+00:00:07,4400 --> 00:00:07,4400
+python 3.12 or 3.11 and you actually
+不会错过任何东西，因为
+
+373
+00:00:07,4400 --> 00:00:07,4600
+python 3.12 or 3.11 and you actually won't miss out on anything because you
+不会错过任何东西，因为你知道，在进行科学计算时，你反正不会使用这些最新的
+
+374
+00:00:07,4600 --> 00:00:07,4600
+won't miss out on anything because you
+你知道，在进行科学计算时，你反正不会使用这些最新的
+
+375
+00:00:07,4600 --> 00:00:07,4900
+won't miss out on anything because you know you don't use these most recent
+你知道，在进行科学计算时，你反正不会使用这些最新的Python功能，所以在这种情况下
+
+376
+00:00:07,4900 --> 00:00:07,4900
+know you don't use these most recent
+Python功能，所以在这种情况下
+
+377
+00:00:07,4900 --> 00:00:07,5100
+know you don't use these most recent features in Python anyway when you do
+Python功能，所以在这种情况下安装一个稍微旧一点的版本是安全的
+
+378
+00:00:07,5100 --> 00:00:07,5100
+features in Python anyway when you do
+安装一个稍微旧一点的版本是安全的
+
+379
+00:00:07,5100 --> 00:00:07,5300
+features in Python anyway when you do scientific Computing so in this case
+安装一个稍微旧一点的版本是安全的，所以对于这本书，我在
+
+380
+00:00:07,5300 --> 00:00:07,5300
+scientific Computing so in this case
+所以对于这本书，我在
+
+381
+00:00:07,5300 --> 00:00:07,5500
+scientific Computing so in this case it's safe to install a slightly older
+所以对于这本书，我在所有版本上测试过，比如3.10、11、12
+
+382
+00:00:07,5500 --> 00:00:07,5500
+it's safe to install a slightly older
+所有版本上测试过，比如3.10、11、12
+
+383
+00:00:07,5500 --> 00:00:07,5800
+it's safe to install a slightly older version and so for this book I tested it
+所有版本上测试过，比如3.10、11、12，还有13，运行得很好，但为了
+
+384
+00:00:07,5800 --> 00:00:07,5800
+version and so for this book I tested it
+还有13，运行得很好，但为了
+
+385
+00:00:07,5800 --> 00:00:08,0200
+version and so for this book I tested it on all all all versions like 3.10 11 12
+还有13，运行得很好，但为了安全起见，作为一般经验法则
+
+386
+00:00:08,0200 --> 00:00:08,0200
+on all all all versions like 3.10 11 12
+安全起见，作为一般经验法则
+
+387
+00:00:08,0200 --> 00:00:08,0400
+on all all all versions like 3.10 11 12 and also 13 it works just fine but to be
+安全起见，作为一般经验法则，我建议安装一个稍微
+
+388
+00:00:08,0400 --> 00:00:08,0400
+and also 13 it works just fine but to be
+我建议安装一个稍微
+
+389
+00:00:08,0400 --> 00:00:08,0600
+and also 13 it works just fine but to be on the safe side as a general rule of
+我建议安装一个稍微低一点或小一点的版本，例如
+
+390
+00:00:08,0600 --> 00:00:08,0700
+on the safe side as a general rule of
+低一点或小一点的版本，例如
+
+391
+00:00:08,0700 --> 00:00:08,0900
+on the safe side as a general rule of thumb I recommend installing a slightly
+低一点或小一点的版本，例如3.11或类似的
+
+392
+00:00:08,0900 --> 00:00:08,0900
+thumb I recommend installing a slightly
+3.11或类似的
+
+393
+00:00:08,0900 --> 00:00:08,1100
+thumb I recommend installing a slightly um yeah lower or smaller version for
+3.11或类似的，话虽如此，有很多方法可以
+
+394
+00:00:08,1100 --> 00:00:08,1100
+um yeah lower or smaller version for
+话虽如此，有很多方法可以
+
+395
+00:00:08,1100 --> 00:00:08,1400
+um yeah lower or smaller version for example 3.11 or something like that um
+话虽如此，有很多方法可以安装python，我在这台电脑上使用
+
+396
+00:00:08,1400 --> 00:00:08,1400
+example 3.11 or something like that um
+安装python，我在这台电脑上使用
+
+397
+00:00:08,1400 --> 00:00:08,1600
+example 3.11 or something like that um that being said there are many ways to
+example 3.11 or something like that um that being said there are many ways to
+
+398
+00:00:08,1600 --> 00:00:08,1600
+that being said there are many ways to
+that being said there are many ways to
+
+399
+00:00:08,1600 --> 00:00:08,1900
+that being said there are many ways to install python um I on this computer use
+that being said there are many ways to install python um I on this computer use
+
+400
+00:00:08,1900 --> 00:00:08,1900
+install python um I on this computer use
+install python um I on this computer use
+
+401
+00:00:08,1900 --> 00:00:08,2200
+install python um I on this computer use Homebrew which is another package
+在这台电脑上我用Homebrew安装Python，这是另一个包
+
+402
+00:00:08,2200 --> 00:00:08,2200
+Homebrew which is another package
+Homebrew是另一个包
+
+403
+00:00:08,2200 --> 00:00:08,2600
+Homebrew which is another package manager so um if I go here and type
+Homebrew是另一个包管理器，所以如果我到这里输入
+
+404
+00:00:08,2600 --> 00:00:08,2600
+manager so um if I go here and type
+管理器，所以如果我到这里输入
+
+405
+00:00:08,2600 --> 00:00:08,2800
+manager so um if I go here and type Homebrew you don't have to use it by the
+管理器，所以如果我到这里输入Homebrew，你不一定非要用它
+
+406
+00:00:08,2800 --> 00:00:08,2800
+Homebrew you don't have to use it by the
+Homebrew，你不一定非要用它
+
+407
+00:00:08,2800 --> 00:00:08,2900
+Homebrew you don't have to use it by the way it's just something I happen to use
+Homebrew，你不一定非要用它，这只是我碰巧用的
+
+408
+00:00:08,2900 --> 00:00:08,3000
+way it's just something I happen to use
+方式，这只是我碰巧用的
+
+409
+00:00:08,3000 --> 00:00:08,3100
+way it's just something I happen to use on this computer and it's called The
+方式，这只是我碰巧在这台电脑上用的，它被称为
+
+410
+00:00:08,3100 --> 00:00:08,3100
+on this computer and it's called The
+在这台电脑上用的，它被称为
+
+411
+00:00:08,3100 --> 00:00:08,3400
+on this computer and it's called The Missing package manager for Mach OS and
+在这台电脑上用的，它被称为Mac OS缺失的包管理器
+
+412
+00:00:08,3400 --> 00:00:08,3400
+Missing package manager for Mach OS and
+Mac OS缺失的包管理器
+
+413
+00:00:08,3400 --> 00:00:08,3600
+Missing package manager for Mach OS and so it allows you to install certain
+Mac OS缺失的包管理器，它可以让你安装某些
+
+414
+00:00:08,3600 --> 00:00:08,3600
+so it allows you to install certain
+它可以让你安装某些
+
+415
+00:00:08,3600 --> 00:00:08,3800
+so it allows you to install certain tools that don't already come with Mach
+它可以让你安装某些Mac OS没有自带的工具
+
+416
+00:00:08,3800 --> 00:00:08,3800
+tools that don't already come with Mach
+Mac OS没有自带的工具
+
+417
+00:00:08,3800 --> 00:00:08,4000
+tools that don't already come with Mach OS but you can also for example use it
+Mac OS没有自带的工具，但你也可以用它来安装Python，这只是个人
+
+418
+00:00:08,4000 --> 00:00:08,4000
+OS but you can also for example use it
+但你也可以用它来安装Python，这只是个人
+
+419
+00:00:08,4000 --> 00:00:08,4200
+OS but you can also for example use it to install python that's just personal
+但你也可以用它来安装Python，这只是个人偏好，但你知道你也可以
+
+420
+00:00:08,4200 --> 00:00:08,4200
+to install python that's just personal
+偏好，但你知道你也可以
+
+421
+00:00:08,4200 --> 00:00:08,4400
+to install python that's just personal preference but you know you can also
+偏好，但你知道你也可以直接从网站下载
+
+422
+00:00:08,4400 --> 00:00:08,4400
+preference but you know you can also
+直接从网站下载
+
+423
+00:00:08,4400 --> 00:00:08,4600
+preference but you know you can also just download it from the website there
+直接从网站下载，有多种方法可以安装
+
+424
+00:00:08,4600 --> 00:00:08,4600
+just download it from the website there
+有多种方法可以安装
+
+425
+00:00:08,4600 --> 00:00:08,4800
+just download it from the website there are multiple ways um you can install
+有多种方法可以安装Python，但这只是我个人会做的
+
+426
+00:00:08,4800 --> 00:00:08,4900
+are multiple ways um you can install
+Python，但这只是我个人会做的
+
+427
+00:00:08,4900 --> 00:00:08,5000
+are multiple ways um you can install python but that is just how I would do
+Python，但这只是我个人会做的，所以你可以输入bre
+
+428
+00:00:08,5000 --> 00:00:08,5000
+python but that is just how I would do
+所以你可以输入bre
+
+429
+00:00:08,5000 --> 00:00:08,5300
+python but that is just how I would do it personally so you can type bre
+所以你可以输入bre install python，比如说
+
+430
+00:00:08,5300 --> 00:00:08,5300
+it personally so you can type bre
+install python，比如说
+
+431
+00:00:08,5300 --> 00:00:08,5500
+it personally so you can type bre install python let's say
+install python，比如说3.11，嗯，然后它就会安装
+
+432
+00:00:08,5500 --> 00:00:08,5500
+install python let's say
+3.11，嗯，然后它就会安装
+
+433
+00:00:08,5500 --> 00:00:08,5800
+install python let's say 3.11 um yeah and that would then install
+3.11，嗯，然后它就会安装Python，所以这是第一步
+
+434
+00:00:08,5800 --> 00:00:08,5800
+3.11 um yeah and that would then install
+Python，所以这是第一步
+
+435
+00:00:08,5800 --> 00:00:09,0200
+3.11 um yeah and that would then install python so that would be the first step
+Python，所以这是第一步，然后第二步是
+
+436
+00:00:09,0200 --> 00:00:09,0200
+python so that would be the first step
+然后第二步是
+
+437
+00:00:09,0200 --> 00:00:09,0400
+python so that would be the first step and then the second step would be
+然后第二步是设置UV，UV是一个包
+
+438
+00:00:09,0400 --> 00:00:09,0400
+and then the second step would be
+设置UV，UV是一个包
+
+439
+00:00:09,0400 --> 00:00:09,0700
+and then the second step would be setting up UV so UV is this package
+设置UV，UV是一个包管理器，你可以通过pip安装它
+
+440
+00:00:09,0700 --> 00:00:09,0700
+setting up UV so UV is this package
+管理器，你可以通过pip安装它
+
+441
+00:00:09,0700 --> 00:00:09,1000
+setting up UV so UV is this package manager and you can install it via pip
+管理器，你可以通过pip install UV安装它，所以如果你已经安装了Python
+
+442
+00:00:09,1000 --> 00:00:09,1000
+manager and you can install it via pip
+install UV安装它，所以如果你已经安装了Python
+
+443
+00:00:09,1000 --> 00:00:09,1400
+manager and you can install it via pip install UV so if you have python already
+install UV安装它，所以如果你已经安装了Python，那么pip就是
+
+444
+00:00:09,1400 --> 00:00:09,1400
+install UV so if you have python already
+那么pip就是
+
+445
+00:00:09,1400 --> 00:00:09,1600
+install UV so if you have python already installed this would be pip would be the
+那么pip就是Python的包管理器，我们用pip
+
+446
+00:00:09,1600 --> 00:00:09,1600
+installed this would be pip would be the
+Python的包管理器，我们用pip
+
+447
+00:00:09,1600 --> 00:00:09,1900
+installed this would be pip would be the python package manager and we use that
+Python的包管理器，我们用pip来安装另一个包管理器
+
+448
+00:00:09,1900 --> 00:00:09,1900
+python package manager and we use that
+来安装另一个包管理器
+
+449
+00:00:09,1900 --> 00:00:09,2000
+python package manager and we use that to install another package manager and
+来安装另一个包管理器，这样做的原因是UV
+
+450
+00:00:09,2000 --> 00:00:09,2000
+to install another package manager and
+这样做的原因是UV
+
+451
+00:00:09,2000 --> 00:00:09,2300
+to install another package manager and the reason we do that is because UV is
+这样做的原因是UV实际上比pip更快，而且
+
+452
+00:00:09,2300 --> 00:00:09,2300
+the reason we do that is because UV is
+实际上比pip更快，而且
+
+453
+00:00:09,2300 --> 00:00:09,2500
+the reason we do that is because UV is actually faster than pip and it's just
+实际上比pip更快，而且在我看来用起来更方便
+
+454
+00:00:09,2500 --> 00:00:09,2500
+actually faster than pip and it's just
+在我看来用起来更方便
+
+455
+00:00:09,2500 --> 00:00:09,2700
+actually faster than pip and it's just more convenient to use it in my
+在我看来用起来更方便，现在看这里的输出
+
+456
+00:00:09,2700 --> 00:00:09,2700
+more convenient to use it in my
+现在看这里的输出
+
+457
+00:00:09,2700 --> 00:00:09,3100
+more convenient to use it in my opinion now looking at the output here
+现在看这里的输出，它显示Python已安装，现在它
+
+458
+00:00:09,3100 --> 00:00:09,3100
+opinion now looking at the output here
+它显示Python已安装，现在它
+
+459
+00:00:09,3100 --> 00:00:09,3300
+opinion now looking at the output here it says python is installed now it's
+它显示Python已安装，现在它安装在这个文件夹里，还有一些
+
+460
+00:00:09,3300 --> 00:00:09,3300
+it says python is installed now it's
+安装在这个文件夹里，还有一些
+
+461
+00:00:09,3300 --> 00:00:09,3500
+it says python is installed now it's installed in this folder and there are
+安装在这个文件夹里，还有一些高级方法可以链接
+
+462
+00:00:09,3500 --> 00:00:09,3500
+installed in this folder and there are
+高级方法可以链接
+
+463
+00:00:09,3500 --> 00:00:09,3700
+installed in this folder and there are some Advanced ways you can actually link
+高级方法可以链接它，这样当你输入python时
+
+464
+00:00:09,3700 --> 00:00:09,3800
+some Advanced ways you can actually link
+这样当你输入python时
+
+465
+00:00:09,3800 --> 00:00:09,4000
+some Advanced ways you can actually link it so that when you type um python it
+这样当你输入python时，它会自动使用这个Python，但
+
+466
+00:00:09,4000 --> 00:00:09,4000
+it so that when you type um python it
+它会自动使用这个Python，但
+
+467
+00:00:09,4000 --> 00:00:09,4200
+it so that when you type um python it will automatically use this python but
+它会自动使用这个Python，但为了简单起见，我们就用
+
+468
+00:00:09,4200 --> 00:00:09,4200
+will automatically use this python but
+为了简单起见，我们就用
+
+469
+00:00:09,4200 --> 00:00:09,4500
+will automatically use this python but for Simplicity let's just um use the
+为了简单起见，我们就用这里的命令，它说例如
+
+470
+00:00:09,4500 --> 00:00:09,4600
+for Simplicity let's just um use the
+这里的命令，它说例如
+
+471
+00:00:09,4600 --> 00:00:09,4700
+for Simplicity let's just um use the commands from here and it says for
+这里的命令，它说例如你可以用这个命令安装Python包
+
+472
+00:00:09,4700 --> 00:00:09,4700
+commands from here and it says for
+你可以用这个命令安装Python包
+
+473
+00:00:09,4700 --> 00:00:09,4900
+commands from here and it says for example you can install python packages
+你可以用这个命令安装Python包，所以这和这里显示的略有不同
+
+474
+00:00:09,4900 --> 00:00:09,4900
+example you can install python packages
+所以这和这里显示的略有不同
+
+475
+00:00:09,4900 --> 00:00:09,5200
+example you can install python packages with this command so it's slightly
+所以这和这里显示的略有不同，嗯，但
+
+476
+00:00:09,5200 --> 00:00:09,5200
+with this command so it's slightly
+嗯，但
+
+477
+00:00:09,5200 --> 00:00:09,5400
+with this command so it's slightly different from what's shown here um but
+嗯，但我会用这个命令
+
+478
+00:00:09,5400 --> 00:00:09,5400
+different from what's shown here um but
+我会用这个命令
+
+479
+00:00:09,5400 --> 00:00:09,5600
+different from what's shown here um but yeah I will just use this command you
+我会用这个命令，你
+
+480
+00:00:09,5600 --> 00:00:09,5600
+yeah I will just use this command you
+你
+
+481
+00:00:09,5600 --> 00:00:09,5800
+yeah I will just use this command you can link it on your computer that it is
+是的，我只需使用这个命令，你可以在你的电脑上链接它
+
+482
+00:00:09,5800 --> 00:00:09,5800
+can link it on your computer that it is
+可以在你的电脑上链接它
+
+483
+00:00:09,5800 --> 00:00:09,5900
+can link it on your computer that it is just pip but
+可以在你的电脑上链接它，这只是 pip
+
+484
+00:00:09,5900 --> 00:00:09,5900
+just pip but
+这只是 pip
+
+485
+00:00:09,5900 --> 00:00:10,0100
+just pip but you know to for brity I don't want to
+这只是 pip，但你知道，为了简洁，我不想
+
+486
+00:00:10,0100 --> 00:00:10,0100
+you know to for brity I don't want to
+你知道，为了简洁，我不想
+
+487
+00:00:10,0100 --> 00:00:10,0300
+you know to for brity I don't want to over complicate things here we are now
+你知道，为了简洁，我不想把事情搞得太复杂，现在我们在这里
+
+488
+00:00:10,0300 --> 00:00:10,0300
+over complicate things here we are now
+把事情搞得太复杂，现在我们在这里
+
+489
+00:00:10,0300 --> 00:00:10,0700
+over complicate things here we are now installing the UV package manager and so
+把事情搞得太复杂，现在我们在这里安装 UV 包管理器
+
+490
+00:00:10,0700 --> 00:00:10,0700
+installing the UV package manager and so
+安装 UV 包管理器
+
+491
+00:00:10,0700 --> 00:00:10,0900
+installing the UV package manager and so this was very quick it's installed now
+安装 UV 包管理器，这非常快，现在已经安装好了
+
+492
+00:00:10,0900 --> 00:00:10,0900
+this was very quick it's installed now
+这非常快，现在已经安装好了
+
+493
+00:00:10,0900 --> 00:00:10,1200
+this was very quick it's installed now and the next step after that is creating
+这非常快，现在已经安装好了，下一步是创建
+
+494
+00:00:10,1200 --> 00:00:10,1200
+and the next step after that is creating
+下一步是创建
+
+495
+00:00:10,1200 --> 00:00:10,1300
+and the next step after that is creating a virtual
+下一步是创建一个虚拟
+
+496
+00:00:10,1300 --> 00:00:10,1300
+a virtual
+一个虚拟
+
+497
+00:00:10,1300 --> 00:00:10,1500
+a virtual environment this is not strictly
+一个虚拟环境，这不是严格
+
+498
+00:00:10,1500 --> 00:00:10,1500
+environment this is not strictly
+环境，这不是严格
+
+499
+00:00:10,1500 --> 00:00:10,1900
+environment this is not strictly necessary but I highly recommend this um
+环境，这不是严格必要的，但我强烈推荐这个
+
+500
+00:00:10,1900 --> 00:00:10,1900
+necessary but I highly recommend this um
+必要的，但我强烈推荐这个
+
+501
+00:00:10,1900 --> 00:00:10,2000
+necessary but I highly recommend this um this means virtual environment means
+必要的，但我强烈推荐这个，这意味着虚拟环境意味着
+
+502
+00:00:10,2000 --> 00:00:10,2000
+this means virtual environment means
+这意味着虚拟环境意味着
+
+503
+00:00:10,2000 --> 00:00:10,2200
+this means virtual environment means that it is a separate folder on your
+这意味着虚拟环境意味着在你的电脑上有一个单独的文件夹
+
+504
+00:00:10,2200 --> 00:00:10,2200
+that it is a separate folder on your
+在你的电脑上有一个单独的文件夹
+
+505
+00:00:10,2200 --> 00:00:10,2500
+that it is a separate folder on your computer where all the packages are
+在你的电脑上有一个单独的文件夹，所有包都安装在其中
+
+506
+00:00:10,2500 --> 00:00:10,2500
+computer where all the packages are
+所有包都安装在其中
+
+507
+00:00:10,2500 --> 00:00:10,2700
+computer where all the packages are installed and in this case it will also
+所有包都安装在其中，在这种情况下，它还会
+
+508
+00:00:10,2700 --> 00:00:10,2700
+installed and in this case it will also
+安装，在这种情况下，它还会
+
+509
+00:00:10,2700 --> 00:00:10,2900
+installed and in this case it will also bring its own version of python this
+安装，在这种情况下，它还会自带自己的 Python 版本
+
+510
+00:00:10,2900 --> 00:00:10,2900
+bring its own version of python this
+自带自己的 Python 版本
+
+511
+00:00:10,2900 --> 00:00:10,3100
+bring its own version of python this means if you're messing anything up by
+自带自己的 Python 版本，这意味着如果你不小心搞砸了什么
+
+512
+00:00:10,3100 --> 00:00:10,3100
+means if you're messing anything up by
+如果你不小心搞砸了什么
+
+513
+00:00:10,3100 --> 00:00:10,3200
+means if you're messing anything up by accident you can just delete this
+如果你不小心搞砸了什么，你可以直接删除这个
+
+514
+00:00:10,3200 --> 00:00:10,3200
+accident you can just delete this
+你可以直接删除这个
+
+515
+00:00:10,3200 --> 00:00:10,3500
+accident you can just delete this virtual environment and start over
+你可以直接删除这个虚拟环境并重新开始
+
+516
+00:00:10,3500 --> 00:00:10,3500
+virtual environment and start over
+虚拟环境并重新开始
+
+517
+00:00:10,3500 --> 00:00:10,3700
+virtual environment and start over without you know messing up your whole
+虚拟环境并重新开始，而不会搞乱你的整个
+
+518
+00:00:10,3700 --> 00:00:10,3700
+without you know messing up your whole
+而不会搞乱你的整个
+
+519
+00:00:10,3700 --> 00:00:10,4000
+without you know messing up your whole computer so this is actually something
+而不会搞乱你的整个电脑，所以这实际上是个好办法
+
+520
+00:00:10,4000 --> 00:00:10,4000
+computer so this is actually something
+电脑，所以这实际上是个好办法
+
+521
+00:00:10,4000 --> 00:00:10,4200
+computer so this is actually something um yeah I highly recommend so before I
+电脑，所以这实际上是个好办法，嗯，我强烈推荐，所以在执行之前
+
+522
+00:00:10,4200 --> 00:00:10,4200
+um yeah I highly recommend so before I
+嗯，我强烈推荐，所以在执行之前
+
+523
+00:00:10,4200 --> 00:00:10,4500
+um yeah I highly recommend so before I execute this though let me do one more
+嗯，我强烈推荐，所以在执行之前，让我再做一件事
+
+524
+00:00:10,4500 --> 00:00:10,4500
+execute this though let me do one more
+让我再做一件事
+
+525
+00:00:10,4500 --> 00:00:10,4600
+execute this though let me do one more thing so let me
+让我再做一件事，让我实际下载这个 GitHub 代码
+
+526
+00:00:10,4600 --> 00:00:10,4600
+thing so let me
+让我实际下载这个 GitHub 代码
+
+527
+00:00:10,4600 --> 00:00:10,5100
+thing so let me actually download this GitHub code here
+让我实际下载这个 GitHub 代码，所以我进入我的 GitHub 仓库
+
+528
+00:00:10,5100 --> 00:00:10,5100
+actually download this GitHub code here
+所以我进入我的 GitHub 仓库
+
+529
+00:00:10,5100 --> 00:00:10,5300
+actually download this GitHub code here so I go go to my GitHub repository and
+所以我进入我的 GitHub 仓库，然后你可以点击下载
+
+530
+00:00:10,5300 --> 00:00:10,5300
+so I go go to my GitHub repository and
+然后你可以点击下载
+
+531
+00:00:10,5300 --> 00:00:10,5700
+so I go go to my GitHub repository and then you can click on download
+然后你可以点击下载 zip，它会下载到这里
+
+532
+00:00:10,5700 --> 00:00:10,5700
+then you can click on download
+zip，它会下载到这里
+
+533
+00:00:10,5700 --> 00:00:10,5900
+then you can click on download zip and it will download this here in
+zip，它会下载到这里，在这种情况下是下载文件夹
+
+534
+00:00:10,5900 --> 00:00:10,5900
+zip and it will download this here in
+在这种情况下是下载文件夹
+
+535
+00:00:10,5900 --> 00:00:11,0200
+zip and it will download this here in this case to the downloads folder um let
+在这种情况下是下载文件夹，让我打开下载
+
+536
+00:00:11,0200 --> 00:00:11,0200
+this case to the downloads folder um let
+让我打开下载
+
+537
+00:00:11,0200 --> 00:00:11,0400
+this case to the downloads folder um let me just open the downloads
+让我打开下载文件夹，然后让我把这个拖到
+
+538
+00:00:11,0400 --> 00:00:11,0400
+me just open the downloads
+然后让我把这个拖到
+
+539
+00:00:11,0400 --> 00:00:11,0800
+me just open the downloads folder and then let me drag this to the
+然后让我把这个拖到桌面，因为这样更容易
+
+540
+00:00:11,0800 --> 00:00:11,0800
+folder and then let me drag this to the
+桌面，因为这样更容易
+
+541
+00:00:11,0800 --> 00:00:11,1000
+folder and then let me drag this to the desktop because then it's a bit easier
+桌面，因为这样更容易看到，所以我现在有这个文件夹
+
+542
+00:00:11,1000 --> 00:00:11,1000
+desktop because then it's a bit easier
+看到，所以我现在有这个文件夹
+
+543
+00:00:11,1000 --> 00:00:11,1500
+desktop because then it's a bit easier to see so I have now this folder and I
+看到，所以我现在有这个文件夹，我可以进入这里，你可以看到
+
+544
+00:00:11,1500 --> 00:00:11,1500
+to see so I have now this folder and I
+我可以进入这里，你可以看到
+
+545
+00:00:11,1500 --> 00:00:11,1700
+to see so I have now this folder and I can go in here and you can see the
+我可以进入这里，你可以看到文件夹的内容与
+
+546
+00:00:11,1700 --> 00:00:11,1700
+can go in here and you can see the
+文件夹的内容与
+
+547
+00:00:11,1700 --> 00:00:11,2000
+can go in here and you can see the contents of the folder here are the same
+文件夹的内容与 GitHub 上显示的内容相同
+
+548
+00:00:11,2000 --> 00:00:11,2000
+contents of the folder here are the same
+内容相同
+
+549
+00:00:11,2000 --> 00:00:11,2200
+contents of the folder here are the same contents that are
+内容相同，所以我只是
+
+550
+00:00:11,2200 --> 00:00:11,2200
+contents that are
+我只是
+
+551
+00:00:11,2200 --> 00:00:11,2600
+contents that are shown here on GitHub so I just yeah
+我只是复制或下载了这个 GitHub
+
+552
+00:00:11,2600 --> 00:00:11,2600
+shown here on GitHub so I just yeah
+复制或下载了这个 GitHub
+
+553
+00:00:11,2600 --> 00:00:11,2800
+shown here on GitHub so I just yeah copied or downloaded this this uh GitHub
+复制或下载了这个 GitHub 仓库，现在让我实际
+
+554
+00:00:11,2800 --> 00:00:11,2900
+copied or downloaded this this uh GitHub
+仓库，现在让我实际
+
+555
+00:00:11,2900 --> 00:00:11,3300
+copied or downloaded this this uh GitHub report repository now let me actually
+仓库，现在让我实际导航到这个
+
+556
+00:00:11,3300 --> 00:00:11,3300
+report repository now let me actually
+导航到这个
+
+557
+00:00:11,3300 --> 00:00:11,3500
+report repository now let me actually navigate to this
+导航到这个文件夹，在你的电脑上可能有点不同
+
+558
+00:00:11,3500 --> 00:00:11,3500
+navigate to this
+文件夹，在你的电脑上可能有点不同
+
+559
+00:00:11,3500 --> 00:00:11,3800
+navigate to this folder it might be a bit different on
+navigate to this folder it might be a bit different on
+
+560
+00:00:11,3800 --> 00:00:11,3800
+folder it might be a bit different on
+folder it might be a bit different on
+
+561
+00:00:11,3800 --> 00:00:11,4000
+folder it might be a bit different on Windows um but this is how you do it on
+在Windows上可能略有不同，但这是操作方法
+
+562
+00:00:11,4000 --> 00:00:11,4000
+Windows um but this is how you do it on
+Windows上，但这是操作方法
+
+563
+00:00:11,4000 --> 00:00:11,4300
+Windows um but this is how you do it on Mac OS and Linux and then I can also
+Windows上，但这是Mac OS和Linux上的操作方法，我还可以
+
+564
+00:00:11,4300 --> 00:00:11,4300
+Mac OS and Linux and then I can also
+Mac OS和Linux上，我还可以
+
+565
+00:00:11,4300 --> 00:00:11,4500
+Mac OS and Linux and then I can also show the contents of this folder here
+Mac OS和Linux上，我还可以展示这个文件夹的内容
+
+566
+00:00:11,4500 --> 00:00:11,4600
+show the contents of this folder here
+展示这个文件夹的内容
+
+567
+00:00:11,4600 --> 00:00:11,4800
+show the contents of this folder here now let me create this virtual
+展示这个文件夹的内容，现在让我创建这个虚拟
+
+568
+00:00:11,4800 --> 00:00:11,4800
+now let me create this virtual
+现在让我创建这个虚拟
+
+569
+00:00:11,4800 --> 00:00:11,5100
+now let me create this virtual environment so there was this command um
+现在让我创建这个虚拟环境，之前有一个命令
+
+570
+00:00:11,5100 --> 00:00:11,5100
+environment so there was this command um
+环境，之前有一个命令
+
+571
+00:00:11,5100 --> 00:00:11,5400
+environment so there was this command um I just showed you um where was it here
+环境，之前有一个命令，我刚才展示过，在哪里来着
+
+572
+00:00:11,5400 --> 00:00:11,5400
+I just showed you um where was it here
+我刚才展示过，在哪里来着
+
+573
+00:00:11,5400 --> 00:00:11,5800
+I just showed you um where was it here this command so this UV V this will
+我刚才展示过，在哪里来着，这个命令，即UV V，它会
+
+574
+00:00:11,5800 --> 00:00:11,5800
+this command so this UV V this will
+这个命令，即UV V，它会
+
+575
+00:00:11,5800 --> 00:00:12,0000
+this command so this UV V this will create a virtual environment and let's
+这个命令，即UV V，它会创建一个虚拟环境，让我们
+
+576
+00:00:12,0000 --> 00:00:12,0000
+create a virtual environment and let's
+创建一个虚拟环境，让我们
+
+577
+00:00:12,0000 --> 00:00:12,0400
+create a virtual environment and let's just use Python let's say 3.11 and this
+创建一个虚拟环境，让我们使用Python，比如3.11版本，这
+
+578
+00:00:12,0400 --> 00:00:12,0400
+just use Python let's say 3.11 and this
+使用Python，比如3.11版本，这
+
+579
+00:00:12,0400 --> 00:00:12,0700
+just use Python let's say 3.11 and this will create a folder called V we can
+使用Python，比如3.11版本，这会创建一个名为V的文件夹，我们可以
+
+580
+00:00:12,0700 --> 00:00:12,0700
+will create a folder called V we can
+创建一个名为V的文件夹，我们可以
+
+581
+00:00:12,0700 --> 00:00:12,1100
+will create a folder called V we can double check now it's here and it has
+创建一个名为V的文件夹，我们可以再次确认，它在这里，并且有
+
+582
+00:00:12,1100 --> 00:00:12,1100
+double check now it's here and it has
+再次确认，它在这里，并且有
+
+583
+00:00:12,1100 --> 00:00:12,1400
+double check now it's here and it has its own version of python so in case we
+再次确认，它在这里，并且有自己的Python版本，这样万一我们
+
+584
+00:00:12,1400 --> 00:00:12,1400
+its own version of python so in case we
+自己的Python版本，这样万一我们
+
+585
+00:00:12,1400 --> 00:00:12,1800
+its own version of python so in case we miss anything up um it will actually um
+自己的Python版本，这样万一我们搞砸了什么，实际上
+
+586
+00:00:12,1800 --> 00:00:12,1800
+miss anything up um it will actually um
+搞砸了什么，实际上
+
+587
+00:00:12,1800 --> 00:00:12,2000
+miss anything up um it will actually um not be a problem we can just delete this
+搞砸了什么，实际上不会成为问题，我们可以直接删除这个
+
+588
+00:00:12,2000 --> 00:00:12,2000
+not be a problem we can just delete this
+不会成为问题，我们可以直接删除这个
+
+589
+00:00:12,2000 --> 00:00:12,2300
+not be a problem we can just delete this folder and then we should be able to set
+不会成为问题，我们可以直接删除这个文件夹，然后应该能够重新
+
+590
+00:00:12,2300 --> 00:00:12,2300
+folder and then we should be able to set
+文件夹，然后应该能够重新
+
+591
+00:00:12,2300 --> 00:00:12,2500
+folder and then we should be able to set it up again so what I mean is I if we
+文件夹，然后应该能够重新设置，我的意思是，如果我们
+
+592
+00:00:12,2500 --> 00:00:12,2500
+it up again so what I mean is I if we
+设置，我的意思是，如果我们
+
+593
+00:00:12,2500 --> 00:00:12,2700
+it up again so what I mean is I if we mess anything up later on can just
+设置，我的意思是，如果我们之后搞砸了什么，可以直接
+
+594
+00:00:12,2700 --> 00:00:12,2700
+mess anything up later on can just
+之后搞砸了什么，可以直接
+
+595
+00:00:12,2700 --> 00:00:12,3100
+mess anything up later on can just delete it and then recreate it like this
+之后搞砸了什么，可以直接删除它，然后像这样重新创建
+
+596
+00:00:12,3100 --> 00:00:12,3100
+delete it and then recreate it like this
+删除它，然后像这样重新创建
+
+597
+00:00:12,3100 --> 00:00:12,3400
+delete it and then recreate it like this now um there's one more so one more
+删除它，然后像这样重新创建，现在还有一件事，还有一件
+
+598
+00:00:12,3400 --> 00:00:12,3400
+now um there's one more so one more
+现在还有一件事，还有一件
+
+599
+00:00:12,3400 --> 00:00:12,3600
+now um there's one more so one more thing I want to say is also you may not
+现在还有一件事，还有一件事我想说的是，你可能无法
+
+600
+00:00:12,3600 --> 00:00:12,3600
+thing I want to say is also you may not
+事我想说的是，你可能无法
+
+601
+00:00:12,3600 --> 00:00:12,3800
+thing I want to say is also you may not be able to see this folder because it
+事我想说的是，你可能无法看到这个文件夹，因为它
+
+602
+00:00:12,3800 --> 00:00:12,3800
+be able to see this folder because it
+看到这个文件夹，因为它
+
+603
+00:00:12,3800 --> 00:00:12,4200
+be able to see this folder because it starts with a DOT and um files or
+看到这个文件夹，因为它以点开头，并且
+
+604
+00:00:12,4200 --> 00:00:12,4200
+starts with a DOT and um files or
+以点开头，并且
+
+605
+00:00:12,4200 --> 00:00:12,4400
+starts with a DOT and um files or folders starting with a DOT are by
+以点开头，并且以点开头的文件或文件夹默认是
+
+606
+00:00:12,4400 --> 00:00:12,4400
+folders starting with a DOT are by
+文件或文件夹默认是
+
+607
+00:00:12,4400 --> 00:00:12,4600
+folders starting with a DOT are by default invisible in in the finder so
+文件或文件夹默认在Finder中不可见，所以
+
+608
+00:00:12,4600 --> 00:00:12,4600
+default invisible in in the finder so
+在Finder中不可见，所以
+
+609
+00:00:12,4600 --> 00:00:12,4800
+default invisible in in the finder so there's a finder option that you have to
+在Finder中不可见，所以有一个Finder选项，你必须
+
+610
+00:00:12,4800 --> 00:00:12,4800
+there's a finder option that you have to
+有一个Finder选项，你必须
+
+611
+00:00:12,4800 --> 00:00:12,5000
+there's a finder option that you have to enable to make invisible files and
+有一个Finder选项，你必须启用它，才能让隐藏文件和
+
+612
+00:00:12,5000 --> 00:00:12,5000
+enable to make invisible files and
+启用它，才能让隐藏文件和
+
+613
+00:00:12,5000 --> 00:00:12,5300
+enable to make invisible files and folders visible but here let's say it is
+启用它，才能让隐藏文件和文件夹可见，但这里假设它是
+
+614
+00:00:12,5300 --> 00:00:12,5300
+folders visible but here let's say it is
+文件夹可见，但这里假设它是
+
+615
+00:00:12,5300 --> 00:00:12,5600
+folders visible but here let's say it is visible um assume yeah you have created
+文件夹可见，但这里假设它是可见的，假设你已经创建了
+
+616
+00:00:12,5600 --> 00:00:12,5600
+visible um assume yeah you have created
+可见的，假设你已经创建了
+
+617
+00:00:12,5600 --> 00:00:12,5900
+visible um assume yeah you have created this V folder The Next Step would be
+可见的，假设你已经创建了这个V文件夹，下一步是
+
+618
+00:00:12,5900 --> 00:00:12,5900
+this V folder The Next Step would be
+这个V文件夹，下一步是
+
+619
+00:00:12,5900 --> 00:00:13,0200
+this V folder The Next Step would be activating this so creating the virtual
+这个V文件夹，下一步是激活它，所以创建虚拟
+
+620
+00:00:13,0200 --> 00:00:13,0200
+activating this so creating the virtual
+激活它，所以创建虚拟
+
+621
+00:00:13,0200 --> 00:00:13,0300
+activating this so creating the virtual environment is only something you have
+激活它，所以创建虚拟环境只需要做一次
+
+622
+00:00:13,0300 --> 00:00:13,0300
+environment is only something you have
+环境只需要做一次
+
+623
+00:00:13,0300 --> 00:00:13,0500
+environment is only something you have to do once unless you delete it but then
+环境只需要做一次，除非你删除它，但之后
+
+624
+00:00:13,0500 --> 00:00:13,0600
+to do once unless you delete it but then
+除非你删除它，但之后
+
+625
+00:00:13,0600 --> 00:00:13,0800
+to do once unless you delete it but then every time you work with it you activate
+除非你删除它，但之后每次使用时，你都要激活
+
+626
+00:00:13,0800 --> 00:00:13,0800
+every time you work with it you activate
+每次使用时，你都要激活
+
+627
+00:00:13,0800 --> 00:00:13,1100
+every time you work with it you activate it so now this is active and when I type
+每次使用时，你都要激活它，现在它已激活，当我输入
+
+628
+00:00:13,1100 --> 00:00:13,1100
+it so now this is active and when I type
+它，现在它已激活，当我输入
+
+629
+00:00:13,1100 --> 00:00:13,1400
+it so now this is active and when I type python so I can type Python and there's
+它，现在它已激活，当我输入python时，我可以输入Python，有一个
+
+630
+00:00:13,1400 --> 00:00:13,1400
+python so I can type Python and there's
+python时，我可以输入Python，有一个
+
+631
+00:00:13,1400 --> 00:00:13,1700
+python so I can type Python and there's this command which which shows you which
+python时，我可以输入Python，有一个命令可以显示你正在使用哪个
+
+632
+00:00:13,1700 --> 00:00:13,1700
+this command which which shows you which
+命令可以显示你正在使用哪个
+
+633
+00:00:13,1700 --> 00:00:13,1900
+this command which which shows you which python version you using I think on
+命令可以显示你正在使用哪个Python版本，我想在
+
+634
+00:00:13,1900 --> 00:00:13,1900
+python version you using I think on
+Python版本，我想在
+
+635
+00:00:13,1900 --> 00:00:13,2300
+python version you using I think on Windows you have to type where but it's
+Python版本，我想在Windows上你需要输入where，但
+
+636
+00:00:13,2300 --> 00:00:13,2300
+Windows you have to type where but it's
+Windows上你需要输入where，但
+
+637
+00:00:13,2300 --> 00:00:13,2500
+Windows you have to type where but it's stick with this because this is mechos
+Windows上你需要输入where，但这里用这个命令，因为这是macOS
+
+638
+00:00:13,2500 --> 00:00:13,2500
+stick with this because this is mechos
+这里用这个命令，因为这是macOS
+
+639
+00:00:13,2500 --> 00:00:13,2800
+stick with this because this is mechos and you can see it's now using when I'm
+这里用这个命令，因为这是macOS，你可以看到它现在正在使用，当我
+
+640
+00:00:13,2800 --> 00:00:13,2800
+and you can see it's now using when I'm
+and you can see it's now using when I'm
+
+641
+00:00:13,2800 --> 00:00:13,3000
+and you can see it's now using when I'm executing python it's using this python
+可以看到现在执行python时使用的是这个python
+
+642
+00:00:13,3000 --> 00:00:13,3000
+executing python it's using this python
+执行python时使用的是这个python
+
+643
+00:00:13,3000 --> 00:00:13,3300
+executing python it's using this python from my virtual environment so let me do
+执行python时使用的是来自虚拟环境的这个python，让我操作一下
+
+644
+00:00:13,3300 --> 00:00:13,3300
+from my virtual environment so let me do
+来自虚拟环境的这个python，让我操作一下
+
+645
+00:00:13,3300 --> 00:00:13,3800
+from my virtual environment so let me do this so this should be python
+来自虚拟环境的这个python，让我操作一下，这应该是python
+
+646
+00:00:13,3800 --> 00:00:13,3800
+this so this should be python
+这应该是python
+
+647
+00:00:13,3800 --> 00:00:13,4200
+this so this should be python 3.11 from um from this path here again I
+这应该是来自这个路径的python 3.11，我可以删除它
+
+648
+00:00:13,4200 --> 00:00:13,4200
+3.11 from um from this path here again I
+来自这个路径的python 3.11，我可以删除它
+
+649
+00:00:13,4200 --> 00:00:13,4400
+3.11 from um from this path here again I can delete this so let me just get rid
+来自这个路径的python 3.11，我可以删除它，让我清除掉
+
+650
+00:00:13,4400 --> 00:00:13,4400
+can delete this so let me just get rid
+可以删除它，让我清除掉
+
+651
+00:00:13,4400 --> 00:00:13,4500
+can delete this so let me just get rid of
+可以删除它，让我清除掉
+
+652
+00:00:13,4500 --> 00:00:13,4500
+of
+掉
+
+653
+00:00:13,4500 --> 00:00:13,4900
+of this if I type python version it won't
+这个，如果我输入python version，它不会
+
+654
+00:00:13,4900 --> 00:00:13,4900
+this if I type python version it won't
+这个，如果我输入python version，它不会
+
+655
+00:00:13,4900 --> 00:00:13,5100
+this if I type python version it won't be available because I just deleted it
+这个，如果我输入python version，它不会可用，因为我刚删除了它
+
+656
+00:00:13,5100 --> 00:00:13,5100
+be available because I just deleted it
+可用，因为我刚删除了它
+
+657
+00:00:13,5100 --> 00:00:13,5300
+be available because I just deleted it so in this case we have a virtual
+可用，因为我刚删除了它，所以在这种情况下我们有一个虚拟
+
+658
+00:00:13,5300 --> 00:00:13,5300
+so in this case we have a virtual
+所以在这种情况下我们有一个虚拟
+
+659
+00:00:13,5300 --> 00:00:13,5500
+so in this case we have a virtual environment that is just very specific
+所以在这种情况下我们有一个非常特定于这个文件夹的虚拟环境
+
+660
+00:00:13,5500 --> 00:00:13,5500
+environment that is just very specific
+非常特定于这个文件夹的虚拟环境
+
+661
+00:00:13,5500 --> 00:00:13,5800
+environment that is just very specific to this um folder and if we mess
+非常特定于这个文件夹的虚拟环境，如果我们搞乱了
+
+662
+00:00:13,5800 --> 00:00:13,5800
+to this um folder and if we mess
+这个文件夹，如果我们搞乱了
+
+663
+00:00:13,5800 --> 00:00:14,0000
+to this um folder and if we mess anything up we can just yeah start over
+这个文件夹，如果我们搞乱了任何东西，我们可以重新开始
+
+664
+00:00:14,0000 --> 00:00:14,0000
+anything up we can just yeah start over
+任何东西，我们可以重新开始
+
+665
+00:00:14,0000 --> 00:00:14,0200
+anything up we can just yeah start over again and yeah installing packages works
+任何东西，我们可以重新开始，安装包也
+
+666
+00:00:14,0200 --> 00:00:14,0200
+again and yeah installing packages works
+安装包也
+
+667
+00:00:14,0200 --> 00:00:14,0600
+again and yeah installing packages works like this you can do UV pip install and
+安装包也像这样工作，你可以使用UV pip install
+
+668
+00:00:14,0600 --> 00:00:14,0600
+like this you can do UV pip install and
+像这样工作，你可以使用UV pip install
+
+669
+00:00:14,0600 --> 00:00:14,0700
+like this you can do UV pip install and then uh there's a package called
+像这样工作，你可以使用UV pip install，然后有一个叫
+
+670
+00:00:14,0700 --> 00:00:14,0700
+then uh there's a package called
+然后有一个叫
+
+671
+00:00:14,0700 --> 00:00:14,1000
+then uh there's a package called packages let's just install that so it
+然后有一个叫packages的包，让我们安装它
+
+672
+00:00:14,1000 --> 00:00:14,1000
+packages let's just install that so it
+packages的包，让我们安装它
+
+673
+00:00:14,1000 --> 00:00:14,1200
+packages let's just install that so it will then yeah install this package or
+packages的包，让我们安装它，它会安装这个包
+
+674
+00:00:14,1200 --> 00:00:14,1200
+will then yeah install this package or
+它会安装这个包
+
+675
+00:00:14,1200 --> 00:00:14,1400
+will then yeah install this package or if we want to install pytorch we can
+它会安装这个包，或者如果我们想安装PyTorch，我们可以
+
+676
+00:00:14,1400 --> 00:00:14,1400
+if we want to install pytorch we can
+或者如果我们想安装PyTorch，我们可以
+
+677
+00:00:14,1400 --> 00:00:14,1600
+if we want to install pytorch we can type UV pip
+或者如果我们想安装PyTorch，我们可以输入UV pip
+
+678
+00:00:14,1600 --> 00:00:14,1600
+type UV pip
+输入UV pip
+
+679
+00:00:14,1600 --> 00:00:14,1900
+type UV pip install torch so for some reason the
+输入UV pip install torch，出于某种原因
+
+680
+00:00:14,1900 --> 00:00:14,1900
+install torch so for some reason the
+install torch，出于某种原因
+
+681
+00:00:14,1900 --> 00:00:14,2200
+install torch so for some reason the pytorch team named the python package
+install torch，出于某种原因，PyTorch团队将Python包命名为
+
+682
+00:00:14,2200 --> 00:00:14,2200
+pytorch team named the python package
+PyTorch团队将Python包命名为
+
+683
+00:00:14,2200 --> 00:00:14,2400
+pytorch team named the python package torch instead of pytorch so something to
+PyTorch团队将Python包命名为torch而不是PyTorch，所以需要记住
+
+684
+00:00:14,2400 --> 00:00:14,2400
+torch instead of pytorch so something to
+torch而不是PyTorch，所以需要记住
+
+685
+00:00:14,2400 --> 00:00:14,2600
+torch instead of pytorch so something to remember pytorch is the main deep
+torch而不是PyTorch，所以需要记住，PyTorch是本书中使用的主要深度学习库
+
+686
+00:00:14,2600 --> 00:00:14,2600
+remember pytorch is the main deep
+记住，PyTorch是本书中使用的主要深度学习库
+
+687
+00:00:14,2600 --> 00:00:14,2700
+remember pytorch is the main deep learning library we are using in this
+记住，PyTorch是本书中使用的主要深度学习库
+
+688
+00:00:14,2700 --> 00:00:14,2800
+learning library we are using in this
+深度学习库，我们在本书中使用它
+
+689
+00:00:14,2800 --> 00:00:14,3100
+learning library we are using in this book so now I installed um torch or pie
+深度学习库，我们在本书中使用它，所以现在我安装了torch或PyTorch
+
+690
+00:00:14,3100 --> 00:00:14,3100
+book so now I installed um torch or pie
+本书，所以现在我安装了torch或PyTorch
+
+691
+00:00:14,3100 --> 00:00:14,3300
+book so now I installed um torch or pie torch and yeah so we could do that for
+本书，所以现在我安装了torch或PyTorch，我们可以为本书中使用的所有包这样做
+
+692
+00:00:14,3300 --> 00:00:14,3300
+torch and yeah so we could do that for
+torch或PyTorch，我们可以为本书中使用的所有包这样做
+
+693
+00:00:14,3300 --> 00:00:14,3500
+torch and yeah so we could do that for all the packages that are used in this
+torch或PyTorch，我们可以为本书中使用的所有包这样做
+
+694
+00:00:14,3500 --> 00:00:14,3500
+all the packages that are used in this
+所有包，这些包在本书中使用
+
+695
+00:00:14,3500 --> 00:00:14,3700
+all the packages that are used in this book and in the chapter itself I'm
+所有包，这些包在本书中使用，在章节本身中我
+
+696
+00:00:14,3700 --> 00:00:14,3700
+book and in the chapter itself I'm
+在章节本身中我
+
+697
+00:00:14,3700 --> 00:00:14,3900
+book and in the chapter itself I'm usually telling you which package needs
+在章节本身中我通常会告诉你需要安装哪个包
+
+698
+00:00:14,3900 --> 00:00:14,3900
+usually telling you which package needs
+通常会告诉你需要安装哪个包
+
+699
+00:00:14,3900 --> 00:00:14,4100
+usually telling you which package needs to be installed but if you want to make
+通常会告诉你需要安装哪个包，但如果你想让它非常方便，而不是逐个执行
+
+700
+00:00:14,4100 --> 00:00:14,4100
+to be installed but if you want to make
+需要安装，但如果你想让它非常方便，而不是逐个执行
+
+701
+00:00:14,4100 --> 00:00:14,4400
+to be installed but if you want to make this super convenient and not just you
+需要安装，但如果你想让它非常方便，而不是逐个执行，你可以
+
+702
+00:00:14,4400 --> 00:00:14,4400
+this super convenient and not just you
+非常方便，而不是逐个执行，你可以
+
+703
+00:00:14,4400 --> 00:00:14,4700
+this super convenient and not just you know executing this one by one you can
+非常方便，而不是逐个执行，你可以实际上到这里，有一个文件
+
+704
+00:00:14,4700 --> 00:00:14,4700
+know executing this one by one you can
+实际上到这里，有一个文件
+
+705
+00:00:14,4700 --> 00:00:14,4900
+know executing this one by one you can actually go here and there's a file
+实际上到这里，有一个文件叫requirements.txt，它也在
+
+706
+00:00:14,4900 --> 00:00:14,4900
+actually go here and there's a file
+叫requirements.txt，它也在
+
+707
+00:00:14,4900 --> 00:00:14,5200
+actually go here and there's a file called requirements. text it's also the
+叫requirements.txt，它也在GitHub上相同
+
+708
+00:00:14,5200 --> 00:00:14,5200
+called requirements. text it's also the
+GitHub上相同
+
+709
+00:00:14,5200 --> 00:00:14,5400
+called requirements. text it's also the same here on
+GitHub上相同，如果我进入主视图，有一个
+
+710
+00:00:14,5400 --> 00:00:14,5400
+same here on
+主视图，有一个
+
+711
+00:00:14,5400 --> 00:00:14,5700
+same here on GitHub if I go to the main view there's
+主视图，有一个requirements.txt文件，它列出了
+
+712
+00:00:14,5700 --> 00:00:14,5700
+GitHub if I go to the main view there's
+requirements.txt文件，它列出了
+
+713
+00:00:14,5700 --> 00:00:15,0000
+GitHub if I go to the main view there's a requirements. text text and it lists
+requirements.txt文件，它列出了运行本书所需的最新或所需的包
+
+714
+00:00:15,0000 --> 00:00:15,0000
+a requirements. text text and it lists
+最新或所需的包
+
+715
+00:00:15,0000 --> 00:00:15,0300
+a requirements. text text and it lists the latest or the the packages that are
+最新或所需的包，所以如果你
+
+716
+00:00:15,0300 --> 00:00:15,0300
+the latest or the the packages that are
+运行本书所需的包，所以如果你
+
+717
+00:00:15,0300 --> 00:00:15,0500
+the latest or the the packages that are required for running this book so if you
+运行本书所需的包，所以如果你执行pip或UV pip install -r
+
+718
+00:00:15,0500 --> 00:00:15,0500
+required for running this book so if you
+pip或UV pip install -r
+
+719
+00:00:15,0500 --> 00:00:15,1000
+required for running this book so if you do pip or UV pip install minus r
+pip或UV pip install -r
+
+720
+00:00:15,1000 --> 00:00:15,1000
+do pip or UV pip install minus r
+do pip or UV pip install minus r
+
+721
+00:00:15,1000 --> 00:00:15,1300
+do pip or UV pip install minus r requirements oops you can install all
+使用 pip 或 UV pip install -r requirements.txt 可以一次性安装所有包
+
+722
+00:00:15,1300 --> 00:00:15,1300
+requirements oops you can install all
+requirements.txt 可以一次性安装所有包
+
+723
+00:00:15,1300 --> 00:00:15,1600
+requirements oops you can install all the packages all at once like this and
+requirements.txt 可以一次性安装所有包，像这样
+
+724
+00:00:15,1600 --> 00:00:15,1600
+the packages all at once like this and
+一次性安装所有包，像这样
+
+725
+00:00:15,1600 --> 00:00:15,1800
+the packages all at once like this and yeah so in this way you are done you
+一次性安装所有包，像这样，是的，这样你就完成了
+
+726
+00:00:15,1800 --> 00:00:15,1800
+yeah so in this way you are done you
+是的，这样你就完成了
+
+727
+00:00:15,1800 --> 00:00:15,2100
+yeah so in this way you are done you don't have to do anything um in addition
+是的，这样你就完成了，你不需要做其他任何事情
+
+728
+00:00:15,2100 --> 00:00:15,2100
+don't have to do anything um in addition
+不需要做其他任何事情
+
+729
+00:00:15,2100 --> 00:00:15,2200
+don't have to do anything um in addition this should install all the packages
+不需要做其他任何事情，这应该会安装所有包
+
+730
+00:00:15,2200 --> 00:00:15,2200
+this should install all the packages
+这应该会安装所有包
+
+731
+00:00:15,2200 --> 00:00:15,2400
+this should install all the packages that you need for this book now if
+这应该会安装所有你为本书需要的包
+
+732
+00:00:15,2400 --> 00:00:15,2400
+that you need for this book now if
+你为本书需要的包
+
+733
+00:00:15,2400 --> 00:00:15,2600
+that you need for this book now if you're running this on
+你为本书需要的包，如果你在
+
+734
+00:00:15,2600 --> 00:00:15,2600
+you're running this on
+你在
+
+735
+00:00:15,2600 --> 00:00:15,3000
+you're running this on Windows you might encounter an issue
+你在 Windows 上运行，可能会遇到一个问题
+
+736
+00:00:15,3000 --> 00:00:15,3000
+Windows you might encounter an issue
+Windows 上运行，可能会遇到一个问题
+
+737
+00:00:15,3000 --> 00:00:15,3400
+Windows you might encounter an issue with tensorflow IO GCS file
+Windows 上运行，可能会遇到 tensorflow IO GCS 文件系统的问题
+
+738
+00:00:15,3400 --> 00:00:15,3400
+with tensorflow IO GCS file
+tensorflow IO GCS 文件系统的问题
+
+739
+00:00:15,3400 --> 00:00:15,3700
+with tensorflow IO GCS file system um and this is a bit annoying so
+tensorflow IO GCS 文件系统的问题，这有点烦人
+
+740
+00:00:15,3700 --> 00:00:15,3700
+system um and this is a bit annoying so
+系统的问题，这有点烦人
+
+741
+00:00:15,3700 --> 00:00:15,4000
+system um and this is a bit annoying so the the reason why we need this is that
+系统的问题，这有点烦人，我们需要它的原因是
+
+742
+00:00:15,4000 --> 00:00:15,4100
+the the reason why we need this is that
+我们需要它的原因是
+
+743
+00:00:15,4100 --> 00:00:15,4400
+the the reason why we need this is that open AI released the GPT weights for the
+我们需要它的原因是 OpenAI 发布了 GPT 权重
+
+744
+00:00:15,4400 --> 00:00:15,4400
+open AI released the GPT weights for the
+OpenAI 发布了 GPT 权重
+
+745
+00:00:15,4400 --> 00:00:15,4700
+open AI released the GPT weights for the gpt2 model um an llm that we are using
+OpenAI 发布了 GPT 权重，用于 gpt2 模型，这是我们使用的 LLM
+
+746
+00:00:15,4700 --> 00:00:15,4700
+gpt2 model um an llm that we are using
+gpt2 模型，这是我们使用的 LLM
+
+747
+00:00:15,4700 --> 00:00:15,4800
+gpt2 model um an llm that we are using in chapter
+gpt2 模型，这是我们使用的 LLM，在第
+
+748
+00:00:15,4800 --> 00:00:15,4800
+in chapter
+在第
+
+749
+00:00:15,4800 --> 00:00:15,5100
+in chapter 5 as tensor flow code back then and the
+第 5 章中，当时是作为 tensor flow 代码发布的
+
+750
+00:00:15,5100 --> 00:00:15,5100
+5 as tensor flow code back then and the
+第 5 章中，当时是作为 tensor flow 代码发布的
+
+751
+00:00:15,5100 --> 00:00:15,5300
+5 as tensor flow code back then and the weights are in tensor flow we are not
+第 5 章中，当时是作为 tensor flow 代码发布的，权重是 tensor flow 格式
+
+752
+00:00:15,5300 --> 00:00:15,5300
+weights are in tensor flow we are not
+权重是 tensor flow 格式
+
+753
+00:00:15,5300 --> 00:00:15,5500
+weights are in tensor flow we are not working with tensor flow in this book we
+权重是 tensor flow 格式，我们在本书中不使用 tensor flow
+
+754
+00:00:15,5500 --> 00:00:15,5500
+working with tensor flow in this book we
+我们在本书中不使用 tensor flow
+
+755
+00:00:15,5500 --> 00:00:15,5700
+working with tensor flow in this book we are using pytorch which is the most
+我们在本书中不使用 tensor flow，我们使用 PyTorch，这是目前最
+
+756
+00:00:15,5700 --> 00:00:15,5700
+are using pytorch which is the most
+我们使用 PyTorch，这是目前最
+
+757
+00:00:15,5700 --> 00:00:15,5900
+are using pytorch which is the most widely used deep learning library at the
+我们使用 PyTorch，这是目前最广泛使用的深度学习库
+
+758
+00:00:15,5900 --> 00:00:15,5900
+widely used deep learning library at the
+广泛使用的深度学习库
+
+759
+00:00:15,5900 --> 00:00:16,0200
+widely used deep learning library at the moment um however just to open these
+广泛使用的深度学习库，但为了打开这些
+
+760
+00:00:16,0200 --> 00:00:16,0200
+moment um however just to open these
+但为了打开这些
+
+761
+00:00:16,0200 --> 00:00:16,0400
+moment um however just to open these open weight files we have to briefly use
+但为了打开这些开放权重文件，我们得短暂使用
+
+762
+00:00:16,0400 --> 00:00:16,0500
+open weight files we have to briefly use
+开放权重文件，我们得短暂使用
+
+763
+00:00:16,0500 --> 00:00:16,0600
+open weight files we have to briefly use tensorflow and this is why it's a
+开放权重文件，我们得短暂使用 tensor flow，这就是为什么它是一个
+
+764
+00:00:16,0600 --> 00:00:16,0600
+tensorflow and this is why it's a
+tensor flow，这就是为什么它是一个
+
+765
+00:00:16,0600 --> 00:00:16,0900
+tensorflow and this is why it's a requirement however it might create some
+tensor flow，这就是为什么它是一个依赖项，但它可能会在
+
+766
+00:00:16,0900 --> 00:00:16,0900
+requirement however it might create some
+依赖项，但它可能会在
+
+767
+00:00:16,0900 --> 00:00:16,1200
+requirement however it might create some problems on windows so if you don't want
+依赖项，但它可能会在 Windows 上造成一些问题，所以如果你不想
+
+768
+00:00:16,1200 --> 00:00:16,1200
+problems on windows so if you don't want
+Windows 上造成一些问题，所以如果你不想
+
+769
+00:00:16,1200 --> 00:00:16,1500
+problems on windows so if you don't want to worry about this you could either go
+Windows 上造成一些问题，所以如果你不想担心这个，你可以要么
+
+770
+00:00:16,1500 --> 00:00:16,1500
+to worry about this you could either go
+担心这个，你可以要么
+
+771
+00:00:16,1500 --> 00:00:16,1800
+to worry about this you could either go into this requirements
+担心这个，你可以要么进入这个 requirements
+
+772
+00:00:16,1800 --> 00:00:16,1800
+into this requirements
+进入这个 requirements
+
+773
+00:00:16,1800 --> 00:00:16,2300
+into this requirements file here delete tens of flow save it
+进入这个 requirements 文件，删除 tensor flow，保存它
+
+774
+00:00:16,2300 --> 00:00:16,2300
+file here delete tens of flow save it
+文件，删除 tensor flow，保存它
+
+775
+00:00:16,2300 --> 00:00:16,2700
+file here delete tens of flow save it and then just run this command again and
+文件，删除 tensor flow，保存它，然后再次运行这个命令
+
+776
+00:00:16,2700 --> 00:00:16,2700
+and then just run this command again and
+然后再次运行这个命令
+
+777
+00:00:16,2700 --> 00:00:16,2900
+and then just run this command again and then worry about yeah worry about
+然后再次运行这个命令，然后稍后再处理
+
+778
+00:00:16,2900 --> 00:00:16,2900
+then worry about yeah worry about
+稍后再处理
+
+779
+00:00:16,2900 --> 00:00:16,3100
+then worry about yeah worry about installing tensor flow at a later time
+稍后再处理安装 tensor flow 的问题
+
+780
+00:00:16,3100 --> 00:00:16,3100
+installing tensor flow at a later time
+安装 tensor flow 的问题
+
+781
+00:00:16,3100 --> 00:00:16,3500
+installing tensor flow at a later time you you can also without having to
+安装 tensor flow 的问题，你也可以不
+
+782
+00:00:16,3500 --> 00:00:16,3500
+you you can also without having to
+你也可以不
+
+783
+00:00:16,3500 --> 00:00:16,3700
+you you can also without having to delete this I think what works because
+你也可以不删除它，我认为这样也行，因为
+
+784
+00:00:16,3700 --> 00:00:16,3700
+delete this I think what works because
+删除它，我认为这样也行，因为
+
+785
+00:00:16,3700 --> 00:00:16,4000
+delete this I think what works because it will build it from Source you can
+它会从源码构建，你可以
+
+786
+00:00:16,4000 --> 00:00:16,4000
+it will build it from Source you can
+它会从源码构建，你可以
+
+787
+00:00:16,4000 --> 00:00:16,4300
+it will build it from Source you can leave it in here and just run pip
+它会从源码构建，你可以保留它，然后运行 pip
+
+788
+00:00:16,4300 --> 00:00:16,4300
+leave it in here and just run pip
+保留它，然后运行 pip
+
+789
+00:00:16,4300 --> 00:00:16,4500
+leave it in here and just run pip install without UV and this this should
+保留它，然后运行 pip install 而不使用 UV，这样应该
+
+790
+00:00:16,4500 --> 00:00:16,4500
+install without UV and this this should
+安装而不使用 UV，这样应该
+
+791
+00:00:16,4500 --> 00:00:16,4700
+install without UV and this this should also work so like
+安装而不使用 UV，这样应该也能工作，就像
+
+792
+00:00:16,4700 --> 00:00:16,4700
+also work so like
+也能工作，就像
+
+793
+00:00:16,4700 --> 00:00:16,5100
+also work so like this however in case this also doesn't
+也能工作，就像这样，但如果这样也不
+
+794
+00:00:16,5100 --> 00:00:16,5100
+this however in case this also doesn't
+这样，但如果这样也不
+
+795
+00:00:16,5100 --> 00:00:16,5300
+this however in case this also doesn't work there's another backup option and
+这样，但如果这样也不工作，还有另一个备用选项
+
+796
+00:00:16,5300 --> 00:00:16,5300
+work there's another backup option and
+工作，还有另一个备用选项
+
+797
+00:00:16,5300 --> 00:00:16,5600
+work there's another backup option and this would be using Google cab so if you
+工作，还有另一个备用选项，那就是使用 Google Colab，所以如果你
+
+798
+00:00:16,5600 --> 00:00:16,5600
+this would be using Google cab so if you
+那就是使用 Google Colab，所以如果你
+
+799
+00:00:16,5600 --> 00:00:16,5700
+this would be using Google cab so if you go to Google
+那就是使用 Google Colab，所以如果你去 Google
+
+800
+00:00:16,5700 --> 00:00:16,5700
+go to Google
+去 Google
+
+801
+00:00:16,5700 --> 00:00:17,0100
+go to Google cab this is a you can run notebooks in
+前往Google Colab，这是一个可以在其中运行notebook的工具
+
+802
+00:00:17,0100 --> 00:00:17,0100
+cab this is a you can run notebooks in
+Colab是一个可以在其中运行notebook的工具
+
+803
+00:00:17,0100 --> 00:00:17,0400
+cab this is a you can run notebooks in the cloud it's uh free and what you
+Colab是一个可以在云端运行notebook的工具，它是免费的，而且你可以
+
+804
+00:00:17,0400 --> 00:00:17,0400
+the cloud it's uh free and what you
+云端运行notebook的工具，它是免费的，而且你可以
+
+805
+00:00:17,0400 --> 00:00:17,0800
+the cloud it's uh free and what you could do here let me do new
+云端运行notebook的工具，它是免费的，而且你可以在这里新建一个
+
+806
+00:00:17,0800 --> 00:00:17,1100
+notebook um yeah so you can install for
+notebook，嗯，是的，你可以安装例如
+
+807
+00:00:17,1100 --> 00:00:17,1100
+notebook um yeah so you can install for
+notebook，嗯，是的，你可以安装例如
+
+808
+00:00:17,1100 --> 00:00:17,1400
+notebook um yeah so you can install for example again UV so you can type pip
+notebook，嗯，是的，你可以安装例如UV，所以你可以输入pip
+
+809
+00:00:17,1400 --> 00:00:17,1400
+example again UV so you can type pip
+例如UV，所以你可以输入pip
+
+810
+00:00:17,1400 --> 00:00:17,1800
+example again UV so you can type pip install UV usually it's not always
+例如UV，所以你可以输入pip install UV，通常这并非总是
+
+811
+00:00:17,1800 --> 00:00:17,1800
+install UV usually it's not always
+install UV，通常这并非总是
+
+812
+00:00:17,1800 --> 00:00:17,1900
+install UV usually it's not always required but it's usually a good idea to
+install UV，通常这并非总是必需的，但通常建议
+
+813
+00:00:17,1900 --> 00:00:17,1900
+required but it's usually a good idea to
+必需的，但通常建议
+
+814
+00:00:17,1900 --> 00:00:17,2200
+required but it's usually a good idea to add this exclamation mark if you are
+必需的，但通常建议添加这个感叹号，如果你是在
+
+815
+00:00:17,2200 --> 00:00:17,2200
+add this exclamation mark if you are
+添加这个感叹号，如果你是在
+
+816
+00:00:17,2200 --> 00:00:17,2600
+add this exclamation mark if you are running this in a notebook and then so
+添加这个感叹号，如果你是在notebook中运行的话，然后
+
+817
+00:00:17,2600 --> 00:00:17,2600
+running this in a notebook and then so
+在notebook中运行的话，然后
+
+818
+00:00:17,2600 --> 00:00:17,2900
+running this in a notebook and then so what you can do is you can go here
+在notebook中运行的话，然后你可以做的是，你可以到这里
+
+819
+00:00:17,2900 --> 00:00:17,2900
+what you can do is you can go here
+你可以做的是，你可以到这里
+
+820
+00:00:17,2900 --> 00:00:17,3200
+what you can do is you can go here to this main folder click on
+你可以做的是，你可以到这个主文件夹，点击
+
+821
+00:00:17,3200 --> 00:00:17,3200
+to this main folder click on
+到这个主文件夹，点击
+
+822
+00:00:17,3200 --> 00:00:17,3500
+to this main folder click on requirements. text click on
+到这个主文件夹，点击requirements.txt，点击
+
+823
+00:00:17,3500 --> 00:00:17,3500
+requirements. text click on
+requirements.txt，点击
+
+824
+00:00:17,3500 --> 00:00:17,3900
+requirements. text click on raw and copy this link
+requirements.txt，点击raw并复制这个链接
+
+825
+00:00:17,3900 --> 00:00:17,3900
+raw and copy this link
+raw并复制这个链接
+
+826
+00:00:17,3900 --> 00:00:17,4500
+raw and copy this link here go here and type UV pip install
+raw并复制这个链接，到这里，输入UV pip install
+
+827
+00:00:17,4500 --> 00:00:17,4500
+here go here and type UV pip install
+到这里，输入UV pip install
+
+828
+00:00:17,4500 --> 00:00:17,4800
+here go here and type UV pip install minus r and it will install all the
+到这里，输入UV pip install -r，它会安装所有
+
+829
+00:00:17,4800 --> 00:00:17,4800
+minus r and it will install all the
+-r，它会安装所有
+
+830
+00:00:17,4800 --> 00:00:17,5100
+minus r and it will install all the required packages here um oh one more
+-r，它会安装所有必需的包，嗯，还有一点
+
+831
+00:00:17,5100 --> 00:00:17,5100
+required packages here um oh one more
+必需的包，嗯，还有一点
+
+832
+00:00:17,5100 --> 00:00:17,5300
+required packages here um oh one more thing to say is we are not or we have
+必需的包，嗯，还有一点要说的是，我们并没有，或者说我们
+
+833
+00:00:17,5300 --> 00:00:17,5300
+thing to say is we are not or we have
+要说的是，我们并没有，或者说我们
+
+834
+00:00:17,5300 --> 00:00:17,5500
+thing to say is we are not or we have not created this virtual environment so
+要说的是，我们并没有创建这个虚拟环境，所以
+
+835
+00:00:17,5500 --> 00:00:17,5500
+not created this virtual environment so
+没有创建这个虚拟环境，所以
+
+836
+00:00:17,5500 --> 00:00:17,5600
+not created this virtual environment so this is why we are seeing this error
+没有创建这个虚拟环境，所以这就是为什么我们看到这个错误
+
+837
+00:00:17,5600 --> 00:00:17,5600
+this is why we are seeing this error
+这就是为什么我们看到这个错误
+
+838
+00:00:17,5600 --> 00:00:17,5900
+this is why we are seeing this error here and in Google collab it would be
+这就是为什么我们看到这个错误，而在Google Colab中，创建这个虚拟环境会
+
+839
+00:00:17,5900 --> 00:00:17,5900
+here and in Google collab it would be
+而在Google Colab中，创建这个虚拟环境会
+
+840
+00:00:17,5900 --> 00:00:18,0100
+here and in Google collab it would be Overkill to create this virtual
+而在Google Colab中，创建这个虚拟环境会显得多余，我的意思是我们可以用
+
+841
+00:00:18,0100 --> 00:00:18,0100
+Overkill to create this virtual
+多余，我的意思是我们可以用
+
+842
+00:00:18,0100 --> 00:00:18,0200
+Overkill to create this virtual environment I mean we could do it with
+多余，我的意思是我们可以用这个UV V来创建，例如，但这会
+
+843
+00:00:18,0200 --> 00:00:18,0300
+environment I mean we could do it with
+这个UV V来创建，例如，但这会
+
+844
+00:00:18,0300 --> 00:00:18,0600
+environment I mean we could do it with this UV V for example but this would be
+这个UV V来创建，例如，但这会显得多余，因为Google Colab本身
+
+845
+00:00:18,0600 --> 00:00:18,0600
+this UV V for example but this would be
+显得多余，因为Google Colab本身
+
+846
+00:00:18,0600 --> 00:00:18,0800
+this UV V for example but this would be Overkill because a Google collab is
+显得多余，因为Google Colab本身已经是一个虚拟环境，所以每次
+
+847
+00:00:18,0800 --> 00:00:18,0800
+Overkill because a Google collab is
+已经是一个虚拟环境，所以每次
+
+848
+00:00:18,0800 --> 00:00:18,1000
+Overkill because a Google collab is already a virtual environment so every
+已经是一个虚拟环境，所以每次你在一个新的
+
+849
+00:00:18,1000 --> 00:00:18,1000
+already a virtual environment so every
+你在一个新的
+
+850
+00:00:18,1000 --> 00:00:18,1400
+already a virtual environment so every time you open the notebook um in a new
+你在一个新的会话中打开notebook时，它都会是一个全新的环境
+
+851
+00:00:18,1400 --> 00:00:18,1400
+time you open the notebook um in a new
+会话中打开notebook时，它都会是一个全新的环境
+
+852
+00:00:18,1400 --> 00:00:18,1700
+time you open the notebook um in a new session it will be a fresh environment
+会话中打开notebook时，它都会是一个全新的环境，所以在这种情况下，因为它已经是一个
+
+853
+00:00:18,1700 --> 00:00:18,1700
+session it will be a fresh environment
+所以在这种情况下，因为它已经是一个
+
+854
+00:00:18,1700 --> 00:00:18,1800
+session it will be a fresh environment so in this case since it is already a
+所以在这种情况下，因为它已经是一个虚拟环境，我们可以直接输入
+
+855
+00:00:18,1800 --> 00:00:18,1800
+so in this case since it is already a
+虚拟环境，我们可以直接输入
+
+856
+00:00:18,1800 --> 00:00:18,2100
+so in this case since it is already a virtual environment we can just uh type
+虚拟环境，我们可以直接输入system，它会像这样处理
+
+857
+00:00:18,2100 --> 00:00:18,2100
+virtual environment we can just uh type
+system，它会像这样处理
+
+858
+00:00:18,2100 --> 00:00:18,2300
+virtual environment we can just uh type system and it will treat it like such so
+system，它会像这样处理，这样就不会创建一个单独的
+
+859
+00:00:18,2300 --> 00:00:18,2300
+system and it will treat it like such so
+这样就不会创建一个单独的
+
+860
+00:00:18,2300 --> 00:00:18,2500
+system and it will treat it like such so that it is not creating a separate
+这样就不会创建一个单独的虚拟环境，但这完全取决于
+
+861
+00:00:18,2500 --> 00:00:18,2500
+that it is not creating a separate
+虚拟环境，但这完全取决于
+
+862
+00:00:18,2500 --> 00:00:18,2600
+that it is not creating a separate virtual environment but it's really up
+虚拟环境，但这完全取决于你，这只是一个更简单的方法
+
+863
+00:00:18,2600 --> 00:00:18,2600
+virtual environment but it's really up
+你，这只是一个更简单的方法
+
+864
+00:00:18,2600 --> 00:00:18,2800
+virtual environment but it's really up to you this is like just a bit simpler
+你，这只是一个更简单的方法，少了一个需要担心的步骤，哎呀
+
+865
+00:00:18,2800 --> 00:00:18,2800
+to you this is like just a bit simpler
+少了一个需要担心的步骤，哎呀
+
+866
+00:00:18,2800 --> 00:00:18,3200
+to you this is like just a bit simpler it's one less step to worry about oops
+少了一个需要担心的步骤，哎呀，嗯，一个
+
+867
+00:00:18,3200 --> 00:00:18,3200
+it's one less step to worry about oops
+嗯，一个
+
+868
+00:00:18,3200 --> 00:00:18,3500
+it's one less step to worry about oops um one
+嗯，一个错误，哦，我打错了，我漏了一个S
+
+869
+00:00:18,3500 --> 00:00:18,3900
+mistake oh I made a typo I forgot an S
+错误，哦，我打错了，我漏了一个S
+
+870
+00:00:18,3900 --> 00:00:18,3900
+mistake oh I made a typo I forgot an S
+错误，哦，我打错了，我漏了一个S，所以是的，这正在安装所有
+
+871
+00:00:18,3900 --> 00:00:18,4100
+mistake oh I made a typo I forgot an S so yeah so this is installing all the
+所以是的，这正在安装所有
+
+872
+00:00:18,4100 --> 00:00:18,4100
+so yeah so this is installing all the
+所以是的，这正在安装所有包到Google Colab中，然后
+
+873
+00:00:18,4100 --> 00:00:18,4300
+so yeah so this is installing all the packages in Google collab now and then
+包到Google Colab中，然后
+
+874
+00:00:18,4300 --> 00:00:18,4300
+packages in Google collab now and then
+包到Google Colab中，然后我们可以，例如，执行
+
+875
+00:00:18,4300 --> 00:00:18,4600
+packages in Google collab now and then we could for example execute the code
+我们可以，例如，执行
+
+876
+00:00:18,4600 --> 00:00:18,4600
+we could for example execute the code
+我们可以，例如，执行这本书的代码
+
+877
+00:00:18,4600 --> 00:00:18,4900
+we could for example execute the code for this book in Google collab and by
+这本书的代码
+
+878
+00:00:18,4900 --> 00:00:18,4900
+for this book in Google collab and by
+这本书的代码在Google Colab中，顺便说一下，这个命令在本地也有效
+
+879
+00:00:18,4900 --> 00:00:18,5500
+for this book in Google collab and by the way this command also works locally
+在Google Colab中，顺便说一下，这个命令在本地也有效
+
+880
+00:00:18,5500 --> 00:00:18,5500
+the way this command also works locally
+在Google Colab中，顺便说一下，这个命令在本地也有效
+
+881
+00:00:18,5500 --> 00:00:18,5600
+the way this command also works locally so if you don't want to download the
+这个命令也可以在本地运行，所以如果你不想下载
+
+882
+00:00:18,5600 --> 00:00:18,5600
+so if you don't want to download the
+所以如果你不想下载
+
+883
+00:00:18,5600 --> 00:00:18,5900
+so if you don't want to download the GitHub repository you could also just
+所以如果你不想下载GitHub仓库，你也可以直接
+
+884
+00:00:18,5900 --> 00:00:18,5900
+GitHub repository you could also just
+GitHub仓库，你也可以直接
+
+885
+00:00:18,5900 --> 00:00:19,0200
+GitHub repository you could also just copy this in here with this uh URL and
+GitHub仓库，你也可以直接把这个URL复制到这里，然后
+
+886
+00:00:19,0200 --> 00:00:19,0200
+copy this in here with this uh URL and
+把这个URL复制到这里，然后
+
+887
+00:00:19,0200 --> 00:00:19,0500
+copy this in here with this uh URL and install all the packages right here here
+把这个URL复制到这里，然后在这里安装所有包
+
+888
+00:00:19,0500 --> 00:00:19,0500
+install all the packages right here here
+在这里安装所有包
+
+889
+00:00:19,0500 --> 00:00:19,0700
+install all the packages right here here it already I mean already has the
+在这里安装所有包，它已经，我的意思是已经包含了
+
+890
+00:00:19,0700 --> 00:00:19,0700
+it already I mean already has the
+它已经，我的意思是已经包含了
+
+891
+00:00:19,0700 --> 00:00:19,1000
+it already I mean already has the packages so it didn't do much but if you
+它已经，我的意思是已经包含了这些包，所以没做太多事，但如果你
+
+892
+00:00:19,1000 --> 00:00:19,1000
+packages so it didn't do much but if you
+这些包，所以没做太多事，但如果你
+
+893
+00:00:19,1000 --> 00:00:19,1200
+packages so it didn't do much but if you run this for the first time this will
+这些包，所以没做太多事，但如果你是第一次运行这个，它会
+
+894
+00:00:19,1200 --> 00:00:19,1200
+run this for the first time this will
+第一次运行这个，它会
+
+895
+00:00:19,1200 --> 00:00:19,1400
+run this for the first time this will install all the packages and then once
+第一次运行这个，它会安装所有包，然后一旦
+
+896
+00:00:19,1400 --> 00:00:19,1400
+install all the packages and then once
+安装所有包，然后一旦
+
+897
+00:00:19,1400 --> 00:00:19,1700
+install all the packages and then once we have this installed we can do UV run
+安装所有包，然后一旦我们安装好了，就可以运行UV run
+
+898
+00:00:19,1700 --> 00:00:19,1700
+we have this installed we can do UV run
+我们安装好了，就可以运行UV run
+
+899
+00:00:19,1700 --> 00:00:19,2000
+we have this installed we can do UV run and open a new Jupiter lab environment
+我们安装好了，就可以运行UV run并打开一个新的Jupyter lab环境
+
+900
+00:00:19,2000 --> 00:00:19,2000
+and open a new Jupiter lab environment
+并打开一个新的Jupyter lab环境
+
+901
+00:00:19,2000 --> 00:00:19,2300
+and open a new Jupiter lab environment so jupyter lab is a way to open jupyter
+并打开一个新的Jupyter lab环境，所以jupyter lab是一种打开jupyter的方式
+
+902
+00:00:19,2300 --> 00:00:19,2300
+so jupyter lab is a way to open jupyter
+所以jupyter lab是一种打开jupyter的方式
+
+903
+00:00:19,2300 --> 00:00:19,2600
+so jupyter lab is a way to open jupyter notebooks by default this will open up
+所以jupyter lab是一种打开jupyter notebooks的方式，默认情况下它会打开
+
+904
+00:00:19,2600 --> 00:00:19,2600
+notebooks by default this will open up
+notebooks，默认情况下它会打开
+
+905
+00:00:19,2600 --> 00:00:19,3000
+notebooks by default this will open up in your um Prim primary browser and then
+notebooks，默认情况下它会打开在你的主浏览器中，然后
+
+906
+00:00:19,3000 --> 00:00:19,3000
+in your um Prim primary browser and then
+在你的主浏览器中，然后
+
+907
+00:00:19,3000 --> 00:00:19,3300
+in your um Prim primary browser and then yeah we can open the code for the
+在你的主浏览器中，然后是的，我们可以打开代码
+
+908
+00:00:19,3300 --> 00:00:19,3300
+yeah we can open the code for the
+是的，我们可以打开代码
+
+909
+00:00:19,3300 --> 00:00:19,3500
+yeah we can open the code for the different chapters for example or we
+是的，我们可以打开不同章节的代码，例如，或者我们
+
+910
+00:00:19,3500 --> 00:00:19,3500
+different chapters for example or we
+不同章节的代码，例如，或者我们
+
+911
+00:00:19,3500 --> 00:00:19,3700
+different chapters for example or we could make a new notebook so that's what
+不同章节的代码，例如，或者我们可以创建一个新的notebook，这就是
+
+912
+00:00:19,3700 --> 00:00:19,3700
+could make a new notebook so that's what
+可以创建一个新的notebook，这就是
+
+913
+00:00:19,3700 --> 00:00:19,3900
+could make a new notebook so that's what I recommend when you're following along
+可以创建一个新的notebook，这就是我推荐的，当你跟着
+
+914
+00:00:19,3900 --> 00:00:19,3900
+I recommend when you're following along
+我推荐的，当你跟着
+
+915
+00:00:19,3900 --> 00:00:19,4300
+I recommend when you're following along with this book either um to make a new
+我推荐的，当你跟着这本书学习时，要么创建一个新的
+
+916
+00:00:19,4300 --> 00:00:19,4300
+with this book either um to make a new
+这本书学习时，要么创建一个新的
+
+917
+00:00:19,4300 --> 00:00:19,4600
+with this book either um to make a new notebook and run the code here or
+这本书学习时，要么创建一个新的notebook并在这里运行代码，要么
+
+918
+00:00:19,4600 --> 00:00:19,4600
+notebook and run the code here or
+notebook并在这里运行代码，要么
+
+919
+00:00:19,4600 --> 00:00:19,4800
+notebook and run the code here or another thing is you can open an
+notebook并在这里运行代码，要么另一种方法是你可以打开一个
+
+920
+00:00:19,4800 --> 00:00:19,4800
+another thing is you can open an
+另一种方法是你可以打开一个
+
+921
+00:00:19,4800 --> 00:00:19,5000
+another thing is you can open an existing notebook but you know it would
+另一种方法是你可以打开一个现有的notebook，但你知道，这会
+
+922
+00:00:19,5000 --> 00:00:19,5000
+existing notebook but you know it would
+现有的notebook，但你知道，这会
+
+923
+00:00:19,5000 --> 00:00:19,5200
+existing notebook but you know it would be a little bit of a spoiler if you see
+现有的notebook，但你知道，如果你已经看到输出，会有点剧透
+
+924
+00:00:19,5200 --> 00:00:19,5200
+be a little bit of a spoiler if you see
+如果你已经看到输出，会有点剧透
+
+925
+00:00:19,5200 --> 00:00:19,5500
+be a little bit of a spoiler if you see already the output so I highly recommend
+如果你已经看到输出，会有点剧透，所以我强烈建议
+
+926
+00:00:19,5500 --> 00:00:19,5500
+already the output so I highly recommend
+所以我强烈建议
+
+927
+00:00:19,5500 --> 00:00:19,5900
+already the output so I highly recommend um going here and selecting
+所以我强烈建议嗯，在这里选择
+
+928
+00:00:19,5900 --> 00:00:19,5900
+um going here and selecting
+嗯，在这里选择
+
+929
+00:00:19,5900 --> 00:00:20,0300
+um going here and selecting um clear outputs of all SS which will
+嗯，在这里选择清除所有单元格的输出，这会
+
+930
+00:00:20,0300 --> 00:00:20,0300
+um clear outputs of all SS which will
+清除所有单元格的输出，这会
+
+931
+00:00:20,0300 --> 00:00:20,0500
+um clear outputs of all SS which will delete the output so you're not seeing
+清除所有单元格的输出，这会删除输出，这样你就看不到
+
+932
+00:00:20,0500 --> 00:00:20,0500
+delete the output so you're not seeing
+删除输出，这样你就看不到
+
+933
+00:00:20,0500 --> 00:00:20,0600
+delete the output so you're not seeing the output but I think to get the most
+删除输出，这样你就看不到输出，但我认为为了充分利用
+
+934
+00:00:20,0600 --> 00:00:20,0600
+the output but I think to get the most
+输出，但我认为为了充分利用
+
+935
+00:00:20,0600 --> 00:00:20,0800
+the output but I think to get the most out of the book I highly recommend just
+输出，但我认为为了充分利用这本书，我强烈建议直接
+
+936
+00:00:20,0800 --> 00:00:20,0800
+out of the book I highly recommend just
+这本书，我强烈建议直接
+
+937
+00:00:20,0800 --> 00:00:20,1100
+out of the book I highly recommend just doing a fresh notebook and actually it's
+这本书，我强烈建议直接创建一个全新的notebook，实际上这
+
+938
+00:00:20,1100 --> 00:00:20,1100
+doing a fresh notebook and actually it's
+创建一个全新的notebook，实际上这
+
+939
+00:00:20,1100 --> 00:00:20,1200
+doing a fresh notebook and actually it's a lot of work but actually typing the
+创建一个全新的notebook，实际上这工作量很大，但实际输入
+
+940
+00:00:20,1200 --> 00:00:20,1200
+a lot of work but actually typing the
+工作量很大，但实际输入
+
+941
+00:00:20,1200 --> 00:00:20,1400
+a lot of work but actually typing the code because that's actually a really
+工作量很大，但实际输入代码，因为那真的是一个
+
+942
+00:00:20,1400 --> 00:00:20,1400
+code because that's actually a really
+代码，因为那真的是一个
+
+943
+00:00:20,1400 --> 00:00:20,1500
+code because that's actually a really good learning experience because then
+代码，因为那真的是一个很好的学习体验，因为这样
+
+944
+00:00:20,1500 --> 00:00:20,1500
+good learning experience because then
+很好的学习体验，因为这样
+
+945
+00:00:20,1500 --> 00:00:20,1800
+good learning experience because then you also see or you pay more attention
+很好的学习体验，因为这样你也会看到，或者说你会更关注
+
+946
+00:00:20,1800 --> 00:00:20,1800
+you also see or you pay more attention
+你也会看到，或者说你会更关注
+
+947
+00:00:20,1800 --> 00:00:20,1900
+you also see or you pay more attention to the code than just you know copy
+你也会看到，或者说你会更关注代码，而不是仅仅复制
+
+948
+00:00:20,1900 --> 00:00:20,1900
+to the code than just you know copy
+代码，而不是仅仅复制
+
+949
+00:00:20,1900 --> 00:00:20,2200
+to the code than just you know copy pasting it or just starting with an
+代码，而不是仅仅复制粘贴，或者直接从一个现有的notebook开始
+
+950
+00:00:20,2200 --> 00:00:20,2200
+pasting it or just starting with an
+粘贴，或者直接从一个现有的notebook开始
+
+951
+00:00:20,2200 --> 00:00:20,2300
+pasting it or just starting with an existing notebook but yeah I don't want
+粘贴，或者直接从一个现有的notebook开始，但我不想
+
+952
+00:00:20,2300 --> 00:00:20,2300
+existing notebook but yeah I don't want
+但我不想
+
+953
+00:00:20,2300 --> 00:00:20,2600
+existing notebook but yeah I don't want to go uh too much ahead here and start
+但我不想嗯，在这里走得太远，开始
+
+954
+00:00:20,2600 --> 00:00:20,2600
+to go uh too much ahead here and start
+在这里走得太远，开始
+
+955
+00:00:20,2600 --> 00:00:20,2800
+to go uh too much ahead here and start already talking about the code in
+在这里走得太远，开始已经讨论第二章的代码
+
+956
+00:00:20,2800 --> 00:00:20,2800
+already talking about the code in
+已经讨论第二章的代码
+
+957
+00:00:20,2800 --> 00:00:20,3000
+already talking about the code in chapter too we will do this in the next
+已经讨论第二章的代码，我们会在下一个视频中做这个
+
+958
+00:00:20,3000 --> 00:00:20,3000
+chapter too we will do this in the next
+我们会在下一个视频中做这个
+
+959
+00:00:20,3000 --> 00:00:20,3300
+chapter too we will do this in the next video I hope this video was useful to
+我们会在下一个视频中做这个，希望这个视频对你有用
+
+960
+00:00:20,3300 --> 00:00:20,3300
+video I hope this video was useful to
+希望这个视频对你有用
+
+961
+00:00:20,3300 --> 00:00:20,3500
+video I hope this video was useful to you and showed you one way you can set
+视频 希望这个视频对你有帮助，并展示了一种设置方式
+
+962
+00:00:20,3500 --> 00:00:20,3500
+you and showed you one way you can set
+你并展示了一种设置方式
+
+963
+00:00:20,3500 --> 00:00:20,3600
+you and showed you one way you can set up your Computing environment and yeah
+你并展示了一种设置计算环境的方式，嗯
+
+964
+00:00:20,3600 --> 00:00:20,3600
+up your Computing environment and yeah
+设置计算环境的方式，嗯
+
+965
+00:00:20,3600 --> 00:00:20,3800
+up your Computing environment and yeah if you have questions please feel free
+设置计算环境的方式，嗯 如果有问题请随时
+
+966
+00:00:20,3800 --> 00:00:20,3800
+if you have questions please feel free
+如果有问题请随时
+
+967
+00:00:20,3800 --> 00:00:20,4100
+if you have questions please feel free to comment um I'm happy to answer
+如果有问题请随时评论，嗯 我很乐意回答
+
+968
+00:00:20,4100 --> 00:00:20,4100
+to comment um I'm happy to answer
+评论，嗯 我很乐意回答
+
+969
+00:00:20,4100 --> 00:00:20,4300
+to comment um I'm happy to answer questions you might have and also know
+评论，嗯 我很乐意回答你可能有的问题，同时也知道
+
+970
+00:00:20,4300 --> 00:00:20,4300
+questions you might have and also know
+你可能有的问题，同时也知道
+
+971
+00:00:20,4300 --> 00:00:20,4500
+questions you might have and also know if nothing works you know there's always
+你可能有的问题，同时也知道 如果什么都不管用，你知道总有
+
+972
+00:00:20,4500 --> 00:00:20,4500
+if nothing works you know there's always
+如果什么都不管用，你知道总有
+
+973
+00:00:20,4500 --> 00:00:20,4700
+if nothing works you know there's always Google cab or there are other
+如果什么都不管用，你知道总有 Google Colab 或其他
+
+974
+00:00:20,4700 --> 00:00:20,4700
+Google cab or there are other
+Google Colab 或其他
+
+975
+00:00:20,4700 --> 00:00:20,4900
+Google cab or there are other environments I can also share where
+Google Colab 或其他环境，我也可以分享
+
+976
+00:00:20,4900 --> 00:00:20,4900
+environments I can also share where
+环境，我也可以分享
+
+977
+00:00:20,4900 --> 00:00:20,5100
+environments I can also share where there will always be a possibility that
+环境，我也可以分享 总会有一种可能性
+
+978
+00:00:20,5100 --> 00:00:20,5100
+there will always be a possibility that
+总会有一种可能性
+
+979
+00:00:20,5100 --> 00:00:20,5200
+there will always be a possibility that you can run the code so don't worry
+总会有一种可能性 让你运行代码，所以别担心
+
+980
+00:00:20,5200 --> 00:00:20,5200
+you can run the code so don't worry
+让你运行代码，所以别担心
+
+981
+00:00:20,5200 --> 00:00:20,5400
+you can run the code so don't worry about it but if you have any questions
+让你运行代码，所以别担心 但如果你有任何问题
+
+982
+00:00:20,5400 --> 00:00:20,5400
+about it but if you have any questions
+但如果你有任何问题
+
+983
+00:00:20,5400 --> 00:00:20,5600
+about it but if you have any questions um please let me know and I hope this
+但如果你有任何问题 嗯 请告诉我，希望这个
+
+984
+00:00:20,5600 --> 00:00:20,5600
+um please let me know and I hope this
+嗯 请告诉我，希望这个
+
+985
+00:00:20,5600 --> 00:00:20,5900
+um please let me know and I hope this video was useful and yeah uh I hope I
+嗯 请告诉我，希望这个视频有用，嗯 希望我
+
+986
+00:00:20,5900 --> 00:00:20,5900
+video was useful and yeah uh I hope I
+视频有用，嗯 希望我
+
+987
+00:00:20,5900 --> 00:00:20,5900
+video was useful and yeah uh I hope I will see you in the next video
+视频有用，嗯 希望我们下个视频再见
