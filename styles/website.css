@@ -1,0 +1,20 @@
+/* Website styles */
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.markdown-section code {
+  font-family: "Fira Code", "Source Code Pro", "Consolas", monospace;
+  font-size: 14px;
+}
+
+.markdown-section pre {
+  line-height: 1.5;
+}
+
+.markdown-section blockquote {
+  border-left: 4px solid #4a9eff;
+  background-color: #f0f7ff;
+}

@@ -1,0 +1,14 @@
+{
+  "title": "从零构建大型语言模型 (Build a Large Language Model From Scratch)",
+  "author": "Sebastian Raschka / 中文学习笔记",
+  "language": "zh",
+  "description": "本书通过从零开始编码的方式，带你深入理解大型语言模型（LLM）的内部工作原理，涵盖注意力机制、GPT 架构、预训练、分类微调、指令微调等核心内容。",
+  "plugins": [
+    "-highlight"
+  ],
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css"
+  }
+}

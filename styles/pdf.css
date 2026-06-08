@@ -1,0 +1,73 @@
+/* PDF styles */
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  font-weight: bold;
+}
+
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+h3 { font-size: 17px; }
+
+code {
+  font-family: "Fira Code", "Source Code Pro", "Consolas", monospace;
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+blockquote {
+  border-left: 4px solid #4a9eff;
+  padding: 8px 16px;
+  margin: 1em 0;
+  background-color: #f0f7ff;
+  color: #555;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-break {
+  page-break-after: always;
+}
