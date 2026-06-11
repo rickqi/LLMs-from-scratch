@@ -54,6 +54,8 @@ GPTModel:
   → out_head                    # (batch, seq_len, 50257) = logits
 ```
 
+> **位置编码演进**：GPT-2 使用的是**可学习的绝对位置嵌入**（`nn.Embedding(context_length, emb_dim)`）——每个位置学一个固定向量，直接加到 token 嵌入上。现代 LLM（LLaMA、Mistral、Gemma、Qwen）大多改用 **RoPE（旋转位置编码）**——不再往 token 向量里加位置信息，而是按 token 的位置将 Query 和 Key 向量旋转一个角度，天然编码相对位置，对长上下文泛化更好，且不增加参数。本书 `ch05/07_gpt_to_llama/` 补充目录展示了从 GPT 架构迁移到 LLaMA（含 RoPE）的完整实现。
+
 **GPT-2-small 配置字典**：
 
 ```python
@@ -100,12 +102,14 @@ class LayerNorm(nn.Module):
 - `unbiased=False`：使用有偏方差估计（除以 N 而非 N-1），与 PyTorch 的 `nn.LayerNorm` 行为一致
 - `scale` 和 `shift` 是可学习参数（即 γ 和 β），让模型有能力恢复到归一化前的表示
 
-**Pre-LN vs Post-LN**：
+**Pre-LN vs Post-LN（演进视角）**：
 
-| 类型 | 计算流程 | 特点 |
-|------|----------|------|
-| Post-LN（原版 Transformer） | x → att → add → norm → ff → add → norm | 需要 warmup，训练不稳定 |
-| **Pre-LN（GPT-2 / 本书）** | x → **norm** → att → add → **norm** → ff → add | 训练更稳定，无需 warmup |
+2017 年原始 Transformer（Vaswani et al.）在每个子块**之后**做归一化（post-norm），浅模型没问题，深了（>10 层）就难训。现代 Transformer（GPT-2 起，LLaMA、Mistral、Gemma）普遍改在子块**之前**做归一化（pre-norm），这是让超深 Transformer 变得好训的关键改动之一。
+
+| 类型 | 计算流程 | 特点 | 代表模型 |
+|------|----------|------|---------|
+| Post-LN | x → att → add → norm → ff → add → norm | 需要 warmup，训练不稳定 | 2017 Transformer |
+| **Pre-LN** | x → **norm** → att → add → **norm** → ff → add | 训练更稳定，无需 warmup | GPT-2、LLaMA、Mistral |
 
 ```
 Post-LN:  x → Attention(x) → x + Attention(x) → LayerNorm(...)
@@ -113,6 +117,24 @@ Pre-LN:   x → LayerNorm(x) → Attention(LN(x)) → x + Attention(LN(x))
 ```
 
 > GPT-2 采用 Pre-LN，在注意力计算**之前**做归一化。这是现代 LLM 的主流选择。
+
+**RMSNorm：归一化函数的进一步简化**：
+
+很多现代开放模型（LLaMA、Mistral、Gemma、Phi）用更简单的 **RMSNorm** 替代标准 LayerNorm。原始 LayerNorm 做两件事——先把向量移向零点（减均值），再缩放大小（除标准差）。RMSNorm 砍掉移动只留缩放，经验上缩放承担了大部分收益，计算还更便宜：
+
+```python
+# RMSNorm 伪代码
+def rms_norm(x):
+    rms = sqrt(mean(x²))  # 只算均方根，不减去均值
+    return x / rms * scale  # 不学习 shift 参数
+```
+
+| 类型 | 操作 | 参数 | 使用模型 |
+|------|------|------|---------|
+| LayerNorm | 减均值 + 除标准差 | γ（scale）+ β（shift） | GPT-2、BERT |
+| **RMSNorm** | 仅除均方根 | γ（scale） | LLaMA、Mistral、Gemma、Phi |
+
+> 💡 **为什么迁移到 RMSNorm？** 去掉 shift 和均值计算后，既减少了参数量又降低了计算开销，而层归一化的核心收益（控制数值范围）几乎不受影响。
 
 ---
 
@@ -145,6 +167,26 @@ class GELU(nn.Module):
 - GELU 在 x ≈ 0 附近平滑过渡，而非 ReLU 的硬截断
 - 对负值不直接归零，而是给一个小的权重，保留了更多信息
 - 在 Transformer 架构的实验中，GELU 在 NLP 任务上通常优于 ReLU
+
+**激活函数演进链：从 ReLU 到 SwiGLU**：
+
+| 代数 | 函数 | 使用模型 | 特点 |
+|------|------|---------|------|
+| 第 1 代 | ReLU | 2017 Transformer | 简单，但 x<0 区域梯度为零 |
+| 第 2 代 | GELU | GPT-2、BERT | 平滑过渡，负值保留少量信号 |
+| **第 3 代** | **SwiGLU** | **LLaMA、Mistral、PaLM、Gemma** | 门控机制，FFN 中间层用两个权重矩阵 |
+
+SwiGLU 是当下主流模型的默认选择。它的核心变化是在 FFN 的扩张步骤中引入一个**门控**（gating）机制：
+
+```
+传统 FFN:     output = W2 · GELU(W1 · x)
+SwiGLU FFN:   output = W2 · (SwiGLU(W1 · x) ⊙ (W_gate · x))
+                                   ↑非线性        ↑门控信号
+```
+
+门控让 FFN 有条件地激活某些信息通道，比单一路径的非线性更灵活。代价是多了一个权重矩阵，但这部分开销被更优的收敛速度补偿了。
+
+> 💡 **为什么不直接用 GELU 的门控？** SwiGLU 用两个独立的权重矩阵（W1 和 W_gate）分别控制"非线性变换"和"是否让信息通过"，比 GELU 的单一矩阵 + 单一路径更精细。当前所有前沿开放权重模型（LLaMA 3、Mistral、Gemma 3、Qwen3）都使用 SwiGLU。
 
 ---
 

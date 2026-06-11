@@ -28,6 +28,7 @@
 | [08-指令微调.md](08-指令微调.md) | 指令微调（第 7 章）：Alpaca 格式、response-only loss、DPO 对齐 |
 | [09-PyTorch入门.md](09-PyTorch入门.md) | PyTorch 入门（附录 A）：Tensor、autograd、nn.Module、训练循环、GPU 训练 |
 | [10-LoRA参数高效微调.md](10-LoRA参数高效微调.md) | LoRA 参数高效微调（附录 E）：低秩分解、LoRALayer 实战、50x 参数缩减 |
+| [11-文章对比分析-HowLLMsActuallyWork.md](11-文章对比分析-HowLLMsActuallyWork.md) | 与 0xkato 文章的完整对比分析 + 知识整合（含 7 个进阶知识点） |
 
 ## 目录结构
 
@@ -43,6 +44,7 @@ docs/
 ├── 08-指令微调.md                    ← Ch7：指令微调学习笔记
 ├── 09-PyTorch入门.md                 ← 附录 A：PyTorch 基础
 ├── 10-LoRA参数高效微调.md            ← 附录 E：LoRA 参数高效微调
+├── 11-文章对比分析-HowLLMsActuallyWork.md ← 外部文章对照分析 + 知识整合
 ├── README.md                         ← 本文件
 └── youtube/
     ├── transcript_to_cn.py           ← 字幕下载脚本

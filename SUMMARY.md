@@ -16,6 +16,7 @@
 - [指令微调](docs/08-指令微调.md)
 - [PyTorch 入门](docs/09-PyTorch入门.md)
 - [LoRA 参数高效微调](docs/10-LoRA参数高效微调.md)
+- [How LLMs Actually Work 对比分析](docs/11-文章对比分析-HowLLMsActuallyWork.md)
 
 ---
 
