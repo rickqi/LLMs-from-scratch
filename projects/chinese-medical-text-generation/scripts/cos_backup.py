@@ -143,17 +143,33 @@ def collect_backup_files(lora_only: bool = False, data_only: bool = False) -> li
     return files
 
 
-def upload_file(client, local_path: Path, key: str, dry_run: bool = False) -> bool:
-    """上传单个文件到 COS"""
+def list_remote_with_meta(client) -> dict[str, int]:
+    """列出 COS 远程文件，返回 {key: size} 映射"""
+    remote: dict[str, int] = {}
+    marker = ""
+    while True:
+        resp = client.list_objects(
+            Bucket=COS_BUCKET, Prefix=COS_PREFIX, Marker=marker, MaxKeys=1000
+        )
+        contents = resp.get("Contents", [])
+        if not contents:
+            break
+        for obj in contents:
+            remote[obj["Key"]] = int(obj["Size"])
+        if resp.get("IsTruncated") == "true":
+            marker = resp.get("NextMarker", contents[-1]["Key"])
+        else:
+            break
+    return remote
+
+
+def upload_file(client, local_path: Path, key: str) -> bool:
+    """上传单个文件到 COS（覆盖同 key 旧文件）"""
     size = local_path.stat().st_size
     if size > 1024 * 1024:
         size_str = f"{size/1024/1024:.1f}MB"
     else:
         size_str = f"{size/1024:.0f}KB"
-
-    if dry_run:
-        print(f"  [DRY] {size_str:>10}  {key}")
-        return True
 
     try:
         print(f"  {size_str:>10}  {key}", end="", flush=True)
@@ -165,8 +181,13 @@ def upload_file(client, local_path: Path, key: str, dry_run: bool = False) -> bo
         return False
 
 
-def cmd_backup(lora_only: bool = False, data_only: bool = False, dry_run: bool = False):
-    """执行备份"""
+def cmd_backup(lora_only: bool = False, data_only: bool = False,
+               incremental: bool = False, dry_run: bool = False):
+    """执行备份。
+    
+    - 默认模式: 覆盖上传所有本地文件（COS 同 key 自动替换旧版本）
+    - 增量模式 (--incremental): 对比远程文件大小，大小一致则跳过
+    """
     client = get_cos_client()
 
     files = collect_backup_files(lora_only, data_only)
@@ -174,24 +195,60 @@ def cmd_backup(lora_only: bool = False, data_only: bool = False, dry_run: bool =
 
     total_size = sum(f.stat().st_size for f in files)
 
+    # 增量模式: 获取远程文件清单
+    remote: dict[str, int] = {}
+    if incremental and not dry_run:
+        print("获取远程文件清单...")
+        remote = list_remote_with_meta(client)
+        print(f"远程已有 {len(remote)} 个文件\n")
+
     print(f"\n{'='*60}")
     print(f"备份到: cos://{COS_BUCKET}/{COS_PREFIX}")
     print(f"本地文件: {len(files)} 个, 总大小: {total_size/1024/1024:.1f} MB")
+    if incremental:
+        print(f"模式: 增量 (文件大小一致则跳过)")
     print(f"{'='*60}\n")
 
-    ok = fail = 0
+    ok = skip = fail = 0
+    uploaded_bytes = 0
     start = time.time()
 
     for f in files:
         key = local_to_remote(f)
-        if upload_file(client, f, key, dry_run):
+        local_size = f.stat().st_size
+
+        # 增量跳过: 远程存在且大小一致
+        if incremental and key in remote and remote[key] == local_size:
+            skip += 1
+            continue
+
+        if dry_run:
+            action = "跳过" if (incremental and key in remote and remote.get(key) == local_size) else "上传"
+            size_str = f"{local_size/1024/1024:.1f}MB" if local_size > 1024*1024 else f"{local_size/1024:.0f}KB"
+            replacing = " [替换旧版]" if (key in remote and remote.get(key) != local_size) else ""
+            print(f"  [DRY] {size_str:>10}  {key}{replacing}")
             ok += 1
+            continue
+
+        if upload_file(client, f, key):
+            ok += 1
+            uploaded_bytes += local_size
         else:
             fail += 1
 
     elapsed = time.time() - start
+    speed = uploaded_bytes / elapsed / 1024 if elapsed > 0 else 0
+
     print(f"\n{'='*60}")
-    print(f"完成: ✅ {ok} 上传, ❌ {fail} 失败 ({elapsed:.0f}s)")
+    parts = [f"✅ {ok} 上传"]
+    if skip:
+        parts.append(f"⏭️ {skip} 跳过")
+    if fail:
+        parts.append(f"❌ {fail} 失败")
+    parts.append(f"{elapsed:.0f}s")
+    if uploaded_bytes > 0:
+        parts.append(f"{speed:.0f}KB/s")
+    print(f"完成: {' | '.join(parts)}")
     print(f"{'='*60}")
 
 
@@ -223,43 +280,37 @@ def cmd_list():
 
 
 def cmd_pre_ft_backup(dry_run: bool = False):
-    """指令微调前完整备份 — 备份所有 LoRA 权重 + 指令数据 + 训练日志"""
+    """指令微调前完整备份"""
     print("=" * 60)
     print("  指令微调前完整备份")
     print(f"  时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 
-    # 检查阶段1 LoRA 是否存在
     best_model = PROJECT_ROOT / "output_full" / "best_model"
     if not best_model.exists():
         print(f"\n⚠️  output_full/best_model 不存在")
-        print("   阶段1 continuation 训练可能尚未完成")
         resp = input("   是否继续备份当前已有文件? [y/N]: ").strip().lower()
         if resp != 'y':
             print("   已取消")
             return
 
     print("\n📋 备份清单:\n")
-    cmd_backup(lora_only=False, data_only=False, dry_run=dry_run)
+    cmd_backup(lora_only=False, data_only=False, incremental=False, dry_run=dry_run)
 
-    # 记录备份元数据
     if not dry_run:
+        train_log = PROJECT_ROOT / "train_full.log"
+        last_lines = []
+        if train_log.exists():
+            last_lines = train_log.read_text(encoding="utf-8", errors="replace").splitlines()[-5:]
+
         meta = {
             "backup_time": datetime.now().isoformat(),
             "backup_type": "pre-instruction-ft",
             "project": "LLMs-from-scratch/projects/chinese-medical-text-generation",
             "cos_bucket": COS_BUCKET,
             "cos_prefix": COS_PREFIX,
-            "description": "指令微调前完整备份 — 阶段1 LoRA权重 + 指令数据 + 训练日志",
+            "training_status": {"last_log_lines": last_lines},
         }
-
-        # 同时检查当前训练状态
-        train_log = PROJECT_ROOT / "train_full.log"
-        if train_log.exists():
-            last_lines = train_log.read_text(encoding="utf-8", errors="replace").splitlines()[-5:]
-            meta["training_status"] = {
-                "last_log_lines": last_lines,
-            }
 
         meta_file = PROJECT_ROOT / "docs" / "pre_ft_backup_meta.json"
         meta_file.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -289,6 +340,7 @@ def main():
     backup_p = sub.add_parser("backup", help="备份指定内容")
     backup_p.add_argument("--lora-only", action="store_true", help="仅备份 LoRA 权重")
     backup_p.add_argument("--data-only", action="store_true", help="仅备份指令数据")
+    backup_p.add_argument("--incremental", action="store_true", help="增量备份，大小一致的跳过")
     backup_p.add_argument("--dry-run", action="store_true", help="预览，不实际上传")
 
     # list
@@ -302,6 +354,7 @@ def main():
         cmd_backup(
             lora_only=args.lora_only,
             data_only=args.data_only,
+            incremental=args.incremental,
             dry_run=args.dry_run,
         )
     elif args.command == "list":
