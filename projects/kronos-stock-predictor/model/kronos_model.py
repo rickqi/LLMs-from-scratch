@@ -407,23 +407,27 @@ def auto_regressive_inference(
     else:
         y_stamp_rep = None
 
+    # ---- Pre-compute full stamp ----
+    if x_stamp_rep is not None and y_stamp_rep is not None:
+        full_stamp = torch.cat([x_stamp_rep, y_stamp_rep], dim=1)  # (S, T_ctx+pred_len, F)
+    elif x_stamp_rep is not None:
+        full_stamp = x_stamp_rep
+    else:
+        full_stamp = None
+
     # ---- Auto-regressive loop ----
     pred_s1_list: list[torch.LongTensor] = []
     pred_s2_list: list[torch.LongTensor] = []
+    T_ctx = s1_buf.size(1)
 
     with torch.no_grad():
         for t in tqdm(range(pred_len), disable=not verbose, desc="Autoregressive"):
-            # Build current stamp: context stamp + already-predicted steps
-            if y_stamp_rep is not None:
-                # Stamp for the current window = x_stamp (if still in context) + y_stamp[:t+1]
-                # We only need the stamp for the last position being decoded
-                # Simpler: build stamp for the full buffer
-                if t == 0:
-                    cur_stamp = x_stamp_rep
-                else:
-                    # Concatenate context stamp with predicted-step stamps
-                    # x_stamp covers the original context; y_stamp covers prediction steps
-                    cur_stamp = torch.cat([x_stamp_rep, y_stamp_rep[:, :t, :]], dim=1)
+            # Build stamp matching current buffer length
+            total_len = T_ctx + t
+            if full_stamp is not None:
+                start = max(0, total_len - max_context)
+                end = total_len
+                cur_stamp = full_stamp[:, start:end, :]
             else:
                 cur_stamp = None
 
@@ -469,9 +473,12 @@ def auto_regressive_inference(
             if s1_buf.size(1) > max_context:
                 s1_buf = s1_buf[:, -max_context:]
                 s2_buf = s2_buf[:, -max_context:]
-                if cur_stamp is not None and cur_stamp.size(1) > max_context:
-                    # Stamp is rebuilt each iteration, so just trim x_stamp_rep
-                    pass  # stamp is rebuilt from scratch each step
+                # Trim x_stamp_rep to match the new buffer length
+                if x_stamp_rep is not None:
+                    # Buffer now has max_context tokens; cur_stamp must match
+                    # After sliding, the effective context is the last max_context tokens
+                    # which correspond to stamps from (total_len - max_context) onward
+                    pass  # Stamp rebuilt per iteration, handled in cur_stamp construction
 
     # ---- Assemble predicted token sequences ----
     pred_s1 = torch.cat(pred_s1_list, dim=1)  # (S, pred_len)
