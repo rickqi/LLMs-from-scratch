@@ -105,16 +105,20 @@ class KronosPredictor:
         values_norm = (values - mean) / std
         values_norm = np.clip(values_norm, -self.clip, self.clip)
 
-        # ── 5. 截断到 max_context ──
+        # ── 5. 计算时间特征 ──
+        x_stamp = calc_time_stamps(pd.to_datetime(x_timestamp))
+        y_stamp = calc_time_stamps(pd.to_datetime(y_timestamp))
+
+        # ── 6. 截断到 max_context ──
         if len(values_norm) > self.max_context:
             values_norm = values_norm[-self.max_context:]
-            x_timestamp = x_timestamp[-self.max_context:]
+            x_stamp = x_stamp[-self.max_context:]
 
-        # ── 6. 自回归推理 ──
+        # ── 7. 自回归推理 ──
         pred_norm = self.generate(
             x=values_norm,
-            x_stamp=x_timestamp,
-            y_stamp=y_timestamp,
+            x_stamp=x_stamp.values.astype(np.float32),
+            y_stamp=y_stamp.values.astype(np.float32),
             pred_len=pred_len,
             T=T,
             top_k=top_k,
@@ -280,26 +284,36 @@ class KronosPredictor:
                 sample_count,
             )
 
+        # ── Tokenize raw features ──
+        with torch.no_grad():
+            s1_ids, s2_ids = self.tokenizer.encode(x_t, half=True)
+            token_dict = {"s1_ids": s1_ids, "s2_ids": s2_ids}
+
         # ── 自回归推理 ──
         with torch.no_grad():
             pred = auto_regressive_inference(
                 model=self.model,
                 tokenizer=self.tokenizer,
-                x=x_t,
+                x=token_dict,
                 x_stamp=x_stamp_t,
                 y_stamp=y_stamp_t,
+                max_context=self.max_context,
                 pred_len=pred_len,
-                T=T,
+                temperature=T,
                 top_k=top_k,
                 top_p=top_p,
                 sample_count=sample_count,
-            )  # (B, sample_count, pred_len, 6) or (B, pred_len, 6)
+                device=self.device,
+                verbose=verbose,
+            )
 
         # ── 移除批次维度 (单序列) ──
-        if squeeze:
+        if isinstance(pred, torch.Tensor):
+            pred = pred.cpu().numpy()
+        if squeeze and pred.shape[0] == 1:
             pred = pred.squeeze(0)
 
-        return pred.cpu().numpy()
+        return pred
 
     # ------------------------------------------------------------------
     # 内部工具

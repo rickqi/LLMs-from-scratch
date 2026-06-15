@@ -206,8 +206,6 @@ class BinarySphericalQuantizer(nn.Module):
         group_codebook = self._indices_to_bits(group_codes).float()[:, -group_size:]
         self.register_buffer("group_codebook", group_codebook, persistent=False)
 
-        # 可学习的超平面法向量 (投影矩阵)
-        self.projection = nn.Parameter(torch.randn(embed_dim, embed_dim) * 0.02)
 
     def _indices_to_bits(self, indices: torch.Tensor) -> torch.Tensor:
         """将整数索引转为 bits"""
@@ -216,9 +214,8 @@ class BinarySphericalQuantizer(nn.Module):
         return bits.float() * 2 - 1  # → {-1, +1}
 
     def quantize(self, z: torch.Tensor) -> torch.Tensor:
-        """Bipolar quantization with STE"""
-        z_proj = F.linear(z, self.projection)  # (..., embed_dim)
-        zhat = _bipolar_quantize(z_proj)
+        """Bipolar quantization with STE — operates directly on input."""
+        zhat = _bipolar_quantize(z)
         return zhat
 
     def forward(
@@ -269,9 +266,10 @@ class BinarySphericalQuantizer(nn.Module):
         return bsq_loss, quantized_full, z_indices
 
     def _bits_to_indices(self, bits: torch.Tensor) -> torch.Tensor:
-        """{-1, +1} bits → integer indices"""
+        """{-1, +1} bits → integer indices. Uses actual last dim size."""
+        dim = bits.shape[-1]
+        powers = 2 ** torch.arange(dim - 1, -1, -1, device=bits.device, dtype=torch.long)
         binary = (bits > 0).long()
-        powers = 2 ** torch.arange(self.embed_dim - 1, -1, -1, device=bits.device, dtype=torch.long)
         return (binary * powers).sum(dim=-1)
 
 

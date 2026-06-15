@@ -73,8 +73,8 @@ class TestTokenizer:
             beta=0.25, gamma0=1.0, gamma=1.0, zeta=0.1, group_size=10,
         )
         x = torch.randn(2, 20, 6)
-        indices = tokenizer.encode(x, half=True)
-        reconstructed = tokenizer.decode(indices, half=True)
+        s1_ids, s2_ids = tokenizer.encode(x, half=True)
+        reconstructed = tokenizer.decode(s1_ids, s2_ids)
         assert reconstructed.shape == (2, 20, 6)
 
 

@@ -128,6 +128,20 @@ def calc_time_stamps(x_timestamp: pd.DatetimeIndex) -> pd.DataFrame:
         "month":   x_timestamp.month.values,
     }, index=x_timestamp)
 
+    # Accept Series by converting to DatetimeIndex first
+    if isinstance(x_timestamp, (pd.Series, pd.DatetimeIndex)):
+        x_timestamp = pd.DatetimeIndex(x_timestamp)
+    elif hasattr(x_timestamp, 'to_datetime'):
+        x_timestamp = pd.DatetimeIndex(pd.to_datetime(x_timestamp))
+
+    return pd.DataFrame({
+        "minute":  x_timestamp.minute,
+        "hour":    x_timestamp.hour,
+        "weekday": x_timestamp.weekday,
+        "day":     x_timestamp.day,
+        "month":   x_timestamp.month,
+    }, index=x_timestamp)
+
 
 # ---------------------------------------------------------------------------
 # Kronos model
@@ -467,7 +481,7 @@ def auto_regressive_inference(
     # Average across sample trajectories
     results = []
     for i in range(sample_count):
-        decoded = tokenizer.decode(pred_s1[i], pred_s2[i])  # (pred_len, d_in)
+        decoded = tokenizer.decode(pred_s1[i], pred_s2[i]).cpu()
         results.append(decoded)
 
     # Stack and average: (sample_count, pred_len, d_in) → (pred_len, d_in)

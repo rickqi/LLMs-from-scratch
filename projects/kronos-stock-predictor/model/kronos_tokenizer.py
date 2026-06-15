@@ -254,14 +254,14 @@ class KronosTokenizer(nn.Module, PyTorchModelHubMixin):
             z = layer(z)
         z = self.quant_embed(z)
 
-        # Quantize to get indices
-        _, _, z_indices = self.tokenizer(z)
+        # Quantize — pass half to get separate s1/s2 when needed
+        _, _, z_indices = self.tokenizer(z, half=half)
 
         if half:
-            # Extract s1 bits from the full index.
-            # Full index encodes s1_bits + s2_bits bits; shift right by
-            # s2_bits to keep only the s1 (coarse) portion.
-            z_indices = z_indices >> self.s2_bits
+            # z_indices is a tuple: (s1_indices, s2_indices)
+            # each of shape (B, T)
+            s1_ids, s2_ids = z_indices
+            return s1_ids, s2_ids
 
         return z_indices
 
@@ -269,35 +269,32 @@ class KronosTokenizer(nn.Module, PyTorchModelHubMixin):
     # Decode
     # ──────────────────────────────────────────────────────────────────
     @torch.no_grad()
-    def decode(self, x: torch.Tensor, half: bool = False) -> torch.Tensor:
-        """Decode discrete token indices back to OHLCV space.
+    def decode(self, s1_ids: torch.Tensor, s2_ids: torch.Tensor | None = None) -> torch.Tensor:
+        """Decode token indices back to OHLCV space.
 
-        Parameters
-        ----------
-        x : Tensor, shape (B, T)
-            Integer token indices.
-        half : bool
-            If True, treat ``x`` as coarse (s1-only) indices and decode
-            using the s1-only path.  If False, treat ``x`` as full
-            (s1+s2) indices and decode using the full path.
-
-        Returns
-        -------
-        Tensor, shape (B, T, d_in)
-            Reconstructed OHLCV features.
+        Args:
+            s1_ids: (T,) or (B, T) coarse token indices.
+            s2_ids: (T,) or (B, T) fine token indices. If None, decode as full indices.
         """
-        if half:
-            # s1-only: convert coarse indices to bipolar bits, then
-            # project through the s1 post-quant path.
-            bits = self.indices_to_bits(x, half=True)  # (B, T, s1_bits)
-            z = self.post_quant_embed_pre(bits)  # (B, T, d_model)
-        else:
-            # Full: convert full indices to bipolar bits, then project
-            # through the full post-quant path.
-            bits = self.indices_to_bits(x, half=False)  # (B, T, codebook_dim)
-            z = self.post_quant_embed(bits)  # (B, T, d_model)
+        squeeze_out = s1_ids.ndim == 1
+        if squeeze_out:
+            s1_ids = s1_ids.unsqueeze(0)
+            if s2_ids is not None:
+                s2_ids = s2_ids.unsqueeze(0)
 
-        return self._decode(z)
+        if s2_ids is not None:
+            bits_s1 = self.indices_to_bits(s1_ids, half=True)
+            bits_s2 = self.indices_to_bits(s2_ids, half=True)
+            bits = torch.cat([bits_s1, bits_s2], dim=-1)
+            z = self.post_quant_embed(bits)
+        else:
+            bits = self.indices_to_bits(s1_ids, half=False)
+            z = self.post_quant_embed(bits)
+
+        out = self._decode(z)
+        if squeeze_out:
+            out = out.squeeze(0)
+        return out
 
     # ──────────────────────────────────────────────────────────────────
     # Indices → Bits
