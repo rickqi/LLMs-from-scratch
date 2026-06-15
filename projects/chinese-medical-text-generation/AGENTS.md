@@ -21,6 +21,7 @@
 | `scripts/cos_backup.py` | COS 云备份 | 备份 LoRA/数据 |
 | `train_qwen_lora.py` | 训练脚本 | 执行训练 |
 | `generate.py` | 推理脚本 | 模型推理 |
+| `docs/swir_integration.md` | SwiReasoning 集成方案 | 推理增强 |
 
 ## 当前状态
 
