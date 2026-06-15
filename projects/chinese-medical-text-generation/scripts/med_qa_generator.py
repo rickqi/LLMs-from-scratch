@@ -215,16 +215,18 @@ def select_documents(source_dir: Path, sample_count: int) -> List[Path]:
     for md in source_dir.rglob("*.md"):
         if md.name.startswith("_") or md.name == "index.md":
             continue
+        if md.name.endswith(".json"):
+            continue
         size = md.stat().st_size
-        if 3000 < size < 80000:
+        if 1000 < size < 120000:
             candidates.append((md, size))
     candidates.sort(key=lambda x: x[1], reverse=True)
 
     if len(candidates) <= sample_count:
         return [c[0] for c in candidates]
 
-    # 中等大小优先 (10KB-50KB 最适)
-    mid = [c for c in candidates if 10000 < c[1] < 50000]
+    # 中等大小优先 (10KB-80KB 最适)
+    mid = [c for c in candidates if 10000 < c[1] < 80000]
     if len(mid) >= sample_count:
         return [c[0] for c in mid[:sample_count]]
     return [c[0] for c in candidates[:sample_count]]
