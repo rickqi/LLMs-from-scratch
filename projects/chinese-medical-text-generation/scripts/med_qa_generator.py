@@ -43,12 +43,14 @@ EXPORT_ALPACA_FILE = DOCS_DIR / "med_instruction_alpaca.json"
 REPORT_FILE = DOCS_DIR / "med_qa_report.md"
 
 # ═══════════════════════════════════════════════════════════════
-# 领域采样配置
+# 三档数据集配置
 # ═══════════════════════════════════════════════════════════════
-DOMAIN_SAMPLES = {
+
+# 各来源的文档总量和可用提示词
+CATEGORY_CONFIG = {
     "L1_卫健委官方规范": {
-        "sample_count": 12,
         "domain_label": "肿瘤诊疗指南",
+        "total_docs": 170,
         "hints": [
             "诊断标准", "治疗方案", "临床表现", "预后判断",
             "化疗方案", "放疗", "靶向治疗", "免疫治疗",
@@ -56,8 +58,8 @@ DOMAIN_SAMPLES = {
         ],
     },
     "L2_卫生行业标准_WS": {
-        "sample_count": 10,
         "domain_label": "临床检验与感染控制标准",
+        "total_docs": 58,
         "hints": [
             "标本采集", "参考区间", "质量控制", "性能验证",
             "消毒隔离", "手卫生", "医院感染", "安全注射",
@@ -65,8 +67,8 @@ DOMAIN_SAMPLES = {
         ],
     },
     "L3_中华医学会临床诊疗指南丛书": {
-        "sample_count": 12,
         "domain_label": "临床诊疗指南与专家共识",
+        "total_docs": 140,
         "hints": [
             "鉴别诊断", "药物治疗", "手术方案", "并发症",
             "专家共识", "诊疗流程", "影像学检查", "病理诊断",
@@ -74,14 +76,79 @@ DOMAIN_SAMPLES = {
         ],
     },
     "L4_中华医学会临床技术操作规范": {
-        "sample_count": 8,
         "domain_label": "临床技术操作规范",
+        "total_docs": 44,
         "hints": [
             "操作步骤", "无菌操作", "术前准备", "术后处理",
             "并发症预防", "器械使用", "麻醉", "护理要点",
         ],
     },
 }
+
+# 三档数据集：每档定义各来源的抽样文档数
+TIER_CONFIGS = {
+    "small": {
+        "description": "小数据集 — 快速实验，~2h 训练",
+        "estimated_pairs": "300-350",
+        "estimated_train_time": "~1.5h (3 epochs)",
+        "use_case": "验证脚本正确性 / 快速迭代 prompt / 超参调试",
+        "samples": {
+            "L1_卫健委官方规范": 18,
+            "L2_卫生行业标准_WS": 8,
+            "L3_中华医学会临床诊疗指南丛书": 18,
+            "L4_中华医学会临床技术操作规范": 10,
+        },
+    },
+    "medium": {
+        "description": "中等数据集 — 质量与覆盖的平衡点",
+        "estimated_pairs": "600-700",
+        "estimated_train_time": "~3h (3 epochs)",
+        "use_case": "正式指令微调训练 / 评估指令跟随能力",
+        "samples": {
+            "L1_卫健委官方规范": 35,
+            "L2_卫生行业标准_WS": 5,   # 近枯竭，只补充少量
+            "L3_中华医学会临床诊疗指南丛书": 30,
+            "L4_中华医学会临床技术操作规范": 15,
+        },
+    },
+    "large": {
+        "description": "大数据集 — 最大覆盖，~5h 训练",
+        "estimated_pairs": "1000-1200",
+        "estimated_train_time": "~5h (3 epochs)",
+        "use_case": "最终模型 / 追求最佳指令跟随效果",
+        "samples": {
+            "L1_卫健委官方规范": 50,
+            "L2_卫生行业标准_WS": 5,   # 已枯竭
+            "L3_中华医学会临床诊疗指南丛书": 45,
+            "L4_中华医学会临床技术操作规范": 20,
+        },
+    },
+}
+
+# 默认使用 small 档
+DEFAULT_TIER = "small"
+
+def get_tier_config(tier_name: str) -> dict:
+    """获取指定档位的配置"""
+    if tier_name not in TIER_CONFIGS:
+        print(f"⚠ 未知档位 '{tier_name}'，使用默认档 'small'")
+        print(f"  可用档位: {', '.join(TIER_CONFIGS.keys())}")
+        tier_name = DEFAULT_TIER
+    return TIER_CONFIGS[tier_name]
+
+# 兼容旧代码：根据 tier 构建 DOMAIN_SAMPLES
+def build_domain_samples(tier_name: str) -> dict:
+    """从 tier 配置构建 DOMAIN_SAMPLES 格式"""
+    tier = get_tier_config(tier_name)
+    result = {}
+    for dir_name, cfg in CATEGORY_CONFIG.items():
+        sample_count = tier["samples"].get(dir_name, 5)
+        result[dir_name] = {
+            "sample_count": sample_count,
+            "domain_label": cfg["domain_label"],
+            "hints": cfg["hints"],
+        }
+    return result
 
 # ═══════════════════════════════════════════════════════════════
 # 数据模型
@@ -349,10 +416,15 @@ def _save_cases(cases: list[dict], model: str):
 # 命令: generate
 # ═══════════════════════════════════════════════════════════════
 
-def cmd_generate():
-    """生成第一轮医学指令微调 QA 数据"""
+def cmd_generate(tier: str = "small"):
+    """生成医学指令微调 QA 数据"""
+    tier_cfg = get_tier_config(tier)
+    domain_samples = build_domain_samples(tier)
+
     print("=" * 60)
-    print("  医学指令微调 QA 数据生成")
+    print(f"  医学指令微调 QA 数据生成 [{tier.upper()} 档]")
+    print(f"  {tier_cfg['description']}")
+    print(f"  预计产出: {tier_cfg['estimated_pairs']} 对, 训练: {tier_cfg['estimated_train_time']}")
     print("=" * 60)
 
     if not RAW_MEDICA.exists():
@@ -369,7 +441,7 @@ def cmd_generate():
     case_counter = len(existing_cases)
     total_generated = 0
 
-    for source_dir_name, cfg in DOMAIN_SAMPLES.items():
+    for source_dir_name, cfg in domain_samples.items():
         source_dir = RAW_MEDICA / source_dir_name
         if not source_dir.exists():
             print(f"\n⚠ {source_dir_name} 不存在, 跳过")
@@ -678,7 +750,9 @@ def main():
     )
     sub = parser.add_subparsers(dest="command")
 
-    sub.add_parser("generate", help="生成医学 QA 对")
+    gen_p = sub.add_parser("generate", help="生成医学 QA 对")
+    gen_p.add_argument("--tier", default="small", choices=["small", "medium", "large"],
+                       help="数据集档位 (small/medium/large)")
 
     export_p = sub.add_parser("export", help="导出为指令微调格式")
     export_p.add_argument("--fmt", default="chatml", choices=["chatml", "alpaca"])
@@ -693,7 +767,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == "generate":
-        cmd_generate()
+        cmd_generate(tier=args.tier)
     elif args.command == "stats":
         cmd_stats()
     elif args.command == "export":
@@ -701,7 +775,7 @@ def main():
     elif args.command == "sample":
         cmd_sample(args.dir)
     elif args.command == "all":
-        cmd_generate()
+        cmd_generate(tier="small")
         cmd_stats()
         cmd_export("chatml")
         cmd_export("alpaca")
