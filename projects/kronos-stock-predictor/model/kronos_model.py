@@ -82,7 +82,7 @@ def sample_from_logits(
     """Sample token indices from a logits tensor.
 
     Args:
-        logits:        (batch, vocab_size) unnormalised log-probabilities
+        logits:        (..., vocab_size) unnormalised log-probabilities
         temperature:   scaling factor; higher → more random
         top_k:         top-k filtering parameter (0 = disabled)
         top_p:         nucleus filtering parameter (0 = disabled)
@@ -100,7 +100,11 @@ def sample_from_logits(
         return logits.argmax(dim=-1)
 
     probs = F.softmax(logits, dim=-1)
-    return torch.multinomial(probs, num_samples=1).squeeze(-1)
+    # Handle both 2D (B, V) and 3D (B, T, V) inputs
+    orig_shape = probs.shape
+    probs_2d = probs.reshape(-1, orig_shape[-1])
+    samples = torch.multinomial(probs_2d, num_samples=1)
+    return samples.reshape(orig_shape[:-1])
 
 
 # ---------------------------------------------------------------------------

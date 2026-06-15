@@ -129,7 +129,7 @@ class KronosTokenizer(nn.Module, PyTorchModelHubMixin):
 
         # ── Binary Spherical Quantizer ────────────────────────────────
         self.tokenizer = BinarySphericalQuantizer(
-            codebook_dim=self.codebook_dim,
+            embed_dim=self.codebook_dim,
             beta=beta,
             gamma0=gamma0,
             gamma=gamma,

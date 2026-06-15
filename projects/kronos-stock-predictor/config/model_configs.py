@@ -18,7 +18,7 @@ _TOKENIZER_COMMON = dict(
     gamma0=1.0,
     gamma=1.0,
     zeta=0.1,
-    group_size=9,
+    group_size=10,
 )
 
 # 模型规模配置
