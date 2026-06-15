@@ -1,0 +1,17 @@
+{
+  "backup_time": "2026-06-15T19:21:43.003643",
+  "backup_type": "pre-instruction-ft",
+  "project": "LLMs-from-scratch/projects/chinese-medical-text-generation",
+  "cos_bucket": "ins-kq6zz7wo-1313469539",
+  "cos_prefix": "LLMs-from-scratch/projects/chinese-medical-text-generation/",
+  "description": "指令微调前完整备份 — 阶段1 LoRA权重 + 指令数据 + 训练日志",
+  "training_status": {
+    "last_log_lines": [
+      "2026-06-15 19:21:35,743 | INFO | HTTP Request: HEAD https://hf-mirror.com/Qwen/Qwen3-0.6B/resolve/main/config.json \"HTTP/1.1 307 Temporary Redirect\"",
+      "2026-06-15 19:21:35,838 | INFO | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/Qwen/Qwen3-0.6B/c1899de289a04d12100db370d81485cdf75e47ca/config.json \"HTTP/1.1 200 OK\"",
+      "2026-06-15 19:21:36,102 | INFO | HTTP Request: HEAD https://hf-mirror.com/Qwen/Qwen3-0.6B/resolve/main/config.json \"HTTP/1.1 307 Temporary Redirect\"",
+      "2026-06-15 19:21:36,304 | INFO | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/Qwen/Qwen3-0.6B/c1899de289a04d12100db370d81485cdf75e47ca/config.json \"HTTP/1.1 200 OK\"",
+      "2026-06-15 19:21:36,409 | INFO |   → 保存最佳模型 (val_loss=2.5386)"
+    ]
+  }
+}

@@ -137,5 +137,5 @@ class TestPredictor:
             token_dropout_p=0.1, learn_te=True,
         )
         predictor = KronosPredictor(model, tokenizer, device="cpu")
-        assert predictor.device == "cpu"
+        assert str(predictor.device) == "cpu"
         assert predictor.max_context == 512
