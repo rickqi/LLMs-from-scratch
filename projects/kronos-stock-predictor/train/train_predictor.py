@@ -172,6 +172,7 @@ def main():
     parser.add_argument("--epochs", type=int, default=30)
     parser.add_argument("--batch_size", type=int, default=50)
     parser.add_argument("--lr", type=float, default=4e-5)
+    parser.add_argument("--lookback", type=int, default=None)
     parser.add_argument("--resume", type=str, default=None)
     parser.add_argument("--device", type=str, default=None)
     args = parser.parse_args()
@@ -181,6 +182,8 @@ def main():
     config.epochs = args.epochs
     config.batch_size = args.batch_size
     config.predictor_learning_rate = args.lr
+    if args.lookback is not None:
+        config.lookback_window = args.lookback
 
     set_seed(config.seed)
     device = torch.device(args.device) if args.device else get_device()
@@ -256,8 +259,7 @@ def main():
             save_checkpoint(model, optimizer, epoch + 1, val_loss, f"{args.output_dir}/best_model.pt")
             logger.info(f"  ✓ New best model (val_loss={val_loss:.4f})")
 
-        if (epoch + 1) % 10 == 0:
-            save_checkpoint(model, optimizer, epoch + 1, val_loss, f"{args.output_dir}/checkpoint_epoch{epoch+1}.pt")
+        save_checkpoint(model, optimizer, epoch + 1, val_loss, f"{args.output_dir}/checkpoint_epoch{epoch+1}.pt")
 
     total_time = time.time() - t_start
     logger.info(f"Training complete. Total time: {format_time(total_time)}")

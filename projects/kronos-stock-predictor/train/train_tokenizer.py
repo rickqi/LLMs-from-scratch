@@ -142,6 +142,7 @@ def main():
     parser.add_argument("--epochs", type=int, default=30, help="训练轮数")
     parser.add_argument("--batch_size", type=int, default=50, help="批大小")
     parser.add_argument("--lr", type=float, default=2e-4, help="学习率")
+    parser.add_argument("--lookback", type=int, default=None, help="覆盖 lookback_window")
     parser.add_argument("--resume", type=str, default=None, help="从 checkpoint 恢复")
     parser.add_argument("--device", type=str, default=None, help="设备 (cuda:0 / cpu)")
     args = parser.parse_args()
@@ -152,6 +153,8 @@ def main():
     config.epochs = args.epochs
     config.batch_size = args.batch_size
     config.tokenizer_learning_rate = args.lr
+    if args.lookback is not None:
+        config.lookback_window = args.lookback
 
     set_seed(config.seed)
 
@@ -217,12 +220,11 @@ def main():
             )
             logger.info(f"  ✓ New best model (val_loss={val_loss:.4f})")
 
-        # 定期保存
-        if (epoch + 1) % 10 == 0:
-            save_checkpoint(
-                model, optimizer, epoch + 1, val_loss,
-                f"{args.output_dir}/checkpoint_epoch{epoch+1}.pt",
-            )
+        # 每个 epoch 保存 checkpoint（支持中断恢复）
+        save_checkpoint(
+            model, optimizer, epoch + 1, val_loss,
+            f"{args.output_dir}/checkpoint_epoch{epoch+1}.pt",
+        )
 
     total_time = time.time() - t_start
     logger.info(f"Training complete. Total time: {format_time(total_time)}")
