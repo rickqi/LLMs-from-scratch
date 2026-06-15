@@ -122,12 +122,14 @@ def get_device():
 # ============================================================
 # 评估 & 生成
 # ============================================================
-def evaluate(model, val_loader, device):
+def evaluate(model, val_loader, device, max_batches=30):
     model.eval()
     total_loss = 0.0
     num_batches = 0
     with torch.no_grad():
-        for batch in val_loader:
+        for i, batch in enumerate(val_loader):
+            if i >= max_batches:
+                break
             input_ids = batch["input_ids"].to(device)
             labels = batch["labels"].to(device)
             attention_mask = batch["attention_mask"].to(device)
@@ -253,6 +255,13 @@ def main():
             loss.backward()
             epoch_loss += loss.item() * GRADIENT_ACCUMULATION_STEPS
 
+            if (step + 1) % 50 == 0:
+                elapsed = elapsed_offset + (time.time() - start_time)
+                logger.info(
+                    f"Ep {epoch}/{args.epochs} | Batch {step+1}/{len(train_loader)} | "
+                    f"loss={loss.item()*GRADIENT_ACCUMULATION_STEPS:.4f} | {elapsed:.0f}s"
+                )
+
             if (step + 1) % GRADIENT_ACCUMULATION_STEPS == 0:
                 torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
                 optimizer.step()
@@ -260,7 +269,7 @@ def main():
                 optimizer.zero_grad()
                 global_step += 1
 
-                if global_step % 10 == 0:
+                if global_step % 20 == 0:
                     val_loss = evaluate(model, val_loader, device)
                     val_log.append((global_step, val_loss))
                     avg_train_loss = epoch_loss / (step + 1)
