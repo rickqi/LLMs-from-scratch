@@ -1,0 +1,11 @@
+data/
+output/
+*.pth
+*.bin
+*.safetensors
+__pycache__/
+*.log
+.venv/
+.env
+checkpoint/
+.ipynb_checkpoints/
