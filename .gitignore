@@ -361,3 +361,8 @@ cython_debug/
 .pixi
 *.egg-info
 
+# Chinese medical text generation project data
+projects/chinese-medical-text-generation/raw_data/
+projects/chinese-medical-text-generation/data/
+projects/chinese-medical-text-generation/output/
+

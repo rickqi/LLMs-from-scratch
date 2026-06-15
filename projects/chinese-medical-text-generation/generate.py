@@ -1,6 +1,6 @@
 """
-推理/评估脚本: 加载微调后的 Qwen2.5-0.5B + LoRA 模型, 生成中文医学文本
-======================================================================
+推理/评估脚本: 加载微调后的 Qwen3-0.6B + LoRA 模型, 生成中文医学文本
+=====================================================================
 用法:
   python generate.py --model_dir ./output/best_model
   python generate.py --model_dir ./output/best_model --interactive
@@ -20,7 +20,7 @@ from peft import PeftModel
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s")
 logger = logging.getLogger(__name__)
 
-BASE_MODEL = "Qwen/Qwen2.5-0.5B"
+BASE_MODEL = "Qwen/Qwen3-0.6B"
 TEST_PROMPTS = [
     "临床表现：",
     "诊断依据：",
@@ -98,7 +98,7 @@ def interactive_mode(model, tokenizer):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Qwen2.5-0.5B + LoRA 医学文本生成推理")
+    parser = argparse.ArgumentParser(description="Qwen3-0.6B + LoRA 医学文本生成推理")
     parser.add_argument("--model_dir", type=str, required=True, help="微调后的 LoRA 权重目录")
     parser.add_argument("--interactive", action="store_true", help="交互模式")
     parser.add_argument("--prompt", type=str, default=None, help="单次生成提示词")

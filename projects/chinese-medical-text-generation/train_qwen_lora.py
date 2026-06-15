@@ -1,6 +1,6 @@
 """
-Qwen2.5-0.5B + LoRA 微调: 中文医学诊疗指南文本生成
-===================================================
+Qwen3-0.6B + LoRA 微调: 中文医学诊疗指南文本生成
+================================================
 用法:
   python train_qwen_lora.py --data_dir ./data --output_dir ./output
 
@@ -31,7 +31,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(
 logger = logging.getLogger(__name__)
 
 
-MODEL_NAME = "Qwen/Qwen2.5-0.5B"
+MODEL_NAME = "Qwen/Qwen3-0.6B"
 MAX_LENGTH = 512
 BATCH_SIZE = 4
 GRADIENT_ACCUMULATION_STEPS = 4
@@ -131,7 +131,7 @@ def generate_sample(model, tokenizer, prompt: str, device, max_new_tokens=80):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Qwen2.5-0.5B + LoRA 医学文本微调")
+    parser = argparse.ArgumentParser(description="Qwen3-0.6B + LoRA 医学文本微调")
     parser.add_argument("--data_dir", type=str, default="./data", help="数据目录 (含 train.txt / val.txt)")
     parser.add_argument("--output_dir", type=str, default="./output", help="模型保存目录")
     parser.add_argument("--epochs", type=int, default=EPOCHS, help="训练轮数")

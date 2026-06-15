@@ -1,16 +1,28 @@
 # 中文医学诊疗指南文本生成
 
-使用 Qwen2.5-0.5B + LoRA 对中文医学诊疗指南进行文本生成微调。
+使用 Qwen3-0.6B + LoRA 对中文医学诊疗指南进行文本生成微调。
 
 ## 方案对比
 
-| 维度 | 方案 A: GPT-2 124M | 方案 B: Qwen2.5-0.5B |
+| 维度 | 方案 A: GPT-2 124M | 方案 B: Qwen3-0.6B |
 |------|-------------------|---------------------|
 | Tokenizer | GPT-2 BPE (50257 vocab, 0.7 中文/token) | Qwen BPE (151643 vocab, 1.6 中文/token) |
-| 预训练 | 英文为主 | 中英双语 |
+| 预训练 | 英文为主 | 中英双语, 36T tokens |
+| 架构 | 12L/768H/12head | 28L/1024H/16Q+8KV GQA |
 | 微调方式 | 全量训练 | LoRA (0.1% 参数) |
 | 训练前中文 | 完全乱码 | 通顺中文 |
 | 推荐度 | ❌ 不适合中文 | ✅ 中文项目首选 |
+
+### 为什么选 Qwen3-0.6B 而非 Qwen2.5-0.5B
+
+| 维度 | Qwen2.5-0.5B | Qwen3-0.6B | 提升 |
+|------|-------------|-----------|------|
+| 参数 | 494M (28层) | 600M (28层) | +21% |
+| 预训练数据 | 18T tokens | 36T tokens | **2×** |
+| 注意力 | MHA (14头) | GQA (16Q/8KV) | 更高效 |
+| 上下文 | 32K | 32K | - |
+| 思考模式 | ❌ | ✅ thinking/non-thinking | 新能力 |
+| 医学微调潜力 | 好 | **更好** | 有论文验证 |
 
 ## 使用流程
 
@@ -42,7 +54,7 @@ python train_qwen_lora.py --data_dir ./data --output_dir ./output --epochs 5
 - `--max_length`: 最大序列长度 (默认 512)
 
 训练过程会:
-- 自动从 hf-mirror.com 下载 Qwen2.5-0.5B
+- 自动从 hf-mirror.com 下载 Qwen3-0.6B
 - 应用 LoRA (rank=8, target: q_proj/k_proj/v_proj/o_proj)
 - 每 10 步评估验证集 loss
 - 每个 epoch 生成样本文本
@@ -74,6 +86,6 @@ python generate.py --model_dir ./output/best_model --interactive
 
 1. **指令微调**: 构建医学 Q&A 对, 做问答助手
 2. **RAG 方案**: 检索增强生成 + 医学知识库
-3. **更大模型**: Qwen2.5-7B 或 Qwen3-8B (需要 GPU ≥16GB)
+3. **更大模型**: Qwen3-8B (需要 GPU ≥16GB)
 4. **多模态**: 加入医学影像 (X光/CT)
 5. **评估**: 用执业医师资格考试题评估
