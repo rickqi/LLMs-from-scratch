@@ -12,6 +12,11 @@ output_real/
 output_v2/
 output_v3/
 
+# 指令微调数据产出 (大文件, 不提交)
+docs/med_qa_cases.json
+docs/med_instruction_chatml.json
+docs/med_instruction_alpaca.json
+
 # 训练缓存
 *.pth
 *.pt

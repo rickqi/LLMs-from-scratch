@@ -282,10 +282,101 @@ projects/chinese-medical-text-generation/
 - [ ] 增加 epochs: 5 → 10 → 20
 - [ ] 调整 LoRA rank: r=8 → r=16, alpha=16 → 32
 - [x] ~~增加训练数据: 仅肿瘤分册 → 全部数据~~ ✅ 已使用全量 412 篇 (4 大类)
-- [ ] 数据增强: 指令微调格式 (诊断-症状-治疗三元组)
+- [x] 指令微调数据生成: ✅ 第一轮 172 条已完成 (见下方 §六)
+- [ ] 指令微调训练: Qwen3-0.6B + LoRA 指令微调
 - [ ] 尝试更大模型: Qwen3-1.7B (需更多显存)
 - [ ] 集成 RAG 检索: 医学知识库 + 向量搜索 + 生成
 - [ ] 建立评估体系: 执业医师资格考题自动评分
+
+---
+
+## 六、指令微调方案
+
+### 6.1 数据生成方案
+
+基于 doc-search 项目的 QA 生成能力 (`scripts/qa_benchmark.py`)，改造为医学领域专用脚本 `scripts/med_qa_generator.py`。
+
+**生成流程**：
+
+```
+/home/raw/medica/*.md → extract_content_sections() → DeepSeek LLM → JSON QA 对
+     ↓                          ↓                           ↓              ↓
+  412 篇文档              跳过封面/目录噪声          medical prompt    结构化输出
+                                                            ↓
+                                              med_qa_cases.json (QA 原始数据)
+                                                            ↓
+                                              med_instruction_chatml.json (Qwen3 训练格式)
+                                              med_instruction_alpaca.json (通用格式)
+```
+
+**Prompt 设计**：4 种问题类型 × 3 级难度 × 领域聚焦提示词，temperature=0.2 保证医学事实准确性。
+
+### 6.2 第一轮生成结果
+
+| 指标 | 值 |
+|------|-----|
+| 生成日期 | 2026-06-15 |
+| LLM | DeepSeek V3 (deepseek-chat) |
+| 总 QA 数 | **172 条** |
+| 文档数 | 38 篇 (覆盖 4 个分类) |
+| API 成本 | < $0.10 |
+
+**领域分布**：
+
+| 领域 | 数量 | 占比 |
+|------|------|------|
+| 肿瘤诊疗指南 | 57 | 33.1% |
+| 临床诊疗指南与专家共识 | 53 | 30.8% |
+| 临床检验与感染控制标准 | 44 | 25.6% |
+| 临床技术操作规范 | 18 | 10.5% |
+
+**难度分布**：easy 61 (35.5%) / medium 72 (41.9%) / hard 39 (22.7%)
+
+**问题类型分布**：factual 52 / procedural 48 / comparative 37 / diagnostic 35
+
+**平均长度**：问题 43 字 / 答案 176 字 / 原文引用 219 字
+
+**质量评估**：35 条轻微问题（主要为答案过短或标点），不影响训练可用性。
+
+### 6.3 指令微调训练计划
+
+#### 训练格式：Qwen3 ChatML
+
+```
+<|im_start|>system
+你是一位中文医学助手，基于权威诊疗指南、行业标准和临床操作规范提供专业的医学信息。
+<|im_end|>
+<|im_start|>user
+胃癌的典型临床表现有哪些？
+<|im_end|>
+<|im_start|>assistant
+胃癌的临床表现包括：1. 上腹部疼痛... 2. 食欲减退... 3. 体重下降...
+<|im_end|>
+```
+
+#### 训练脚本改造要点
+
+1. **Dataset 类**：替换 `MedicalTextDataset` 为 `InstructionDataset`，调用 `tokenizer.apply_chat_template()`
+2. **Loss masking**：仅对 `assistant` 部分计算 loss，`system`/`user` 部分 mask 为 -100
+3. **数据混合**：80% 指令数据 + 20% 纯续写数据（防灾难性遗忘）
+
+#### 实施路线
+
+| 阶段 | 数据量 | 目标 | 时间 |
+|------|--------|------|------|
+| 当前 (R1) | 172 条 | 验证数据生成管线 ✅ | 已完成 |
+| R2 | 500-1000 条 | 小规模指令微调实验 | 待定 |
+| R3 | 2000-5000 条 | 全量指令微调 + DPO | 待定 |
+
+### 6.4 产出文件清单
+
+```
+docs/
+├── med_qa_cases.json              # 172 条 QA 原始数据
+├── med_instruction_chatml.json    # ChatML 格式 (Qwen3 训练)
+├── med_instruction_alpaca.json    # Alpaca 格式 (通用)
+└── med_qa_report.md               # 质量分析报告
+```
 
 ---
 
