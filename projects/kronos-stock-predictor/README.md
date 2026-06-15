@@ -106,3 +106,32 @@ pred_df = predictor.predict(
 ```bash
 pip install torch numpy pandas einops tushare akshare tqdm matplotlib scikit-learn
 ```
+
+## 训练结果
+
+> 合成数据（5品种×500天），GPU (CUDA)，2026-06-15
+
+| 模型 | Tokenizer Val Loss | Predictor Val Loss | 训练时间 | 参数量 |
+|------|-------------------|-------------------|---------|--------|
+| **mini** | 0.2347 | 7.1063 | ~9 min | 0.5M |
+| **small** | 0.1861 | 7.2210 | ~17 min | 4.7M |
+
+### 回测结果 (mini)
+
+| 指标 | 数值 |
+|------|------|
+| 年化收益率 | 9.92% |
+| Sharpe Ratio | 1.45 |
+| 最大回撤 | -1.77% |
+| 胜率 | 40.0% |
+
+### 变更记录
+
+| 日期 | 变更 |
+|------|------|
+| 2026-06-15 | 项目初始化：目录结构、配置、数据管道、模型架构 |
+| 2026-06-15 | 端到端流水线打通：合成数据 → Tokenizer训练 → Predictor训练 → 推理 → 回测 |
+| 2026-06-15 | BSQ量化器修复：移除投影矩阵改用直接二值化；Tokenizer encode/decode API 重构为 (s1_ids, s2_ids) 元组接口 |
+| 2026-06-15 | 新增：Jupyter notebooks (数据探索/训练可视化/预测演示), QLIB对比分析文档 |
+| 2026-06-15 | 测试套件：15个pytest单元测试全部通过 |
+| 2026-06-15 | small 模型训练验证：28M参数训练+推理端到端通过 |
