@@ -1,0 +1,19 @@
+# 项目数据 (不提交)
+raw_data/
+data/
+output/
+
+# 训练缓存
+*.pth
+*.pt
+*.safetensors
+checkpoint-*/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# 环境
+.env
+.venv/
