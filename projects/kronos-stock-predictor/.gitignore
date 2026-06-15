@@ -1,0 +1,37 @@
+# Data
+data/data/
+data/processed/
+*.pkl
+*.csv
+*.parquet
+
+# Models & Outputs
+outputs/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
