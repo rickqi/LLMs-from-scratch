@@ -43,9 +43,10 @@ LORA_DROPOUT = 0.05
 
 
 class MedicalTextDataset(Dataset):
-    def __init__(self, data_path: str, tokenizer, max_length: int = 512):
+    def __init__(self, data_path: str, tokenizer, max_length: int = 512, stride: int = None):
         self.tokenizer = tokenizer
         self.max_length = max_length
+        self.stride = stride if stride is not None else max_length
         with open(data_path, "r", encoding="utf-8") as f:
             text = f.read()
         segments = text.split("===SEP===")
@@ -54,15 +55,16 @@ class MedicalTextDataset(Dataset):
             seg = seg.strip()
             if len(seg) < 10:
                 continue
-            enc = tokenizer(
-                seg,
-                truncation=True,
-                max_length=max_length,
-                return_tensors=None,
-            )
-            input_ids = enc["input_ids"]
-            labels = input_ids.copy()
-            self.examples.append({"input_ids": input_ids, "labels": labels})
+            token_ids = tokenizer.encode(seg, add_special_tokens=False)
+            if len(token_ids) <= max_length:
+                self.examples.append({"input_ids": token_ids, "labels": token_ids.copy()})
+            else:
+                for start in range(0, len(token_ids) - max_length + 1, self.stride):
+                    chunk = token_ids[start:start + max_length]
+                    self.examples.append({"input_ids": chunk, "labels": chunk.copy()})
+                if len(token_ids) % self.stride != 0:
+                    last_chunk = token_ids[-max_length:]
+                    self.examples.append({"input_ids": last_chunk, "labels": last_chunk.copy()})
 
     def __len__(self):
         return len(self.examples)
@@ -207,16 +209,33 @@ def main():
         num_training_steps=total_steps,
     )
 
-    # 5. 训练循环
-    logger.info("开始训练...")
+    # 5. 断点恢复
+    checkpoint_path = output_dir / "checkpoint"
     global_step = 0
     best_val_loss = float("inf")
     train_loss_log = []
     val_loss_log = []
+    start_epoch = 1
+    elapsed_offset = 0.0
 
+    if checkpoint_path.exists():
+        logger.info(f"发现断点检查点: {checkpoint_path}")
+        ckpt = torch.load(checkpoint_path / "training_state.pt", map_location=device, weights_only=False)
+        optimizer.load_state_dict(ckpt["optimizer_state_dict"])
+        scheduler.load_state_dict(ckpt["scheduler_state_dict"])
+        global_step = ckpt["global_step"]
+        best_val_loss = ckpt.get("best_val_loss", float("inf"))
+        train_loss_log = ckpt.get("train_loss_log", [])
+        val_loss_log = ckpt.get("val_loss_log", [])
+        start_epoch = ckpt.get("epoch", 1)
+        elapsed_offset = ckpt.get("elapsed", 0.0)
+        logger.info(f"从 epoch {start_epoch}, step {global_step} 恢复训练 (best_val={best_val_loss:.4f})")
+
+    # 6. 训练循环
+    logger.info("开始训练...")
     start_time = time.time()
 
-    for epoch in range(1, args.epochs + 1):
+    for epoch in range(start_epoch, args.epochs + 1):
         model.train()
         epoch_loss = 0.0
         optimizer.zero_grad()
@@ -246,7 +265,7 @@ def main():
                     avg_train_loss = epoch_loss / (step + 1)
                     train_loss_log.append((global_step, avg_train_loss))
 
-                    elapsed = time.time() - start_time
+                    elapsed = elapsed_offset + (time.time() - start_time)
                     logger.info(
                         f"Epoch {epoch}/{args.epochs} | "
                         f"Step {global_step:06d} | "
@@ -262,6 +281,23 @@ def main():
                         tokenizer.save_pretrained(output_dir / "best_model")
                         logger.info(f"  → 保存最佳模型 (val_loss={val_loss:.4f})")
 
+        # 每 epoch 保存断点检查点
+        checkpoint_path.mkdir(parents=True, exist_ok=True)
+        elapsed = elapsed_offset + (time.time() - start_time)
+        torch.save({
+            "epoch": epoch + 1,
+            "global_step": global_step,
+            "best_val_loss": best_val_loss,
+            "optimizer_state_dict": optimizer.state_dict(),
+            "scheduler_state_dict": scheduler.state_dict(),
+            "train_loss_log": train_loss_log,
+            "val_loss_log": val_loss_log,
+            "elapsed": elapsed,
+        }, checkpoint_path / "training_state.pt")
+        model.save_pretrained(checkpoint_path)
+        tokenizer.save_pretrained(checkpoint_path)
+        logger.info(f"  → 断点已保存 (epoch {epoch}, step {global_step})")
+
         # 每个 epoch 生成样本
         for prompt in ["临床表现：", "诊断依据：", "治疗方案：", "预后判断："]:
             sample = generate_sample(model, tokenizer, prompt, device)
@@ -276,7 +312,8 @@ def main():
         "train_loss": train_loss_log,
         "val_loss": val_loss_log,
         "best_val_loss": best_val_loss,
-        "total_time_seconds": time.time() - start_time,
+        "total_time_seconds": elapsed_offset + (time.time() - start_time),
+        "global_step": global_step,
         "config": {
             "model": MODEL_NAME,
             "lora_r": LORA_R,

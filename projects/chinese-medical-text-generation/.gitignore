@@ -1,7 +1,16 @@
 # 项目数据 (不提交)
 raw_data/
 data/
+data_full/
+data_oncology/
+data_real/
 output/
+output_full/
+output_oncology/
+output_oncology_v2/
+output_real/
+output_v2/
+output_v3/
 
 # 训练缓存
 *.pth
