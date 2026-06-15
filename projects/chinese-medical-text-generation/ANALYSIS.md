@@ -64,28 +64,32 @@
 ### 2.1 整体 Pipeline
 
 ```
-                    ┌──────────────┐
-                    │  原始医学数据  │  77 个 .md 文件, ~15M 字符
-                    │  raw_data/   │
-                    └──────┬───────┘
-                           │ data_prep.py
+                    ┌──────────────────┐
+                    │  原始医学数据      │  /home/raw/medica/
+                    │  412 篇 .md,      │  4 大类, 107MB
+                    │  详见下方目录结构   │
+                    └──────┬───────────┘
+                           │ python data_prep.py --data_dir /home/raw/medica
+                           │   --output_dir ./data_full
                            ▼
                     ┌──────────────┐
-                    │  清洗后数据    │  去HTML/ISBN/OCR → train.txt + val.txt
-                    │   data/      │  95% : 5% 分割
+                    │  清洗后数据    │  去HTML/ISBN/OCR → 354 片段
+                    │  data_full/  │  train.txt (52MB) + val.txt (2.3MB)
                     └──────┬───────┘
-                           │ train_qwen_lora.py
+                           │ python train_qwen_lora.py
+                           │   --data_dir ./data_full --output_dir ./output_full
+                           │   --lr 1e-4 --epochs 5
                            ▼
             ┌──────────────────────────────┐
             │  hf-mirror.com               │
             │  Qwen/Qwen3-0.6B (600M)      │
             │  + LoRA (rank=8, 0.7M train) │
             └──────────────┬───────────────┘
-                           │ 训练 5 epochs
+                           │ 训练 5 epochs (含 checkpoint 断点续训)
                            ▼
                     ┌──────────────┐
-                    │  LoRA 权重    │  output/best_model/
-                    │               │  output/final_model/
+                    │  LoRA 权重    │  output_full/best_model/
+                    │               │  output_full/final_model/
                     └──────┬───────┘
                            │ generate.py
                            ▼
@@ -95,33 +99,105 @@
                     └──────────────┘
 ```
 
-### 2.2 数据管理策略
+### 2.2 训练数据来源与范围
+
+#### 2.2.1 原始数据来源
+
+全部数据来自外部源目录，经 `data_prep.py` 清洗 → 片段分割 → train/val 划分后存入 `data_full/`：
+
+```
+/home/raw/medica/                              ← 107MB, 412 篇, 当前训练使用全部
+│
+├── L1_卫健委官方规范/                           ← 158 篇
+│   ├── WHO中文指南/                             11 篇 (HIV、子痫、精神卫生、老龄化等)
+│   ├── CDC 传染病技术指南/                       19 个子目录 (鼠疫/霍乱/炭疽/狂犬/艾滋等)
+│   ├── WS_T_311~368 系列                        隔离/感染监测/手卫生/消毒/织物/空气净化
+│   ├── WS_T_508~863 系列                        安全注射/手术感染/导尿管/呼吸机/新生儿等
+│   ├── 肿瘤诊疗指南 (2022/2024/2025/2026版)     20+ 篇 (肺/肝/胃/乳腺/淋巴瘤/宫颈/卵巢等)
+│   ├── 传染病技术指南                             流感/结核/炭疽/狂犬/手足口/新冠 等
+│   ├── 安宁疗护/肥胖症/体重管理/抗肿瘤药物        4 篇
+│   └── 其他                                      预防接种/结直肠癌规范/角膜塑形镜 等
+│
+├── L2_卫生行业标准_WS/                          ← 59 篇
+│   ├── 临床检验类: WS_T_225~491                  标本采集/检验项目编写/分析质量标准/
+│   │                                              参考区间/性能评价/尿液检验/HbA1c 等
+│   ├── 医院感染类: WS_T_311~863                  隔离/监测/消毒/手卫生/织物/空气净化/
+│   │                                              安全注射/手术感染/导尿管/呼吸机/新生儿/
+│   │                                              器官移植/血透/临床用血 等
+│   ├── 基层医疗类: WS_T_872~874                  CT/DR检查操作标准/高血压防治管理
+│   ├── 老年健康类: WS_T_875~889                  认知障碍预防/医养结合/失能预防/
+│   │                                              跌倒预防/老年综合评估
+│   ├── 紧密型县域医共体: WS_T_891~892            影像中心/心电诊断中心设置标准
+│   ├── 家庭病床康复: WS_T_893
+│   ├── 放射影像类: WS_T_389~391                  X线/CT检查操作规程
+│   └── 患者身份识别: WS_T_840
+│
+├── L3_中华医学会临床诊疗指南丛书/                  ← 146 篇
+│   ├── CACA整合诊治指南 (~20篇, 中英双语)         前列腺/甲状腺/直肠/结肠/肛管/肝/胃/
+│   │                                              胰腺/脑胶质瘤/腹膜/食管/淋巴瘤/乳腺/
+│   │                                              AML/鼻咽癌/肺癌/尿路上皮癌/视网膜母细胞瘤
+│   ├── CMA专家共识 (~15篇)                        乳腺癌/流式细胞/结直肠手术/咯血护理/
+│   │                                              尿液菌群/生物样本库/肝切除/胆道结石/
+│   │                                              肝胆血管通路/食管癌营养/骨盆骨折
+│   ├── CMA标准解读 (3篇)                          WS/T 227/408/442 行业标准解读
+│   ├── 中华医学会肺癌诊疗指南 (3版)               2022/2025版
+│   ├── 中国指南系列                               艾滋病/心衰/血脂/高血压/乳腺癌 等
+│   ├── 临床诊疗指南 (36个分册)                    传染病/免疫/内分泌/呼吸/外科/妇产/
+│   │                                              小儿内科/急诊/整形/消化/激光/烧伤/
+│   │                                              康复/疼痛/病理/癫痫/皮肤/眼科/神经/
+│   │                                              精神/结核/美容/耳鼻喉/营养/肾脏/
+│   │                                              肿瘤/血液/风湿/骨科/骨质疏松/口腔/
+│   │                                              器官移植/心血管外/手外/护理/放射/
+│   │                                              放疗/泌尿外/神经外/胸外/计生/
+│   │                                              辅助生殖/重症/麻醉 分册
+│   ├── 专科指南                                   儿科 (CAP/哮喘/腹泻)
+│   │                                              心血管 (室性心律失常)
+│   │                                              神经内科 (卒中/脑出血/阿尔茨海默)
+│   │                                              消化 (GERD/丙肝/克罗恩/胰腺炎/结肠炎)
+│   │                                              内分泌 (甲减/甲亢)
+│   │                                              呼吸 (肺炎/肺结节/肺栓塞)
+│   │                                              急诊 (心肺复苏/急性中毒/脓毒性休克)
+│   └── CACA英文指南 (~40篇)                      各癌种英文版
+│
+└── L4_中华医学会临床技术操作规范/                  ← 49 个分册
+    ├── 内科系列: 呼吸/心血管/消化/神经/肾脏/血液/内分泌
+    ├── 外科系列: 普外/胸外/心血管外/神经外/泌尿/骨科/手外/整形/烧伤
+    ├── 专科: 妇产/儿科/小儿外/眼科/耳鼻喉/口腔/皮肤/精神/疼痛/病理
+    ├── 技术: 影像/超声/核医学/放射肿瘤/激光/心电生理
+    └── 特殊: 器官移植/重症/急诊/麻醉/营养/康复/辅助生殖/计生/美容
+```
+
+**数据规模**：412 篇文档 → 清洗后 354 个训练片段 → train.txt (52MB, 29,650 样本) + val.txt (2.3MB, 1,324 样本) | 总 1,190 批/epoch
+
+#### 2.2.2 项目数据目录
 
 ```
 projects/chinese-medical-text-generation/
 ├── data_prep.py          # 数据预处理
-├── train_qwen_lora.py    # 训练脚本
+├── train_qwen_lora.py    # 训练脚本 (含 checkpoint 断点续训)
 ├── generate.py           # 推理脚本
 ├── README.md             # 使用指南
 ├── ANALYSIS.md           # 本文档
 ├── requirements.txt      # 依赖
 │
-├── raw_data/             # (gitignore) 原始 77 个 .md 文件
-│   ├── 肿瘤分册-01.md
-│   ├── 肿瘤分册-02.md
-│   └── ...
+├── data_full/            # (gitignore) 全量训练数据 → 当前训练使用
+│   ├── train.txt         # 训练集 52MB, 29,650 样本
+│   └── val.txt           # 验证集 2.3MB, 1,324 样本
 │
-├── data/                 # (gitignore) 预处理后的数据
-│   ├── train.txt         # 训练集 (95%)  ≈14.25M 字符
-│   └── val.txt           # 验证集 (5%)   ≈0.75M 字符
+├── data_oncology/        # (gitignore) 肿瘤专科数据集 (对比实验)
+├── data_real/            # (gitignore) 另一批真实数据 (备选)
+├── data/                 # (gitignore) 样本合成数据 (demo)
 │
-└── output/               # (gitignore) 训练产出
-    ├── best_model/       # 最佳验证 loss 的 LoRA 权重
-    ├── final_model/      # 最终 epoch 的 LoRA 权重
-    └── training_log.json # 训练日志
+├── output_full/          # (gitignore) 全量数据训练产出 ← 当前运行中
+├── output_oncology/      # (gitignore) 肿瘤专科训练产出
+├── output_oncology_v2/   # (gitignore) 肿瘤专科 v2
+├── output_real/          # (gitignore) 备选数据训练产出
+├── output_v2/            # (gitignore) 早期实验产出
+├── output_v3/            # (gitignore) 早期实验产出
+└── output/               # (gitignore) 样本数据训练产出
 ```
 
-**数据隔离策略**：`raw_data/`、`data/`、`output/` 均加入 `.gitignore`，只提交代码和文档。
+**数据隔离策略**：所有 `data*`、`output*`、`raw_data/` 均加入 `.gitignore`，只提交代码和文档。
 
 ### 2.3 LoRA 配置
 
@@ -140,15 +216,17 @@ projects/chinese-medical-text-generation/
 
 ### 2.4 训练超参数
 
-| 参数 | 值 | 调整建议 |
-|------|-----|---------|
-| batch_size | 4 | 内存受限可降到 2 |
-| gradient_accumulation | 4 | 等效 batch=16 |
-| learning_rate | 2e-4 | LoRA 标准范围 1e-4 ~ 5e-4 |
-| warmup | 5% | 前 5% 步数线性预热 |
-| scheduler | linear decay | warmup后线性衰减到0 |
-| epochs | 5 | 小数据可增至10-20 |
-| max_length | 512 | 医学段落通常 <500 字 |
+| 参数 | 设计值 | 实际运行值 | 说明 |
+|------|--------|-----------|------|
+| batch_size | 4 | 4 | 匹配 RTX 5080 16GB 显存 |
+| gradient_accumulation | 4 | 4 | 等效 batch=16 |
+| learning_rate | 2e-4 | 1e-4 | 全量数据更大, 降低 lr 防止震荡 |
+| warmup | 5% | 5% | 前 5% 步数线性预热 |
+| scheduler | linear decay | linear decay | warmup后线性衰减到0 |
+| epochs | 5 | 5 | 预计 ~1,500 训练步 |
+| max_length | 512 | 512 | 医学术语段落通常 <500 字 |
+| stride | — | 512 (滑动窗口) | 超长文档分段处理, 不截断 |
+| checkpoint | — | 每 epoch 保存 | 支持断点续训, 意外中断可恢复 |
 
 ---
 
@@ -163,27 +241,28 @@ projects/chinese-medical-text-generation/
 
 ### 阶段 2: 数据准备
 
-- [ ] 获取原始数据: 中华医学会《临床诊疗指南 — 肿瘤分册》77 个 .md 文件
-- [ ] 放入 `raw_data/` 目录
-- [ ] 执行: `python data_prep.py --data_dir ./raw_data --output_dir ./data`
-- [ ] 验证输出:
-  - `data/train.txt` 存在且 > 10MB
-  - `data/val.txt` 存在且 > 500KB
-  - 脚本输出显示 77 个文件全部处理成功
+- [x] 获取原始数据: `/home/raw/medica/` 下全部 412 篇 .md 文档 (107MB)
+  - L1_卫健委官方规范 (158 篇): WHO指南/CDC传染病/WS标准/肿瘤诊疗指南
+  - L2_卫生行业标准_WS (59 篇): 临床检验/医院感染/基层医疗/老年健康/放射影像
+  - L3_中华医学会临床诊疗指南丛书 (146 篇): CACA/CMA/临床诊疗指南36分册/专科指南
+  - L4_中华医学会临床技术操作规范 (49 个分册)
+- [x] 执行: `python data_prep.py --data_dir /home/raw/medica --output_dir ./data_full`
+- [x] 验证输出:
+  - `data_full/train.txt` 52MB, 29,650 样本 ✅
+  - `data_full/val.txt` 2.3MB, 1,324 样本 ✅
+  - 354 个文档片段全部处理成功 ✅
 
 ### 阶段 3: 训练
 
-- [ ] 第一次运行 (测试): `python train_qwen_lora.py --epochs 1`
-  - 验证模型可正常下载
-  - 验证 DataLoader 工作正常
-  - 确认 loss 在下降
-- [ ] 正式训练: `python train_qwen_lora.py --epochs 5`
-  - 监控 `output/training_log.json`
-  - 观察每个 epoch 的生成样本质量
-  - 记录训练耗时
-- [ ] 检查产出:
-  - `output/best_model/adapter_model.safetensors` 存在
-  - `output/training_log.json` 包含完整记录
+- [x] 小规模实验 (output_v2, output_v3, output_oncology): 不同数据集的对比实验
+- [x] 当前训练 (output_full): `python train_qwen_lora.py --data_dir ./data_full --output_dir ./output_full --epochs 5 --lr 1e-4`
+  - 状态: 训练中 (Epoch 1/5, val_loss 持续下降)
+  - RTX 5080 (16GB), GPU 利用率 ~93%, ~14.3GB 显存
+  - 训练速度: ~150 步/epoch, ~42s/评估间隔
+  - checkpoint 断点续训已启用
+- [x] 检查产出:
+  - `output_full/best_model/` 已生成 ✅
+  - 训练仍在进行中 (预计 ~5h 完成 5 epochs)
 
 ### 阶段 4: 评估
 
@@ -201,11 +280,12 @@ projects/chinese-medical-text-generation/
 ### 阶段 5: 迭代优化 (后续)
 
 - [ ] 增加 epochs: 5 → 10 → 20
-- [ ] 调整 LoRA rank: r=8 → r=16
-- [ ] 增加训练数据: 仅肿瘤分册 → 全部 77 册 (15M → 50M+ 字符)
-- [ ] 尝试更大模型: Qwen3-1.7B (需要更多显存)
-- [ ] 构建指令微调数据集: 提取诊断-症状-治疗三元组
+- [ ] 调整 LoRA rank: r=8 → r=16, alpha=16 → 32
+- [x] ~~增加训练数据: 仅肿瘤分册 → 全部数据~~ ✅ 已使用全量 412 篇 (4 大类)
+- [ ] 数据增强: 指令微调格式 (诊断-症状-治疗三元组)
+- [ ] 尝试更大模型: Qwen3-1.7B (需更多显存)
 - [ ] 集成 RAG 检索: 医学知识库 + 向量搜索 + 生成
+- [ ] 建立评估体系: 执业医师资格考题自动评分
 
 ---
 
@@ -213,11 +293,12 @@ projects/chinese-medical-text-generation/
 
 | 风险 | 概率 | 影响 | 缓解措施 |
 |------|------|------|---------|
-| 原始数据不可获取 | 中 | 高 | 使用公开中文医学数据集替代 (Huatuo-26M/ChiMed) |
-| HF 镜像不稳定 | 中 | 中 | 先手动下载模型到本地, 本地加载 |
-| 训练 loss 不收敛 | 低 | 高 | 降低 lr 到 1e-4, 增加 warmup 比例 |
-| 4GB 显存不足 | 低 | 中 | batch_size=1, max_length=256, 使用 QLoRA (4bit) |
-| 生成样本医学不准确 | 中 | 中 | 增加训练数据量, 或改用 RAG 方案补充知识 |
+| 原始数据不可获取 | ~~中~~ 已解决 | 高 | **已获取** `/home/raw/medica/` 412 篇文档 ✅ |
+| HF 镜像不稳定 | ~~中~~ 低 | 中 | 模型已下载缓存, 无需重复拉取 |
+| 训练中途中断 | 中 | 中 | **checkpoint 断点续训已启用**, 每 epoch 保存 |
+| 训练 loss 不收敛 | 低 | 高 | 已降低 lr 到 1e-4, 当前 val_loss 稳定下降 |
+| GPU 显存不足 | ~~低~~ 已排除 | 中 | RTX 5080 16GB, 实际使用 ~14.3GB, 余量充足 |
+| 生成样本医学不准确 | 中 | 中 | 全量数据覆盖 4 大类 + 多轮评估验证 |
 
 ---
 
