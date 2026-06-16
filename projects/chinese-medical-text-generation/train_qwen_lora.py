@@ -13,6 +13,7 @@ os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
 import json
 import time
+import random
 import logging
 import argparse
 from pathlib import Path
@@ -71,6 +72,61 @@ class MedicalTextDataset(Dataset):
 
     def __getitem__(self, idx):
         return self.examples[idx]
+
+
+class InstructionDataset(Dataset):
+    """加载 ChatML 格式的指令微调数据，仅对 assistant 部分计算 loss"""
+
+    def __init__(self, data_path: str, tokenizer, max_length: int = 768):
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        with open(data_path, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+        items = raw.get("data", raw if isinstance(raw, list) else [])
+        self.examples = []
+        for item in items:
+            messages = item["messages"]
+            text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=False)
+            tokenized = tokenizer(text, truncation=True, max_length=max_length, return_tensors=None)
+            input_ids = tokenized["input_ids"]
+            labels = input_ids.copy()
+            # mask all tokens except assistant response
+            assist_start = self._find_assistant_start(input_ids)
+            for i in range(assist_start):
+                labels[i] = -100
+            self.examples.append({"input_ids": input_ids, "labels": labels})
+
+    def _find_assistant_start(self, input_ids):
+        assist_marker = self.tokenizer.encode("<|im_start|>assistant\n", add_special_tokens=False)
+        for i in range(len(input_ids) - len(assist_marker) + 1):
+            if input_ids[i:i+len(assist_marker)] == assist_marker:
+                return i + len(assist_marker)
+        return 0
+
+    def __len__(self):
+        return len(self.examples)
+
+    def __getitem__(self, idx):
+        return self.examples[idx]
+
+
+class MixedDataset(Dataset):
+    """混合指令数据 (80%) 和纯续写数据 (20%)，防灾难性遗忘"""
+
+    def __init__(self, inst_dataset, cont_dataset, inst_ratio=0.8):
+        self.inst = inst_dataset
+        self.cont = cont_dataset
+        self.inst_ratio = inst_ratio
+        self.total = len(inst_dataset) + len(cont_dataset)
+
+    def __len__(self):
+        return self.total
+
+    def __getitem__(self, idx):
+        if random.random() < self.inst_ratio:
+            return self.inst[random.randint(0, len(self.inst) - 1)]
+        else:
+            return self.cont[random.randint(0, len(self.cont) - 1)]
 
 
 def collate_fn(batch):
@@ -140,6 +196,9 @@ def main():
     parser.add_argument("--batch_size", type=int, default=BATCH_SIZE, help="批次大小")
     parser.add_argument("--lr", type=float, default=LEARNING_RATE, help="学习率")
     parser.add_argument("--max_length", type=int, default=MAX_LENGTH, help="最大序列长度")
+    parser.add_argument("--resume_from", type=str, default=None, help="已有 LoRA adapter 路径 (续训)")
+    parser.add_argument("--instruction_data", type=str, default=None, help="ChatML 指令微调数据路径")
+    parser.add_argument("--instruction_ratio", type=float, default=0.8, help="指令数据占比 (默认0.8)")
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -163,25 +222,39 @@ def main():
     )
     model = model.to(device)
 
-    # 2. 配置 LoRA
-    lora_config = LoraConfig(
-        task_type=TaskType.CAUSAL_LM,
-        r=LORA_R,
-        lora_alpha=LORA_ALPHA,
-        lora_dropout=LORA_DROPOUT,
-        target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
-    )
-    model = get_peft_model(model, lora_config)
+    # 2. 配置 LoRA (支持 resume)
+    from peft import PeftModel
+    if args.resume_from:
+        model = PeftModel.from_pretrained(model, args.resume_from, is_trainable=True)
+        adapter_config = json.load(open(Path(args.resume_from) / "adapter_config.json"))
+        logger.info(f"从已有 LoRA 权重续训: {args.resume_from} (rank={adapter_config['r']})")
+    else:
+        lora_config = LoraConfig(
+            task_type=TaskType.CAUSAL_LM,
+            r=LORA_R,
+            lora_alpha=LORA_ALPHA,
+            lora_dropout=LORA_DROPOUT,
+            target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+        )
+        model = get_peft_model(model, lora_config)
 
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     total = sum(p.numel() for p in model.parameters())
     logger.info(f"可训练参数: {trainable:,} / {total:,} ({100*trainable/total:.2f}%)")
 
     # 3. 加载数据
-    logger.info(f"加载数据: {data_dir}")
     tokenizer.model_max_length = args.max_length
-    train_dataset = MedicalTextDataset(str(data_dir / "train.txt"), tokenizer, args.max_length)
+    cont_train = MedicalTextDataset(str(data_dir / "train.txt"), tokenizer, args.max_length)
     val_dataset = MedicalTextDataset(str(data_dir / "val.txt"), tokenizer, args.max_length)
+
+    if args.instruction_data:
+        logger.info(f"加载指令数据: {args.instruction_data}")
+        inst_dataset = InstructionDataset(args.instruction_data, tokenizer, args.max_length)
+        train_dataset = MixedDataset(inst_dataset, cont_train, args.instruction_ratio)
+        logger.info(f"指令样本: {len(inst_dataset)}, 续写样本: {len(cont_train)}, 混合比: {args.instruction_ratio}")
+    else:
+        train_dataset = cont_train
+        logger.info(f"加载数据: {data_dir}")
 
     train_loader = DataLoader(
         train_dataset,
@@ -299,9 +372,22 @@ def main():
         logger.info(f"  → 断点已保存 (epoch {epoch}, step {global_step})")
 
         # 每个 epoch 生成样本
-        for prompt in ["临床表现：", "诊断依据：", "治疗方案：", "预后判断："]:
-            sample = generate_sample(model, tokenizer, prompt, device)
-            logger.info(f"\n[生成样本 | prompt: {prompt}]\n{sample}\n")
+        if args.instruction_data:
+            inst_prompts = [
+                "胃癌的典型临床表现有哪些？",
+                "肺癌的TNM分期标准是什么？",
+                "手术后需要观察哪些并发症？",
+                "请对比CT和MRI在肿瘤分期中的优缺点。",
+            ]
+            for q in inst_prompts:
+                msg = [{"role": "user", "content": q}]
+                prompt = tokenizer.apply_chat_template(msg, tokenize=False, add_generation_prompt=True)
+                sample = generate_sample(model, tokenizer, prompt, device, max_new_tokens=200)
+                logger.info(f"\n[指令生成 | Q: {q}]\n{sample}\n")
+        else:
+            for prompt in ["临床表现：", "诊断依据：", "治疗方案：", "预后判断："]:
+                sample = generate_sample(model, tokenizer, prompt, device)
+                logger.info(f"\n[生成样本 | prompt: {prompt}]\n{sample}\n")
 
     # 6. 保存最终模型和训练记录
     model.save_pretrained(output_dir / "final_model")
