@@ -250,12 +250,21 @@ class BinarySphericalQuantizer(nn.Module):
         q_scale = 1.0 / (self.embed_dim ** 0.5)
         quantized_full = quantized_full * q_scale
 
-        # BSQ loss
+        # BSQ loss with entropy regularization
         if collect_metrics:
-            z_norm = F.normalize(z, dim=-1)
-            zhat_norm = F.normalize(quantized_full * (self.embed_dim ** 0.5), dim=-1)
-            commit_loss = F.mse_loss(z_norm, zhat_norm.detach()) + self.beta * F.mse_loss(z_norm.detach(), zhat_norm)
-            bsq_loss = commit_loss
+            commit_loss = self.beta * torch.mean(((quantized_full.detach() - z) ** 2).sum(dim=-1))
+
+            # Codebook entropy (encourage uniform codebook usage)
+            if not half:
+                flat_bits = ((quantized_full.detach() > 0).float() * 2 - 1).reshape(-1, self.embed_dim)
+                probs_per_dim = (flat_bits > 0).float().mean(0)
+                cb_entropy = -(probs_per_dim * torch.log(probs_per_dim + 1e-8) +
+                              (1 - probs_per_dim) * torch.log(1 - probs_per_dim + 1e-8)).sum()
+                entropy_penalty = self.gamma * cb_entropy
+            else:
+                entropy_penalty = torch.tensor(0.0, device=z.device)
+
+            bsq_loss = commit_loss + self.zeta * entropy_penalty
         else:
             bsq_loss = torch.tensor(0.0, device=z.device)
 
