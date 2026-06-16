@@ -39,6 +39,10 @@ class StockDataset(Dataset):
         self.pred_len = config.predict_window
         self.clip_val = config.clip
         self.feature_list = config.feature_list
+        # Support expanded feature set (OHLCV + technical indicators)
+        if getattr(config, "feature_dim", None) and config.feature_dim > len(config.feature_list):
+            ta = getattr(config, "ta_features", [])
+            self.feature_list = config.feature_list + ta
         self.time_feature_list = config.time_feature_list
 
         self.window = self.lookback + self.pred_len + 1
