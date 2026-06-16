@@ -31,3 +31,4 @@ __pycache__/
 # 环境
 .env
 .venv/
+output_inst_v1/
