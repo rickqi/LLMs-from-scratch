@@ -72,7 +72,34 @@ INSTRUCTION_FILES = [
 # 训练日志
 TRAINING_LOGS = [
     "train_full.log",
-    "training_log.json",  # in output_full/
+    "output_full/training_log.json",
+]
+
+# 训练数据 (关键 — 无此无法复现训练)
+TRAINING_DATA = [
+    "data_full/train.txt",
+    "data_full/val.txt",
+]
+
+# 核心运行时脚本
+RUNTIME_SCRIPTS = [
+    "train_qwen_lora.py",
+    "data_prep.py",
+    "generate.py",
+    "run.sh",
+    "requirements.txt",
+    "train_qwen_lora.ipynb",
+    "scripts/cos_backup.py",
+]
+
+# 项目文档
+PROJECT_DOCS = [
+    "README.md",
+    "ANALYSIS.md",
+    "OPERATIONS.md",
+    "AGENTS.md",
+    "REPORT.md",
+    "docs/swir_integration.md",
 ]
 
 
@@ -117,7 +144,7 @@ def collect_backup_files(lora_only: bool = False, data_only: bool = False) -> li
     files: list[Path] = []
 
     if not data_only:
-        # 收集 LoRA 权重目录下的所有文件
+        # LoRA 权重
         for lora_dir in LORA_DIRS:
             d = PROJECT_ROOT / lora_dir
             if d.exists():
@@ -132,13 +159,34 @@ def collect_backup_files(lora_only: bool = False, data_only: bool = False) -> li
             if f.exists():
                 files.append(f)
 
+        # 训练数据
+        for td in TRAINING_DATA:
+            f = PROJECT_ROOT / td
+            if f.exists():
+                files.append(f)
+                print(f"   📊 {td} ({f.stat().st_size:,} bytes)")
+
+        # 运行时脚本
+        for rs in RUNTIME_SCRIPTS:
+            f = PROJECT_ROOT / rs
+            if f.exists():
+                files.append(f)
+                print(f"   🐍 {rs}")
+
     if not lora_only:
-        # 指令数据文件
+        # 指令数据
         for inf in INSTRUCTION_FILES:
             f = PROJECT_ROOT / inf
             if f.exists():
                 files.append(f)
                 print(f"   📄 {inf} ({f.stat().st_size:,} bytes)")
+
+        # 项目文档
+        for pd in PROJECT_DOCS:
+            f = PROJECT_ROOT / pd
+            if f.exists():
+                files.append(f)
+                print(f"   📝 {pd}")
 
     return files
 
