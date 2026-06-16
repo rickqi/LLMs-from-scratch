@@ -224,14 +224,14 @@ def main():
         betas=(config.adam_beta1, config.adam_beta2),
         weight_decay=config.adam_weight_decay,
     )
-    scheduler = torch.optim.lr_scheduler.OneCycleLR(
-        optimizer,
-        max_lr=config.predictor_learning_rate,
-        steps_per_epoch=len(train_loader),
-        epochs=config.epochs,
-        pct_start=0.03,
-        div_factor=10,
-    )
+    # Cosine LR with linear warmup
+    total_steps = config.epochs * len(train_loader)
+    warmup_steps = int(0.05 * total_steps)
+    def lr_lambda(step):
+        if step < warmup_steps: return step / warmup_steps
+        p = (step - warmup_steps) / (total_steps - warmup_steps)
+        return 0.5 * (1 + __import__('math').cos(__import__('math').pi * p))
+    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
 
     start_epoch = 0
     if args.resume:
