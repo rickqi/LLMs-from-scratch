@@ -87,15 +87,19 @@ def run_enhanced_backtest(
     symbols = sorted(test_data.keys())
     logger.info(f"Enhanced backtest: {len(symbols)} symbols")
 
-    all_dates = None
+    # Find common dates (require at least 50% of stocks have data)
+    all_dates_list = []
     for sym in symbols:
-        dates = test_data[sym].index
-        if all_dates is None:
-            all_dates = dates
-        else:
-            all_dates = all_dates.intersection(dates)
+        all_dates_list.extend(test_data[sym].index.tolist())
+    from collections import Counter
+    date_counts = Counter(all_dates_list)
+    min_stocks = max(5, len(symbols) // 3)
+    all_dates = pd.DatetimeIndex(sorted(d for d, c in date_counts.items() if c >= min_stocks))
 
     lookback = min(config.lookback_window, len(all_dates) - pred_len - 1)
+    if lookback <= 0:
+        logger.error("Not enough data for backtest")
+        return {}
     backtest_dates = all_dates[lookback:-pred_len]
 
     if quick_mode:
