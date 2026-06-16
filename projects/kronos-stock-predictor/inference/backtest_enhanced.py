@@ -298,6 +298,7 @@ def main():
     parser.add_argument("--pred_len", type=int, default=5)
     parser.add_argument("--top_k", type=int, default=50)
     parser.add_argument("--quick", action="store_true", help="Quick mode: fewer dates")
+    parser.add_argument("--feature_dim", type=int, default=None)
     parser.add_argument("--device", type=str, default=None)
     args = parser.parse_args()
 
@@ -308,6 +309,8 @@ def main():
     device = args.device or ("cuda:0" if torch.cuda.is_available() else "cpu")
 
     tokenizer_cfg = build_tokenizer_config(args.model_size)
+    if args.feature_dim:
+        tokenizer_cfg["d_in"] = args.feature_dim
     tokenizer = KronosTokenizer(**tokenizer_cfg)
     if os.path.exists(args.tokenizer_path):
         ckpt = torch.load(args.tokenizer_path, map_location="cpu")

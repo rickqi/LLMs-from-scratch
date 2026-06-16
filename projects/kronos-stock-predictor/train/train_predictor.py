@@ -173,6 +173,7 @@ def main():
     parser.add_argument("--batch_size", type=int, default=50)
     parser.add_argument("--lr", type=float, default=4e-5)
     parser.add_argument("--lookback", type=int, default=None)
+    parser.add_argument("--feature_dim", type=int, default=None)
     parser.add_argument("--resume", type=str, default=None)
     parser.add_argument("--device", type=str, default=None)
     args = parser.parse_args()
@@ -184,6 +185,8 @@ def main():
     config.predictor_learning_rate = args.lr
     if args.lookback is not None:
         config.lookback_window = args.lookback
+    if args.feature_dim is not None:
+        config.feature_dim = args.feature_dim
 
     set_seed(config.seed)
     device = torch.device(args.device) if args.device else get_device()
@@ -193,6 +196,8 @@ def main():
     mc = get_model_config(args.model_size)
     from config.model_configs import build_tokenizer_config
     tokenizer_cfg = build_tokenizer_config(args.model_size)
+    if hasattr(config, "feature_dim") and config.feature_dim:
+        tokenizer_cfg["d_in"] = config.feature_dim
     tokenizer = KronosTokenizer(**tokenizer_cfg)
     tokenizer.to(device)
 
