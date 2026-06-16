@@ -143,7 +143,6 @@ def main():
     parser.add_argument("--batch_size", type=int, default=50, help="批大小")
     parser.add_argument("--lr", type=float, default=2e-4, help="学习率")
     parser.add_argument("--lookback", type=int, default=None, help="覆盖 lookback_window")
-    parser.add_argument("--feature_dim", type=int, default=None, help="覆盖输入特征维度 (默认6=OHLCVA, 19=+技术指标)")
     parser.add_argument("--resume", type=str, default=None, help="从 checkpoint 恢复")
     parser.add_argument("--device", type=str, default=None, help="设备 (cuda:0 / cpu)")
     args = parser.parse_args()
@@ -156,8 +155,6 @@ def main():
     config.tokenizer_learning_rate = args.lr
     if args.lookback is not None:
         config.lookback_window = args.lookback
-    if args.feature_dim is not None:
-        config.feature_dim = args.feature_dim
 
     set_seed(config.seed)
 
@@ -166,8 +163,6 @@ def main():
 
     # 创建模型
     tokenizer_cfg = build_tokenizer_config(args.model_size)
-    if hasattr(config, "feature_dim") and config.feature_dim:
-        tokenizer_cfg["d_in"] = config.feature_dim
     model = KronosTokenizer(**tokenizer_cfg)
     model.to(device)
 

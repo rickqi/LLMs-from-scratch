@@ -4,7 +4,7 @@
 
 # 所有模型共享的分词器参数
 _TOKENIZER_COMMON = dict(
-    d_in=6,              # OHLCVA — 运行时可通过 --feature_dim 覆盖
+    d_in=6,              # OHLCVA (open, high, low, close, volume, amount)
     n_heads=8,
     ff_dim=512,
     n_enc_layers=4,

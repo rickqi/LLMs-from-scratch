@@ -14,14 +14,6 @@ class Config:
         # =================================================================
         self.instrument = "csi300"
         self.feature_list = ["open", "high", "low", "close", "vol", "amt"]
-        # 技术指标特征（运行时通过 --feature_dim 19 激活）
-        self.ta_features = [
-            "macd", "macd_signal", "macd_hist",
-            "rsi_14", "bb_upper", "bb_middle", "bb_lower",
-            "atr_14", "vol_chg_5", "vol_chg_20",
-            "ret_1", "ret_5", "ret_20",
-        ]
-        self.feature_dim = None  # None=使用feature_list, 数字=使用feature_list+ta_features
         self.time_feature_list = ["minute", "hour", "weekday", "day", "month"]
 
         # 数据时间范围
