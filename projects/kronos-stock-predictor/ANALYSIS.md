@@ -381,6 +381,367 @@ s1_ids + s2_ids: (50, 101) 整数对 ≈ 0.4 MB / batch
   │  输入: 整数 token 序列 → 标准 GPT 式训练
 ```
 
+### 2.8 推理流程深度解析
+
+#### 2.8.1 自回归推理完整流程
+
+推理函数 `auto_regressive_inference`（`kronos_model.py:347-496`）执行以下流程：
+
+```
+输入: 历史 token 序列 (s1_ids, s2_ids) + 时间戳
+  │
+  ▼  循环 pred_len 次:
+  │
+  ├── ① decode_s1: Transformer 前向 → 取最后位置 s1_logits
+  │   model.decode_s1(s1_buf, s2_buf, stamp)
+  │   → s1_logits (S, T, 1024), context (S, T, d_model)
+  │
+  ├── ② 采样 s1: temperature → top-k → top-p → multinomial
+  │   sample_from_logits(s1_logits[:, -1, :], T=0.6, top_p=0.9)
+  │   → s1_sampled (S,)
+  │
+  ├── ③ decode_s2: 用 context + 采样的 s1 做条件预测
+  │   model.decode_s2(context, s1_with_sampled)
+  │   → s2_logits (S, T, 1024)
+  │
+  ├── ④ 采样 s2: 同样的 temperature/top-p 过滤
+  │   sample_from_logits(s2_logits[:, -1, :])
+  │   → s2_sampled (S,)
+  │
+  └── ⑤ 追加到 buffer，超出 max_context 则滑动窗口
+      s1_buf = cat(s1_buf, s1_sampled) → 超长则截取最后 max_context 个
+  │
+  ▼  循环结束
+  │
+  ▼  tokenizer.decode(s1_pred, s2_pred) → OHLCV
+  │
+  ▼  多轨迹平均 → (pred_len, 6) 预测结果
+```
+
+#### 2.8.2 采样策略：Temperature / Top-k / Top-p
+
+三种采样控制手段在 `sample_from_logits`（`kronos_model.py:75-107`）中依次执行：
+
+```
+原始 logits (1024 维)
+  │
+  ▼  Temperature 缩放
+  logits = logits / T
+  │  T < 1 → 更确定（趋向 argmax）
+  │  T > 1 → 更随机（趋向均匀）
+  │  T = 0.6（默认）→ 适度确定性，保留多样性
+  │
+  ▼  Top-k 过滤（默认 k=0，禁用）
+  只保留概率最高的 k 个 token，其余设为 -inf
+  │
+  ▼  Top-p（nucleus）过滤（默认 p=0.9）
+  按概率降序排列，累计概率 ≥ 0.9 后截断
+  自适应：确定性强时选少数 token，不确定性高时选更多
+  │
+  ▼  Softmax → Multinomial 采样
+```
+
+**金融场景的采样意义**：股票未来不确定，不应该只输出一个确定性预测。通过 temperature + top-p 采样生成多条独立轨迹再平均，相当于对市场未来的**概率分布做蒙特卡洛估计**。
+
+#### 2.8.3 多轨迹采样（sample_count）
+
+```python
+# 输入复制 sample_count 份，各自独立采样
+s1_buf = x["s1_ids"].repeat(sample_count, 1)   # (S, T_ctx)
+# ... 每步独立采样 ...
+# 最终平均
+averaged = np.mean(np.stack(results, axis=0), axis=0)  # (pred_len, d_in)
+```
+
+默认 `sample_count=5`：生成 5 条独立的未来 K 线轨迹，取平均作为最终预测。这降低了单次采样的随机性，类似于 ensemble 效果。
+
+#### 2.8.4 滑动窗口上下文管理
+
+```python
+# 每步追加新 token
+s1_buf = torch.cat([s1_buf, s1_sampled.unsqueeze(1)], dim=1)
+
+# 超出 max_context 则截取最近窗口
+if s1_buf.size(1) > max_context:
+    s1_buf = s1_buf[:, -max_context:]
+    s2_buf = s2_buf[:, -max_context:]
+```
+
+mini 模型 `max_context=2048`，可处理约 8 年的日线数据。超出时自动丢弃最早的 token，保持注意力计算量恒定。
+
+### 2.9 Predictor 架构解析
+
+Kronos Predictor（`kronos_model.py:150`）是 GPT 式 decoder-only Transformer，但针对离散金融 token 做了四项关键适配。
+
+#### 2.9.1 层次化嵌入（HierarchicalEmbedding）
+
+**文件**: `modules.py:280-310`
+
+```python
+class HierarchicalEmbedding(nn.Module):
+    def __init__(self, s1_bits, s2_bits, d_model):
+        self.emb_s1 = nn.Embedding(2**s1_bits, d_model)  # 1024 × d_model
+        self.emb_s2 = nn.Embedding(2**s2_bits, d_model)  # 1024 × d_model
+
+    def forward(self, token_ids):
+        s1_ids, s2_ids = token_ids
+        return self.emb_s1(s1_ids) + self.emb_s2(s2_ids)  # 相加融合
+```
+
+每个时间步有一对 token (s1, s2)，分别嵌入后**相加**为单个 d_model 维向量。这种设计让 Transformer 主干无需感知"层次"结构——它看到的始终是标准的 (B, T, d_model) 序列。
+
+与 LLM 对比：GPT 用单一 `nn.Embedding(50257, d_model)`，Kronos 用两个 1024-size 嵌入表相加。
+
+#### 2.9.2 时间特征嵌入（TemporalEmbedding）
+
+**文件**: `modules.py:317-353`
+
+```python
+class TemporalEmbedding(nn.Module):
+    # 5 个独立的嵌入表
+    self.minute_emb  = nn.Embedding(60, d_model)    # 分钟
+    self.hour_emb    = nn.Embedding(24, d_model)    # 小时
+    self.weekday_emb = nn.Embedding(7, d_model)     # 星期几
+    self.day_emb     = nn.Embedding(32, d_model)    # 日期
+    self.month_emb   = nn.Embedding(13, d_model)    # 月份
+
+    def forward(self, stamp):
+        return minute + hour + weekday + day + month  # 五个嵌入相加
+```
+
+**为什么不用绝对位置编码？** 股票数据有强周期性（周内效应、月末效应、季节性），直接嵌入日历特征比学习一个递增的位置索引更合理。Transformer 通过这些时间嵌入自然学到"周一 vs 周五"、"月初 vs 月末"等模式。
+
+最终输入 = `HierarchicalEmbedding(s1, s2) + TemporalEmbedding(stamp)`。
+
+#### 2.9.3 条件依赖层（DependencyAwareLayer）
+
+**文件**: `modules.py:360-382`
+
+这是 s2 条件预测的核心机制——在预测 s2 之前，将已采样的 s1 信息注入上下文：
+
+```python
+class DependencyAwareLayer(nn.Module):
+    def __init__(self, d_model, expansion=4):
+        self.norm = RMSNorm(d_model)
+        self.fuse = nn.Sequential(
+            Linear(d_model, d_model * 4),   # 扩展
+            GELU(),                          # 非线性
+            Linear(d_model * 4, d_model),   # 压缩回
+        )
+
+    def forward(self, x, sibling_embed):
+        # x: Transformer 上下文 (B,T,d_model)
+        # sibling_embed: 采样的 s1 的嵌入 (B,T,d_model)
+        fused = self.norm(x + sibling_embed)  # 融合上下文 + s1 信息
+        delta = self.fuse(fused)              # MLP 变换
+        return x + delta                      # 残差连接
+```
+
+**数据流**：`Transformer 上下文 x` + `已采样的 s1 嵌入` → MLP 融合 → 输出给 s2 头。这使得 s2 的预测**知道 s1 选了什么**，实现"先粗后细"的条件分解。
+
+#### 2.9.4 双头输出（DualHead）
+
+**文件**: `modules.py:389-409`
+
+```python
+class DualHead(nn.Module):
+    self.head     = nn.Linear(d_model, 1024)  # s1 预测头
+    self.cond_head = nn.Linear(d_model, 1024) # s2 条件预测头
+
+    def forward(self, x):        return self.head(x)       # s1 logits
+    def cond_forward(self, x):   return self.cond_head(x)  # s2 logits
+```
+
+两个独立的线性头，共享 Transformer 主干但参数独立。训练时同时计算两个交叉熵损失；推理时分两步调用（`decode_s1` → `decode_s2`）。
+
+#### 2.9.5 训练时的 Teacher Forcing
+
+训练 forward（`kronos_model.py:225-281`）中，s2 条件预测使用 ground-truth s1 而非采样值：
+
+```python
+if use_teacher_forcing:
+    sibling_embed = self.embedding.emb_s1(s1_targets)  # 用真实 s1
+else:
+    s1_sampled = sample_from_logits(s1_logits.detach()) # 用采样 s1
+    sibling_embed = self.embedding.emb_s1(s1_sampled)
+```
+
+Teacher forcing 使 s2 头在训练时始终看到正确的 s1，避免采样错误导致的误差累积。推理时则必须用采样的 s1（没有 ground truth）。
+
+#### 2.9.6 Predictor 前向完整流程
+
+```
+(s1_ids, s2_ids) + stamp
+  │
+  ▼ ① 层次化嵌入
+  x = emb_s1(s1_ids) + emb_s2(s2_ids)          # (B, T, d_model)
+  │
+  ▼ ② 时间嵌入
+  x = x + time_emb(stamp)                       # + (minute+hour+weekday+day+month)
+  │
+  ▼ ③ Token Dropout
+  x = token_drop(x)                             # 正则化
+  │
+  ▼ ④ Transformer 主干（n_layers × TransformerBlock）
+  for layer in transformer:
+      x = layer(x)                              # Pre-LN Attention + Pre-LN FFN
+  │
+  ▼ ⑤ 最终 RMSNorm
+  x = norm(x)
+  │
+  ▼ ⑥ s1 预测
+  s1_logits = head(x)                           # (B, T, 1024)
+  │
+  ▼ ⑦ 条件依赖（注入 s1 信息）
+  sibling = emb_s1(s1_sampled_or_target)
+  x2 = dep_layer(x, sibling)                    # x + MLP(LN(x + sibling))
+  │
+  ▼ ⑧ s2 条件预测
+  s2_logits = cond_head(x2)                     # (B, T, 1024)
+```
+
+### 2.10 数据预处理管线
+
+#### 2.10.1 滚动 Z-score 归一化（防未来泄露）
+
+**文件**: `data/preprocessor.py:27-74`
+
+```python
+for i in range(n_rows):
+    start = max(0, i - lookback + 1)
+    window = values[start : i + 1]     # 只用 [i-lookback+1, i] 的数据
+    mean_i = window.mean(axis=0)
+    std_i  = window.std(axis=0)
+    normed[i] = (values[i] - mean_i) / std_i
+```
+
+**关键设计**：每个时间步 i 的归一化统计（均值、标准差）只使用 `[i-lookback+1, i]` 窗口内的数据——**绝不触碰 i 之后的数据**。这从数据预处理层面消除了未来信息泄露。
+
+归一化后裁剪到 `[-5.0, 5.0]`（`clip=5.0`），防止极端值（如停牌后复牌的跳空）破坏训练稳定性。
+
+#### 2.10.2 滑动窗口采样
+
+**文件**: `data/dataset.py:88-125`
+
+```python
+# 窗口大小
+self.window = lookback_window(90) + predict_window(10) + 1 = 101
+
+# 随机采样
+def __getitem__(self, idx):
+    symbol, start_idx = self.py_rng.choice(self.indices)  # 随机选(股票, 起始点)
+    x = df.iloc[start_idx : start_idx + 101]              # 切出 101 天窗口
+
+    # 只用 lookback 窗口做 Z-score
+    past = x[:90]
+    mean = past.mean(axis=0)
+    std  = past.std(axis=0)
+    x = (x - mean) / (std + 1e-5)
+    x = clip(x, -5.0, 5.0)
+```
+
+每个 `__getitem__` 调用随机选取一只股票的一个起始位置，切出 101 天的 OHLCV 窗口。归一化统计**只用前 90 天**（lookback），后 11 天用同样的统计做变换——模拟真实场景中"用历史统计归一化未来数据"。
+
+#### 2.10.3 时间特征工程
+
+**文件**: `data/preprocessor.py:244-266`, `kronos_model.py:114-129`
+
+```python
+# 从 trade_date 提取 5 维时间特征
+time_features = {
+    "minute":  dt.dt.minute.values,     # 0-59（日线数据为 0）
+    "hour":    dt.dt.hour.values,       # 0-23（日线数据为 15/9 等）
+    "weekday": dt.dt.dayofweek.values,  # 0=周一, 6=周日
+    "day":     dt.dt.day.values,        # 1-31
+    "month":   dt.dt.month.values,      # 1-12
+}
+```
+
+这些特征后续通过 `TemporalEmbedding` 映射为 d_model 维向量，加到 token 嵌入上。模型借此学习周期性模式（如周一效应、月末调仓等）。
+
+#### 2.10.4 数据划分与防泄露
+
+```python
+# 按时间严格划分（非随机划分）
+train_time_range = ["2015-01-01", "2022-12-31"]
+val_time_range   = ["2023-01-01", "2023-12-31"]
+test_time_range  = ["2024-01-01", "2025-06-30"]
+```
+
+时间序列必须按时间顺序划分——训练集永远在验证集之前，验证集在测试集之前。代码中通过日期 mask 实现严格隔离。
+
+### 2.11 损失函数解析
+
+#### 2.11.1 Tokenizer 损失：层次化重建 + 量化正则
+
+**文件**: `train/losses.py:9-28`, `model/modules.py:254-258`
+
+```python
+def tokenizer_loss(x, x_recon_coarse, x_recon_fine, bsq_loss, lambda_quant=1.0):
+    l_coarse = MSE(x_recon_coarse, x)   # 只用 s1 重建 → 迫使 s1 捕捉主趋势
+    l_fine   = MSE(x_recon_fine, x)     # 用 s1+s2 重建 → s2 补充细节
+    return l_coarse + l_fine + lambda_quant * bsq_loss
+```
+
+**BSQ 量化损失**（`modules.py:254-258`）：
+
+```python
+z_norm     = F.normalize(z, dim=-1)                              # 原始向量归一化
+zhat_norm  = F.normalize(quantized * sqrt(embed_dim), dim=-1)    # 量化向量归一化
+commit_loss = MSE(z_norm, zhat_norm.detach())                   # 编码器向量化点靠拢
+            + beta * MSE(z_norm.detach(), zhat_norm)             # 量化点向编码器靠拢 (β=0.25)
+```
+
+两个 MSE 项构成**双向承诺**：编码器输出和量化点互相靠拢。detach 防止一项的梯度干扰另一项的优化目标。
+
+**三项损失的分工**：
+
+| 损失项 | 优化目标 | 作用 |
+|--------|---------|------|
+| L_coarse | s1-only → 原始 OHLCV | s1 编码"粗"信息（涨跌方向、趋势幅度） |
+| L_fine | s1+s2 → 原始 OHLCV | s2 编码"细"残差（精确形态、波动细节） |
+| BSQ_loss | z ↔ quantize(z) | 编码器输出靠近量化点，保证离散化质量 |
+
+#### 2.11.2 Predictor 损失：双交叉熵
+
+**文件**: `train/losses.py:31-68`
+
+```python
+def predictor_loss(s1_logits, s2_logits, s1_targets, s2_targets, s1_weight=1.0, s2_weight=1.0):
+    loss_s1 = CrossEntropy(s1_logits.reshape(-1, 1024), s1_targets.reshape(-1))
+    loss_s2 = CrossEntropy(s2_logits.reshape(-1, 1024), s2_targets.reshape(-1))
+    total = s1_weight * loss_s1 + s2_weight * loss_s2
+    return total, loss_s1, loss_s2
+```
+
+标准的 next-token prediction 交叉熵，分别对 s1 和 s2 各做一个 1024 类分类。权重默认 1:1，但可通过 `s1_weight`/`s2_weight` 调整——例如更关注粗趋势时增大 s1_weight。
+
+**与 GPT 训练的对比**：
+
+| 维度 | GPT 预训练 | Kronos Predictor |
+|------|-----------|-----------------|
+| 损失函数 | 单个 CrossEntropy | **双** CrossEntropy (s1 + s2) |
+| 词表大小 | 50,257 | 2 × 1,024 |
+| Teacher forcing | next-token | next-s1 → conditional next-s2 |
+| Target 构造 | shift by 1 | 同一序列 shift by 1，但 s2 条件于 s1 |
+
+#### 2.11.3 损失函数的层次化设计哲学
+
+整个损失体系遵循一个核心原则：**粗粒度先验，细粒度后验**。
+
+```
+Tokenizer 层:
+  L_coarse (s1单独重建)  → s1 学会"大局观"
+  L_fine   (s1+s2重建)  → s2 学会"补细节"
+  BSQ_loss             → 保证离散化不丢信息
+
+Predictor 层:
+  CE(s1)  → 先预测"大致是什么趋势"
+  CE(s2|s1) → 在已知趋势的前提下预测"具体细节"
+```
+
+这种从粗到细的分解将一个困难的 2²⁰ 类预测问题转化为两个 2¹⁰ 类预测问题，不仅降低了计算复杂度，也符合金融市场的分层结构——先判断方向（涨/跌/震荡），再估计幅度。
+
 ---
 
 ## 三、风险清单
