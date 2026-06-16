@@ -1,0 +1,1253 @@
+{
+  "model": "mini (0.5M params)",
+  "data": "68 semiconductor stocks, 2018-2026",
+  "lookback": 180,
+  "pred_len": 7,
+  "generated_at": "2026-06-16 08:22:14.041768",
+  "up_count": 19,
+  "down_count": 50,
+  "predictions": [
+    {
+      "symbol": "688120.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.107199,
+      "pred_close_start": 1262.53,
+      "pred_close_end": 1127.19,
+      "last_actual_close": 858.4,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688234.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.09863,
+      "pred_close_start": 173.48,
+      "pred_close_end": 156.37,
+      "last_actual_close": 123.7,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688048.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.091266,
+      "pred_close_start": 700.59,
+      "pred_close_end": 636.65,
+      "last_actual_close": 438.33,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688213.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.088646,
+      "pred_close_start": 65.97,
+      "pred_close_end": 71.81,
+      "last_actual_close": 88.36,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300782.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.088485,
+      "pred_close_start": 565.27,
+      "pred_close_end": 515.25,
+      "last_actual_close": 472.05,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688008.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.070917,
+      "pred_close_start": 315.35,
+      "pred_close_end": 292.99,
+      "last_actual_close": 231.76,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300671.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.067439,
+      "pred_close_start": 111.5,
+      "pred_close_end": 103.98,
+      "last_actual_close": 89.95,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688252.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.065157,
+      "pred_close_start": 13.47,
+      "pred_close_end": 14.34,
+      "last_actual_close": 19.93,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300672.SZ",
+      "direction": "UP",
+      "pred_return_7d": 0.062893,
+      "pred_close_start": 752.02,
+      "pred_close_end": 799.32,
+      "last_actual_close": 439.34,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688018.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.056893,
+      "pred_close_start": 268.4,
+      "pred_close_end": 283.67,
+      "last_actual_close": 316.15,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688123.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.05358,
+      "pred_close_start": 111.25,
+      "pred_close_end": 105.29,
+      "last_actual_close": 164.33,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688508.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.051252,
+      "pred_close_start": 114.93,
+      "pred_close_end": 109.04,
+      "last_actual_close": 88.35,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688220.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.047072,
+      "pred_close_start": 86.65,
+      "pred_close_end": 90.73,
+      "last_actual_close": 89.98,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "603068.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.043798,
+      "pred_close_start": 23.21,
+      "pred_close_end": 24.23,
+      "last_actual_close": 32.65,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688368.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.043468,
+      "pred_close_start": 553.11,
+      "pred_close_end": 529.07,
+      "last_actual_close": 371.9,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688286.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.034861,
+      "pred_close_start": 30.31,
+      "pred_close_end": 31.36,
+      "last_actual_close": 63.1,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "603501.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.03248,
+      "pred_close_start": 54.68,
+      "pred_close_end": 56.45,
+      "last_actual_close": 118.48,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688167.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.032186,
+      "pred_close_start": 1036.23,
+      "pred_close_end": 1002.88,
+      "last_actual_close": 484.88,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688099.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.032081,
+      "pred_close_start": 78.88,
+      "pred_close_end": 76.35,
+      "last_actual_close": 88.65,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300623.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.030524,
+      "pred_close_start": 251.16,
+      "pred_close_end": 243.49,
+      "last_actual_close": 228.39,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688498.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.030368,
+      "pred_close_start": 4873.52,
+      "pred_close_end": 4725.53,
+      "last_actual_close": 2856.44,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300613.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.029299,
+      "pred_close_start": 382.06,
+      "pred_close_end": 370.87,
+      "last_actual_close": 305.04,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688262.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.028605,
+      "pred_close_start": 41.43,
+      "pred_close_end": 42.61,
+      "last_actual_close": 47.13,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688409.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.028525,
+      "pred_close_start": 437.52,
+      "pred_close_end": 425.04,
+      "last_actual_close": 273.76,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300666.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.028381,
+      "pred_close_start": 422.83,
+      "pred_close_end": 410.83,
+      "last_actual_close": 279.92,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "002156.SZ",
+      "direction": "UP",
+      "pred_return_7d": 0.02745,
+      "pred_close_start": 219.98,
+      "pred_close_end": 226.02,
+      "last_actual_close": 161.36,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688135.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.027275,
+      "pred_close_start": 54.07,
+      "pred_close_end": 52.6,
+      "last_actual_close": 50.56,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688362.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.026491,
+      "pred_close_start": 91.5,
+      "pred_close_end": 89.08,
+      "last_actual_close": 58.58,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300706.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.025923,
+      "pred_close_start": 148.58,
+      "pred_close_end": 144.73,
+      "last_actual_close": 130.11,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688416.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.025038,
+      "pred_close_start": 164.48,
+      "pred_close_end": 160.36,
+      "last_actual_close": 109.62,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "002185.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.02461,
+      "pred_close_start": 225.08,
+      "pred_close_end": 219.54,
+      "last_actual_close": 170.1,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "603986.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.024087,
+      "pred_close_start": 4454.01,
+      "pred_close_end": 4561.3,
+      "last_actual_close": 2723.24,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300831.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.0238,
+      "pred_close_start": 19.51,
+      "pred_close_end": 19.04,
+      "last_actual_close": 17.17,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688521.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.022683,
+      "pred_close_start": 266.35,
+      "pred_close_end": 260.31,
+      "last_actual_close": 223.13,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688256.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.022611,
+      "pred_close_start": 2309.52,
+      "pred_close_end": 2257.3,
+      "last_actual_close": 1849.09,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688141.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.02249,
+      "pred_close_start": 186.3,
+      "pred_close_end": 182.11,
+      "last_actual_close": 117.31,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688432.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.02127,
+      "pred_close_start": 31.73,
+      "pred_close_end": 31.05,
+      "last_actual_close": 21.22,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688045.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.020955,
+      "pred_close_start": 93.28,
+      "pred_close_end": 91.32,
+      "last_actual_close": 67.66,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "301369.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.02017,
+      "pred_close_start": 729.28,
+      "pred_close_end": 714.58,
+      "last_actual_close": 399.18,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688249.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.019517,
+      "pred_close_start": 51.57,
+      "pred_close_end": 50.57,
+      "last_actual_close": 40.71,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688172.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.019164,
+      "pred_close_start": 115.36,
+      "pred_close_end": 113.15,
+      "last_actual_close": 65.02,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688525.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.019077,
+      "pred_close_start": 603.89,
+      "pred_close_end": 592.37,
+      "last_actual_close": 327.9,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688981.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.018533,
+      "pred_close_start": 143.63,
+      "pred_close_end": 140.97,
+      "last_actual_close": 124.88,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300373.SZ",
+      "direction": "UP",
+      "pred_return_7d": 0.016225,
+      "pred_close_start": 767.96,
+      "pred_close_end": 780.42,
+      "last_actual_close": 534.92,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "600171.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.016114,
+      "pred_close_start": 48.84,
+      "pred_close_end": 49.63,
+      "last_actual_close": 75.28,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688173.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.016034,
+      "pred_close_start": 14.38,
+      "pred_close_end": 14.15,
+      "last_actual_close": 15.15,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688661.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.013705,
+      "pred_close_start": 389.54,
+      "pred_close_end": 384.2,
+      "last_actual_close": 221.56,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "600360.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.01316,
+      "pred_close_start": 105.5,
+      "pred_close_end": 104.12,
+      "last_actual_close": 85.38,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "603290.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.012146,
+      "pred_close_start": 165.9,
+      "pred_close_end": 163.89,
+      "last_actual_close": 157.46,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "002409.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.011396,
+      "pred_close_start": 598.63,
+      "pred_close_end": 591.8,
+      "last_actual_close": 434.25,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300458.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.011372,
+      "pred_close_start": 152.52,
+      "pred_close_end": 150.79,
+      "last_actual_close": 195.12,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688041.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.010497,
+      "pred_close_start": 353.33,
+      "pred_close_end": 349.62,
+      "last_actual_close": 280.98,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688396.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.009384,
+      "pred_close_start": 76.51,
+      "pred_close_end": 77.22,
+      "last_actual_close": 61.58,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "002119.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.006791,
+      "pred_close_start": 160.12,
+      "pred_close_end": 159.03,
+      "last_actual_close": 121.96,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688047.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.006694,
+      "pred_close_start": 130.99,
+      "pred_close_end": 130.11,
+      "last_actual_close": 140.56,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "002077.SZ",
+      "direction": "UP",
+      "pred_return_7d": 0.006168,
+      "pred_close_start": 21.86,
+      "pred_close_end": 22.0,
+      "last_actual_close": 23.26,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300661.SZ",
+      "direction": "UP",
+      "pred_return_7d": 0.005017,
+      "pred_close_start": 1546.66,
+      "pred_close_end": 1554.42,
+      "last_actual_close": 1096.27,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300327.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.004466,
+      "pred_close_start": 73.61,
+      "pred_close_end": 73.28,
+      "last_actual_close": 80.58,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688259.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.004181,
+      "pred_close_start": 40.4,
+      "pred_close_end": 40.57,
+      "last_actual_close": 51.56,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300046.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.003914,
+      "pred_close_start": 82.7,
+      "pred_close_end": 82.38,
+      "last_actual_close": 123.98,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "603005.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.003822,
+      "pred_close_start": 164.54,
+      "pred_close_end": 165.17,
+      "last_actual_close": 115.4,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688729.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.003501,
+      "pred_close_start": 27.62,
+      "pred_close_end": 27.52,
+      "last_actual_close": 25.68,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "002049.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.003051,
+      "pred_close_start": 358.71,
+      "pred_close_end": 357.62,
+      "last_actual_close": 449.48,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688589.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.002897,
+      "pred_close_start": 23.26,
+      "pred_close_end": 23.19,
+      "last_actual_close": 28.98,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688608.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.001933,
+      "pred_close_start": 41.73,
+      "pred_close_end": 41.65,
+      "last_actual_close": 207.02,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "301297.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.001561,
+      "pred_close_start": 53.57,
+      "pred_close_end": 53.49,
+      "last_actual_close": 44.45,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688486.SH",
+      "direction": "DOWN",
+      "pred_return_7d": -0.00117,
+      "pred_close_start": 137.24,
+      "pred_close_end": 137.08,
+      "last_actual_close": 140.84,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "688391.SH",
+      "direction": "UP",
+      "pred_return_7d": 0.001008,
+      "pred_close_start": 59.78,
+      "pred_close_end": 59.84,
+      "last_actual_close": 64.98,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    },
+    {
+      "symbol": "300077.SZ",
+      "direction": "DOWN",
+      "pred_return_7d": -0.000914,
+      "pred_close_start": 103.27,
+      "pred_close_end": 103.17,
+      "last_actual_close": 110.55,
+      "last_date": "2026-06-12",
+      "pred_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23"
+      ]
+    }
+  ]
+}
