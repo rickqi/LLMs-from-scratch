@@ -135,12 +135,10 @@ pip install torch numpy pandas einops tushare akshare tqdm matplotlib scikit-lea
 
 | 日期 | 变更 |
 |------|------|
-| 2026-06-15 | **真实数据训练**：68只半导体股票（2018-2026），Tokenizer val=0.136, Predictor val=4.34 |
-| 2026-06-15 | **真实数据回测**：Sharpe=1.96, 年化 95.24%, 胜率 57.1% (248交易日) |
-| 2026-06-15 | 新增 convert_semiconductor.py 脚本，从 CSV 批量转换真实 K 线数据 |
-| 2026-06-15 | 项目初始化：目录结构、配置、数据管道、模型架构 |
-| 2026-06-15 | 端到端流水线打通：合成数据 → Tokenizer训练 → Predictor训练 → 推理 → 回测 |
-| 2026-06-15 | BSQ量化器修复：移除投影矩阵改用直接二值化；Tokenizer API 重构 |
-| 2026-06-15 | 新增：Jupyter notebooks, QLIB对比分析文档 |
-| 2026-06-15 | 测试套件：15个pytest单元测试全部通过 |
-| 2026-06-15 | small 模型训练验证：28M参数训练+推理端到端通过 |
+| 2026-06-17 | **Tushare CSI300 全量**：329 stocks, 488k rows, 300/300 成功 |
+| 2026-06-17 | **LSTM A/B 模式**：model/lstm_model.py, RankIC=+0.131 (68半导, pl=10) |
+| 2026-06-17 | **最终结论**：LSTM回归 > BSQ+Transformer, 板块集中 > 数据量 |
+| 2026-06-17 | 执行方案：docs/execution-plan.md, 三阶段计划 |
+| 2026-06-16 | Kronos-small 预训练评估：RankIC=-0.110 |
+| 2026-06-16 | Cosine LR + warmup, BSQ 熵正则化, pred_len 扫描 |
+| 2026-06-15 | 端到端流水线 + 68半导体训练 + 测试套件 |
