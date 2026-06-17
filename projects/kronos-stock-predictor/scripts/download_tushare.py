@@ -41,7 +41,7 @@ def get_csi300_symbols() -> list[str]:
         return [l.strip() for l in f if l.strip() and not l.startswith("#")]
 
 
-def download_stock(ts_code: str, start: str = "20150101", end: str = "20260616") -> pd.DataFrame | None:
+def download_stock(ts_code: str, start: str = "20050101", end: str = "20260616") -> pd.DataFrame | None:
     """下载单只股票日线"""
     for attempt in range(3):
         try:
@@ -68,12 +68,12 @@ def build_dataset(config: Config):
     symbols = get_csi300_symbols()
     logger.info(f"Downloading {len(symbols)} CSI300 stocks via Tushare...")
 
-    train_s = pd.Timestamp(config.train_time_range[0])
-    train_e = pd.Timestamp(config.train_time_range[1])
-    val_s = pd.Timestamp(config.val_time_range[0])
-    val_e = pd.Timestamp(config.val_time_range[1])
-    test_s = pd.Timestamp(config.test_time_range[0])
-    test_e = pd.Timestamp(config.test_time_range[1])
+    train_s = pd.Timestamp("2005-01-01")
+    train_e = pd.Timestamp("2022-12-31")
+    val_s = pd.Timestamp("2023-01-01")
+    val_e = pd.Timestamp("2023-12-31")
+    test_s = pd.Timestamp("2024-01-01")
+    test_e = pd.Timestamp("2025-12-31")
 
     train_data, val_data, test_data = {}, {}, {}
     ok, fail = 0, 0
