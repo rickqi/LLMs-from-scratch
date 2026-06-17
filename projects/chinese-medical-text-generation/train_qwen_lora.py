@@ -196,6 +196,7 @@ def main():
     parser.add_argument("--batch_size", type=int, default=BATCH_SIZE, help="批次大小")
     parser.add_argument("--lr", type=float, default=LEARNING_RATE, help="学习率")
     parser.add_argument("--max_length", type=int, default=MAX_LENGTH, help="最大序列长度")
+    parser.add_argument("--model_name", type=str, default=MODEL_NAME, help="基座模型名称")
     parser.add_argument("--resume_from", type=str, default=None, help="已有 LoRA adapter 路径 (续训)")
     parser.add_argument("--instruction_data", type=str, default=None, help="ChatML 指令微调数据路径")
     parser.add_argument("--instruction_ratio", type=float, default=0.8, help="指令数据占比 (默认0.8)")
@@ -209,13 +210,13 @@ def main():
     logger.info(f"使用设备: {device}")
 
     # 1. 加载 tokenizer 和模型
-    logger.info(f"加载模型: {MODEL_NAME}")
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+    logger.info(f"加载模型: {args.model_name}")
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name, trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
     model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME,
+        args.model_name,
         trust_remote_code=True,
         torch_dtype=torch.bfloat16 if device.type == "cuda" else torch.float32,
         device_map="auto" if device.type == "cuda" else None,
@@ -401,7 +402,7 @@ def main():
         "total_time_seconds": elapsed_offset + (time.time() - start_time),
         "global_step": global_step,
         "config": {
-            "model": MODEL_NAME,
+            "model": args.model_name,
             "lora_r": LORA_R,
             "lora_alpha": LORA_ALPHA,
             "lora_dropout": LORA_DROPOUT,
