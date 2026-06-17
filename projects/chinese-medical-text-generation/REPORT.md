@@ -485,4 +485,49 @@ python generate.py --model_dir ./output_inst_v1/best_model --instruct --interact
 
 ---
 
+## 十三、模型升级评估
+
+### 13.1 候选模型对比
+
+| 模型 | 参数 | VRAM | 下载源 | 状态 |
+|------|------|------|--------|------|
+| Qwen3-0.6B (基准) | 600M | ~4GB | hf-mirror 缓存 | ✅ 已完成 |
+| Qwen3.5-0.8B-Base | 800M | ~5GB | cas-bridge | ❌ 超时 |
+| Qwen3-1.7B | 1.7B | ~8GB | cas-bridge | ⚠️ 极慢 (19%/h) |
+| Qwen3.5-2B-Base | 2B | ~8GB | cas-bridge | ❌ 超时 |
+| Qwen3.5-4B-Base | 4B | ~14GB | cas-bridge | ❌ 超时 |
+
+### 13.2 阻塞根因
+
+所有 Qwen3/Qwen3.5 新型号 (非 0.6B) 均通过 `cas-bridge.xethub.hf.co` 分发，该 CDN 从当前环境访问极慢（~100KB/s），导致：
+- 0.8B (~1.6GB) → 预计 4h+ 下载
+- 1.7B (~3.4GB) → 预计 9h+ 下载
+- 2B (~4GB) → 预计 11h+ 下载
+
+**而 Qwen3-0.6B 已缓存在 hf-mirror 常规 CDN，秒级加载。**
+
+### 13.3 缓解方案
+
+| 方案 | 操作 | 效果 |
+|------|------|------|
+| 预下载到本地 | `huggingface-cli download Qwen/Qwen3.5-2B-Base --local-dir ./models/2b` | 一次性下载，后续秒加载 |
+| 换代理 | `export HF_ENDPOINT=https://hf-mirror.com` (已设置) | 无效，mirror 也走 cas-bridge |
+| 用已缓存模型 | `Qwen3-0.6B-Instruct` (已缓存) | 秒启动，指令能力对比 |
+
+### 13.4 建议
+
+待网络条件改善后，用以下命令预下载并对比：
+
+```bash
+# 预下载 (在网速好的时段执行)
+huggingface-cli download Qwen/Qwen3.5-2B-Base
+
+# 对比训练 (与 0.6B 完全相同的参数)
+python train_qwen_lora.py --model_name Qwen/Qwen3.5-2B-Base \
+  --data_dir ./data_oncology --output_dir ./output_2b_compare \
+  --epochs 3 --batch_size 4 --lr 1e-4
+```
+
+---
+
 *报告结束*
