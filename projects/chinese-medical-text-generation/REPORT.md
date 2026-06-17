@@ -387,4 +387,102 @@ LoRA 模型表现出"续写"而非"问答"行为，根因在于训练范式：
 
 ---
 
+## 十一、指令微调训练结果 (Phase 2)
+
+### 11.1 训练概要
+
+| 指标 | 值 |
+|------|-----|
+| 模型 | Qwen3-0.6B + LoRA rank=8 (续训自 Phase 1) |
+| 数据 | 449 QA ChatML + 29,650 续写 (80:20 混合) |
+| Epochs | 3 |
+| 耗时 | 451.9 分钟 (7.5h) |
+| val_loss | 2.403 → 2.460 (+2.4%) |
+| 续写能力 | 保留 90%+ |
+| 输出 | `output_inst_v1/` (8.8MB) |
+
+### 11.2 批量评估 (8 题)
+
+| 问题 | 正确 | 评估 |
+|------|------|------|
+| 胃癌临床表现 | ✅ | 10 点，含贫血/GI/黄疸/体重 |
+| 糖尿病饮食 | ✅ | 10 条原则，含个体化 |
+| 医院感染控制 | ✅ | 引用法规，措施完整 |
+| 高血压用药 | ✅ | 7 条，含监测/禁忌 |
+| 急性心梗诊断 | ✅ | 7 条标准，CK-MB/ECG/CAG |
+| 肺癌TNM分期 | ⚠️ | 混淆分期与分级 |
+| 手术后并发症 | ❌ | 答非所问 |
+| CT vs MRI 对比 | ❌ | 输出鉴别诊断 |
+
+**准确率: 5/8 = 62.5%**
+
+### 11.3 根因分析
+
+508 条 QA 覆盖 97 篇文档，分布不均：
+- 肿瘤内科: 216 条 (42%) — 覆盖充分
+- 临床指南: 202 条 (40%) — 覆盖充分
+- 检验感染: 67 条 (13%) — 覆盖一般
+- 外科术后/影像: 23 条 (5%) — **严重不足**
+
+### 11.4 关键发现
+
+1. **ChatML 格式修复是关键**: 不加 `--instruct` 时模型输出退化，加上后质量跃升
+2. **QA 数据分布决定回答质量**: 覆盖好的领域 (肿瘤/糖尿病) 回答准确，覆盖差的领域 (外科/影像) 答非所问
+3. **续写与指令互补**: 纯续写知识广但不会回答，指令会回答但知识窄
+4. **repetition_penalty=1.2 有效抑制循环**: 提升后不再出现 "因为需要手术，而不能站立" 的重复
+
+---
+
+## 十二、最终状态 & 下一步方案
+
+### 12.1 当前产出
+
+```
+output_full/best_model/     (8.8MB) — 纯续写，全科室覆盖
+output_inst_v1/best_model/  (8.8MB) — 续写 + 问答，准确率 62.5%
+data_full/                  (55MB)  — 374 篇训练数据
+docs/med_qa_cases.json      (723KB) — 508 条 QA
+docs/med_instruction_chatml.json — ChatML 训练格式
+```
+
+### 12.2 互补部署 (立即可用)
+
+```bash
+# 覆盖好的领域 → 指令问答
+python generate.py --model_dir ./output_inst_v1/best_model --instruct --prompt "胃癌的临床表现"
+
+# 覆盖差的领域 → 续写兜底
+python generate.py --model_dir ./output_full/best_model --prompt "【术后管理】甲状腺切除术后并发症："
+```
+
+### 12.3 优先级路线图
+
+| 优先级 | 方案 | 投入 | 效果 |
+|--------|------|------|------|
+| 🔴 1 | **互补部署** (已完成) | 0 | 当前可用 |
+| 🟠 2 | **针对性 QA 生成**: 术后管理/TNM/影像对比 × 100 条 | 2h+2h | 准确率→80%+ |
+| 🟡 3 | **OCR 清洗**: 正则去 `$\textcircled{1}$` | 0.5h | 输出更干净 |
+| 🟡 4 | **评估体系**: 50 题标准集 + 自动评分 | 2h | 可量化迭代 |
+| 🟢 5 | **模型升级**: Qwen3-1.7B (需 ≥24GB) | 硬件 | 质量跃升 |
+
+### 12.4 快速推理命令
+
+```bash
+cd /home/LLMs-from-scratch/projects/chinese-medical-text-generation
+
+# 续写
+python generate.py --model_dir ./output_full/best_model --prompt "临床表现："
+
+# 问答 (8 题批量)
+python generate.py --model_dir ./output_inst_v1/best_model --instruct
+
+# 问答 (单题)
+python generate.py --model_dir ./output_inst_v1/best_model --instruct --prompt "高血压用药原则"
+
+# 交互问答
+python generate.py --model_dir ./output_inst_v1/best_model --instruct --interactive
+```
+
+---
+
 *报告结束*
