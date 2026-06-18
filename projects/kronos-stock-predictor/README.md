@@ -54,6 +54,11 @@ python inference/generate.py --mode predict --tokenizer_path ./outputs/tokenizer
 | `inference/backtest.py` | Walk-forward 回测框架 |
 | `tests/test_model.py` | 模型单元测试 |
 | `tests/test_data.py` | 数据管道测试 |
+| `model/lstm_model.py` | 🔥 LSTM 模型 (方向+波动率) |
+| `inference/production.py` | 生产 Predictor API |
+| `inference/backtest_enhanced.py` | 增强回测框架 |
+| `scripts/` | 14 个实验/部署脚本 |
+| `AGENTS.md` | AI Agent 工作流文档 |
 
 ## 模型规模
 
