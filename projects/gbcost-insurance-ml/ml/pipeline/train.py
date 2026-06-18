@@ -163,6 +163,10 @@ def main(argv: list[str] | None = None) -> int:
                         help="Use Parquet cache (skip CSV re-scan)")
     parser.add_argument("--rebuild-cache", action="store_true",
                         help="Force rebuild Parquet cache from CSV")
+    parser.add_argument("--skip-quantile", action="store_true",
+                        help="Skip quantile model training (P05/P50/P95)")
+    parser.add_argument("--sample", type=float, default=1.0,
+                        help="Fraction of training data to use (0-1.0, default 1.0)")
     args = parser.parse_args(argv)
 
     setup_logging(args.verbose)
@@ -276,7 +280,16 @@ def main(argv: list[str] | None = None) -> int:
 
     logger.info("Collecting train/val DataFrames...")
     t0 = time.time()
-    train_df = splits["train"].select(select_cols).collect(engine="streaming")
+
+    if args.sample < 1.0 and args.sample > 0:
+        sample_pct = int(args.sample * 100)
+        train_lf = splits["train"].filter(
+            pl.col("case_no").hash(seed=42) % 100 < sample_pct
+        ).select(select_cols)
+    else:
+        train_lf = splits["train"].select(select_cols)
+
+    train_df = train_lf.collect(engine="streaming")
     val_df = splits["val"].select(select_cols).collect(engine="streaming")
     logger.info("Train: %s rows | Val: %s rows | Time: %.1fs",
                  f"{len(train_df):,}", f"{len(val_df):,}", time.time() - t0)
@@ -345,15 +358,20 @@ def main(argv: list[str] | None = None) -> int:
 
     # --- Step 7: Quantile models ---
     logger.info("=" * 60)
-    logger.info("Step 7: Training quantile models (P05/P50/P95)")
-    quantile_results = train_quantile_models(
-        train_df, val_df, feature_cols, categorical_cols,
-        quantiles=config["quantiles"]["levels"],
-        n_estimators=config["quantiles"]["n_estimators"],
-        target_col=target_col,
-        model_dir=str(model_dir),
-    )
-    logger.info("Quantile models saved: %s", list(quantile_results.keys()))
+    skip_q = args.skip_quantile or args.mode == "l1a_only"
+    if skip_q:
+        logger.info("Step 7: Quantile models SKIPPED (--skip-quantile or --mode l1a_only)")
+        quantile_results = {}
+    else:
+        logger.info("Step 7: Training quantile models (P05/P50/P95)")
+        quantile_results = train_quantile_models(
+            train_df, val_df, feature_cols, categorical_cols,
+            quantiles=config["quantiles"]["levels"],
+            n_estimators=config["quantiles"]["n_estimators"],
+            target_col=target_col,
+            model_dir=str(model_dir),
+        )
+        logger.info("Quantile models saved: %s", list(quantile_results.keys()))
 
     # --- Step 8: Feature importance ---
     logger.info("=" * 60)
