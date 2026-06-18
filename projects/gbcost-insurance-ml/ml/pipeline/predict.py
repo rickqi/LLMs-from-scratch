@@ -103,9 +103,7 @@ def main(argv: list[str] | None = None) -> int:
     _desired_meta = ["y_raw", "medical_start_date", "policy_grp_name", "group_code",
                      "duty_code", "hosp_grade", "case_no"]
     extra_cols = [c for c in _desired_meta if c not in feature_cols]
-    pred_df = feature_lf.select(feature_cols + extra_cols).collect(
-        engine="streaming",
-    )
+    pred_df = feature_lf.select(feature_cols + extra_cols).collect(engine="streaming")
     logger.info("Collected %s rows in %.1fs", f"{len(pred_df):,}", time.time() - t0)
 
     # Predict

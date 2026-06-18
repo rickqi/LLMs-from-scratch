@@ -44,7 +44,7 @@ _MIXED_TYPE_COLS = [
     "sub_duty_code", "fee_code", "grpcont_claim_duty_code",
     "sale_chnl_code", "policy_grp_no", "grp_cont_no", "rgt_no",
     "case_no", "old_clm_no", "insured_no", "appnt_no",
-    "vip_type", "pass_year",
+    "vip_type", "pass_year", "investment_approver",
 ]
 
 # Schema overrides: force all non-numeric, non-date columns to Utf8

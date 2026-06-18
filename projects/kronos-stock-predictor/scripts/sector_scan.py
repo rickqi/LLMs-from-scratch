@@ -1,84 +1,122 @@
-"""快速板块对比 — 单板块 LSTM 训练"""
-import tushare as ts, pandas as pd, numpy as np, torch, time, sys
+"""
+分行业波动率扫描 — 识别最优板块
+用法: python scripts/sector_scan.py --sector 金融 --epochs 20
+"""
+
+import tushare as ts
+import torch, pickle, numpy as np, logging, sys, time, json, argparse, pandas as pd
+from pathlib import Path
+from datetime import datetime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from model.lstm_model import LSTMModel, train_lstm, FEATURES
 from scipy.stats import spearmanr
-sys.path.insert(0, ".")
-from model.lstm_model import LSTMModel, FEATURES
-from torch.utils.data import DataLoader, Dataset
 
-DEVICE = "cuda:0"
-ts.set_token("260264d1c42c2b5c47262478557e99d7f6a0769523ea19f48e09ed73")
-pro = ts.pro_api()
+logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s")
+logger = logging.getLogger()
 
-class SDS(Dataset):
-    def __init__(self, data, m=5000):
-        self.s = []
-        for sym, df in data.items():
-            v = df[FEATURES].values.astype(np.float32)
-            for i in range(len(v) - 190):
-                x = v[i : i + 180]; mu, std = x.mean(0), x.std(0) + 1e-5
-                xn = np.clip((x - mu) / std, -5, 5)
-                y = (v[i + 189, 3] - v[i + 179, 3]) / (v[i + 179, 3] + 1e-5)
-                if abs(y) < 0.2:
-                    self.s.append((xn.astype(np.float32), np.float32(y)))
-        self.n = min(len(self.s), m)
-    def __len__(self): return self.n
-    def __getitem__(self, i):
-        x, y = self.s[i % len(self.s)]
-        return torch.FloatTensor(x), torch.FloatTensor([y])
+_TOKEN = open(Path(__file__).resolve().parent.parent/".env").read().split("TUSHARE_TOKEN=")[1].split("\n")[0].strip()
+ts.set_token(_TOKEN); pro = ts.pro_api()
+DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
+TODAY = datetime.now().strftime("%Y%m%d")
+OUTPUT = Path("outputs/sector_scan"); OUTPUT.mkdir(exist_ok=True)
 
-def go(sector, n=30):
-    syms = pro.stock_basic(exchange="", list_status="L", fields="ts_code,industry")
-    syms = syms[syms["industry"] == sector]["ts_code"].tolist()[:n]
-    data = {"train": {}, "val": {}, "test": {}}
-    print(f"  Downloading {len(syms)} {sector}...")
-    for sym in syms:
+SECTORS = {
+    "金融":     ["保险","银行","证券"],    "半导体":   ["半导体","芯片"],
+    "医药":     ["医药","医疗"],           "消费":     ["白酒","食品","饮料","家电"],
+    "汽车":     ["汽车"],                  "地产":     ["地产","房产"],
+    "软件":     ["软件","互联网"],          "通信":     ["通信"],
+    "电力":     ["电力"],                  "化工":     ["化工"],
+}
+
+def download_sector(symbols, start="20180101"):
+    data = {}
+    for i, ts_code in enumerate(symbols):
         try:
-            df = pro.daily(ts_code=sym, start_date="20180101", end_date="20260617"); time.sleep(0.35)
-            if df is None or len(df) < 200: continue
-            df["trade_date"] = pd.to_datetime(df["trade_date"]); df = df.set_index("trade_date").sort_index()
-            df = df[["open", "high", "low", "close", "vol", "amount"]]
-            df = df.rename(columns={"vol": "vol", "amount": "amt"}).astype(np.float32)
-            df = df[(df["open"] > 0) & (df["close"] > 0)]
-            for m, (s, e) in [("train", ("2018-01-01", "2022-12-31")),
-                              ("val", ("2023-01-01", "2023-12-31")),
-                              ("test", ("2024-01-01", "2025-12-31"))]:
-                sub = df[(df.index >= s) & (df.index <= e)]
-                if len(sub) >= 50: data[m][sym] = sub
+            df = pro.daily(ts_code=ts_code, start_date=start, end_date=TODAY,
+                          fields="trade_date,open,high,low,close,vol,amount")
+            if df is not None and len(df) >= 500:
+                df["trade_date"] = pd.to_datetime(df["trade_date"])
+                df = df.sort_values("trade_date").set_index("trade_date")
+                data[ts_code] = df[["open","high","low","close","vol","amount"]].rename(columns={"amount":"amt"})
+            if i%20==0 and i>0: time.sleep(3)
+            time.sleep(0.2)
         except: pass
-    if len(data["train"]) < 15: return None, 0
-    print(f"    Building dataset...", flush=True)
-    t0 = time.time()
-    tl = DataLoader(SDS(data["train"]), 64, True, drop_last=True)
-    vl = DataLoader(SDS(data["val"], 3000), 64)
-    print(f"    Dataset ready ({time.time()-t0:.1f}s), training...", flush=True)
-    model = LSTMModel().to(DEVICE); opt = torch.optim.Adam(model.parameters(), lr=1e-3)
-    loss_fn = torch.nn.MSELoss(); bv, bs = float("inf"), None
-    for e in range(8):
-        t0 = time.time()
-        model.train()
-        for x, y in tl: x, y = x.to(DEVICE), y.to(DEVICE); opt.zero_grad(); loss_fn(model(x), y).backward(); opt.step()
-        model.eval()
-        vloss = sum(loss_fn(model(x.to(DEVICE)), y.to(DEVICE)).item() for x, y in vl) / len(vl)
-        if vloss < bv: bv = vloss; bs = {k: v.cpu().clone() for k, v in model.state_dict().items()}
-        if e % 4 == 0: print(f"    E{e+1}/8: val={vloss:.6f} ({time.time()-t0:.1f}s)", flush=True)
-    model.load_state_dict(bs); model.eval()
-    rr = []
-    with torch.no_grad():
-        for sym in sorted(data["test"].keys())[:10]:
-            df = data["test"][sym]; v = df[FEATURES].values.astype(np.float32)
-            for idx in range(180, len(v) - 10, max(1, (len(v) - 190) // 8)):
-                x = v[idx - 180 : idx]; mu, std = x.mean(0), x.std(0) + 1e-5
-                pred = model(torch.FloatTensor((x - mu) / std).unsqueeze(0).to(DEVICE)).item()
-                actual = (v[idx + 9, 3] - v[idx - 1, 3]) / (v[idx - 1, 3] + 1e-5)
-                rr.append({"pred": pred, "actual": actual})
-    p = np.array([r["pred"] for r in rr]); a = np.array([r["actual"] for r in rr])
-    ic, _ = spearmanr(p, a)
-    return ic, len(data["train"])
+    return data
 
-if __name__ == "__main__":
-    print(f"{'Sector':<12s} {'Stocks':>6s} {'RankIC':>8s} {'DirAcc':>8s}")
-    print("-" * 38)
-    for s in ["电气设备", "汽车配件", "证券"]:
-        ic, n = go(s, 30)
-        print(f"{s:<12s} {n:>6d} {ic:>8.4f}")
-    print(f"{'半导体':<12s} {'68':>6s} {'0.2050':>8s}")
+def walk_forward(data, epochs=20):
+    quarters = [(f'{y}-{m:02d}-01',) for y in [2025,2026] for m in [1,4,7,10]][:6]
+    results = []
+    for (q_start,) in quarters:
+        qs = pd.Timestamp(q_start); qe = qs + pd.DateOffset(months=3) - pd.DateOffset(days=1)
+        train_d, test_d = {}, {}
+        for sym, df in data.items():
+            t = df[df.index < qs]; ts = df[(df.index >= qs) & (df.index <= qe)]
+            if len(t) >= 300: train_d[sym] = t
+            if len(ts) >= 5: test_d[sym] = ts
+        if len(train_d) < 10 or len(test_d) < 10: continue
+        try:
+            val_sym = list(train_d.keys())[0]
+            model = train_lstm(train_d, {val_sym: train_d[val_sym]}, lookback=180, pred_len=3,
+                              epochs=epochs, batch_size=128, lr=1e-3, device=DEVICE)
+        except: continue
+        preds, actuals = [], []
+        for sym, df in test_d.items():
+            hist = data[sym][data[sym].index <= qe]
+            if len(hist) < 180: continue
+            vals = hist[FEATURES].values.astype(np.float32)
+            x = vals[-180:]; m, s = x.mean(axis=0), x.std(axis=0)+1e-5
+            with torch.no_grad():
+                pred = model(torch.FloatTensor((x-m)/s).unsqueeze(0).to(DEVICE)).item()
+            qv = df[FEATURES].values.astype(np.float32)
+            if len(qv) < 5: continue
+            rets = np.diff(qv[:,3])/(qv[:-1,3]+1e-5)
+            actuals.append(float(np.std(rets))); preds.append(pred)
+        if len(preds) >= 10:
+            ic, _ = spearmanr(preds, actuals)
+            results.append({'quarter': q_start[:7], 'rankic': float(ic), 'n': len(preds)})
+    return results
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--sector", default=None); p.add_argument("--epochs", type=int, default=20)
+    p.add_argument("--skip-download", action="store_true"); p.add_argument("--all", action="store_true")
+    args = p.parse_args()
+
+    to_scan = SECTORS if (args.all or not args.sector) else {args.sector: SECTORS[args.sector]}
+    summary = {}
+
+    for name, keywords in to_scan.items():
+        logger.info(f"\n=== {name} ({keywords}) ===")
+        df = pro.stock_basic(exchange='', list_status='L', fields='ts_code,name,industry')
+        pattern = '|'.join(keywords)
+        symbols = sorted(df[df['industry'].str.contains(pattern, na=False)]['ts_code'].tolist())
+        logger.info(f"Stocks: {len(symbols)}")
+
+        if args.skip_download:
+            data = pickle.load(open(OUTPUT/f"{name}_data.pkl","rb"))
+        else:
+            data = download_sector(symbols)
+            pickle.dump(data, open(OUTPUT/f"{name}_data.pkl","wb"))
+        logger.info(f"Data: {len(data)} stocks, {sum(len(d) for d in data.values()):,} rows")
+
+        if len(data) < 10: continue
+
+        results = walk_forward(data, args.epochs)
+        ics = [r['rankic'] for r in results]
+        summary[name] = {'stocks': len(data), 'rows': sum(len(d) for d in data.values()),
+                        'mean_ic': float(np.mean(ics)) if ics else 0,
+                        'pos': f"{sum(1 for ic in ics if ic>0)}/{len(results)}",
+                        'details': results}
+        logger.info(f"Mean IC: {summary[name]['mean_ic']:+.4f} ({summary[name]['pos']})")
+
+    print(f"\n{'='*65}")
+    print(f"  Sector Scan Summary")
+    print(f"{'='*65}")
+    for name, r in sorted(summary.items(), key=lambda x: -x[1]['mean_ic']):
+        print(f"  {name:<10} {r['stocks']:<6}stocks  {r['rows']:>8,}rows  RankIC={r['mean_ic']:+.4f}  {r['pos']}")
+    print(f"{'='*65}")
+
+    with open(OUTPUT/"summary.json","w") as f: json.dump(summary, f, indent=2, default=str)
+
+if __name__ == "__main__": main()

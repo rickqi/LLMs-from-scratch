@@ -159,6 +159,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--version", default="auto", help="Model version tag (default: auto-detect)")
     parser.add_argument("--exp-name", default=None, help="Experiment name for tracking")
     parser.add_argument("--resume", action="store_true", help="Resume from last checkpoint")
+    parser.add_argument("--use-cache", action="store_true", default=True,
+                        help="Use Parquet cache (skip CSV re-scan)")
+    parser.add_argument("--rebuild-cache", action="store_true",
+                        help="Force rebuild Parquet cache from CSV")
     args = parser.parse_args(argv)
 
     setup_logging(args.verbose)
@@ -172,23 +176,49 @@ def main(argv: list[str] | None = None) -> int:
     if ckpt:
         logger.info("Resuming from checkpoint: step %d/%d", ckpt["step"], ckpt["total"])
 
-    # --- Step 1: Load data ---
+    # --- Step 1: Load data (via Parquet cache or CSV) ---
     from ml.data.loader import load_doris_csv
-    from ml.data.feature_store import compute_global_stats, build_features, get_feature_columns
+    from ml.data.feature_store import (
+        compute_global_stats, build_features, get_feature_columns,
+        prepare_train_cache, load_train_lf,
+    )
     from ml.data.split import split_by_time
     from ml.models.amount_predictor import AmountPredictor, train_quantile_models
     from ml.evaluate.metrics import evaluate_predictions, compute_baseline_metrics
 
     csv_path = config["data"]["csv_path"]
-    logger.info("=" * 60)
-    logger.info("Step 1: Loading data from %s", csv_path)
-    lf = load_doris_csv(csv_path)
+    cache_dir = Path(config["data"]["cache_dir"])
+    split_cfg = config["split"]
 
-    # --- Step 2: Compute global stats ---
+    logger.info("=" * 60)
+    logger.info("Step 1: Loading data")
+
+    if args.use_cache and not args.rebuild_cache:
+        cache_path = prepare_train_cache(
+            csv_path, cache_dir, train_end=split_cfg["train_end"],
+            force=args.rebuild_cache,
+        )
+        cache_lf = load_train_lf(cache_path)
+        logger.info("  Parquet cache: %s (%.0f MB)", cache_path.name,
+                     cache_path.stat().st_size / (1024 * 1024))
+    elif args.rebuild_cache:
+        logger.info("  Rebuilding cache (--rebuild-cache)...")
+        cache_path = prepare_train_cache(
+            csv_path, cache_dir, train_end=split_cfg["train_end"], force=True,
+        )
+        cache_lf = load_train_lf(cache_path)
+    else:
+        logger.info("  Loading from CSV (no cache)...")
+        cache_lf = None
+
+    # Full CSV LazyFrame for feature building (needs val/test periods too)
+    full_lf = load_doris_csv(csv_path) if cache_lf is None else load_doris_csv(csv_path)
+
+    # --- Step 2: Compute global stats (from Parquet cache if available) ---
     logger.info("=" * 60)
     logger.info("Step 2: Computing global statistics (train-only data)")
-    split_cfg = config["split"]
-    global_stats = compute_global_stats(lf, train_end=split_cfg["train_end"])
+    stats_lf = cache_lf if cache_lf is not None else full_lf
+    global_stats = compute_global_stats(stats_lf, train_end=split_cfg["train_end"])
 
     # Save global stats for prediction reuse
     model_dir = Path(config["output"]["model_dir"])
@@ -208,7 +238,7 @@ def main(argv: list[str] | None = None) -> int:
     logger.info("=" * 60)
     logger.info("Step 3: Building feature LazyFrame")
     feature_lf = build_features(
-        lf,
+        full_lf,
         global_stats,
         categorical_cols=config["features"]["categorical_cols"],
         log_transform=config["l1a"].get("log_transform", True),
@@ -246,8 +276,8 @@ def main(argv: list[str] | None = None) -> int:
 
     logger.info("Collecting train/val DataFrames...")
     t0 = time.time()
-    train_df = splits["train"].select(select_cols).collect(streaming=True)
-    val_df = splits["val"].select(select_cols).collect(streaming=True)
+    train_df = splits["train"].select(select_cols).collect(engine="streaming")
+    val_df = splits["val"].select(select_cols).collect(engine="streaming")
     logger.info("Train: %s rows | Val: %s rows | Time: %.1fs",
                  f"{len(train_df):,}", f"{len(val_df):,}", time.time() - t0)
 

@@ -1,19 +1,21 @@
 """Two-phase feature engineering for claim amount prediction.
 
-Phase 1 (compute_global_stats): Scan full dataset once to compute aggregation
-statistics — group_code target encoding, monthly aggregations. Results are
-small DataFrames stored in memory.
+Phase 0 (prepare_train_cache): Single CSV scan → filtered Parquet cache.
+    Subsequent runs read from Parquet (columnar, compressed) — 10x faster.
 
-Phase 2 (build_features): Transform LazyFrame with all feature expressions,
-including joins to global stats. No data is collected until train/predict
-calls .collect(streaming=True).
+Phase 1 (compute_global_stats): Compute aggregation statistics from LazyFrame
+    (CSV or Parquet source).
+
+Phase 2 (build_features): Transform LazyFrame with all feature expressions.
 """
 
 from __future__ import annotations
 
 import logging
 import math
-from typing import Dict, List, Optional
+import time
+from pathlib import Path
+from typing import Dict, List, Optional, Union
 
 import polars as pl
 
@@ -27,6 +29,126 @@ _TE_SMOOTHING = 10.0
 
 # Numeric features that get log1p transformation
 _LOG_COLS = ["annual_prem", "pass_prem", "year_actual_claim_paid"]
+
+# Columns needed for training (subset of the 71 CSV columns)
+_CACHE_COLS = [
+    # Identity
+    "cust_birthday", "medical_start_date", "medical_end_date",
+    # Target
+    "clm_acount_amnt_cny", "clm_acount_amnt_cny_duty",
+    # Policy
+    "policy_grp_name", "duty_code", "duty_name",
+    "pass_months", "annual_prem", "pass_prem",
+    "cont_valid_date", "cont_end_date",
+    "rnew_flag", "sale_chnl", "sale_chnl_code",
+    # Member
+    "insured_no", "insured_gender", "insured_name",
+    "main_insured_rela", "appnt_no", "appnt_name",
+    # Medical
+    "group_code", "group_name",
+    "claim_type", "hosp_grade", "fee_item_type",
+    "hospital_name", "main_hospital_name",
+    "day_count", "large_case_amt",
+    "case_no", "old_clm_no",
+    # Finance
+    "est_loss_ratio", "actual_sales_lr",
+    "year_actual_claim_paid", "ytd_actual_claim_paid",
+    # Geography
+    "native_place_name",
+    # Flags
+    "is_public", "is_expensive",
+    # Additional IDs
+    "rgt_no", "policy_grp_no", "grp_cont_no",
+    "fee_code", "fee_name", "fee_desc", "fee_item_detail_name",
+    "sub_duty", "sub_duty_code", "claim_duty", "grpcont_claim_duty_code",
+    "vip_type", "pass_year",
+    # Dates
+    "end_case_date", "fir_vald_date", "etl_date",
+    # Agent info
+    "sale_depart", "agent_com_name", "agent_name",
+    "sale_us_eva", "min_uw_raise", "investment_approver", "change_fee",
+    "grp_hospital_name", "medical_group_name",
+    "acc_result1_name", "acc_result2_name",
+]
+
+
+def prepare_train_cache(
+    csv_path: str | Path,
+    cache_dir: str | Path = "data/ml_cache",
+    train_end: str = "2024-12-31",
+    force: bool = False,
+) -> Path:
+    """Single-pass CSV → filtered Parquet cache.
+
+    Scans the 13GB CSV once, filters to training period (≤ train_end),
+    and writes compressed Parquet (~2-3GB). All subsequent loads use
+    this cache — no more full CSV scans.
+
+    Args:
+        csv_path: Path to Doris CSV
+        cache_dir: Directory for cached parquet
+        train_end: Training period cutoff date
+        force: If True, regenerate even if cache exists
+
+    Returns:
+        Path to cached Parquet file
+    """
+    cache_dir = Path(cache_dir)
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    cache_path = cache_dir / "train_cache.parquet"
+
+    if cache_path.exists() and not force:
+        size_mb = cache_path.stat().st_size / (1024 * 1024)
+        logger.info("Cache exists: %s (%.0f MB) — skipping CSV scan", cache_path.name, size_mb)
+        return cache_path
+
+    logger.info("Building train cache from CSV → Parquet (train_end <= %s)...", train_end)
+
+    from ml.data.loader import load_doris_csv
+    from datetime import date as _date
+
+    train_cutoff = _date.fromisoformat(train_end)
+    t0 = time.time()
+
+    lf = load_doris_csv(csv_path)
+    train_lf = lf.filter(
+        (pl.col("medical_start_date") <= pl.lit(train_cutoff))
+        & pl.col("clm_acount_amnt_cny").is_not_null()
+        & (pl.col("clm_acount_amnt_cny") > 0)
+    )
+
+    # Only keep columns we need for training (reduces Parquet size)
+    schema = train_lf.collect_schema()
+    available_cols = [c for c in _CACHE_COLS if c in schema.names()]
+
+    train_lf = train_lf.select(available_cols)
+
+    train_lf.sink_parquet(
+        str(cache_path),
+        compression="zstd",
+        compression_level=3,
+        statistics=True,
+    )
+
+    elapsed = time.time() - t0
+    size_mb = cache_path.stat().st_size / (1024 * 1024)
+    logger.info("Train cache ready: %s (%.0f MB, %.1f min)", cache_path.name, size_mb, elapsed / 60)
+
+    # Print policy count for completeness check
+    policy_count = (
+        pl.scan_parquet(str(cache_path))
+        .select(pl.col("policy_grp_name").n_unique())
+        .collect()
+        .item()
+    )
+    logger.info("  Policies in cache: %d", policy_count)
+
+    return cache_path
+
+
+def load_train_lf(cache_path: str | Path) -> pl.LazyFrame:
+    """Load cached training data as LazyFrame (no data loaded yet)."""
+    return pl.scan_parquet(str(cache_path))
 
 
 def compute_global_stats(
