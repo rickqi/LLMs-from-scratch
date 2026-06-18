@@ -32,3 +32,16 @@ __pycache__/
 .env
 .venv/
 output_inst_v1/
+output_inst_v2/
+output_inst_v3/
+output_2b_compare/
+output_2b_full/
+output_2b_inst/
+output_17b_full/
+output_17b_inst/
+output_08b_compare/
+
+# 训练日志
+train_*.log
+dl_models.log
+qa_gen*.log
