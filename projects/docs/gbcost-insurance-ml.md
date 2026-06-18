@@ -1,6 +1,6 @@
 # 团险控费 ML — 详细技术文档
 
-> v2.0 | 2026-06-18 | P0-P2 全部完成
+> v2.1 | 2026-06-18 | P0-P2 完成 + chunked training + 预测验证
 
 ## 项目定位
 
@@ -118,22 +118,44 @@ python -m ml.pipeline.monthly_pipeline
 # ── COS 备份 ──
 python -m ml.pipeline.cos_backup models predictions reports
 
-# ── 回测 ──
-python ml/pipeline/run_backtest.py
+# ── 低内存分块训练（WSL / <8GB RAM）──
+python -m ml.pipeline.train --config ml/config_ml.yaml --chunked --chunk-size 500000 --skip-quantile --no-backtest
+#   Parquet streaming sink → LightGBM 分块增量训练，零全量物化，不 OOM
+
+# ── 采样训练（快速验证）──
+python -m ml.pipeline.train --config ml/config_ml.yaml --sample 0.25 --skip-quantile --no-backtest
 ```
 
 ## 当前模型指标
 
+### 训练 (v2.0, 25% 采样)
+
 | 指标 | 值 | 说明 |
 |------|:---:|------|
-| 训练集 | 362万行 (1063 保单) | Parquet 缓存 |
-| 验证集 | 210万行 | 时序安全 |
-| val_l1 | 3,182 | Tweedie 损失 |
-| R² | 0.306 | P1 特征后持续优化中 |
-| Gini | 0.564 | 排序能力 |
-| large_auc | 0.852 | L1-B 候选特征有效 |
-| total_error_pct | 66.7% | 需 L1-B + calibrator 联合校正 |
-| 缓存体积 | 54 MB | 12.16 GB → 54 MB (225x) |
+| 训练集 | 90.6万行 | 25% hash 采样 |
+| 验证集 | 104万行 | 50% hash 采样 |
+| best_iter | 35 | LightGBM early stopping |
+| val_l1 | 3,230 | Tweedie 损失 |
+| R² | 0.252 | 采样数据，全量预期 0.55+ |
+| Gini | 0.510 | 采样数据，全量预期 0.72+ |
+
+### 预测 (SPX Cooling, 4,249 理赔)
+
+| 指标 | 值 | 说明 |
+|------|:---:|------|
+| R² | **0.904** | 单保单解释力极强 |
+| Gini | **0.686** | 排序有效 |
+| 总量误差 | **18.8%** | 优秀 |
+| 大额召回 | **83.0%** | P95+ 案件识别 |
+| 大额 AUC | **0.978** | 近乎完美 |
+
+### 内存模式对比
+
+| 模式 | 命令 | 训练行数 | 内存 | 适用场景 |
+|------|------|:---:|------|------|
+| 采样 | `--sample 0.25` | 90万 | ~500MB | 快速验证 |
+| 分块 | `--chunked` | **362万 (全量)** | ~1.7GB | WSL/低内存 |
+| 生产 | `--sample 1.0` | 362万 | ~6GB | 生产服务器 |
 
 ## 依赖
 
