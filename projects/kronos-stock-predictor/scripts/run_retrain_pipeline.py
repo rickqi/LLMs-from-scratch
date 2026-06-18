@@ -40,7 +40,7 @@ logger.info(f"Device: {DEVICE} | Total train rows: {sum(len(df) for df in train_
 logger.info("\n═══ Phase 1: Direction Model ═══")
 t0 = time.time()
 dir_model = train_lstm(train_data, val_data, lookback=180, pred_len=10,
-                       epochs=5, batch_size=64, lr=1e-3, device=DEVICE)
+                       epochs=30, batch_size=128, lr=1e-3, device=DEVICE)
 t1 = time.time()
 torch.save(dir_model.state_dict(), OUTPUT_DIR / "direction_model.pt")
 dir_metrics = evaluate_lstm(dir_model, test_data, lookback=180, pred_len=10, n_stocks=50, device=DEVICE)
@@ -50,7 +50,7 @@ logger.info(f"Direction: RankIC={dir_metrics['rankic']:+.4f} Acc={dir_metrics['d
 logger.info("\n═══ Phase 2: Volatility Model ═══")
 t0 = time.time()
 vol_model = train_lstm(train_data, val_data, lookback=180, pred_len=3,
-                       epochs=5, batch_size=64, lr=1e-3, device=DEVICE)
+                       epochs=30, batch_size=128, lr=1e-3, device=DEVICE)
 t1 = time.time()
 torch.save(vol_model.state_dict(), OUTPUT_DIR / "volatility_model.pt")
 vol_metrics = evaluate_lstm(vol_model, test_data, lookback=180, pred_len=3, n_stocks=50, device=DEVICE)
