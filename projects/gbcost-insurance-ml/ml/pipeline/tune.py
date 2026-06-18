@@ -165,12 +165,36 @@ def main(argv: list[str] | None = None) -> int:
 
         return val_l1
 
-    # --- Run Optuna ---
+    # --- Run Optuna (with SQLite persistence for checkpoint/resume) ---
     logger.info("Starting Optuna study: %d trials", args.trials)
-    study = optuna.create_study(
-        direction="minimize",
-        pruner=optuna.pruners.MedianPruner() if not args.no_prune else optuna.pruners.NopPruner(),
-    )
+
+    # SQLite persistence: study survives process interruptions
+    # load_if_exists=True → resumes from completed trials on restart
+    db_dir = Path("models/optuna")
+    db_dir.mkdir(parents=True, exist_ok=True)
+    db_path = f"sqlite:///{db_dir / 'optuna_study.db'}"
+
+    study_name = "l1a_tweedie_tune"
+    try:
+        study = optuna.create_study(
+            study_name=study_name,
+            direction="minimize",
+            storage=db_path,
+            load_if_exists=True,
+            pruner=optuna.pruners.MedianPruner() if not args.no_prune else optuna.pruners.NopPruner(),
+        )
+        n_completed = len([t for t in study.trials if t.state == optuna.trial.TrialState.COMPLETE])
+        if n_completed > 0:
+            logger.info("Resuming from checkpoint: %d/%d trials already completed",
+                         n_completed, args.trials)
+            if n_completed >= args.trials:
+                logger.info("All %d trials already complete — loading best params", n_completed)
+    except Exception as e:
+        logger.warning("Cannot resume (db locked or corrupted): %s — creating fresh study", e)
+        study = optuna.create_study(
+            direction="minimize",
+            pruner=optuna.pruners.MedianPruner() if not args.no_prune else optuna.pruners.NopPruner(),
+        )
 
     t0 = time.time()
     study.optimize(objective, n_trials=args.trials, show_progress_bar=False)

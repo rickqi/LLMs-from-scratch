@@ -43,6 +43,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--config", default="ml/config_ml.yaml")
     parser.add_argument("--model-dir", default=None, help="Override model directory")
     parser.add_argument("--output-dir", default=None, help="Override output directory")
+    parser.add_argument("--ensemble", action="store_true", help="Use L1-A + L1-B ensemble prediction")
+    parser.add_argument("--calibrate", action="store_true", help="Apply group calibration factors")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args(argv)
 
@@ -159,6 +161,31 @@ def main(argv: list[str] | None = None) -> int:
                 q_pred = np.expm1(q_pred)
             quantile_preds[q_name] = np.clip(q_pred, 0, None)
 
+    # ── Ensemble mode (P2-12): L1-A + L1-B + Calibration ──
+    ensemble_probas: np.ndarray | None = None
+    if args.ensemble:
+        from ml.models.large_classifier import LargeClaimClassifier, ensemble_predict
+
+        l1b_path = model_dir / "l1b_classifier.txt"
+        if l1b_path.exists():
+            l1b = LargeClaimClassifier.load(model_dir, name="l1b_classifier")
+            ensemble_probas = l1b.predict_proba(pred_df, feature_cols, categorical_cols)
+            logger.info("L1-B loaded: large_claim_prob >0.5: %d cases",
+                        int((ensemble_probas > 0.5).sum()))
+        else:
+            logger.warning("L1-B model not found at %s — skipping ensemble", l1b_path)
+
+    if args.calibrate:
+        from ml.models.calibration import GroupCalibrator
+        cal_path = model_dir / "calibrator.json"
+        if cal_path.exists():
+            calibrator = GroupCalibrator.load(cal_path)
+            groups = pred_df["policy_grp_name"].cast(pl.Utf8).to_list()
+            y_pred = calibrator.calibrate(y_pred, groups)
+            logger.info("Applied group calibration (global=%.3f)", calibrator.global_factor)
+        else:
+            logger.warning("Calibrator not found at %s", cal_path)
+
     # Amount bucket
     buckets = np.select(
         [y_pred < 500, y_pred < 2000, y_pred < 10000, y_pred < 50000],
@@ -192,6 +219,8 @@ def main(argv: list[str] | None = None) -> int:
         output_cols["predicted_p95"] = quantile_preds["p95"]
     if "p50" in quantile_preds:
         output_cols["predicted_p50"] = quantile_preds["p50"]
+    if ensemble_probas is not None:
+        output_cols["large_claim_proba"] = ensemble_probas
 
     # Preserve metadata columns that exist (cast categorical→string for Parquet)
     meta_keep = []
@@ -247,6 +276,8 @@ def main(argv: list[str] | None = None) -> int:
         "case_count": len(pred_df),
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "model_version": "l1a_v1",
+        "ensemble": bool(args.ensemble and ensemble_probas is not None),
+        "calibrated": bool(args.calibrate),
         **summary_metrics,
         "bucket_stats": bucket_stats,
     }

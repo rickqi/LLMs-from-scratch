@@ -112,6 +112,61 @@ def evaluate_predictions(
     return result
 
 
+# ── Group-level RankIC ─────────────────────────────────────────────────
+
+def compute_group_rank_ic(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    groups: np.ndarray,
+    min_group_size: int = 30,
+) -> dict:
+    from scipy.stats import spearmanr
+
+    overall_ic, _ = spearmanr(y_pred, y_true)
+
+    unique_groups = np.unique(groups)
+    group_ics = []
+    per_group: dict = {}
+
+    for g in unique_groups:
+        mask = groups == g
+        if mask.sum() < min_group_size:
+            continue
+        ic, pval = spearmanr(y_pred[mask], y_true[mask])
+        group_ics.append(ic)
+        per_group[str(g)] = round(ic, 4)
+
+    if not group_ics:
+        return {"rank_ic_overall": round(overall_ic, 4)}
+
+    return {
+        "rank_ic_overall": round(overall_ic, 4),
+        "rank_ic_group_mean": round(float(np.mean(group_ics)), 4),
+        "rank_ic_group_std": round(float(np.std(group_ics)), 4),
+        "rank_ic_group_min": round(float(np.min(group_ics)), 4),
+        "rank_ic_group_max": round(float(np.max(group_ics)), 4),
+        "rank_ic_per_group": per_group,
+        "rank_ic_worst_groups": [
+            g for g, ic in sorted(per_group.items(), key=lambda x: x[1])[:3]
+        ],
+    }
+
+
+def evaluate_predictions_with_groups(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    groups: np.ndarray | None = None,
+    **kwargs,
+) -> dict:
+    results = evaluate_predictions(y_true, y_pred, **kwargs)
+
+    if groups is not None:
+        rank_ic = compute_group_rank_ic(y_true, y_pred, groups)
+        results.update(rank_ic)
+
+    return results
+
+
 def _compute_gini(y_true: np.ndarray, y_pred: np.ndarray) -> float:
     """Compute Gini coefficient for prediction ranking.
 

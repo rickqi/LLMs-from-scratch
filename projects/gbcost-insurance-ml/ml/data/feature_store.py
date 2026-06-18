@@ -115,6 +115,37 @@ def compute_global_stats(
     logger.info("  Monthly stats: %d rows (%d policy groups)",
                 len(monthly_df), monthly_df["policy_grp_name"].n_unique())
 
+    # --- Member-level historical features (P1-6) ---
+    if "insured_no" in train_lf.collect_schema().names():
+        member_stats = (
+            train_lf
+            .group_by("insured_no")
+            .agg(
+                pl.col(target_col).sum().alias("member_total_paid"),
+                pl.col(target_col).mean().alias("member_avg_paid"),
+                pl.col(target_col).std().alias("member_std_paid"),
+                pl.col(target_col).count().alias("member_claim_count"),
+                pl.col("case_no").n_unique().alias("member_case_count"),
+                pl.col("medical_start_date").max().alias("member_last_claim_date"),
+                pl.col("medical_start_date").min().alias("member_first_claim_date"),
+                pl.col("hosp_grade").n_unique().alias("member_hosp_count"),
+                pl.col("group_code").n_unique().alias("member_disease_count"),
+            )
+            .with_columns(
+                (pl.col("member_claim_count") /
+                 ((pl.col("member_last_claim_date") - pl.col("member_first_claim_date"))
+                  .dt.total_days() / 365.25).clip(0.5, None)
+                ).alias("member_claim_rate"),
+                (pl.col("member_total_paid") / pl.col("member_claim_count").clip(1, None))
+                .alias("member_avg_claim_size"),
+            )
+            .collect()
+        )
+        stats["member"] = member_stats
+        logger.info("  Member stats: %d members, avg claims=%.1f",
+                    len(member_stats),
+                    member_stats["member_claim_count"].mean())
+
     logger.info("Global stats computed: %d tables", len(stats))
     return stats
 
@@ -275,6 +306,68 @@ def build_features(
             on=["policy_grp_name", "year_month"],
             how="left",
         )
+
+        # P1-4: Lag features (shift by 1/2/3 months within each policy group)
+        lag_exprs = []
+        _lag_cols = ["monthly_total", "monthly_avg", "monthly_median",
+                      "monthly_count", "monthly_duty_total"]
+        for _lag in [1, 2, 3]:
+            for _col in _lag_cols:
+                lag_exprs.append(
+                    pl.col(_col).shift(_lag).over("policy_grp_name")
+                    .alias(f"{_col}_lag{_lag}")
+                )
+
+        # Month-over-month change rate for total and average
+        for _col in ["monthly_total", "monthly_avg"]:
+            lag_exprs.append(
+                (pl.col(_col) / pl.col(_col).shift(1).over("policy_grp_name").clip(1, None) - 1.0)
+                .alias(f"{_col}_mom")
+            )
+
+        if lag_exprs:
+            feature_lf = feature_lf.with_columns(lag_exprs)
+
+    # ================================================================
+    # 6a. Member-level features (join)
+    # ================================================================
+    member_stats = global_stats.get("member")
+    if member_stats is not None and "insured_no" in feature_lf.collect_schema().names():
+        _member_cols = [
+            "member_total_paid", "member_avg_paid", "member_std_paid",
+            "member_claim_count", "member_case_count", "member_claim_rate",
+            "member_avg_claim_size", "member_hosp_count", "member_disease_count",
+        ]
+        feature_lf = feature_lf.join(
+            member_stats.select(["insured_no"] + _member_cols).lazy(),
+            on="insured_no",
+            how="left",
+        )
+        for _col in _member_cols:
+            feature_lf = feature_lf.with_columns(
+                pl.col(_col).fill_null(0).alias(_col)
+            )
+
+    # ================================================================
+    # 6b. Cross-feature interactions (P2-11)
+    # ================================================================
+    _interact_pairs = [
+        ("age_bucket", "duty_code"),
+        ("hosp_grade", "fee_item_type"),
+        ("is_yearend", "hosp_grade"),
+        ("rnew_flag", "duty_code"),
+    ]
+    schema = feature_lf.collect_schema()
+    for a, b in _interact_pairs:
+        if a in schema.names() and b in schema.names():
+            interact_name = f"{a}_x_{b}"
+            feature_lf = feature_lf.with_columns(
+                (pl.col(a).cast(pl.Utf8) + pl.lit("_") + pl.col(b).cast(pl.Utf8))
+                .cast(pl.Categorical)
+                .alias(interact_name)
+            )
+            if categorical_cols is not None:
+                categorical_cols.append(interact_name)
 
     # ================================================================
     # 7. Target variables
