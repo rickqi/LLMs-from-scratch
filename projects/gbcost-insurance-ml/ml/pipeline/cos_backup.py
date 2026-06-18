@@ -56,11 +56,38 @@ def _upload_dir(client, local_dir: str, cos_subdir: str, pattern: str = "*") -> 
     return count
 
 
+def _upload_single_dir(
+    client, local_dir: str, cos_subdir: str,
+    ignore_dirs: set | None = None,
+) -> int:
+    local_path = Path(local_dir)
+    if not local_path.exists():
+        return 0
+    if ignore_dirs is None:
+        ignore_dirs = set()
+
+    count = 0
+    for f in local_path.iterdir():
+        if not f.is_file():
+            if f.is_dir() and f.name in ignore_dirs:
+                continue
+            continue
+        cos_key = f"{BASE_PREFIX}/{cos_subdir}/{f.name}"
+        client.upload_file(Bucket=BUCKET, Key=cos_key, LocalFilePath=str(f))
+        count += 1
+        logger.debug("  uploaded: %s", cos_key)
+    return count
+
+
 def backup_models(versions_dir: str = "models/versions", registry_file: str = "models/model_registry.json") -> int:
     client = get_client()
     count = 0
     count += _upload_dir(client, versions_dir, "models/versions")
     count += _upload_dir(client, Path(registry_file).parent, "models", pattern=Path(registry_file).name)
+
+    # Also backup flat model files (l1a_*.txt, feature_schema.json, etc.)
+    count += _upload_single_dir(client, "models", "models",
+                                 ignore_dirs={"versions", "checkpoint", "optuna"})
     logger.info("Models backup: %d files", count)
     return count
 
