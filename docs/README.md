@@ -81,3 +81,28 @@ WSL2 环境下脚本会自动检测 Windows Clash 代理，无需手动配置。
 字幕为中英双语格式（DeepSeek 翻译，技术术语保留英文原文）。
 
 双语 `.srt` 文件可用 VLC、mpv 等播放器加载到对应视频中。
+
+---
+
+## 🎯 实战项目与教程覆盖度
+
+基于教程知识体系构建的 **[4 个独立 ML 项目](../projects/)**，覆盖 93% 教程知识点：
+
+| 章节 | 覆盖 | 实践项目 | 关键证据 |
+|------|------|---------|---------|
+| Ch1-5 | ✅ 100% | Kronos Stock | BSQ+Transformer从零实现 |
+| **Ch6 分类微调** | ✅ 100% | Kronos | 涨跌二分类 Acc=55% F1=56% |
+| Ch7 指令微调 | 🟡 80% | 医疗文本 | ChatML + response-only loss |
+| App A PyTorch | ✅ 100% | Kronos | 全量PyTorch实践 |
+| App D 训练增强 | ✅ 100% | Kronos | Cosine+Clip+蒙特卡洛检验 |
+| App E LoRA | 🟡 50% | 医疗/法规 | PEFT r=8 微调 |
+
+> **总覆盖: 93%** | 详细: `projects/docs/curriculum-coverage-analysis.md`
+
+### 实战项目文档
+
+| 文档 | 内容 |
+|------|------|
+| [项目总览](../projects/docs/README.md) | 四项目横向对比 + 共用模式 |
+| [教程覆盖分析](../projects/docs/curriculum-coverage-analysis.md) | 逐章实践映射 + 量化证据 |
+| [综合技术分析](../projects/docs/comprehensive-analysis.md) | 业界对比 + 改进建议 |

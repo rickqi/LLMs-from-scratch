@@ -1,0 +1,11 @@
+[
+  {
+    "name": "full_train_25pct",
+    "version": "2.0",
+    "timestamp": "2026-06-18T18:20:06.498059",
+    "r2": 0.2522,
+    "gini": 0.51,
+    "mape": 88.69,
+    "feature_count": 71
+  }
+]

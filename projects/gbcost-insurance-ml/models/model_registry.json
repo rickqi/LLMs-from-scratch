@@ -1,0 +1,37 @@
+{
+  "versions": [
+    {
+      "version": "1.0",
+      "timestamp": "20260618_181014",
+      "dir": "models/versions/v1.0_20260618_181014",
+      "metrics": {
+        "r2": 0.2443,
+        "gini": 0.5948,
+        "mae": 3240.33,
+        "mape": 106.23,
+        "total_error_pct": 61.52,
+        "train_time_sec": 174.7,
+        "best_iteration": 21,
+        "feature_count": 71,
+        "train_rows": 179863
+      }
+    },
+    {
+      "version": "2.0",
+      "timestamp": "20260618_182006",
+      "dir": "models/versions/v2.0_20260618_182006",
+      "metrics": {
+        "r2": 0.2522,
+        "gini": 0.51,
+        "mae": 3342.47,
+        "mape": 88.69,
+        "total_error_pct": 71.7,
+        "train_time_sec": 239.4,
+        "best_iteration": 35,
+        "feature_count": 71,
+        "train_rows": 905827
+      }
+    }
+  ],
+  "latest": "2.0"
+}

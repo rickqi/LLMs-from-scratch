@@ -179,6 +179,119 @@ class AmountPredictor:
 
         return self.train_eval
 
+    def train_chunked(
+        self,
+        parquet_path: str | Path,
+        val_df: pl.DataFrame,
+        feature_cols: List[str],
+        categorical_cols: List[str],
+        target_col: str = "y_raw",
+        chunk_size: int = 500_000,
+        n_boost_round_per_chunk: int = 200,
+    ) -> Dict[str, Any]:
+        """Chunked training — reads features from Parquet in batches, no full materialization.
+
+        For environments with limited RAM (WSL, <8GB). Writes features to
+        Parquet via streaming sink, then reads in chunks and trains LightGBM
+        incrementally using init_model + keep_training_booster.
+
+        Args:
+            parquet_path: Path to feature Parquet (produced by LazyFrame.sink_parquet)
+            val_df: Validation DataFrame (fits in memory — typically < val set)
+            feature_cols: Feature column names
+            categorical_cols: Categorical column subset
+            target_col: Target column name
+            chunk_size: Rows per chunk
+            n_boost_round_per_chunk: Boosting rounds per chunk
+        """
+        import pandas as _pd
+
+        parquet_path = Path(parquet_path)
+        self.feature_names = feature_cols
+        cat_valid = [c for c in categorical_cols if c in feature_cols]
+        self.categorical_features = cat_valid
+
+        logger.info("Chunked training from Parquet: %s (chunk_size=%d)", parquet_path.name, chunk_size)
+
+        X_val_pd, y_val = self._prepare_data(val_df, feature_cols, categorical_cols, target_col)
+        dval = lgb.Dataset(X_val_pd, label=y_val)
+
+        self.model = None
+        train_eval_history: list = []
+        total_rows = 0
+        chunk_idx = 0
+        t0 = time.time()
+
+        reader = pl.read_parquet_batched(str(parquet_path), batch_size=chunk_size,
+                                          columns=feature_cols + [target_col])
+
+        while True:
+            batches = reader.next_batches(1)
+            if not batches:
+                break
+            chunk_df = batches[0]
+            chunk_idx += 1
+            total_rows += len(chunk_df)
+
+            X_chunk_pd = chunk_df.select(feature_cols).to_pandas()
+            for col in X_chunk_pd.columns:
+                dtype = str(X_chunk_pd[col].dtype)
+                if dtype not in ("int8", "int16", "int32", "int64",
+                                 "float32", "float64", "bool", "category"):
+                    X_chunk_pd[col] = X_chunk_pd[col].astype("category")
+
+            y_chunk = chunk_df[target_col].to_numpy()
+
+            dtrain = lgb.Dataset(
+                X_chunk_pd, label=y_chunk,
+                feature_name=feature_cols,
+                categorical_feature=cat_valid if cat_valid else "auto",
+                free_raw_data=True,
+            )
+
+            num_round = n_boost_round_per_chunk if self.model is None else n_boost_round_per_chunk
+
+            self.model = lgb.train(
+                self.params, dtrain,
+                num_boost_round=num_round,
+                init_model=self.model,
+                keep_training_booster=True,
+                valid_sets=[dtrain, dval],
+                valid_names=["train", "val"],
+                callbacks=[lgb.log_evaluation(period=0)],
+            )
+
+            if self.model.best_score:
+                for name, score in self.model.best_score.items():
+                    for metric, val in score.items():
+                        train_eval_history.append({
+                            "chunk": chunk_idx, "rows": total_rows,
+                            "metric": f"{name}_{metric}", "value": round(val, 4),
+                        })
+
+            logger.info("  Chunk %d: %s rows (total %s), val_l1=%.1f",
+                         chunk_idx, f"{len(chunk_df):,}", f"{total_rows:,}",
+                         self.model.best_score.get("val", {}).get("l1", 0))
+
+        self.train_time_sec = time.time() - t0
+        self.best_iteration = self.model.current_iteration()
+
+        self.train_eval = {
+            "best_iteration": self.best_iteration,
+            "train_time_sec": round(self.train_time_sec, 1),
+            "chunks": chunk_idx,
+            "total_rows": total_rows,
+        }
+        if self.model.best_score:
+            for name, score in self.model.best_score.items():
+                for metric, val in score.items():
+                    self.train_eval[f"{name}_{metric}"] = round(val, 4)
+
+        logger.info("Chunked training complete: %d chunks, %s rows, best_iter=%d, time=%.1fs",
+                     chunk_idx, f"{total_rows:,}", self.best_iteration, self.train_time_sec)
+
+        return self.train_eval
+
     def predict(
         self,
         df: pl.DataFrame,

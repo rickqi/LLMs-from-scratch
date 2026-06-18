@@ -167,6 +167,10 @@ def main(argv: list[str] | None = None) -> int:
                         help="Skip quantile model training (P05/P50/P95)")
     parser.add_argument("--sample", type=float, default=1.0,
                         help="Fraction of training data to use (0-1.0, default 1.0)")
+    parser.add_argument("--chunked", action="store_true",
+                        help="Chunked training from Parquet (for low-RAM environments)")
+    parser.add_argument("--chunk-size", type=int, default=500000,
+                        help="Rows per chunk in chunked mode (default 500K)")
     args = parser.parse_args(argv)
 
     setup_logging(args.verbose)
@@ -300,25 +304,59 @@ def main(argv: list[str] | None = None) -> int:
 
     # --- Step 5: Train L1-A model ---
     logger.info("=" * 60)
-    logger.info("Step 5: Training L1-A LightGBM model (target=%s)", target_col)
-    predictor = AmountPredictor(
-        objective=l1a_cfg["objective"],
-        tweedie_power=l1a_cfg.get("tweedie_power", 1.5),
-        n_estimators=l1a_cfg["n_estimators"],
-        num_leaves=l1a_cfg["num_leaves"],
-        learning_rate=l1a_cfg["learning_rate"],
-        subsample=l1a_cfg["subsample"],
-        colsample_bytree=l1a_cfg["colsample_bytree"],
-        reg_alpha=l1a_cfg["reg_alpha"],
-        reg_lambda=l1a_cfg["reg_lambda"],
-        min_child_samples=l1a_cfg["min_child_samples"],
-        early_stopping_rounds=l1a_cfg["early_stopping_rounds"],
-        log_transform=use_log,
-    )
 
-    train_summary = predictor.train(
-        train_df, val_df, feature_cols, categorical_cols, target_col=target_col
-    )
+    if args.chunked:
+        # Chunked mode: sink features to Parquet, then train in batches
+        logger.info("Step 5: Training L1-A (CHUNKED from Parquet, %d rows/chunk)", args.chunk_size)
+
+        train_parquet = cache_dir / "train_features.parquet"
+        logger.info("  Sinking training features to Parquet...")
+        t_sink = time.time()
+        splits["train"].select(select_cols).sink_parquet(
+            str(train_parquet), compression="zstd", compression_level=1,
+        )
+        logger.info("  Parquet ready: %.0f MB (%.1fs)",
+                     train_parquet.stat().st_size / (1024 * 1024), time.time() - t_sink)
+
+        predictor = AmountPredictor(
+            objective=l1a_cfg["objective"],
+            tweedie_power=l1a_cfg.get("tweedie_power", 1.5),
+            n_estimators=l1a_cfg["n_estimators"],
+            num_leaves=l1a_cfg["num_leaves"],
+            learning_rate=l1a_cfg["learning_rate"],
+            subsample=l1a_cfg["subsample"],
+            colsample_bytree=l1a_cfg["colsample_bytree"],
+            reg_alpha=l1a_cfg["reg_alpha"],
+            reg_lambda=l1a_cfg["reg_lambda"],
+            min_child_samples=l1a_cfg["min_child_samples"],
+            early_stopping_rounds=l1a_cfg["early_stopping_rounds"],
+            log_transform=use_log,
+        )
+
+        train_summary = predictor.train_chunked(
+            train_parquet, val_df, feature_cols, categorical_cols,
+            target_col=target_col, chunk_size=args.chunk_size,
+        )
+    else:
+        logger.info("Step 5: Training L1-A LightGBM model (target=%s)", target_col)
+        predictor = AmountPredictor(
+            objective=l1a_cfg["objective"],
+            tweedie_power=l1a_cfg.get("tweedie_power", 1.5),
+            n_estimators=l1a_cfg["n_estimators"],
+            num_leaves=l1a_cfg["num_leaves"],
+            learning_rate=l1a_cfg["learning_rate"],
+            subsample=l1a_cfg["subsample"],
+            colsample_bytree=l1a_cfg["colsample_bytree"],
+            reg_alpha=l1a_cfg["reg_alpha"],
+            reg_lambda=l1a_cfg["reg_lambda"],
+            min_child_samples=l1a_cfg["min_child_samples"],
+            early_stopping_rounds=l1a_cfg["early_stopping_rounds"],
+            log_transform=use_log,
+        )
+
+        train_summary = predictor.train(
+            train_df, val_df, feature_cols, categorical_cols, target_col=target_col
+        )
     logger.info("L1-A training summary: %s", json.dumps(train_summary, indent=2))
 
     if completed_step <= 5:
@@ -377,9 +415,9 @@ def main(argv: list[str] | None = None) -> int:
     logger.info("=" * 60)
     logger.info("Step 8: Feature importance")
     importance = predictor.get_feature_importance(importance_type="gain")
-    top_features = list(importance.items())[:20]
-    for name, score in top_features:
-        logger.info("  %-30s %d", name, score)
+    top_features = [{"feature": k, "importance": v} for k, v in importance.items()][:20]
+    for feat in top_features:
+        logger.info("  %-30s %s", feat["feature"], feat["importance"])
 
     # --- Step 9: Backtest (optional) ---
     backtest_results = []
@@ -411,7 +449,7 @@ def main(argv: list[str] | None = None) -> int:
         "train_summary": train_summary,
         "val_metrics": val_metrics,
         "baseline_metrics": baseline_metrics,
-        "top_features": [{"feature": k, "importance": v} for k, v in top_features],
+        "top_features": top_features,
         "quantile_models": {k: v.get("quantile", 0) for k, v in quantile_results.items()},
         "backtest_results": backtest_results,
     }
