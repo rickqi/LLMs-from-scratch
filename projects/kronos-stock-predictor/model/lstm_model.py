@@ -93,6 +93,9 @@ def train_lstm(train_data: dict, val_data: dict, model=None,
             best_val = val_loss
             best_state = {k: v.cpu().clone() for k, v in model.state_dict().items()}
 
+        if (ep + 1) % 5 == 0 or ep == 0:
+            logger.info(f"  Epoch {ep+1}/{epochs}: train={train_loss:.4f} val={val_loss:.4f} best={best_val:.4f}")
+
     model.load_state_dict(best_state)
     return model
 
