@@ -1,0 +1,89 @@
+{
+  "global_factor": 1.8019,
+  "bucket_factors": {
+    "0-500": {
+      "factor": 2.138,
+      "count": 1866117
+    },
+    "500-2K": {
+      "factor": 3.1158,
+      "count": 3309617
+    },
+    "2K-10K": {
+      "factor": 1.5579,
+      "count": 613557
+    },
+    "10K-50K": {
+      "factor": 1.4807,
+      "count": 198653
+    },
+    "50K+": {
+      "factor": 1.3867,
+      "count": 65470
+    }
+  },
+  "duty_factors": {
+    "GNSR901001": {
+      "factor": 1.8687,
+      "n": 3389104
+    },
+    "GNSR901002": {
+      "factor": 1.8484,
+      "n": 761025
+    },
+    "GNSR001001": {
+      "factor": 1.5606,
+      "n": 564555
+    },
+    "null": {
+      "factor": 0.0,
+      "n": 262623
+    },
+    "GNSR001002": {
+      "factor": 2.0646,
+      "n": 202985
+    },
+    "GNSR008001": {
+      "factor": 1.7749,
+      "n": 136031
+    },
+    "GNSR901005": {
+      "factor": 1.9173,
+      "n": 133598
+    },
+    "GNSR905002": {
+      "factor": 1.7065,
+      "n": 92823
+    },
+    "GNSR901003": {
+      "factor": 1.5591,
+      "n": 92206
+    },
+    "GNSR904001": {
+      "factor": 2.0205,
+      "n": 87365
+    },
+    "GNSR905001": {
+      "factor": 1.8689,
+      "n": 58410
+    },
+    "GNSR002001": {
+      "factor": 1.8134,
+      "n": 58067
+    },
+    "GNSR008002": {
+      "factor": 1.5087,
+      "n": 38945
+    },
+    "HNSR004001": {
+      "factor": 1.6149,
+      "n": 36607
+    },
+    "GNSR001004": {
+      "factor": 1.661,
+      "n": 30726
+    }
+  },
+  "generated_at": "2026-06-17T13:36:29",
+  "note": "Multiply predicted_amount by factor for corrected estimate. Global=total_actual/total_pred."
+}

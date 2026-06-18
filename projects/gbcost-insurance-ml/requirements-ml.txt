@@ -1,0 +1,7 @@
+# ML Subsystem dependencies (independent from main project)
+lightgbm>=4.3.0
+polars>=1.0.0
+scikit-learn>=1.4.0
+optuna>=3.6.0
+pyarrow>=15.0.0
+joblib>=1.4.0

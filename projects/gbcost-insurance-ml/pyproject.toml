@@ -1,0 +1,48 @@
+[project]
+name = "ghb-cost-control"
+version = "1.9.71"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.1.0",
+    "langchain-core>=1.2.0",
+    "openpyxl>=3.1.0",
+    "pyyaml>=6.0",
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-html>=4.0",
+    "zai-sdk>=0.2.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "python-docx>=1.0.0",
+    "mysql-connector-python>=9.0.0"
+]
+
+[project.scripts]
+ghb-cost-control = "src.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+junit_family = "xunit2"
+cache_dir = "output/test/.cache"
+addopts = "--junitxml=output/test/pytest-results.xml --html=output/test/pytest-report.html --self-contained-html"
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*"]
+
+[tool.coverage.html]
+directory = "output/test/htmlcov"
+
+[tool.coverage.xml]
+output = "output/test/coverage.xml"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["src*", "tests*"]
+
+[tool.setuptools.package-data]
+"src" = ["../knowledge/**/*.yaml", "../knowledge/*.yaml", "../config.yaml"]

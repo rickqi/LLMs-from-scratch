@@ -1,0 +1,192 @@
+analysis:
+  ibnr:
+    actuarial_factors:
+      6: 0.3965
+      12: 0.25
+      18: 0.1
+      24: 0.0018
+    dental_ratio_range:
+    - 0.03
+    - 0.05
+    inpatient_factor_range:
+    - 1.2
+    - 1.8
+    maternity_factor_range:
+    - 1.5
+    - 2.0
+    outpatient_lag_months:
+    - 1
+    - 3
+  ramp_analysis:
+    thresholds:
+      consecutive_months: 2
+      critical_ramp: 0.5
+      fast_ramp_threshold: 0.5
+      ramp_acceleration: 0.2
+      score_levels:
+        attention:
+        - 40
+        - 59
+        critical:
+        - 0
+        - 19
+        healthy:
+        - 80
+        - 100
+        normal:
+        - 60
+        - 79
+        warning:
+        - 20
+        - 39
+      surge_multiplier: 2.0
+      weights:
+        loss_ratio: 0.3
+        risk: 0.1
+        stability: 0.15
+        structure: 0.2
+        trend: 0.25
+  thresholds:
+    level_1: 0.1
+    level_2: 0.15
+    level_3: 0.2
+    member_stability: 0.1
+    premium_stability: 0.15
+    anomaly_grading:
+      slight: 0.05
+      moderate: 0.10
+      significant: 0.20
+    mom:
+      slight: 0.05
+      moderate: 0.10
+      significant: 0.20
+  member_risk_scoring:
+    monthly_visit_threshold: 3
+    hospital_concentration_threshold: 0.70
+    high_expense_threshold: 50000
+    default_months_active: 12
+    top_n: 30
+  hospital_concentration:
+    cr3_high: 0.60
+    cr3_moderate: 0.40
+    hhi_high: 2500
+    hhi_moderate: 1500
+    hospitals_80pct_high: 3
+    hospitals_80pct_moderate: 5
+  concentrated_visit:
+    categories:
+    - 体检
+    - 生育
+    - 牙科
+    seasonal_thresholds:
+      significant: 0.40
+      moderate: 0.30
+      slight: 0.20
+    hospital_concentration_thresholds:
+      significant: 0.50
+      moderate: 0.40
+      slight: 0.30
+  impact:
+    significance_level: 0.05
+  workflow:
+    skip_on_no_anomaly: false
+knowledge:
+  benchmarks_path: knowledge/benchmarks/policy_benchmarks.yaml
+  cost_control_measures_path: knowledge/cost_control_measures.yaml
+  disease_treatment_path: knowledge/disease_treatment/disease_treatment_rules.yaml
+  hospitals_path: knowledge/hospitals/cost_standards.yaml
+llm:
+  deterministic:
+    enabled: true
+    seed: 42
+    temperature: 0.0
+  enabled: true
+  max_retries: 2
+  mode: llm_primary
+  agent_overrides: {}
+  prompts:
+    default_max_tokens: 8192
+    default_temperature: 0.0
+  provider_a:
+    api_key: ''
+    api_key_env: GLM_API_KEY
+    base_url: ''
+    default_max_tokens: 8192
+    default_temperature: 0.0
+    max_retries: 2
+    model: glm-5-turbo
+    provider: zhipuai
+    pricing:
+      input_price_per_1k: 0.001
+      output_price_per_1k: 0.002
+    retry_delay: 2.0
+    thinking_enabled: true
+    timeout: 90
+  provider_b:
+    api_key_env: DEEPSEEK_V4_API_KEY
+    base_url: https://api.deepseek.com
+    default_max_tokens: 16384
+    default_temperature: 0.0
+    max_retries: 3
+    model: deepseek-v4-pro
+    provider: deepseek
+    pricing:
+      input_price_per_1k: 0.001
+      output_price_per_1k: 0.002
+    retry_delay: 3.0
+    thinking_enabled: false
+    timeout: 180
+  provider_c:
+    api_key_env: DEEPSEEK_API_KEY
+    base_url: https://api.lkeap.cloud.tencent.com/v1
+    default_max_tokens: 8192
+    default_temperature: 0.0
+    max_retries: 2
+    model: deepseek-flash
+    provider: deepseek
+    pricing:
+      input_price_per_1k: 0.0001
+      output_price_per_1k: 0.0003
+    retry_delay: 2.0
+    thinking_enabled: false
+    timeout: 60
+  retry_delay: 2.0
+  thinking_enabled: true
+  timeout: 60
+tui:
+  refresh_rate: 4
+  max_messages: 100
+  visible_messages: 12
+  message_truncate: 200
+  report_truncate: 2000
+  final_pause: 2.0
+  show_progress_bar: true
+  show_eta: true
+  show_sparkline: true
+  panel_switch_enabled: true
+  message_filter_enabled: true
+health_score:
+  weights:
+    loss_ratio: 0.40
+    claim_rate: 0.10
+    visit_frequency: 0.15
+    avg_per_claim: 0.15
+    avg_per_member: 0.10
+    trend: 0.10
+  color_grading:
+    green: 80
+    orange: 60
+  drill_down_deduction:
+    significant: 15
+    moderate: 10
+    slight: 5
+logging:
+  file: logs/analysis.log
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  level: INFO
+
+# Doris数仓连接配置 (可选, 用于download子命令)
+doris:
+  host: "10.140.76.102"
+  port: 9030
+  # user/password建议通过环境变量DORIS_USER/DORIS_PASSWORD或交互输入

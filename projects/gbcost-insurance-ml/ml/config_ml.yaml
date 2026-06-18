@@ -1,0 +1,111 @@
+# ML Subsystem Configuration (independent from main config.yaml)
+
+data:
+  csv_path: "data/doris/c001_ghb_poicy_clm_duty_d.csv"
+  chunk_size: 500000
+  cache_dir: "data/ml_cache"
+
+features:
+  # Target Encoding columns (high cardinality)
+  target_encode_cols:
+    - group_code
+    - native_place_name
+  # Categorical columns for LightGBM native handling
+  categorical_cols:
+    - duty_code
+    - policy_grp_name
+    - insured_gender
+    - rnew_flag
+    - claim_type
+    - sale_chnl
+    - hosp_grade
+    - main_insured_rela
+    - is_public
+    - is_expensive
+    - fee_item_type
+  # Columns excluded from features
+  exclude_cols:
+    - case_no
+    - old_clm_no
+    - clm_acount_amnt_cny          # target
+    - clm_acount_amnt_cny_duty     # target leakage
+    - medical_start_date
+    - medical_end_date
+    - cust_birthday
+    - cont_valid_date
+    - cont_end_date
+    - fir_vald_date
+    - end_case_date
+    - etl_date
+    - insured_name
+    - appnt_name
+    - hospital_name
+    - insured_no
+    - appnt_no
+    - policy_grp_no
+    - grp_cont_no
+    - rgt_no
+    - group_name
+    - duty_name
+    - fee_name
+    - fee_desc
+    - fee_item_detail_name
+    - sale_depart
+    - agent_com_name
+    - agent_name
+    - main_hospital_name
+    - grp_hospital_name
+    - medical_group_name
+    - acc_result1_name
+    - acc_result2_name
+    - sub_duty
+    - sub_duty_code
+    - claim_duty
+    - grpcont_claim_duty_code
+    - sale_chnl_code
+    - fee_code
+    - vip_type
+    - sale_us_eva
+    - min_uw_raise
+    - investment_approver
+    - change_fee
+    - pass_year
+
+split:
+  train_end: "2024-12-31"
+  val_end:   "2025-06-30"
+  test_end:  "2026-06-30"
+
+l1a:
+  objective: "tweedie"
+  tweedie_power: 1.35              # P2a: Optuna tuned from 1.2→1.35
+  n_estimators: 800
+  num_leaves: 127                  # P2a: Optuna tuned from 63→127
+  learning_rate: 0.118             # P2a: Optuna tuned from 0.05→0.118
+  subsample: 0.6                   # P2a: Optuna tuned from 0.8→0.6
+  colsample_bytree: 1.0            # P2a: Optuna tuned from 0.8→1.0
+  reg_alpha: 0.014                 # P2a: Optuna tuned from 0.1→0.014
+  reg_lambda: 0.12                 # P2a: Optuna tuned from 1.0→0.12
+  min_child_samples: 200           # P2a: Optuna tuned from 50→200
+  early_stopping_rounds: 50
+  log_transform: false             # Tweedie handles skew natively; no log1p
+
+l1b:
+  threshold_quantile: 0.95         # P95 as large claim threshold
+  n_estimators: 500
+  num_leaves: 31
+  learning_rate: 0.03
+  metric: "average_precision"
+
+quantiles:
+  levels: [0.05, 0.50, 0.95]
+  n_estimators: 500
+
+optuna:
+  n_trials: 50
+  timeout: 7200
+
+output:
+  model_dir: "models"
+  prediction_dir: "predictions"
+  report_dir: "reports/ml"
