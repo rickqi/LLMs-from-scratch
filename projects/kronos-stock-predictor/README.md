@@ -145,3 +145,27 @@ pip install torch numpy pandas einops tushare akshare tqdm matplotlib scikit-lea
 | 2026-06-15 | 端到端流水线 + 68半导体 + 15 pytest通过 |
 | 2026-06-16 | Kronos-small预训练 + CosineLR + BSQ熵 + pred_len扫描 |
 | 2026-06-15 | 端到端流水线 + 68半导体 + 15 pytest通过 |
+
+---
+
+## 📚 教程覆盖度 (83% → 93%)
+
+本项目覆盖《Build a Large Language Model (From Scratch)》10章中的9章：
+
+| 章节 | 覆盖 | 本项目实践 |
+|------|------|----------|
+| Ch1-Ch5 | ✅ | BSQ+Transformer + 两阶段训练 |
+| Ch6 分类微调 | ✅ | 涨跌二分类 (Acc=55%, F1=56%) |
+| Ch7 指令微调 | ⚠️ | 部分 (完整实现在医疗项目) |
+| App D 训练增强 | ✅ | Cosine+Warmup+Clip |
+| App E LoRA | ⚠️ | 0.5M参数不需LoRA |
+
+> 详细: `projects/docs/curriculum-coverage-analysis.md`
+
+## 🎯 下一步行动计划
+
+| # | 行动 | 工作量 |
+|---|------|--------|
+| 1 | CPU训练183只半导体 (方向+波动率) | 2h |
+| 2 | 参数优化 (训练完成后) | 30min |
+| 3 | 蒙特卡洛显著检验 (>=10000次) | 1h |
