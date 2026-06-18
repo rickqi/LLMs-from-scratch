@@ -514,19 +514,42 @@ python generate.py --model_dir ./output_inst_v1/best_model --instruct --interact
 | 换代理 | `export HF_ENDPOINT=https://hf-mirror.com` (已设置) | 无效，mirror 也走 cas-bridge |
 | 用已缓存模型 | `Qwen3-0.6B-Instruct` (已缓存) | 秒启动，指令能力对比 |
 
-### 13.4 建议
+### 13.4 实际对比结果 (10篇 CACA 肿瘤指南)
 
-待网络条件改善后，用以下命令预下载并对比：
+| 指标 | Qwen3-0.6B | Qwen3.5-2B |
+|------|-----------|-----------|
+| 训练参数 | 2,293,760 (0.30%) | 737,280 (0.04%) |
+| val_loss (epoch1) | 2.88→2.51 | 2.71→2.51 |
+| val_loss (最终) | 3.148 | **2.457** |
+| 耗时 | 25min (epoch1) | **10h** (3 epochs) |
+| 速度 | 1x | **24x 慢** |
+| VRAM | ~4GB | ~15.5GB |
+| LoRA 权重 | 8.8MB | 2.9MB |
 
-```bash
-# 预下载 (在网速好的时段执行)
-huggingface-cli download Qwen/Qwen3.5-2B-Base
-
-# 对比训练 (与 0.6B 完全相同的参数)
-python train_qwen_lora.py --model_name Qwen/Qwen3.5-2B-Base \
-  --data_dir ./data_oncology --output_dir ./output_2b_compare \
-  --epochs 3 --batch_size 4 --lr 1e-4
+**生成质量对比**:
 ```
+0.6B: "临床表现：表现为轻度的疼痛和不适，无明显肿块。患者
+      在手术治疗后3-6个月内出现局部皮肤组织萎缩、色素减退...皮肤变薄、脱皮、
+      鳞屑等变化。部分患者可出现局部淋巴结肿大..."
+
+2B:  "临床表现：全身表现：部分患者出现乏力、食欲减退、体重下降等。"
+```
+
+**核心发现**: 
+- 2B 的 val_loss 显著更低 (2.457 vs 3.148, -22%)，但需要 24 倍时间
+- 2B 参数量 3.3x，但训练时间远超比例，主要瓶颈在 VRAM (15.5GB)
+- 2B 的生成样本偏向概括性，0.6B 生成更具体的医学描述
+- **0.6B 仍是性价比最优选择**，2B 仅在需要更低 perplexity 时考虑
+
+### 13.5 建议
+
+待网络条件改善后优先下载的模型：
+1. Qwen3.5-2B（已下载） — 最佳平衡，但训练极慢
+2. Qwen3-0.6B — 当前主力，性价比最优
+
+其他可选（待下载）:
+3. Qwen3.5-0.8B — 轻量升级，同量级架构优化
+4. Qwen3-1.7B — 中间档位，已部分下载
 
 ---
 
