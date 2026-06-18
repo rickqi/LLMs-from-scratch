@@ -33,6 +33,15 @@ for data in [train_data, val_data, test_data]:
     for df in data.values():
         if "amount" in df.columns and "amt" not in df.columns:
             df["amt"] = df["amount"]
+
+# 如果 val 为空，从 train 切 10%
+if len(val_data) == 0:
+    import random; random.seed(42)
+    train_syms = sorted(train_data.keys())
+    val_syms = random.sample(train_syms, max(1, len(train_syms) // 10))
+    val_data = {s: train_data.pop(s) for s in val_syms}
+    logger.info(f"Val empty → split from train: {len(train_data)} train, {len(val_data)} val")
+
 logger.info(f"Train: {len(train_data)} | Val: {len(val_data)} | Test: {len(test_data)}")
 logger.info(f"Device: {DEVICE} | Total train rows: {sum(len(df) for df in train_data.values()):,}")
 
