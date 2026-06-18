@@ -234,19 +234,34 @@ def main():
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
 
     start_epoch = 0
-    if args.resume:
-        start_epoch, _ = load_checkpoint(model, optimizer, args.resume)
-
     best_val_loss = float("inf")
-    os.makedirs(args.output_dir, exist_ok=True)
+    train_losses, val_losses = [], []
+    elapsed_offset = 0.0
 
+    # 断点恢复
+    checkpoint_dir = f"{args.output_dir}/checkpoint"
+    ckpt_file = f"{checkpoint_dir}/training_state.pt"
+    if os.path.exists(ckpt_file):
+        logger.info(f"发现断点: {ckpt_file}")
+        state = load_checkpoint(model, optimizer, scheduler, ckpt_file)
+        start_epoch = state["epoch"]
+        best_val_loss = state["loss"]
+        train_losses = state.get("train_losses", [])
+        val_losses = state.get("val_losses", [])
+        elapsed_offset = state.get("elapsed", 0.0)
+        logger.info(f"从 epoch {start_epoch} 恢复 (best_val={best_val_loss:.4f})")
+
+    os.makedirs(checkpoint_dir, exist_ok=True)
     t_start = time.time()
+
     for epoch in range(start_epoch, config.epochs):
         epoch_start = time.time()
 
         train_loss = train_epoch(model, tokenizer, train_loader, optimizer, scheduler, device, config, epoch)
         val_loss = validate(model, tokenizer, val_loader, device)
 
+        train_losses.append(train_loss)
+        val_losses.append(val_loss)
         epoch_time = time.time() - epoch_start
         logger.info(
             f"Epoch {epoch+1}/{config.epochs} | "
@@ -256,10 +271,15 @@ def main():
 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
-            save_checkpoint(model, optimizer, epoch + 1, val_loss, f"{args.output_dir}/best_model.pt")
+            save_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss,
+                            train_losses, val_losses, elapsed_offset + (time.time() - t_start),
+                            f"{args.output_dir}/best_model.pt")
             logger.info(f"  ✓ New best model (val_loss={val_loss:.4f})")
 
-        save_checkpoint(model, optimizer, epoch + 1, val_loss, f"{args.output_dir}/checkpoint_epoch{epoch+1}.pt")
+        save_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss,
+                        train_losses, val_losses, elapsed_offset + (time.time() - t_start),
+                        ckpt_file)
+        logger.info(f"  -> 断点已保存 (epoch {epoch+1})")
 
     total_time = time.time() - t_start
     logger.info(f"Training complete. Total time: {format_time(total_time)}")

@@ -74,16 +74,24 @@ def get_device() -> torch.device:
 def save_checkpoint(
     model: torch.nn.Module,
     optimizer: torch.optim.Optimizer,
+    scheduler,
     epoch: int,
     loss: float,
+    train_losses: list,
+    val_losses: list,
+    elapsed: float,
     filepath: str,
 ):
-    """保存训练 checkpoint"""
+    """保存完整训练状态 — 支持断点续传"""
     checkpoint = {
         "epoch": epoch,
         "model_state_dict": model.state_dict(),
         "optimizer_state_dict": optimizer.state_dict(),
+        "scheduler_state_dict": scheduler.state_dict() if scheduler else None,
         "loss": loss,
+        "train_losses": train_losses,
+        "val_losses": val_losses,
+        "elapsed": elapsed,
     }
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     torch.save(checkpoint, filepath)
@@ -93,12 +101,25 @@ def save_checkpoint(
 def load_checkpoint(
     model: torch.nn.Module,
     optimizer: torch.optim.Optimizer | None,
+    scheduler,
     filepath: str,
-) -> tuple[int, float]:
-    """加载训练 checkpoint"""
-    checkpoint = torch.load(filepath, map_location="cpu")
+) -> dict:
+    """加载训练状态 — 恢复断点"""
+    if not os.path.exists(filepath):
+        logger.warning(f"Checkpoint not found: {filepath}")
+        return {"epoch": 0, "loss": float("inf"), "train_losses": [], "val_losses": [], "elapsed": 0.0}
+
+    checkpoint = torch.load(filepath, map_location="cpu", weights_only=False)
     model.load_state_dict(checkpoint["model_state_dict"])
     if optimizer is not None:
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
-    logger.info(f"Checkpoint loaded: {filepath} (epoch {checkpoint['epoch']})")
-    return checkpoint["epoch"], checkpoint["loss"]
+    if scheduler is not None and checkpoint.get("scheduler_state_dict"):
+        scheduler.load_state_dict(checkpoint["scheduler_state_dict"])
+    logger.info(f"Checkpoint loaded: {filepath} (epoch {checkpoint['epoch']}, loss={checkpoint['loss']:.4f})")
+    return {
+        "epoch": checkpoint["epoch"],
+        "loss": checkpoint.get("loss", float("inf")),
+        "train_losses": checkpoint.get("train_losses", []),
+        "val_losses": checkpoint.get("val_losses", []),
+        "elapsed": checkpoint.get("elapsed", 0.0),
+    }
