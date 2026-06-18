@@ -44,14 +44,16 @@ INST_TEST_PROMPTS = [
 ]
 
 
-def load_model(model_dir: str):
-    logger.info(f"加载基座模型: {BASE_MODEL}")
-    tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL, trust_remote_code=True)
+def load_model(model_dir: str, base_model: str = None):
+    if base_model is None:
+        base_model = BASE_MODEL
+    logger.info(f"加载基座模型: {base_model}")
+    tokenizer = AutoTokenizer.from_pretrained(base_model, trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
     base_model = AutoModelForCausalLM.from_pretrained(
-        BASE_MODEL,
+        base_model,
         trust_remote_code=True,
         torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         device_map="auto" if torch.cuda.is_available() else None,
@@ -112,6 +114,7 @@ def interactive_mode(model, tokenizer, instruct: bool = False):
 def main():
     parser = argparse.ArgumentParser(description="Qwen3-0.6B + LoRA 医学文本生成推理")
     parser.add_argument("--model_dir", type=str, required=True)
+    parser.add_argument("--base_model", type=str, default=None, help="基座模型名称 (默认 Qwen3-0.6B)")
     parser.add_argument("--interactive", action="store_true")
     parser.add_argument("--instruct", action="store_true", help="使用 ChatML 指令格式")
     parser.add_argument("--prompt", type=str, default=None)
@@ -120,7 +123,7 @@ def main():
     parser.add_argument("--repetition_penalty", type=float, default=1.1, help="重复惩罚 (越大越不重复)")
     args = parser.parse_args()
 
-    model, tokenizer = load_model(args.model_dir)
+    model, tokenizer = load_model(args.model_dir, args.base_model)
 
     if args.prompt:
         output = generate(model, tokenizer, args.prompt, args.max_new_tokens,
