@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s", stre
 logging.getLogger("model.lstm_model").setLevel(logging.INFO)
 logger = logging.getLogger(__name__)
 
-DEVICE = "cpu"  # GPU occupied by medical LoRA training
+DEVICE = "cuda:0"  # GPU has 4GB free, LSTM only needs 30MB
 DATA_V2 = Path("data/semiconductor_v2/processed")
 OUTPUT_DIR = Path("outputs/v2")
 OUTPUT_DIR.mkdir(exist_ok=True)
