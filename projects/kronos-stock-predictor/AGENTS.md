@@ -1,71 +1,41 @@
 # AGENTS.md — Kronos Stock Predictor
 
-> AI Agent 工作流文档。项目结构、当前状态、下一步操作入口。
-
-## 项目概述
-
-A 股 K 线预测，双模型架构：Kronos (BSQ+Transformer) + LSTM (基线/波动率)。
+> AI Agent 工作流。项目结构、当前状态、操作入口。
 
 ## 当前状态
 
-| 组件 | 状态 | 指标 |
-|------|------|------|
-| Kronos 模型 | ✅ 完成 | Tokenizer + Predictor 可训练推理 |
-| LSTM 模型 | ✅ 完成 | 方向 + 波动率双预测 |
-| 波动率预测 | 🔥 突破 | RankIC=+0.569 (2.8×优于方向) |
-| 方向预测 | ✅ | RankIC=+0.205 (54长历史LSTM) |
-| CSI300 数据 | ✅ | 329只, 81.7万行 |
-| 半导体数据 | ✅ | 194只 |
-| 生产部署 | ✅ | Predictor API + 每日管线 |
-| COS 备份 | ✅ | 模型+数据已备份 |
-| 波动率信号 | 🆕 | Sharpe 1.48 (top_k=5, 20天调仓, 需扩展数据) |
-| 参数优化 | 🆕 | 24组网格搜索完成 (val+test) |
+| 组件 | 状态 | 关键指标 |
+|------|------|---------|
+| LSTM 波动率 | ✅ | RankIC=+0.569 |
+| LSTM 方向 | ✅ | RankIC=+0.205 |
+| 参数优化 | ✅ | top_k=5/20d Sharpe=1.48 |
+| 蒙特卡洛 | ✅ | p=0.085 (12点, 效力不足) |
+| 数据 v2 | ✅ | 183只, 242K行, 隔离 |
+| CPU训练 | ⏳ | 183只方向+波动率待完成 |
 
-## 关键文件索引
+## 数据隔离
 
-| 文件 | 用途 | 状态 |
-|------|------|------|
-| `model/lstm_model.py` | LSTM 方向+波动率模型 | 🔥 主力 |
-| `model/kronos_model.py` | Kronos 自回归 Transformer | 实验 |
-| `scripts/volatility_signal.py` | 🆕 波动率→交易信号 | 验证中 |
-| `scripts/lstm_baseline.py` | LSTM 快速实验 | 日常 |
-| `scripts/lstm_scan.py` | LSTM 参数扫描 | 调优 |
-| `scripts/backtest_volatility.py` | 波动率回测 | 评估 |
-| `inference/production.py` | 生产预测 API | 部署 |
-| `scripts/daily_pipeline.py` | 每日自动预测 | 部署 |
-
-## 操作入口
-
-**快速实验**:
-```bash
-python scripts/lstm_baseline.py --data data/processed/semiconductor --target direction
-python scripts/lstm_baseline.py --data data/processed/semiconductor --target volatility
+```
+data/processed_real/          # v1 基准 (不可改)
+data/semiconductor_v2/        # v2 扩展 (独立)
+  raw/183 .pkl + checkpoint.json
+  processed/{train,val,test}.pkl
 ```
 
-**回测评估**:
-```bash
-python scripts/backtest_volatility.py --data data/processed/semiconductor --model outputs/lstm_vol.pth
-```
+## 下一步
 
-**每日预测**:
-```bash
-python scripts/daily_pipeline.py
-```
+| # | 命令 | 说明 |
+|---|------|------|
+| 🔴 | `nohup python -u scripts/run_retrain_pipeline.py > logs/retrain.log 2>&1 &` | CPU训练 183只 (每epoch ~5min) |
+| 🟡 | `python scripts/optimize_signal.py --data test` | 训练完成后参数优化 |
+| 🟡 | `python scripts/monte_carlo_backtest.py --n-sims 10000` | 显著性检验 (期望 p<0.05) |
 
-## 下一步 (按优先级)
+## 关键文件
 
-| # | 行动 | 预期 | 状态 |
-|---|------|------|------|
-| 🔥 1 | **扩展半导体数据** — Tushare 全板块 150-200只 | 更长历史→可靠回测 | 🆕 执行中 |
-| 2 | **再优化信号参数** — 扩展数据后重新网格搜索 | 稳定 Sharpe > 1.0 | ⏳ |
-| 3 | **集成模型** — 方向+波动率+LSTM 投票 | 提升稳健性 | ⏳ |
-
-**信号验证结果**: 
-- 最优: top_k=5, 20天调仓, Sharpe 1.48 (测试集)
-- ⚠️ 仅 9-34 次调仓，需扩展数据后重新验证
-
-## 不建议
-
-- 跨行业/CSI300 (已 12 次实验均负)
-- 更复杂模型 (LSTM 已最优)
-- 更多基本面特征 (PE/PB 未提升)
+| 文件 | 用途 |
+|------|------|
+| `scripts/run_retrain_pipeline.py` | CPU训练管线 |
+| `scripts/expand_semiconductor.py` | 数据下载(断点续传) |
+| `scripts/optimize_signal.py` | 参数优化 |
+| `scripts/monte_carlo_backtest.py` | 蒙特卡洛检验 |
+| `model/lstm_model.py` | LSTM模型 |
