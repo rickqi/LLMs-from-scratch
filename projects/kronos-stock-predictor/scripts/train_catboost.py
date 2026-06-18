@@ -21,7 +21,7 @@ OUTPUT.mkdir(exist_ok=True)
 
 FEATURE_COLS = [
     # ── 价格特征 ──
-    "close", "open", "high", "low", "volume", "amount",
+    "close", "open", "high", "low", "vol", "amount",
     # ── 收益率特征 (Alpha158 核心) ──
     "ret_1d", "ret_5d", "ret_10d", "ret_20d",
     # ── 波动率 ──
@@ -122,10 +122,15 @@ def prepare_dataset(data: dict, lookback: int = 180, pred_days: int = 10) -> tup
     X_list, y_list, symbols_list = [], [], []
 
     for sym, df in data.items():
+        # Column name normalization
         if "amount" in df.columns and "amt" not in df.columns:
             df["amt"] = df["amount"]
         if "amt" not in df.columns:
-            df["amt"] = df["vol"] * df["close"]
+            df["amt"] = df["vol"] * df["close"] if "vol" in df.columns else 0
+        if "volume" in df.columns and "vol" not in df.columns:
+            df["vol"] = df["volume"]
+        if "vol" not in df.columns:
+            df["vol"] = 0
 
         df = compute_features(df)
         df = df.dropna()

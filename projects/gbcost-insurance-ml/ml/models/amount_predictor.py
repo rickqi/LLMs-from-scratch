@@ -216,22 +216,23 @@ class AmountPredictor:
         X_val_pd, y_val = self._prepare_data(val_df, feature_cols, categorical_cols, target_col)
         dval = lgb.Dataset(X_val_pd, label=y_val)
 
+        # Get total rows for progress tracking
+        total_rows = pl.scan_parquet(str(parquet_path)).select(pl.len()).collect().item()
+        logger.info("  Total rows in Parquet: %s", f"{total_rows:,}")
+
         self.model = None
-        train_eval_history: list = []
-        total_rows = 0
         chunk_idx = 0
+        rows_processed = 0
         t0 = time.time()
 
-        reader = pl.read_parquet_batched(str(parquet_path), batch_size=chunk_size,
-                                          columns=feature_cols + [target_col])
-
-        while True:
-            batches = reader.next_batches(1)
-            if not batches:
-                break
-            chunk_df = batches[0]
+        for offset in range(0, total_rows, chunk_size):
+            chunk_df = (
+                pl.scan_parquet(str(parquet_path))
+                .slice(offset, chunk_size)
+                .collect(engine="streaming")
+            )
             chunk_idx += 1
-            total_rows += len(chunk_df)
+            rows_processed += len(chunk_df)
 
             X_chunk_pd = chunk_df.select(feature_cols).to_pandas()
             for col in X_chunk_pd.columns:
@@ -269,8 +270,8 @@ class AmountPredictor:
                             "metric": f"{name}_{metric}", "value": round(val, 4),
                         })
 
-            logger.info("  Chunk %d: %s rows (total %s), val_l1=%.1f",
-                         chunk_idx, f"{len(chunk_df):,}", f"{total_rows:,}",
+            logger.info("  Chunk %d: %s rows (total %s/%s), val_l1=%.1f",
+                         chunk_idx, f"{len(chunk_df):,}", f"{rows_processed:,}", f"{total_rows:,}",
                          self.model.best_score.get("val", {}).get("l1", 0))
 
         self.train_time_sec = time.time() - t0
@@ -280,7 +281,7 @@ class AmountPredictor:
             "best_iteration": self.best_iteration,
             "train_time_sec": round(self.train_time_sec, 1),
             "chunks": chunk_idx,
-            "total_rows": total_rows,
+            "total_rows": rows_processed,
         }
         if self.model.best_score:
             for name, score in self.model.best_score.items():
@@ -288,7 +289,7 @@ class AmountPredictor:
                     self.train_eval[f"{name}_{metric}"] = round(val, 4)
 
         logger.info("Chunked training complete: %d chunks, %s rows, best_iter=%d, time=%.1fs",
-                     chunk_idx, f"{total_rows:,}", self.best_iteration, self.train_time_sec)
+                     chunk_idx, f"{rows_processed:,}", self.best_iteration, self.train_time_sec)
 
         return self.train_eval
 
