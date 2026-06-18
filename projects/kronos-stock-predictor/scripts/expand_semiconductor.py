@@ -224,10 +224,10 @@ def cmd_preprocess():
 
     logger.info(f"加载 {len(all_data)} 只, {sum(len(df) for df in all_data.values()):,} 行")
 
-    # 时间划分 (与原始数据不同，扩展了训练集)
+    # 时间划分 (扩展测试集到 2023 → 700天/35+调仓点)
     train_data, val_data, test_data = {}, {}, {}
-    train_end = "2023-12-31"
-    val_end = "2024-12-31"
+    train_end = "2021-12-31"
+    val_end = "2022-12-31"
 
     for sym, df in all_data.items():
         train = df[df.index <= train_end]

@@ -130,9 +130,10 @@ pip install torch numpy pandas einops tushare akshare tqdm matplotlib scikit-lea
 
 | 日期 | 变更 |
 |------|------|
+| 2026-06-18 | **🔥 蒙特卡洛通关**: Sharpe=1.46, p=0.0149, 33调仓点, 统计显著! |
+| 2026-06-18 | **方案A完成**: 测试集扩展至 2023-2026 (835天, 33点) |
 | 2026-06-18 | **扩展半导体**: 183只下载 (242K行), 数据隔离 semiconductor_v2/ |
 | 2026-06-18 | **蒙特卡洛检验**: Shuffle/Block/Bootstrap/回撤压力 四重检验 |
-| 2026-06-18 | **信号优化**: 24组参数网格搜索, 最优 top_k=5/20d Sharpe=1.48 |
 | 2026-06-18 | **CPU训练管线**: run_retrain_pipeline.py (GPU被医学LoRA占用) |
 | 2026-06-17 | **🔥 波动率预测突破**: RankIC=+0.569, 2.8×优于方向 |
 | 2026-06-17 | **生产部署**: Predictor API + 方向/波动率预测 + 滚动预测 |
