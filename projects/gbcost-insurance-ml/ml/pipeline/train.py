@@ -286,17 +286,13 @@ def main(argv: list[str] | None = None) -> int:
     t0 = time.time()
 
     if args.chunked:
-        # Chunked mode: skip train collection, sample val for early stopping
-        train_df = pl.DataFrame()  # placeholder, not used
-        val_lf = splits["val"].select(select_cols)
-        val_sample_pct = min(int(2_000_000 / max(len(val_lf.select(pl.len()).collect().item()), 1) * 100), 100)
-        if val_sample_pct < 100:
-            val_lf = val_lf.filter(
-                pl.col("case_no").hash(seed=42) % 100 < val_sample_pct
-            )
-        val_df = val_lf.collect(engine="streaming")
-        logger.info("Chunked mode: val %s rows (sampled %d%%) | train → Parquet stream",
-                     f"{len(val_df):,}", val_sample_pct)
+        # Chunked mode: skip train collection, sample ~1M val rows for early stopping
+        train_df = pl.DataFrame()
+        val_df = splits["val"].filter(
+            pl.col("case_no").hash(seed=42) % 100 < 50
+        ).select(select_cols).collect(engine="streaming")
+        logger.info("Chunked mode: val %s rows (sampled ~50%%) | train → Parquet sink",
+                     f"{len(val_df):,}")
     elif args.sample < 1.0 and args.sample > 0:
         sample_pct = int(args.sample * 100)
         train_lf = splits["train"].filter(
@@ -455,7 +451,7 @@ def main(argv: list[str] | None = None) -> int:
         "csv_path": csv_path,
         "feature_count": len(feature_cols),
         "categorical_feature_count": len(categorical_cols),
-        "train_rows": len(train_df),
+        "train_rows": train_summary.get("total_rows", len(train_df)),
         "val_rows": len(val_df),
         "split_config": split_cfg,
         "model_params": predictor.params,
@@ -496,7 +492,7 @@ def main(argv: list[str] | None = None) -> int:
             "train_time_sec": train_summary.get("train_time_sec", 0),
             "best_iteration": train_summary.get("best_iteration", 0),
             "feature_count": len(feature_cols),
-            "train_rows": len(train_df),
+            "train_rows": train_summary.get("total_rows", len(train_df) if len(train_df) > 0 else 0),
         },
     )
 
