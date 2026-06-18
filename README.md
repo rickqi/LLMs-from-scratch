@@ -237,6 +237,29 @@ I welcome all sorts of feedback, best shared via the [Manning Forum](https://liv
 Please note that since this repository contains the code corresponding to a print book, I currently cannot accept contributions that would extend the contents of the main chapter code, as it would introduce deviations from the physical book. Keeping it consistent helps ensure a smooth experience for everyone.
 
 
+## 📂 实战项目 (Projects)
+
+基于本书知识体系构建的 4 个独立 ML 项目，覆盖金融时序、文本生成、保险精算三大领域。
+
+| 项目 | 领域 | 模型 | 亮点 |
+|------|------|------|------|
+| [**Kronos Stock**](projects/kronos-stock-predictor/) | 金融时序预测 | LSTM + BSQ/Transformer | 波动率 RankIC=**+0.579**, 15组实验 |
+| [**医疗文本**](projects/chinese-medical-text-generation/) | 医学文本生成 | Qwen3-0.6B + LoRA | 0.7M参数极低资源微调 |
+| [**法规文本**](projects/company-regulations-training/) | 法规文本生成 | Qwen3-0.6B + LoRA | 329行最简训练脚本 |
+| [**控费ML**](projects/gbcost-insurance-ml/) | 保险理赔预测 | LightGBM + Optuna | Tweedie损失, 贝叶斯超参优化 |
+
+### 📊 项目文档
+
+| 文档 | 内容 |
+|------|------|
+| [项目总览](projects/docs/README.md) | 四项目对比 + 共用模式 |
+| [Kronos 详细](projects/docs/kronos-stock-predictor.md) | 架构/实验/生产部署 |
+| [医疗 详细](projects/docs/chinese-medical-text-generation.md) | 两阶段LoRA训练 |
+| [法规 详细](projects/docs/company-regulations-training.md) | 最简实现分析 |
+| [控费 详细](projects/docs/gbcost-insurance-ml.md) | LightGBM+Tweedie |
+| [综合技术分析](projects/docs/comprehensive-analysis.md) | 业界对比 + 改进建议 |
+
+
 &nbsp;
 ## Citation
 
