@@ -14,6 +14,10 @@ ch05/07_gpt_to_llama/config.json
 ch07/02_dataset-utilities/config.json
 ch07/03_model-evaluation/config.json
 
+# ML cache & artifacts (regeneratable)
+projects/gbcost-insurance-ml/data/ml_cache/
+projects/gbcost-insurance-ml/models/checkpoint/
+
 # Graphics
 loss.pdf
 appendix-D/01_main-chapter-code/1.pdf
