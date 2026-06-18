@@ -285,18 +285,31 @@ def main(argv: list[str] | None = None) -> int:
     logger.info("Collecting train/val DataFrames...")
     t0 = time.time()
 
-    if args.sample < 1.0 and args.sample > 0:
+    if args.chunked:
+        # Chunked mode: skip train collection, sample val for early stopping
+        train_df = pl.DataFrame()  # placeholder, not used
+        val_lf = splits["val"].select(select_cols)
+        val_sample_pct = min(int(2_000_000 / max(len(val_lf.select(pl.len()).collect().item()), 1) * 100), 100)
+        if val_sample_pct < 100:
+            val_lf = val_lf.filter(
+                pl.col("case_no").hash(seed=42) % 100 < val_sample_pct
+            )
+        val_df = val_lf.collect(engine="streaming")
+        logger.info("Chunked mode: val %s rows (sampled %d%%) | train → Parquet stream",
+                     f"{len(val_df):,}", val_sample_pct)
+    elif args.sample < 1.0 and args.sample > 0:
         sample_pct = int(args.sample * 100)
         train_lf = splits["train"].filter(
             pl.col("case_no").hash(seed=42) % 100 < sample_pct
         ).select(select_cols)
+        train_df = train_lf.collect(engine="streaming")
+        val_df = splits["val"].select(select_cols).collect(engine="streaming")
     else:
         train_lf = splits["train"].select(select_cols)
-
-    train_df = train_lf.collect(engine="streaming")
-    val_df = splits["val"].select(select_cols).collect(engine="streaming")
-    logger.info("Train: %s rows | Val: %s rows | Time: %.1fs",
-                 f"{len(train_df):,}", f"{len(val_df):,}", time.time() - t0)
+        train_df = train_lf.collect(engine="streaming")
+        val_df = splits["val"].select(select_cols).collect(engine="streaming")
+        logger.info("Train: %s rows | Val: %s rows | Time: %.1fs",
+                     f"{len(train_df):,}", f"{len(val_df):,}", time.time() - t0)
 
     if completed_step <= 4:
         save_checkpoint({"step": 4, "total": 9, "stats_path": str(stats_path),
