@@ -154,7 +154,11 @@ def main(argv: list[str] | None = None) -> int:
         if q_path.exists():
             import lightgbm as lgb
             q_model = lgb.Booster(model_file=str(q_path))
-            q_pred = q_model.predict(X_np)
+            try:
+                q_pred = q_model.predict(X_np)
+            except Exception:
+                logger.warning("Quantile model %s has feature mismatch — skipping", q_name)
+                continue
             if predictor.log_transform:
                 q_pred = np.expm1(q_pred)
             quantile_preds[q_name] = np.clip(q_pred, 0, None)

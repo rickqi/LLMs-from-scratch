@@ -17,6 +17,7 @@ ch07/03_model-evaluation/config.json
 # ML cache & artifacts (regeneratable)
 projects/gbcost-insurance-ml/data/ml_cache/
 projects/gbcost-insurance-ml/models/checkpoint/
+projects/gbcost-insurance-ml/predictions/
 
 # Graphics
 loss.pdf
