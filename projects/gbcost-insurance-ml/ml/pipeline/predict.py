@@ -36,6 +36,82 @@ def load_config(config_path: str) -> dict:
         return yaml.safe_load(f)
 
 
+def _run_chunked_predict(
+    feature_lf, feature_cols, extra_cols, categorical_cols,
+    predictor, model_dir, output_dir, args, config,
+) -> None:
+    import tempfile
+    from pathlib import Path
+    import lightgbm as lgb
+    import pandas as _pd
+
+    chunk_size = args.chunk_size
+    all_cols = feature_cols + extra_cols
+    logger.info("Chunked prediction: sinking features to temp Parquet...")
+    t_sink = time.time()
+
+    tmpdir = Path(tempfile.mkdtemp(prefix="ml_predict_"))
+    tmp_parquet = tmpdir / "features.parquet"
+    feature_lf.select(all_cols).sink_parquet(str(tmp_parquet), compression="zstd", compression_level=1)
+    logger.info("  Parquet ready: %.0f MB (%.1fs)", tmp_parquet.stat().st_size / (1024*1024), time.time()-t_sink)
+
+    total_rows = pl.scan_parquet(str(tmp_parquet)).select(pl.len()).collect().item()
+    logger.info("  Total: %s rows, chunking by %s", f"{total_rows:,}", f"{chunk_size:,}")
+
+    cat_mappings_path = model_dir / "category_mappings.json"
+    category_mappings = {}
+    if cat_mappings_path.exists():
+        category_mappings = json.loads(cat_mappings_path.read_text(encoding="utf-8"))
+
+    results = []
+    for offset in range(0, total_rows, chunk_size):
+        chunk_df = pl.scan_parquet(str(tmp_parquet)).slice(offset, chunk_size).collect(engine="streaming")
+        chunk_n = offset // chunk_size + 1
+
+        y_pred = predictor.predict(chunk_df, feature_cols, categorical_cols)
+
+        buckets = np.select(
+            [y_pred < 500, y_pred < 2000, y_pred < 10000, y_pred < 50000],
+            ["0-500", "500-2K", "2K-10K", "10K-50K"], default="50K+",
+        )
+
+        meta_cols = [pl.col(c).cast(pl.Utf8) if c in {"duty_code","hosp_grade","policy_grp_name","claim_type",
+                        "fee_item_type","insured_gender","rnew_flag","sale_chnl","main_insured_rela",
+                        "is_public","is_expensive"} else pl.col(c)
+                     for c in extra_cols if c in chunk_df.columns]
+
+        chunk_result = chunk_df.select(meta_cols).with_columns([
+            pl.Series("predicted_amount", y_pred),
+            pl.Series("amount_bucket", buckets),
+        ])
+        results.append(chunk_result)
+        logger.info("  Chunk %d: %s rows predicted", chunk_n, f"{len(chunk_df):,}")
+
+    result_df = pl.concat(results, how="vertical")
+    output_path = output_dir / f"{args.policy}_case_predictions.parquet"
+    result_df.write_parquet(output_path)
+    logger.info("Predictions saved: %s (%d rows)", output_path, len(result_df))
+
+    # Summary
+    y_true_all = result_df["y_raw"].to_numpy() if "y_raw" in result_df.columns else None
+    y_pred_all = result_df["predicted_amount"].to_numpy()
+    from ml.evaluate.metrics import evaluate_predictions
+    if y_true_all is not None:
+        valid = ~(np.isnan(y_true_all) | np.isnan(y_pred_all))
+        m = evaluate_predictions(y_true_all[valid], y_pred_all[valid])
+    else:
+        m = {}
+    summary = {"policy_id": args.policy, "case_count": len(result_df),
+               "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"), **m}
+    (output_dir / f"{args.policy}_summary.json").write_text(
+        json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    logger.info("Summary saved. MAE: %.0f | Gini: %.3f | Error: %.1f%%",
+                 m.get("mae", 0), m.get("gini", 0), m.get("total_error_pct", 0))
+
+    import shutil
+    shutil.rmtree(tmpdir, ignore_errors=True)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Predict claim amounts using trained model")
     parser.add_argument("--csv", required=True, help="Doris CSV path")
@@ -45,6 +121,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-dir", default=None, help="Override output directory")
     parser.add_argument("--ensemble", action="store_true", help="Use L1-A + L1-B ensemble prediction")
     parser.add_argument("--calibrate", action="store_true", help="Apply group calibration factors")
+    parser.add_argument("--chunk-size", type=int, default=0,
+                        help="Chunked prediction: rows per batch (0=all at once)")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args(argv)
 
@@ -103,6 +181,15 @@ def main(argv: list[str] | None = None) -> int:
     _desired_meta = ["y_raw", "medical_start_date", "policy_grp_name", "group_code",
                      "duty_code", "hosp_grade", "case_no"]
     extra_cols = [c for c in _desired_meta if c not in feature_cols]
+
+    if args.chunk_size > 0:
+        # Chunked prediction: sink to Parquet → predict in batches
+        _run_chunked_predict(
+            feature_lf, feature_cols, extra_cols, categorical_cols,
+            predictor, model_dir, output_dir, args, config,
+        )
+        return 0
+
     pred_df = feature_lf.select(feature_cols + extra_cols).collect(engine="streaming")
     logger.info("Collected %s rows in %.1fs", f"{len(pred_df):,}", time.time() - t0)
 
