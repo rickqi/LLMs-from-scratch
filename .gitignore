@@ -372,3 +372,15 @@ projects/chinese-medical-text-generation/data/
 projects/chinese-medical-text-generation/output/
 
 .git-credentials
+
+# Test artifacts generated at repo root when chapter tests are run from root
+# (chapter code uses relative paths, so outputs land in CWD = repo root).
+# The path-specific rules above cover the in-chapter locations; these cover root.
+/accuracy-plot.pdf
+/loss-plot.pdf
+/sms_spam_collection.zip
+/sms_spam_collection/
+/test.csv
+/train.csv
+/validation.csv
+ch02/04_bonus_dataloader-intuition/number-data.txt
