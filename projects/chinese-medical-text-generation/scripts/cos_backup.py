@@ -54,9 +54,19 @@ COS_PREFIX = "LLMs-from-scratch/projects/chinese-medical-text-generation/"
 
 # LoRA 权重目录（备份整个目录）
 LORA_DIRS = [
+    # 0.6B Phase 1
     "output_full/best_model",
     "output_full/final_model",
     "output_full/checkpoint",
+    # 0.6B Phase 2
+    "output_inst_v1/best_model",
+    "output_inst_v2/best_model",
+    "output_inst_v3/best_model",
+    # 1.7B Phase 1
+    "output_17b_full/best_model",
+    "output_17b_full/final_model",
+    # 1.7B Phase 2 (in-progress snapshot)
+    "output_17b_inst_v1/best_model",
 ]
 
 # 指令微调相关数据文件
@@ -73,12 +83,21 @@ INSTRUCTION_FILES = [
 TRAINING_LOGS = [
     "train_full.log",
     "output_full/training_log.json",
+    "train_17b_full.log",
+    "train_17b_inst.log",
+    "train_inst_v3.log",
 ]
 
 # 训练数据 (关键 — 无此无法复现训练)
 TRAINING_DATA = [
     "data_full/train.txt",
     "data_full/val.txt",
+]
+
+# 评估结果
+EVAL_DATA = [
+    "evals/eval_06b_instruct_v3.json",
+    "scripts/eval_compare.py",
 ]
 
 # 核心运行时脚本
@@ -165,6 +184,13 @@ def collect_backup_files(lora_only: bool = False, data_only: bool = False) -> li
             if f.exists():
                 files.append(f)
                 print(f"   📊 {td} ({f.stat().st_size:,} bytes)")
+
+        # 评估数据
+        for ed in EVAL_DATA:
+            f = PROJECT_ROOT / ed
+            if f.exists():
+                files.append(f)
+                print(f"   📈 {ed} ({f.stat().st_size:,} bytes)")
 
         # 运行时脚本
         for rs in RUNTIME_SCRIPTS:

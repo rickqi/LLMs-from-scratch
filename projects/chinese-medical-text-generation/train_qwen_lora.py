@@ -1,11 +1,23 @@
 """
-Qwen3-0.6B + LoRA 微调: 中文医学诊疗指南文本生成
-================================================
+Qwen3 + LoRA 微调: 中文医学诊疗指南文本生成
+===========================================
 用法:
-  python train_qwen_lora.py --data_dir ./data --output_dir ./output
+  # 纯续写微调
+  python train_qwen_lora.py --data_dir ./data_full --output_dir ./output_full --epochs 5
+  # 指令微调 (从续写模型续训)
+  python train_qwen_lora.py --resume_from ./output_full/best_model \\
+      --instruction_data ./docs/med_instruction_train_chatml.json \\
+      --instruction_val_data ./docs/med_instruction_val_chatml.json \\
+      --output_dir ./output_inst --epochs 1 --lr 1e-5 --instruction_ratio 0.4
+
+训练标准 (内置):
+  - 早停: patience 步无改善 (min_delta 阈值) → 自动停止
+  - 过拟合检测: train/val gap > 阈值 → 自动停止
+  - 指令验证集: 独立 hold-out QA 评估 (非续写数据)
+  - 仅保留 best_model (不保存退化的 final_model)
 
 依赖:
-  pip install transformers peft datasets accelerate wandb
+  pip install transformers peft datasets accelerate
 """
 
 import os
@@ -41,6 +53,9 @@ LEARNING_RATE = 2e-4
 LORA_R = 8
 LORA_ALPHA = 16
 LORA_DROPOUT = 0.05
+EARLY_STOPPING_PATIENCE = 50
+MIN_DELTA = 0.001
+OVERFIT_GAP_THRESHOLD = 0.5
 
 
 class MedicalTextDataset(Dataset):
@@ -199,7 +214,11 @@ def main():
     parser.add_argument("--model_name", type=str, default=MODEL_NAME, help="基座模型名称")
     parser.add_argument("--resume_from", type=str, default=None, help="已有 LoRA adapter 路径 (续训)")
     parser.add_argument("--instruction_data", type=str, default=None, help="ChatML 指令微调数据路径")
-    parser.add_argument("--instruction_ratio", type=float, default=0.8, help="指令数据占比 (默认0.8)")
+    parser.add_argument("--instruction_val_data", type=str, default=None, help="ChatML 指令验证集路径 (不提供则从 instruction_data 自动切 50 条)")
+    parser.add_argument("--instruction_ratio", type=float, default=0.4, help="指令数据占比 (默认0.4)")
+    parser.add_argument("--early_stopping_patience", type=int, default=EARLY_STOPPING_PATIENCE, help="早停耐心步数 (默认50)")
+    parser.add_argument("--min_delta", type=float, default=MIN_DELTA, help="val_loss 改善最小阈值 (默认0.001)")
+    parser.add_argument("--overfit_gap_threshold", type=float, default=OVERFIT_GAP_THRESHOLD, help="train/val gap 过拟合阈值 (默认0.5)")
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -246,13 +265,38 @@ def main():
     # 3. 加载数据
     tokenizer.model_max_length = args.max_length
     cont_train = MedicalTextDataset(str(data_dir / "train.txt"), tokenizer, args.max_length)
-    val_dataset = MedicalTextDataset(str(data_dir / "val.txt"), tokenizer, args.max_length)
+    inst_val_dataset = None
+    inst_train_items = 0
 
     if args.instruction_data:
         logger.info(f"加载指令数据: {args.instruction_data}")
         inst_dataset = InstructionDataset(args.instruction_data, tokenizer, args.max_length)
+        inst_train_items = len(inst_dataset)
         train_dataset = MixedDataset(inst_dataset, cont_train, args.instruction_ratio)
-        logger.info(f"指令样本: {len(inst_dataset)}, 续写样本: {len(cont_train)}, 混合比: {args.instruction_ratio}")
+
+        # 指令验证集: 优先用独立文件, 否则自动从训练集切分
+        val_data_path = args.instruction_val_data
+        if val_data_path and Path(val_data_path).exists():
+            logger.info(f"加载指令验证集: {val_data_path}")
+            inst_val_dataset = InstructionDataset(val_data_path, tokenizer, args.max_length)
+            logger.info(f"指令验证样本: {len(inst_val_dataset)} (独立 hold-out)")
+        else:
+            logger.warning("未提供 --instruction_val_data, 自动从指令数据切分 50 条")
+            import random as _random
+            _random.seed(42)
+            indices = list(range(len(inst_dataset)))
+            _random.shuffle(indices)
+            val_indices = set(indices[:50])
+            inst_val_dataset = InstructionDataset.__new__(InstructionDataset)
+            inst_val_dataset.tokenizer = tokenizer
+            inst_val_dataset.max_length = args.max_length
+            inst_val_dataset.examples = [inst_dataset[i] for i in val_indices]
+            # 从训练集剔除验证集样本
+            inst_dataset.examples = [inst_dataset[i] for i in range(len(inst_dataset)) if i not in val_indices]
+            train_dataset = MixedDataset(inst_dataset, cont_train, args.instruction_ratio)
+            logger.info(f"指令验证样本: {len(inst_val_dataset)} (自动切分)")
+
+        logger.info(f"指令训练: {len(inst_dataset)}, 续写训练: {len(cont_train)}, 混合比: {args.instruction_ratio}")
     else:
         train_dataset = cont_train
         logger.info(f"加载数据: {data_dir}")
@@ -264,14 +308,25 @@ def main():
         collate_fn=collate_fn,
         drop_last=True,
     )
-    val_loader = DataLoader(
-        val_dataset,
-        batch_size=args.batch_size,
-        shuffle=False,
-        collate_fn=collate_fn,
-    )
 
-    logger.info(f"训练样本: {len(train_dataset)}, 验证样本: {len(val_dataset)}")
+    # 验证集: 指令模式用指令验证集, 纯续写模式用续写验证集
+    if inst_val_dataset is not None:
+        val_loader = DataLoader(
+            inst_val_dataset,
+            batch_size=args.batch_size,
+            shuffle=False,
+            collate_fn=collate_fn,
+        )
+    else:
+        val_dataset = MedicalTextDataset(str(data_dir / "val.txt"), tokenizer, args.max_length)
+        val_loader = DataLoader(
+            val_dataset,
+            batch_size=args.batch_size,
+            shuffle=False,
+            collate_fn=collate_fn,
+        )
+
+    logger.info(f"训练样本: {len(train_dataset)}, 验证样本: {len(val_loader.dataset)}")
     logger.info(f"训练批次/epoch: {len(train_loader)}, 验证批次: {len(val_loader)}")
 
     # 4. 优化器 & 调度器
@@ -305,11 +360,17 @@ def main():
         elapsed_offset = ckpt.get("elapsed", 0.0)
         logger.info(f"从 epoch {start_epoch}, step {global_step} 恢复训练 (best_val={best_val_loss:.4f})")
 
-    # 6. 训练循环
-    logger.info("开始训练...")
+    # 6. 训练循环 (含早停 + 过拟合检测)
+    logger.info(f"开始训练... (早停patience={args.early_stopping_patience}, min_delta={args.min_delta}, "
+                f"overfit_gap={args.overfit_gap_threshold})")
     start_time = time.time()
+    steps_no_improvement = 0
+    stopped_early = False
+    stopped_reason = ""
 
     for epoch in range(start_epoch, args.epochs + 1):
+        if stopped_early:
+            break
         model.train()
         epoch_loss = 0.0
         optimizer.zero_grad()
@@ -340,20 +401,42 @@ def main():
                     train_loss_log.append((global_step, avg_train_loss))
 
                     elapsed = elapsed_offset + (time.time() - start_time)
+                    gap = avg_train_loss - val_loss
                     logger.info(
                         f"Epoch {epoch}/{args.epochs} | "
                         f"Step {global_step:06d} | "
                         f"Train loss: {avg_train_loss:.4f} | "
                         f"Val loss: {val_loss:.4f} | "
+                        f"Gap: {gap:+.4f} | "
+                        f"Patience: {steps_no_improvement}/{args.early_stopping_patience} | "
                         f"LR: {scheduler.get_last_lr()[0]:.2e} | "
                         f"Time: {elapsed:.0f}s"
                     )
 
-                    if val_loss < best_val_loss:
+                    # ─── 过拟合检测 ───
+                    if gap > args.overfit_gap_threshold:
+                        stopped_early = True
+                        stopped_reason = f"过拟合 (train/val gap={gap:.4f} > {args.overfit_gap_threshold})"
+                        logger.warning(f"  ⚠ {stopped_reason} — 停止训练")
+                        break
+
+                    # ─── 最佳模型保存 + 早停计数 ───
+                    if val_loss < best_val_loss - args.min_delta:
                         best_val_loss = val_loss
+                        steps_no_improvement = 0
                         model.save_pretrained(output_dir / "best_model")
                         tokenizer.save_pretrained(output_dir / "best_model")
                         logger.info(f"  → 保存最佳模型 (val_loss={val_loss:.4f})")
+                    else:
+                        steps_no_improvement += 10
+                        if steps_no_improvement >= args.early_stopping_patience:
+                            stopped_early = True
+                            stopped_reason = (
+                                f"早停 ({steps_no_improvement} 步无改善, "
+                                f"best_val={best_val_loss:.4f}, min_delta={args.min_delta})"
+                            )
+                            logger.warning(f"  ⚠ {stopped_reason} — 停止训练")
+                            break
 
         # 每 epoch 保存断点检查点
         checkpoint_path.mkdir(parents=True, exist_ok=True)
@@ -371,6 +454,9 @@ def main():
         model.save_pretrained(checkpoint_path)
         tokenizer.save_pretrained(checkpoint_path)
         logger.info(f"  → 断点已保存 (epoch {epoch}, step {global_step})")
+
+        if stopped_early:
+            break
 
         # 每个 epoch 生成样本
         if args.instruction_data:
@@ -390,11 +476,10 @@ def main():
                 sample = generate_sample(model, tokenizer, prompt, device)
                 logger.info(f"\n[生成样本 | prompt: {prompt}]\n{sample}\n")
 
-    # 6. 保存最终模型和训练记录
-    model.save_pretrained(output_dir / "final_model")
-    tokenizer.save_pretrained(output_dir / "final_model")
-    logger.info(f"最终模型保存到: {output_dir / 'final_model'}")
+    if stopped_early:
+        logger.info(f"训练提前终止: {stopped_reason}")
 
+    # 7. 保存训练记录 (仅 best_model, 不保存退化的 final_model)
     records = {
         "train_loss": train_loss_log,
         "val_loss": val_loss_log,
