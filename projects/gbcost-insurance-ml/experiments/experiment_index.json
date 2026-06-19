@@ -7,5 +7,23 @@
     "gini": 0.51,
     "mape": 88.69,
     "feature_count": 71
+  },
+  {
+    "name": "chunked_full_362w",
+    "version": "3.0",
+    "timestamp": "2026-06-19T01:13:29.532840",
+    "r2": -0.239,
+    "gini": 0.4725,
+    "mape": 102.9,
+    "feature_count": 71
+  },
+  {
+    "name": "chunked_v2_50r",
+    "version": "4.0",
+    "timestamp": "2026-06-19T02:28:37.269416",
+    "r2": 0.161,
+    "gini": 0.4904,
+    "mape": 88.09,
+    "feature_count": 71
   }
 ]

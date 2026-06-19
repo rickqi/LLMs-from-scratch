@@ -246,8 +246,8 @@ class AmountPredictor:
                 free_raw_data=False,
             )
 
-            valid_sets = [dtrain, dval] if chunk_idx == 1 else [dtrain]
-            valid_names = ["train", "val"] if chunk_idx == 1 else ["train"]
+            valid_sets = [dtrain, dval]
+            valid_names = ["train", "val"]
 
             self.model = lgb.train(
                 self.params, dtrain,
@@ -256,7 +256,10 @@ class AmountPredictor:
                 keep_training_booster=True,
                 valid_sets=valid_sets,
                 valid_names=valid_names,
-                callbacks=[lgb.log_evaluation(period=0)],
+                callbacks=[
+                    lgb.early_stopping(self.early_stopping_rounds, verbose=False),
+                    lgb.log_evaluation(period=0),
+                ],
             )
 
             if self.model.best_score:

@@ -46,7 +46,7 @@ def _run_chunked_predict(
     import pandas as _pd
 
     chunk_size = args.chunk_size
-    all_cols = feature_cols + extra_cols
+    all_cols = list(dict.fromkeys(feature_cols + extra_cols))  # dedup
     logger.info("Chunked prediction: sinking features to temp Parquet...")
     t_sink = time.time()
 
@@ -64,11 +64,35 @@ def _run_chunked_predict(
         category_mappings = json.loads(cat_mappings_path.read_text(encoding="utf-8"))
 
     results = []
+    calibrator = None
+    l1b = None
+    if args.calibrate:
+        from ml.models.calibration import GroupCalibrator
+        cal_path = model_dir / "calibrator.json"
+        if cal_path.exists():
+            calibrator = GroupCalibrator.load(cal_path)
+            logger.info("  Calibrator loaded: global=%.3f", calibrator.global_factor)
+    if args.ensemble:
+        from ml.models.large_classifier import LargeClaimClassifier
+        l1b_path = model_dir / "l1b_classifier.txt"
+        if l1b_path.exists():
+            l1b = LargeClaimClassifier.load(model_dir, name="l1b_classifier")
+            logger.info("  L1-B loaded: best_iter=%d", l1b.best_iteration)
+
     for offset in range(0, total_rows, chunk_size):
         chunk_df = pl.scan_parquet(str(tmp_parquet)).slice(offset, chunk_size).collect(engine="streaming")
         chunk_n = offset // chunk_size + 1
 
         y_pred = predictor.predict(chunk_df, feature_cols, categorical_cols)
+
+        if calibrator is not None and "policy_grp_name" in chunk_df.columns:
+            groups = chunk_df["policy_grp_name"].cast(pl.Utf8).to_list()
+            y_pred = calibrator.calibrate(y_pred, groups)
+
+        if l1b is not None:
+            probas = l1b.predict_proba(chunk_df, feature_cols, categorical_cols)
+            boost = probas > 0.5
+            y_pred[boost] *= (1.0 + probas[boost] * 0.5)
 
         buckets = np.select(
             [y_pred < 500, y_pred < 2000, y_pred < 10000, y_pred < 50000],
@@ -84,6 +108,10 @@ def _run_chunked_predict(
             pl.Series("predicted_amount", y_pred),
             pl.Series("amount_bucket", buckets),
         ])
+        if l1b is not None:
+            chunk_result = chunk_result.with_columns(
+                pl.Series("large_claim_proba", probas)
+            )
         results.append(chunk_result)
         logger.info("  Chunk %d: %s rows predicted", chunk_n, f"{len(chunk_df):,}")
 
@@ -102,7 +130,9 @@ def _run_chunked_predict(
     else:
         m = {}
     summary = {"policy_id": args.policy, "case_count": len(result_df),
-               "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"), **m}
+               "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+               "ensemble": l1b is not None, "calibrated": calibrator is not None,
+               **m}
     (output_dir / f"{args.policy}_summary.json").write_text(
         json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     logger.info("Summary saved. MAE: %.0f | Gini: %.3f | Error: %.1f%%",

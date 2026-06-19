@@ -1,0 +1,53 @@
+{
+  "versions": [
+    {
+      "version": "1.0",
+      "timestamp": "20260618_181014",
+      "dir": "models/versions/v1.0_20260618_181014",
+      "metrics": {
+        "r2": 0.2443,
+        "gini": 0.5948,
+        "mae": 3240.33,
+        "mape": 106.23,
+        "total_error_pct": 61.52,
+        "train_time_sec": 174.7,
+        "best_iteration": 21,
+        "feature_count": 71,
+        "train_rows": 179863
+      }
+    },
+    {
+      "version": "2.0",
+      "timestamp": "20260618_182006",
+      "dir": "models/versions/v2.0_20260618_182006",
+      "metrics": {
+        "r2": 0.2522,
+        "gini": 0.51,
+        "mae": 3342.47,
+        "mape": 88.69,
+        "total_error_pct": 71.7,
+        "train_time_sec": 239.4,
+        "best_iteration": 35,
+        "feature_count": 71,
+        "train_rows": 905827
+      }
+    },
+    {
+      "version": "3.0",
+      "timestamp": "20260619_011329",
+      "dir": "models/versions/v3.0_20260619_011329",
+      "metrics": {
+        "r2": -0.239,
+        "gini": 0.4725,
+        "mae": 3741.99,
+        "mape": 102.9,
+        "total_error_pct": 47.2,
+        "train_time_sec": 6985.0,
+        "best_iteration": 1600,
+        "feature_count": 71,
+        "train_rows": 3616913
+      }
+    }
+  ],
+  "latest": "3.0"
+}

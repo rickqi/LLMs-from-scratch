@@ -31,7 +31,39 @@
         "feature_count": 71,
         "train_rows": 905827
       }
+    },
+    {
+      "version": "3.0",
+      "timestamp": "20260619_011329",
+      "dir": "models/versions/v3.0_20260619_011329",
+      "metrics": {
+        "r2": -0.239,
+        "gini": 0.4725,
+        "mae": 3741.99,
+        "mape": 102.9,
+        "total_error_pct": 47.2,
+        "train_time_sec": 6985.0,
+        "best_iteration": 1600,
+        "feature_count": 71,
+        "train_rows": 3616913
+      }
+    },
+    {
+      "version": "4.0",
+      "timestamp": "20260619_022837",
+      "dir": "models/versions/v4.0_20260619_022837",
+      "metrics": {
+        "r2": 0.161,
+        "gini": 0.4904,
+        "mae": 3762.52,
+        "mape": 88.09,
+        "total_error_pct": 82.19,
+        "train_time_sec": 4107.9,
+        "best_iteration": 723,
+        "feature_count": 71,
+        "train_rows": 3616913
+      }
     }
   ],
-  "latest": "2.0"
+  "latest": "4.0"
 }

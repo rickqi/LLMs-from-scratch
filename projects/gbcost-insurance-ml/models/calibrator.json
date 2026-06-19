@@ -1,0 +1,6820 @@
+{
+  "group_col": "policy_grp_name",
+  "min_samples": 30,
+  "global_factor": 3.9511019652119503,
+  "factors": {
+    "THINKTOWN": 12.314603628512657,
+    "null": 4.733232113882161,
+    "CMB Wealth Management": 1.6611755502665233,
+    "Umag Group": 1.2878670268666503,
+    "CMB QUANZHOU": 325.31288063403923,
+    "T.C.CAPITAL": 0.7090544821995696,
+    "JLWJ Wanjia(Beijing) electronic": 1.2521519749261942,
+    "Dream Castle梦想城堡（天津）电子商务有限公司": 33.724430639026046,
+    "CMB Nanjing": 2.1212709602825353,
+    "QORVO": 3.401119684703476,
+    "Greatview": 1.023499249971989,
+    "TNC": 264.7302446863955,
+    "四川远海国际旅行社股份有限公司": 36.38368141993724,
+    "Du Xiaoman": 1.7104447993531506,
+    "Big Bone Technology Co.,LTD": 3.1062989458508468,
+    " GIGA RESET": 1.9772502011760882,
+    "广州瀚玩": 0.4907447741128285,
+    "Shanghai Ruohao上海若皓医疗科技": 2.695663994086539,
+    "Dangdai Group": 2.6895889279202962,
+    "3A Composites China": 4.240394020271548,
+    "Yi Shi He Rui": 1.215218628824439,
+    "Goodgifts古德智造": 1.7039744875451817,
+    "WHITE PEAK GROUP": 5.853055450511554,
+    "Trinitas Capital Qingdao": 2.2458368800767134,
+    " INTERGLOBO": 4.18369465733739,
+    " SH Shue Information Tech": 7.102241515786784,
+    "Qiming-October": 5.694507301638549,
+    "HUANLEJIA": 0.4656420133867212,
+    "HSDC湖北华生房地产开发有限公司": 1.3485580622852669,
+    "Qian Shou Wei Lai Technology": 2.901501552458651,
+    "君信药业": 9.070472163444414,
+    "Gracell Biosciences Ltd.": 2.367670466370266,
+    "ByteDance": 14.942187172712806,
+    "HARPER PETERSEN & CO. (ASIA) LIMITED": 1.270116658186085,
+    "Wise Road Capital": 181.25693205132134,
+    "Manyun 江苏满运": 1.1392500948109563,
+    "Matrix China_Sep": 1.9248055778993618,
+    "E-Quality卓品智能": 2.176539575375062,
+    "HUAZHENG": 2.298179219072229,
+    "Quantum Interactive": 1.475812681961281,
+    "Universal Music Group": 13.416573357125586,
+    "State Street": 1.5197772683195356,
+    "Merz Pharma China Ltd.": 100.65821880743889,
+    "CAA": 1.1335369981532692,
+    "AIIB-ASO": 1.3091955027531115,
+    "H.B.Fuller": 19.92591712564996,
+    "WMGS": 3.040751983590466,
+    "Quant Group": 1.0252592474619375,
+    "Mast Global": 2.7174943568937144,
+    "E-Chem International Trade": 3.76834643414162,
+    "TARS 上海它石智航技术有限公司": 98.66327382730123,
+    "ALLIST": 2.2946926725996337,
+    "ACT Commodities": 53.812628521930904,
+    "AIC Fund": 1.7734618944409293,
+    "Truth Instruments 致真精密仪器（青岛）有限公司": 1.9089661689593374,
+    "Shanghai HAOXUN": 2.029037682650047,
+    "JNDTECH": 8.99086727202999,
+    "Universal Pictures Beijing & BIRC": 2.6814423827019147,
+    "The Heart of The Machine机器之心": 33.54256629550938,
+    "Wanhe Guihai": 1.5345444244490303,
+    "Guanxin": 2.8033576563568734,
+    "奥司坦海事": 5.3763078435931195,
+    "Wagas": 1.4595937618665376,
+    "RANDSTAD": 1.247118796148024,
+    "Bridgewater": 3.9295347559568254,
+    "HAINING NICELINK HOME FURNISHINGS": 1.0896974835377113,
+    "Bloomberg": 6.312693898117523,
+    "Juniper Networks": 1.357146635688269,
+    "KANG HONG": 1.214218604403199,
+    "Activision Shanghai": 1.0103774064598876,
+    "Shanghai Jiamian Technology Co.,Ltd": 4.13396300594256,
+    "CENTAURUS": 113.33368215204727,
+    "Steptoe & Johnson LLP": 1.3232129814919915,
+    "CATL": 6.530247190944633,
+    "KSGCJS": 2.126610298825532,
+    "Hitachi Building": 5.669776463261021,
+    "HZS": 2.3356706430854723,
+    "Cochlear China": 2.8148963597350423,
+    "TPG": 2.4140831950806727,
+    "Psyche Chemicals希康默化工": 112.81679826803688,
+    "Stellar Works (Shanghai) Co., Ltd星坊家具（上海）有限公司": 1.1619732654105575,
+    "成都今是": 14.53073282945965,
+    "StepStone Group": 1.6551860953791566,
+    "SH WLincom": 2.7804247021158393,
+    "da wang jing zhu": 11.499941899675141,
+    "BAJIUYOU GZ": 2.204276740685799,
+    "JONES TECH PLC": 1.9642315282598661,
+    "TMYS": 8.885099396433514,
+    "CME Consulting (Beijing)": 201.15158715934584,
+    "SinaLingua": 1.5978319043588345,
+    "Decathlon China": 3.977458421364775,
+    "Covestro": 1.8703932540182875,
+    "ELEGANT PROSPER": 1.6838287653748734,
+    "ARM China": 0.6347102628139613,
+    "CMB XI’AN": 3.0554790226355366,
+    "SECA": 3.5351226490435486,
+    "SHIXUN ZHIHUA CONSULTING": 10.261816060121731,
+    "CONSOLATO D’ITALIA IN CHONGQING": 1.7168400299680613,
+    "招商信诺员福": 3.0624376934982127,
+    "拓尔思信息技术股份有限公司": 2.3208177737477613,
+    "Kingsoft Cloud Network": 3.4760833899664045,
+    "Wise Investment Consulting": 9.722682765803508,
+    "BEST": 1.2906322463297504,
+    "Kering": 2.1730159221082017,
+    "Heibei 上海黑贝": 303.20536547145076,
+    "TWE": 4.596326841486869,
+    "CWF": 1.9821842613407206,
+    "SH Xueshang上海雪尚咨询": 379.527011182237,
+    "Allegion Security Technologies": 1.3368623454988742,
+    "Shenghua Zizhu圣华紫竹": 8.696639848850934,
+    "Eagle Ottawa": 2.2337026702410503,
+    "招商基金": 2.385971969330167,
+    "Metro Land Corporation": 2.954822270139732,
+    "RGA": 1.3693021767876417,
+    "MeshCloud": 1.7291570225086634,
+    "Valence Bonding": 1.888840277518509,
+    "World Economic Forum": 6.889086842333353,
+    "BCH": 2.3530087393481836,
+    "Horizon Group USA": 1.7179135917053125,
+    "EZCARRY": 2.3245610073257694,
+    "Autowise.ai": 1.6575791342852346,
+    "Han Kun": 5.358387820373218,
+    "Taichudianzikeji": 2.0919819115979834,
+    "Changzhou Fusion": 1.8999802008252533,
+    "ShenZhen Transsion": 3.150993261574749,
+    "NEWGREEN ENERGY": 4.013033210863771,
+    "Chayora": 5.146065585378141,
+    "Advance Medical": 3.1805705474585837,
+    "Yulin Automobile上海余麟汽车配件": 16.449383594127617,
+    "Mercer": 2.720497404708536,
+    "American Medical Center": 2.615803296504513,
+    "Creo Innovation": 5.05368879524011,
+    "BIPO-Barbie": 8.588649663962833,
+    "Diageo": 4.032770534666507,
+    "Yunwei Food-0601": 1.3541078100451707,
+    "Ampere China": 2.1717103651473924,
+    "SPECCHEM": 1.0540758760895197,
+    "Embassy of Greece": 2.172391945046373,
+    "Jiayin Shuke": 3.2252396615137995,
+    "Nanjing International School": 2.0185465604646393,
+    "CRP": 4.409621325394045,
+    "Yunyao Aerospace": 1.214038188473676,
+    "Eagle Ottawa BR": 7.778970244202127,
+    "PINSENT MASONS": 142.29948034402216,
+    "ChengShiWangLin 城市网邻": 3.1231536158734827,
+    "Jiaxing Zizhi 嘉兴自知": 2.10714874021972,
+    "Elastic Beijing": 4.774002636742297,
+    "Nantong Reshine New Material": 3.0864740978897425,
+    "Shi Lu": 1.7237343235024236,
+    "Teda Fund泰达宏利上海分公司": 3.542368548796715,
+    "Yungtay Elevator": 1.2343330279256708,
+    "China Merchants Bank": 3.2388641132032725,
+    "SPD Silicon Valley Bank": 3.2158372828779886,
+    "Kingsoft Office 北京金山办公软件股份有限公司": 4.376838283262169,
+    "Galois Technology": 189.49200640678544,
+    "洛书": 7.154629790897049,
+    "Huami华米信息技术": 2.7279010728994035,
+    "Green Technology": 73.69135099826877,
+    "China Merchants Bank Beijing": 3.158944829514922,
+    "FSG-Edison China": 3.5139595423935592,
+    "Energy Foundation China": 4.794950999061141,
+    "XINGJIA BIO": 1.3780374690530084,
+    "Campari": 1.5314998673968991,
+    "Anker Innovations Tech Co., Ltd.": 3.7864505347357302,
+    "RR Group": 0.38953232044524017,
+    "FR8上海特业货运代理有限公司": 5.412450374059275,
+    "Huiyan": 80.8021347131064,
+    "PHG Shanghai": 2.881364550679569,
+    "朱雀基金": 1.9352049683270167,
+    "BSH": 3.143645924207864,
+    "SPX Cooling": 1.6485626389861143,
+    "Kyushu Tongkangda": 5.577626442740263,
+    "Turbolab Biotech": 9.635084959257721,
+    "Essel Packaging": 1.7858183812528534,
+    "BJXDZG": 1.745921434345851,
+    "scharvestcap": 238.21347408037678,
+    "New Da Mao Shan": 1.534052282033513,
+    "Zhejiang Sinlink Electronic": 0.3554840233813287,
+    "VIKING CRUISES": 155.7545001146513,
+    "Hunan Xiangjiang Paint Co.,Ltd": 1.8909811957130198,
+    "LAM 中智上海经济技术合作有限公司": 0.8595601343284625,
+    "SZYX": 380.70934511656964,
+    "MANPOWER GROUP": 2.2866349428519213,
+    "Anviz": 1.9232829577430053,
+    "sinohealth广州中康": 0.8934973528612234,
+    "Hygeia Technology": 8.416336240872033,
+    "Verity": 1.3029928932543835,
+    "The SWA Group": 2.178599870329791,
+    "Shilveda新余识略达": 3.377896541415255,
+    "Skyviewfund": 5.582280907504299,
+    "RYLEAD": 1.8134075198880661,
+    "ArgoBiopharmaceutical舶望制药": 6.851610215761875,
+    "Shanghai Moonton Technology Co.,LTD": 4.562946954577885,
+    "Celliver Biotechology": 5.63965493815765,
+    "ZHONGPING": 0.8308192749692964,
+    "FSG-RINA": 1.4826973158455006,
+    "Pacific Bio": 1.5994756364757383,
+    "Hebei Huafeng Energy": 2.2786394207044984,
+    "Arcor Trading Shanghai": 1.3599880212641917,
+    "JUXIN": 62.26126474303821,
+    "渶策管理": 2.0454865150429935,
+    "Cascade Healthcare": 0.9150025379204416,
+    "Cdqhxtjcyxgs": 0.6218657627222469,
+    "SanXiangBank": 0.8516308145337377,
+    "Gestamp (China) Holding 海斯坦普": 206.26496709609052,
+    "MAOYAN": 102.86199896007267,
+    "Baidu Online_Aug": 18.594327220683624,
+    "杭州承丰": 3.9036045042586487,
+    "Skadden, Arps": 1.7411501504238018,
+    "IMAX": 1.3680795862914732,
+    "玖懿": 2.21924175476265,
+    "Helixon": 0.8773850617080635,
+    "RVSH": 3.021083894038363,
+    "BUIS上海必优信息系统有限公司": 2.8635141610817767,
+    "Lakala": 3.936141596764925,
+    "Concordia International School SH": 2.6149462762761804,
+    "MARCO BARBIERI马可巴比艾里": 307.56525941134953,
+    "杭州之小遇": 0.7277877102213607,
+    "Schneider": 2.0603930505305708,
+    "Beijing Fengtai北京锋泰": 1.774486132679268,
+    "Zhong Lun Law Firm Shanghai Office": 0.7784620498256994,
+    "瑞纳智能": 17.54870697489168,
+    "King & Wood Mallesons": 179.257360689898,
+    "杭州纪超贸易有限公司": 0.9307997449888886,
+    "Shanghai Primewaters": 1.602348790903849,
+    "MGPHZ": 1.8012460435580135,
+    "约翰威立商务": 7.166961551177853,
+    "Beijing Duolingo Technology Co.,Ltd.": 1.589350446546043,
+    "TheMedium Therapeutics传信生物": 0.772001137020922,
+    "Nova Technology": 12.33391736782002,
+    "Pacific Hat上海泛太制帽有限公司": 6.362875021357783,
+    "yunyingbao": 2.619608081080759,
+    "Suremoov": 2.967626342389332,
+    "New Century": 438.0935271871312,
+    "WAB": 1.7226335365612122,
+    "Robeco Investment": 6.677671780842024,
+    "FactSet China Co.,Ltd": 3.6651262328335523,
+    "Panda Technology 苏州明耿智能科": 7.7473648601530725,
+    "China Merchants Heavy Industry(Jiangsu)": 0.9525030218405907,
+    "Herbert Smith Freehills": 5.14931449833218,
+    "Shanghai Peng Jian": 1.3872450112097985,
+    "CDB Aviation Hong Kong Limited": 9.509402558802101,
+    "JADE BIRD FIRE": 162.3398623316558,
+    "Leading Optics霖鼎光学（上海）有限公司": 1.925657227244507,
+    "The Independents": 265.6346218931262,
+    "WEPIE 微派": 228.9777738613712,
+    "Flender": 3.210458310056736,
+    "CURRENT SUSTAINABLE": 121.93834418386493,
+    "Final Frontier 北京最终前沿深空科技有限公司": 3.197692378219984,
+    "RuiliangFund": 1.6486000476422977,
+    "Letong": 2.16204828286414,
+    "Shanghai Talent": 1.1983087212796129,
+    "Lenovo": 3.6410858328035127,
+    "FENG HE 峰和木业": 0.0,
+    "JHWH": 1.3346720957517535,
+    "DS": 3.27917201131042,
+    "YICHENG": 0.821787252464255,
+    "Shanghai Qibao Dwight High School": 1.7072252433974573,
+    "JEDI": 0.8199260724122043,
+    "维塔": 5.923372917614562,
+    "CDSS": 3.185651866329668,
+    "Xunzhan Human Resources Agency": 1.4033057630130465,
+    "PetSmart": 3.264161068448788,
+    "Chongqing Jiangbei Beautiful Grassland Montessori School": 1.4512053588248277,
+    "Virogenbio成都维瑾柏鳌生物医药科技": 6.47476685254872,
+    "Zhongwan Private Equity Fund": 1.5022761103394973,
+    "CFT Capital": 1.7715845310975062,
+    "一威欧生": 1.3235817984651543,
+    "LUMIERE北京绿绵科技": 4.987034102991494,
+    "JIANLU": 1.5192991984476132,
+    "Rui Ji Li Feng睿即励峰": 1.34791250743111,
+    "Shanghai Providence Capital": 14.132791066039651,
+    "ToT Quant北京墨丘利科技有限公司": 2.360657425158685,
+    "Zhongzhuang Huasheng": 1.286110250774997,
+    "CDG Capital": 1.1543962313376777,
+    "Franklin Templeton Investment": 4.886886742398254,
+    "Cook China": 5.033162054102615,
+    "Frontiers 北京弗朗蒂尔科技有限公司": 2.337664049979739,
+    "GESSI BEIJING": 1.889804295403605,
+    "DT (Shanghai) Investment": 1.7800000554170234,
+    "宁波淡水谷": 4.951663934219054,
+    "上海闪策信息科技有限公司": 1.846063933598447,
+    "YOUGILL": 7.151705473668326,
+    "YOUYI": 2.681220805031736,
+    "Oumeiyi Shoe": 6.5478466246878035,
+    "JLG China": 2.3298207685022705,
+    "SBCVC": 1.6697789346953014,
+    "MLW": 1.8204028587732337,
+    "MacGregor": 29.636501159473838,
+    "HSBDT-恒烁半导体": 256.64495707920287,
+    "SAIF": 8.109138243763335,
+    "LYZZ Capital": 1.683677601656898,
+    "Cigna & CMB_高经": 2.4942283976777397,
+    "CHJ": 3.530191819624203,
+    "Maflow": 2.6737923507525334,
+    "CHINA CENTURY GROUP": 1.7828191496522845,
+    "上海熠美私募": 1.4812610987964405,
+    "Shanghai Jianhe": 85.46535004020733,
+    "JonesandVining": 1.6172979069418478,
+    "Shanghai RC Trading Limited": 1.8966857762395009,
+    "Zerone": 1.5784630218699556,
+    "Insider International Shanghai": 4.660354040457609,
+    "HEZHAN Energy 北京和展能源有限公司": 1.0647195944123788,
+    "上海宏杉": 0.9536846070994854,
+    "GSMA": 1.0244646578239955,
+    "宁德时代智能科技": 2.1590584352635376,
+    "CIGNA and CMB Shenzhen Branch": 7.487090637758099,
+    "Cigna & CMB_ELT": 2.853064718133312,
+    "CHLITINA": 2.1881165977545978,
+    "苏州风图": 0.7522425982239389,
+    "Maccaferri马克菲尔（长沙）新型支档科技开发有限公司": 6.360153028034059,
+    "Dr.Cheese奶酪博士": 2.9879462383579574,
+    "CMB Guangzhou Branch": 2.488617973530377,
+    "SBSS": 4.169818117767481,
+    "HITACHI-HELC-": 2.1990653466369956,
+    "Magicwheel-Tech": 2.3770685271791443,
+    "MONIER 曼宁家": 1.5148120452710125,
+    "Doyen Holdings": 5.8278951209697984,
+    "Intralox Conveyor Belts": 109.9118992915003,
+    "CMB Credit Card Center": 10.00929925296811,
+    "Giga Device": 4.197856468258164,
+    "GMA Shanghai Branch": 1.5117911386004772,
+    "Swedish Chamber": 5.438231676847967,
+    "Advent International": 2.240877556863721,
+    "Premier League": 1.6237802977863067,
+    " JBS FOOD TRADING": 1.4006504782085412,
+    "Gensler-April": 2.038910121139538,
+    "SCB Shanghai Branch": 1.3261194005789816,
+    "Beike": 1.4342321503110413,
+    "MOROCCANOIL": 3.0229311904243246,
+    "QCTC 北京清大科越": 1.456460260484442,
+    "Beijing Super Lion": 1.3515894829566086,
+    "Geely-外籍": 3.4933789463034874,
+    "Meli China": 77.14532421724145,
+    "Shanghai Yandong": 1.6705170565043008,
+    "Hamilton Lane China": 101.21737214597695,
+    "蛇口南顺面粉": 50.416735550092625,
+    "CIV-IP": 1.5067649983996416,
+    "华通包装": 1.2412412198221563,
+    "Jardine Matheson Group": 1.8053202955107712,
+    "亿航智能": 2.883039121386207,
+    "赣州集盛": 84.98619279051414,
+    "TIJ Freight Services": 3.51932931454954,
+    "TIANREN PRODUCTIONS": 451.790168033972,
+    "HUAXING GROUP杭州华兴实业集团": 2.3567901154971502,
+    "Green Oasis School": 8.725975788025181,
+    "Qian Yan Information Technology": 3.9214252425814298,
+    "ADVACARE埃狄凯": 678.5024781989982,
+    "10X Genomics (Shanghai) Co.,Ltd.": 6.276685666727683,
+    "CMB WUXI": 2.8867066659828393,
+    "四川茶姬": 1.6805097306031314,
+    "Starquest Capital": 2.040762931015118,
+    "Shanghai Yanxin Building Decoration": 2.155907518027353,
+    "ABB": 2.000949776012788,
+    "Guoxiu Trading": 4.13772171050282,
+    "QSI Shenzhen": 0.7152347087808458,
+    "WIOE": 0.3570676911864936,
+    "Shanghai YaoWang Law Offices": 2.1269845982405697,
+    "奎克好富顿": 3.5338669616959626,
+    "Manulife Investment宏利投资（上海）有限公司": 2.5128116720852787,
+    "Gong Ying": 129.06021236666243,
+    "Shanghai Baolijia Chemical": 1.4244639360810813,
+    "Quhuo北京趣活": 89.31962880034912,
+    "Dreamsflying": 1.2181686224308654,
+    "Boehringer Ingelheim Shanghai": 6.155323566078635,
+    "Marriott_Aug": 2.4623449090245995,
+    "T-ray": 1.4842956140939725,
+    "Guangzhou Brandart": 2.9367155614343514,
+    "顺能光电": 1.475816018171933,
+    "长江存储": 3.169730444404762,
+    "Due West 北京途西教育咨询有限公司": 3.111975088172647,
+    "Asahi Lite Holdings": 121.8124789832548,
+    "Qua Tech": 1.846887071074047,
+    "Shanghai Yunyuan Investment": 1.6483815094383725,
+    "HBBCZC": 1.4898479834455436,
+    "Clasquin": 29.760517920306555,
+    "Heyou": 2.411285349214259,
+    "Siguler Guff Shanghai": 3.1988671804337208,
+    "Dayi Business": 2.414055068525672,
+    "WSGR": 2.7676834213691044,
+    "CAA创新精英文化": 4.5254744991597144,
+    "Wanshsin Seiko": 0.4281378602067487,
+    "黑石": 2.9195469070631215,
+    "Agree Technology Co.,Ltd": 2.22180784112051,
+    "AIM": 6.341874782254973,
+    "HAND Enterprise Solutions Co.,Ltd": 2.336171751901386,
+    "Junlong": 2.6000887252484235,
+    "AICI TECH 爱磁科技（宁波）有限公司": 5.592127380337911,
+    "Shanghai zhan pu": 3.0109609531454233,
+    "Trina Solar": 159.05574329858058,
+    "Clearvue Partners": 5.48021110674594,
+    "飞虎互动": 3.297938010821782,
+    "Bunge": 4.826570120022625,
+    "CATL CAPITAL厦门溥泉私募基金管理合伙企业": 1.8736723610482795,
+    "Shanghai Dafu": 2.077676134028038,
+    "Shanghai Youpin": 0.820768581555898,
+    "ByteDance-生育ASO": 10.308227141209118,
+    "McKinsey": 2.3037733491027597,
+    "Shanghai YongJi": 0.6767412015680466,
+    "INFORMATICA CHINA": 249.58129860844343,
+    "DataTower.ai": 5.8508464752573754,
+    "EEAE北京新兴东方航空装备股份有限公司": 0.768223419922053,
+    "INHOPE CULTURE行望国际": 227.7938793316192,
+    "Shanghai God Bless Rail": 2.797037556028018,
+    "Winhigh Industrial上海运徽实业有限公司": 3.4741064287655745,
+    "Sino Foreign Yunsuzhong": 1.63511253220921,
+    "Mei Shen Hui Shanghai": 1.9489349596982026,
+    "VNU Exhibitions": 13.632808372926272,
+    "CMB ZHENGZHOU": 11.692285411093417,
+    "ATL": 0.5344185396335258,
+    "Changsha Zhuiwei ": 2.7864654403062223,
+    "KYHR": 1.7939056788856123,
+    "BBM": 2.7298020388943973,
+    "EHL": 3.696203701053804,
+    "成都纽瑞特": 1.798644337378633,
+    "Compass Information": 1.4459253451922487,
+    "Simmons": 41.52762636567714,
+    "Tellhow Technology Group": 160.37669015203352,
+    "SENSETIME-September": 4.117958765802041,
+    "NINGXI REAL ESTATE": 62.679556804411845,
+    "Akzo Nobel Chemicals": 3.293408625872782,
+    "Moncler": 1.834434170410513,
+    "JOYY": 2.4217156961470634,
+    "Westlake University": 2.2203927610641663,
+    "Qilin Capital": 169.09294461480238,
+    "Asia Aroma": 292.0679729699681,
+    "KKR": 5.10973976200646,
+    "SHENZHEN FIMI ROBOT": 3.0936040067406805,
+    "MeiShang GZ": 2.3337882251659887,
+    "Multiplier Technologies": 9.065734665515427,
+    "Air Liquide (China) Holding Co.,Ltd.": 1.9552188519967961,
+    "HZXL": 2.8270635128671504,
+    "YourTaste": 16.194780443214043,
+    "VS(L Brands)": 2.0837500355953873,
+    "Decheng Capital": 4.888906759945344,
+    "POWERTENSORS上海阵量智能科技有限公司": 155.1955566851354,
+    "CPS易冲半导体": 18.239199802278865,
+    "lululemon": 2.0274261811224177,
+    "niu 北京牛电科技有限责任公司": 53.61439933999874,
+    "Deloitte": 5.034656500673702,
+    "Hua Yu Tian Cheng": 1.4268469630730551,
+    "江西一脉阳光": 3.3470366473242,
+    "Charlotte Tilbury Beauty": 2.211918644669112,
+    "Hansgrohe": 1.084056538106609,
+    "CODEMINT杭州减法美学科技有限公司北京分公司": 10.109214231804103,
+    "Ningbo Zhuyun": 64.48294667634754,
+    "Huaming Power": 1.3049820224792255,
+    "Alten China": 9.959148676429336,
+    "BEL CHINA": 1.1182089100061834,
+    "Cramilo 台州卡拉米罗眼镜": 1.6177975961636615,
+    "Wisdom-greentech": 1.963699176816559,
+    "SIG_SSTC": 1.6854579664463596,
+    "Shenzhen Scape Tech": 2.4278635598411693,
+    "Xigua Music": 1.8363904645102773,
+    "COS Capital": 0.9451871876533683,
+    "Microsoft": 2.184318022637538,
+    "Metax": 3.790107548479613,
+    "Mercury(贝壳）": 4.427966520077369,
+    "JPMC": 2.894600725461031,
+    "King-cell": 1.222912549620231,
+    "NWCD": 3.1144928226218855,
+    "Alix Partners": 2.47042516057185,
+    "NMK钠镁客": 1.536582692830704,
+    "Dentsu": 1.8646972615586483,
+    "SuZhou LavaMed Co.,Ltd.": 1.3872360220507935,
+    "American Hearst": 1.345321706450565,
+    "WuXi Biologics": 5.939117722076072,
+    "Milestone": 2.3952627945984206,
+    "Tuobang New Energy绍兴拓邦新能源": 4.562820719513354,
+    "浙江托普云农科技股份有限公司": 1.34485111968204,
+    "日立电梯2025年保单": 79.18664504780392,
+    "BJ Xiushi Public-Spirited Foundation": 1.3277779603894828,
+    "Chenyue": 1.6093697058790473,
+    "L&L Capital": 1.7015033820712617,
+    "Xusheng Financial": 3.782414726134903,
+    "Temenos": 1.3542079259579347,
+    "sccynykfyxgs 四川驰阳农业开发有限公司": 2.5822047643477797,
+    "Harry Winston": 2.586724180324925,
+    "Kylinhall Partners北京玉麟阁信息科技有限公司": 2.6673578497488033,
+    "Minnesota Architecture": 1.1510271042800821,
+    "Wothing": 556.9571324544219,
+    "海创药业": 6.8931269930228805,
+    "Kraft Heinz China": 3.02475122006506,
+    "Mino Group": 2.387495692151137,
+    "PEGASUS": 2.24791689144116,
+    "BJ CONFIDENCE ENTERTAINMENT": 1.549009939613454,
+    "Harrow": 13.478414722241858,
+    "BJ CAR": 4.228551317228817,
+    "HAILI永康市海力实业有限公司": 110.29640826842493,
+    "Vastai Technologies": 1.8929455281135013,
+    "HuiDie": 3.9036818782298446,
+    "An Xin Capital": 9.203894786309098,
+    "CUMULON云动时代": 14.39524952677243,
+    "CanSemi Technology Inc.": 3.7228821270421126,
+    "Huiyu汇誉私募基金管理(湖州)有限公司上海分公司": 1.3798489498565414,
+    "Teva": 1.1074329502078362,
+    "Express Technology Service": 1.7716160960390386,
+    "Verisign Internet Technology Services": 3.497090239119617,
+    "Shihui Partners": 3.0193403074148963,
+    "Netease": 4.390738333032866,
+    "Huzhou Xinsheng": 1.9637811285641507,
+    "Shanghai Mingfang": 1.0711962197894118,
+    "BOLLFILTER CHINA LTD": 1.4036169386423587,
+    "Aranya": 1.7613505894494976,
+    "Golden Joy Games ": 237.62166578784974,
+    "POMA Beijing": 2.2317286076366507,
+    "FSG-CiXin": 2.999155770196571,
+    "Equinor China": 9.68330341531644,
+    "Hantian翰田信息": 138.69434366129673,
+    "Xing qi yan yao 沈阳兴齐股份有限公司": 1.3877197426210743,
+    "DAYLIGHT ENTERTAINMENT": 4.3467133657007295,
+    "PTL Group": 3.0382813180302697,
+    "DCM Investment Management": 16.369936625337452,
+    "Cathay Capital": 2.93941028988705,
+    "MEDIAPRO CHINA": 2.828208493472736,
+    "Summer Moon Technology": 1.8355902080590112,
+    "Etonkids": 9.160086645872424,
+    "Sinovac": 2.51403432613496,
+    "Capella Shanghai, Jian Ye Li": 1.5917336010248757,
+    "XIBEI": 1.6481064694662775,
+    "YANGTZELABS": 2.333391027964556,
+    "Jingkang Consulting": 1.875036766334611,
+    "PSC": 2.6812598349099277,
+    "RRA": 2.120638168027815,
+    "Sinosoft": 3.6179354148399545,
+    "Lam Research": 1.3427878973178944,
+    "Vestel": 1.6939048386341768,
+    "BAIDI": 117.22032749484825,
+    "杭州云合智网": 8.124463402360476,
+    "Changqing Yongsheng": 2.031320961817789,
+    "Ares Management": 3.0691248259043427,
+    "Shuzhi Technology": 1.853345904861696,
+    "Nineunion (Beijing) Tech Co., Ltd.": 14.783579178081778,
+    "IFM-BJ": 1.7124384694112513,
+    "vbill 随行付支付有限公司": 2.4760433755127322,
+    "DCar 北京懂车族科技有限公司": 6.257133772574452,
+    "Cedarlake Capital_中层": 1.873025808819405,
+    "FFT": 2.0183811777151717,
+    "LETIAN ZHIZUO": 3.1738800536509637,
+    "MFund": 2.035933517695028,
+    "ZhenZhenRiShang": 2.4101060527266713,
+    "Ita Consulate General Shanghai 意大利共和国驻上海总领事馆": 3.374563299771057,
+    "Zhen Fund": 1.8290492080774658,
+    "FSG-Rouse": 1.7696546937000326,
+    "Arshine湖南艾臣科技": 1.4160316049509538,
+    "重庆国际复合材料": 133.58665377659068,
+    "Riot Games-BR": 4.2035592271649795,
+    "Shanghai Morong": 0.5767193755093831,
+    "Shanghai Omni Gear": 1.6746770658578372,
+    "杭州优团": 1.3589559343643587,
+    "Beijing AiBaoBao": 1.12767490560644,
+    "FANSI杭州范思服饰": 3.010423761173199,
+    "Smart Cloudtech": 6.682678032622529,
+    "Flywire": 1.6970627606681494,
+    "MIS": 2.634104125724301,
+    "Ropes & Gray": 1.8740736501321842,
+    "Beijing Lenovo Collaboration": 0.5896414855946941,
+    "Beijing Leben": 3.63521410492008,
+    "LIULV Technology六律科技": 2.092155243786959,
+    "JDHX（Beijing）Investment Management": 2.6457304455464152,
+    "Oceanlink": 1.8320693547748486,
+    "JW Therapeutics": 1.011087247834416,
+    "JC International Finance&Leasing": 3.3680885292140497,
+    "SiRun Investment Management (Tianjin) Co": 0.32308056794901086,
+    "TianZhiYueHeng": 1.7908531960251395,
+    "Beijing Lankylin": 1.1580908429745627,
+    "Ocean Spray Shanghai": 5.7718296892176415,
+    "Fortive": 1.1920098936820147,
+    "Consumer Lighting": 1.6037850417319102,
+    "FERRARI": 226.08479963961756,
+    "Shanghai Shengdi Pharm": 2.2081558700098856,
+    "Tianshui Kimcheon Mining": 226.71369516389842,
+    "Fissler": 2.0224983517684363,
+    "正帆科技": 6.023841573334146,
+    "YDYY": 5.443245454864598,
+    "MIAO TI": 158.73848366248615,
+    "Xiwai International School": 6.841539552248119,
+    "INBAR": 1.275862654040148,
+    "ZWIE": 2.8292352507761795,
+    "CDP SME": 2.7461182014465693,
+    "Snowflake 片云信息技术（北京）有限公司上海分公司": 1.3176843781845735,
+    "Fresenius Kabi": 6.009623446692599,
+    "YUNJIWENHUA昱吉文化": 200.71113475745346,
+    "LRS(Shanghai)Trading Co., Ltd.": 1.8500847411893127,
+    "良菱机电": 1.8206925761749226,
+    "Lenovo NetApp Technology": 2.7765879955494106,
+    "Cooper Standard": 1.934001994957359,
+    "Shanghai Guijing": 132.94284466785146,
+    "Sedbergh": 6.6852947807096,
+    "SAASBEE SOFTWARE(HANGZHOU)CO.,LTD": 5.472629474058621,
+    "Xuanmo": 1.7882817207325505,
+    "Innolake Biopharma Co. Ltd": 1.172453509004209,
+    "Sichuan Swellfun": 2.095037904769077,
+    "CHINA MERCHANTS BANK (HZ)": 5.439234814490143,
+    "老肯医疗科技股份有限公司": 1.1633512449410042,
+    "Shanghai Xforceplus": 3.577633994894498,
+    "上海和誉": 2.9456316096921884,
+    "LYBS": 2.3581984264841087,
+    "Ross": 1.3339147909149898,
+    "WESHINE SECURITIES": 114.35918058511685,
+    "DLA Piper Partner": 1.9047868269136885,
+    "CENTURY 3": 1.688495363200839,
+    "SABIC": 1.9425429741575704,
+    "Chongkai-BR": 2.507193554636868,
+    "MLSYXX": 6.994263498506704,
+    "Suzhou Aquafarmtory": 2.250357360831918,
+    "CopperAlliance": 2.0365221564752742,
+    "Zhuanzhuan": 2.670594361151201,
+    "Ciena International": 7.747839688075119,
+    "Vivo Capital 维梧股权投资": 2.8509546056348576,
+    "YK Industries": 2.216084204462234,
+    "Oplus": 3.35030576658827,
+    "Shanghai Qitong": 1.869714169107577,
+    "Pharmolix北京水木分子生物科技有限公司": 4.621542377832765,
+    "CEA & CGA": 3.729929441154917,
+    "Shandong MBH Fitness Co.,Ltd": 1.9312446857647094,
+    "YUANYU INDUSTRIAL INVESTMENT": 15.632214493520873,
+    "媒特仕": 1.0643836857233526,
+    "Zijin Technology": 3.285342190063627,
+    "HM Green": 1.8603267948738482,
+    "LYFE Capital": 1.982370395218294,
+    "Dipont": 4.896064236060509,
+    "CIGNA&CMB AMC": 5.415015665367221,
+    "Yanfeng Seating Co., Ltd.": 2.776414073225602,
+    "HHgrace": 2.9698957249354128,
+    "Shan Shi Food": 76.06081574007666,
+    "Beibao嘉兴倍宝科技": 257.62495140020235,
+    "Shanghai Watch Marketing Consulting 上海辉前": 82.37994002382382,
+    "毕凯咨询": 2.1511877167299227,
+    "Qingdao？TGOOD？Electric青岛特锐德电气股份有限公司": 3.0737493497894213,
+    "Ganlu Wine Trading Co., Ltd.": 2.06617917801947,
+    "Shanghai Qilin-琦霖文化": 109.55618648996952,
+    "Lucid": 27.96864461279332,
+    "Beijing Schedl  北京施德尔汽车部件有限公司": 3.8201252114742634,
+    "Beijing AITOPIA Artificial Intelligence Technology艾托邦": 1.1433845044587818,
+    "Cinic": 2.282949513751501,
+    "上海磐庆塑料制品有限公司": 2.4973502056598753,
+    "GIBSON DUNN": 1.6056903843869337,
+    "Jumao Group": 2.384344477115958,
+    "Mainto": 1.2779484577926843,
+    "PhiGent Robotics": 2.5826798043093824,
+    "Longwater Investment": 1.5158292531585955,
+    "英恩国际": 1.8589535551267462,
+    "人福医药": 2.172490326078901,
+    "Jovial Starlight": 2.3517672600809916,
+    "Shanghai Ruipin": 136.21971630777367,
+    "Great Bay University": 17.472889833617632,
+    "Yi Gao": 1.6769430404945527,
+    "CMB Changsha Branch": 8.069564893400168,
+    "Gorilla": 2.6319621562972046,
+    "WHDYYL": 2.3277591570620193,
+    "Yi Yao Wang": 0.9745360531150126,
+    "山东龙迅源建筑工程有限公司": 10.323322386186769,
+    "Star Path": 53.79658453105574,
+    "MSD China Holding": 3.5045286886662885,
+    "勤思幼儿园": 1.178511879665381,
+    "QINGDAO PACIFIC RIM": 1.5117479600483712,
+    "Triapex Laboratories": 1.7584472519332284,
+    "HOPU": 2.7694403351402856,
+    "Giant Jump 北京巨匠文化发展有限公司": 4.1074606664238065,
+    "1LIN1 Studios": 0.840633831823542,
+    "HOGA": 2.257753748810491,
+    "Shanghai BaoLei ": 3.0303963625211052,
+    "CMB SHENYANG": 1.8374329751453433,
+    "CMB NINGBO": 9.041615034014447,
+    "合创未来": 1.213086548111325,
+    "Proterra Investment Partners": 8.28028910336929,
+    "HUACE MUSIC (TIANJIN) CO.,LTD. 华策音乐（天津）有限公司": 2.017624347980497,
+    "Gold Wind Group": 6.941385275768111,
+    "CMB Dongguan": 13.614003133200127,
+    "Yongyi永熠实业": 0.6641356397273086,
+    "博士视听": 0.7136001159820246,
+    "Bennu毕诺济": 1.2655982498035,
+    "WWXS": 1.0251758643901494,
+    "ABNA Management": 1.7093386958829004,
+    "Shanghai Dingkun (GanTong)": 2.749015287485604,
+    "WISS": 7.405878623933344,
+    "HABBY": 2.0960896891585397,
+    "Shanghai Biren Technology Co.,Ltd.": 6.500053897246412,
+    "HXHT": 2.7510175828478802,
+    "sings星系数科": 867.5614606762394,
+    "Shanghai Yiliang": 1.4634932459054333,
+    "3e International School": 3.1450980948693763,
+    "Qin Fa Shipping": 1.7729704715975196,
+    "开门红激励": 3.380458706987353,
+    "Blizzard China": 2.3707078751171786,
+    "Guanwei": 2.0918752678990566,
+    "庄语文化": 6.047790874437504,
+    "Shanghai Seasons Pictures": 1.9956606900523701,
+    "City Football Club": 1.9536035252389186,
+    "City Scape": 1.6433702544344775,
+    "AIIB": 2.9187818267608066,
+    "Under Armour Trading (Shanghai) Co.,Ltd": 3.0514792439116603,
+    "Butler Shanghai": 2.0756056124169295,
+    "Greenwoods景林资产": 4.305120195555261,
+    "天津市津南区研创科技中心": 3.5625509602541228,
+    "BiditCapital": 5.937853662378697,
+    "易联众": 150.34470086231994,
+    "TFS CHINA": 2.3982602234789514,
+    "E-House (China)": 2.64772802298344,
+    "WHKWD": 2.624064717556931,
+    "H & S": 6.553365790600866,
+    "AI PRIME": 1.4716570341162105,
+    "JMF-BOCOM Schroders": 3.017567474190006,
+    "Bohan Medical": 51.29972214939028,
+    "CBC": 130.94481457794487,
+    "Wesco Aircraft": 2.895126310834894,
+    "McCormick": 7.199054591723573,
+    "KAGA FEI ELECTRONICS": 1.2761089586482584,
+    "VANGUARD": 3.425987931052469,
+    "Wanda Hotels Resorts": 1.56492166944417,
+    "CMB苏州分行": 4.773262131649478,
+    "Hirschvogel Automotive Components": 8.89746330130408,
+    "CFA Institute China Limited": 126.58597790339611,
+    "ATABAX BEIJING": 1.9259720361760455,
+    "Sequoia Capital": 193.68819547854056,
+    "ECNUAS": 8.180593448169633,
+    "CMB Wuhan": 2.6217461986857207,
+    "Aiko ZJ": 1.867869246377354,
+    "Shangri-la": 3.9515780552415825,
+    "Waterwood Group": 2.2212480679300093,
+    "cheng jie culture": 1.1359274207694607,
+    "CA ADVISORS": 1.7924428974974225,
+    "AIPU Food Industry": 84.43864830302144,
+    "Cloudflare China": 7.595992839157085,
+    "成都互动未来科技有限公司": 1.7309526050682007,
+    "AMD": 4.888123378885737,
+    "Moelis & Company (Beijing)": 5.043345036603236,
+    "Media China": 3.957615418156804,
+    "SENSETIME": 1.6224639806909091,
+    "HC Beijing Kunlun Red Star": 1.1862254765658418,
+    "Shanghai Jiejie": 0.9223083553763783,
+    "Tsinglan School": 4.372808680270563,
+    "SHJHZC": 1.0582667682490747,
+    "Shanghai Jinhao": 2.5301381779245866,
+    "Mydus Engineering": 1.6192522920328882,
+    "Novotech": 131.68255277438726,
+    "King Da Cheng": 352.8700007835824,
+    "EPIC GAMES": 2.9971783444489883,
+    "Xiangrun": 10.895283642980306,
+    "Chaohu Future": 9.422127478045438,
+    "Columbia Sportswear": 2.7904788498883577,
+    "BACA北京英伦艺大艺术中心有限公司": 4.084906804767414,
+    "TalentBank Beijing": 2.506466489369246,
+    "BE Education": 6.275682994205372,
+    "Akzo Nobel": 4.28895415767592,
+    "Morgan Creek": 4.24598996474221,
+    "NDB": 4.876982833469436,
+    "TSI": 8.981047091503982,
+    "Hopewise International Trading": 95.82440743594687,
+    "Shanghai Jxemc Imp.&Exp": 134.17006532295645,
+    "KWAI": 1.2342783710070386,
+    "ShenZhen Golden": 1.1112809197182554,
+    "Winning Health": 1.063596330726878,
+    "iFeng-Phoenix": 2.1615196610346983,
+    "Willis": 15.585804695010058,
+    "Air Products": 4.232585917456088,
+    "ifnow": 4.107340216164489,
+    "Well威尔": 16.766151899635744,
+    "Hanlin School东莞市翰林实验学校": 0.792709235924966,
+    "REACH24H": 2.9932172726138666,
+    "Changyou.com": 3.3822087759501347,
+    "Xianfeng Petrochemical": 0.9398408873411013,
+    "NIO CO.,LTD": 4.362532468562807,
+    "Tuhu": 1.6743045505806933,
+    "CPE": 2.8060651569955533,
+    "Partners Group": 13.825900429865534,
+    "CTCF": 1.6371310118320566,
+    "Wuhan Xinrun": 1.3764007449110836,
+    "BIPO-ON": 2.2378217045349165,
+    "泊桐": 1.6550257944006985,
+    "NOVO 1999": 1.184978347117598,
+    "Korean Re Shanghai Branch": 1.8101368756936083,
+    "Happy Elements": 3.2845362994302865,
+    "新鹏城足球": 3.053198668178093,
+    "American Securities China": 2.2321370720283302,
+    "KiwiMoore": 1.3833330248910902,
+    "Shenzhen DLHT Technology Ltd": 630.9285691169221,
+    "BICF": 2.383847686581816,
+    "Jiaqiang嘉强（上海）智能科技股份公司工会委员会": 1.3211945184049698,
+    "RIACHUELO": 6.074768648157653,
+    "Mettler - Toledo": 3.1011498113857923,
+    "Novaserene元绎互动（北京）科技有限公司": 106.77198969258855,
+    "Valeo": 2.062165644231679,
+    "Cheniere Energy Shared Services": 3.1414286837884484,
+    "Edgemedicalrobotics": 0.5323874366858297,
+    "COOLEY LLP-DIRECT FSG": 7.153580459694055,
+    "Xin Hai Jeneration": 1.6233312595421625,
+    "SHUNWEI": 1.4759449887178056,
+    "UAAN": 101.21523003709603,
+    "Hua Capital 元禾璞华": 15.29988392304347,
+    "Tasly": 7.143207820765042,
+    "Amphenol": 3.0484684881997977,
+    "PIG CHINA": 1.8225792198426025,
+    "明日虫洞": 2.7156068515047145,
+    "Naxions": 6.7302888964164245,
+    "Luminar": 5.623791771808329,
+    "Huashu Zhiping 杭州华数智屏信息技术有限公司": 1.034351282787829,
+    "Cadence Design": 2.6016144239486625,
+    "Duality Biologics": 138.1233499327233,
+    "Cambricon SingGo": 3.039585187123505,
+    "JUMPCAN济嘉": 6.382840209035913,
+    "Shanghai Lianzhou": 1.661878573106727,
+    "XCKJ新存科技": 0.7806024317808976,
+    "朱迪青青藤": 1.7092330771318287,
+    "FRANKLIN TEMPLETON SEALAND": 1.2052896140974878,
+    "Havas Creative Group": 1.5881829129743852,
+    "深圳国中创业": 1.8055868801592847,
+    "SPGS 成都高新区晟珀外籍人员子女学校": 1.993439540723378,
+    "MAGNA POWERTRAIN": 1.251283232446442,
+    "BJ TYP 北京腾跃腾跃": 1.6505024118837786,
+    "Havi Logistic Services": 13.858936756707262,
+    "BOHE Venture Capital Management": 0.7830107577541403,
+    "NetAPP": 24.085315325551324,
+    "Teneo China": 1.7179485481212255,
+    "RIMUS": 3.3665651258836764,
+    "Vivolight中科微光": 59.60774024092207,
+    "Adjust China": 395.4718657913413,
+    "晶盛机电": 0.4955730814145304,
+    "Eosvision Biomedical": 1.7437505153301207,
+    "Terra Magnum": 30.263665371600005,
+    "shansong-sz 苏州闪送": 1.786203941003945,
+    "Shanghai Maiyuedian": 1.253017844651092,
+    "DAWA重庆达瓦合志影像科技有限公司北京分公司": 24.66311820182468,
+    "Xinbo  Technology 沈阳鑫博工业技术股份有限公司": 1.125548034951829,
+    "SSIS": 6.634458699834644,
+    "Newell Brands": 1.6353591712292816,
+    "Apexbrasil 巴西出口": 122.19308872824045,
+    "Volvo Car": 2.715999108984868,
+    "BZL华品博睿": 4.3038152430484296,
+    "UAP": 5.317486133497609,
+    "MEMS Studio": 1.496296000288169,
+    "XJC新京成": 230.93186771088054,
+    "Hearst China": 1.1984748456153493,
+    "Sunrise Garme": 2.4683643296917444,
+    "XINYU": 9.632028719847362,
+    "Arctic Vision": 2.2638623970739578,
+    "FSG-Lilly Asia Ventures": 2.3790581758394986,
+    "Neusoft Capital": 3.61183121166124,
+    "深演智能": 1.7226872543860514,
+    "Blackwing 上海黑翼资产管理有限公司北京分公司": 83.13859274890534,
+    "Capital Group": 1.8683289485748373,
+    "LEANYOU (LINYU)": 15.522218315995161,
+    "Johnson & Johnson": 4.295536009255082,
+    "Cedarlake Capital_高层": 4.435512965118388,
+    "LDI": 7.751413977198883,
+    "Extreme Networks": 3.8823310345437134,
+    "Heliang Technology": 4.52131933555157,
+    "Digital Valley": 6.304395183157928,
+    "ICS上海芯空微电子科技有限公司": 1.4845953097699824,
+    "AppsFlyer": 2.5592293417396967,
+    "Wanyou万有实业": 327.1368832740051,
+    "Xinjiang KTZ": 0.7643857354307696,
+    "MERCURY-ASO": 1.960723457518255,
+    "FYKJ飞友科技": 2.793627171137661,
+    "W Capital文璟": 3.3928871259588345,
+    "迪桑特": 232.91954532898748,
+    "睿乐生教育": 9.566128653933571,
+    "Flamingo Capital": 0.8678025572982102,
+    "Shanghai PingTong  上海凭通网络科技": 1.0425423429129568,
+    "CBD Group": 2.5883926729788334,
+    "Hema Home上海赫马家居饰品": 1.6064969383804844,
+    "珠海冠宇": 2.7834937204733334,
+    "Lancy Group": 7.4675945023122425,
+    "Santen": 2.8067549367419313,
+    "DELL": 6.785273543799729,
+    "RiseSun": 3.062964456639587,
+    "LKK": 321.54911832567024,
+    "PXW鹏芯微": 5.568884639694486,
+    "Henkel": 1.6572627912275222,
+    "JAS Forwarding": 0.8932228482029562,
+    "ILTexas Shaohua Preschool": 32.6974545153469,
+    "Baitong Project": 1.7743098891271718,
+    "Baidu Online_Jan": 2.507539154605841,
+    "ZENX知定堂": 651.8551960087478,
+    "YASCSEMI ": 7.70134690345176,
+    "SiEngine Technology Co., Ltd": 4.037235836623255,
+    "DIGI-GIMC": 2.094772938291143,
+    "Lane Xang Mineral Ltd": 37.66478086529917,
+    "Soprema": 1.9051777780029542,
+    "CEIBS": 5.257209555359635,
+    "In-tech": 2.420479168427668,
+    "ZX technology至像科技": 5.000020470673954,
+    "Shanghai Shouqianba": 2.0967964857431545,
+    "美达菲学校": 144.60660034095704,
+    "YIFANG": 1.244109837090018,
+    "Surgnova": 0.44763326054005403,
+    "CDP-EZI": 1.2249160406384054,
+    "MVRDV": 3.9467946566370755,
+    "MINDWORKS 北京概念智品咨询顾问有限公司": 1.6447940037071302,
+    "MT": 3.002462820308862,
+    "RuiZhao瑞昭科技": 175.7923932000896,
+    "IlIM": 2.0365560560814453,
+    "Barilla": 2.790442720567566,
+    "ZhongAo WuYe": 3.0668632616907123,
+    "Rongrong Trading": 5.617257489449869,
+    "HCI": 1.1096124043532183,
+    "LOREAL CHINA": 2.6922293490605433,
+    "Foresight Fund": 4.565099268594635,
+    "Infoblox": 1.3594936301757796,
+    "Vestiaire Collective China": 3.4302653413835142,
+    "DIGITAL CARROTS 络纬（上海）广告传播有限公司": 2.4588406044989397,
+    "Shanghai Shunya": 2.3855792705387517,
+    "JAX China": 1.0687191864774739,
+    "WAVENET SOFTWARE": 1.4755018970728397,
+    "Qingdao Richen Food": 1.9076213520852092,
+    "正速": 3.476221073856424,
+    "JINHUTAO 北京金胡桃科技有限公司": 2.1642930125175663,
+    "Johnson Matthey": 572.0754761140802,
+    "HDTPFMC/北京恒德时代私募基金管理有限公司": 1.9345237753149815,
+    "CFAP": 9.310935383121265,
+    "Huibo浙江慧玻科技有限公司": 79.03534107831408,
+    "UBS": 2.88974425337033,
+    "Suzhou Junjie Education  苏州俊杰教育科技": 82.63668988637865,
+    "Top Estate": 224.76544366210302,
+    "Jotun": 1.6425714285130373,
+    "Trees Technology": 4.216750067571565,
+    "上海楒嘉信息": 0.5380436981554312,
+    "Jardi Sourcing": 7.902876742166015,
+    "Beida Jade Bird Group": 5.611414072051207,
+    "Star Attraction": 27.92921639712675,
+    "Spheros Suzhou": 3.425654493876119,
+    "One Capital": 2.3071295913528367,
+    "Bayer": 3.062394158775655,
+    "Overseas Metal": 1.1931592484266413,
+    "Infotech Capital": 3.828884519072377,
+    "BeiGene": 4.246180271293561,
+    "UIC College": 4.470593274851738,
+    "Pictet": 1.9737173076150265,
+    "Digquant深圳点宽网络科技有限公司": 8.895025248444682,
+    "Linde(China)": 1.0125841678590706,
+    "Costco China": 2.2220865031148125,
+    "Tooltalker": 1.5436277695390561,
+    "WES GROUP": 2.9201501367854266,
+    "HEILONGJIANG JIANGDA Co.,Ltd.": 283.20039408867,
+    "Levis": 0.49801974994613174,
+    "上海复宏汉霖生物技术股份有限公司": 2.3397624926113325,
+    "Beijing RarePlus MedTech Co., Ltd.": 1.551694082085729,
+    "Pimco": 2.057615514118381,
+    "UNStudio (Shanghai) Limited": 5.738109154792097,
+    "Covington & Burling": 123.13127473325846,
+    "Ya Manni": 1.658541984990755,
+    "Shanghai American School": 3.1122794029562706,
+    "GMC": 3.092446222357209,
+    "HARTREE PARTNERS": 116.91458335602083,
+    "Gartner": 3.308868743808983,
+    "江苏瑞科生物": 1.1682929492519787,
+    "CHUANG ZHONG": 2.2345572078178946,
+    "GPJ": 2.3013686124064185,
+    "视源电子": 3.9235216722524746,
+    "Pizzavest": 2.4223234153340734,
+    "上海表盒": 8.745196211402803,
+    "Citadel (Shanghai) Trading Company Limited": 1.9335344974128506,
+    "Zhuhai Huakuo": 23.56495227955045,
+    "SCIS": 4.456751416806935,
+    "CMB Financial Leasing_Otc": 1.3037886900690367,
+    "Pilot Health": 2.115417993944344,
+    "Gensler": 2.662111475483995,
+    "Shandong Longyuan Electric Power 山东龙源电力工程": 3.4155717580036145,
+    "CMB (SZ BRANCH)": 1.8292492062328427,
+    "Giantec": 2.250705462963047,
+    "Dmall": 1.4952303190412513,
+    "GLP 普洛斯投资": 2.362373426256911,
+    "Shanghai Ark Biopharmaceutical": 1.372583854491392,
+    "Insights Value": 2.6426366374326813,
+    "YUNZHONG云中再生": 61.000819337793956,
+    "佑榕科技": 4.382277830215817,
+    "MCL Skincare Ltd": 219.97034509318684,
+    "Progetto CMR": 1.0776853220218519,
+    "人福系列单": 2.071303179609361,
+    "英飞特电子": 1.4860803352731546,
+    "Zuora": 2.1875998806703265,
+    "Endpoint China": 34.662749754220165
+  },
+  "group_stats": {
+    "THINKTOWN": {
+      "count": 549,
+      "total_true": 3026462.42,
+      "total_pred": 245762.06521115065,
+      "factor": 12.314603628512657
+    },
+    "null": {
+      "count": 321850,
+      "total_true": 336917353.79,
+      "total_pred": 71181244.79926741,
+      "factor": 4.733232113882161
+    },
+    "CMB Wealth Management": {
+      "count": 1049,
+      "total_true": 1251053.34,
+      "total_pred": 753113.2635556054,
+      "factor": 1.6611755502665233
+    },
+    "Umag Group": {
+      "count": 34,
+      "total_true": 123572.33,
+      "total_pred": 95951.15599833977,
+      "factor": 1.2878670268666503
+    },
+    "CMB QUANZHOU": {
+      "count": 442,
+      "total_true": 2376360.39,
+      "total_pred": 7304.84567770093,
+      "factor": 325.31288063403923
+    },
+    "T.C.CAPITAL": {
+      "count": 32,
+      "total_true": 27512.04,
+      "total_pred": 38801.024026608575,
+      "factor": 0.7090544821995696
+    },
+    "JLWJ Wanjia(Beijing) electronic": {
+      "count": 83,
+      "total_true": 43927.65,
+      "total_pred": 35081.72400765429,
+      "factor": 1.2521519749261942
+    },
+    "Dream Castle梦想城堡（天津）电子商务有限公司": {
+      "count": 396,
+      "total_true": 1512532.39,
+      "total_pred": 44849.75317121266,
+      "factor": 33.724430639026046
+    },
+    "CMB Nanjing": {
+      "count": 4078,
+      "total_true": 4967509.83,
+      "total_pred": 2341761.105963743,
+      "factor": 2.1212709602825353
+    },
+    "QORVO": {
+      "count": 444,
+      "total_true": 702006.39,
+      "total_pred": 206404.4947189807,
+      "factor": 3.401119684703476
+    },
+    "Greatview": {
+      "count": 620,
+      "total_true": 544939.73,
+      "total_pred": 532428.0696980617,
+      "factor": 1.023499249971989
+    },
+    "TNC": {
+      "count": 144,
+      "total_true": 9117038.73,
+      "total_pred": 34438.97670551477,
+      "factor": 264.7302446863955
+    },
+    "四川远海国际旅行社股份有限公司": {
+      "count": 143,
+      "total_true": 519821.42,
+      "total_pred": 14287.213380093868,
+      "factor": 36.38368141993724
+    },
+    "Du Xiaoman": {
+      "count": 48,
+      "total_true": 61721.37,
+      "total_pred": 36084.98211888601,
+      "factor": 1.7104447993531506
+    },
+    "Big Bone Technology Co.,LTD": {
+      "count": 35,
+      "total_true": 62279.44,
+      "total_pred": 20049.403191920097,
+      "factor": 3.1062989458508468
+    },
+    " GIGA RESET": {
+      "count": 209,
+      "total_true": 348300.6,
+      "total_pred": 176154.0344225669,
+      "factor": 1.9772502011760882
+    },
+    "广州瀚玩": {
+      "count": 216,
+      "total_true": 241199.36000000002,
+      "total_pred": 491496.54305752256,
+      "factor": 0.4907447741128285
+    },
+    "Shanghai Ruohao上海若皓医疗科技": {
+      "count": 167,
+      "total_true": 654298.72,
+      "total_pred": 242722.65439436477,
+      "factor": 2.695663994086539
+    },
+    "Dangdai Group": {
+      "count": 66,
+      "total_true": 360625.33999999997,
+      "total_pred": 134081.95440440436,
+      "factor": 2.6895889279202962
+    },
+    "3A Composites China": {
+      "count": 397,
+      "total_true": 929673.81,
+      "total_pred": 219242.31700064163,
+      "factor": 4.240394020271548
+    },
+    "Yi Shi He Rui": {
+      "count": 38,
+      "total_true": 85653.05,
+      "total_pred": 70483.65451972854,
+      "factor": 1.215218628824439
+    },
+    "Goodgifts古德智造": {
+      "count": 99,
+      "total_true": 65774.13,
+      "total_pred": 38600.419478555115,
+      "factor": 1.7039744875451817
+    },
+    "WHITE PEAK GROUP": {
+      "count": 312,
+      "total_true": 2191103.83,
+      "total_pred": 374352.13941267185,
+      "factor": 5.853055450511554
+    },
+    "Trinitas Capital Qingdao": {
+      "count": 146,
+      "total_true": 330461.1,
+      "total_pred": 147143.85667614118,
+      "factor": 2.2458368800767134
+    },
+    " INTERGLOBO": {
+      "count": 56,
+      "total_true": 133658.1,
+      "total_pred": 31947.384058152904,
+      "factor": 4.18369465733739
+    },
+    " SH Shue Information Tech": {
+      "count": 31,
+      "total_true": 50648.02,
+      "total_pred": 7131.272554927925,
+      "factor": 7.102241515786784
+    },
+    "Qiming-October": {
+      "count": 1083,
+      "total_true": 61777640.6,
+      "total_pred": 10848636.647146625,
+      "factor": 5.694507301638549
+    },
+    "HUANLEJIA": {
+      "count": 62,
+      "total_true": 98938.42,
+      "total_pred": 212477.43364134643,
+      "factor": 0.4656420133867212
+    },
+    "HSDC湖北华生房地产开发有限公司": {
+      "count": 88,
+      "total_true": 194607.5,
+      "total_pred": 144307.83919694053,
+      "factor": 1.3485580622852669
+    },
+    "Qian Shou Wei Lai Technology": {
+      "count": 177,
+      "total_true": 1238619.39,
+      "total_pred": 426889.1012484307,
+      "factor": 2.901501552458651
+    },
+    "君信药业": {
+      "count": 909,
+      "total_true": 21440356.889999997,
+      "total_pred": 2363753.121519779,
+      "factor": 9.070472163444414
+    },
+    "Gracell Biosciences Ltd.": {
+      "count": 88,
+      "total_true": 258476.63,
+      "total_pred": 109169.17437258703,
+      "factor": 2.367670466370266
+    },
+    "ByteDance": {
+      "count": 1789,
+      "total_true": 23497371.14,
+      "total_pred": 1572552.322387618,
+      "factor": 14.942187172712806
+    },
+    "HARPER PETERSEN & CO. (ASIA) LIMITED": {
+      "count": 46,
+      "total_true": 65767.66,
+      "total_pred": 51780.802634244625,
+      "factor": 1.270116658186085
+    },
+    "Wise Road Capital": {
+      "count": 35,
+      "total_true": 87598.04,
+      "total_pred": 483.2810475640036,
+      "factor": 181.25693205132134
+    },
+    "Manyun 江苏满运": {
+      "count": 39,
+      "total_true": 66274.92,
+      "total_pred": 58174.16237388811,
+      "factor": 1.1392500948109563
+    },
+    "Matrix China_Sep": {
+      "count": 92,
+      "total_true": 322670.75,
+      "total_pred": 167638.1000267814,
+      "factor": 1.9248055778993618
+    },
+    "E-Quality卓品智能": {
+      "count": 119,
+      "total_true": 154668.51,
+      "total_pred": 71061.65757328235,
+      "factor": 2.176539575375062
+    },
+    "HUAZHENG": {
+      "count": 140,
+      "total_true": 338409.31,
+      "total_pred": 147251.05300387114,
+      "factor": 2.298179219072229
+    },
+    "Quantum Interactive": {
+      "count": 32,
+      "total_true": 23774.98,
+      "total_pred": 16109.754503806165,
+      "factor": 1.475812681961281
+    },
+    "Universal Music Group": {
+      "count": 153,
+      "total_true": 656207.73,
+      "total_pred": 48910.23307762007,
+      "factor": 13.416573357125586
+    },
+    "State Street": {
+      "count": 267,
+      "total_true": 266493.09,
+      "total_pred": 175350.09606682012,
+      "factor": 1.5197772683195356
+    },
+    "Merz Pharma China Ltd.": {
+      "count": 578,
+      "total_true": 746917.44,
+      "total_pred": 7420.332376721939,
+      "factor": 100.65821880743889
+    },
+    "CAA": {
+      "count": 552,
+      "total_true": 10597263.25,
+      "total_pred": 9348846.36960664,
+      "factor": 1.1335369981532692
+    },
+    "AIIB-ASO": {
+      "count": 249,
+      "total_true": 841954.03,
+      "total_pred": 643107.9454744934,
+      "factor": 1.3091955027531115
+    },
+    "H.B.Fuller": {
+      "count": 141,
+      "total_true": 203002.02000000002,
+      "total_pred": 10187.838216926155,
+      "factor": 19.92591712564996
+    },
+    "WMGS": {
+      "count": 274,
+      "total_true": 1883907.93,
+      "total_pred": 619553.3013434113,
+      "factor": 3.040751983590466
+    },
+    "Quant Group": {
+      "count": 57,
+      "total_true": 110161.01000000001,
+      "total_pred": 107446.98013961557,
+      "factor": 1.0252592474619375
+    },
+    "Mast Global": {
+      "count": 628,
+      "total_true": 1584030.66,
+      "total_pred": 582901.1773222806,
+      "factor": 2.7174943568937144
+    },
+    "E-Chem International Trade": {
+      "count": 306,
+      "total_true": 994951.07,
+      "total_pred": 264028.55665966304,
+      "factor": 3.76834643414162
+    },
+    "TARS 上海它石智航技术有限公司": {
+      "count": 50,
+      "total_true": 63301.27,
+      "total_pred": 641.5889879227161,
+      "factor": 98.66327382730123
+    },
+    "ALLIST": {
+      "count": 96,
+      "total_true": 178055.22,
+      "total_pred": 77594.36465114218,
+      "factor": 2.2946926725996337
+    },
+    "ACT Commodities": {
+      "count": 141,
+      "total_true": 211693.51,
+      "total_pred": 3933.90019804972,
+      "factor": 53.812628521930904
+    },
+    "AIC Fund": {
+      "count": 155,
+      "total_true": 157943.3,
+      "total_pred": 89059.31415559986,
+      "factor": 1.7734618944409293
+    },
+    "Truth Instruments 致真精密仪器（青岛）有限公司": {
+      "count": 142,
+      "total_true": 199051.48,
+      "total_pred": 104271.87408381986,
+      "factor": 1.9089661689593374
+    },
+    "Shanghai HAOXUN": {
+      "count": 115,
+      "total_true": 154460.21,
+      "total_pred": 76124.86023338193,
+      "factor": 2.029037682650047
+    },
+    "JNDTECH": {
+      "count": 190,
+      "total_true": 1527138.2000000002,
+      "total_pred": 169854.3815401245,
+      "factor": 8.99086727202999
+    },
+    "Universal Pictures Beijing & BIRC": {
+      "count": 1432,
+      "total_true": 4649403.2299999995,
+      "total_pred": 1733918.7520841297,
+      "factor": 2.6814423827019147
+    },
+    "The Heart of The Machine机器之心": {
+      "count": 117,
+      "total_true": 57900.340000000004,
+      "total_pred": 1726.1750186285417,
+      "factor": 33.54256629550938
+    },
+    "Wanhe Guihai": {
+      "count": 185,
+      "total_true": 321537.05,
+      "total_pred": 209532.57844942878,
+      "factor": 1.5345444244490303
+    },
+    "Guanxin": {
+      "count": 98,
+      "total_true": 219833.88,
+      "total_pred": 78418.06396037492,
+      "factor": 2.8033576563568734
+    },
+    "奥司坦海事": {
+      "count": 68,
+      "total_true": 259879.06,
+      "total_pred": 48337.831009750436,
+      "factor": 5.3763078435931195
+    },
+    "Wagas": {
+      "count": 39,
+      "total_true": 90512.20999999999,
+      "total_pred": 62011.918908349144,
+      "factor": 1.4595937618665376
+    },
+    "RANDSTAD": {
+      "count": 543,
+      "total_true": 469053.8,
+      "total_pred": 376109.959571427,
+      "factor": 1.247118796148024
+    },
+    "Bridgewater": {
+      "count": 2107,
+      "total_true": 23264954.119999997,
+      "total_pred": 5920536.54309391,
+      "factor": 3.9295347559568254
+    },
+    "HAINING NICELINK HOME FURNISHINGS": {
+      "count": 108,
+      "total_true": 192359.93,
+      "total_pred": 176525.99267780446,
+      "factor": 1.0896974835377113
+    },
+    "Bloomberg": {
+      "count": 13477,
+      "total_true": 140436779.0,
+      "total_pred": 22246727.192313086,
+      "factor": 6.312693898117523
+    },
+    "Juniper Networks": {
+      "count": 94,
+      "total_true": 114334.09,
+      "total_pred": 84245.93702213772,
+      "factor": 1.357146635688269
+    },
+    "KANG HONG": {
+      "count": 43,
+      "total_true": 43632.88,
+      "total_pred": 35934.94601529846,
+      "factor": 1.214218604403199
+    },
+    "Activision Shanghai": {
+      "count": 89,
+      "total_true": 186601.51,
+      "total_pred": 184684.95911226433,
+      "factor": 1.0103774064598876
+    },
+    "Shanghai Jiamian Technology Co.,Ltd": {
+      "count": 280,
+      "total_true": 1149998.51,
+      "total_pred": 278183.06751823385,
+      "factor": 4.13396300594256
+    },
+    "CENTAURUS": {
+      "count": 47,
+      "total_true": 67891.58,
+      "total_pred": 599.041509203922,
+      "factor": 113.33368215204727
+    },
+    "Steptoe & Johnson LLP": {
+      "count": 41,
+      "total_true": 60011.59,
+      "total_pred": 45352.933231000956,
+      "factor": 1.3232129814919915
+    },
+    "CATL": {
+      "count": 199,
+      "total_true": 1361562.18,
+      "total_pred": 208500.863778641,
+      "factor": 6.530247190944633
+    },
+    "KSGCJS": {
+      "count": 79,
+      "total_true": 180546.34,
+      "total_pred": 84898.64837940018,
+      "factor": 2.126610298825532
+    },
+    "Hitachi Building": {
+      "count": 397,
+      "total_true": 1390514.04,
+      "total_pred": 245250.2402890561,
+      "factor": 5.669776463261021
+    },
+    "HZS": {
+      "count": 120,
+      "total_true": 817420.63,
+      "total_pred": 349972.5581686335,
+      "factor": 2.3356706430854723
+    },
+    "Cochlear China": {
+      "count": 278,
+      "total_true": 276856.03,
+      "total_pred": 98353.89819682727,
+      "factor": 2.8148963597350423
+    },
+    "TPG": {
+      "count": 870,
+      "total_true": 2239799.11,
+      "total_pred": 927805.2697455406,
+      "factor": 2.4140831950806727
+    },
+    "Psyche Chemicals希康默化工": {
+      "count": 51,
+      "total_true": 73333.6,
+      "total_pred": 650.0237653063834,
+      "factor": 112.81679826803688
+    },
+    "Stellar Works (Shanghai) Co., Ltd星坊家具（上海）有限公司": {
+      "count": 215,
+      "total_true": 834365.66,
+      "total_pred": 718059.2573317041,
+      "factor": 1.1619732654105575
+    },
+    "成都今是": {
+      "count": 276,
+      "total_true": 4480018.58,
+      "total_pred": 308313.32683491346,
+      "factor": 14.53073282945965
+    },
+    "StepStone Group": {
+      "count": 374,
+      "total_true": 1337157.17,
+      "total_pred": 807859.1124786454,
+      "factor": 1.6551860953791566
+    },
+    "SH WLincom": {
+      "count": 51,
+      "total_true": 113848.04000000001,
+      "total_pred": 40946.276989038495,
+      "factor": 2.7804247021158393
+    },
+    "da wang jing zhu": {
+      "count": 177,
+      "total_true": 1851945.17,
+      "total_pred": 161039.52403901407,
+      "factor": 11.499941899675141
+    },
+    "BAJIUYOU GZ": {
+      "count": 75,
+      "total_true": 160920.36000000002,
+      "total_pred": 73003.70095541367,
+      "factor": 2.204276740685799
+    },
+    "JONES TECH PLC": {
+      "count": 138,
+      "total_true": 305719.88,
+      "total_pred": 155643.50515788764,
+      "factor": 1.9642315282598661
+    },
+    "TMYS": {
+      "count": 133,
+      "total_true": 869411.3099999999,
+      "total_pred": 97850.48778958875,
+      "factor": 8.885099396433514
+    },
+    "CME Consulting (Beijing)": {
+      "count": 453,
+      "total_true": 2784138.4699999997,
+      "total_pred": 13840.99677918273,
+      "factor": 201.15158715934584
+    },
+    "SinaLingua": {
+      "count": 41,
+      "total_true": 74709.79,
+      "total_pred": 46756.97724910491,
+      "factor": 1.5978319043588345
+    },
+    "Decathlon China": {
+      "count": 2239,
+      "total_true": 10636913.94,
+      "total_pred": 2674299.216520831,
+      "factor": 3.977458421364775
+    },
+    "Covestro": {
+      "count": 1127,
+      "total_true": 2656875.65,
+      "total_pred": 1420490.3938206905,
+      "factor": 1.8703932540182875
+    },
+    "ELEGANT PROSPER": {
+      "count": 115,
+      "total_true": 162811.0,
+      "total_pred": 96690.94824125608,
+      "factor": 1.6838287653748734
+    },
+    "ARM China": {
+      "count": 57,
+      "total_true": 86618.51,
+      "total_pred": 136469.370474617,
+      "factor": 0.6347102628139613
+    },
+    "CMB XI’AN": {
+      "count": 2098,
+      "total_true": 4248780.94,
+      "total_pred": 1390544.954988815,
+      "factor": 3.0554790226355366
+    },
+    "SECA": {
+      "count": 101,
+      "total_true": 727652.5599999999,
+      "total_pred": 205835.16676482817,
+      "factor": 3.5351226490435486
+    },
+    "SHIXUN ZHIHUA CONSULTING": {
+      "count": 410,
+      "total_true": 11012401.73,
+      "total_pred": 1073143.551344202,
+      "factor": 10.261816060121731
+    },
+    "CONSOLATO D’ITALIA IN CHONGQING": {
+      "count": 291,
+      "total_true": 617378.34,
+      "total_pred": 359601.5524005956,
+      "factor": 1.7168400299680613
+    },
+    "招商信诺员福": {
+      "count": 28533,
+      "total_true": 22641946.95,
+      "total_pred": 7393439.219374347,
+      "factor": 3.0624376934982127
+    },
+    "拓尔思信息技术股份有限公司": {
+      "count": 87,
+      "total_true": 168077.81,
+      "total_pred": 72421.80403012873,
+      "factor": 2.3208177737477613
+    },
+    "Kingsoft Cloud Network": {
+      "count": 264,
+      "total_true": 2076294.89,
+      "total_pred": 597308.7112907458,
+      "factor": 3.4760833899664045
+    },
+    "Wise Investment Consulting": {
+      "count": 47,
+      "total_true": 234350.93,
+      "total_pred": 24103.525296974207,
+      "factor": 9.722682765803508
+    },
+    "BEST": {
+      "count": 311,
+      "total_true": 349254.87,
+      "total_pred": 270607.58089161135,
+      "factor": 1.2906322463297504
+    },
+    "Kering": {
+      "count": 783,
+      "total_true": 3871910.22,
+      "total_pred": 1781814.0127770335,
+      "factor": 2.1730159221082017
+    },
+    "Heibei 上海黑贝": {
+      "count": 50,
+      "total_true": 266514.24,
+      "total_pred": 878.9891946192965,
+      "factor": 303.20536547145076
+    },
+    "TWE": {
+      "count": 6003,
+      "total_true": 16520685.44,
+      "total_pred": 3594323.4695328395,
+      "factor": 4.596326841486869
+    },
+    "CWF": {
+      "count": 79,
+      "total_true": 204907.97,
+      "total_pred": 103374.83451785821,
+      "factor": 1.9821842613407206
+    },
+    "SH Xueshang上海雪尚咨询": {
+      "count": 434,
+      "total_true": 2160539.2800000003,
+      "total_pred": 5692.715449342752,
+      "factor": 379.527011182237
+    },
+    "Allegion Security Technologies": {
+      "count": 45,
+      "total_true": 37269.55,
+      "total_pred": 27878.375156188726,
+      "factor": 1.3368623454988742
+    },
+    "Shenghua Zizhu圣华紫竹": {
+      "count": 217,
+      "total_true": 1237937.32,
+      "total_pred": 142346.62369783726,
+      "factor": 8.696639848850934
+    },
+    "Eagle Ottawa": {
+      "count": 413,
+      "total_true": 549546.64,
+      "total_pred": 246024.97338676488,
+      "factor": 2.2337026702410503
+    },
+    "招商基金": {
+      "count": 577,
+      "total_true": 921287.65,
+      "total_pred": 386126.77007208957,
+      "factor": 2.385971969330167
+    },
+    "Metro Land Corporation": {
+      "count": 640,
+      "total_true": 2565942.19,
+      "total_pred": 868391.380398882,
+      "factor": 2.954822270139732
+    },
+    "RGA": {
+      "count": 150,
+      "total_true": 109595.58,
+      "total_pred": 80037.54164556232,
+      "factor": 1.3693021767876417
+    },
+    "MeshCloud": {
+      "count": 180,
+      "total_true": 610095.61,
+      "total_pred": 352828.34471265797,
+      "factor": 1.7291570225086634
+    },
+    "Valence Bonding": {
+      "count": 99,
+      "total_true": 340534.28,
+      "total_pred": 180287.49389407443,
+      "factor": 1.888840277518509
+    },
+    "World Economic Forum": {
+      "count": 968,
+      "total_true": 12710625.89,
+      "total_pred": 1845037.8375103886,
+      "factor": 6.889086842333353
+    },
+    "BCH": {
+      "count": 1073,
+      "total_true": 3229704.56,
+      "total_pred": 1372585.0252875276,
+      "factor": 2.3530087393481836
+    },
+    "Horizon Group USA": {
+      "count": 42,
+      "total_true": 89735.12,
+      "total_pred": 52234.94384890633,
+      "factor": 1.7179135917053125
+    },
+    "EZCARRY": {
+      "count": 128,
+      "total_true": 334439.29,
+      "total_pred": 143872.020973434,
+      "factor": 2.3245610073257694
+    },
+    "Autowise.ai": {
+      "count": 123,
+      "total_true": 297803.47000000003,
+      "total_pred": 179661.69086003606,
+      "factor": 1.6575791342852346
+    },
+    "Han Kun": {
+      "count": 5560,
+      "total_true": 44244735.67,
+      "total_pred": 8257098.43206502,
+      "factor": 5.358387820373218
+    },
+    "Taichudianzikeji": {
+      "count": 66,
+      "total_true": 88930.11,
+      "total_pred": 42509.98037170874,
+      "factor": 2.0919819115979834
+    },
+    "Changzhou Fusion": {
+      "count": 42,
+      "total_true": 111543.14,
+      "total_pred": 58707.52755820898,
+      "factor": 1.8999802008252533
+    },
+    "ShenZhen Transsion": {
+      "count": 459,
+      "total_true": 1272350.51,
+      "total_pred": 403793.47220949834,
+      "factor": 3.150993261574749
+    },
+    "NEWGREEN ENERGY": {
+      "count": 171,
+      "total_true": 288686.51,
+      "total_pred": 71937.23421438187,
+      "factor": 4.013033210863771
+    },
+    "Chayora": {
+      "count": 378,
+      "total_true": 1934938.13,
+      "total_pred": 376003.3948066788,
+      "factor": 5.146065585378141
+    },
+    "Advance Medical": {
+      "count": 86,
+      "total_true": 132334.26,
+      "total_pred": 41607.082133657095,
+      "factor": 3.1805705474585837
+    },
+    "Yulin Automobile上海余麟汽车配件": {
+      "count": 161,
+      "total_true": 965589.29,
+      "total_pred": 58700.63668189442,
+      "factor": 16.449383594127617
+    },
+    "Mercer": {
+      "count": 2527,
+      "total_true": 9781619.33,
+      "total_pred": 3595526.0655901884,
+      "factor": 2.720497404708536
+    },
+    "American Medical Center": {
+      "count": 104,
+      "total_true": 537494.44,
+      "total_pred": 205479.68599865728,
+      "factor": 2.615803296504513
+    },
+    "Creo Innovation": {
+      "count": 42,
+      "total_true": 168887.16,
+      "total_pred": 33418.591219757895,
+      "factor": 5.05368879524011
+    },
+    "BIPO-Barbie": {
+      "count": 929,
+      "total_true": 7783464.96,
+      "total_pred": 906250.1399560734,
+      "factor": 8.588649663962833
+    },
+    "Diageo": {
+      "count": 1424,
+      "total_true": 5518791.52,
+      "total_pred": 1368486.3724725612,
+      "factor": 4.032770534666507
+    },
+    "Yunwei Food-0601": {
+      "count": 79,
+      "total_true": 171420.24,
+      "total_pred": 126592.75629927996,
+      "factor": 1.3541078100451707
+    },
+    "Ampere China": {
+      "count": 2524,
+      "total_true": 6524138.9399999995,
+      "total_pred": 3004147.8111917614,
+      "factor": 2.1717103651473924
+    },
+    "SPECCHEM": {
+      "count": 45,
+      "total_true": 54891.799999999996,
+      "total_pred": 52075.75777527632,
+      "factor": 1.0540758760895197
+    },
+    "Embassy of Greece": {
+      "count": 253,
+      "total_true": 691437.04,
+      "total_pred": 318283.74321524205,
+      "factor": 2.172391945046373
+    },
+    "Jiayin Shuke": {
+      "count": 2451,
+      "total_true": 10886437.75,
+      "total_pred": 3375388.7749508633,
+      "factor": 3.2252396615137995
+    },
+    "Nanjing International School": {
+      "count": 2168,
+      "total_true": 8098492.86,
+      "total_pred": 4012041.6435357565,
+      "factor": 2.0185465604646393
+    },
+    "CRP": {
+      "count": 966,
+      "total_true": 3121177.36,
+      "total_pred": 707810.7460216192,
+      "factor": 4.409621325394045
+    },
+    "Yunyao Aerospace": {
+      "count": 48,
+      "total_true": 51918.0,
+      "total_pred": 42764.717364676,
+      "factor": 1.214038188473676
+    },
+    "Eagle Ottawa BR": {
+      "count": 298,
+      "total_true": 2425281.23,
+      "total_pred": 311774.07212832914,
+      "factor": 7.778970244202127
+    },
+    "PINSENT MASONS": {
+      "count": 870,
+      "total_true": 1662506.91,
+      "total_pred": 11683.155173727519,
+      "factor": 142.29948034402216
+    },
+    "ChengShiWangLin 城市网邻": {
+      "count": 249,
+      "total_true": 933860.9299999999,
+      "total_pred": 299012.16682190576,
+      "factor": 3.1231536158734827
+    },
+    "Jiaxing Zizhi 嘉兴自知": {
+      "count": 321,
+      "total_true": 496693.34,
+      "total_pred": 235718.21510246495,
+      "factor": 2.10714874021972
+    },
+    "Elastic Beijing": {
+      "count": 355,
+      "total_true": 829590.01,
+      "total_pred": 173772.42392268532,
+      "factor": 4.774002636742297
+    },
+    "Nantong Reshine New Material": {
+      "count": 546,
+      "total_true": 2081316.96,
+      "total_pred": 674334.8215437868,
+      "factor": 3.0864740978897425
+    },
+    "Shi Lu": {
+      "count": 74,
+      "total_true": 159003.47,
+      "total_pred": 92243.6061242453,
+      "factor": 1.7237343235024236
+    },
+    "Teda Fund泰达宏利上海分公司": {
+      "count": 171,
+      "total_true": 580033.78,
+      "total_pred": 163741.79366430634,
+      "factor": 3.542368548796715
+    },
+    "Yungtay Elevator": {
+      "count": 108,
+      "total_true": 107552.99999999999,
+      "total_pred": 87134.50711170358,
+      "factor": 1.2343330279256708
+    },
+    "China Merchants Bank": {
+      "count": 13098,
+      "total_true": 73636776.32000001,
+      "total_pred": 22735370.718338788,
+      "factor": 3.2388641132032725
+    },
+    "SPD Silicon Valley Bank": {
+      "count": 997,
+      "total_true": 4230753.5200000005,
+      "total_pred": 1315599.3751691692,
+      "factor": 3.2158372828779886
+    },
+    "Kingsoft Office 北京金山办公软件股份有限公司": {
+      "count": 1211,
+      "total_true": 9799335.51,
+      "total_pred": 2238907.3746394636,
+      "factor": 4.376838283262169
+    },
+    "Galois Technology": {
+      "count": 52,
+      "total_true": 125589.49,
+      "total_pred": 662.7693293319988,
+      "factor": 189.49200640678544
+    },
+    "洛书": {
+      "count": 3913,
+      "total_true": 15687201.870000001,
+      "total_pred": 2192594.491745622,
+      "factor": 7.154629790897049
+    },
+    "Huami华米信息技术": {
+      "count": 123,
+      "total_true": 274062.81,
+      "total_pred": 100466.55017027685,
+      "factor": 2.7279010728994035
+    },
+    "Green Technology": {
+      "count": 94,
+      "total_true": 92398.81999999999,
+      "total_pred": 1253.862478409043,
+      "factor": 73.69135099826877
+    },
+    "China Merchants Bank Beijing": {
+      "count": 5789,
+      "total_true": 34427665.79,
+      "total_pred": 10898470.105692415,
+      "factor": 3.158944829514922
+    },
+    "FSG-Edison China": {
+      "count": 3983,
+      "total_true": 9722754.75,
+      "total_pred": 2766894.334639173,
+      "factor": 3.5139595423935592
+    },
+    "Energy Foundation China": {
+      "count": 2978,
+      "total_true": 8278888.46,
+      "total_pred": 1726584.5806601609,
+      "factor": 4.794950999061141
+    },
+    "XINGJIA BIO": {
+      "count": 248,
+      "total_true": 388791.11,
+      "total_pred": 282133.9177861241,
+      "factor": 1.3780374690530084
+    },
+    "Campari": {
+      "count": 304,
+      "total_true": 355429.68,
+      "total_pred": 232079.47161244374,
+      "factor": 1.5314998673968991
+    },
+    "Anker Innovations Tech Co., Ltd.": {
+      "count": 1192,
+      "total_true": 3819238.64,
+      "total_pred": 1008659.3248646673,
+      "factor": 3.7864505347357302
+    },
+    "RR Group": {
+      "count": 60,
+      "total_true": 16201.08,
+      "total_pred": 41591.105922820396,
+      "factor": 0.38953232044524017
+    },
+    "FR8上海特业货运代理有限公司": {
+      "count": 92,
+      "total_true": 225371.11,
+      "total_pred": 41639.38593878954,
+      "factor": 5.412450374059275
+    },
+    "Huiyan": {
+      "count": 89,
+      "total_true": 120134.29000000001,
+      "total_pred": 1486.7712397270836,
+      "factor": 80.8021347131064
+    },
+    "PHG Shanghai": {
+      "count": 667,
+      "total_true": 3661523.32,
+      "total_pred": 1270760.1747708148,
+      "factor": 2.881364550679569
+    },
+    "朱雀基金": {
+      "count": 542,
+      "total_true": 688715.75,
+      "total_pred": 355887.7541511245,
+      "factor": 1.9352049683270167
+    },
+    "BSH": {
+      "count": 4143,
+      "total_true": 14978239.06,
+      "total_pred": 4764607.53568302,
+      "factor": 3.143645924207864
+    },
+    "SPX Cooling": {
+      "count": 887,
+      "total_true": 24025510.39,
+      "total_pred": 14573610.866722042,
+      "factor": 1.6485626389861143
+    },
+    "Kyushu Tongkangda": {
+      "count": 220,
+      "total_true": 374986.87,
+      "total_pred": 67230.54579750067,
+      "factor": 5.577626442740263
+    },
+    "Turbolab Biotech": {
+      "count": 30,
+      "total_true": 73854.44,
+      "total_pred": 7665.157111981469,
+      "factor": 9.635084959257721
+    },
+    "Essel Packaging": {
+      "count": 130,
+      "total_true": 414200.28,
+      "total_pred": 231938.63628473514,
+      "factor": 1.7858183812528534
+    },
+    "BJXDZG": {
+      "count": 290,
+      "total_true": 1424363.23,
+      "total_pred": 815823.2105866035,
+      "factor": 1.745921434345851
+    },
+    "scharvestcap": {
+      "count": 66,
+      "total_true": 209290.71,
+      "total_pred": 878.584684631996,
+      "factor": 238.21347408037678
+    },
+    "New Da Mao Shan": {
+      "count": 46,
+      "total_true": 43657.98,
+      "total_pred": 28459.251689993085,
+      "factor": 1.534052282033513
+    },
+    "Zhejiang Sinlink Electronic": {
+      "count": 220,
+      "total_true": 138055.79,
+      "total_pred": 388360.0412947594,
+      "factor": 0.3554840233813287
+    },
+    "VIKING CRUISES": {
+      "count": 69,
+      "total_true": 137313.06,
+      "total_pred": 881.599311088434,
+      "factor": 155.7545001146513
+    },
+    "Hunan Xiangjiang Paint Co.,Ltd": {
+      "count": 106,
+      "total_true": 222128.37,
+      "total_pred": 117467.2548323483,
+      "factor": 1.8909811957130198
+    },
+    "LAM 中智上海经济技术合作有限公司": {
+      "count": 1204,
+      "total_true": 2060523.24,
+      "total_pred": 2397183.347282385,
+      "factor": 0.8595601343284625
+    },
+    "SZYX": {
+      "count": 30,
+      "total_true": 145570.66,
+      "total_pred": 382.3669207684609,
+      "factor": 380.70934511656964
+    },
+    "MANPOWER GROUP": {
+      "count": 121,
+      "total_true": 232817.66,
+      "total_pred": 101816.71574983752,
+      "factor": 2.2866349428519213
+    },
+    "Anviz": {
+      "count": 72,
+      "total_true": 43364.99,
+      "total_pred": 22547.37911830161,
+      "factor": 1.9232829577430053
+    },
+    "sinohealth广州中康": {
+      "count": 34,
+      "total_true": 13650.27,
+      "total_pred": 15277.348003648913,
+      "factor": 0.8934973528612234
+    },
+    "Hygeia Technology": {
+      "count": 189,
+      "total_true": 1069628.6600000001,
+      "total_pred": 127089.58261500897,
+      "factor": 8.416336240872033
+    },
+    "Verity": {
+      "count": 63,
+      "total_true": 69656.28,
+      "total_pred": 53458.67990578594,
+      "factor": 1.3029928932543835
+    },
+    "The SWA Group": {
+      "count": 170,
+      "total_true": 328764.9,
+      "total_pred": 150906.5085688417,
+      "factor": 2.178599870329791
+    },
+    "Shilveda新余识略达": {
+      "count": 58,
+      "total_true": 58618.6,
+      "total_pred": 17353.58063259103,
+      "factor": 3.377896541415255
+    },
+    "Skyviewfund": {
+      "count": 300,
+      "total_true": 1541819.22,
+      "total_pred": 276198.78783371893,
+      "factor": 5.582280907504299
+    },
+    "RYLEAD": {
+      "count": 44,
+      "total_true": 108782.88,
+      "total_pred": 59988.1046080115,
+      "factor": 1.8134075198880661
+    },
+    "ArgoBiopharmaceutical舶望制药": {
+      "count": 269,
+      "total_true": 745167.51,
+      "total_pred": 108758.01257429528,
+      "factor": 6.851610215761875
+    },
+    "Shanghai Moonton Technology Co.,LTD": {
+      "count": 644,
+      "total_true": 4068064.32,
+      "total_pred": 891543.1979586389,
+      "factor": 4.562946954577885
+    },
+    "Celliver Biotechology": {
+      "count": 31,
+      "total_true": 14211.64,
+      "total_pred": 2519.9484996581414,
+      "factor": 5.63965493815765
+    },
+    "ZHONGPING": {
+      "count": 41,
+      "total_true": 37824.26,
+      "total_pred": 45526.4594112815,
+      "factor": 0.8308192749692964
+    },
+    "FSG-RINA": {
+      "count": 65,
+      "total_true": 99720.54,
+      "total_pred": 67256.16815670491,
+      "factor": 1.4826973158455006
+    },
+    "Pacific Bio": {
+      "count": 504,
+      "total_true": 801002.02,
+      "total_pred": 500790.38513204013,
+      "factor": 1.5994756364757383
+    },
+    "Hebei Huafeng Energy": {
+      "count": 151,
+      "total_true": 472226.29000000004,
+      "total_pred": 207240.46363333758,
+      "factor": 2.2786394207044984
+    },
+    "Arcor Trading Shanghai": {
+      "count": 51,
+      "total_true": 110490.76000000001,
+      "total_pred": 81243.92147019951,
+      "factor": 1.3599880212641917
+    },
+    "JUXIN": {
+      "count": 229,
+      "total_true": 4798815.699999999,
+      "total_pred": 77075.46128086938,
+      "factor": 62.26126474303821
+    },
+    "渶策管理": {
+      "count": 554,
+      "total_true": 1057578.28,
+      "total_pred": 517030.18925928784,
+      "factor": 2.0454865150429935
+    },
+    "Cascade Healthcare": {
+      "count": 35,
+      "total_true": 43380.93,
+      "total_pred": 47410.72095667993,
+      "factor": 0.9150025379204416
+    },
+    "Cdqhxtjcyxgs": {
+      "count": 89,
+      "total_true": 100055.92,
+      "total_pred": 160896.33164881187,
+      "factor": 0.6218657627222469
+    },
+    "SanXiangBank": {
+      "count": 55,
+      "total_true": 39035.98,
+      "total_pred": 45836.73973959238,
+      "factor": 0.8516308145337377
+    },
+    "Gestamp (China) Holding 海斯坦普": {
+      "count": 706,
+      "total_true": 5817720.01,
+      "total_pred": 28205.08054229955,
+      "factor": 206.26496709609052
+    },
+    "MAOYAN": {
+      "count": 31,
+      "total_true": 40642.06,
+      "total_pred": 395.11248479407624,
+      "factor": 102.86199896007267
+    },
+    "Baidu Online_Aug": {
+      "count": 201,
+      "total_true": 2423078.25,
+      "total_pred": 130312.76804167777,
+      "factor": 18.594327220683624
+    },
+    "杭州承丰": {
+      "count": 144,
+      "total_true": 1040025.75,
+      "total_pred": 266427.0288819938,
+      "factor": 3.9036045042586487
+    },
+    "Skadden, Arps": {
+      "count": 548,
+      "total_true": 879041.09,
+      "total_pred": 504862.3117231092,
+      "factor": 1.7411501504238018
+    },
+    "IMAX": {
+      "count": 242,
+      "total_true": 580114.75,
+      "total_pred": 424035.820585956,
+      "factor": 1.3680795862914732
+    },
+    "玖懿": {
+      "count": 361,
+      "total_true": 720308.23,
+      "total_pred": 324574.02554461116,
+      "factor": 2.21924175476265
+    },
+    "Helixon": {
+      "count": 141,
+      "total_true": 228281.57,
+      "total_pred": 260184.01721541642,
+      "factor": 0.8773850617080635
+    },
+    "RVSH": {
+      "count": 115,
+      "total_true": 233607.25,
+      "total_pred": 77325.64145636187,
+      "factor": 3.021083894038363
+    },
+    "BUIS上海必优信息系统有限公司": {
+      "count": 75,
+      "total_true": 193951.38,
+      "total_pred": 67731.94372006498,
+      "factor": 2.8635141610817767
+    },
+    "Lakala": {
+      "count": 1393,
+      "total_true": 4028350.62,
+      "total_pred": 1023426.2464823066,
+      "factor": 3.936141596764925
+    },
+    "Concordia International School SH": {
+      "count": 4124,
+      "total_true": 21314188.81,
+      "total_pred": 8150908.874637575,
+      "factor": 2.6149462762761804
+    },
+    "MARCO BARBIERI马可巴比艾里": {
+      "count": 85,
+      "total_true": 333207.88,
+      "total_pred": 1083.3729421773057,
+      "factor": 307.56525941134953
+    },
+    "杭州之小遇": {
+      "count": 257,
+      "total_true": 83124.13,
+      "total_pred": 114214.80307041368,
+      "factor": 0.7277877102213607
+    },
+    "Schneider": {
+      "count": 6065,
+      "total_true": 76117464.13,
+      "total_pred": 36943176.502366394,
+      "factor": 2.0603930505305708
+    },
+    "Beijing Fengtai北京锋泰": {
+      "count": 394,
+      "total_true": 779728.13,
+      "total_pred": 439410.664101782,
+      "factor": 1.774486132679268
+    },
+    "Zhong Lun Law Firm Shanghai Office": {
+      "count": 36,
+      "total_true": 47655.75,
+      "total_pred": 61217.82045851857,
+      "factor": 0.7784620498256994
+    },
+    "瑞纳智能": {
+      "count": 59,
+      "total_true": 1467243.5,
+      "total_pred": 83609.7783215197,
+      "factor": 17.54870697489168
+    },
+    "King & Wood Mallesons": {
+      "count": 3214,
+      "total_true": 7685070.79,
+      "total_pred": 42871.716734101676,
+      "factor": 179.257360689898
+    },
+    "杭州纪超贸易有限公司": {
+      "count": 39,
+      "total_true": 33994.7,
+      "total_pred": 36522.034071255366,
+      "factor": 0.9307997449888886
+    },
+    "Shanghai Primewaters": {
+      "count": 35,
+      "total_true": 48089.1,
+      "total_pred": 30011.630596902698,
+      "factor": 1.602348790903849
+    },
+    "MGPHZ": {
+      "count": 192,
+      "total_true": 491769.54,
+      "total_pred": 273016.30543965235,
+      "factor": 1.8012460435580135
+    },
+    "约翰威立商务": {
+      "count": 151,
+      "total_true": 795603.98,
+      "total_pred": 111009.94114713042,
+      "factor": 7.166961551177853
+    },
+    "Beijing Duolingo Technology Co.,Ltd.": {
+      "count": 914,
+      "total_true": 1467818.17,
+      "total_pred": 923533.367477163,
+      "factor": 1.589350446546043
+    },
+    "TheMedium Therapeutics传信生物": {
+      "count": 55,
+      "total_true": 11724.99,
+      "total_pred": 15187.788511873969,
+      "factor": 0.772001137020922
+    },
+    "Nova Technology": {
+      "count": 673,
+      "total_true": 16062705.2,
+      "total_pred": 1302319.8324571743,
+      "factor": 12.33391736782002
+    },
+    "Pacific Hat上海泛太制帽有限公司": {
+      "count": 313,
+      "total_true": 11397875.36,
+      "total_pred": 1791309.01074461,
+      "factor": 6.362875021357783
+    },
+    "yunyingbao": {
+      "count": 299,
+      "total_true": 697463.92,
+      "total_pred": 266247.43030730414,
+      "factor": 2.619608081080759
+    },
+    "Suremoov": {
+      "count": 101,
+      "total_true": 282986.09,
+      "total_pred": 95357.72275567509,
+      "factor": 2.967626342389332
+    },
+    "New Century": {
+      "count": 226,
+      "total_true": 1397604.4,
+      "total_pred": 3190.19641530338,
+      "factor": 438.0935271871312
+    },
+    "WAB": {
+      "count": 5016,
+      "total_true": 56220463.22,
+      "total_pred": 32636345.471497938,
+      "factor": 1.7226335365612122
+    },
+    "Robeco Investment": {
+      "count": 333,
+      "total_true": 1806179.1099999999,
+      "total_pred": 270480.3664028316,
+      "factor": 6.677671780842024
+    },
+    "FactSet China Co.,Ltd": {
+      "count": 461,
+      "total_true": 1186167.42,
+      "total_pred": 323636.17093836353,
+      "factor": 3.6651262328335523
+    },
+    "Panda Technology 苏州明耿智能科": {
+      "count": 60,
+      "total_true": 328711.68,
+      "total_pred": 42428.83689274256,
+      "factor": 7.7473648601530725
+    },
+    "China Merchants Heavy Industry(Jiangsu)": {
+      "count": 76,
+      "total_true": 31972.39,
+      "total_pred": 33566.70715670532,
+      "factor": 0.9525030218405907
+    },
+    "Herbert Smith Freehills": {
+      "count": 4095,
+      "total_true": 21468569.8,
+      "total_pred": 4169209.281537084,
+      "factor": 5.14931449833218
+    },
+    "Shanghai Peng Jian": {
+      "count": 48,
+      "total_true": 76402.01,
+      "total_pred": 55074.63309121637,
+      "factor": 1.3872450112097985
+    },
+    "CDB Aviation Hong Kong Limited": {
+      "count": 869,
+      "total_true": 4046998.6500000004,
+      "total_pred": 425578.644396962,
+      "factor": 9.509402558802101
+    },
+    "JADE BIRD FIRE": {
+      "count": 75,
+      "total_true": 174603.78,
+      "total_pred": 1075.5447090578982,
+      "factor": 162.3398623316558
+    },
+    "Leading Optics霖鼎光学（上海）有限公司": {
+      "count": 38,
+      "total_true": 49317.11,
+      "total_pred": 25610.534056764427,
+      "factor": 1.925657227244507
+    },
+    "The Independents": {
+      "count": 248,
+      "total_true": 883021.53,
+      "total_pred": 3324.195933899269,
+      "factor": 265.6346218931262
+    },
+    "WEPIE 微派": {
+      "count": 57,
+      "total_true": 166351.69999999998,
+      "total_pred": 726.4971494600757,
+      "factor": 228.9777738613712
+    },
+    "Flender": {
+      "count": 145,
+      "total_true": 604336.15,
+      "total_pred": 188239.8373175947,
+      "factor": 3.210458310056736
+    },
+    "CURRENT SUSTAINABLE": {
+      "count": 37,
+      "total_true": 57504.4,
+      "total_pred": 471.5858689477684,
+      "factor": 121.93834418386493
+    },
+    "Final Frontier 北京最终前沿深空科技有限公司": {
+      "count": 211,
+      "total_true": 665986.28,
+      "total_pred": 208270.90327266738,
+      "factor": 3.197692378219984
+    },
+    "RuiliangFund": {
+      "count": 64,
+      "total_true": 95791.18,
+      "total_pred": 58104.5597669327,
+      "factor": 1.6486000476422977
+    },
+    "Letong": {
+      "count": 124,
+      "total_true": 400077.10000000003,
+      "total_pred": 185045.4049388777,
+      "factor": 2.16204828286414
+    },
+    "Shanghai Talent": {
+      "count": 60,
+      "total_true": 61441.939999999995,
+      "total_pred": 51273.8820213119,
+      "factor": 1.1983087212796129
+    },
+    "Lenovo": {
+      "count": 2596,
+      "total_true": 9416039.05,
+      "total_pred": 2586052.4806002635,
+      "factor": 3.6410858328035127
+    },
+    "FENG HE 峰和木业": {
+      "count": 58,
+      "total_true": 0.0,
+      "total_pred": 739.242713485691,
+      "factor": 0.0
+    },
+    "JHWH": {
+      "count": 87,
+      "total_true": 189932.58,
+      "total_pred": 142306.54900522254,
+      "factor": 1.3346720957517535
+    },
+    "DS": {
+      "count": 770,
+      "total_true": 2462302.43,
+      "total_pred": 750891.5120972921,
+      "factor": 3.27917201131042
+    },
+    "YICHENG": {
+      "count": 67,
+      "total_true": 27154.98,
+      "total_pred": 33043.807772110886,
+      "factor": 0.821787252464255
+    },
+    "Shanghai Qibao Dwight High School": {
+      "count": 354,
+      "total_true": 714834.47,
+      "total_pred": 418711.2818092159,
+      "factor": 1.7072252433974573
+    },
+    "JEDI": {
+      "count": 48,
+      "total_true": 44910.979999999996,
+      "total_pred": 54774.42602584022,
+      "factor": 0.8199260724122043
+    },
+    "维塔": {
+      "count": 204,
+      "total_true": 624416.0,
+      "total_pred": 105415.61517140853,
+      "factor": 5.923372917614562
+    },
+    "CDSS": {
+      "count": 31,
+      "total_true": 44209.14,
+      "total_pred": 13877.580430951273,
+      "factor": 3.185651866329668
+    },
+    "Xunzhan Human Resources Agency": {
+      "count": 90,
+      "total_true": 57486.31,
+      "total_pred": 40964.92119904844,
+      "factor": 1.4033057630130465
+    },
+    "PetSmart": {
+      "count": 2592,
+      "total_true": 8236676.33,
+      "total_pred": 2523367.0022031963,
+      "factor": 3.264161068448788
+    },
+    "Chongqing Jiangbei Beautiful Grassland Montessori School": {
+      "count": 39,
+      "total_true": 66028.99,
+      "total_pred": 45499.41164320786,
+      "factor": 1.4512053588248277
+    },
+    "Virogenbio成都维瑾柏鳌生物医药科技": {
+      "count": 118,
+      "total_true": 742138.71,
+      "total_pred": 114620.14415358682,
+      "factor": 6.47476685254872
+    },
+    "Zhongwan Private Equity Fund": {
+      "count": 241,
+      "total_true": 189474.24,
+      "total_pred": 126124.77739340538,
+      "factor": 1.5022761103394973
+    },
+    "CFT Capital": {
+      "count": 297,
+      "total_true": 272434.31,
+      "total_pred": 153780.02303464766,
+      "factor": 1.7715845310975062
+    },
+    "一威欧生": {
+      "count": 49,
+      "total_true": 95973.5,
+      "total_pred": 72510.44107080676,
+      "factor": 1.3235817984651543
+    },
+    "LUMIERE北京绿绵科技": {
+      "count": 550,
+      "total_true": 1175067.69,
+      "total_pred": 235624.55474189168,
+      "factor": 4.987034102991494
+    },
+    "JIANLU": {
+      "count": 74,
+      "total_true": 53848.9,
+      "total_pred": 35443.24913422033,
+      "factor": 1.5192991984476132
+    },
+    "Rui Ji Li Feng睿即励峰": {
+      "count": 54,
+      "total_true": 50082.159999999996,
+      "total_pred": 37155.34927073865,
+      "factor": 1.34791250743111
+    },
+    "Shanghai Providence Capital": {
+      "count": 311,
+      "total_true": 1278881.77,
+      "total_pred": 90490.3896211333,
+      "factor": 14.132791066039651
+    },
+    "ToT Quant北京墨丘利科技有限公司": {
+      "count": 118,
+      "total_true": 160794.34,
+      "total_pred": 68114.22033808709,
+      "factor": 2.360657425158685
+    },
+    "Zhongzhuang Huasheng": {
+      "count": 385,
+      "total_true": 19450969.29,
+      "total_pred": 15123873.92782154,
+      "factor": 1.286110250774997
+    },
+    "CDG Capital": {
+      "count": 54,
+      "total_true": 64806.869999999995,
+      "total_pred": 56139.19054890179,
+      "factor": 1.1543962313376777
+    },
+    "Franklin Templeton Investment": {
+      "count": 589,
+      "total_true": 936840.31,
+      "total_pred": 191704.93596097606,
+      "factor": 4.886886742398254
+    },
+    "Cook China": {
+      "count": 190,
+      "total_true": 1360972.71,
+      "total_pred": 270401.1306154246,
+      "factor": 5.033162054102615
+    },
+    "Frontiers 北京弗朗蒂尔科技有限公司": {
+      "count": 877,
+      "total_true": 1843256.8099999998,
+      "total_pred": 788503.7244834114,
+      "factor": 2.337664049979739
+    },
+    "GESSI BEIJING": {
+      "count": 50,
+      "total_true": 109837.25,
+      "total_pred": 58120.96536511581,
+      "factor": 1.889804295403605
+    },
+    "DT (Shanghai) Investment": {
+      "count": 200,
+      "total_true": 474111.44,
+      "total_pred": 266354.7332805694,
+      "factor": 1.7800000554170234
+    },
+    "宁波淡水谷": {
+      "count": 216,
+      "total_true": 4159159.0000000005,
+      "total_pred": 839951.7930240873,
+      "factor": 4.951663934219054
+    },
+    "上海闪策信息科技有限公司": {
+      "count": 214,
+      "total_true": 387991.97,
+      "total_pred": 210172.55304029756,
+      "factor": 1.846063933598447
+    },
+    "YOUGILL": {
+      "count": 52,
+      "total_true": 42124.32,
+      "total_pred": 5890.108332214801,
+      "factor": 7.151705473668326
+    },
+    "YOUYI": {
+      "count": 128,
+      "total_true": 393269.4,
+      "total_pred": 146675.49918379256,
+      "factor": 2.681220805031736
+    },
+    "Oumeiyi Shoe": {
+      "count": 259,
+      "total_true": 784661.19,
+      "total_pred": 119834.99843162743,
+      "factor": 6.5478466246878035
+    },
+    "JLG China": {
+      "count": 400,
+      "total_true": 260376.04,
+      "total_pred": 111757.97019243811,
+      "factor": 2.3298207685022705
+    },
+    "SBCVC": {
+      "count": 93,
+      "total_true": 215800.0,
+      "total_pred": 129238.66478132259,
+      "factor": 1.6697789346953014
+    },
+    "MLW": {
+      "count": 130,
+      "total_true": 261296.78,
+      "total_pred": 143537.8870895025,
+      "factor": 1.8204028587732337
+    },
+    "MacGregor": {
+      "count": 59,
+      "total_true": 146669.62,
+      "total_pred": 4948.951943104607,
+      "factor": 29.636501159473838
+    },
+    "HSBDT-恒烁半导体": {
+      "count": 118,
+      "total_true": 509323.18,
+      "total_pred": 1984.5438842689532,
+      "factor": 256.64495707920287
+    },
+    "SAIF": {
+      "count": 1676,
+      "total_true": 24707582.64,
+      "total_pred": 3046881.41912026,
+      "factor": 8.109138243763335
+    },
+    "LYZZ Capital": {
+      "count": 136,
+      "total_true": 217918.7,
+      "total_pred": 129430.1829433066,
+      "factor": 1.683677601656898
+    },
+    "Cigna & CMB_高经": {
+      "count": 2776,
+      "total_true": 9181554.79,
+      "total_pred": 3681120.3009910877,
+      "factor": 2.4942283976777397
+    },
+    "CHJ": {
+      "count": 21055,
+      "total_true": 48025729.5,
+      "total_pred": 13604283.266712813,
+      "factor": 3.530191819624203
+    },
+    "Maflow": {
+      "count": 61,
+      "total_true": 312763.18,
+      "total_pred": 116973.6235919642,
+      "factor": 2.6737923507525334
+    },
+    "CHINA CENTURY GROUP": {
+      "count": 262,
+      "total_true": 466345.02,
+      "total_pred": 261577.3002499746,
+      "factor": 1.7828191496522845
+    },
+    "上海熠美私募": {
+      "count": 361,
+      "total_true": 994168.45,
+      "total_pred": 671163.5449062864,
+      "factor": 1.4812610987964405
+    },
+    "Shanghai Jianhe": {
+      "count": 44,
+      "total_true": 47929.38,
+      "total_pred": 560.8048171270759,
+      "factor": 85.46535004020733
+    },
+    "JonesandVining": {
+      "count": 184,
+      "total_true": 125825.47,
+      "total_pred": 77799.8100782333,
+      "factor": 1.6172979069418478
+    },
+    "Shanghai RC Trading Limited": {
+      "count": 570,
+      "total_true": 1040380.17,
+      "total_pred": 548525.3187603531,
+      "factor": 1.8966857762395009
+    },
+    "Zerone": {
+      "count": 124,
+      "total_true": 216247.43,
+      "total_pred": 136998.73041296744,
+      "factor": 1.5784630218699556
+    },
+    "Insider International Shanghai": {
+      "count": 65,
+      "total_true": 561304.41,
+      "total_pred": 120442.439593041,
+      "factor": 4.660354040457609
+    },
+    "HEZHAN Energy 北京和展能源有限公司": {
+      "count": 37,
+      "total_true": 47616.229999999996,
+      "total_pred": 44721.85000622582,
+      "factor": 1.0647195944123788
+    },
+    "上海宏杉": {
+      "count": 182,
+      "total_true": 65762.04,
+      "total_pred": 68955.75278289031,
+      "factor": 0.9536846070994854
+    },
+    "GSMA": {
+      "count": 64,
+      "total_true": 70723.59,
+      "total_pred": 69034.68017161252,
+      "factor": 1.0244646578239955
+    },
+    "宁德时代智能科技": {
+      "count": 34,
+      "total_true": 50051.99,
+      "total_pred": 23182.32298973908,
+      "factor": 2.1590584352635376
+    },
+    "CIGNA and CMB Shenzhen Branch": {
+      "count": 225,
+      "total_true": 454191.88,
+      "total_pred": 60663.33399377695,
+      "factor": 7.487090637758099
+    },
+    "Cigna & CMB_ELT": {
+      "count": 444,
+      "total_true": 1353180.73,
+      "total_pred": 474290.2330254015,
+      "factor": 2.853064718133312
+    },
+    "CHLITINA": {
+      "count": 42,
+      "total_true": 154535.82,
+      "total_pred": 70625.0389757939,
+      "factor": 2.1881165977545978
+    },
+    "苏州风图": {
+      "count": 115,
+      "total_true": 38818.840000000004,
+      "total_pred": 51604.15016598652,
+      "factor": 0.7522425982239389
+    },
+    "Maccaferri马克菲尔（长沙）新型支档科技开发有限公司": {
+      "count": 71,
+      "total_true": 146271.72,
+      "total_pred": 22998.144754578807,
+      "factor": 6.360153028034059
+    },
+    "Dr.Cheese奶酪博士": {
+      "count": 150,
+      "total_true": 396107.69,
+      "total_pred": 132568.54655379718,
+      "factor": 2.9879462383579574
+    },
+    "CMB Guangzhou Branch": {
+      "count": 1302,
+      "total_true": 3800824.6,
+      "total_pred": 1527283.2714488977,
+      "factor": 2.488617973530377
+    },
+    "SBSS": {
+      "count": 343,
+      "total_true": 594512.93,
+      "total_pred": 142575.2666445562,
+      "factor": 4.169818117767481
+    },
+    "HITACHI-HELC-": {
+      "count": 147,
+      "total_true": 247828.96,
+      "total_pred": 112697.40591338127,
+      "factor": 2.1990653466369956
+    },
+    "Magicwheel-Tech": {
+      "count": 124,
+      "total_true": 614437.45,
+      "total_pred": 258485.37514782962,
+      "factor": 2.3770685271791443
+    },
+    "MONIER 曼宁家": {
+      "count": 70,
+      "total_true": 109878.51,
+      "total_pred": 72536.06831489237,
+      "factor": 1.5148120452710125
+    },
+    "Doyen Holdings": {
+      "count": 554,
+      "total_true": 1202553.25,
+      "total_pred": 206344.35332801382,
+      "factor": 5.8278951209697984
+    },
+    "Intralox Conveyor Belts": {
+      "count": 402,
+      "total_true": 14127978.76,
+      "total_pred": 128539.11952272618,
+      "factor": 109.9118992915003
+    },
+    "CMB Credit Card Center": {
+      "count": 1843,
+      "total_true": 17119714.44,
+      "total_pred": 1710380.9175176176,
+      "factor": 10.00929925296811
+    },
+    "Giga Device": {
+      "count": 147,
+      "total_true": 401373.0,
+      "total_pred": 95613.79790732665,
+      "factor": 4.197856468258164
+    },
+    "GMA Shanghai Branch": {
+      "count": 251,
+      "total_true": 494545.79,
+      "total_pred": 327125.73673227103,
+      "factor": 1.5117911386004772
+    },
+    "Swedish Chamber": {
+      "count": 390,
+      "total_true": 1396383.09,
+      "total_pred": 256771.53401624705,
+      "factor": 5.438231676847967
+    },
+    "Advent International": {
+      "count": 1015,
+      "total_true": 2243083.05,
+      "total_pred": 1000984.2095698282,
+      "factor": 2.240877556863721
+    },
+    "Premier League": {
+      "count": 80,
+      "total_true": 84923.47,
+      "total_pred": 52299.852458966176,
+      "factor": 1.6237802977863067
+    },
+    " JBS FOOD TRADING": {
+      "count": 565,
+      "total_true": 560544.4400000001,
+      "total_pred": 400202.94050586206,
+      "factor": 1.4006504782085412
+    },
+    "Gensler-April": {
+      "count": 2228,
+      "total_true": 2583995.07,
+      "total_pred": 1267341.3326114719,
+      "factor": 2.038910121139538
+    },
+    "SCB Shanghai Branch": {
+      "count": 89,
+      "total_true": 164531.45,
+      "total_pred": 124069.86122679892,
+      "factor": 1.3261194005789816
+    },
+    "Beike": {
+      "count": 48,
+      "total_true": 196102.79,
+      "total_pred": 136730.1590314171,
+      "factor": 1.4342321503110413
+    },
+    "MOROCCANOIL": {
+      "count": 233,
+      "total_true": 136407.38,
+      "total_pred": 45124.20938726451,
+      "factor": 3.0229311904243246
+    },
+    "QCTC 北京清大科越": {
+      "count": 212,
+      "total_true": 407591.29,
+      "total_pred": 279850.6083951982,
+      "factor": 1.456460260484442
+    },
+    "Beijing Super Lion": {
+      "count": 41,
+      "total_true": 36127.17,
+      "total_pred": 26729.39561572471,
+      "factor": 1.3515894829566086
+    },
+    "Geely-外籍": {
+      "count": 2945,
+      "total_true": 13815544.07,
+      "total_pred": 3954779.6796047254,
+      "factor": 3.4933789463034874
+    },
+    "Meli China": {
+      "count": 62,
+      "total_true": 61128.44,
+      "total_pred": 792.3803629091265,
+      "factor": 77.14532421724145
+    },
+    "Shanghai Yandong": {
+      "count": 97,
+      "total_true": 214364.07,
+      "total_pred": 128321.98819243132,
+      "factor": 1.6705170565043008
+    },
+    "Hamilton Lane China": {
+      "count": 175,
+      "total_true": 226635.34,
+      "total_pred": 2239.0952777665843,
+      "factor": 101.21737214597695
+    },
+    "蛇口南顺面粉": {
+      "count": 229,
+      "total_true": 2617597.58,
+      "total_pred": 51919.21990663656,
+      "factor": 50.416735550092625
+    },
+    "CIV-IP": {
+      "count": 95,
+      "total_true": 77904.81,
+      "total_pred": 51703.357910984065,
+      "factor": 1.5067649983996416
+    },
+    "华通包装": {
+      "count": 159,
+      "total_true": 301371.43,
+      "total_pred": 242798.43852041924,
+      "factor": 1.2412412198221563
+    },
+    "Jardine Matheson Group": {
+      "count": 1424,
+      "total_true": 2061162.77,
+      "total_pred": 1141715.8357580223,
+      "factor": 1.8053202955107712
+    },
+    "亿航智能": {
+      "count": 418,
+      "total_true": 5795904.57,
+      "total_pred": 2010345.4465832033,
+      "factor": 2.883039121386207
+    },
+    "赣州集盛": {
+      "count": 286,
+      "total_true": 5567037.97,
+      "total_pred": 65505.204871600894,
+      "factor": 84.98619279051414
+    },
+    "TIJ Freight Services": {
+      "count": 92,
+      "total_true": 124114.31,
+      "total_pred": 35266.46667786647,
+      "factor": 3.51932931454954
+    },
+    "TIANREN PRODUCTIONS": {
+      "count": 39,
+      "total_true": 224574.5,
+      "total_pred": 497.0769969989991,
+      "factor": 451.790168033972
+    },
+    "HUAXING GROUP杭州华兴实业集团": {
+      "count": 62,
+      "total_true": 224243.42,
+      "total_pred": 95147.8107980342,
+      "factor": 2.3567901154971502
+    },
+    "Green Oasis School": {
+      "count": 387,
+      "total_true": 4085478.28,
+      "total_pred": 468197.29727036116,
+      "factor": 8.725975788025181
+    },
+    "Qian Yan Information Technology": {
+      "count": 1592,
+      "total_true": 5565364.36,
+      "total_pred": 1419219.8029348084,
+      "factor": 3.9214252425814298
+    },
+    "ADVACARE埃狄凯": {
+      "count": 57,
+      "total_true": 568623.12,
+      "total_pred": 838.0560694624734,
+      "factor": 678.5024781989982
+    },
+    "10X Genomics (Shanghai) Co.,Ltd.": {
+      "count": 1169,
+      "total_true": 5566256.48,
+      "total_pred": 886814.5985876553,
+      "factor": 6.276685666727683
+    },
+    "CMB WUXI": {
+      "count": 1140,
+      "total_true": 1231913.89,
+      "total_pred": 426754.0947325762,
+      "factor": 2.8867066659828393
+    },
+    "四川茶姬": {
+      "count": 190,
+      "total_true": 164866.56,
+      "total_pred": 98105.0909719099,
+      "factor": 1.6805097306031314
+    },
+    "Starquest Capital": {
+      "count": 224,
+      "total_true": 492330.71,
+      "total_pred": 241248.35987446347,
+      "factor": 2.040762931015118
+    },
+    "Shanghai Yanxin Building Decoration": {
+      "count": 138,
+      "total_true": 369227.53,
+      "total_pred": 171263.15804948896,
+      "factor": 2.155907518027353
+    },
+    "ABB": {
+      "count": 982,
+      "total_true": 2965795.38,
+      "total_pred": 1482193.813934611,
+      "factor": 2.000949776012788
+    },
+    "Guoxiu Trading": {
+      "count": 206,
+      "total_true": 591934.73,
+      "total_pred": 143058.12991180294,
+      "factor": 4.13772171050282
+    },
+    "QSI Shenzhen": {
+      "count": 30,
+      "total_true": 26270.82,
+      "total_pred": 36730.348342266494,
+      "factor": 0.7152347087808458
+    },
+    "WIOE": {
+      "count": 37,
+      "total_true": 12017.06,
+      "total_pred": 33654.85115740585,
+      "factor": 0.3570676911864936
+    },
+    "Shanghai YaoWang Law Offices": {
+      "count": 227,
+      "total_true": 498355.12,
+      "total_pred": 234301.23584920957,
+      "factor": 2.1269845982405697
+    },
+    "奎克好富顿": {
+      "count": 153,
+      "total_true": 328947.42,
+      "total_pred": 93084.26818708889,
+      "factor": 3.5338669616959626
+    },
+    "Manulife Investment宏利投资（上海）有限公司": {
+      "count": 92,
+      "total_true": 208633.98,
+      "total_pred": 83028.100481109,
+      "factor": 2.5128116720852787
+    },
+    "Gong Ying": {
+      "count": 136,
+      "total_true": 234910.84999999998,
+      "total_pred": 1820.164756374443,
+      "factor": 129.06021236666243
+    },
+    "Shanghai Baolijia Chemical": {
+      "count": 93,
+      "total_true": 130585.54000000001,
+      "total_pred": 91673.46163867149,
+      "factor": 1.4244639360810813
+    },
+    "Quhuo北京趣活": {
+      "count": 42,
+      "total_true": 47814.02,
+      "total_pred": 535.3136890758452,
+      "factor": 89.31962880034912
+    },
+    "Dreamsflying": {
+      "count": 86,
+      "total_true": 36332.95,
+      "total_pred": 29825.879053999353,
+      "factor": 1.2181686224308654
+    },
+    "Boehringer Ingelheim Shanghai": {
+      "count": 216,
+      "total_true": 1737739.96,
+      "total_pred": 282314.9654676984,
+      "factor": 6.155323566078635
+    },
+    "Marriott_Aug": {
+      "count": 4980,
+      "total_true": 11200574.06,
+      "total_pred": 4548742.955931729,
+      "factor": 2.4623449090245995
+    },
+    "T-ray": {
+      "count": 177,
+      "total_true": 111281.4,
+      "total_pred": 74972.53171358805,
+      "factor": 1.4842956140939725
+    },
+    "Guangzhou Brandart": {
+      "count": 81,
+      "total_true": 893235.07,
+      "total_pred": 304161.24793635984,
+      "factor": 2.9367155614343514
+    },
+    "顺能光电": {
+      "count": 63,
+      "total_true": 110639.07,
+      "total_pred": 74968.06420155721,
+      "factor": 1.475816018171933
+    },
+    "长江存储": {
+      "count": 2312,
+      "total_true": 10571765.11,
+      "total_pred": 3335225.2803267166,
+      "factor": 3.169730444404762
+    },
+    "Due West 北京途西教育咨询有限公司": {
+      "count": 1082,
+      "total_true": 2092366.2,
+      "total_pred": 672359.5596739298,
+      "factor": 3.111975088172647
+    },
+    "Asahi Lite Holdings": {
+      "count": 56,
+      "total_true": 86943.84999999999,
+      "total_pred": 713.7515854344603,
+      "factor": 121.8124789832548
+    },
+    "Qua Tech": {
+      "count": 50,
+      "total_true": 222493.54,
+      "total_pred": 120469.48808332396,
+      "factor": 1.846887071074047
+    },
+    "Shanghai Yunyuan Investment": {
+      "count": 142,
+      "total_true": 550912.83,
+      "total_pred": 334214.39566360094,
+      "factor": 1.6483815094383725
+    },
+    "HBBCZC": {
+      "count": 55,
+      "total_true": 89796.99,
+      "total_pred": 60272.58552401311,
+      "factor": 1.4898479834455436
+    },
+    "Clasquin": {
+      "count": 45,
+      "total_true": 633141.47,
+      "total_pred": 21274.54474063394,
+      "factor": 29.760517920306555
+    },
+    "Heyou": {
+      "count": 160,
+      "total_true": 121656.12,
+      "total_pred": 50452.80934487609,
+      "factor": 2.411285349214259
+    },
+    "Siguler Guff Shanghai": {
+      "count": 204,
+      "total_true": 454266.98,
+      "total_pred": 142008.7031992394,
+      "factor": 3.1988671804337208
+    },
+    "Dayi Business": {
+      "count": 67,
+      "total_true": 108183.82,
+      "total_pred": 44814.14753561142,
+      "factor": 2.414055068525672
+    },
+    "WSGR": {
+      "count": 1134,
+      "total_true": 3303845.34,
+      "total_pred": 1193722.2713014155,
+      "factor": 2.7676834213691044
+    },
+    "CAA创新精英文化": {
+      "count": 285,
+      "total_true": 382605.82,
+      "total_pred": 84544.90685364416,
+      "factor": 4.5254744991597144
+    },
+    "Wanshsin Seiko": {
+      "count": 600,
+      "total_true": 1386064.93,
+      "total_pred": 3237426.67684345,
+      "factor": 0.4281378602067487
+    },
+    "黑石": {
+      "count": 1340,
+      "total_true": 6004055.28,
+      "total_pred": 2056502.4201100087,
+      "factor": 2.9195469070631215
+    },
+    "Agree Technology Co.,Ltd": {
+      "count": 99,
+      "total_true": 261861.52,
+      "total_pred": 117859.6614673648,
+      "factor": 2.22180784112051
+    },
+    "AIM": {
+      "count": 1319,
+      "total_true": 7885729.2700000005,
+      "total_pred": 1243438.1851979867,
+      "factor": 6.341874782254973
+    },
+    "HAND Enterprise Solutions Co.,Ltd": {
+      "count": 409,
+      "total_true": 700730.05,
+      "total_pred": 299948.0022946443,
+      "factor": 2.336171751901386
+    },
+    "Junlong": {
+      "count": 156,
+      "total_true": 296822.96,
+      "total_pred": 114158.7812437594,
+      "factor": 2.6000887252484235
+    },
+    "AICI TECH 爱磁科技（宁波）有限公司": {
+      "count": 57,
+      "total_true": 284104.19,
+      "total_pred": 50804.313041744885,
+      "factor": 5.592127380337911
+    },
+    "Shanghai zhan pu": {
+      "count": 73,
+      "total_true": 115606.06,
+      "total_pred": 38395.0711414013,
+      "factor": 3.0109609531454233
+    },
+    "Trina Solar": {
+      "count": 99,
+      "total_true": 200933.73,
+      "total_pred": 1263.2912577246946,
+      "factor": 159.05574329858058
+    },
+    "Clearvue Partners": {
+      "count": 198,
+      "total_true": 910339.85,
+      "total_pred": 166114.01135248327,
+      "factor": 5.48021110674594
+    },
+    "飞虎互动": {
+      "count": 65,
+      "total_true": 348807.35,
+      "total_pred": 105765.28390025256,
+      "factor": 3.297938010821782
+    },
+    "Bunge": {
+      "count": 251,
+      "total_true": 1249077.12,
+      "total_pred": 258791.87268373198,
+      "factor": 4.826570120022625
+    },
+    "CATL CAPITAL厦门溥泉私募基金管理合伙企业": {
+      "count": 31,
+      "total_true": 42529.1,
+      "total_pred": 22698.25871595068,
+      "factor": 1.8736723610482795
+    },
+    "Shanghai Dafu": {
+      "count": 124,
+      "total_true": 487021.42,
+      "total_pred": 234406.8028811596,
+      "factor": 2.077676134028038
+    },
+    "Shanghai Youpin": {
+      "count": 55,
+      "total_true": 23158.53,
+      "total_pred": 28215.663367741614,
+      "factor": 0.820768581555898
+    },
+    "ByteDance-生育ASO": {
+      "count": 278,
+      "total_true": 2870419.08,
+      "total_pred": 278459.04447768215,
+      "factor": 10.308227141209118
+    },
+    "McKinsey": {
+      "count": 2522,
+      "total_true": 15462965.02,
+      "total_pred": 6712016.6252562525,
+      "factor": 2.3037733491027597
+    },
+    "Shanghai YongJi": {
+      "count": 35,
+      "total_true": 18106.54,
+      "total_pred": 26755.486378021837,
+      "factor": 0.6767412015680466
+    },
+    "INFORMATICA CHINA": {
+      "count": 134,
+      "total_true": 564859.34,
+      "total_pred": 2263.2278265615632,
+      "factor": 249.58129860844343
+    },
+    "DataTower.ai": {
+      "count": 175,
+      "total_true": 405477.02,
+      "total_pred": 69302.28330459881,
+      "factor": 5.8508464752573754
+    },
+    "EEAE北京新兴东方航空装备股份有限公司": {
+      "count": 54,
+      "total_true": 22689.68,
+      "total_pred": 29535.262023516785,
+      "factor": 0.768223419922053
+    },
+    "INHOPE CULTURE行望国际": {
+      "count": 59,
+      "total_true": 179769.14,
+      "total_pred": 789.1745841787723,
+      "factor": 227.7938793316192
+    },
+    "Shanghai God Bless Rail": {
+      "count": 151,
+      "total_true": 597027.86,
+      "total_pred": 213450.06923962073,
+      "factor": 2.797037556028018
+    },
+    "Winhigh Industrial上海运徽实业有限公司": {
+      "count": 112,
+      "total_true": 1353309.99,
+      "total_pred": 389541.8916342354,
+      "factor": 3.4741064287655745
+    },
+    "Sino Foreign Yunsuzhong": {
+      "count": 61,
+      "total_true": 56932.27,
+      "total_pred": 34818.56378599122,
+      "factor": 1.63511253220921
+    },
+    "Mei Shen Hui Shanghai": {
+      "count": 71,
+      "total_true": 159356.12,
+      "total_pred": 81765.74554580143,
+      "factor": 1.9489349596982026
+    },
+    "VNU Exhibitions": {
+      "count": 91,
+      "total_true": 567631.14,
+      "total_pred": 41637.13920656822,
+      "factor": 13.632808372926272
+    },
+    "CMB ZHENGZHOU": {
+      "count": 1530,
+      "total_true": 8930858.1,
+      "total_pred": 763824.8456992481,
+      "factor": 11.692285411093417
+    },
+    "ATL": {
+      "count": 42,
+      "total_true": 41990.11,
+      "total_pred": 78571.58179578587,
+      "factor": 0.5344185396335258
+    },
+    "Changsha Zhuiwei ": {
+      "count": 89,
+      "total_true": 57550.28,
+      "total_pred": 20653.505752318044,
+      "factor": 2.7864654403062223
+    },
+    "KYHR": {
+      "count": 109,
+      "total_true": 643194.1,
+      "total_pred": 358543.99011633487,
+      "factor": 1.7939056788856123
+    },
+    "BBM": {
+      "count": 112,
+      "total_true": 270720.12,
+      "total_pred": 99172.07040758344,
+      "factor": 2.7298020388943973
+    },
+    "EHL": {
+      "count": 178,
+      "total_true": 628535.59,
+      "total_pred": 170048.958562755,
+      "factor": 3.696203701053804
+    },
+    "成都纽瑞特": {
+      "count": 72,
+      "total_true": 60831.72,
+      "total_pred": 33820.87205114543,
+      "factor": 1.798644337378633
+    },
+    "Compass Information": {
+      "count": 64,
+      "total_true": 122134.58,
+      "total_pred": 84468.10923268042,
+      "factor": 1.4459253451922487
+    },
+    "Simmons": {
+      "count": 618,
+      "total_true": 12029916.55,
+      "total_pred": 289684.6654337751,
+      "factor": 41.52762636567714
+    },
+    "Tellhow Technology Group": {
+      "count": 51,
+      "total_true": 104248.66,
+      "total_pred": 650.0237653063834,
+      "factor": 160.37669015203352
+    },
+    "SENSETIME-September": {
+      "count": 300,
+      "total_true": 2976103.58,
+      "total_pred": 722713.3026963067,
+      "factor": 4.117958765802041
+    },
+    "NINGXI REAL ESTATE": {
+      "count": 46,
+      "total_true": 36748.770000000004,
+      "total_pred": 586.2959451783066,
+      "factor": 62.679556804411845
+    },
+    "Akzo Nobel Chemicals": {
+      "count": 504,
+      "total_true": 1103475.64,
+      "total_pred": 335055.7933598565,
+      "factor": 3.293408625872782
+    },
+    "Moncler": {
+      "count": 155,
+      "total_true": 257069.7,
+      "total_pred": 140135.6909648453,
+      "factor": 1.834434170410513
+    },
+    "JOYY": {
+      "count": 39,
+      "total_true": 124651.98000000001,
+      "total_pred": 51472.590361585644,
+      "factor": 2.4217156961470634
+    },
+    "Westlake University": {
+      "count": 9646,
+      "total_true": 12123780.709999999,
+      "total_pred": 5460196.467308532,
+      "factor": 2.2203927610641663
+    },
+    "Qilin Capital": {
+      "count": 58,
+      "total_true": 133384.65,
+      "total_pred": 788.8244557089789,
+      "factor": 169.09294461480238
+    },
+    "Asia Aroma": {
+      "count": 286,
+      "total_true": 8330699.390000001,
+      "total_pred": 28523.15269383064,
+      "factor": 292.0679729699681
+    },
+    "KKR": {
+      "count": 1680,
+      "total_true": 7809797.89,
+      "total_pred": 1528414.019843018,
+      "factor": 5.10973976200646
+    },
+    "SHENZHEN FIMI ROBOT": {
+      "count": 69,
+      "total_true": 133407.87,
+      "total_pred": 43123.770757122256,
+      "factor": 3.0936040067406805
+    },
+    "MeiShang GZ": {
+      "count": 62,
+      "total_true": 101323.95,
+      "total_pred": 43416.085875912504,
+      "factor": 2.3337882251659887
+    },
+    "Multiplier Technologies": {
+      "count": 40,
+      "total_true": 206316.66,
+      "total_pred": 22757.853346932254,
+      "factor": 9.065734665515427
+    },
+    "Air Liquide (China) Holding Co.,Ltd.": {
+      "count": 181,
+      "total_true": 326943.75,
+      "total_pred": 167215.93578442835,
+      "factor": 1.9552188519967961
+    },
+    "HZXL": {
+      "count": 440,
+      "total_true": 1670768.3900000001,
+      "total_pred": 590990.7514973163,
+      "factor": 2.8270635128671504
+    },
+    "YourTaste": {
+      "count": 482,
+      "total_true": 9310579.3,
+      "total_pred": 574912.3510903374,
+      "factor": 16.194780443214043
+    },
+    "VS(L Brands)": {
+      "count": 658,
+      "total_true": 1547861.42,
+      "total_pred": 742824.9039274672,
+      "factor": 2.0837500355953873
+    },
+    "Decheng Capital": {
+      "count": 267,
+      "total_true": 10631101.15,
+      "total_pred": 2174535.4681542036,
+      "factor": 4.888906759945344
+    },
+    "POWERTENSORS上海阵量智能科技有限公司": {
+      "count": 285,
+      "total_true": 564140.04,
+      "total_pred": 3635.0270075356693,
+      "factor": 155.1955566851354
+    },
+    "CPS易冲半导体": {
+      "count": 588,
+      "total_true": 6072777.03,
+      "total_pred": 332951.943935679,
+      "factor": 18.239199802278865
+    },
+    "lululemon": {
+      "count": 378,
+      "total_true": 816796.04,
+      "total_pred": 402873.3808437888,
+      "factor": 2.0274261811224177
+    },
+    "niu 北京牛电科技有限责任公司": {
+      "count": 236,
+      "total_true": 3541059.11,
+      "total_pred": 66046.79253318075,
+      "factor": 53.61439933999874
+    },
+    "Deloitte": {
+      "count": 17922,
+      "total_true": 75659852.2,
+      "total_pred": 15027808.191060452,
+      "factor": 5.034656500673702
+    },
+    "Hua Yu Tian Cheng": {
+      "count": 169,
+      "total_true": 264344.99,
+      "total_pred": 185265.13132891984,
+      "factor": 1.4268469630730551
+    },
+    "江西一脉阳光": {
+      "count": 125,
+      "total_true": 250423.73,
+      "total_pred": 74819.53632034537,
+      "factor": 3.3470366473242
+    },
+    "Charlotte Tilbury Beauty": {
+      "count": 51,
+      "total_true": 121506.65,
+      "total_pred": 54932.69397264679,
+      "factor": 2.211918644669112
+    },
+    "Hansgrohe": {
+      "count": 62,
+      "total_true": 71182.01,
+      "total_pred": 65662.63612442672,
+      "factor": 1.084056538106609
+    },
+    "CODEMINT杭州减法美学科技有限公司北京分公司": {
+      "count": 148,
+      "total_true": 631450.53,
+      "total_pred": 62462.86956838095,
+      "factor": 10.109214231804103
+    },
+    "Ningbo Zhuyun": {
+      "count": 59,
+      "total_true": 48490.42,
+      "total_pred": 751.9882775113064,
+      "factor": 64.48294667634754
+    },
+    "Huaming Power": {
+      "count": 608,
+      "total_true": 422092.3,
+      "total_pred": 323446.83124301006,
+      "factor": 1.3049820224792255
+    },
+    "Alten China": {
+      "count": 42,
+      "total_true": 841717.93,
+      "total_pred": 84517.05636166706,
+      "factor": 9.959148676429336
+    },
+    "BEL CHINA": {
+      "count": 36,
+      "total_true": 49727.509999999995,
+      "total_pred": 44470.67945445455,
+      "factor": 1.1182089100061834
+    },
+    "Cramilo 台州卡拉米罗眼镜": {
+      "count": 45,
+      "total_true": 71517.15,
+      "total_pred": 44206.48798687243,
+      "factor": 1.6177975961636615
+    },
+    "Wisdom-greentech": {
+      "count": 49,
+      "total_true": 61901.13,
+      "total_pred": 31522.715256392123,
+      "factor": 1.963699176816559
+    },
+    "SIG_SSTC": {
+      "count": 321,
+      "total_true": 369074.21,
+      "total_pred": 218975.62404250322,
+      "factor": 1.6854579664463596
+    },
+    "Shenzhen Scape Tech": {
+      "count": 771,
+      "total_true": 9575169.82,
+      "total_pred": 3943866.524619039,
+      "factor": 2.4278635598411693
+    },
+    "Xigua Music": {
+      "count": 215,
+      "total_true": 810783.3,
+      "total_pred": 441509.20823704946,
+      "factor": 1.8363904645102773
+    },
+    "COS Capital": {
+      "count": 86,
+      "total_true": 194663.4,
+      "total_pred": 205952.22040968837,
+      "factor": 0.9451871876533683
+    },
+    "Microsoft": {
+      "count": 9281,
+      "total_true": 51366304.48,
+      "total_pred": 23515945.914311416,
+      "factor": 2.184318022637538
+    },
+    "Metax": {
+      "count": 1741,
+      "total_true": 3729169.76,
+      "total_pred": 983921.8840889995,
+      "factor": 3.790107548479613
+    },
+    "Mercury(贝壳）": {
+      "count": 14254,
+      "total_true": 76636489.07,
+      "total_pred": 17307377.71446857,
+      "factor": 4.427966520077369
+    },
+    "JPMC": {
+      "count": 61236,
+      "total_true": 213480803.68,
+      "total_pred": 73751381.94439523,
+      "factor": 2.894600725461031
+    },
+    "King-cell": {
+      "count": 519,
+      "total_true": 1321008.08,
+      "total_pred": 1080214.6730853585,
+      "factor": 1.222912549620231
+    },
+    "NWCD": {
+      "count": 189,
+      "total_true": 3693396.17,
+      "total_pred": 1185874.0348262463,
+      "factor": 3.1144928226218855
+    },
+    "Alix Partners": {
+      "count": 1743,
+      "total_true": 5308671.83,
+      "total_pred": 2148889.9622327182,
+      "factor": 2.47042516057185
+    },
+    "NMK钠镁客": {
+      "count": 203,
+      "total_true": 224682.29,
+      "total_pred": 146222.06214368367,
+      "factor": 1.536582692830704
+    },
+    "Dentsu": {
+      "count": 841,
+      "total_true": 8227404.27,
+      "total_pred": 4412193.035089751,
+      "factor": 1.8646972615586483
+    },
+    "SuZhou LavaMed Co.,Ltd.": {
+      "count": 107,
+      "total_true": 123845.36,
+      "total_pred": 89274.90205806191,
+      "factor": 1.3872360220507935
+    },
+    "American Hearst": {
+      "count": 169,
+      "total_true": 368627.75,
+      "total_pred": 274007.13764782,
+      "factor": 1.345321706450565
+    },
+    "WuXi Biologics": {
+      "count": 227,
+      "total_true": 1393131.42,
+      "total_pred": 234568.7499713372,
+      "factor": 5.939117722076072
+    },
+    "Milestone": {
+      "count": 379,
+      "total_true": 350853.38,
+      "total_pred": 146478.03188494086,
+      "factor": 2.3952627945984206
+    },
+    "Tuobang New Energy绍兴拓邦新能源": {
+      "count": 126,
+      "total_true": 212451.12000000002,
+      "total_pred": 46561.356025107845,
+      "factor": 4.562820719513354
+    },
+    "浙江托普云农科技股份有限公司": {
+      "count": 225,
+      "total_true": 406069.88,
+      "total_pred": 301944.11415295256,
+      "factor": 1.34485111968204
+    },
+    "日立电梯2025年保单": {
+      "count": 2087,
+      "total_true": 3194978.68,
+      "total_pred": 40347.44341133829,
+      "factor": 79.18664504780392
+    },
+    "BJ Xiushi Public-Spirited Foundation": {
+      "count": 185,
+      "total_true": 152376.16,
+      "total_pred": 114760.27208291877,
+      "factor": 1.3277779603894828
+    },
+    "Chenyue": {
+      "count": 117,
+      "total_true": 203791.6,
+      "total_pred": 126628.2068411918,
+      "factor": 1.6093697058790473
+    },
+    "L&L Capital": {
+      "count": 160,
+      "total_true": 163627.41,
+      "total_pred": 96166.37364588384,
+      "factor": 1.7015033820712617
+    },
+    "Xusheng Financial": {
+      "count": 183,
+      "total_true": 328461.3,
+      "total_pred": 86839.04959719775,
+      "factor": 3.782414726134903
+    },
+    "Temenos": {
+      "count": 215,
+      "total_true": 180665.24,
+      "total_pred": 133410.26627960522,
+      "factor": 1.3542079259579347
+    },
+    "sccynykfyxgs 四川驰阳农业开发有限公司": {
+      "count": 153,
+      "total_true": 90633.34,
+      "total_pred": 35099.20717805368,
+      "factor": 2.5822047643477797
+    },
+    "Harry Winston": {
+      "count": 2190,
+      "total_true": 6316942.57,
+      "total_pred": 2442062.674500732,
+      "factor": 2.586724180324925
+    },
+    "Kylinhall Partners北京玉麟阁信息科技有限公司": {
+      "count": 116,
+      "total_true": 214793.2,
+      "total_pred": 80526.57802185336,
+      "factor": 2.6673578497488033
+    },
+    "Minnesota Architecture": {
+      "count": 68,
+      "total_true": 105717.4,
+      "total_pred": 91846.14298559171,
+      "factor": 1.1510271042800821
+    },
+    "Wothing": {
+      "count": 618,
+      "total_true": 6605649.69,
+      "total_pred": 11860.247952818107,
+      "factor": 556.9571324544219
+    },
+    "海创药业": {
+      "count": 233,
+      "total_true": 5085888.140000001,
+      "total_pred": 737820.1714762923,
+      "factor": 6.8931269930228805
+    },
+    "Kraft Heinz China": {
+      "count": 805,
+      "total_true": 14441383.78,
+      "total_pred": 4774403.820122891,
+      "factor": 3.02475122006506
+    },
+    "Mino Group": {
+      "count": 104,
+      "total_true": 59257.04,
+      "total_pred": 24819.7474009301,
+      "factor": 2.387495692151137
+    },
+    "PEGASUS": {
+      "count": 57,
+      "total_true": 112062.03,
+      "total_pred": 49851.50048325675,
+      "factor": 2.24791689144116
+    },
+    "BJ CONFIDENCE ENTERTAINMENT": {
+      "count": 78,
+      "total_true": 144459.7,
+      "total_pred": 93259.37575071277,
+      "factor": 1.549009939613454
+    },
+    "Harrow": {
+      "count": 6897,
+      "total_true": 223320298.06,
+      "total_pred": 16568736.209866025,
+      "factor": 13.478414722241858
+    },
+    "BJ CAR": {
+      "count": 425,
+      "total_true": 1541042.6400000001,
+      "total_pred": 364437.49274631555,
+      "factor": 4.228551317228817
+    },
+    "HAILI永康市海力实业有限公司": {
+      "count": 35,
+      "total_true": 71077.40000000001,
+      "total_pred": 644.4217097896892,
+      "factor": 110.29640826842493
+    },
+    "Vastai Technologies": {
+      "count": 85,
+      "total_true": 118969.43,
+      "total_pred": 62848.83966976284,
+      "factor": 1.8929455281135013
+    },
+    "HuiDie": {
+      "count": 319,
+      "total_true": 706457.4500000001,
+      "total_pred": 180972.08533814974,
+      "factor": 3.9036818782298446
+    },
+    "An Xin Capital": {
+      "count": 351,
+      "total_true": 2099215.42,
+      "total_pred": 228079.03270717605,
+      "factor": 9.203894786309098
+    },
+    "CUMULON云动时代": {
+      "count": 36,
+      "total_true": 311337.68,
+      "total_pred": 21627.807105460106,
+      "factor": 14.39524952677243
+    },
+    "CanSemi Technology Inc.": {
+      "count": 190,
+      "total_true": 288299.37,
+      "total_pred": 77439.83294713075,
+      "factor": 3.7228821270421126
+    },
+    "Huiyu汇誉私募基金管理(湖州)有限公司上海分公司": {
+      "count": 80,
+      "total_true": 82076.37,
+      "total_pred": 59482.14114924189,
+      "factor": 1.3798489498565414
+    },
+    "Teva": {
+      "count": 165,
+      "total_true": 106369.66,
+      "total_pred": 96050.65478685386,
+      "factor": 1.1074329502078362
+    },
+    "Express Technology Service": {
+      "count": 2715,
+      "total_true": 13161233.72,
+      "total_pred": 7428942.280116869,
+      "factor": 1.7716160960390386
+    },
+    "Verisign Internet Technology Services": {
+      "count": 266,
+      "total_true": 535881.49,
+      "total_pred": 153236.39178807885,
+      "factor": 3.497090239119617
+    },
+    "Shihui Partners": {
+      "count": 945,
+      "total_true": 2783594.2399999998,
+      "total_pred": 921921.3326712622,
+      "factor": 3.0193403074148963
+    },
+    "Netease": {
+      "count": 10464,
+      "total_true": 46371909.089999996,
+      "total_pred": 10561300.986927405,
+      "factor": 4.390738333032866
+    },
+    "Huzhou Xinsheng": {
+      "count": 51,
+      "total_true": 60697.66,
+      "total_pred": 30908.566701819793,
+      "factor": 1.9637811285641507
+    },
+    "Shanghai Mingfang": {
+      "count": 42,
+      "total_true": 50618.39,
+      "total_pred": 47254.07825837096,
+      "factor": 1.0711962197894118
+    },
+    "BOLLFILTER CHINA LTD": {
+      "count": 74,
+      "total_true": 49344.18,
+      "total_pred": 35155.01889548861,
+      "factor": 1.4036169386423587
+    },
+    "Aranya": {
+      "count": 314,
+      "total_true": 736075.93,
+      "total_pred": 417904.26869534096,
+      "factor": 1.7613505894494976
+    },
+    "Golden Joy Games ": {
+      "count": 116,
+      "total_true": 351320.17000000004,
+      "total_pred": 1478.485426971382,
+      "factor": 237.62166578784974
+    },
+    "POMA Beijing": {
+      "count": 65,
+      "total_true": 138798.95,
+      "total_pred": 62193.47169949347,
+      "factor": 2.2317286076366507
+    },
+    "FSG-CiXin": {
+      "count": 1000,
+      "total_true": 2203458.85,
+      "total_pred": 734693.0332516809,
+      "factor": 2.999155770196571
+    },
+    "Equinor China": {
+      "count": 350,
+      "total_true": 3063610.85,
+      "total_pred": 316380.7554717508,
+      "factor": 9.68330341531644
+    },
+    "Hantian翰田信息": {
+      "count": 216,
+      "total_true": 417061.49,
+      "total_pred": 3007.054786736648,
+      "factor": 138.69434366129673
+    },
+    "Xing qi yan yao 沈阳兴齐股份有限公司": {
+      "count": 144,
+      "total_true": 134332.55,
+      "total_pred": 96800.92159406595,
+      "factor": 1.3877197426210743
+    },
+    "DAYLIGHT ENTERTAINMENT": {
+      "count": 231,
+      "total_true": 772238.98,
+      "total_pred": 177660.4333043037,
+      "factor": 4.3467133657007295
+    },
+    "PTL Group": {
+      "count": 428,
+      "total_true": 1318973.92,
+      "total_pred": 434118.43142131955,
+      "factor": 3.0382813180302697
+    },
+    "DCM Investment Management": {
+      "count": 479,
+      "total_true": 24869812.21,
+      "total_pred": 1519236.926764054,
+      "factor": 16.369936625337452
+    },
+    "Cathay Capital": {
+      "count": 576,
+      "total_true": 1428277.0,
+      "total_pred": 485905.9672322516,
+      "factor": 2.93941028988705
+    },
+    "MEDIAPRO CHINA": {
+      "count": 32,
+      "total_true": 60455.56,
+      "total_pred": 21375.920530444015,
+      "factor": 2.828208493472736
+    },
+    "Summer Moon Technology": {
+      "count": 89,
+      "total_true": 96143.04,
+      "total_pred": 52377.18068983573,
+      "factor": 1.8355902080590112
+    },
+    "Etonkids": {
+      "count": 1656,
+      "total_true": 9160573.95,
+      "total_pred": 1000053.1986373507,
+      "factor": 9.160086645872424
+    },
+    "Sinovac": {
+      "count": 4285,
+      "total_true": 13219076.17,
+      "total_pred": 5258112.839820615,
+      "factor": 2.51403432613496
+    },
+    "Capella Shanghai, Jian Ye Li": {
+      "count": 143,
+      "total_true": 173042.56,
+      "total_pred": 108713.2670244458,
+      "factor": 1.5917336010248757
+    },
+    "XIBEI": {
+      "count": 337,
+      "total_true": 454988.95999999996,
+      "total_pred": 276067.6985555087,
+      "factor": 1.6481064694662775
+    },
+    "YANGTZELABS": {
+      "count": 357,
+      "total_true": 953098.76,
+      "total_pred": 408460.79743068136,
+      "factor": 2.333391027964556
+    },
+    "Jingkang Consulting": {
+      "count": 110,
+      "total_true": 236045.9,
+      "total_pred": 125888.67815185884,
+      "factor": 1.875036766334611
+    },
+    "PSC": {
+      "count": 176,
+      "total_true": 271655.54,
+      "total_pred": 101316.37988346093,
+      "factor": 2.6812598349099277
+    },
+    "RRA": {
+      "count": 1157,
+      "total_true": 1689245.65,
+      "total_pred": 796574.1989690735,
+      "factor": 2.120638168027815
+    },
+    "Sinosoft": {
+      "count": 1237,
+      "total_true": 8138286.31,
+      "total_pred": 2249428.3000792623,
+      "factor": 3.6179354148399545
+    },
+    "Lam Research": {
+      "count": 1827,
+      "total_true": 10034638.89,
+      "total_pred": 7472988.779570731,
+      "factor": 1.3427878973178944
+    },
+    "Vestel": {
+      "count": 176,
+      "total_true": 460605.42,
+      "total_pred": 271919.30118777725,
+      "factor": 1.6939048386341768
+    },
+    "BAIDI": {
+      "count": 37,
+      "total_true": 55279.45,
+      "total_pred": 471.5858689477684,
+      "factor": 117.22032749484825
+    },
+    "杭州云合智网": {
+      "count": 341,
+      "total_true": 10768555.69,
+      "total_pred": 1325448.2366024703,
+      "factor": 8.124463402360476
+    },
+    "Changqing Yongsheng": {
+      "count": 156,
+      "total_true": 391260.75,
+      "total_pred": 192613.94794541405,
+      "factor": 2.031320961817789
+    },
+    "Ares Management": {
+      "count": 1424,
+      "total_true": 6925046.38,
+      "total_pred": 2256358.660146538,
+      "factor": 3.0691248259043427
+    },
+    "Shuzhi Technology": {
+      "count": 146,
+      "total_true": 641239.05,
+      "total_pred": 345989.94624689437,
+      "factor": 1.853345904861696
+    },
+    "Nineunion (Beijing) Tech Co., Ltd.": {
+      "count": 724,
+      "total_true": 7015140.98,
+      "total_pred": 474522.50199333933,
+      "factor": 14.783579178081778
+    },
+    "IFM-BJ": {
+      "count": 132,
+      "total_true": 377449.08,
+      "total_pred": 220416.14150946384,
+      "factor": 1.7124384694112513
+    },
+    "vbill 随行付支付有限公司": {
+      "count": 61,
+      "total_true": 517886.35,
+      "total_pred": 209158.83587570736,
+      "factor": 2.4760433755127322
+    },
+    "DCar 北京懂车族科技有限公司": {
+      "count": 164,
+      "total_true": 419167.02,
+      "total_pred": 66990.26027495922,
+      "factor": 6.257133772574452
+    },
+    "Cedarlake Capital_中层": {
+      "count": 277,
+      "total_true": 395159.18,
+      "total_pred": 210973.6972866778,
+      "factor": 1.873025808819405
+    },
+    "FFT": {
+      "count": 222,
+      "total_true": 234287.98,
+      "total_pred": 116077.17243242252,
+      "factor": 2.0183811777151717
+    },
+    "LETIAN ZHIZUO": {
+      "count": 129,
+      "total_true": 259665.49,
+      "total_pred": 81813.26502912508,
+      "factor": 3.1738800536509637
+    },
+    "MFund": {
+      "count": 88,
+      "total_true": 164198.57,
+      "total_pred": 80650.26120592415,
+      "factor": 2.035933517695028
+    },
+    "ZhenZhenRiShang": {
+      "count": 111,
+      "total_true": 180274.27000000002,
+      "total_pred": 74799.31009510842,
+      "factor": 2.4101060527266713
+    },
+    "Ita Consulate General Shanghai 意大利共和国驻上海总领事馆": {
+      "count": 262,
+      "total_true": 898322.48,
+      "total_pred": 266204.06855635083,
+      "factor": 3.374563299771057
+    },
+    "Zhen Fund": {
+      "count": 498,
+      "total_true": 18046712.89,
+      "total_pred": 9866718.079700602,
+      "factor": 1.8290492080774658
+    },
+    "FSG-Rouse": {
+      "count": 564,
+      "total_true": 615959.09,
+      "total_pred": 348067.38975282194,
+      "factor": 1.7696546937000326
+    },
+    "Arshine湖南艾臣科技": {
+      "count": 41,
+      "total_true": 48453.31,
+      "total_pred": 34217.67553110387,
+      "factor": 1.4160316049509538
+    },
+    "重庆国际复合材料": {
+      "count": 189,
+      "total_true": 321798.44,
+      "total_pred": 2408.9116008413034,
+      "factor": 133.58665377659068
+    },
+    "Riot Games-BR": {
+      "count": 3583,
+      "total_true": 22997531.07,
+      "total_pred": 5470966.3471329985,
+      "factor": 4.2035592271649795
+    },
+    "Shanghai Morong": {
+      "count": 75,
+      "total_true": 14658.15,
+      "total_pred": 25416.434096831406,
+      "factor": 0.5767193755093831
+    },
+    "Shanghai Omni Gear": {
+      "count": 169,
+      "total_true": 728394.39,
+      "total_pred": 434946.1784901718,
+      "factor": 1.6746770658578372
+    },
+    "杭州优团": {
+      "count": 153,
+      "total_true": 199754.45,
+      "total_pred": 146991.11645105228,
+      "factor": 1.3589559343643587
+    },
+    "Beijing AiBaoBao": {
+      "count": 131,
+      "total_true": 205175.25,
+      "total_pred": 181945.38956212834,
+      "factor": 1.12767490560644
+    },
+    "FANSI杭州范思服饰": {
+      "count": 241,
+      "total_true": 362982.42,
+      "total_pred": 120575.19100186124,
+      "factor": 3.010423761173199
+    },
+    "Smart Cloudtech": {
+      "count": 220,
+      "total_true": 689377.94,
+      "total_pred": 103158.93368417492,
+      "factor": 6.682678032622529
+    },
+    "Flywire": {
+      "count": 621,
+      "total_true": 874191.1,
+      "total_pred": 515120.07702992833,
+      "factor": 1.6970627606681494
+    },
+    "MIS": {
+      "count": 347,
+      "total_true": 617803.92,
+      "total_pred": 234540.43215931038,
+      "factor": 2.634104125724301
+    },
+    "Ropes & Gray": {
+      "count": 552,
+      "total_true": 1411897.96,
+      "total_pred": 753384.4573826725,
+      "factor": 1.8740736501321842
+    },
+    "Beijing Lenovo Collaboration": {
+      "count": 166,
+      "total_true": 246370.25,
+      "total_pred": 417830.5903145852,
+      "factor": 0.5896414855946941
+    },
+    "Beijing Leben": {
+      "count": 103,
+      "total_true": 167113.87,
+      "total_pred": 45970.84660675687,
+      "factor": 3.63521410492008
+    },
+    "LIULV Technology六律科技": {
+      "count": 117,
+      "total_true": 314433.7,
+      "total_pred": 150291.7629720686,
+      "factor": 2.092155243786959
+    },
+    "JDHX（Beijing）Investment Management": {
+      "count": 39,
+      "total_true": 111260.04000000001,
+      "total_pred": 42052.67403082773,
+      "factor": 2.6457304455464152
+    },
+    "Oceanlink": {
+      "count": 183,
+      "total_true": 371770.27,
+      "total_pred": 202923.68792211395,
+      "factor": 1.8320693547748486
+    },
+    "JW Therapeutics": {
+      "count": 35,
+      "total_true": 46020.18,
+      "total_pred": 45515.53795042686,
+      "factor": 1.011087247834416
+    },
+    "JC International Finance&Leasing": {
+      "count": 226,
+      "total_true": 363643.16000000003,
+      "total_pred": 107967.22142124243,
+      "factor": 3.3680885292140497
+    },
+    "SiRun Investment Management (Tianjin) Co": {
+      "count": 33,
+      "total_true": 3897.24,
+      "total_pred": 12062.749625397058,
+      "factor": 0.32308056794901086
+    },
+    "TianZhiYueHeng": {
+      "count": 41,
+      "total_true": 37366.380000000005,
+      "total_pred": 20865.127349877686,
+      "factor": 1.7908531960251395
+    },
+    "Beijing Lankylin": {
+      "count": 109,
+      "total_true": 276462.67,
+      "total_pred": 238722.78386201905,
+      "factor": 1.1580908429745627
+    },
+    "Ocean Spray Shanghai": {
+      "count": 780,
+      "total_true": 2859735.41,
+      "total_pred": 495464.2745856264,
+      "factor": 5.7718296892176415
+    },
+    "Fortive": {
+      "count": 42,
+      "total_true": 59118.26,
+      "total_pred": 49595.44405909992,
+      "factor": 1.1920098936820147
+    },
+    "Consumer Lighting": {
+      "count": 56,
+      "total_true": 132543.9,
+      "total_pred": 82644.42961562185,
+      "factor": 1.6037850417319102
+    },
+    "FERRARI": {
+      "count": 151,
+      "total_true": 460945.31,
+      "total_pred": 2038.816013879542,
+      "factor": 226.08479963961756
+    },
+    "Shanghai Shengdi Pharm": {
+      "count": 82,
+      "total_true": 250342.72,
+      "total_pred": 113371.85177914059,
+      "factor": 2.2081558700098856
+    },
+    "Tianshui Kimcheon Mining": {
+      "count": 177,
+      "total_true": 608303.63,
+      "total_pred": 2683.1357918639997,
+      "factor": 226.71369516389842
+    },
+    "Fissler": {
+      "count": 197,
+      "total_true": 270360.7,
+      "total_pred": 133676.5984326274,
+      "factor": 2.0224983517684363
+    },
+    "正帆科技": {
+      "count": 319,
+      "total_true": 4545850.63,
+      "total_pred": 754643.1250986418,
+      "factor": 6.023841573334146
+    },
+    "YDYY": {
+      "count": 894,
+      "total_true": 3903661.52,
+      "total_pred": 717156.9888532805,
+      "factor": 5.443245454864598
+    },
+    "MIAO TI": {
+      "count": 73,
+      "total_true": 147694.44,
+      "total_pred": 930.4261738699214,
+      "factor": 158.73848366248615
+    },
+    "Xiwai International School": {
+      "count": 379,
+      "total_true": 2284588.19,
+      "total_pred": 333928.96036818024,
+      "factor": 6.841539552248119
+    },
+    "INBAR": {
+      "count": 65,
+      "total_true": 127341.26,
+      "total_pred": 99807.9688254539,
+      "factor": 1.275862654040148
+    },
+    "ZWIE": {
+      "count": 416,
+      "total_true": 607156.41,
+      "total_pred": 214600.89253215378,
+      "factor": 2.8292352507761795
+    },
+    "CDP SME": {
+      "count": 106,
+      "total_true": 211327.79,
+      "total_pred": 76955.09606566794,
+      "factor": 2.7461182014465693
+    },
+    "Snowflake 片云信息技术（北京）有限公司上海分公司": {
+      "count": 408,
+      "total_true": 434140.7,
+      "total_pred": 329472.44969097455,
+      "factor": 1.3176843781845735
+    },
+    "Fresenius Kabi": {
+      "count": 365,
+      "total_true": 10774549.299999999,
+      "total_pred": 1792882.598314838,
+      "factor": 6.009623446692599
+    },
+    "YUNJIWENHUA昱吉文化": {
+      "count": 278,
+      "total_true": 711173.1,
+      "total_pred": 3543.2667991210706,
+      "factor": 200.71113475745346
+    },
+    "LRS(Shanghai)Trading Co., Ltd.": {
+      "count": 279,
+      "total_true": 512359.27,
+      "total_pred": 276938.2713089314,
+      "factor": 1.8500847411893127
+    },
+    "良菱机电": {
+      "count": 238,
+      "total_true": 399818.56,
+      "total_pred": 219596.96284365337,
+      "factor": 1.8206925761749226
+    },
+    "Lenovo NetApp Technology": {
+      "count": 324,
+      "total_true": 1178876.53,
+      "total_pred": 424577.4064750045,
+      "factor": 2.7765879955494106
+    },
+    "Cooper Standard": {
+      "count": 110,
+      "total_true": 125145.14,
+      "total_pred": 64707.86500029397,
+      "factor": 1.934001994957359
+    },
+    "Shanghai Guijing": {
+      "count": 52,
+      "total_true": 88110.44,
+      "total_pred": 662.7693293319988,
+      "factor": 132.94284466785146
+    },
+    "Sedbergh": {
+      "count": 522,
+      "total_true": 2120545.57,
+      "total_pred": 317195.5223453764,
+      "factor": 6.6852947807096
+    },
+    "SAASBEE SOFTWARE(HANGZHOU)CO.,LTD": {
+      "count": 816,
+      "total_true": 2751603.31,
+      "total_pred": 502793.64299066114,
+      "factor": 5.472629474058621
+    },
+    "Xuanmo": {
+      "count": 131,
+      "total_true": 187018.02,
+      "total_pred": 104579.73026945109,
+      "factor": 1.7882817207325505
+    },
+    "Innolake Biopharma Co. Ltd": {
+      "count": 44,
+      "total_true": 57299.87,
+      "total_pred": 48871.76298245384,
+      "factor": 1.172453509004209
+    },
+    "Sichuan Swellfun": {
+      "count": 2277,
+      "total_true": 43681761.66,
+      "total_pred": 20850105.65229595,
+      "factor": 2.095037904769077
+    },
+    "CHINA MERCHANTS BANK (HZ)": {
+      "count": 2733,
+      "total_true": 3784287.35,
+      "total_pred": 695738.9189962242,
+      "factor": 5.439234814490143
+    },
+    "老肯医疗科技股份有限公司": {
+      "count": 130,
+      "total_true": 141368.83000000002,
+      "total_pred": 121518.61324321626,
+      "factor": 1.1633512449410042
+    },
+    "Shanghai Xforceplus": {
+      "count": 574,
+      "total_true": 10668208.84,
+      "total_pred": 2981917.33844887,
+      "factor": 3.577633994894498
+    },
+    "上海和誉": {
+      "count": 199,
+      "total_true": 878524.34,
+      "total_pred": 298246.5075094043,
+      "factor": 2.9456316096921884
+    },
+    "LYBS": {
+      "count": 537,
+      "total_true": 1073815.17,
+      "total_pred": 455354.0354960609,
+      "factor": 2.3581984264841087
+    },
+    "Ross": {
+      "count": 252,
+      "total_true": 327771.56,
+      "total_pred": 245721.5125226757,
+      "factor": 1.3339147909149898
+    },
+    "WESHINE SECURITIES": {
+      "count": 31,
+      "total_true": 45184.74,
+      "total_pred": 395.11248479407624,
+      "factor": 114.35918058511685
+    },
+    "DLA Piper Partner": {
+      "count": 77,
+      "total_true": 240275.35,
+      "total_pred": 126142.90827982905,
+      "factor": 1.9047868269136885
+    },
+    "CENTURY 3": {
+      "count": 803,
+      "total_true": 1668110.03,
+      "total_pred": 987926.9237895951,
+      "factor": 1.688495363200839
+    },
+    "SABIC": {
+      "count": 594,
+      "total_true": 2038252.16,
+      "total_pred": 1049270.0481357104,
+      "factor": 1.9425429741575704
+    },
+    "Chongkai-BR": {
+      "count": 894,
+      "total_true": 2677702.94,
+      "total_pred": 1068008.0662491284,
+      "factor": 2.507193554636868
+    },
+    "MLSYXX": {
+      "count": 102,
+      "total_true": 336127.26,
+      "total_pred": 48057.56318328073,
+      "factor": 6.994263498506704
+    },
+    "Suzhou Aquafarmtory": {
+      "count": 175,
+      "total_true": 139880.46,
+      "total_pred": 62159.220768513245,
+      "factor": 2.250357360831918
+    },
+    "CopperAlliance": {
+      "count": 306,
+      "total_true": 342305.83999999997,
+      "total_pred": 168083.53344529693,
+      "factor": 2.0365221564752742
+    },
+    "Zhuanzhuan": {
+      "count": 425,
+      "total_true": 1051331.18,
+      "total_pred": 393669.3626308742,
+      "factor": 2.670594361151201
+    },
+    "Ciena International": {
+      "count": 357,
+      "total_true": 13064770.9,
+      "total_pred": 1686246.9315296102,
+      "factor": 7.747839688075119
+    },
+    "Vivo Capital 维梧股权投资": {
+      "count": 483,
+      "total_true": 864497.28,
+      "total_pred": 303230.8119853391,
+      "factor": 2.8509546056348576
+    },
+    "YK Industries": {
+      "count": 104,
+      "total_true": 437339.39,
+      "total_pred": 197347.82149495394,
+      "factor": 2.216084204462234
+    },
+    "Oplus": {
+      "count": 272,
+      "total_true": 893385.52,
+      "total_pred": 266657.90594682493,
+      "factor": 3.35030576658827
+    },
+    "Shanghai Qitong": {
+      "count": 32,
+      "total_true": 19899.920000000002,
+      "total_pred": 10643.295284807262,
+      "factor": 1.869714169107577
+    },
+    "Pharmolix北京水木分子生物科技有限公司": {
+      "count": 100,
+      "total_true": 369032.2,
+      "total_pred": 79850.44165559609,
+      "factor": 4.621542377832765
+    },
+    "CEA & CGA": {
+      "count": 266,
+      "total_true": 627491.49,
+      "total_pred": 168231.46386536112,
+      "factor": 3.729929441154917
+    },
+    "Shandong MBH Fitness Co.,Ltd": {
+      "count": 359,
+      "total_true": 763417.54,
+      "total_pred": 395298.1958356622,
+      "factor": 1.9312446857647094
+    },
+    "YUANYU INDUSTRIAL INVESTMENT": {
+      "count": 171,
+      "total_true": 477149.75,
+      "total_pred": 30523.490462452748,
+      "factor": 15.632214493520873
+    },
+    "媒特仕": {
+      "count": 32,
+      "total_true": 41920.99,
+      "total_pred": 39385.22410883308,
+      "factor": 1.0643836857233526
+    },
+    "Zijin Technology": {
+      "count": 104,
+      "total_true": 409506.08,
+      "total_pred": 124646.40098633656,
+      "factor": 3.285342190063627
+    },
+    "HM Green": {
+      "count": 36,
+      "total_true": 46052.69,
+      "total_pred": 24755.161365679793,
+      "factor": 1.8603267948738482
+    },
+    "LYFE Capital": {
+      "count": 265,
+      "total_true": 311190.57,
+      "total_pred": 156979.02407674547,
+      "factor": 1.982370395218294
+    },
+    "Dipont": {
+      "count": 6649,
+      "total_true": 32201886.62,
+      "total_pred": 6577096.432441911,
+      "factor": 4.896064236060509
+    },
+    "CIGNA&CMB AMC": {
+      "count": 385,
+      "total_true": 4210610.65,
+      "total_pred": 777580.5113417814,
+      "factor": 5.415015665367221
+    },
+    "Yanfeng Seating Co., Ltd.": {
+      "count": 113,
+      "total_true": 244020.96,
+      "total_pred": 87890.69409826885,
+      "factor": 2.776414073225602
+    },
+    "HHgrace": {
+      "count": 171,
+      "total_true": 562338.39,
+      "total_pred": 189346.1730924002,
+      "factor": 2.9698957249354128
+    },
+    "Shan Shi Food": {
+      "count": 166,
+      "total_true": 5949571.59,
+      "total_pred": 78221.24351560371,
+      "factor": 76.06081574007666
+    },
+    "Beibao嘉兴倍宝科技": {
+      "count": 277,
+      "total_true": 9614412.41,
+      "total_pred": 37319.414745137336,
+      "factor": 257.62495140020235
+    },
+    "Shanghai Watch Marketing Consulting 上海辉前": {
+      "count": 100,
+      "total_true": 104997.88,
+      "total_pred": 1274.5564025615363,
+      "factor": 82.37994002382382
+    },
+    "毕凯咨询": {
+      "count": 122,
+      "total_true": 341286.95,
+      "total_pred": 158650.4735713159,
+      "factor": 2.1511877167299227
+    },
+    "Qingdao？TGOOD？Electric青岛特锐德电气股份有限公司": {
+      "count": 112,
+      "total_true": 307058.23,
+      "total_pred": 99896.96460481924,
+      "factor": 3.0737493497894213
+    },
+    "Ganlu Wine Trading Co., Ltd.": {
+      "count": 88,
+      "total_true": 227815.49,
+      "total_pred": 110259.30975568725,
+      "factor": 2.06617917801947
+    },
+    "Shanghai Qilin-琦霖文化": {
+      "count": 221,
+      "total_true": 809585.4,
+      "total_pred": 7389.682189002828,
+      "factor": 109.55618648996952
+    },
+    "Lucid": {
+      "count": 80,
+      "total_true": 252649.53,
+      "total_pred": 9033.31332274979,
+      "factor": 27.96864461279332
+    },
+    "Beijing Schedl  北京施德尔汽车部件有限公司": {
+      "count": 372,
+      "total_true": 304393.47,
+      "total_pred": 79681.5426587885,
+      "factor": 3.8201252114742634
+    },
+    "Beijing AITOPIA Artificial Intelligence Technology艾托邦": {
+      "count": 60,
+      "total_true": 23730.54,
+      "total_pred": 20754.645447318522,
+      "factor": 1.1433845044587818
+    },
+    "Cinic": {
+      "count": 36,
+      "total_true": 69820.92,
+      "total_pred": 30583.646103178788,
+      "factor": 2.282949513751501
+    },
+    "上海磐庆塑料制品有限公司": {
+      "count": 98,
+      "total_true": 193275.66,
+      "total_pred": 77392.29346447658,
+      "factor": 2.4973502056598753
+    },
+    "GIBSON DUNN": {
+      "count": 158,
+      "total_true": 225342.54,
+      "total_pred": 140339.96976698452,
+      "factor": 1.6056903843869337
+    },
+    "Jumao Group": {
+      "count": 66,
+      "total_true": 105561.28,
+      "total_pred": 44272.66320497625,
+      "factor": 2.384344477115958
+    },
+    "Mainto": {
+      "count": 123,
+      "total_true": 136331.4,
+      "total_pred": 106679.88929340405,
+      "factor": 1.2779484577926843
+    },
+    "PhiGent Robotics": {
+      "count": 295,
+      "total_true": 1422446.54,
+      "total_pred": 550763.7987591602,
+      "factor": 2.5826798043093824
+    },
+    "Longwater Investment": {
+      "count": 130,
+      "total_true": 219036.91,
+      "total_pred": 144499.72484934158,
+      "factor": 1.5158292531585955
+    },
+    "英恩国际": {
+      "count": 77,
+      "total_true": 251758.04,
+      "total_pred": 135429.9784982174,
+      "factor": 1.8589535551267462
+    },
+    "人福医药": {
+      "count": 261,
+      "total_true": 829762.5800000001,
+      "total_pred": 381940.74792389415,
+      "factor": 2.172490326078901
+    },
+    "Jovial Starlight": {
+      "count": 76,
+      "total_true": 160001.83000000002,
+      "total_pred": 68034.72125659653,
+      "factor": 2.3517672600809916
+    },
+    "Shanghai Ruipin": {
+      "count": 93,
+      "total_true": 216342.66999999998,
+      "total_pred": 1588.1891099464426,
+      "factor": 136.21971630777367
+    },
+    "Great Bay University": {
+      "count": 467,
+      "total_true": 2219050.7,
+      "total_pred": 126999.6389338284,
+      "factor": 17.472889833617632
+    },
+    "Yi Gao": {
+      "count": 187,
+      "total_true": 124921.31999999999,
+      "total_pred": 74493.47830154031,
+      "factor": 1.6769430404945527
+    },
+    "CMB Changsha Branch": {
+      "count": 1062,
+      "total_true": 7546465.91,
+      "total_pred": 935176.3087216768,
+      "factor": 8.069564893400168
+    },
+    "Gorilla": {
+      "count": 50,
+      "total_true": 120528.13,
+      "total_pred": 45794.020902476004,
+      "factor": 2.6319621562972046
+    },
+    "WHDYYL": {
+      "count": 65,
+      "total_true": 175897.03,
+      "total_pred": 75564.96103403086,
+      "factor": 2.3277591570620193
+    },
+    "Yi Yao Wang": {
+      "count": 40,
+      "total_true": 34145.090000000004,
+      "total_pred": 35037.2773699428,
+      "factor": 0.9745360531150126
+    },
+    "山东龙迅源建筑工程有限公司": {
+      "count": 42,
+      "total_true": 377124.73,
+      "total_pred": 36531.333217357984,
+      "factor": 10.323322386186769
+    },
+    "Star Path": {
+      "count": 32,
+      "total_true": 21941.37,
+      "total_pred": 407.8580488196916,
+      "factor": 53.79658453105574
+    },
+    "MSD China Holding": {
+      "count": 1611,
+      "total_true": 10852324.17,
+      "total_pred": 3096657.249545886,
+      "factor": 3.5045286886662885
+    },
+    "勤思幼儿园": {
+      "count": 529,
+      "total_true": 6829695.79,
+      "total_pred": 5795186.207150647,
+      "factor": 1.178511879665381
+    },
+    "QINGDAO PACIFIC RIM": {
+      "count": 47,
+      "total_true": 21613.07,
+      "total_pred": 14296.741633644044,
+      "factor": 1.5117479600483712
+    },
+    "Triapex Laboratories": {
+      "count": 267,
+      "total_true": 216279.91,
+      "total_pred": 122994.8238494063,
+      "factor": 1.7584472519332284
+    },
+    "HOPU": {
+      "count": 328,
+      "total_true": 1256655.23,
+      "total_pred": 453757.8275490612,
+      "factor": 2.7694403351402856
+    },
+    "Giant Jump 北京巨匠文化发展有限公司": {
+      "count": 73,
+      "total_true": 151623.13,
+      "total_pred": 36914.07960140295,
+      "factor": 4.1074606664238065
+    },
+    "1LIN1 Studios": {
+      "count": 52,
+      "total_true": 71037.1,
+      "total_pred": 84504.2125486468,
+      "factor": 0.840633831823542
+    },
+    "HOGA": {
+      "count": 99,
+      "total_true": 206263.75,
+      "total_pred": 91357.94818574484,
+      "factor": 2.257753748810491
+    },
+    "Shanghai BaoLei ": {
+      "count": 47,
+      "total_true": 132516.77,
+      "total_pred": 43729.18725712636,
+      "factor": 3.0303963625211052
+    },
+    "CMB SHENYANG": {
+      "count": 1514,
+      "total_true": 2498842.22,
+      "total_pred": 1359963.739522166,
+      "factor": 1.8374329751453433
+    },
+    "CMB NINGBO": {
+      "count": 1949,
+      "total_true": 7362648.600000001,
+      "total_pred": 814306.7994270719,
+      "factor": 9.041615034014447
+    },
+    "合创未来": {
+      "count": 175,
+      "total_true": 724961.1000000001,
+      "total_pred": 597616.964039956,
+      "factor": 1.213086548111325
+    },
+    "Proterra Investment Partners": {
+      "count": 418,
+      "total_true": 7371723.56,
+      "total_pred": 890273.6931009341,
+      "factor": 8.28028910336929
+    },
+    "HUACE MUSIC (TIANJIN) CO.,LTD. 华策音乐（天津）有限公司": {
+      "count": 348,
+      "total_true": 981808.04,
+      "total_pred": 486615.8762322244,
+      "factor": 2.017624347980497
+    },
+    "Gold Wind Group": {
+      "count": 4415,
+      "total_true": 25193353.23,
+      "total_pred": 3629441.7078314656,
+      "factor": 6.941385275768111
+    },
+    "CMB Dongguan": {
+      "count": 1372,
+      "total_true": 30806898.470000003,
+      "total_pred": 2262883.162915689,
+      "factor": 13.614003133200127
+    },
+    "Yongyi永熠实业": {
+      "count": 47,
+      "total_true": 42839.38,
+      "total_pred": 64503.96189788832,
+      "factor": 0.6641356397273086
+    },
+    "博士视听": {
+      "count": 45,
+      "total_true": 22497.9,
+      "total_pred": 31527.32110902112,
+      "factor": 0.7136001159820246
+    },
+    "Bennu毕诺济": {
+      "count": 154,
+      "total_true": 201601.44,
+      "total_pred": 159293.39348509777,
+      "factor": 1.2655982498035
+    },
+    "WWXS": {
+      "count": 53,
+      "total_true": 68762.79,
+      "total_pred": 67074.14053383436,
+      "factor": 1.0251758643901494
+    },
+    "ABNA Management": {
+      "count": 180,
+      "total_true": 237925.55,
+      "total_pred": 139191.57775639524,
+      "factor": 1.7093386958829004
+    },
+    "Shanghai Dingkun (GanTong)": {
+      "count": 380,
+      "total_true": 1241041.39,
+      "total_pred": 451449.4319655539,
+      "factor": 2.749015287485604
+    },
+    "WISS": {
+      "count": 1362,
+      "total_true": 13616511.73,
+      "total_pred": 1838608.5461886926,
+      "factor": 7.405878623933344
+    },
+    "HABBY": {
+      "count": 233,
+      "total_true": 600832.67,
+      "total_pred": 286644.54250581237,
+      "factor": 2.0960896891585397
+    },
+    "Shanghai Biren Technology Co.,Ltd.": {
+      "count": 112,
+      "total_true": 448860.52999999997,
+      "total_pred": 69054.89355867475,
+      "factor": 6.500053897246412
+    },
+    "HXHT": {
+      "count": 299,
+      "total_true": 832251.38,
+      "total_pred": 302524.92211934365,
+      "factor": 2.7510175828478802
+    },
+    "sings星系数科": {
+      "count": 42,
+      "total_true": 654348.52,
+      "total_pred": 754.2388057325114,
+      "factor": 867.5614606762394
+    },
+    "Shanghai Yiliang": {
+      "count": 89,
+      "total_true": 131296.07,
+      "total_pred": 89714.1618981438,
+      "factor": 1.4634932459054333
+    },
+    "3e International School": {
+      "count": 560,
+      "total_true": 3010611.15,
+      "total_pred": 957239.1891086749,
+      "factor": 3.1450980948693763
+    },
+    "Qin Fa Shipping": {
+      "count": 123,
+      "total_true": 346653.78,
+      "total_pred": 195521.46273911186,
+      "factor": 1.7729704715975196
+    },
+    "开门红激励": {
+      "count": 631,
+      "total_true": 1676464.6400000001,
+      "total_pred": 495928.1521572132,
+      "factor": 3.380458706987353
+    },
+    "Blizzard China": {
+      "count": 91,
+      "total_true": 303786.81,
+      "total_pred": 128141.81502011693,
+      "factor": 2.3707078751171786
+    },
+    "Guanwei": {
+      "count": 103,
+      "total_true": 255498.21,
+      "total_pred": 122138.3578269491,
+      "factor": 2.0918752678990566
+    },
+    "庄语文化": {
+      "count": 176,
+      "total_true": 1141045.9,
+      "total_pred": 188671.52050890433,
+      "factor": 6.047790874437504
+    },
+    "Shanghai Seasons Pictures": {
+      "count": 149,
+      "total_true": 636246.87,
+      "total_pred": 318815.15388435277,
+      "factor": 1.9956606900523701
+    },
+    "City Football Club": {
+      "count": 198,
+      "total_true": 477983.19,
+      "total_pred": 244667.44855077204,
+      "factor": 1.9536035252389186
+    },
+    "City Scape": {
+      "count": 113,
+      "total_true": 285193.48,
+      "total_pred": 173541.82919547963,
+      "factor": 1.6433702544344775
+    },
+    "AIIB": {
+      "count": 19249,
+      "total_true": 101132666.78,
+      "total_pred": 34648929.85586202,
+      "factor": 2.9187818267608066
+    },
+    "Under Armour Trading (Shanghai) Co.,Ltd": {
+      "count": 598,
+      "total_true": 5001503.07,
+      "total_pred": 1639042.1399650828,
+      "factor": 3.0514792439116603
+    },
+    "Butler Shanghai": {
+      "count": 481,
+      "total_true": 1417518.59,
+      "total_pred": 682942.1646963928,
+      "factor": 2.0756056124169295
+    },
+    "Greenwoods景林资产": {
+      "count": 706,
+      "total_true": 1819941.99,
+      "total_pred": 422738.9497461567,
+      "factor": 4.305120195555261
+    },
+    "天津市津南区研创科技中心": {
+      "count": 633,
+      "total_true": 2335782.51,
+      "total_pred": 655648.8696047689,
+      "factor": 3.5625509602541228
+    },
+    "BiditCapital": {
+      "count": 1058,
+      "total_true": 4335753.92,
+      "total_pred": 730188.7460566184,
+      "factor": 5.937853662378697
+    },
+    "易联众": {
+      "count": 186,
+      "total_true": 356418.41,
+      "total_pred": 2370.6749087644575,
+      "factor": 150.34470086231994
+    },
+    "TFS CHINA": {
+      "count": 284,
+      "total_true": 754356.4500000001,
+      "total_pred": 314543.20203239645,
+      "factor": 2.3982602234789514
+    },
+    "E-House (China)": {
+      "count": 1755,
+      "total_true": 9080909.12,
+      "total_pred": 3429698.6099681417,
+      "factor": 2.64772802298344
+    },
+    "WHKWD": {
+      "count": 177,
+      "total_true": 588977.43,
+      "total_pred": 224452.32621714933,
+      "factor": 2.624064717556931
+    },
+    "H & S": {
+      "count": 1271,
+      "total_true": 7578506.88,
+      "total_pred": 1156429.70683392,
+      "factor": 6.553365790600866
+    },
+    "AI PRIME": {
+      "count": 91,
+      "total_true": 140527.17,
+      "total_pred": 95489.07574405898,
+      "factor": 1.4716570341162105
+    },
+    "JMF-BOCOM Schroders": {
+      "count": 2000,
+      "total_true": 6544557.55,
+      "total_pred": 2168818.9596346077,
+      "factor": 3.017567474190006
+    },
+    "Bohan Medical": {
+      "count": 143,
+      "total_true": 3000578.2800000003,
+      "total_pred": 58491.121477461325,
+      "factor": 51.29972214939028
+    },
+    "CBC": {
+      "count": 38,
+      "total_true": 64549.64,
+      "total_pred": 492.95300625727975,
+      "factor": 130.94481457794487
+    },
+    "Wesco Aircraft": {
+      "count": 1626,
+      "total_true": 2175804.82,
+      "total_pred": 751540.5500123216,
+      "factor": 2.895126310834894
+    },
+    "McCormick": {
+      "count": 313,
+      "total_true": 2152916.63,
+      "total_pred": 299055.4665990602,
+      "factor": 7.199054591723573
+    },
+    "KAGA FEI ELECTRONICS": {
+      "count": 84,
+      "total_true": 64212.87,
+      "total_pred": 50319.26902857782,
+      "factor": 1.2761089586482584
+    },
+    "VANGUARD": {
+      "count": 363,
+      "total_true": 1660389.61,
+      "total_pred": 484645.4930417474,
+      "factor": 3.425987931052469
+    },
+    "Wanda Hotels Resorts": {
+      "count": 81,
+      "total_true": 55937.159999999996,
+      "total_pred": 35744.38330825069,
+      "factor": 1.56492166944417
+    },
+    "CMB苏州分行": {
+      "count": 98,
+      "total_true": 644407.1699999999,
+      "total_pred": 135003.51588219075,
+      "factor": 4.773262131649478
+    },
+    "Hirschvogel Automotive Components": {
+      "count": 230,
+      "total_true": 1234018.44,
+      "total_pred": 138693.28798682796,
+      "factor": 8.89746330130408
+    },
+    "CFA Institute China Limited": {
+      "count": 224,
+      "total_true": 361591.17,
+      "total_pred": 2856.486760926615,
+      "factor": 126.58597790339611
+    },
+    "ATABAX BEIJING": {
+      "count": 153,
+      "total_true": 406083.61,
+      "total_pred": 210846.0571453912,
+      "factor": 1.9259720361760455
+    },
+    "Sequoia Capital": {
+      "count": 1100,
+      "total_true": 4547401.38,
+      "total_pred": 23477.947991434634,
+      "factor": 193.68819547854056
+    },
+    "ECNUAS": {
+      "count": 516,
+      "total_true": 4402876.39,
+      "total_pred": 538209.901017037,
+      "factor": 8.180593448169633
+    },
+    "CMB Wuhan": {
+      "count": 716,
+      "total_true": 4206422.82,
+      "total_pred": 1604435.5560079296,
+      "factor": 2.6217461986857207
+    },
+    "Aiko ZJ": {
+      "count": 107,
+      "total_true": 341378.54,
+      "total_pred": 182763.61724038652,
+      "factor": 1.867869246377354
+    },
+    "Shangri-la": {
+      "count": 3585,
+      "total_true": 26994806.11,
+      "total_pred": 6831398.932938363,
+      "factor": 3.9515780552415825
+    },
+    "Waterwood Group": {
+      "count": 362,
+      "total_true": 973662.6499999999,
+      "total_pred": 438340.3475089391,
+      "factor": 2.2212480679300093
+    },
+    "cheng jie culture": {
+      "count": 55,
+      "total_true": 59152.12,
+      "total_pred": 52073.85517635556,
+      "factor": 1.1359274207694607
+    },
+    "CA ADVISORS": {
+      "count": 197,
+      "total_true": 338607.49,
+      "total_pred": 188908.38334250863,
+      "factor": 1.7924428974974225
+    },
+    "AIPU Food Industry": {
+      "count": 315,
+      "total_true": 7726309.43,
+      "total_pred": 91502.05013079931,
+      "factor": 84.43864830302144
+    },
+    "Cloudflare China": {
+      "count": 721,
+      "total_true": 3597463.5,
+      "total_pred": 473600.17000742786,
+      "factor": 7.595992839157085
+    },
+    "成都互动未来科技有限公司": {
+      "count": 53,
+      "total_true": 49715.41,
+      "total_pred": 28721.416088709826,
+      "factor": 1.7309526050682007
+    },
+    "AMD": {
+      "count": 6469,
+      "total_true": 43026836.58,
+      "total_pred": 8802322.127517186,
+      "factor": 4.888123378885737
+    },
+    "Moelis & Company (Beijing)": {
+      "count": 282,
+      "total_true": 916455.38,
+      "total_pred": 181715.78056797906,
+      "factor": 5.043345036603236
+    },
+    "Media China": {
+      "count": 274,
+      "total_true": 3000498.68,
+      "total_pred": 758158.2248326277,
+      "factor": 3.957615418156804
+    },
+    "SENSETIME": {
+      "count": 604,
+      "total_true": 4020271.7800000003,
+      "total_pred": 2477880.4508732515,
+      "factor": 1.6224639806909091
+    },
+    "HC Beijing Kunlun Red Star": {
+      "count": 77,
+      "total_true": 69985.29000000001,
+      "total_pred": 58998.302921810035,
+      "factor": 1.1862254765658418
+    },
+    "Shanghai Jiejie": {
+      "count": 80,
+      "total_true": 145404.16999999998,
+      "total_pred": 157652.44796103254,
+      "factor": 0.9223083553763783
+    },
+    "Tsinglan School": {
+      "count": 3276,
+      "total_true": 12587650.5,
+      "total_pred": 2878619.0799504984,
+      "factor": 4.372808680270563
+    },
+    "SHJHZC": {
+      "count": 631,
+      "total_true": 24500421.29,
+      "total_pred": 23151460.506065477,
+      "factor": 1.0582667682490747
+    },
+    "Shanghai Jinhao": {
+      "count": 175,
+      "total_true": 395944.58999999997,
+      "total_pred": 156491.29105066668,
+      "factor": 2.5301381779245866
+    },
+    "Mydus Engineering": {
+      "count": 152,
+      "total_true": 486295.87,
+      "total_pred": 300321.24851247267,
+      "factor": 1.6192522920328882
+    },
+    "Novotech": {
+      "count": 256,
+      "total_true": 429946.13999999996,
+      "total_pred": 3265.0197838785066,
+      "factor": 131.68255277438726
+    },
+    "King Da Cheng": {
+      "count": 143,
+      "total_true": 924561.91,
+      "total_pred": 2620.120463476407,
+      "factor": 352.8700007835824
+    },
+    "EPIC GAMES": {
+      "count": 3301,
+      "total_true": 7501859.49,
+      "total_pred": 2502974.006833473,
+      "factor": 2.9971783444489883
+    },
+    "Xiangrun": {
+      "count": 240,
+      "total_true": 2324474.48,
+      "total_pred": 213346.8532044716,
+      "factor": 10.895283642980306
+    },
+    "Chaohu Future": {
+      "count": 367,
+      "total_true": 16847669.2,
+      "total_pred": 1788096.0790709811,
+      "factor": 9.422127478045438
+    },
+    "Columbia Sportswear": {
+      "count": 219,
+      "total_true": 404093.12,
+      "total_pred": 144811.38963521156,
+      "factor": 2.7904788498883577
+    },
+    "BACA北京英伦艺大艺术中心有限公司": {
+      "count": 122,
+      "total_true": 445152.83,
+      "total_pred": 108975.0271610777,
+      "factor": 4.084906804767414
+    },
+    "TalentBank Beijing": {
+      "count": 190,
+      "total_true": 195170.77,
+      "total_pred": 77866.89781322982,
+      "factor": 2.506466489369246
+    },
+    "BE Education": {
+      "count": 6477,
+      "total_true": 64921353.46,
+      "total_pred": 10344906.446030637,
+      "factor": 6.275682994205372
+    },
+    "Akzo Nobel": {
+      "count": 816,
+      "total_true": 4411557.5,
+      "total_pred": 1028585.836503908,
+      "factor": 4.28895415767592
+    },
+    "Morgan Creek": {
+      "count": 169,
+      "total_true": 744450.9,
+      "total_pred": 175330.34844212083,
+      "factor": 4.24598996474221
+    },
+    "NDB": {
+      "count": 8180,
+      "total_true": 36368977.76,
+      "total_pred": 7457269.99701729,
+      "factor": 4.876982833469436
+    },
+    "TSI": {
+      "count": 258,
+      "total_true": 5500457.739999999,
+      "total_pred": 612451.7201567065,
+      "factor": 8.981047091503982
+    },
+    "Hopewise International Trading": {
+      "count": 123,
+      "total_true": 251999.16999999998,
+      "total_pred": 2629.801495703973,
+      "factor": 95.82440743594687
+    },
+    "Shanghai Jxemc Imp.&Exp": {
+      "count": 152,
+      "total_true": 259931.12,
+      "total_pred": 1937.325731893535,
+      "factor": 134.17006532295645
+    },
+    "KWAI": {
+      "count": 5474,
+      "total_true": 31172327.22,
+      "total_pred": 25255507.956901755,
+      "factor": 1.2342783710070386
+    },
+    "ShenZhen Golden": {
+      "count": 328,
+      "total_true": 264574.51,
+      "total_pred": 238080.67366717497,
+      "factor": 1.1112809197182554
+    },
+    "Winning Health": {
+      "count": 37,
+      "total_true": 63164.18,
+      "total_pred": 59387.36170407116,
+      "factor": 1.063596330726878
+    },
+    "iFeng-Phoenix": {
+      "count": 200,
+      "total_true": 1087376.5,
+      "total_pred": 503061.1192680448,
+      "factor": 2.1615196610346983
+    },
+    "Willis": {
+      "count": 115,
+      "total_true": 361885.29,
+      "total_pred": 23218.903167435492,
+      "factor": 15.585804695010058
+    },
+    "Air Products": {
+      "count": 387,
+      "total_true": 5481420.81,
+      "total_pred": 1295052.4612845895,
+      "factor": 4.232585917456088
+    },
+    "ifnow": {
+      "count": 173,
+      "total_true": 520361.85,
+      "total_pred": 126690.7104388649,
+      "factor": 4.107340216164489
+    },
+    "Well威尔": {
+      "count": 32,
+      "total_true": 6838.21,
+      "total_pred": 407.8580488196916,
+      "factor": 16.766151899635744
+    },
+    "Hanlin School东莞市翰林实验学校": {
+      "count": 115,
+      "total_true": 141768.62,
+      "total_pred": 178840.63106011183,
+      "factor": 0.792709235924966
+    },
+    "REACH24H": {
+      "count": 128,
+      "total_true": 113286.81000000001,
+      "total_pred": 37847.840528152105,
+      "factor": 2.9932172726138666
+    },
+    "Changyou.com": {
+      "count": 502,
+      "total_true": 1888625.85,
+      "total_pred": 558400.1388174049,
+      "factor": 3.3822087759501347
+    },
+    "Xianfeng Petrochemical": {
+      "count": 32,
+      "total_true": 47313.42,
+      "total_pred": 50341.946852146575,
+      "factor": 0.9398408873411013
+    },
+    "NIO CO.,LTD": {
+      "count": 7438,
+      "total_true": 49040328.92,
+      "total_pred": 11241252.477406971,
+      "factor": 4.362532468562807
+    },
+    "Tuhu": {
+      "count": 1137,
+      "total_true": 2294764.57,
+      "total_pred": 1370577.7537331034,
+      "factor": 1.6743045505806933
+    },
+    "CPE": {
+      "count": 2062,
+      "total_true": 5437595.38,
+      "total_pred": 1937800.8263436118,
+      "factor": 2.8060651569955533
+    },
+    "Partners Group": {
+      "count": 147,
+      "total_true": 524212.71,
+      "total_pred": 37915.26726661797,
+      "factor": 13.825900429865534
+    },
+    "CTCF": {
+      "count": 104,
+      "total_true": 180827.09,
+      "total_pred": 110453.64646635254,
+      "factor": 1.6371310118320566
+    },
+    "Wuhan Xinrun": {
+      "count": 80,
+      "total_true": 98072.99,
+      "total_pred": 71253.22357068006,
+      "factor": 1.3764007449110836
+    },
+    "BIPO-ON": {
+      "count": 94,
+      "total_true": 164418.83000000002,
+      "total_pred": 73472.71217667047,
+      "factor": 2.2378217045349165
+    },
+    "泊桐": {
+      "count": 54,
+      "total_true": 303326.09,
+      "total_pred": 183275.7477413441,
+      "factor": 1.6550257944006985
+    },
+    "NOVO 1999": {
+      "count": 179,
+      "total_true": 229892.69,
+      "total_pred": 194005.81500852123,
+      "factor": 1.184978347117598
+    },
+    "Korean Re Shanghai Branch": {
+      "count": 337,
+      "total_true": 326704.02999999997,
+      "total_pred": 180485.81540266867,
+      "factor": 1.8101368756936083
+    },
+    "Happy Elements": {
+      "count": 2635,
+      "total_true": 11328105.62,
+      "total_pred": 3448920.8178228675,
+      "factor": 3.2845362994302865
+    },
+    "新鹏城足球": {
+      "count": 114,
+      "total_true": 335348.8,
+      "total_pred": 109835.2372202853,
+      "factor": 3.053198668178093
+    },
+    "American Securities China": {
+      "count": 332,
+      "total_true": 739029.5,
+      "total_pred": 331086.07408614387,
+      "factor": 2.2321370720283302
+    },
+    "KiwiMoore": {
+      "count": 161,
+      "total_true": 173279.77,
+      "total_pred": 125262.51226716886,
+      "factor": 1.3833330248910902
+    },
+    "Shenzhen DLHT Technology Ltd": {
+      "count": 113,
+      "total_true": 1289383.1099999999,
+      "total_pred": 2043.6277149482744,
+      "factor": 630.9285691169221
+    },
+    "BICF": {
+      "count": 214,
+      "total_true": 682471.11,
+      "total_pred": 286289.72976817616,
+      "factor": 2.383847686581816
+    },
+    "Jiaqiang嘉强（上海）智能科技股份公司工会委员会": {
+      "count": 43,
+      "total_true": 11118.67,
+      "total_pred": 8415.61923328532,
+      "factor": 1.3211945184049698
+    },
+    "RIACHUELO": {
+      "count": 107,
+      "total_true": 315755.4,
+      "total_pred": 51978.176995392554,
+      "factor": 6.074768648157653
+    },
+    "Mettler - Toledo": {
+      "count": 1507,
+      "total_true": 3710023.37,
+      "total_pred": 1196338.0022399253,
+      "factor": 3.1011498113857923
+    },
+    "Novaserene元绎互动（北京）科技有限公司": {
+      "count": 117,
+      "total_true": 159221.7,
+      "total_pred": 1491.2309909969974,
+      "factor": 106.77198969258855
+    },
+    "Valeo": {
+      "count": 3071,
+      "total_true": 6207887.18,
+      "total_pred": 3010372.710536031,
+      "factor": 2.062165644231679
+    },
+    "Cheniere Energy Shared Services": {
+      "count": 134,
+      "total_true": 525699.01,
+      "total_pred": 167343.92625651657,
+      "factor": 3.1414286837884484
+    },
+    "Edgemedicalrobotics": {
+      "count": 35,
+      "total_true": 60668.69,
+      "total_pred": 113955.90094625311,
+      "factor": 0.5323874366858297
+    },
+    "COOLEY LLP-DIRECT FSG": {
+      "count": 2104,
+      "total_true": 5942115.45,
+      "total_pred": 830649.1390542259,
+      "factor": 7.153580459694055
+    },
+    "Xin Hai Jeneration": {
+      "count": 486,
+      "total_true": 958728.93,
+      "total_pred": 590593.5244975175,
+      "factor": 1.6233312595421625
+    },
+    "SHUNWEI": {
+      "count": 1109,
+      "total_true": 2203781.68,
+      "total_pred": 1493132.6687957975,
+      "factor": 1.4759449887178056
+    },
+    "UAAN": {
+      "count": 77,
+      "total_true": 99333.48,
+      "total_pred": 981.4084299723829,
+      "factor": 101.21523003709603
+    },
+    "Hua Capital 元禾璞华": {
+      "count": 733,
+      "total_true": 6386399.71,
+      "total_pred": 417414.91256553336,
+      "factor": 15.29988392304347
+    },
+    "Tasly": {
+      "count": 39,
+      "total_true": 223657.22999999998,
+      "total_pred": 31310.475015137687,
+      "factor": 7.143207820765042
+    },
+    "Amphenol": {
+      "count": 195,
+      "total_true": 482502.22,
+      "total_pred": 158276.92556695262,
+      "factor": 3.0484684881997977
+    },
+    "PIG CHINA": {
+      "count": 174,
+      "total_true": 299493.05,
+      "total_pred": 164323.7488606197,
+      "factor": 1.8225792198426025
+    },
+    "明日虫洞": {
+      "count": 110,
+      "total_true": 117785.5,
+      "total_pred": 43373.54648178737,
+      "factor": 2.7156068515047145
+    },
+    "Naxions": {
+      "count": 134,
+      "total_true": 4369664.91,
+      "total_pred": 649253.6913722456,
+      "factor": 6.7302888964164245
+    },
+    "Luminar": {
+      "count": 403,
+      "total_true": 16668654.36,
+      "total_pred": 2963952.976274617,
+      "factor": 5.623791771808329
+    },
+    "Huashu Zhiping 杭州华数智屏信息技术有限公司": {
+      "count": 36,
+      "total_true": 18948.02,
+      "total_pred": 18318.747523501363,
+      "factor": 1.034351282787829
+    },
+    "Cadence Design": {
+      "count": 1385,
+      "total_true": 17070818.96,
+      "total_pred": 6561625.27500534,
+      "factor": 2.6016144239486625
+    },
+    "Duality Biologics": {
+      "count": 32,
+      "total_true": 56334.72,
+      "total_pred": 407.8580488196916,
+      "factor": 138.1233499327233
+    },
+    "Cambricon SingGo": {
+      "count": 121,
+      "total_true": 427940.7,
+      "total_pred": 140789.1780144446,
+      "factor": 3.039585187123505
+    },
+    "JUMPCAN济嘉": {
+      "count": 157,
+      "total_true": 181042.63999999998,
+      "total_pred": 28363.962447893602,
+      "factor": 6.382840209035913
+    },
+    "Shanghai Lianzhou": {
+      "count": 56,
+      "total_true": 115091.75,
+      "total_pred": 69254.00679837078,
+      "factor": 1.661878573106727
+    },
+    "XCKJ新存科技": {
+      "count": 266,
+      "total_true": 343065.24,
+      "total_pred": 439487.79305915977,
+      "factor": 0.7806024317808976
+    },
+    "朱迪青青藤": {
+      "count": 137,
+      "total_true": 351338.63,
+      "total_pred": 205553.37636547632,
+      "factor": 1.7092330771318287
+    },
+    "FRANKLIN TEMPLETON SEALAND": {
+      "count": 198,
+      "total_true": 196721.21,
+      "total_pred": 163214.88852063444,
+      "factor": 1.2052896140974878
+    },
+    "Havas Creative Group": {
+      "count": 78,
+      "total_true": 235324.43,
+      "total_pred": 148172.12052689763,
+      "factor": 1.5881829129743852
+    },
+    "深圳国中创业": {
+      "count": 108,
+      "total_true": 114285.62999999999,
+      "total_pred": 63295.558500025196,
+      "factor": 1.8055868801592847
+    },
+    "SPGS 成都高新区晟珀外籍人员子女学校": {
+      "count": 1051,
+      "total_true": 2606980.1,
+      "total_pred": 1307779.8682843328,
+      "factor": 1.993439540723378
+    },
+    "MAGNA POWERTRAIN": {
+      "count": 84,
+      "total_true": 99342.71,
+      "total_pred": 79392.66460541508,
+      "factor": 1.251283232446442
+    },
+    "BJ TYP 北京腾跃腾跃": {
+      "count": 509,
+      "total_true": 889581.15,
+      "total_pred": 538975.9770085332,
+      "factor": 1.6505024118837786
+    },
+    "Havi Logistic Services": {
+      "count": 226,
+      "total_true": 190578.47,
+      "total_pred": 13751.305265735222,
+      "factor": 13.858936756707262
+    },
+    "BOHE Venture Capital Management": {
+      "count": 159,
+      "total_true": 497146.84,
+      "total_pred": 634916.9983640257,
+      "factor": 0.7830107577541403
+    },
+    "NetAPP": {
+      "count": 249,
+      "total_true": 6706576.28,
+      "total_pred": 278450.83983123995,
+      "factor": 24.085315325551324
+    },
+    "Teneo China": {
+      "count": 111,
+      "total_true": 202077.96,
+      "total_pred": 117627.48088177349,
+      "factor": 1.7179485481212255
+    },
+    "RIMUS": {
+      "count": 242,
+      "total_true": 1413868.2,
+      "total_pred": 419973.5181504559,
+      "factor": 3.3665651258836764
+    },
+    "Vivolight中科微光": {
+      "count": 89,
+      "total_true": 67616.35,
+      "total_pred": 1134.3551982797671,
+      "factor": 59.60774024092207
+    },
+    "Adjust China": {
+      "count": 1292,
+      "total_true": 7023856.07,
+      "total_pred": 17760.697226704677,
+      "factor": 395.4718657913413
+    },
+    "晶盛机电": {
+      "count": 131,
+      "total_true": 26437.329999999998,
+      "total_pred": 53346.985523384494,
+      "factor": 0.4955730814145304
+    },
+    "Eosvision Biomedical": {
+      "count": 34,
+      "total_true": 60493.18,
+      "total_pred": 34691.41913833221,
+      "factor": 1.7437505153301207
+    },
+    "Terra Magnum": {
+      "count": 228,
+      "total_true": 382803.3,
+      "total_pred": 12648.94041417831,
+      "factor": 30.263665371600005
+    },
+    "shansong-sz 苏州闪送": {
+      "count": 339,
+      "total_true": 2092222.57,
+      "total_pred": 1171323.454153872,
+      "factor": 1.786203941003945
+    },
+    "Shanghai Maiyuedian": {
+      "count": 57,
+      "total_true": 69720.63,
+      "total_pred": 55642.16846362152,
+      "factor": 1.253017844651092
+    },
+    "DAWA重庆达瓦合志影像科技有限公司北京分公司": {
+      "count": 71,
+      "total_true": 22318.52,
+      "total_pred": 904.9350458186907,
+      "factor": 24.66311820182468
+    },
+    "Xinbo  Technology 沈阳鑫博工业技术股份有限公司": {
+      "count": 58,
+      "total_true": 69508.99,
+      "total_pred": 61755.68508986366,
+      "factor": 1.125548034951829
+    },
+    "SSIS": {
+      "count": 1233,
+      "total_true": 9292488.07,
+      "total_pred": 1400639.9753805995,
+      "factor": 6.634458699834644
+    },
+    "Newell Brands": {
+      "count": 213,
+      "total_true": 246009.93,
+      "total_pred": 150431.74265814465,
+      "factor": 1.6353591712292816
+    },
+    "Apexbrasil 巴西出口": {
+      "count": 68,
+      "total_true": 106348.82,
+      "total_pred": 870.3341662515924,
+      "factor": 122.19308872824045
+    },
+    "Volvo Car": {
+      "count": 748,
+      "total_true": 2210316.48,
+      "total_pred": 813813.4039470021,
+      "factor": 2.715999108984868
+    },
+    "BZL华品博睿": {
+      "count": 3070,
+      "total_true": 24467214.78,
+      "total_pred": 5685005.837441493,
+      "factor": 4.3038152430484296
+    },
+    "UAP": {
+      "count": 167,
+      "total_true": 2520764.65,
+      "total_pred": 474051.9461104737,
+      "factor": 5.317486133497609
+    },
+    "MEMS Studio": {
+      "count": 65,
+      "total_true": 104903.02,
+      "total_pred": 70108.4678297589,
+      "factor": 1.496296000288169
+    },
+    "XJC新京成": {
+      "count": 138,
+      "total_true": 424789.51,
+      "total_pred": 1839.4581666477627,
+      "factor": 230.93186771088054
+    },
+    "Hearst China": {
+      "count": 214,
+      "total_true": 256899.01,
+      "total_pred": 214354.94532060606,
+      "factor": 1.1984748456153493
+    },
+    "Sunrise Garme": {
+      "count": 96,
+      "total_true": 427098.93,
+      "total_pred": 173029.1289913986,
+      "factor": 2.4683643296917444
+    },
+    "XINYU": {
+      "count": 588,
+      "total_true": 4907231.97,
+      "total_pred": 509470.23858933884,
+      "factor": 9.632028719847362
+    },
+    "Arctic Vision": {
+      "count": 83,
+      "total_true": 189701.66,
+      "total_pred": 83795.578850194,
+      "factor": 2.2638623970739578
+    },
+    "FSG-Lilly Asia Ventures": {
+      "count": 941,
+      "total_true": 2826413.55,
+      "total_pred": 1188038.854494444,
+      "factor": 2.3790581758394986
+    },
+    "Neusoft Capital": {
+      "count": 94,
+      "total_true": 133925.06,
+      "total_pred": 37079.54556890879,
+      "factor": 3.61183121166124
+    },
+    "深演智能": {
+      "count": 158,
+      "total_true": 349468.08,
+      "total_pred": 202862.17310207416,
+      "factor": 1.7226872543860514
+    },
+    "Blackwing 上海黑翼资产管理有限公司北京分公司": {
+      "count": 109,
+      "total_true": 115501.66,
+      "total_pred": 1389.2664787920744,
+      "factor": 83.13859274890534
+    },
+    "Capital Group": {
+      "count": 395,
+      "total_true": 559025.27,
+      "total_pred": 299211.3730435023,
+      "factor": 1.8683289485748373
+    },
+    "LEANYOU (LINYU)": {
+      "count": 397,
+      "total_true": 4183126.5500000003,
+      "total_pred": 269492.83052470785,
+      "factor": 15.522218315995161
+    },
+    "Johnson & Johnson": {
+      "count": 6854,
+      "total_true": 30923131.1,
+      "total_pred": 7198899.283668812,
+      "factor": 4.295536009255082
+    },
+    "Cedarlake Capital_高层": {
+      "count": 242,
+      "total_true": 2023989.44,
+      "total_pred": 456314.626045959,
+      "factor": 4.435512965118388
+    },
+    "LDI": {
+      "count": 4473,
+      "total_true": 28680717.080000002,
+      "total_pred": 3700062.6162356394,
+      "factor": 7.751413977198883
+    },
+    "Extreme Networks": {
+      "count": 1478,
+      "total_true": 4400163.76,
+      "total_pred": 1133381.909180021,
+      "factor": 3.8823310345437134
+    },
+    "Heliang Technology": {
+      "count": 101,
+      "total_true": 227861.37,
+      "total_pred": 50397.097194242415,
+      "factor": 4.52131933555157
+    },
+    "Digital Valley": {
+      "count": 336,
+      "total_true": 1956323.71,
+      "total_pred": 310311.0850706633,
+      "factor": 6.304395183157928
+    },
+    "ICS上海芯空微电子科技有限公司": {
+      "count": 154,
+      "total_true": 244679.01,
+      "total_pred": 164811.92442801778,
+      "factor": 1.4845953097699824
+    },
+    "AppsFlyer": {
+      "count": 1007,
+      "total_true": 2327519.25,
+      "total_pred": 909460.9896969271,
+      "factor": 2.5592293417396967
+    },
+    "Wanyou万有实业": {
+      "count": 132,
+      "total_true": 550379.82,
+      "total_pred": 1682.4144513812278,
+      "factor": 327.1368832740051
+    },
+    "Xinjiang KTZ": {
+      "count": 86,
+      "total_true": 37291.88,
+      "total_pred": 48786.72935855371,
+      "factor": 0.7643857354307696
+    },
+    "MERCURY-ASO": {
+      "count": 346,
+      "total_true": 1119252.22,
+      "total_pred": 570836.3490569293,
+      "factor": 1.960723457518255
+    },
+    "FYKJ飞友科技": {
+      "count": 80,
+      "total_true": 127303.69,
+      "total_pred": 45569.319813050635,
+      "factor": 2.793627171137661
+    },
+    "W Capital文璟": {
+      "count": 245,
+      "total_true": 587941.68,
+      "total_pred": 173286.54275047447,
+      "factor": 3.3928871259588345
+    },
+    "迪桑特": {
+      "count": 69,
+      "total_true": 232267.5,
+      "total_pred": 997.2005555477687,
+      "factor": 232.91954532898748
+    },
+    "睿乐生教育": {
+      "count": 262,
+      "total_true": 2013438.69,
+      "total_pred": 210475.81135886966,
+      "factor": 9.566128653933571
+    },
+    "Flamingo Capital": {
+      "count": 62,
+      "total_true": 47004.479999999996,
+      "total_pred": 54164.947550214994,
+      "factor": 0.8678025572982102
+    },
+    "Shanghai PingTong  上海凭通网络科技": {
+      "count": 55,
+      "total_true": 82052.78,
+      "total_pred": 78704.50592034197,
+      "factor": 1.0425423429129568
+    },
+    "CBD Group": {
+      "count": 48,
+      "total_true": 179764.0,
+      "total_pred": 69450.04978441693,
+      "factor": 2.5883926729788334
+    },
+    "Hema Home上海赫马家居饰品": {
+      "count": 51,
+      "total_true": 52463.73,
+      "total_pred": 32657.22376843674,
+      "factor": 1.6064969383804844
+    },
+    "珠海冠宇": {
+      "count": 1306,
+      "total_true": 4017284.02,
+      "total_pred": 1443252.4098947349,
+      "factor": 2.7834937204733334
+    },
+    "Lancy Group": {
+      "count": 170,
+      "total_true": 551731.78,
+      "total_pred": 73883.46807384407,
+      "factor": 7.4675945023122425
+    },
+    "Santen": {
+      "count": 1403,
+      "total_true": 3464559.81,
+      "total_pred": 1234364.9118229202,
+      "factor": 2.8067549367419313
+    },
+    "DELL": {
+      "count": 1995,
+      "total_true": 12137340.16,
+      "total_pred": 1788776.8387894842,
+      "factor": 6.785273543799729
+    },
+    "RiseSun": {
+      "count": 467,
+      "total_true": 2205892.02,
+      "total_pred": 720182.0495233919,
+      "factor": 3.062964456639587
+    },
+    "LKK": {
+      "count": 80,
+      "total_true": 327865.99,
+      "total_pred": 1019.645122049229,
+      "factor": 321.54911832567024
+    },
+    "PXW鹏芯微": {
+      "count": 508,
+      "total_true": 3641136.91,
+      "total_pred": 653835.9376393467,
+      "factor": 5.568884639694486
+    },
+    "Henkel": {
+      "count": 1004,
+      "total_true": 1214086.57,
+      "total_pred": 732585.4272639134,
+      "factor": 1.6572627912275222
+    },
+    "JAS Forwarding": {
+      "count": 35,
+      "total_true": 20095.34,
+      "total_pred": 22497.566022218434,
+      "factor": 0.8932228482029562
+    },
+    "ILTexas Shaohua Preschool": {
+      "count": 32,
+      "total_true": 13335.92,
+      "total_pred": 407.8580488196916,
+      "factor": 32.6974545153469
+    },
+    "Baitong Project": {
+      "count": 379,
+      "total_true": 773458.91,
+      "total_pred": 435920.9824279817,
+      "factor": 1.7743098891271718
+    },
+    "Baidu Online_Jan": {
+      "count": 237,
+      "total_true": 807477.64,
+      "total_pred": 322019.952716123,
+      "factor": 2.507539154605841
+    },
+    "ZENX知定堂": {
+      "count": 618,
+      "total_true": 6239731.0200000005,
+      "total_pred": 9572.265524928429,
+      "factor": 651.8551960087478
+    },
+    "YASCSEMI ": {
+      "count": 494,
+      "total_true": 11357164.719999999,
+      "total_pred": 1474698.4991559975,
+      "factor": 7.70134690345176
+    },
+    "SiEngine Technology Co., Ltd": {
+      "count": 1015,
+      "total_true": 4516339.84,
+      "total_pred": 1118671.294609697,
+      "factor": 4.037235836623255
+    },
+    "DIGI-GIMC": {
+      "count": 115,
+      "total_true": 153029.8,
+      "total_pred": 73053.16829462071,
+      "factor": 2.094772938291143
+    },
+    "Lane Xang Mineral Ltd": {
+      "count": 1142,
+      "total_true": 190196855.98000002,
+      "total_pred": 5049726.869783271,
+      "factor": 37.66478086529917
+    },
+    "Soprema": {
+      "count": 40,
+      "total_true": 77489.41,
+      "total_pred": 40673.059960433704,
+      "factor": 1.9051777780029542
+    },
+    "CEIBS": {
+      "count": 3938,
+      "total_true": 45463845.78,
+      "total_pred": 8647904.425580751,
+      "factor": 5.257209555359635
+    },
+    "In-tech": {
+      "count": 41,
+      "total_true": 28354.1,
+      "total_pred": 11714.250785483391,
+      "factor": 2.420479168427668
+    },
+    "ZX technology至像科技": {
+      "count": 94,
+      "total_true": 154644.75,
+      "total_pred": 30928.823373228188,
+      "factor": 5.000020470673954
+    },
+    "Shanghai Shouqianba": {
+      "count": 44,
+      "total_true": 124618.45000000001,
+      "total_pred": 59432.78274611963,
+      "factor": 2.0967964857431545
+    },
+    "美达菲学校": {
+      "count": 440,
+      "total_true": 4057714.9299999997,
+      "total_pred": 28060.371521304136,
+      "factor": 144.60660034095704
+    },
+    "YIFANG": {
+      "count": 119,
+      "total_true": 106504.12,
+      "total_pred": 85606.68586072263,
+      "factor": 1.244109837090018
+    },
+    "Surgnova": {
+      "count": 360,
+      "total_true": 395155.01,
+      "total_pred": 882765.077651422,
+      "factor": 0.44763326054005403
+    },
+    "CDP-EZI": {
+      "count": 538,
+      "total_true": 1097442.3800000001,
+      "total_pred": 895932.7362780161,
+      "factor": 1.2249160406384054
+    },
+    "MVRDV": {
+      "count": 30,
+      "total_true": 46253.25,
+      "total_pred": 11719.193427562497,
+      "factor": 3.9467946566370755
+    },
+    "MINDWORKS 北京概念智品咨询顾问有限公司": {
+      "count": 71,
+      "total_true": 131884.12,
+      "total_pred": 80182.75826805792,
+      "factor": 1.6447940037071302
+    },
+    "MT": {
+      "count": 219,
+      "total_true": 789445.53,
+      "total_pred": 262932.6580366414,
+      "factor": 3.002462820308862
+    },
+    "RuiZhao瑞昭科技": {
+      "count": 140,
+      "total_true": 444155.04000000004,
+      "total_pred": 2526.5885054221653,
+      "factor": 175.7923932000896
+    },
+    "IlIM": {
+      "count": 78,
+      "total_true": 231906.97,
+      "total_pred": 113872.12706838729,
+      "factor": 2.0365560560814453
+    },
+    "Barilla": {
+      "count": 110,
+      "total_true": 341310.24,
+      "total_pred": 122314.01042003065,
+      "factor": 2.790442720567566
+    },
+    "ZhongAo WuYe": {
+      "count": 55,
+      "total_true": 137203.91,
+      "total_pred": 44737.53744220135,
+      "factor": 3.0668632616907123
+    },
+    "Rongrong Trading": {
+      "count": 216,
+      "total_true": 1328714.2,
+      "total_pred": 236541.44437842545,
+      "factor": 5.617257489449869
+    },
+    "HCI": {
+      "count": 40,
+      "total_true": 41525.46,
+      "total_pred": 37423.39202147327,
+      "factor": 1.1096124043532183
+    },
+    "LOREAL CHINA": {
+      "count": 1830,
+      "total_true": 5780322.56,
+      "total_pred": 2147039.4273864706,
+      "factor": 2.6922293490605433
+    },
+    "Foresight Fund": {
+      "count": 2275,
+      "total_true": 10691541.09,
+      "total_pred": 2342017.2182348594,
+      "factor": 4.565099268594635
+    },
+    "Infoblox": {
+      "count": 161,
+      "total_true": 255401.52,
+      "total_pred": 187865.1832792899,
+      "factor": 1.3594936301757796
+    },
+    "Vestiaire Collective China": {
+      "count": 47,
+      "total_true": 89943.85,
+      "total_pred": 26220.668388213762,
+      "factor": 3.4302653413835142
+    },
+    "DIGITAL CARROTS 络纬（上海）广告传播有限公司": {
+      "count": 44,
+      "total_true": 102179.59,
+      "total_pred": 41556.004001659174,
+      "factor": 2.4588406044989397
+    },
+    "Shanghai Shunya": {
+      "count": 106,
+      "total_true": 224047.12,
+      "total_pred": 93917.28154537572,
+      "factor": 2.3855792705387517
+    },
+    "JAX China": {
+      "count": 127,
+      "total_true": 108400.0,
+      "total_pred": 101429.82494521241,
+      "factor": 1.0687191864774739
+    },
+    "WAVENET SOFTWARE": {
+      "count": 105,
+      "total_true": 203201.05,
+      "total_pred": 137716.56302382154,
+      "factor": 1.4755018970728397
+    },
+    "Qingdao Richen Food": {
+      "count": 332,
+      "total_true": 251202.0,
+      "total_pred": 131683.36563512075,
+      "factor": 1.9076213520852092
+    },
+    "正速": {
+      "count": 1510,
+      "total_true": 6327709.08,
+      "total_pred": 1820283.8500660183,
+      "factor": 3.476221073856424
+    },
+    "JINHUTAO 北京金胡桃科技有限公司": {
+      "count": 91,
+      "total_true": 172745.22,
+      "total_pred": 79816.00411815678,
+      "factor": 2.1642930125175663
+    },
+    "Johnson Matthey": {
+      "count": 392,
+      "total_true": 3255941.67,
+      "total_pred": 5691.454722227453,
+      "factor": 572.0754761140802
+    },
+    "HDTPFMC/北京恒德时代私募基金管理有限公司": {
+      "count": 126,
+      "total_true": 209091.9,
+      "total_pred": 108084.43021898523,
+      "factor": 1.9345237753149815
+    },
+    "CFAP": {
+      "count": 607,
+      "total_true": 13645474.129999999,
+      "total_pred": 1465532.0403937425,
+      "factor": 9.310935383121265
+    },
+    "Huibo浙江慧玻科技有限公司": {
+      "count": 32,
+      "total_true": 32235.2,
+      "total_pred": 407.8580488196916,
+      "factor": 79.03534107831408
+    },
+    "UBS": {
+      "count": 1728,
+      "total_true": 6558639.87,
+      "total_pred": 2269626.4080638313,
+      "factor": 2.88974425337033
+    },
+    "Suzhou Junjie Education  苏州俊杰教育科技": {
+      "count": 250,
+      "total_true": 3508202.8000000003,
+      "total_pred": 42453.33162332138,
+      "factor": 82.63668988637865
+    },
+    "Top Estate": {
+      "count": 34,
+      "total_true": 97401.92,
+      "total_pred": 433.3491768709223,
+      "factor": 224.76544366210302
+    },
+    "Jotun": {
+      "count": 265,
+      "total_true": 490260.39,
+      "total_pred": 298471.2758846753,
+      "factor": 1.6425714285130373
+    },
+    "Trees Technology": {
+      "count": 74,
+      "total_true": 148624.64,
+      "total_pred": 35246.253066545454,
+      "factor": 4.216750067571565
+    },
+    "上海楒嘉信息": {
+      "count": 41,
+      "total_true": 46624.6,
+      "total_pred": 86655.78680661545,
+      "factor": 0.5380436981554312
+    },
+    "Jardi Sourcing": {
+      "count": 37,
+      "total_true": 173076.84000000003,
+      "total_pred": 21900.485816328604,
+      "factor": 7.902876742166015
+    },
+    "Beida Jade Bird Group": {
+      "count": 561,
+      "total_true": 1676252.71,
+      "total_pred": 298721.9778253255,
+      "factor": 5.611414072051207
+    },
+    "Star Attraction": {
+      "count": 104,
+      "total_true": 613414.77,
+      "total_pred": 21963.1929975345,
+      "factor": 27.92921639712675
+    },
+    "Spheros Suzhou": {
+      "count": 132,
+      "total_true": 139121.02,
+      "total_pred": 40611.51533194608,
+      "factor": 3.425654493876119
+    },
+    "One Capital": {
+      "count": 122,
+      "total_true": 173222.6,
+      "total_pred": 75081.43480506749,
+      "factor": 2.3071295913528367
+    },
+    "Bayer": {
+      "count": 419,
+      "total_true": 6439911.590000001,
+      "total_pred": 2102900.951383305,
+      "factor": 3.062394158775655
+    },
+    "Overseas Metal": {
+      "count": 110,
+      "total_true": 47417.72,
+      "total_pred": 39741.317064362825,
+      "factor": 1.1931592484266413
+    },
+    "Infotech Capital": {
+      "count": 61,
+      "total_true": 279575.82,
+      "total_pred": 73017.56389031361,
+      "factor": 3.828884519072377
+    },
+    "BeiGene": {
+      "count": 2365,
+      "total_true": 12699127.129999999,
+      "total_pred": 2990717.8496054113,
+      "factor": 4.246180271293561
+    },
+    "UIC College": {
+      "count": 1345,
+      "total_true": 10010131.24,
+      "total_pred": 2239105.77960863,
+      "factor": 4.470593274851738
+    },
+    "Pictet": {
+      "count": 174,
+      "total_true": 299055.84,
+      "total_pred": 151519.0847474348,
+      "factor": 1.9737173076150265
+    },
+    "Digquant深圳点宽网络科技有限公司": {
+      "count": 127,
+      "total_true": 193850.76,
+      "total_pred": 21793.165796116802,
+      "factor": 8.895025248444682
+    },
+    "Linde(China)": {
+      "count": 169,
+      "total_true": 371174.0,
+      "total_pred": 366561.1331695828,
+      "factor": 1.0125841678590706
+    },
+    "Costco China": {
+      "count": 1285,
+      "total_true": 2787642.48,
+      "total_pred": 1254515.7337900298,
+      "factor": 2.2220865031148125
+    },
+    "Tooltalker": {
+      "count": 88,
+      "total_true": 113768.14,
+      "total_pred": 73701.79666693376,
+      "factor": 1.5436277695390561
+    },
+    "WES GROUP": {
+      "count": 1214,
+      "total_true": 2713516.79,
+      "total_pred": 929238.7935187148,
+      "factor": 2.9201501367854266
+    },
+    "HEILONGJIANG JIANGDA Co.,Ltd.": {
+      "count": 332,
+      "total_true": 23541925.3,
+      "total_pred": 83128.15162477855,
+      "factor": 283.20039408867
+    },
+    "Levis": {
+      "count": 134,
+      "total_true": 160626.38,
+      "total_pred": 322530.1406568196,
+      "factor": 0.49801974994613174
+    },
+    "上海复宏汉霖生物技术股份有限公司": {
+      "count": 329,
+      "total_true": 867979.7100000001,
+      "total_pred": 370969.15295504045,
+      "factor": 2.3397624926113325
+    },
+    "Beijing RarePlus MedTech Co., Ltd.": {
+      "count": 153,
+      "total_true": 15306146.809999999,
+      "total_pred": 9864152.339503706,
+      "factor": 1.551694082085729
+    },
+    "Pimco": {
+      "count": 274,
+      "total_true": 1365592.7,
+      "total_pred": 663677.2956997802,
+      "factor": 2.057615514118381
+    },
+    "UNStudio (Shanghai) Limited": {
+      "count": 376,
+      "total_true": 2359834.47,
+      "total_pred": 411256.4620750059,
+      "factor": 5.738109154792097
+    },
+    "Covington & Burling": {
+      "count": 899,
+      "total_true": 1463152.07,
+      "total_pred": 11882.863010796023,
+      "factor": 123.13127473325846
+    },
+    "Ya Manni": {
+      "count": 281,
+      "total_true": 600424.33,
+      "total_pred": 362019.3733011509,
+      "factor": 1.658541984990755
+    },
+    "Shanghai American School": {
+      "count": 8647,
+      "total_true": 52935255.65,
+      "total_pred": 17008516.52320104,
+      "factor": 3.1122794029562706
+    },
+    "GMC": {
+      "count": 378,
+      "total_true": 925657.5,
+      "total_pred": 299328.56820851035,
+      "factor": 3.092446222357209
+    },
+    "HARTREE PARTNERS": {
+      "count": 52,
+      "total_true": 77487.4,
+      "total_pred": 662.7693293319988,
+      "factor": 116.91458335602083
+    },
+    "Gartner": {
+      "count": 88,
+      "total_true": 141019.28,
+      "total_pred": 42618.577803623164,
+      "factor": 3.308868743808983
+    },
+    "江苏瑞科生物": {
+      "count": 86,
+      "total_true": 132618.17,
+      "total_pred": 113514.48289139403,
+      "factor": 1.1682929492519787
+    },
+    "CHUANG ZHONG": {
+      "count": 109,
+      "total_true": 265946.05,
+      "total_pred": 119015.10020399232,
+      "factor": 2.2345572078178946
+    },
+    "GPJ": {
+      "count": 83,
+      "total_true": 426204.96,
+      "total_pred": 185196.30349626616,
+      "factor": 2.3013686124064185
+    },
+    "视源电子": {
+      "count": 1168,
+      "total_true": 5016651.21,
+      "total_pred": 1278609.2773434243,
+      "factor": 3.9235216722524746
+    },
+    "Pizzavest": {
+      "count": 204,
+      "total_true": 507868.09,
+      "total_pred": 209661.55336031283,
+      "factor": 2.4223234153340734
+    },
+    "上海表盒": {
+      "count": 76,
+      "total_true": 348564.44,
+      "total_pred": 39857.818117963914,
+      "factor": 8.745196211402803
+    },
+    "Citadel (Shanghai) Trading Company Limited": {
+      "count": 483,
+      "total_true": 1241894.7,
+      "total_pred": 642292.496804017,
+      "factor": 1.9335344974128506
+    },
+    "Zhuhai Huakuo": {
+      "count": 479,
+      "total_true": 49456973.75,
+      "total_pred": 2098751.2795822006,
+      "factor": 23.56495227955045
+    },
+    "SCIS": {
+      "count": 4459,
+      "total_true": 59997334.47,
+      "total_pred": 13462122.712014625,
+      "factor": 4.456751416806935
+    },
+    "CMB Financial Leasing_Otc": {
+      "count": 76,
+      "total_true": 103095.16,
+      "total_pred": 79073.51918702487,
+      "factor": 1.3037886900690367
+    },
+    "Pilot Health": {
+      "count": 162,
+      "total_true": 164799.88999999998,
+      "total_pred": 77904.17329897016,
+      "factor": 2.115417993944344
+    },
+    "Gensler": {
+      "count": 864,
+      "total_true": 3635394.02,
+      "total_pred": 1365605.4802660183,
+      "factor": 2.662111475483995
+    },
+    "Shandong Longyuan Electric Power 山东龙源电力工程": {
+      "count": 126,
+      "total_true": 332528.08999999997,
+      "total_pred": 97356.49360046268,
+      "factor": 3.4155717580036145
+    },
+    "CMB (SZ BRANCH)": {
+      "count": 2734,
+      "total_true": 4934719.52,
+      "total_pred": 2697674.818272883,
+      "factor": 1.8292492062328427
+    },
+    "Giantec": {
+      "count": 135,
+      "total_true": 245531.84,
+      "total_pred": 109091.05791068639,
+      "factor": 2.250705462963047
+    },
+    "Dmall": {
+      "count": 283,
+      "total_true": 350861.47,
+      "total_pred": 234653.79582790565,
+      "factor": 1.4952303190412513
+    },
+    "GLP 普洛斯投资": {
+      "count": 529,
+      "total_true": 2795617.4,
+      "total_pred": 1183393.5181151894,
+      "factor": 2.362373426256911
+    },
+    "Shanghai Ark Biopharmaceutical": {
+      "count": 115,
+      "total_true": 224042.06,
+      "total_pred": 163226.50107451418,
+      "factor": 1.372583854491392
+    },
+    "Insights Value": {
+      "count": 330,
+      "total_true": 748095.06,
+      "total_pred": 283086.61486157763,
+      "factor": 2.6426366374326813
+    },
+    "YUNZHONG云中再生": {
+      "count": 66,
+      "total_true": 51314.33,
+      "total_pred": 841.2072256906139,
+      "factor": 61.000819337793956
+    },
+    "佑榕科技": {
+      "count": 35,
+      "total_true": 12622.38,
+      "total_pred": 2880.323997937478,
+      "factor": 4.382277830215817
+    },
+    "MCL Skincare Ltd": {
+      "count": 30,
+      "total_true": 112738.98,
+      "total_pred": 512.5189941045916,
+      "factor": 219.97034509318684
+    },
+    "Progetto CMR": {
+      "count": 36,
+      "total_true": 67896.34000000001,
+      "total_pred": 63002.00866855947,
+      "factor": 1.0776853220218519
+    },
+    "人福系列单": {
+      "count": 1230,
+      "total_true": 1278854.23,
+      "total_pred": 617415.2787431082,
+      "factor": 2.071303179609361
+    },
+    "英飞特电子": {
+      "count": 66,
+      "total_true": 100260.09,
+      "total_pred": 67466.13061236108,
+      "factor": 1.4860803352731546
+    },
+    "Zuora": {
+      "count": 173,
+      "total_true": 459472.48,
+      "total_pred": 210034.9721445441,
+      "factor": 2.1875998806703265
+    },
+    "Endpoint China": {
+      "count": 54,
+      "total_true": 23857.0,
+      "total_pred": 688.2604573832296,
+      "factor": 34.662749754220165
+    }
+  }
+}

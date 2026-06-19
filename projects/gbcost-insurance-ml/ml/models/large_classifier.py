@@ -83,8 +83,9 @@ class LargeClaimClassifier:
 
         from ml.models.amount_predictor import AmountPredictor
         dummy = AmountPredictor(log_transform=False)
-        X_train_pd, _ = dummy._prepare_data(train_df, feature_cols, categorical_cols, "y_log")
-        X_val_pd, _ = dummy._prepare_data(val_df, feature_cols, categorical_cols, "y_log")
+        target_col = "y_raw"
+        X_train_pd, _ = dummy._prepare_data(train_df, feature_cols, categorical_cols, target_col)
+        X_val_pd, _ = dummy._prepare_data(val_df, feature_cols, categorical_cols, target_col)
 
         self.feature_names = feature_cols
         cat_valid = [c for c in categorical_cols if c in feature_cols]

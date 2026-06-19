@@ -1,0 +1,70 @@
+{
+  "config_path": "ml/config_ml.yaml",
+  "mode": "full",
+  "csv_path": "data/doris/c001_ghb_poicy_clm_duty_d.csv",
+  "feature_count": 71,
+  "categorical_feature_count": 15,
+  "train_rows": 3616913,
+  "val_rows": 1042106,
+  "split_config": {
+    "train_end": "2024-12-31",
+    "val_end": "2025-06-30",
+    "test_end": "2026-06-30"
+  },
+  "model_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.35,
+    "metric": [
+      "mae",
+      "rmse"
+    ],
+    "num_leaves": 127,
+    "learning_rate": 0.118,
+    "subsample": 0.6,
+    "subsample_freq": 1,
+    "colsample_bytree": 1.0,
+    "reg_alpha": 0.014,
+    "reg_lambda": 0.12,
+    "min_child_samples": 200,
+    "verbose": -1,
+    "seed": 42,
+    "n_jobs": -1,
+    "force_col_wise": true
+  },
+  "train_summary": {
+    "best_iteration": 723,
+    "train_time_sec": 4107.9,
+    "chunks": 8,
+    "total_rows": 3616913,
+    "train_l1": 2757.4615,
+    "train_rmse": 13955.5217,
+    "val_l1": 3606.0335,
+    "val_rmse": 18436.5443
+  },
+  "val_metrics": {
+    "mae": 3762.52,
+    "rmse": 18465.76,
+    "r2": 0.161,
+    "mape": 88.09,
+    "gini": 0.4904,
+    "med_ape": 89.9,
+    "total_true": 4437726919.16,
+    "total_pred": 790284333.34,
+    "total_error_pct": 82.19,
+    "case_count": 1042106,
+    "large_auc": 0.8131253921042758,
+    "large_aucpr": 0.46165223658093846,
+    "large_recall": 0.10152844303320596
+  },
+  "baseline_metrics": {
+    "baseline_mean_mae": 5523.39,
+    "baseline_median_mae": 3929.6,
+    "baseline_mean_mape": 22754.68,
+    "baseline_median_mape": 5005.39,
+    "data_mean": 4258.42,
+    "data_median": 940.38,
+    "data_std": 20160.28
+  },
+  "quantile_models": {},
+  "backtest_results": []
+}
