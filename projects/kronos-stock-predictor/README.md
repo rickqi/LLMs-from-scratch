@@ -130,7 +130,8 @@ pip install torch numpy pandas einops tushare akshare tqdm matplotlib scikit-lea
 
 | 日期 | 变更 |
 |------|------|
-| 2026-06-18 | **50-epoch突破**: 波动率 RankIC=+0.090 (v2最佳), Sharpe=2.35 |
+| 2026-06-18 | **🔥 VPIN/DPIN突破**: RankIC +0.187 (p=0.0145), 多窗口 3/4正 |
+| 2026-06-18 | VPIN/DPIN 因子实施方案 (广发金工 Level-2 方法论) |
 | 2026-06-18 | **🔥 蒙特卡洛通关**: Sharpe=1.46, p=0.0149, 33调仓点, 统计显著! |
 | 2026-06-18 | **方案A完成**: 测试集扩展至 2023-2026 (835天, 33点) |
 | 2026-06-18 | **扩展半导体**: 183只下载 (242K行), 数据隔离 semiconductor_v2/ |
