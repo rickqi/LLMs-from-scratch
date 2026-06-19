@@ -24,6 +24,7 @@
 | `dml_device.py` | 设备选型:优先选独显 AMD Radeon,回退首个 DirectML 设备 |
 | `train_gpt_ch04.py` | ch04 GPT 快速训练验证(5 epoch),引用仓库自有的 `ch04/.../gpt.py` |
 | `train_pretrain_ch05.py` | ch05 风格预训练(10 epoch + 周期生成样本) |
+| `train_classify_ch06.py` | ch06 分类微调(GPT-2 124M 做 SMS 垃圾短信分类),需预缓存权重 |
 | `run.sh` | WSL→Windows 桥接运行器(模板,路径需按机器改) |
 
 **不重复代码**:`train_*.py` 通过 `sys.path` 直接 import 本仓库 `ch04/01_main-chapter-code/gpt.py`
@@ -43,8 +44,28 @@ conda activate dml
 pip install --index-url https://download.pytorch.org/whl/cpu torch==2.4.1 torchvision==0.19.1
 pip install --no-deps torch-directml
 pip install tiktoken
+pip install pandas             # ch06 分类微调需要
 # 注意:torch-directml 强绑定 torch==2.4.1,切勿 pip install -U torch
 ```
+
+### ch06 的额外一步:预缓存 GPT-2 权重(解耦 tensorflow)
+
+`ch06/01_main-chapter-code/gpt_download.py` 需要 **tensorflow** 来解析 OpenAI 的 GPT-2
+权重 checkpoint。为避免在 torch-directml 环境里装 tensorflow(共存有风险),改用**任何
+装有 tensorflow 的 python**(如 WSL 的 python、或单独的 conda 环境)**一次性**下载并缓存
+解析后的权重为单个 `.pt` 文件,之后 dml 训练脚本直接 `torch.load` 加载(无需 tensorflow):
+
+```python
+# 在装有 tensorflow 的环境里跑一次(WSL python 通常已有)
+import sys, torch
+sys.path.insert(0, "ch06/01_main-chapter-code")
+from gpt_download import download_and_load_gpt2
+settings, params = download_and_load_gpt2(model_size="124M", models_dir="gpt2")
+torch.save({"settings": settings, "params": params}, "dml-adapt/gpt2-124M-params.pt")
+```
+
+`train_classify_ch06.py` 会从脚本同目录读取 `gpt2-124M-params.pt`。缓存文件约 745MB,**不要
+提交到 git**(已在 `.gitignore` 规则覆盖范围内的话忽略;否则手动忽略)。
 
 ---
 
@@ -88,6 +109,17 @@ epoch 10: train 0.66 -> "Yes--quite insensible to the irony.  (连贯句子 ✓)
 ```
 末句是 Edith Wharton《The Verdict》的真实句子,证明模型真正学到了。
 train_loss 降到 0.66、val_loss 在 ~6.1 平台 = 小数据集过拟合(原书也讨论此现象)。
+
+**ch06 分类微调**(`train_classify_ch06.py`,GPT-2 124M,5 epoch,2.83 min):
+```
+Ep 1: Train loss 0.62→0.52 | Train acc 70.00% | Val acc 72.50%
+Ep 3:                       | Train acc 90.00% | Val acc 90.00%
+Ep 5: Train loss 0.08       | Train acc 100.00% | Val acc 97.50%
+Test accuracy: 95.67%
+```
+- 加载预训练 GPT-2 124M 权重(从缓存),冻结主体、只微调最后一层 transformer block + final_norm + 新的 2 类输出头
+- **测试准确率 95.67%**,与原书 ch06 结果(~95-97%)一致
+- ~33s/epoch,全程无 OOM
 
 ---
 
