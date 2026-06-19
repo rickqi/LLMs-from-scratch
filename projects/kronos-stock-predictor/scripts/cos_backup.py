@@ -68,4 +68,27 @@ forecast_path = PROJECT_ROOT / "data/7day_forecast.json"
 if forecast_path.exists():
     upload_file(str(forecast_path), f"{COS_PREFIX}/data/7day_forecast.json")
 
+# Backup v2 training outputs
+backup_model("v2", str(PROJECT_ROOT / "outputs/v2"))
+
+# Backup production models
+print(f"\n=== Backup: Production models ===")
+for m in ["production_model.pt", "production_vol_model.pt"]:
+    p = PROJECT_ROOT / "outputs" / m
+    if p.exists():
+        upload_file(str(p), f"{COS_PREFIX}/outputs/{m}")
+
+# Backup v2 models (individual files)
+print(f"\n=== Backup: V2 models ===")
+for m in ["direction_model.pt", "volatility_model.pt", "report.json"]:
+    p = PROJECT_ROOT / "outputs/v2" / m
+    if p.exists():
+        upload_file(str(p), f"{COS_PREFIX}/outputs/v2/{m}")
+
+# Backup semiconductor checkpoint
+print(f"\n=== Backup: Data checkpoint ===")
+cp = PROJECT_ROOT / "data/semiconductor_v2/checkpoint.json"
+if cp.exists():
+    upload_file(str(cp), f"{COS_PREFIX}/data/semiconductor_v2/checkpoint.json")
+
 print(f"\n=== Backup Complete ===")
