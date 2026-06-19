@@ -75,7 +75,10 @@ class LargeClaimClassifier:
         categorical_cols: List[str],
         y_train: Optional[np.ndarray] = None,
         y_val: Optional[np.ndarray] = None,
+        exclude_cols: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
+        if exclude_cols:
+            feature_cols = [c for c in feature_cols if c not in exclude_cols]
         if y_train is None:
             y_train = (train_df["y_raw"].to_numpy() > self.threshold).astype(np.float64)
         if y_val is None:

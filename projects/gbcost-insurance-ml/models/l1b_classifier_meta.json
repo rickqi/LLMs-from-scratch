@@ -21,7 +21,7 @@
     "scale_pos_weight": 21.569546044098573
   },
   "n_estimators": 500,
-  "best_iteration": 13,
+  "best_iteration": 17,
   "feature_names": [
     "acci_city",
     "acci_region_type",
@@ -30,8 +30,6 @@
     "age_bucket_x_duty_code",
     "annual_prem_log",
     "claim_type",
-    "day_count",
-    "day_count_filled",
     "day_of_week",
     "duty_code",
     "est_loss_ratio",
@@ -44,8 +42,6 @@
     "is_public",
     "is_yearend",
     "is_yearend_x_hosp_grade",
-    "large_case_amt",
-    "large_case_filled",
     "main_insured_rela",
     "member_avg_claim_size",
     "member_avg_paid",
@@ -117,10 +113,10 @@
     "rnew_flag_x_duty_code"
   ],
   "train_eval": {
-    "best_iteration": 13,
-    "train_auc": 0.9983,
-    "train_average_precision": 0.9475,
-    "val_auc": 0.9969,
-    "val_average_precision": 0.9246
+    "best_iteration": 17,
+    "train_auc": 0.9985,
+    "train_average_precision": 0.9472,
+    "val_auc": 0.9945,
+    "val_average_precision": 0.8729
   }
 }

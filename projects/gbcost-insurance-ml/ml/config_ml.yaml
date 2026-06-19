@@ -96,6 +96,11 @@ l1b:
   num_leaves: 31
   learning_rate: 0.03
   metric: "average_precision"
+  # Exclude proxy-leakage features from L1-B (still used in L1-A)
+  exclude_cols:
+    - large_case_amt
+    - large_case_filled
+    - day_count_filled
 
 quantiles:
   levels: [0.05, 0.50, 0.95]

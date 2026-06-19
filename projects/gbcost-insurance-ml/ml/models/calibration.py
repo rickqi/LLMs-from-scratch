@@ -141,3 +141,99 @@ def compute_calibration_metrics(
         "mae_before": before["mae"],
         "mae_after": after["mae"],
     }
+
+
+class TimeSegmentedCalibrator:
+    """Per-time-period calibrator — trains separate GroupCalibrator per segment.
+
+    Addresses the time-drift problem where calibration factors change over
+    years due to medical inflation and policy structure evolution.
+    """
+
+    def __init__(self, date_col: str = "medical_start_date", period: str = "quarter"):
+        self.date_col = date_col
+        self.period = period  # "month" or "quarter"
+        self.calibrators: Dict[str, GroupCalibrator] = {}
+
+    def fit(
+        self,
+        df: pl.DataFrame,
+        y_true_col: str = "y_raw",
+        y_pred_col: str = "y_pred",
+        group_col: str = "policy_grp_name",
+    ) -> "TimeSegmentedCalibrator":
+        truncate = "1mo" if self.period == "month" else "1q"
+        df_with_period = df.with_columns(
+            pl.col(self.date_col).dt.truncate(truncate).alias("_period")
+        )
+        periods = df_with_period["_period"].unique().sort().to_list()
+
+        for p in periods:
+            mask = df_with_period["_period"] == p
+            period_df = df_with_period.filter(mask)
+            if len(period_df) < 100:
+                continue
+            cal = GroupCalibrator(group_col=group_col)
+            cal.fit(period_df, y_true_col=y_true_col, y_pred_col=y_pred_col)
+            self.calibrators[str(p)] = cal
+            logger.info("  Period %s: %d groups, global=%.3f",
+                         p, len(cal.factors), cal.global_factor)
+
+        logger.info("TimeSegmentedCalibrator: %d periods trained", len(self.calibrators))
+        return self
+
+    def calibrate(
+        self, predictions: np.ndarray, groups: List[str], dates: List,
+    ) -> np.ndarray:
+        import datetime as dt
+        calibrated = predictions.copy()
+        truncate = "1mo" if self.period == "month" else "1q"
+
+        for i in range(len(predictions)):
+            d = dates[i]
+            if isinstance(d, str):
+                d = dt.date.fromisoformat(d[:10])
+            if hasattr(d, 'strftime'):
+                period_key = d.strftime("%Y-%m-%d")
+            else:
+                period_key = str(d)
+
+            # Find closest period calibrator
+            cal_key = None
+            for pk in sorted(self.calibrators.keys(), reverse=True):
+                if pk <= period_key:
+                    cal_key = pk
+                    break
+            if cal_key is None and self.calibrators:
+                cal_key = sorted(self.calibrators.keys())[0]
+
+            if cal_key:
+                cal = self.calibrators[cal_key]
+                factor = cal.get_factor(groups[i])
+                calibrated[i] *= factor
+
+        return calibrated
+
+    def save(self, path: str | Path) -> None:
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        data = {"period": self.period, "date_col": self.date_col, "calibrators": {}}
+        for k, cal in self.calibrators.items():
+            data["calibrators"][k] = {"factors": cal.factors, "global_factor": cal.global_factor}
+        path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+        logger.info("TimeSegmentedCalibrator saved: %s (%d periods)", path, len(self.calibrators))
+
+    @classmethod
+    def load(cls, path: str | Path) -> "TimeSegmentedCalibrator":
+        path = Path(path)
+        data = json.loads(path.read_text(encoding="utf-8"))
+        tsc = cls(date_col=data.get("date_col", "medical_start_date"),
+                   period=data.get("period", "quarter"))
+        for k, v in data["calibrators"].items():
+            cal = GroupCalibrator()
+            cal.factors = v["factors"]
+            cal.global_factor = v.get("global_factor", 1.0)
+            tsc.calibrators[k] = cal
+        logger.info("TimeSegmentedCalibrator loaded: %s (%d periods)",
+                     path, len(tsc.calibrators))
+        return tsc
