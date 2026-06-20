@@ -111,9 +111,7 @@ class PolicyPredictor:
                 for metric, val in score.items():
                     self.train_eval[f"{name}_{metric}"] = round(val, 4)
 
-        logger.info("L2 training complete: best_iter=%d, val_mae=%.4f",
-                     self.best_iteration,
-                     self.train_eval.get("val_mae", float("nan")))
+        logger.info("L2 training complete: best_iter=%d", self.best_iteration)
 
         return self.train_eval
 
