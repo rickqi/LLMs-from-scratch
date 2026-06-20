@@ -143,6 +143,9 @@ def main():
     parser.add_argument("--batch_size", type=int, default=50, help="批大小")
     parser.add_argument("--lr", type=float, default=2e-4, help="学习率")
     parser.add_argument("--lookback", type=int, default=None, help="覆盖 lookback_window")
+    parser.add_argument("--feature_dim", type=int, default=None, help="覆盖输入特征维度")
+    parser.add_argument("--early_stopping_patience", type=int, default=10, help="早停耐心 epochs")
+    parser.add_argument("--min_delta", type=float, default=0.001, help="val improvement min threshold")
     parser.add_argument("--resume", type=str, default=None, help="从 checkpoint 恢复")
     parser.add_argument("--device", type=str, default=None, help="设备 (cuda:0 / cpu)")
     args = parser.parse_args()
@@ -212,8 +215,12 @@ def main():
     # 训练循环
     os.makedirs(checkpoint_dir, exist_ok=True)
     t_start = time.time()
+    steps_no_improvement = 0
+    stopped_early = False
 
     for epoch in range(start_epoch, config.epochs):
+        if stopped_early:
+            break
         epoch_start = time.time()
 
         train_loss = train_epoch(model, train_loader, optimizer, scheduler, device, config, epoch)
@@ -230,12 +237,21 @@ def main():
         )
 
         # 保存最佳模型
-        if val_loss < best_val_loss:
+        if val_loss < best_val_loss - args.min_delta:
             best_val_loss = val_loss
+            steps_no_improvement = 0
             save_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss,
                             train_losses, val_losses, elapsed_offset + (time.time() - t_start),
                             f"{args.output_dir}/best_model.pt")
             logger.info(f"  ✓ New best model (val_loss={val_loss:.4f})")
+        else:
+            steps_no_improvement += 1
+            logger.info(f"  No improvement ({steps_no_improvement}/{args.early_stopping_patience})")
+
+        if steps_no_improvement >= args.early_stopping_patience:
+            stopped_early = True
+            logger.warning(f"  ⚠ Early stopping at epoch {epoch+1}")
+            break
 
         # 每个 epoch 保存完整训练状态（支持断点续传）
         save_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss,
@@ -244,6 +260,8 @@ def main():
         logger.info(f"  -> 断点已保存 (epoch {epoch+1})")
 
     total_time = time.time() - t_start
+    if stopped_early:
+        logger.info(f"Training stopped early at epoch {start_epoch + steps_no_improvement}")
     logger.info(f"Training complete. Total time: {format_time(total_time)}")
     logger.info(f"Best val loss: {best_val_loss:.4f}")
     logger.info(f"Model saved to: {args.output_dir}/best_model.pt")

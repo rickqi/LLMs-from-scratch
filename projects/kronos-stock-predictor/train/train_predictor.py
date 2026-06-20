@@ -173,6 +173,8 @@ def main():
     parser.add_argument("--batch_size", type=int, default=50)
     parser.add_argument("--lr", type=float, default=4e-5)
     parser.add_argument("--lookback", type=int, default=None)
+    parser.add_argument("--early_stopping_patience", type=int, default=15)
+    parser.add_argument("--min_delta", type=float, default=0.01)
     parser.add_argument("--resume", type=str, default=None)
     parser.add_argument("--device", type=str, default=None)
     args = parser.parse_args()
@@ -253,8 +255,12 @@ def main():
 
     os.makedirs(checkpoint_dir, exist_ok=True)
     t_start = time.time()
+    steps_no_improvement = 0
+    stopped_early = False
 
     for epoch in range(start_epoch, config.epochs):
+        if stopped_early:
+            break
         epoch_start = time.time()
 
         train_loss = train_epoch(model, tokenizer, train_loader, optimizer, scheduler, device, config, epoch)
@@ -269,12 +275,21 @@ def main():
             f"Time: {format_time(epoch_time)}"
         )
 
-        if val_loss < best_val_loss:
+        if val_loss < best_val_loss - args.min_delta:
             best_val_loss = val_loss
+            steps_no_improvement = 0
             save_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss,
                             train_losses, val_losses, elapsed_offset + (time.time() - t_start),
                             f"{args.output_dir}/best_model.pt")
             logger.info(f"  ✓ New best model (val_loss={val_loss:.4f})")
+        else:
+            steps_no_improvement += 1
+            logger.info(f"  No improvement ({steps_no_improvement}/{args.early_stopping_patience})")
+
+        if steps_no_improvement >= args.early_stopping_patience:
+            stopped_early = True
+            logger.warning(f"  ⚠ Early stopping at epoch {epoch+1}")
+            break
 
         save_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss,
                         train_losses, val_losses, elapsed_offset + (time.time() - t_start),
@@ -282,6 +297,8 @@ def main():
         logger.info(f"  -> 断点已保存 (epoch {epoch+1})")
 
     total_time = time.time() - t_start
+    if stopped_early:
+        logger.info(f"Training stopped early")
     logger.info(f"Training complete. Total time: {format_time(total_time)}")
     logger.info(f"Best val loss: {best_val_loss:.4f}")
 
