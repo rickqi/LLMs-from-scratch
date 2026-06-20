@@ -36,7 +36,8 @@
 | 指令数据 | ✅ 607 对 | `docs/med_instruction_chatml.json` | train=557, val=50 (hold-out) |
 | COS 备份 | ✅ 已备份 | `ins-kq6zz7wo-1313469539` | — |
 | 训练标准 | ✅ 已植入 | `train_qwen_lora.py` | 早停+过拟合检测+独立验证集 |
-| DPO 偏好对齐 | ✅ 已完成 | `train_dpo.py` | v3 最优 (380对/β0.05/e1), 1.7B DPO 也已完成 |
+| **1.7B DPO v2** | ✅ 完成 | `output_17b_dpo_v2/` | val=0.644, β=0.05, 191对, 3ep, 5.6min |
+| DPO 偏好对齐 | ✅ 完成 | 191对过滤数据, 0坍塌 | 教程覆盖 100% |
 | SwiReasoning | ⏳ 待执行 | `docs/swir_integration.md` | 推理增强 |
 
 ## 最佳模型
