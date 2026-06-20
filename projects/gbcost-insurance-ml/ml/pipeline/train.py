@@ -165,6 +165,8 @@ def main(argv: list[str] | None = None) -> int:
                         help="Force rebuild Parquet cache from CSV")
     parser.add_argument("--skip-quantile", action="store_true",
                         help="Skip quantile model training (P05/P50/P95)")
+    parser.add_argument("--skip-l2", action="store_true",
+                        help="Skip L2 policy-level training")
     parser.add_argument("--sample", type=float, default=1.0,
                         help="Fraction of training data to use (0-1.0, default 1.0)")
     parser.add_argument("--chunked", action="store_true",
@@ -443,6 +445,47 @@ def main(argv: list[str] | None = None) -> int:
             test_months=3,       # P1: quarterly windows for stability
             max_iterations=4,    # P1: fewer windows, each with 3x data
         )
+
+    # --- Step 10: L2 Policy-level model (P3) ---
+    l2_results: dict = {}
+    if not args.skip_l2:
+        logger.info("=" * 60)
+        logger.info("Step 10: Training L2 Policy-level predictor")
+
+        from ml.data.policy_aggregator import aggregate_policy_features, get_policy_feature_cols
+        from ml.models.policy_predictor import PolicyPredictor
+
+        policy_lf = aggregate_policy_features(full_lf, train_end=split_cfg["train_end"])
+        policy_df = policy_lf.collect(engine="streaming")
+        logger.info("  Policies: %d, features: %d", len(policy_df),
+                     len(policy_lf.collect_schema().names()))
+
+        p_feature_cols = get_policy_feature_cols(policy_lf)
+        p_target = "loss_ratio"
+
+        policy_df = policy_df.filter(
+            pl.col(p_target).is_not_null() & (pl.col(p_target) > 0)
+            & (pl.col("policy_avg_premium") > 0)
+        )
+        logger.info("  Valid policies: %d", len(policy_df))
+
+        split_n = int(len(policy_df) * 0.8)
+        p_train = policy_df.slice(0, split_n)
+        p_val = policy_df.slice(split_n, len(policy_df) - split_n)
+
+        l2 = PolicyPredictor(n_estimators=500)
+        l2_results = l2.train(p_train, p_val, p_feature_cols, target_col=p_target)
+
+        y_pred = l2.predict(p_val)
+        y_true = p_val[p_target].to_numpy()
+        from ml.evaluate.metrics import evaluate_predictions
+        l2_metrics = evaluate_predictions(y_true, y_pred)
+        logger.info("  L2 validation: R²=%.4f, MAE=%.4f, Gini=%.4f",
+                     l2_metrics["r2"], l2_metrics["mae"], l2_metrics["gini"])
+
+        l2.save(model_dir, name="l2_policy")
+    else:
+        logger.info("Step 10: L2 SKIPPED (--skip-l2)")
 
     # --- Save training report data ---
     report_data = {
