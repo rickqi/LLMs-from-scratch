@@ -26,6 +26,7 @@
 | `train_pretrain_ch05.py` | ch05 风格预训练(10 epoch + 周期生成样本) |
 | `train_classify_ch06.py` | ch06 分类微调(GPT-2 124M 做 SMS 垃圾短信分类),需预缓存权重 |
 | `train_instruction_ch07.py` | ch07 指令微调(GPT-2 124M 全参数微调,Alpaca 指令数据),复用 ch06 权重缓存 |
+| `train_lora_appendixE.py` | 附录 E LoRA 微调(冻结主体,只训 rank=16 适配器,省显存),复用 ch06 权重缓存 |
 | `run.sh` | WSL→Windows 桥接运行器(模板,路径需按机器改) |
 
 **不重复代码**:`train_*.py` 通过 `sys.path` 直接 import 本仓库 `ch04/01_main-chapter-code/gpt.py`
@@ -132,6 +133,16 @@ Ep 2 末:  Train loss ~0.37 | Val loss ~0.68
 - 训练中样本生成证明**学会指令跟随**:主动→被动 "The meal every day is cooked by the chef." ✓
 - 测试生成:明喻 "as fast as a bullet"(与预期 "as fast as lightning" 均合法 simile)✓;部分答案错误属 124M 容量限制(书用 355M)
 - 复用 ch06 的 `gpt2-124M-params.pt` 权重缓存(同一份 124M 权重)
+
+**附录 E LoRA 微调**(`train_lora_appendixE.py`,GPT-2 124M + LoRA rank=16/alpha=16,5 epoch,5.12 min):
+```
+total params: 127.1M | trainable (LoRA only): 2.67M (2.098%)  ← 可训练参数仅占 2.1%
+Test accuracy: 92.33%  (全参数微调基线 ~95.67%)
+```
+- 冻结 127M 主体,只训练 rank=16 低秩适配器 A/B —— **可训练参数从 127M 降到 2.67M**
+- 显存占用骤降(无主体梯度/Adam 状态),全程无 OOM,可轻松塞进 8GB
+- 精度 92.33% vs 全微调 95.67% —— LoRA 用少量精度换取巨大显存/参数节省,属正常权衡
+- **这正是 ch07 355M 显存瓶颈的解法**:同样的 LoRA 模式套到 ch07 任务 + 355M 上,即可在 8GB 卡上微调 355M(需另缓存 355M 权重)
 
 ---
 
