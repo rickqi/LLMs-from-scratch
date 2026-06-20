@@ -25,6 +25,7 @@
 | `train_gpt_ch04.py` | ch04 GPT 快速训练验证(5 epoch),引用仓库自有的 `ch04/.../gpt.py` |
 | `train_pretrain_ch05.py` | ch05 风格预训练(10 epoch + 周期生成样本) |
 | `train_classify_ch06.py` | ch06 分类微调(GPT-2 124M 做 SMS 垃圾短信分类),需预缓存权重 |
+| `train_instruction_ch07.py` | ch07 指令微调(GPT-2 124M 全参数微调,Alpaca 指令数据),复用 ch06 权重缓存 |
 | `run.sh` | WSL→Windows 桥接运行器(模板,路径需按机器改) |
 
 **不重复代码**:`train_*.py` 通过 `sys.path` 直接 import 本仓库 `ch04/01_main-chapter-code/gpt.py`
@@ -120,6 +121,17 @@ Test accuracy: 95.67%
 - 加载预训练 GPT-2 124M 权重(从缓存),冻结主体、只微调最后一层 transformer block + final_norm + 新的 2 类输出头
 - **测试准确率 95.67%**,与原书 ch06 结果(~95-97%)一致
 - ~33s/epoch,全程无 OOM
+
+**ch07 指令微调**(`train_instruction_ch07.py`,GPT-2 **124M** 全参数微调,2 epoch,16.4 min):
+```
+Initial:  Train loss 6.77 | Val loss 6.64
+Ep 2 末:  Train loss ~0.37 | Val loss ~0.68
+```
+- 用 124M 而非原书的 355M —— **355M 全参数微调(权重+梯度+Adam 状态 fp32 ≈ 6GB)+ 激活在 8GB 显存上放不下**;124M 在 ≥16GB 卡上可切回 355M
+- **显存调优**:batch=4(非书的 8)、max_length=512(非 1024);batch=8 会在 ~30 步后 OOM
+- 训练中样本生成证明**学会指令跟随**:主动→被动 "The meal every day is cooked by the chef." ✓
+- 测试生成:明喻 "as fast as a bullet"(与预期 "as fast as lightning" 均合法 simile)✓;部分答案错误属 124M 容量限制(书用 355M)
+- 复用 ch06 的 `gpt2-124M-params.pt` 权重缓存(同一份 124M 权重)
 
 ---
 
