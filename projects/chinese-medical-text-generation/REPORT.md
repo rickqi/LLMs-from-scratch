@@ -975,21 +975,40 @@ QA 覆盖:
 
 生成方式：扫描 234 篇源文档，提取 TNM/影像/术后/甲状腺相关段落，模板化生成 Q&A 对。
 
-### 22.4 后续步骤
+### 22.4 为什么是 Inst-V2 而非直接 DPO
+
+DPO 和指令微调解决不同问题：
+
+| | 指令微调 (Inst) | DPO 偏好对齐 |
+|---|---|---|
+| 作用 | 注入**新知识** | 优化**输出格式** |
+| 输入 | Q&A 对 | chosen/rejected 对 |
+| 解决 | "TNM 是什么？"→ 不知 → 学会 | "答案太长/太短"→ 偏好调整 |
+
+**当前瓶颈是知识缺失，而非格式问题**：
+
+```
+Q6 TNM: DPO 修了格式，但分期标准仍不准确 — 知识缺
+Q7 术后: DPO 修了格式，内容已正确 — 格式缺
+```
+
+TNM 仅 16 条 QA → 扩展后 69 条。Inst-V2 先注入知识，后续 DPO 再调格式，形成完整管线。
+
+### 22.5 训练命令
 
 ```bash
-# 选项 A: 用扩展数据重新训练 1.7B (推荐)
 python train_qwen_lora.py \
+    --model_name /home/models/ms_cache/Qwen/Qwen3-1___7B \
     --resume_from ./output_17b_full/best_model \
     --data_dir ./data_full \
     --instruction_data ./docs/med_instruction_chatml.json \
     --output_dir ./output_17b_inst_v2 \
-    --epochs 1 --lr 1e-5 --max_length 768 --instruction_ratio 0.4
-
-# 选项 B: 仅评测 (不做重训, 验证当前 1.7B DPO 在新题上的表现)
-python scripts/eval_compare.py \
-    --model_dir ./output_17b_dpo_v1 \
-    --base_model /home/models/ms_cache/Qwen/Qwen3-1___7B \
-    --output ./evals/eval_17b_dpo_newqa.json \
-    --questions ./docs/new_targeted_questions.json
+    --epochs 1 --lr 1e-5 --max_length 768 --instruction_ratio 0.4 --batch_size 2
 ```
+
+参数选择理由：
+- `lr=1e-5` (v1 的 5e-5 导致严重过拟合 gap>1.0)
+- `ratio=0.4` (v1 的 0.8 指令比例过高)
+- `epochs=1` (v1 的 Epoch 2-3 纯浪费)
+- `batch_size=2` (1.7B VRAM 限制)
+- `max_length=768` (ChatML 需要更多 token)
