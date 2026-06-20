@@ -1,0 +1,63 @@
+{
+  "v6": [
+    {
+      "q": "胃癌的典型临床表现有哪些？",
+      "tokens": 300,
+      "time": 14.6,
+      "short": false
+    },
+    {
+      "q": "肺癌的TNM分期标准是什么？",
+      "tokens": 300,
+      "time": 14.1,
+      "short": false
+    },
+    {
+      "q": "手术后需要观察哪些并发症？",
+      "tokens": 228,
+      "time": 11.3,
+      "short": false
+    },
+    {
+      "q": "请对比CT和MRI在肿瘤分期中的优缺点。",
+      "tokens": 288,
+      "time": 14.6,
+      "short": false
+    },
+    {
+      "q": "甲状腺切除手术对身体有什么影响？晕倒风险如何？",
+      "tokens": 245,
+      "time": 14.2,
+      "short": false
+    },
+    {
+      "q": "糖尿病患者的饮食管理原则是什么？",
+      "tokens": 300,
+      "time": 23.7,
+      "short": false
+    },
+    {
+      "q": "高血压的药物治疗原则有哪些？",
+      "tokens": 270,
+      "time": 16.2,
+      "short": false
+    },
+    {
+      "q": "急性心肌梗死的诊断标准是什么？",
+      "tokens": 300,
+      "time": 17.4,
+      "short": false
+    },
+    {
+      "q": "什么是医院感染的预防控制措施？",
+      "tokens": 300,
+      "time": 17.9,
+      "short": false
+    }
+  ],
+  "summary": {
+    "total_tokens": 2531,
+    "total_time": 144.08571553230286,
+    "short_count": 0
+  }
+}

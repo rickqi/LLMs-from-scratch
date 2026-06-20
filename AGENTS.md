@@ -47,15 +47,16 @@ cd projects/gbcost-insurance-ml && python -m pytest tests/ -v   # 4549 用例
 
 ### 2. 医疗文本生成（中文医学 LLM）
 
-- **当前最佳模型**: `output_17b_dpo_v1` (Qwen3-1.7B + LoRA + DPO, 11.5s/题, 0 坍塌)。
-- **模型排名**: 🥇1.7B DPO > 🥈1.7B Inst-V1 > 🥉0.6B DPO v3 > 0.6B Inst-V3。
+- **当前最佳模型**: `output_17b_inst_v6/best_model` (Qwen3-1.7B + LoRA, val=1.738)。
+- **模型排名**: 🥇1.7B Inst-V6 > 🥈1.7B Inst-V2 > 🥉1.7B Inst-V5。
 - **DPO 关键陷阱**: chosen/rejected 长度差 >50% 会导致模式坍塌。必须过滤长度偏差。beta=0.05 + 1 epoch 足矣。1.7B DPO 需 batch_size=1（双模型 OOM）。
 - **训练阶段**: 必须先续写微调（阶段1）再指令微调（阶段2）。`--resume_from` 加载阶段1 LoRA 权重。
 - **训练脚本已内置早停和过拟合检测**：`--early_stopping_patience 30 --min_delta 0.001 --overfit_gap_threshold 0.5`。
 - **指令微调推荐参数**: `--lr 1e-5 --instruction_ratio 0.4 --epochs 1 --max_length 512`。
 - **独立验证集**: `docs/med_instruction_val_chatml.json` (50条 hold-out QA)。
 - **关键陷阱**: lr=5e-5 + ratio=0.8 会导致严重过拟合（gap>1.0）。必须用低 lr + 低 ratio。
-- **推理**: `python generate.py --model_dir ./output_17b_inst_v2/best_model --instruct --prompt "问题"`。
+- **有效扩数据方法**: doc-search BM25 检索 + DeepSeek 生成 → 229条检索增强 QA（推动 val 1.833→1.738）。
+- **推理**: `python generate.py --model_dir ./output_17b_inst_v6/best_model --instruct --prompt "问题"`。
 - **1.7B 基座模型路径**: `/home/models/ms_cache/Qwen/Qwen3-1___7B`（已缓存，3.8GB）。
 
 ### 3. 法规文本生成（公司制度）
