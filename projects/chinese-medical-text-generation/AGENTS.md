@@ -22,6 +22,8 @@
 | `scripts/cos_backup.py` | COS 云备份 | 备份 LoRA/数据 |
 | `train_qwen_lora.py` | 训练脚本 | 执行训练 |
 | `generate.py` | 推理脚本 | 模型推理 |
+| `test_questions.py` | 统一测试问题定义（单一真实来源） | 添加/修改测试问题时 |
+| `scripts/eval_compare.py` | 多模型评测对比 | 对比基线 vs 目标模型 |
 
 ## 当前状态
 
@@ -34,25 +36,54 @@
 | 指令数据 | ✅ 607 对 | `docs/med_instruction_chatml.json` | train=557, val=50 (hold-out) |
 | COS 备份 | ✅ 已备份 | `ins-kq6zz7wo-1313469539` | — |
 | 训练标准 | ✅ 已植入 | `train_qwen_lora.py` | 早停+过拟合检测+独立验证集 |
-| DPO 偏好对齐 | ⏳ 待执行 | — | 覆盖率 98%→100% 的关键缺口 |
+| DPO 偏好对齐 | ✅ 已完成 | `train_dpo.py` | v3 最优 (380对/β0.05/e1), 1.7B DPO 也已完成 |
 | SwiReasoning | ⏳ 待执行 | `docs/swir_integration.md` | 推理增强 |
 
 ## 最佳模型
 
 ```
 Qwen3-1.7B
-  └── 阶段1: 续写微调 ✅  val=2.1135, 19h
-        └── 阶段2: 指令微调 v2 ✅  val=1.8879, 11min
-              └── 产出: output_17b_inst_v2/best_model ← 当前最佳
+  ├── 阶段1: 续写微调 ✅  val=2.114, 19h
+  ├── 阶段2: 指令微调 v1 ✅  val=2.046, 384min (过拟合，已淘汰)
+  ├── 阶段2: 指令微调 v2 ✅  val=1.833, 14.9min ← 当前最佳
+  │     └── 767 QA (607+160 targeted), lr=1e-5, ratio=0.4, epochs=1
+  └── DPO v1 ✅  基于 v1, batch=1, β0.05, 0坍塌
+
+Qwen3-0.6B
+  ├── 阶段2: 指令微调 v3 ✅  val=2.404
+  └── DPO v3 ✅  380对, β0.05, e1, 0坍塌
 ```
+
+## 模型排名
+
+| 排名 | 模型 | val | tok/9题 | 速度 | 偏短 |
+|------|------|-----|---------|------|------|
+| 🥇 | 1.7B Inst-V2 | 1.833 | 2700 | 13.7s | 0 |
+| 🥈 | 1.7B DPO v1 | — | 2290 | 11.5s | 0 |
+| 🥉 | 0.6B DPO v3 | — | 2175 | 10.2s | 0 |
+| 4 | 0.6B Inst-V3 | 2.404 | 2580 | 47.6s | 0 |
 
 ## 行动路线图
 
-### 当前步骤：DPO 偏好对齐 (教程覆盖 98% → 100%)
+### 当前步骤：Inst-V2 DPO 完整管线 (知识注入 → 偏好对齐)
 
 ```bash
 cd projects/chinese-medical-text-generation
-# Step 1: 构造偏好数据
+
+# 当前最佳: 1.7B Inst-V2 (val=1.833)
+# 下一步: DPO on Inst-V2 完成知识→对齐管线
+python train_dpo.py \
+    --model_name /home/models/ms_cache/Qwen/Qwen3-1___7B \
+    --base_model ./output_17b_inst_v2/best_model \
+    --preference_data ./data/dpo_pairs_cleaned_v2.json \
+    --output_dir ./output_17b_dpo_v2 \
+    --epochs 1 --beta 0.05 --batch_size 1
+
+# 评测
+python scripts/eval_compare.py \
+    --model_dir ./output_17b_dpo_v2 \
+    --base_model /home/models/ms_cache/Qwen/Qwen3-1___7B \
+    --output ./evals/eval_17b_dpo_v2.json
 python scripts/prepare_dpo_data.py
 # Step 2: DPO 训练 (基于最佳指令模型)
 python train_dpo.py --base_model ./output_17b_inst_v2/best_model --preference_data ./data/dpo_pairs.json

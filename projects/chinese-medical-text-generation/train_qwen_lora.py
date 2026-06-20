@@ -458,21 +458,16 @@ def main():
         if stopped_early:
             break
 
-        # 每个 epoch 生成样本
+        # 每个 epoch 生成样本（从统一模块导入）
+        from test_questions import TRAIN_CONT_PROMPTS, TRAIN_INST_QUESTIONS
         if args.instruction_data:
-            inst_prompts = [
-                "胃癌的典型临床表现有哪些？",
-                "肺癌的TNM分期标准是什么？",
-                "手术后需要观察哪些并发症？",
-                "请对比CT和MRI在肿瘤分期中的优缺点。",
-            ]
-            for q in inst_prompts:
+            for q in TRAIN_INST_QUESTIONS:
                 msg = [{"role": "user", "content": q}]
                 prompt = tokenizer.apply_chat_template(msg, tokenize=False, add_generation_prompt=True)
                 sample = generate_sample(model, tokenizer, prompt, device, max_new_tokens=200)
                 logger.info(f"\n[指令生成 | Q: {q}]\n{sample}\n")
         else:
-            for prompt in ["临床表现：", "诊断依据：", "治疗方案：", "预后判断："]:
+            for prompt in TRAIN_CONT_PROMPTS:
                 sample = generate_sample(model, tokenizer, prompt, device)
                 logger.info(f"\n[生成样本 | prompt: {prompt}]\n{sample}\n")
 

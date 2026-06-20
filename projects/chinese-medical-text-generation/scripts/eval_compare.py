@@ -26,18 +26,9 @@ from typing import Optional
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s")
 logger = logging.getLogger(__name__)
 
-# 9 道标准评测题（对应 REPORT.md 评测表 + 甲状腺专项）
-EVAL_QUESTIONS = [
-    "胃癌的典型临床表现有哪些？",
-    "糖尿病患者的饮食管理原则是什么？",
-    "什么是医院感染的预防控制措施？",
-    "高血压的药物治疗原则有哪些？",
-    "急性心肌梗死的诊断标准是什么？",
-    "肺癌的TNM分期标准是什么？",
-    "手术后需要观察哪些并发症？",
-    "请对比CT和MRI在肿瘤分期中的优缺点。",
-    "甲状腺切除手术对身体有什么影响？晕倒风险如何？",
-]
+# 9 道标准评测题 — 从统一模块导入
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from test_questions import EVAL_QUESTIONS
 
 
 def load_model(model_dir: str, base_model: str):

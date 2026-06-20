@@ -21,27 +21,10 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s")
 logger = logging.getLogger(__name__)
 
 BASE_MODEL = "Qwen/Qwen3-0.6B"
-TEST_PROMPTS = [
-    "临床表现：",
-    "诊断依据：",
-    "治疗方案：",
-    "预后判断：",
-    "鉴别诊断：",
-    "并发症：",
-    "用药原则：",
-    "出院标准：",
-]
 
-INST_TEST_PROMPTS = [
-    "胃癌的典型临床表现有哪些？",
-    "肺癌的TNM分期标准是什么？",
-    "手术后需要观察哪些并发症？",
-    "请对比CT和MRI在肿瘤分期中的优缺点。",
-    "糖尿病患者的饮食管理原则是什么？",
-    "什么是医院感染的预防控制措施？",
-    "高血压的药物治疗原则有哪些？",
-    "急性心肌梗死的诊断标准是什么？",
-]
+# 从统一模块导入（不要在此文件直接修改）
+from test_questions import CONT_PROMPTS as TEST_PROMPTS
+from test_questions import INST_QUESTIONS as INST_TEST_PROMPTS
 
 
 def load_model(model_dir: str, base_model: str = None):
