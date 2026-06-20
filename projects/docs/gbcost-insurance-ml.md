@@ -1,6 +1,6 @@
 # 团险控费 ML — 详细技术文档
 
-> v2.1 | 2026-06-18 | P0-P2 完成 + chunked training + 预测验证
+> v2.2 | 2026-06-19 | P0-P2 完成 + P3 L2/Label 闭环
 
 ## 项目定位
 
@@ -36,10 +36,14 @@
 | 数据分割 | `ml/data/split.py` | 时序 split (train/val/test) |
 | L1-A 金额回归 | `ml/models/amount_predictor.py` | LightGBM Tweedie + 分位数 |
 | L1-B 大额分类 | `ml/models/large_classifier.py` | 二分类 + scale_pos_weight |
-| 偏差校正 | `ml/models/calibration.py` | 分组校正因子 (替代 ×1.80) |
+| 偏差校正 | `ml/models/calibration.py` | 分组校正因子 + 分时段校准 |
+| **L2 保单预测** | `ml/models/policy_predictor.py` | 保单级赔付率回归 (P3) |
+| 标签反哺 | `ml/data/label_enricher.py` | agent_state → ML 特征闭环 (P3) |
+| 保单聚合 | `ml/data/policy_aggregator.py` | 案件→保单级聚合 (P3) |
 | 训练流水线 | `ml/pipeline/train.py` | CLI + checkpoint + 版本管理 + 实验归档 |
 | 超参优化 | `ml/pipeline/tune.py` | Optuna SQLite 持久化断点续传 |
-| 预测推断 | `ml/pipeline/predict.py` | 批量预测 + ensemble + calibrate |
+| 预测推断 | `ml/pipeline/predict.py` | 批量预测 + ensemble + calibrate + chunked |
+| 标签管线 | `ml/pipeline/enrich_labels.py` | 批量 agent_state 标签提取 (P3) |
 | 月度管线 | `ml/pipeline/monthly_pipeline.py` | train→predict→eval→backup 全自动 |
 | 云备份 | `ml/pipeline/cos_backup.py` | COS 容灾 |
 | 回测 | `ml/pipeline/run_backtest.py` | Walk-forward 时序回测 |
@@ -115,6 +119,10 @@ python -m ml.pipeline.predict --csv ... --policy GP2202301028502 --ensemble --ca
 # ── 月度自动管线 ──
 python -m ml.pipeline.monthly_pipeline
 
+# ── 标签反哺（闭环）──
+python -m ml.pipeline.enrich_labels --input output/ --output data/ml_cache/
+#   从 agent_state.json 提取 FWA/DRG/Medical 标签 → 训练自动使用
+
 # ── COS 备份 ──
 python -m ml.pipeline.cos_backup models predictions reports
 
@@ -148,6 +156,22 @@ python -m ml.pipeline.train --config ml/config_ml.yaml --sample 0.25 --skip-quan
 | 总量误差 | **18.8%** | 优秀 |
 | 大额召回 | **83.0%** | P95+ 案件识别 |
 | 大额 AUC | **0.978** | 近乎完美 |
+
+### L2 保单级 (849 保单)
+
+| 指标 | 值 | 说明 |
+|------|:---:|------|
+| R² | 0.408 | 赔付率回归 |
+| Gini | 0.632 | 保单排序 |
+| MAE | 10.61 | loss_ratio 尺度 |
+| Top 特征 | cost_per_member, policy_avg_claim | 人均费用 + 均案金额 |
+
+### 标签反哺闭环
+
+| 来源 | 标签数 | 说明 |
+|------|:---:|------|
+| agent_state × 1795 | 477,061 cases | FWA/DRG/Medical/Hospital |
+| 特征增益 | +8 列 | fwa_flag, drg_over_budget, ... |
 
 ### 内存模式对比
 
