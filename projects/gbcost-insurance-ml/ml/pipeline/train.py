@@ -487,6 +487,31 @@ def main(argv: list[str] | None = None) -> int:
     else:
         logger.info("Step 10: L2 SKIPPED (--skip-l2)")
 
+    # --- Step 11: ML Risk Map Scores (P0) ---
+    if not args.skip_l2:
+        logger.info("=" * 60)
+        logger.info("Step 11: Generating ML risk map scores")
+        try:
+            from ml.data.risk_scorer import MLRiskScorer
+            scorer = MLRiskScorer(predictor, None, l2, None, None)
+            risk_map = scorer.generate_risk_map(
+                train_df,  # Use training data for risk scoring
+                p_train,
+                feature_cols,
+                categorical_cols,
+                p_feature_cols,
+            )
+            risk_path = model_dir / "ml_risk_map.json"
+            risk_path.write_text(
+                json.dumps(risk_map, indent=2, ensure_ascii=False, default=str),
+                encoding="utf-8",
+            )
+            risk_count = len(risk_map.get("disease", []))
+            logger.info("  Risk map saved: %s (%d disease groups, %d members)",
+                         risk_path, risk_count, len(risk_map.get("member", [])))
+        except Exception as e:
+            logger.warning("  Risk map generation skipped: %s", e)
+
     # --- Save training report data ---
     report_data = {
         "config_path": args.config,

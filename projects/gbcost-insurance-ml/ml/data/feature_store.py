@@ -533,7 +533,7 @@ def build_features(
             pl.col("medical_start_date").dt.truncate("1mo").alias("_join_month")
         )
         feature_lf = feature_lf.join(
-            lstm_lf,
+            lstm_lf.with_columns(pl.col("policy_grp_name").cast(pl.Categorical)),
             left_on=["policy_grp_name", "_join_month"],
             right_on=["policy_grp_name", "year_month"],
             how="left",
