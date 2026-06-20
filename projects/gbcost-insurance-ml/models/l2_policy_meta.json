@@ -1,0 +1,51 @@
+{
+  "params": {
+    "objective": "regression",
+    "metric": [
+      "mae",
+      "rmse"
+    ],
+    "num_leaves": 31,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0,
+    "min_child_samples": 20,
+    "verbose": -1,
+    "seed": 42,
+    "n_jobs": -1
+  },
+  "n_estimators": 200,
+  "best_iteration": 20,
+  "feature_names": [
+    "claims_per_member",
+    "claims_per_member_per_month",
+    "claims_per_month",
+    "cost_per_member",
+    "policy_active_days",
+    "policy_active_months",
+    "policy_active_years",
+    "policy_avg_claim",
+    "policy_avg_days",
+    "policy_claim_count",
+    "policy_disease_diversity",
+    "policy_fee_diversity",
+    "policy_hosp_diversity",
+    "policy_large_claim_ratio",
+    "policy_max_claim",
+    "policy_max_days",
+    "policy_median_claim",
+    "policy_member_count",
+    "policy_p95_claim",
+    "policy_std_claim"
+  ],
+  "train_eval": {
+    "best_iteration": 20,
+    "train_l1": 9.1492,
+    "train_rmse": 33.8015,
+    "val_l1": 7.2382,
+    "val_rmse": 12.3364
+  }
+}

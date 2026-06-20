@@ -2,7 +2,7 @@
   "format": "chatml",
   "system_prompt": "你是一位中文医学助手，基于权威诊疗指南、行业标准和临床操作规范提供专业的医学信息。你的回答应当准确、结构化，并引用具体的医学标准或指南来源。",
   "exported_at": "2026-06-17T14:02:49.395474",
-  "total": 767,
+  "total": 987,
   "data": [
     {
       "messages": [
@@ -15275,6 +15275,2646 @@
         {
           "role": "assistant",
           "content": "【病理鉴别诊断】 $ \\textcircled{1} $典型类癌与非典型类癌； $ \\textcircled{2} $具有假腺样结构的类癌与肺腺癌、黏液表皮样癌、腺样囊性癌和转移性（乳腺、前列腺）腺癌； $ \\textcircled{3} $具有明显器官样结构的类癌与副神经节瘤； $ \\textcircled{4} $梭形细胞类癌与肺梭形细胞癌、肺梭形细胞软组织肿瘤和纤维性间皮瘤； $ \\textcircled{5} $嗜酸性细胞类癌、滤泡性类癌与转移性甲状腺嗜酸细胞腺癌和滤泡型腺癌； $ \\textcircled{6} $乳头状类癌与肺硬化性血管瘤、肺乳头状腺癌、乳头状细支气管肺泡癌和转移性（甲状腺、卵巢、结直肠）乳头状腺癌； $ \\textcircled{7} $印戒细胞类癌与肺原发性和转移性黏液细胞癌 $ \\textcircled{8} $周围型类癌与微瘤型类癌； $ \\textcircled{9} $黑色素细胞性类癌与黑色素瘤； $ \\textcircled{10} $非典型类癌与分化差鳞癌和腺癌。\n\n（八）涎腺型癌 $ \\textcircled{1} $较少见。 $ \\textcircled{2} $源于支气管黏膜腺体。 $ \\textcircled{3} $位于肺门区域。 $ \\textcircled{4} $多见于成人。 $ \\textcircled{5} $与吸烟无明显相关性。 $ \\textcircled{6} $一般为突入大支气管腔内的息肉样肿物。 $ \\textcircled{7} $致气道刺激和阻塞性病征。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "根据TNM分期，肺癌的I期、II期、III期、IV期如何划分？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>FIGO分期</td><td></td><td>TNM分类</td></tr><tr><td rowspan=\"2\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>0</td><td>原位癌(浸润前癌)</td><td>Tis</td></tr><tr><td>I</td><td>肿瘤局限于输卵管</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于一侧输卵管,浆膜表面无穿破,无腹水</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤局限于双侧输卵管,浆膜表面无穿破,无腹水</td><td>T1b</td></tr><tr><td>Ic</td><td>肿瘤局限于单或双侧输卵管,但已达到或穿破浆膜表面,或腹水或腹腔冲洗液中有恶性细胞</td><td>T1c</td></tr><tr><td>II</td><td>肿瘤累及一侧或双侧输卵管,并有盆腔内扩散</td><td>T2</td></tr><tr><td>IIa</td><td>扩散和/或转移到子宫和/或卵巢</td><td>T2a</td></tr><tr><td>IIb</td><td>扩散到其他盆腔脏器</td><td>T2b</td></tr><tr><td>IIc</td><td>IIa或IIb,腹水或腹腔冲洗液中有恶性细胞</td><td>T2c</td></tr><tr><td>III</td><td>肿瘤累及一侧或双侧输卵管,并有盆腔以外腹膜种植和/或区域淋巴结阳性</td><td>T3和/或N1</td></tr><tr><td>IIIa</td><td>显微镜下见盆"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "宫颈癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. S-P免疫组化染色试剂盒采用生物素标记的第二抗体与链霉菌抗生物素蛋白连接的过氧化物酶及底物色素混合液来测定细胞和组织中的抗原。即用型试剂盒，省时、省力，广谱即用型试剂盒可以大大避免由抗体和检测试剂盒配对不符引起的假阴性反应。染色的主要过程如下：石蜡切片脱蜡和水化后，用PBS冲洗3次，每次 $ 3\\mathrm{min}(3\\times 3^{\\prime}, $ 下同）；根据每一种抗体的要求，对组织抗原进行相应的修复（高温高压或微波抗原修复法）；每张切片加1滴或 $ 50\\mu \\mathrm{L} $ 氧化酶阻断溶液（试剂A），以阻断内源性过氧化物酶的活性，室温下孵育 $ 10\\mathrm{min} $ ；PBS冲洗 $ (3\\times 3^{\\prime}) $ ；甩去PBS液后每张切片加1滴或 $ 50\\mu \\mathrm{L} $ 的非免疫性动物血清（试剂B），室温下孵育 $ 10\\mathrm{min} $ ；甩去血清后每张切片加1滴或 $ 50\\mu \\mathrm{L} $ 的第一抗体（待测抗原的单抗或多抗），室温下孵育 $ 60\\mathrm{min} $ 或 $ 4^{\\circ} \\mathrm{C} $ 过夜；PBS冲洗 $ 3\\times 5^{\\prime} $ ；甩去PBS液，每张切片加1滴或 $ 50\\mu \\mathrm{L} $ 生物素标记的第二抗体（试剂C），室温下孵育 $ 10\\mathrm{min} $ ；PBS冲洗 $ 3\\times 3^{\\prime} $ ；甩去PBS液，每张切片加1滴或 $ 50\\mu \\mathrm{L} $ 链亲和素-过氧化物酶溶液（试剂D），室温下孵育 $ 10\\mathrm{min} $ ；PBS冲洗 $ 3\\times 3^{\\prime} $ ；甩去PBS液，每张切片加2滴或 $ 10"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "根据TNM分期，骨肉瘤的I期、II期、III期、IV期如何划分？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td colspan=\"2\">原发肿瘤(T)</td></tr><tr><td>Tx:</td><td>原发肿瘤不能评价;或痰、支气管冲洗液找到癌细胞,但影像学或支气管镜没有可视肿瘤</td></tr><tr><td>T0:</td><td>没有原发肿瘤的证据</td></tr><tr><td>Tis:</td><td>原位癌</td></tr><tr><td>T1:</td><td>肿瘤最大径≤3cm,周围为肺或脏层胸膜所包绕,镜下肿瘤没有累及叶支气管以上* (即没有累及主支气管)</td></tr><tr><td>T2:</td><td>肿瘤大小或范围符合以下任何一点:肿瘤最大径&gt;3cm累及主支气管,但距隆突≥2cm累及脏层胸膜扩展到肺门的肺不张或阻塞性肺炎,但不累及全肺</td></tr><tr><td>T3:</td><td>任何大小的肿瘤已直接侵犯了下述结构之一者:胸壁(包括上沟瘤)、膈肌、纵隔胸膜、心包;肿瘤位于距隆突2cm以内的主支气管但尚未累及隆突;全肺的肺不张或阻塞性炎症</td></tr><tr><td>T4:</td><td>任何大小的肿瘤已直接侵犯了下述结构之一者:纵隔、心脏、大血管、气管、食管、椎体、隆突;恶性胸水或恶性心包积液#;原发肿瘤同一叶内出现单个或多个的卫星结节</td></tr><tr><td colspan=\"2\">区域淋巴结(N)</td></tr><tr><td>NX:</td><td>区域淋巴结不能评价</td></tr><tr><td>N0:</td><td>没有区域淋巴结转移</td></tr><tr><td>N1:</td><td>转移至同侧支气管周围淋巴结和(或)同侧肺门淋巴结,原发肿瘤直接侵及肺内淋巴结</td></tr><tr><td>N2:</td><td>转移至"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "早期鼻咽癌（T1N0M0）的标准治疗方案是什么？后期（T4N2M1）如何调整？"
+        },
+        {
+          "role": "assistant",
+          "content": "### </div>\n\n<table border=\"1\"><tr><td>FIGO</td><td>UICC</td><td colspan=\"2\">肿瘤范围</td></tr><tr><td>0期</td><td>Tis</td><td colspan=\"2\">原位癌,表皮内癌</td></tr><tr><td>I期</td><td>TIN0M0</td><td colspan=\"2\">病变直径≤2cm,局限于外阴和(或)会阴;无淋巴结转移</td></tr><tr><td>IA</td><td>T1aN0M0</td><td colspan=\"2\">病变直径≤2cm,局限于外阴和(或)会阴伴间质浸润不超过1.0mm^{++};无淋巴结转移</td></tr><tr><td>IB</td><td>T1bN0M0</td><td colspan=\"2\">病变直径≤2cm,局限于外阴和(或)会阴伴间质浸润超过1.0mm;无淋巴结转移</td></tr><tr><td>II期</td><td>T2N0M0</td><td colspan=\"2\">肿瘤局限于外阴和(或)会阴;直径&gt;2cm;无淋巴结转移</td></tr><tr><td>III期</td><td>T3N0M0</td><td colspan=\"2\">任何大小的肿瘤并有累及附近的尿道下段和(或)阴道,或肛门,和(或)单侧淋巴结转移</td></tr><tr><td></td><td>T1N1M0</td><td></td><td></td></tr><tr><td></td><td>T2N1M0</td><td></td><td></td></tr><tr><td></td><td>T3N1M0</td><td></td><td></td></tr><tr><td>IVA</td><td>T1N2M0</td"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝癌的TNM分期标准是什么？请详细说明T、N、M各期的定义。"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>FIGO</td><td>UICC</td><td colspan=\"2\">肿瘤范围</td></tr><tr><td>0期</td><td>Tis</td><td colspan=\"2\">原位癌,表皮内癌</td></tr><tr><td>I期</td><td>TIN0M0</td><td colspan=\"2\">病变直径≤2cm,局限于外阴和(或)会阴;无淋巴结转移</td></tr><tr><td>IA</td><td>T1aN0M0</td><td colspan=\"2\">病变直径≤2cm,局限于外阴和(或)会阴伴间质浸润不超过1.0mm^{++};无淋巴结转移</td></tr><tr><td>IB</td><td>T1bN0M0</td><td colspan=\"2\">病变直径≤2cm,局限于外阴和(或)会阴伴间质浸润超过1.0mm;无淋巴结转移</td></tr><tr><td>II期</td><td>T2N0M0</td><td colspan=\"2\">肿瘤局限于外阴和(或)会阴;直径&gt;2cm;无淋巴结转移</td></tr><tr><td>III期</td><td>T3N0M0</td><td colspan=\"2\">任何大小的肿瘤并有累及附近的尿道下段和(或)阴道,或肛门,和(或)单侧淋巴结转移</td></tr><tr><td></td><td>T1N1M0</td><td></td><td></td></tr><tr><td></td><td>T2N1M0</td><td></td><td></td></tr><tr><td></td><td>T3N1M0</td><td></td><td></td></tr><tr><td>IVA</td><td>T1N2M0</td><td colspan"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "脑胶质瘤的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "粘液表皮样癌(mucoepidermoid carcinoma)\n\n腺样囊性癌(adenoid cystic carcinoma)\n\n### 其他(others)\n\n不能分类的癌(unclassified carcinoma)\n\n（二）肺癌的细胞学诊断采用3级分类法，即未见癌细胞（阴性），可疑癌细胞及找到癌细胞（阳性）\n\n## 第二节 肺癌的UICC分期\n\n（一）肺癌的分期，采用1997年国际抗癌联盟公布的修订后的肺癌国际分\n\n### 期（见表3-2-2、表3-2-3）\n\n### <div align=\"center\">\n\n表3-2-2 修订的肺癌国际分期中TNM的定义\n\n### </div>\n\n<table border=\"1\"><tr><td colspan=\"2\">原发肿瘤(T)</td></tr><tr><td>Tx:</td><td>原发肿瘤不能评价;或痰、支气管冲洗液找到癌细胞,但影像学或支气管镜没有可视肿瘤</td></tr><tr><td>T0:</td><td>没有原发肿瘤的证据</td></tr><tr><td>Tis:</td><td>原位癌</td></tr><tr><td>T1:</td><td>肿瘤最大径≤3cm,周围为肺或脏层胸膜所包绕,镜下肿瘤没有累及叶支气管以上* (即没有累及主支气管)</td></tr><tr><td>T2:</td><td>肿瘤大小或范围符合以下任何一点:肿瘤最大径&gt;3cm累及主支气管,但距隆突≥2cm累及脏层胸膜扩展到肺门的肺不张或阻塞性肺炎,但不累及全肺</td></tr><tr><td>T3:</td><td>任何大小的肿瘤已直接侵犯了下述结构之一者:胸壁(包括上沟瘤)、膈肌、纵隔胸膜、心包;肿瘤位于距隆突2cm以内的主支气管但尚未累及隆突;全肺的肺不张或阻塞性炎症</td></tr><tr><td>T4:"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "骨肉瘤的TNM分期标准是什么？请详细说明T、N、M各期的定义。"
+        },
+        {
+          "role": "assistant",
+          "content": "正确评估食管癌的分期，对于制定合理的治疗方案、提高生存率和生活质量有重要意义。国际抗癌联盟（UICC）1997年新修订的食管癌TNM标准和分期，把食管胸上段癌颈部淋巴结转移和食管胸下段癌腹腔动脉旁淋巴结转移定为M1a，其他远处转移定为M1b，把IV期食管癌中M1a定为IVA期，M1b定为VB期，这有利于研究淋巴结转移规律，其中跳跃式淋巴结转移经手术清扫可能获得长期生存，而与其他转移不同。准确的分期与检查有关，在诊断过程中患者接受的检查范围越广，病变分期升高的可能性越大，临床分期（cTNM）也更为准确。\n\n手术和病理学检查确定的pTNM分期是可靠和准确的，要求手术探查所见情况及病理标本检查规范记录，特别是TN的分级。\n\n### 食管癌 TNM 分级及分期标准（UICC 1997年）\n\nT——原发肿瘤。\n\nTx：原发肿瘤不能测定。\n\nT0：无原发肿瘤证据。\n\nTis：原位癌。\n\nT1：肿瘤只侵及粘膜固有层和粘膜下层。\n\nT2：肿瘤侵及肌层。\n\nT3：肿瘤侵及食管纤维膜。\n\nT4：肿瘤侵及邻近器官。\n\nN一一区域淋巴结。\n\nNx：区域淋巴结不能测定。\n\nNO：无区域淋巴结转移。\n\nN1：区域淋巴结转移。\n\nM远处转移。\n\nMx：远处转移不能测定。\n\nM0：无远处转移。\n\nM1：有远处转移。\n\n### 胸上段食管癌\n\nM1a：颈淋巴结转移。\n\nM1b：其他的远处转移。\n\n### 胸中段食管癌\n\nM1a：不应用。\n\nM1b：非区域淋巴结或其他的远处转移。\n\n### 胸下段食管癌\n\nM1a：腹腔动脉淋巴结转移。\n\nM1b：其他的远处转移。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "根据最新版TNM分期，鼻咽癌中T4期包括哪些情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "原则上卵巢肿物一经确诊或直径 5cm以上，疑为卵巢肿瘤者，均需手术治疗。其剖腹探查指征为： $ \\textcircled{1} $绝经后妇女发现盆腔肿块； $ \\textcircled{2} $附件肿块直径为 5cm以下，观察2个月仍持续存在者； $ \\textcircled{3} $附件实性肿块； $ \\textcircled{4} $附件肿块直径 5cm以上者； $ \\textcircled{5} $盆腔肿块诊断不明者。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "黑色素瘤患者术前影像学评估如何帮助确定cTNM分期？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>FIGO分期</td><td></td><td>TMN分类</td></tr><tr><td rowspan=\"3\">0期</td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>没有原发肿瘤的证据</td><td>T0</td></tr><tr><td>原位癌(浸润前癌)</td><td>TiS</td></tr><tr><td>I期</td><td>宫颈癌局限在子宫(扩展至宫体将被忽略)</td><td>T1</td></tr><tr><td>Ia</td><td>镜下浸润癌,所有肉眼可见的病灶包括表浅浸润均为IB</td><td>T1a</td></tr><tr><td>Ia1</td><td>间质浸润深度&lt;3mm,水平扩散≤7mm</td><td>T1a1</td></tr><tr><td>Ia2</td><td>间质浸润深度3~5mm,水平扩散≤7mma</td><td>T1a2</td></tr><tr><td>Ib</td><td>肉眼可见癌灶局限于宫颈,或者镜下病灶&gt;I A2</td><td>T1b</td></tr><tr><td>Ib1</td><td>肉眼可见癌灶最大径线≤4cm</td><td>T1b1</td></tr><tr><td>Ib2</td><td>肉眼可见癌灶最大径线&gt;4cm</td><td>T1b2</td></tr><tr><td>II期</td><td>肿瘤超越子宫,但未达骨盆壁或未达阴道下1/3</td><td>T2</td></tr><tr><td>IIa</td><td>无宫旁浸润</td><td>T2a</td></tr><tr><td>IIb</td><td>有宫旁浸润</td><td>T2b</td></tr><tr"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "食管癌的TNM分期标准是什么？请详细说明T、N、M各期的定义。"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td colspan=\"2\">混合来源肿瘤</td></tr><tr><td>良性</td><td>恶性</td></tr><tr><td>良性间叶瘤</td><td>恶性间叶瘤</td></tr><tr><td>不明来源肿瘤</td><td></td></tr><tr><td>良性</td><td>恶性</td></tr><tr><td>巨细胞瘤</td><td>恶性巨细胞瘤</td></tr><tr><td>肿瘤样占位性病变</td><td></td></tr><tr><td>良性骨占位病变</td><td>良性关节占位病变</td></tr><tr><td>单纯囊肿</td><td>色素沉着绒毛结节性滑膜炎</td></tr><tr><td>动脉瘤样骨囊肿</td><td>滑膜软骨瘤病</td></tr></table>\n\n## 第二十八章 骨与软组织肿瘤的临床分期\n\n骨肿瘤的临床治疗取决于病变的类型、组织学分期以及在宿主体内局部发展的程度。评估以上情况的过程称为肿瘤分期。美国肿瘤联合委员会（AJCC）提出的肿瘤-淋巴-转移瘤（TNM）分期标准在骨肿瘤的应用方面具有一定的局限性（表28-1）。该分期系统中， $ \\mathrm{T}_{1} $期指局限于皮质内的肿瘤， $ \\mathrm{T}_{2} $期指皮质外肿瘤，发生在骨表面而并不侵犯骨内部的肿瘤准确分期。在骨肿瘤中没有Ⅲ期肿瘤，I、Ⅱ、Ⅳ期肿瘤属于转移性肿瘤。此外，该分期系统中的淋巴标准很难用于骨肉瘤，因为后者很少通过淋巴转移。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在卵巢癌的治疗决策中，TNM分期如何影响手术方案的选择？"
+        },
+        {
+          "role": "assistant",
+          "content": "C. 病理鉴别诊断： $ \\textcircled{1} $淋巴瘤； $ \\textcircled{2} $低分化鳞癌； $ \\textcircled{3} $基底细胞样鳞癌等。\n\n3. 食管癌的临床病理分期\n\n(1) WHO（2000）食管癌TNM分类和分期（表16-2）\n\n### <div align=\"center\">\n\n表16-2 WHO食管癌TNM分类和分期（2000）\n\n### </div>\n\n<table border=\"1\"><tr><td>食管癌TNM分类</td><td colspan=\"3\">NO局部淋巴结无转移</td></tr><tr><td>T——原发性肿瘤</td><td colspan=\"3\">食管癌TNM分期</td></tr><tr><td>TX原发肿瘤难以评估</td><td></td><td></td><td></td></tr><tr><td>T0原发肿瘤未证实</td><td>0期</td><td>Tis</td><td>NO M0</td></tr><tr><td>Tis原位癌</td><td>I期</td><td>T1</td><td>NO M0</td></tr></table>\n\n<table><tr><td>T1 肿瘤累及固有膜或黏膜下层</td><td>II期A</td><td>T2 N0 M0</td><td></td></tr><tr><td>T2 肿瘤累及肌层</td><td></td><td>T3 N0 M0</td><td></td></tr><tr><td>T3 肿瘤累及外膜</td><td>II期B</td><td>T1 N1 M0</td><td></td></tr><tr><td>T4 肿瘤累及邻近组织</td><td></td><td>T2 N1 M0</td><td></td></tr><tr><"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "影像学检查诊断为胰腺癌患者，如需即时手术治疗者，包括根治性和姑息性手术，均可在术中活检以明确病理诊断。判断已丧失手术时机，拟给予放化疗者，或拟在术前先行放化疗者（分阶段治疗者），应先做定性诊断。有效的方法是B超或CT引导下经皮细针穿刺或内镜超声引导下的细针穿刺抽吸细胞学检查（FNA）。FNA诊断的特异性高达 99% ，若能同时结合抽吸液肿瘤抗原检测 （CA19-9）、k-ras基因突变检测和DNA异倍体DI值检测，可显著提高诊断敏感性，达 95%以上。\n\n## （六）胰腺癌分期\n\n仍沿用1997年UICC的TNM分期法与1993年JPS的新分期方法（表7- 4-1）。\n\n1. UICC的TNM分期法\n\nT——原发肿瘤。\n\nTx：原发肿瘤无法估计。\n\nT0：无原发肿瘤证据。\n\nTis：原位癌。\n\nT1：肿瘤局限于胰腺，最大直径 $ \\leqslant2\\mathrm{cm}。 $\n\nT2：肿瘤局限于胰腺，最大直径 $ > 2\\mathrm{cm}。 $\n\nT3：肿瘤直接扩展至下列部位：十二指肠、胆道、胰腺周围组织。\n\nT4：肿瘤直接扩展至下列部位：胃、脾、结肠、邻近大血管。\n\nN一一区域淋巴结。\n\nNx：区域淋巴结不能估计。\n\nNO：无区域淋巴结转移。\n\nN1：区域淋巴结转移。\n\nN1a：单个区域淋巴结转移。\n\nN1b：多个区域淋巴结转移。\n\nMx：远处转移不能估计。\n\nM0：无远处转移。\n\nM1：远处转移。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "根据TNM分期，甲状腺癌的I期、II期、III期、IV期如何划分？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>FIGO</td><td></td><td>TNM</td></tr><tr><td rowspan=\"2\">0</td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>I</td><td>肿瘤局限于卵巢</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于一侧卵巢，包膜完整，表面无肿瘤；腹水或腹腔冲洗液中未找到恶性细胞</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤局限于双侧卵巢，包膜完整，表面无肿瘤；腹水或腹腔冲洗液中未找到恶性细胞</td><td>T1b</td></tr><tr><td>Ic</td><td>肿瘤局限于单或双侧卵巢，并伴有如下任何一项：包膜破裂；卵巢表面有肿瘤；腹水或腹腔冲洗液中有恶性细胞</td><td>T1c</td></tr><tr><td>II</td><td>肿瘤累及一侧或双侧卵巢，伴有盆腔转移</td><td>T2</td></tr><tr><td>IIa</td><td>病变扩展和/或转移到子宫和/或输卵管；腹水或腹腔冲洗液中无恶性细胞</td><td>T2a</td></tr><tr><td>IIb</td><td>病变扩展到其他盆腔组织；腹水或腹腔冲洗液中无恶性细胞</td><td>T2b</td></tr><tr><td>IIc</td><td>IIA或IIB病变，腹水或腹腔冲洗液中找到恶性细胞</td><td>T2c</td></tr><tr><td>III</td><td>肿瘤侵犯一侧或双侧卵巢，并有显微镜证实的盆腔外腹膜转移和/或局部淋巴结转移</td><td>T3或/或N1</td></tr><"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在肾癌的治疗决策中，TNM分期如何影响手术方案的选择？"
+        },
+        {
+          "role": "assistant",
+          "content": "## 【治疗方案及原则】\n\n输卵管癌的转移途径与卵巢癌基本相同，故输卵管癌应按卵巢癌的治疗方法。其治疗原则是以手术为主的综合治疗。\n\n1. 手术治疗 强调首次手术应尽量彻底。I期病例可行全子宫及双侧附件切除术及大网膜切除术。Ⅱ期及以上病例应行肿瘤细胞减灭手术、大网膜切除术及腹主动脉旁淋巴结和盆腔淋巴结切除术。\n\n<div align=\"center\">\n\n表10-1 输卵管癌的临床分期\n\n### </div>\n\n<table border=\"1\"><tr><td>FIGO分期</td><td></td><td>TNM分类</td></tr><tr><td rowspan=\"2\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>0</td><td>原位癌(浸润前癌)</td><td>Tis</td></tr><tr><td>I</td><td>肿瘤局限于输卵管</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于一侧输卵管,浆膜表面无穿破,无腹水</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤局限于双侧输卵管,浆膜表面无穿破,无腹水</td><td>T1b</td></tr><tr><td>Ic</td><td>肿瘤局限于单或双侧输卵管,但已达到或穿破浆膜表面,或腹水或腹腔冲洗液中有恶性细胞</td><td>T1c</td></tr><tr><td>II</td><td>肿瘤累及一侧或双侧输卵管,并有盆腔内扩散</td><td>T2</td></tr><tr><td>IIa</td><td>扩散和/或转移到子宫和/或卵巢</td><td>T2a</td></tr><tr><td>IIb</"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "M0和M1在胃癌的TNM分期中分别代表什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(3) B超或阴道超声辅以彩色多普勒超声检查：了解子宫大小、宫腔内有无占位性病变、子宫内膜厚度、肌层浸润深度，以协助诊断。\n\n(4) 宫腔镜检查：直视下明确宫腔内病变部位、范围，对可疑部位做活组织检查，有助于发现较小的和早期病变。\n\n3. 临床分期 采用1988年FIGO子宫内膜癌的临床及手术病理分期，见表8-1子宫内膜癌的临床分期。未手术者则采用1982年临床分期法。\n\n<div align=\"center\">\n\n表8-1 子宫内膜癌的临床分期\n\n### </div>\n\n<table border=\"1\"><tr><td colspan=\"2\">FIGO分期</td><td>TNM分类</td></tr><tr><td rowspan=\"3\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>原位癌(浸润前癌)</td><td>TiS</td></tr><tr><td>I</td><td>肿瘤局限于宫体</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于子宫内膜</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤浸润深度&lt;1/2肌层</td><td>T1b</td></tr><tr><td>Ic</td><td>肿瘤浸润深度&gt;1/2肌层</td><td>T1c</td></tr><tr><td>II</td><td>肿瘤侵犯宫颈但无宫体外蔓延</td><td>T2</td></tr><tr><td>IIa</td><td>仅宫颈内膜腺体受累</td><td>T2a</td></tr><tr><td>IIb</td><td>宫颈间质浸润</td><td>T2b</td></tr>"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "根据最新版TNM分期，乳腺癌中T4期包括哪些情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td colspan=\"2\">FIGO分期</td><td>TNM分类</td></tr><tr><td rowspan=\"3\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>原位癌(浸润前癌)</td><td>TiS</td></tr><tr><td>I</td><td>肿瘤局限于宫体</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于子宫内膜</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤浸润深度&lt;1/2肌层</td><td>T1b</td></tr><tr><td>Ic</td><td>肿瘤浸润深度&gt;1/2肌层</td><td>T1c</td></tr><tr><td>II</td><td>肿瘤侵犯宫颈但无宫体外蔓延</td><td>T2</td></tr><tr><td>IIa</td><td>仅宫颈内膜腺体受累</td><td>T2a</td></tr><tr><td>IIb</td><td>宫颈间质浸润</td><td>T2b</td></tr><tr><td>III</td><td>局部和/或区域扩散(如IIIa、IIIb及IIIc中详述)</td><td>T3和/或N1</td></tr><tr><td>IIIa</td><td>肿瘤侵犯浆膜层和/或附件(直接蔓延或转移),和/或腹水或腹腔洗液有癌细胞</td><td>T3a</td></tr><tr><td>IIIb</td><td>阴道浸润(直接蔓延或转移)</td><td>T3b</td></tr><tr><td>IIIc</td><td>盆腔和/或腹主动"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "早期肾癌（T1N0M0）的标准治疗方案是什么？后期（T4N2M1）如何调整？"
+        },
+        {
+          "role": "assistant",
+          "content": "(4) PS=2的不可切除的局部晚期NSCLC，原则上也以化放疗联合治疗为好，但对耐受力低的年老患者，建议单作放疗或化疗以减轻症状延长生存期一项涉及超过5000个病人的大样本多变量分析显示，PS、疾病范围、体重减轻是影响NSCLC预后最重要的3个因素，之后多个类似的研究基本重复了同样的结果。目前尚没有特别针对PS $ \\geqslant 2 $的局部晚期NSCLC治疗的随机对照研究，但有3个Ⅲ期临床研究，其中 $ 50\\% $以上为Karnofsky $ \\leqslant 70 $或体重减轻 $ \\geqslant 5\\% $的病人，结果显示中位生存期10个月，2年生存率 $ 18\\% $。SWOG一项同时化放疗的Ⅱ期临床研究提示，PS状态差的病人能耐受同时化放疗，中位生存期13个月，2年生存率 $ 21\\% $。\n\n最新的Meta分析再次显示，化疗与最好的支持治疗比较能减轻症状，延长生存期。\n\n(5) PS>2的NSCLC，以最好的支持治疗为主要手段。\n\n## 3. T4，N0-1之NSCLC的治疗\n\n(1) 如果T4是由卫星结节所决定的，此类肺癌的首选治疗为手术切除，也可选择新辅助化疗模式。如为完全性切除，建议术后辅助化疗。\n\n在肺癌的1997分期中，T4意味着原发肿瘤不能切除。但如果卫星病灶位于原发癌所在的肺叶，则手术切除无技术上的问题，这种情况显然与1997分期中的T4定义不一致，且生存期明显高于传统定义的T4组。几个外科系列病例报告强调，这一情况下的肺癌其生存期事实上与Ⅲa期并无差异。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "### <div align=\"center\">\n\n表3-2-2 修订的肺癌国际分期中TNM的定义\n\n### </div>\n\n<table border=\"1\"><tr><td colspan=\"2\">原发肿瘤(T)</td></tr><tr><td>Tx:</td><td>原发肿瘤不能评价;或痰、支气管冲洗液找到癌细胞,但影像学或支气管镜没有可视肿瘤</td></tr><tr><td>T0:</td><td>没有原发肿瘤的证据</td></tr><tr><td>Tis:</td><td>原位癌</td></tr><tr><td>T1:</td><td>肿瘤最大径≤3cm,周围为肺或脏层胸膜所包绕,镜下肿瘤没有累及叶支气管以上* (即没有累及主支气管)</td></tr><tr><td>T2:</td><td>肿瘤大小或范围符合以下任何一点:肿瘤最大径&gt;3cm累及主支气管,但距隆突≥2cm累及脏层胸膜扩展到肺门的肺不张或阻塞性肺炎,但不累及全肺</td></tr><tr><td>T3:</td><td>任何大小的肿瘤已直接侵犯了下述结构之一者:胸壁(包括上沟瘤)、膈肌、纵隔胸膜、心包;肿瘤位于距隆突2cm以内的主支气管但尚未累及隆突;全肺的肺不张或阻塞性炎症</td></tr><tr><td>T4:</td><td>任何大小的肿瘤已直接侵犯了下述结构之一者:纵隔、心脏、大血管、气管、食管、椎体、隆突;恶性胸水或恶性心包积液#;原发肿瘤同一叶内出现单个或多个的卫星结节</td></tr><tr><td colspan=\"2\">区域淋巴结(N)</td></tr><tr><td>NX:</td><td>区域淋巴结不能评价</td></tr><tr><td>N0:</td><td>没有区域淋巴结转移</td></tr><tr><td>N1:</td><td>转移至同侧支气管"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "前列腺癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. JPS的新分期方法（表7-4-2）\n\nT：肿瘤大小\n\n### S:浆膜浸润\n\n### RP：腹膜后浸润\n\n### PV：门静脉系统浸润\n\nDU：浸润十二指肠壁。 CH：浸润到胰内胆管。 A：浸润到动脉壁。\n\n### 原发肿瘤（T）\n\nT1：S0、RP0、PV0、A0、DU0及CH0，1的肿瘤。\n\nTla：肿瘤最大直径 $ \\leqslant2\\mathrm{cm}。 $\n\nTlb：肿瘤最大直径>2cm。\n\nT2：不管肿瘤大小，肿瘤存在下列情况中一种或一种以上：S1、RP1、PV1、\n\nA1、DU1，2，3及CH2，3的肿瘤。\n\nT3：不管肿瘤大小，肿瘤存在下列情况中一种或一种以上：S2，3、RP2、PV2， 3、A2，3、DU1，2，3及CH2，3的肿瘤。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>食管癌TNM分类</td><td colspan=\"3\">NO局部淋巴结无转移</td></tr><tr><td>T——原发性肿瘤</td><td colspan=\"3\">食管癌TNM分期</td></tr><tr><td>TX原发肿瘤难以评估</td><td></td><td></td><td></td></tr><tr><td>T0原发肿瘤未证实</td><td>0期</td><td>Tis</td><td>NO M0</td></tr><tr><td>Tis原位癌</td><td>I期</td><td>T1</td><td>NO M0</td></tr></table>\n\n<table><tr><td>T1 肿瘤累及固有膜或黏膜下层</td><td>II期A</td><td>T2 N0 M0</td><td></td></tr><tr><td>T2 肿瘤累及肌层</td><td></td><td>T3 N0 M0</td><td></td></tr><tr><td>T3 肿瘤累及外膜</td><td>II期B</td><td>T1 N1 M0</td><td></td></tr><tr><td>T4 肿瘤累及邻近组织</td><td></td><td>T2 N1 M0</td><td></td></tr><tr><td>N——局部淋巴结</td><td>III期</td><td>T3 N1 M0</td><td></td></tr><tr><td>NX 局部淋巴结难以评估</td><td></td><td>T4 任何淋巴结阳性 M0</td><td></td></tr><tr><td>IV期 任何T 任何淋巴结阳性 M1</td><td></td><td></td><td></td></tr><tr><td>N1 局"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "M0和M1在口腔癌的TNM分期中分别代表什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "### </div>\n\n<table border=\"1\"><tr><td>FIGO分期</td><td></td><td>TNM分类</td></tr><tr><td rowspan=\"2\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>0</td><td>原位癌(浸润前癌)</td><td>Tis</td></tr><tr><td>I</td><td>肿瘤局限于输卵管</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于一侧输卵管,浆膜表面无穿破,无腹水</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤局限于双侧输卵管,浆膜表面无穿破,无腹水</td><td>T1b</td></tr><tr><td>Ic</td><td>肿瘤局限于单或双侧输卵管,但已达到或穿破浆膜表面,或腹水或腹腔冲洗液中有恶性细胞</td><td>T1c</td></tr><tr><td>II</td><td>肿瘤累及一侧或双侧输卵管,并有盆腔内扩散</td><td>T2</td></tr><tr><td>IIa</td><td>扩散和/或转移到子宫和/或卵巢</td><td>T2a</td></tr><tr><td>IIb</td><td>扩散到其他盆腔脏器</td><td>T2b</td></tr><tr><td>IIc</td><td>IIa或IIb,腹水或腹腔冲洗液中有恶性细胞</td><td>T2c</td></tr><tr><td>III</td><td>肿瘤累及一侧或双侧输卵管,并有盆腔以外腹膜种植和/或区域淋巴结阳性</td><td>T3和/或N1</td></tr><tr><td>IIIa</t"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肾癌的T分期如何根据肿瘤大小和侵犯范围进行判定？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 手术方法及入路\n\n(1) 内镜(intraluminal endoscopy)\n\n(2) 腹腔镜-腹腔镜辅助（laparoscopy）\n\n### (3) 开腹（laparotomy）\n\n(4) 开胸-开腹（thoraco-laparotomy）\n\n(5) 其他（others）\n\n2. 手术种类\n\n(1) 胃粘膜切除术（EMR）\n\n(2) 胃局部切除术\n\n### (3) 胃节段切除术\n\n### (4) 贲门侧胃切除术\n\n### <div align=\"center\">\n\n表6-3-5 UICC（1997年）TNM分期\n\n### </div>\n\n<table border=\"1\"><tr><td>0</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>Ia</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"2\">Ib</td><td>T1</td><td>N1</td><td>M0</td></tr><tr><td>T2</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">II</td><td>T1</td><td>N2</td><td>M0</td></tr><tr><td>T2</td><td>N1</td><td>M0</td></tr><tr><td>T3</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">IIIa</td><td>T2</td><td>N2</td><td>M0</td></tr><tr><td>T3</td><td>N1</td><td>M0</td></tr><tr><td>T4</td><td>N0</td><td>M0</"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "卵巢癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "胆囊癌的另一特殊的转移方式是沿胆管壁向上下扩散。目前的研究证明胆道系统恶性肿瘤可沿胆管壁的神经周围间隙转移，并可出现跳跃式的转移方式。所以在术中应对可疑被浸润的肝外胆管作快速切片，以免切缘阳性。此外，胆囊癌还可通过腹腔种植的方式累及其他脏器，如胰腺、胃、十二指肠、结肠和腹壁。\n\n## （五）胆囊癌的分期\n\n胆囊癌的预后与它的临床分期有着密切的关系。目前胆囊癌的常用临床分期方法有 Nevin分期和 TNM分期两种。\n\n1. Nevin分期 1976年，Nevin等根据癌肿在胆囊壁的浸润深度和扩散范围，提出了以下分期方案：I期，癌组织仅位于粘膜内，即原位癌；Ⅱ期，癌肿侵及胆囊粘膜和肌层；Ⅲ期，癌组织侵及胆囊壁全层，即粘膜层、肌层和浆膜层；IV期，癌组织侵及胆囊壁全层并伴有淋巴结转移；V期，胆囊癌侵及肝脏、胆囊邻近脏器，或有远处转移。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "早期食管癌（T1N0M0）的标准治疗方案是什么？后期（T4N2M1）如何调整？"
+        },
+        {
+          "role": "assistant",
+          "content": "表8-1 子宫内膜癌的临床分期\n\n### </div>\n\n<table border=\"1\"><tr><td colspan=\"2\">FIGO分期</td><td>TNM分类</td></tr><tr><td rowspan=\"3\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>原位癌(浸润前癌)</td><td>TiS</td></tr><tr><td>I</td><td>肿瘤局限于宫体</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于子宫内膜</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤浸润深度&lt;1/2肌层</td><td>T1b</td></tr><tr><td>Ic</td><td>肿瘤浸润深度&gt;1/2肌层</td><td>T1c</td></tr><tr><td>II</td><td>肿瘤侵犯宫颈但无宫体外蔓延</td><td>T2</td></tr><tr><td>IIa</td><td>仅宫颈内膜腺体受累</td><td>T2a</td></tr><tr><td>IIb</td><td>宫颈间质浸润</td><td>T2b</td></tr><tr><td>III</td><td>局部和/或区域扩散(如IIIa、IIIb及IIIc中详述)</td><td>T3和/或N1</td></tr><tr><td>IIIa</td><td>肿瘤侵犯浆膜层和/或附件(直接蔓延或转移),和/或腹水或腹腔洗液有癌细胞</td><td>T3a</td></tr><tr><td>IIIb</td><td>阴道浸润(直接蔓延或转移)</td><td>T3b</td></tr>"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "食管癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. Nevin III期和TNM II期胆囊癌 对于Nevin III期和TNM II期的胆囊癌患者应行根治性手术。根治性手术范围包括完整的胆囊切除、肝十二指肠韧带淋巴结（包括肝门部淋巴结）清扫和楔形切除胆囊床 $2\\mathrm{cm}$ 的肝组织。\n\n胆囊癌根治术中肝十二指肠韧带淋巴结的清扫尤为重要，据文献报道，胆囊癌T1、T2、T3和T4的淋巴结转移率分别为 0、 $ 48\\% $ 、 $ 72\\% $ 和 $ 80\\% $ 。\n\n4. Nevin IV、V期和TNMⅢ、IV期的胆囊癌以往胆囊癌患者只要出现黄疸、腹部肿块等，即认为已属晚期，无手术治疗指征。但随着对胆囊癌认识的进一步加深和外科手术技术及手术器械的改进，Nevin IV、V期和TNMⅢ、IV期的胆囊癌病例已不再是根治性手术的绝对禁忌。只要胆囊癌病人一般情况允许及癌肿无远处转移，均有施行扩大根治手术的机会。\n\n扩大根治性手术的范围应根据肿瘤浸润转移的具体情况而定，一般是在胆囊癌根治术的基础上加行肝外胆管（必要时左右Ⅰ级肝管）切除重建术、扩大的右半肝切除术、胰头十二指肠切除术和右半结肠切除术等，外加肝十二指肠韧带、肝门部、胰头后方等部位的淋巴清扫术。\n\n胆囊癌扩大根治术要求术者对胆囊癌的浸润转移的特点和局部解剖（尤其是肝门部解剖）的特点较为熟悉，术中应注意以下方面： $ \\textcircled{1} $胆囊癌有沿胆管壁扩散的特性，术中若无法判断胆管的癌肿侵犯边缘，应将边缘作快速切片，以免切缘阳性。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "请对比卵巢癌的临床分期(cTNM)和病理分期(pTNM)的差异和临床意义。"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td colspan=\"2\">分期</td><td>TNM</td></tr><tr><td>0</td><td></td><td>原位癌</td></tr><tr><td rowspan=\"2\">Ⅰ</td><td>ⅠA</td><td>T1N0M0</td></tr><tr><td>ⅠB</td><td>T2N0M0</td></tr><tr><td rowspan=\"3\">Ⅱ</td><td>ⅡA</td><td>T1N1M0</td></tr><tr><td>ⅡB</td><td>T2N1M0</td></tr><tr><td></td><td>T3N0M0</td></tr><tr><td rowspan=\"11\">Ⅲ</td><td rowspan=\"4\">ⅢA</td><td>T3N1M0</td></tr><tr><td>T1N2M0</td></tr><tr><td>T2N2M0</td></tr><tr><td>T3N2M0</td></tr><tr><td rowspan=\"8\">ⅢB</td><td>T4N0M0</td></tr><tr><td>T4N1M0</td></tr><tr><td>T4N2M0</td></tr><tr><td>T1N3M0</td></tr><tr><td>T2N3M0</td></tr><tr><td>T3N3M0</td></tr><tr><td>T4N3M0</td></tr><tr><td>Ⅳ</td><td></td><td>任何T任何N，M1</td></tr></table>\n\n## 第三章 肺癌的治疗\n\n肺癌的治疗，应“根据病人的身心状况、肿瘤的具体部位、病理类型、侵犯范围（病期）和发展趋向，结合细胞分子生物学的改变，有计划地、合理地应用现有的多学科各种有效"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胃癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>FIGO</td><td>UICC</td><td colspan=\"2\">肿瘤范围</td></tr><tr><td>T1</td><td>肿瘤局限于外阴和(或)会阴,最大径≤2cm</td><td>N1</td><td>单侧淋巴结转移</td></tr><tr><td>T2</td><td>肿瘤局限于外阴和(或)会阴,最大径&gt;2cm</td><td>N2</td><td>双侧区域性淋巴结转移</td></tr><tr><td>T3</td><td>肿瘤累及下列:下尿道、阴道、肛门</td><td>M:</td><td>远处转移</td></tr><tr><td rowspan=\"3\">T4</td><td rowspan=\"3\">肿瘤累及下列:膀胱黏膜、直肠黏膜、上尿道、骨盆</td><td>Mx</td><td>远处转移不可测定</td></tr><tr><td>M0</td><td>无远处转移</td></tr><tr><td>M1</td><td>远处转移(盆腔淋巴结转移是M1)</td></tr></table>\n\n注：浸润深度定义为测量从最表浅的上皮间质集合部真皮乳头到最深的浸润点肿瘤\n\n## 第二节 治疗\n\n## 一、手术治疗\n\n## （一）外阴上皮内瘤变（VIN）\n\nI级者可观察或行药物治疗，如5-FU、干扰素、地塞米松等应用，也可以激光、冷冻治疗。Ⅱ～Ⅲ级包括外阴原位癌、Bowen病和部分Paget病，作外阴单纯切除术。或病灶局部广泛切除。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "黑色素瘤的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 影像学检查 行B超或X射线电子计算机断层扫描（CT）或磁共振成像（MRI）等检查，以了解盆、腹腔腹膜后淋巴结、病灶与周围器官、组织的关系等，以便为制订治疗方案提供依据。\n\n5. 外阴病灶做多点活检，活组织送病理检查，即可明确诊断。\n\n6. 必要时做直肠镜和膀胱镜检查。\n\n7. 临床分期 采用FIGO（1989年）临床分期，见表6-1外阴癌的临床分期。\n\n<div align=\"center\">\n\n表6-1 外阴癌的临床分期\n\n### </div>\n\n<table border=\"1\"><tr><td colspan=\"2\">FIGO分期</td><td>TNM分期</td></tr><tr><td rowspan=\"3\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>原位癌(浸润前癌)</td><td>Tis</td></tr><tr><td>I</td><td>肿瘤局限于外阴或外阴和会阴,最大径线≤2cm</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于外阴或外阴和会阴,最大径线≤2cm,间质浸润≤1.0mm*</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤局限于外阴或外阴和会阴,最大径线≤2cm,间质浸润&gt;1.0mm*</td><td>T1b</td></tr><tr><td>II</td><td>肿瘤局限于外阴或外阴和会阴,最大径线&gt;2cm</td><td>T2</td></tr><tr><td>III</td><td>肿瘤侵犯下列任何部位:下尿道、阴道、肛门和/或单侧区域淋巴结转移</td><td>T3</td></tr><tr><td>IV</td><t"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "喉癌的N分期中，N1、N2、N3分别代表什么淋巴结转移情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "微波热凝固疗法主要是应用插入式微波针辐射或局部高温固化，使肝脏局部温度高达 $ 60\\sim 120^{\\circ} \\mathrm{C} $ ，使肝组织或肿瘤组织产生凝固性坏死，小血管血液凝结或闭塞，减少手术出血，提高切除率。其优点为： $ \\textcircled{1} $有好的止血作用。凝血块不发生炭化和脱落，从而避免术后继发性出血之可能； $ \\textcircled{2} $能杀灭切缘癌细胞。对不适合作规则性肝癌切除的病人，应用微波技术贴近肝癌边缘切除，有可能减少切缘残癌和术中癌细胞扩散，并能最大限度地保留正常肝组织； $ \\textcircled{3} $微波热凝固治疗，可作为不能切除肝癌综合治疗的一种手段； $ \\textcircled{4} $微波手术安全可行。\n\n## （五）肝移植\n\n1963年Starzl首先成功地进行人肝移植以来，肝移植研究进展迅速。到目前为止，全世界已有200个具一定规模的肝移植中心，已经有100000例，手术死亡率降至 10%以下，6年存活率升高至 70%以上。对肝癌肝移植已有多个中心的大系列的报道，对于TNM分期I，Ⅱ期的病人，5年生存率达 60%，复发率 10%左右。\n\n肝移植主要适于肿瘤直径<10cm，病灶数在3个以下，无血管侵犯，无远处转移，无恶病质，HBV-DNA阴性的病人。\n\n## 三、肝动脉化疗栓塞\n\n肝癌的动脉化疗栓塞是指经动脉灌注术（transarterial Infusion，TAI）及经动脉栓塞术（transarterial Embolization，TAE），为治疗肝癌的主要非手术方法。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "结直肠癌患者术前影像学评估如何帮助确定cTNM分期？"
+        },
+        {
+          "role": "assistant",
+          "content": "【临床要点】 $ \\textcircled{1} $平均年龄50岁，无性别差异。 $ \\textcircled{2} $分布广泛：好发于消化道（尤其阑尾和回肠），可见于呼吸道（主要是主支气管、段支气管）、肠系膜、肝、胆囊和肝外胆管、胰、肾、膀胱、前列腺、胸腺、唾液腺、乳腺、子宫颈、卵巢、睾丸、眼眶、耳、鼻、喉、皮肤等。 $ \\textcircled{3} $多无局部病征，可伴发类癌综合征（颜面潮红、腹泻、右心瓣膜纤维性增厚等）或其他肽类激素过多病征；类癌综合征多发生于晚期（尤其肝转移者），一般不见于横结肠中段以下、直肠和肛管（属于后肠衍生）类癌。 $ \\textcircled{4} $多单发，较小。 $ \\textcircled{5} $支气管类癌可为中心型（较常见，生长缓慢，息肉样长入腔内）或外周型（多位于胸膜直下，常多发）。 $ \\textcircled{6} $生长缓慢，多无转移，低度恶性。 $ \\textcircled{7} $肿瘤直径 $ > 2 \\mathrm{c m} $或较深浸润者可转移。\n\n## 【病理变化】\n\n1. 肉眼病变 多单发、较小（直径<1cm），发生于黏膜者常呈丘状突起或息肉样；切面灰白、灰黄色。\n\n## 2. 光镜病变\n\n(1) 肿瘤细胞： $ \\textcircled{1} $形态单一，圆、近圆、椭圆或多边形，可短梭形、梭形，胞膜清楚。 $ \\textcircled{2} $胞质少或中等量、空亮或细颗粒性淡粉染。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "宫颈癌的T分期如何根据肿瘤大小和侵犯范围进行判定？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>免疫标记</td><td>NLPHL</td><td>TCRLBCL</td><td>CHL</td><td>DLBCL</td><td>ALCL</td></tr><tr><td>CD30</td><td>-</td><td>-</td><td>+</td><td>-/+</td><td>+</td></tr><tr><td>CD15</td><td>-</td><td>-</td><td>+/-</td><td>-</td><td>-</td></tr><tr><td>CD45</td><td>+</td><td>+</td><td>-</td><td>+</td><td>+/-</td></tr><tr><td>CD20</td><td>+</td><td>+</td><td>-/+</td><td>+</td><td>-</td></tr><tr><td>CD79a</td><td>+</td><td>+</td><td>-/+</td><td>+</td><td>-</td></tr><tr><td>BSAP</td><td>+</td><td>+</td><td>+</td><td>+</td><td>-</td></tr><tr><td>Oct2</td><td>S+</td><td>S+</td><td>-/+</td><td>+</td><td>n.a.</td></tr><tr><td>BOB.1</td><td>+</td><td>+</td><td>-</td><td>+</td><td>n.a.</td></tr><tr><td>Grazyme B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>+</td></tr><tr><td>EMA</td>"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "根据最新版TNM分期，卵巢癌中T4期包括哪些情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>分期</td><td>肿瘤大小</td><td>淋巴结转移</td><td>远处转移</td></tr><tr><td>0期</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>I期</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td></td><td>T2</td><td>N0</td><td>M0</td></tr><tr><td>II期</td><td>T3</td><td>N0</td><td>M0</td></tr><tr><td>III期</td><td>T1</td><td>N1</td><td>M0</td></tr><tr><td></td><td>T2</td><td>N1</td><td>M0</td></tr><tr><td></td><td>T3</td><td>N1</td><td>M0</td></tr><tr><td>IVa期</td><td>T4</td><td>任何N</td><td>M0</td></tr><tr><td>IVb期</td><td>任何T</td><td>任何N</td><td>M1</td></tr></table>\n\n2. JPS的新分期方法（表7-4-2）\n\nT：肿瘤大小\n\n### S:浆膜浸润\n\n### RP：腹膜后浸润\n\n### PV：门静脉系统浸润\n\nDU：浸润十二指肠壁。 CH：浸润到胰内胆管。 A：浸润到动脉壁。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "请对比黑色素瘤的临床分期(cTNM)和病理分期(pTNM)的差异和临床意义。"
+        },
+        {
+          "role": "assistant",
+          "content": "(4) 开胸-开腹（thoraco-laparotomy）\n\n(5) 其他（others）\n\n2. 手术种类\n\n(1) 胃粘膜切除术（EMR）\n\n(2) 胃局部切除术\n\n### (3) 胃节段切除术\n\n### (4) 贲门侧胃切除术\n\n### <div align=\"center\">\n\n表6-3-5 UICC（1997年）TNM分期\n\n### </div>\n\n<table border=\"1\"><tr><td>0</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>Ia</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"2\">Ib</td><td>T1</td><td>N1</td><td>M0</td></tr><tr><td>T2</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">II</td><td>T1</td><td>N2</td><td>M0</td></tr><tr><td>T2</td><td>N1</td><td>M0</td></tr><tr><td>T3</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">IIIa</td><td>T2</td><td>N2</td><td>M0</td></tr><tr><td>T3</td><td>N1</td><td>M0</td></tr><tr><td>T4</td><td>N0</td><td>M0</td></tr><tr><td>IIIb</td><td>T3</td><td>N2</td><td>M0</td></tr><tr><td rowspan=\"3\">IV</td><td>T4"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在宫颈癌的治疗决策中，TNM分期如何影响手术方案的选择？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 基本类型： $ \\textcircled{1} $类癌； $ \\textcircled{2} $非典型类癌； $ \\textcircled{3} $神经内分泌癌（小细胞癌、大细胞癌）。\n\n(2) 其他类型： $ \\textcircled{1} $特定部位具有某些形态特点的肿瘤（胰岛细胞瘤、垂体腺瘤、甲状腺髓样癌等）。 $ \\textcircled{2} $分泌某种激素的肿瘤（胃泌素瘤、血管活性肠肽瘤、ACTH细胞腺瘤等）。 $ \\textcircled{3} $混合性神经内分泌癌（混成于神经内分泌肿瘤和非神经内分泌性腺癌）。 $ \\textcircled{4} $多发性内分泌肿瘤（同时含有或相继发生 $ \\geqslant2 $个内分泌肿瘤）。\n\n(3) 非内分泌肿瘤中的神经内分泌分化（出现具有激素活性的神经内分泌细胞）和非内分泌肿瘤伴发副肿瘤性内分泌综合征（“异位激素”肿瘤综合征）。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "根据最新版TNM分期，喉癌中T4期包括哪些情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td colspan=\"2\">FIGO分期</td><td>TNM分期</td></tr><tr><td rowspan=\"3\"></td><td>原发肿瘤无法评估</td><td>Tx</td></tr><tr><td>无原发肿瘤证据</td><td>T0</td></tr><tr><td>原位癌(浸润前癌)</td><td>Tis</td></tr><tr><td>I</td><td>肿瘤局限于外阴或外阴和会阴,最大径线≤2cm</td><td>T1</td></tr><tr><td>Ia</td><td>肿瘤局限于外阴或外阴和会阴,最大径线≤2cm,间质浸润≤1.0mm*</td><td>T1a</td></tr><tr><td>Ib</td><td>肿瘤局限于外阴或外阴和会阴,最大径线≤2cm,间质浸润&gt;1.0mm*</td><td>T1b</td></tr><tr><td>II</td><td>肿瘤局限于外阴或外阴和会阴,最大径线&gt;2cm</td><td>T2</td></tr><tr><td>III</td><td>肿瘤侵犯下列任何部位:下尿道、阴道、肛门和/或单侧区域淋巴结转移</td><td>T3</td></tr><tr><td>IV</td><td>肿瘤侵犯下列任何部位:膀胱黏膜、直肠黏膜、上尿道黏膜;或骨质固定</td><td>T4</td></tr><tr><td>IVa</td><td>和/或双侧区域淋巴结转移</td><td></td></tr><tr><td>IVb</td><td>任何部位(包括盆腔淋巴结)的远处转移</td><td></td></tr></table>\n\n* 肿瘤浸润深度指肿瘤从最接近表皮乳头上皮-间质连接处至最深浸润点的距离\n\n## 【治疗方案及原则】\n\n1. 手术"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌的TNM分期标准是什么？请详细说明T、N、M各期的定义。"
+        },
+        {
+          "role": "assistant",
+          "content": "诱导化疗是近二十年来临床试验的一种综合治疗方法，即在手术或放疗前先进行化疗。常用药物有平阳霉素、顺铂、氟尿嘧啶等。一般先试用两个周期，如肿瘤明显缩小达到部分缓解（PR），则再进行一个周期化疗（3个周期为一个疗程）后进行根治性放疗。两个周期化疗达不到PR或根治性放疗后仍有肿瘤残存者，行手术治疗。经诱导化疗及根治性放疗结束后肿瘤完全消失者，可以密切随访，肿瘤复发时再行挽救性手术治疗。诱导化疗的方法，经过国际上多项随机研究，认为总的长期生存率与传统的手术或手术加放疗的相当，但喉功能的保留率提高，即一部分患者避免了喉的手术。诱导化疗由于药物有一定的毒性，故应考虑患者的体质情况（年龄，心、肺、肝、肾功能，营养状况）。诱导化疗最适合中晚期T2～T3的患者。\n\n## （三）同步放化疗\n\n同步放化疗是近几年兴起的一种综合治疗模式，正在进行随机临床试验。利用部分化疗药物具有放疗增敏和细胞毒性作用，争取使部分患者原发灶得到控制，避免手术，从而保全器官的功能。常用的化疗药物有紫杉醇、顺铂等。每周应用一个剂量的化疗药物，配合常规放疗或超分割放疗，至第5周进行评估。如达到PR或完全缓解（CR），则继续放化疗至第7周。肿瘤完全消失者可密切随访观察，复发时再手术挽救。如第5周达不到PR，则手术切除。目前化疗的剂量仍在摸索中。同步放化疗主要适用于T2或T3的患者。初步结论是在器官保留率、3年生存率与常规的手术、放疗或手术加放疗相比有一定的提高（约提高 $20\\% \\sim 30\\%$ ），远地转移率下降。一般来讲，对于颈部N2、N3者，无论原发灶控制与否，仍需行颈淋巴结清扫。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "鼻咽癌的T分期如何根据肿瘤大小和侵犯范围进行判定？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>0</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>Ia</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"2\">Ib</td><td>T1</td><td>N1</td><td>M0</td></tr><tr><td>T2</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">II</td><td>T1</td><td>N2</td><td>M0</td></tr><tr><td>T2</td><td>N1</td><td>M0</td></tr><tr><td>T3</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">IIIa</td><td>T2</td><td>N2</td><td>M0</td></tr><tr><td>T3</td><td>N1</td><td>M0</td></tr><tr><td>T4</td><td>N0</td><td>M0</td></tr><tr><td>IIIb</td><td>T3</td><td>N2</td><td>M0</td></tr><tr><td rowspan=\"3\">IV</td><td>T4</td><td>N1,N2,N3</td><td>M0</td></tr><tr><td>T1,T2,T3</td><td>N3</td><td>M0</td></tr><tr><td>Any T</td><td>Any N</td><td>M1</td></tr></table>\n\n### (5) 幽门侧胃切除术\n\n### (6) 保留幽门胃切除术\n\n(7"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "早期口腔癌（T1N0M0）的标准治疗方案是什么？后期（T4N2M1）如何调整？"
+        },
+        {
+          "role": "assistant",
+          "content": "胆管癌的分期有多种标准，临床上使用较多的是国际抗癌协会（UICC）分期（见表7-2-1），该分期根据TNM标准而制定，通常仅适用于经过手术探查的病例。\n\n<div align=\"center\">\n\n表7-2-1 肝外胆管癌TNM分期标准\n\n### </div>\n\n<table border=\"1\"><tr><td>Tis</td><td>原位癌</td><td>N0</td><td>无淋巴结转移</td></tr><tr><td>T1</td><td>限于胆管壁</td><td>N1</td><td>肝十二指肠韧带淋巴结转移</td></tr><tr><td>T2</td><td>胆管肌层外结缔组织</td><td>N2</td><td>其他区域淋巴结转移</td></tr><tr><td>T3</td><td>邻近组织</td><td></td><td></td></tr><tr><td>M0</td><td>无远处转移</td><td>M1</td><td>有远处转移</td></tr></table>\n\n<div align=\"center\">\n\n表7-2-2 肝外胆管癌 UICC分期\n\n### </div>\n\n<table border=\"1\"><tr><td>TNM分期</td><td>T</td><td>N</td><td>M</td></tr><tr><td>0</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>Ⅰ</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td>Ⅱ</td><td>T2</td><td>N0</td><td>M0</td></tr><tr><td>Ⅲ</td><td>T1~2</td><td>N1~2</td><td>M0</td></tr"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "M0和M1在骨肉瘤的TNM分期中分别代表什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>Stage 0:</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>StageⅠ:</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">StageⅡa:</td><td>T0</td><td>N1</td><td>M0</td></tr><tr><td>T1</td><td>N1</td><td>M0</td></tr><tr><td>T2</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"2\">StageⅡb:</td><td>T2</td><td>N1</td><td>M0</td></tr><tr><td>T3</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"4\">StageⅢa:</td><td>T0</td><td>N2</td><td>M0</td></tr><tr><td>T1</td><td>N2</td><td>M0</td></tr><tr><td>T2</td><td>N2</td><td>M0</td></tr><tr><td>T3</td><td>N1-2</td><td>M0</td></tr></table>\n\nStage III b: T4 任何 N M0\n\n### 任何 T N3 M0\n\nStage IV: 任何 T 任何 N M1\n\n## 第一节 综合治疗\n\n乳腺癌是好发血行转移的恶性肿瘤，治疗失败主要由于远处转移未得控制所致，因此，治疗本病除采用局部治疗方法（外科手术或放射治疗）以清除其原发癌灶（包括区域淋巴结转移癌）外，还需兼顾全身治疗（化疗或内分泌治疗），以控制其体内"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在乳腺癌的治疗决策中，TNM分期如何影响手术方案的选择？"
+        },
+        {
+          "role": "assistant",
+          "content": "T3：肿瘤侵及食管纤维膜。\n\nT4：肿瘤侵及邻近器官。\n\nN一一区域淋巴结。\n\nNx：区域淋巴结不能测定。\n\nNO：无区域淋巴结转移。\n\nN1：区域淋巴结转移。\n\nM远处转移。\n\nMx：远处转移不能测定。\n\nM0：无远处转移。\n\nM1：有远处转移。\n\n### 胸上段食管癌\n\nM1a：颈淋巴结转移。\n\nM1b：其他的远处转移。\n\n### 胸中段食管癌\n\nM1a：不应用。\n\nM1b：非区域淋巴结或其他的远处转移。\n\n### 胸下段食管癌\n\nM1a：腹腔动脉淋巴结转移。\n\nM1b：其他的远处转移。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "请对比增强CT和MRI在肺癌分期中的准确性。"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>方案</td><td>5-FU mg/m2</td><td>CDDP mg/m2</td><td>第三药 mg/m2</td><td>RR(%)</td><td>Ref</td></tr><tr><td>ECF</td><td>200/civ/d×21</td><td>60/d1/3w</td><td>EPI 50/d1/3w</td><td>52</td><td>Preusser(1997)</td></tr><tr><td>LFEP</td><td>LV 250/d1/w500/d1/w</td><td>40/d1/w</td><td>EPI 35/d1/w</td><td>62</td><td>Cascinu(1997)</td></tr><tr><td>ELFP</td><td>LV30/d×5/4w370/civ/d×5/4w</td><td>70/d7,21/4w</td><td>VP-1670/d7,21/4w</td><td>47</td><td>Mochizuki(2001)</td></tr><tr><td>PFC</td><td>750/civ/d×5/3w</td><td>20/d×5/3w</td><td>PCT 175/d1/3w</td><td>65</td><td>Kim(1999)</td></tr><tr><td>TCF</td><td>750/d×5/3w</td><td>75/d1/3w</td><td>DCT 75/d1/3w</td><td>54</td><td>Ajani(2002)</td></tr><tr><td>HLFP</td><td>LV200/d×5/3w500/civ/d×5/3w</td><td>20/d×5/3w</td><td>HCPT 6~9/d×5/3w"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在宫颈癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td></td><td colspan=\"2\">正常值</td><td colspan=\"2\">评价</td></tr><tr><td rowspan=\"2\">pH</td><td rowspan=\"2\">7.35~7.45</td><td>pH&lt;7.35</td><td colspan=\"2\">酸中毒</td></tr><tr><td>pH&gt;7.45</td><td colspan=\"2\">碱中毒</td></tr><tr><td rowspan=\"2\">PaCO2</td><td rowspan=\"2\">35~45mmHg</td><td>&lt;35mmHg</td><td colspan=\"2\">肺泡过度换气和呼吸性碱中毒</td></tr><tr><td>&gt;45mmHg</td><td colspan=\"2\">换气不足和呼吸性酸中毒</td></tr><tr><td rowspan=\"5\">标准HCO3-</td><td rowspan=\"5\">22~27mmol/L</td><td colspan=\"3\">代酸:预计PaCO2=1.5×[HCO3-]+8±2,代偿极限10mmHg</td></tr><tr><td colspan=\"3\">代碱:预计PaCO2=0.7×[HCO3-]+20±1.5,代偿极限55mmHg</td></tr><tr><td colspan=\"3\">急性呼酸:[HCO3-]=PaCO2×0.1,代偿极限30mmol/L</td></tr><tr><td colspan=\"3\">慢性呼酸:Δ[HCO3-]=ΔPaCO2×0.4±2.5,代偿极限45mmol/L</td></tr><tr><td colspan=\"3\">急性呼碱:Δ[HCO3-]=ΔPaCO2×0.2,代偿极限"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "请对比增强CT和MRI在骨肉瘤分期中的准确性。"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>缩略语</td><td>英文名称</td><td>药物通用名</td></tr><tr><td>ADM</td><td>adriamycine</td><td>阿霉素</td></tr><tr><td>Ara-c</td><td>cytarabine</td><td>阿糖胞苷</td></tr><tr><td>BLM</td><td>bleomycine</td><td>博莱霉素</td></tr><tr><td>CF</td><td>leucovorin</td><td>甲酰四氢叶酸钙</td></tr><tr><td>CTX</td><td>cyclophosphamide</td><td>环磷酰胺</td></tr><tr><td>DDP</td><td>cisplatin</td><td>顺氯氨铂</td></tr><tr><td>DNR</td><td>daunoubicine</td><td>柔红霉素</td></tr><tr><td>DTIC</td><td>dacarbazine</td><td>氮烯咪胺</td></tr><tr><td>DXM</td><td>dexamethasone</td><td>地塞米松</td></tr><tr><td>FDR</td><td>fludarabine</td><td>氟达拉滨</td></tr><tr><td>HN2</td><td>nitrogen Mustard</td><td>氮芥</td></tr><tr><td>IFO</td><td>ifosfamide</td><td>异环磷酰胺</td></tr><tr><td rowspan=\"3\">L-ASP</td><td>l-Asparaginase</td><td>L-门冬酰胺酶</td></tr><t"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "MRI在鼻咽癌的软组织侵犯评估中相比CT有哪些优势？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 放疗前准备 放疗前必须明确诊断，对放射可能引起的疗效、副作用和并发症作一个权衡，以决定是否放疗。对准备作放疗的病人，首先要评估其肝脏的功能，特别是肝硬化的严重程度和肝脏的代偿功能，作为在设计放射治疗计划时的参考；其次要作双侧肾功能的检查，因为肾脏，特别是右肾不可避免地要受到照射，所以左侧肾功能的完好就显得十分重要。对原发肝癌的病人应该作甲胎蛋白的定量测定，以作评定疗效的参考指标。\n\n2. 放射技术 外放射是常用的放疗方法，常用 $ ^{60} $钴和直线加速器。\n\n(1) 肿瘤定位：肝内病灶的大小及范围的确定，对于已经手术探查的患者，可能会有比较明确的了解。手术切除后有残存者，则可在术中留置标记。对于多数未经手术的病人，可通过影像诊断如超声、CT、MRI、PET及血管造影等来确定肝内肿瘤的靶区以设置放射野。若肿瘤未被完全包括在放射野内，在放射治疗期间，肿瘤仍可继续生长，这是肝癌放射治疗失败的主要原因之一。\n\n(2) 设野：除了尽可能包括全部肿瘤外，注意保护肾脏也是很重要的。两肾\n\n同时照射的放射耐受量是 $23\\mathrm{Gy} / 4\\sim 5$ 周，低于肝脏的放射耐受量，在放疗中，至少要保护左肾，或1/2的双肾总体积，使其所受剂量不超过单肾照射的放射耐受量28Gy/8周。可采用斜野照射或楔形成角照射，或在前后相对野照射中，在后野照射时用 $2\\sim 4$ 个半价层的铅遮挡肾脏，以减少肾脏的放射剂量。 $ \\textcircled{1} $局部肿瘤照射：仅适用于病灶 $ < 10\\mathrm{cm}\\times 10\\mathrm{cm} $者。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在肝癌的诊断中，CT和MRI各自的优势是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 电子计算机体层扫描（computerized tomography，CT）CT能较准确地显示出胆管扩张的情况与梗阻的部位、范围，并可进一步较为准确地明确肿瘤的性质。与超声检查联合应用可提高胆管癌的检出率。对于肝门部胆管癌的准确率稍高于超声。近年来随着CT影像技术的进一步发展，三维螺旋CT胆道成像（SCTC）有代替PTC、ERCP检查的趋势，使得对胆管癌的诊断准确性有了进一步的提高。胆管癌CT的表现特征有： $ \\textcircled{1} $胆管癌沿胆管壁生长时，胆管壁呈不规则增厚，胆管腔变形、狭窄。 $ \\textcircled{2} $肿瘤向腔内生长时，病变所在部位胆管内可见一软组织肿块影，胆管中断，软组织肿块以肝门部胆管癌多见，胆总管下段癌因腔内肿块较小，有时CT难以显示。 $ \\textcircled{3} $增强扫描时增厚的胆管壁和软组织肿块有强化。 $ \\textcircled{4} $胆管完全阻塞时，可见梗阻部位以上部分的肝内外胆管扩张。\n\n## 5. 磁共振成像（MRI）与磁共振胆胰管成像（MRCP）、磁共振胆道成像（MRC）\n\n(1) MRI：胆管癌在MRI下可表现为门静脉干处肿块，可侵犯肝组织。 $ \\mathrm{T}_{1} $ 加权重像上可见稍低于肝组织的信号强度，境界不清的肿块， $ \\mathrm{T}_{2} $ 加权重像上可见肿瘤的信号强度增高，门静脉受压移位，肝内胆管扩张。肝门胆管癌MRI表现为肝内胆管扩张，胆总管或左右肝管起始部狭窄、充盈缺损、肝门软组织肿块。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在脑胶质瘤的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "(3) 人造瓣环移植术：人造瓣环略呈卵圆形，为避免移植后压迫房室结及其末支，人造环的直弦中断，留出间隙。用2-0无创伤双头针缝线在隔-后叶交界及隔-前叶交界处平行瓣环各缝1个褥式缝线。三尖瓣环周边的每一缝针都是从心房壁进针，穿过三尖瓣环组织的深处再出针。然后将隔-后叶交界及隔-前叶交界处的2个针线缝在人造瓣环的相对应位置上，同前法继续平行瓣环缝若干个褥式缝线。为达到缩小瓣环的目的，在瓣环上的缝针跨度要比人造瓣环上的宽。然后牵拉各缝线，将人造瓣环推送到房室瓣环上，人造瓣环的缺口应恰好朝向Koch三角的尖端，以免损伤传导束。\n\n2. 三尖瓣置换术 对于三尖瓣病变严重者，行三尖瓣置换术。\n\n### 【注意事项】\n\n同本章第一节“三尖瓣狭窄”。\n\n## 第45章 心房纤颤的外科治疗\n\n## 【适应证】\n\n1. 药物治疗无效的患者。\n\n2. 器质性心脏病合并房颤，进行心脏外科手术时，建议同期进行迷宫手术。\n\n## 【术前准备】\n\n1. 合并其他需要外科手术的心脏疾病，如冠心病、瓣膜病，术前准备见相关章节。\n\n2. 监测24h动态心电图，判断房室传导及有无窦性心律。\n\n3. 停用抗凝药物 3~5d。\n\n4. 麻醉后进行食管超声检查，明确左心房形态、大小以及有无血栓形成。\n\n## 【操作方法及程序】\n\n迷宫手术经过二次改良，1993年起迷宫Ⅲ型手术应用于临床，但迷宫手术操作复杂，费时费力，存在出血等并发症，迄今并未广泛应用。近年来，以射频、微波、冷冻等为消融房颤的能量源进行的改良迷宫消融手术取得了良好的临床疗效。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在骨肉瘤的诊断中，CT和MRI各自的优势是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td></td><td>肺功能</td><td>高危病人</td></tr><tr><td rowspan=\"4\">通气</td><td>呼吸频率(RR)</td><td>&gt;25/min</td></tr><tr><td>1s用力呼气容积(FEV1)</td><td>&lt;2.0L</td></tr><tr><td>最大通气量(MVV)</td><td>&lt;55%</td></tr><tr><td>无效腔容量/潮气量(VD/VT)</td><td>0.4~0.6</td></tr><tr><td rowspan=\"4\">气体交换</td><td>动脉氧分压(PaO2)</td><td>&lt;60mmHg</td></tr><tr><td>动脉二氧化碳分压(PaCO2)</td><td>&gt;50mmHg</td></tr><tr><td>肺泡-动脉氧分压差(A-a)DO2</td><td>&gt;200mmHg</td></tr><tr><td>分流</td><td>&gt;10%</td></tr><tr><td>循环</td><td>EKG</td><td>心肌缺血征</td></tr><tr><td>心肺储备</td><td>血红蛋白(Hb)</td><td>&gt;17g/L</td></tr><tr><td rowspan=\"2\">功能</td><td>登楼试验</td><td>1次&lt;3层</td></tr><tr><td>负荷后血气CO2</td><td>潴留或PaO2下降</td></tr></table>\n\n## 第8章 胸膜腔闭式引流术\n\n## 【适应证】\n\n1. 气胸、血胸经穿刺抽吸无效者。\n\n2. 急性脓胸需持续排脓者。\n\n3. 脓胸并发支气管胸膜瘘者。\n\n4. 胸外伤、肺及其他胸腔内"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "对于鼻咽癌，CT增强扫描的典型表现有哪些？如何解读？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. CT技术 检查前病人禁食8h以上较理想，或者至少4h以上。扫描前半小时口服1000~1500ml的水，以充盈胃肠道，这样可克服空气伪影，使肠道的肠腔和肠壁清晰显示，同时可了解肠道与其邻近结构的关系。一般腹部扫描均包括平扫和增强扫描，增强扫描几乎是必不可少的。增强扫描一般经周围静脉注射碘造影剂后，根据造影剂主要分布在动脉、门脉血管（包括静脉）和脏器实质内，分别称为动脉期、门脉期或静脉期和实质期扫描。以前常规CT受扫描速度的限制，很难在动脉期完成某一部位的扫描，常常只能在门脉或实质期完成扫描。目前螺旋CT，特别是多层螺旋CT的出现，以其扫描速度快和扫描范围大为特点，因此，可以在动脉期（包括动脉早期和晚期）、门脉期和（或）实质期分别完成整个肝脏的扫描。这样一次增强检查可以涵盖整个动脉、门脉和（或）实质期扫描，这对了解肝脏占位病灶的血供、病灶的定性及其与周围血管关系等具有十分重要的价值。针对某些特殊疾病，必要时在注射造影剂后 $3\\sim 5\\mathrm{min}$ 再作延迟扫描，以便进一步明确病灶的性质和特征等。必须强调扫描期间，病人应屏气，以避免扫描层面跳动而漏层，因此，检查前需训练病人的呼吸，要求以平静呼吸状态下的屏气，以求保持每次屏气的一致性，这一点很重要。\n\n2. MRI技术检查前仅要求病人禁食4h以上，一般情况下，不需作特殊准备，也可口服磁共振阴性类造影剂（如稀钡）。目前磁共振检查常用自旋回波（spin echo，SE）和梯度回波（gradient echo，GE）技术。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "黑色素瘤的影像学鉴别诊断中，哪些特征有助于区分良性和恶性病变？"
+        },
+        {
+          "role": "assistant",
+          "content": "7. 血管造影 对胆管癌的诊断意义不大，但可用于术前了解胆管癌对肝动脉与门静脉的侵犯情况，有利于术前对胆管癌的可切除性进行评估并进行术式的选择。发生于肝门区的肝内外胆管常侵犯邻近的血管，最常受侵犯的为肝固有动脉及其分叉部。胆管癌的血管造影可显示靠近肝门区血管不规则狭窄和卷曲变形，毛细血管期可见肿瘤内新生血管及肿瘤“染色”，瘤内新生血管为纤细的不规则血管和肿瘤相伴。\n\n对于胆管癌的影像学检查目前仍以超声检查为首选，CT等检查方式作为进一步明确诊断的手段来应用。联合使用影像学检查手段可明显提高胆管癌的术前确诊率。第三军医大学2001年探讨了206例肝门部胆管癌超声、CT、ERCP、PTC4种不同影像检查方法对肝门部胆管癌的诊断价值。结果表明，梗阻部位确诊率超声为 $91.1\\%$ ，CT为 $89.6\\%$ ，二者联合为 $97.3\\%$ 。梗阻性质确诊率超声为 $78.7\\%$ ，CT为 $72.8\\%$ ，二者联合为 $94.7\\%$ 。肿瘤显示率超声为 $60.9\\%$ ，CT为 $30.4\\%$ ，二者联合检查提高到 $80.5\\%$ 。并发症发生率ERCP和PTC分别为 $11.6\\%$ 及 $17.9\\%$ 。说明超声与CT联合检查可相互弥补不足，并明显提高了梗阻部位及梗阻性质确诊率，满足绝大多数肝门部胆管癌诊断要求。\n\n## （三）实验室检查\n\n大多患者因梗阻性黄疸可表现为血清总胆红素（TBIL）、直接胆红素（DBIL）升高。对于合并有肝功能损害的患者可检出血清间接胆红素（IBIL）也升高。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在食管癌的诊断中，CT和MRI各自的优势是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 形态：肝癌结节多呈圆形或类圆形。肿瘤较大时可呈不规则型，并可向肝表面突起呈“驼峰”征改变。根据肝癌病理形态表现可分为： $ \\textcircled{1} $结节型：肝癌相对较小，一般 $ < 5\\mathrm{cm} $ ，多为单发，亦可多发。 $ \\textcircled{2} $巨块型：肝癌较大，常在 10cm 左右，内部回声多不均质，以高低回声混合者居多，低回声者很少。 $ \\textcircled{3} $弥漫型：即肝内弥漫散在的细小肝癌结节，大小可数毫米至数厘米，内部回声强弱不等，分布\n\n零乱，可呈斑块灶，无明确边界。如弥漫分布于整个肝脏，则很难与肝硬化鉴别，但此类病人常有门静脉癌栓形成，为诊断弥漫型肝癌提供了佐证。\n\n(2) 边界：肝癌有明显的假包膜形成时，边界往往较清晰而规则，周围可见晕圈，常出现于 2~5cm的小肝癌中，为小肝癌的特征性表现。如肿瘤无明显包膜或呈浸润性生长时，边界多不规则，甚至模糊不清；而在弥漫性肝癌时，则无明确边界。\n\n(3) 大小：超声能发现直径从数毫米至数十厘米不等的肝癌，其检出率主要受以下几方面影响： $ \\textcircled{1} $肿瘤大小； $ \\textcircled{2} $肿瘤内部回声； $ \\textcircled{3} $肝硬化程度； $ \\textcircled{4} $肿瘤的位置； $ \\textcircled{5} $肿瘤包膜； $ \\textcircled{6} $操作人员经验。通常B超对 $ > 2 \\mathrm{c m} $的肝癌较易检出，而术中B超有可能发现5mm左右的小肝癌。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在卵巢癌的术后随访中，CT和MRI的使用频率和指征有何不同？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. 钙通道阻滞药。对于不能耐受 $ \\beta $受体阻滞药治疗或 $ \\beta $受体阻滞药治疗无效的患者，钙通道阻滞药可以缓解症状。维拉帕米可以改善心室充盈，减少心肌缺血，缓解症状。但对于左心室流出道重度狭窄的患者，应该慎用。主要是由于其扩血管作用可导致严重的血流动力学紊乱，造成体循环血压下降。硫氮唑酮通过提高左心室舒张功能缓解症状。研究表明 $ \\beta $受体阻滞药和钙通道阻滞药仅能缓解 HOCM的症状，对预防猝死并无良效。\n\n4. 乙胺碘呋酮。可以减少心率失常的发生，进一步减少猝死。合并房颤时，可以有效控制心室率。在负荷剂量后，维持剂量在每日 200～400mg。服用期间要注意其副作用。\n\n5. 伴有严重心衰的患者，在应用 $ \\beta $受体阻滞药和钙通道阻滞药的基础上，适当加用利尿药可以有效缓解心衰症状。但过量应用利尿药，造成体循环容量下降，左心室充盈不全，会进一步加重左心室流出道梗阻。\n\n6. 术中需要食管超声监测，评价术终左心室流出道梗阻和二尖瓣SAM征的解除程度。\n\n7. 室间隔中部肥厚的患者以及二尖瓣关闭不全矫正不满意时，或瓣膜病变严重以及操作引起二尖瓣、主动脉瓣损伤，难以修复，需进行瓣膜替换。手术可能损\n\n![](page=0,bbox=[1387, 136, 1425, 173])\n\n伤传导束导致三度房室传导阻滞。术前需向患者说明瓣膜替换和安装永久起搏器的可能。\n\n## 【操作方法及程序】\n\n经主动脉切口进行室间隔开槽，切除部分室间隔，疏通左心室流出道。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在膀胱癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 操作程序及方法：检查时受试者口含阻断阀上的咬口作安静自然呼吸。在平静呼气末(FRC位)阻断气道，并给予单次颤搐性刺激，记录诱发的Pdi即为诱发跨膈压(Pdi,t)。刺激方法可采用电或磁波刺激。电刺激采用经皮无创刺激法。把左右两个阳极（参照电极）用粘贴电极置于上胸部（常选用胸锁关节处）；而两个阴极（刺激电极）用柱状金属电极，在胸锁乳突肌后缘，锁骨上方 $4\\mathrm{cm}$ 附近往内轻压刺激膈神经。根据刺激的效果，在局部调整位置及选用不同直径的电极（ $2\\sim 10$ mm，常用 $6\\mathrm{mm}$），以保证对膈神经的刺激效果，又不会引起明显的颈部肌肉收缩为标准。\n\n磁波刺激可以采用颈前部（部位同电刺激）、颈背部或胸前（胸骨上段）刺激法。颈背部刺激时，受试者的头部尽量前屈，使第七颈椎充分后凸，将刺激线圈的中央孔对准第7颈椎，紧贴颈背部，在平静呼气末给予刺激。用体表电极法（第6、7肋\n\n![](page=0,bbox=[1414, 115, 1449, 149])\n\n间前端距肋缘上下各1cm处）记录诱发的膈肌动作电位（action potential，AP）。观察显示器上诱发的AP输出来判断刺激的效果和刺激量的恒定。电刺激强度通常用 $20\\mathrm{mA}$ （电流型），每次放电时间为 $0.1\\sim 0.2\\mathrm{ms}$ ；磁波刺激用 $100\\%$ 的强度（即 $2.0\\sim 2.5\\mathrm{Tesla}$ ，放电持续时间 $50\\mu s$）。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "请对比增强CT和MRI在甲状腺癌分期中的准确性。"
+        },
+        {
+          "role": "assistant",
+          "content": "1986年Perelman和Cooper等介绍了肺癌外科治疗的一种肿瘤切除术。这一术式主要用于肿瘤位置较深，不适于做楔形切除或肺段切除，肺功能也不允许做肺叶切除时。其技术要点是在肺膨胀状态下，用电灼或激光的方法，把肿瘤连同周围2cm的正常组织一起切除，位置特深的要解剖和结扎相应的动脉和支气管。缺损的肺泡空间利用电灼或激光封闭，粗糙的肺表面可缝闭或暴露之，不做处理。目前尚没有有关这一术式生存结果的报道，但从理论上推测，可把其归入妥协性手术一类看待。\n\n5. 纵隔淋巴结的切除和病理学检查至少应包括4站6个淋巴结，特别是第 4组和第7组淋巴结。\n\n对肺癌纵隔淋巴结切除术有两种意见，一是仅切除可疑转移的淋巴结即可，称为纵隔淋巴结采样术（mediastinal lymphnode sampling）；一是系统的纵隔淋巴结切除术（systematic mediastinal lymphadenectomy），术中应将纵隔淋巴结连同周围的脂肪组织一并切除。根据 Mountain 1997年修改的肺淋巴结分布图（见图3-1-1），右侧肺癌应将1～4组和7～9组的纵隔淋巴结切除，左侧肺癌由于主动脉弓的关系，至少应将4～9组的纵隔淋巴结切除。不管是采样术还是清扫术，纵隔淋巴结的切除和病理学检查至少应包括4站6个淋巴结，特别是第4组和第7组淋巴结。\n\n吴一龙等的随机对照研究，将532例肺癌病人随机分为系统性纵隔淋巴结清扫术和纵隔淋巴结采样术，清扫组将气管支气管周围纵隔内的淋巴结连同脂肪组织作整块切除，采样组仅对肉眼有可疑转移的淋巴结切除。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在肾癌的术后随访中，CT和MRI的使用频率和指征有何不同？"
+        },
+        {
+          "role": "assistant",
+          "content": "8. 胆囊癌 近年来有逐渐增多趋势，早期发现仍比较困难。在发现肝右叶癌肿且无肝硬化时，应仔细观察胆囊的情况，这类病人的胆囊因受压而变小，部分胆囊壁可不规则增厚而与右叶癌肿相连，甚至在胆囊癌实变时，可与右叶癌肿\n\n融合成一团块，多伴有结石，有助于鉴别诊断。\n\n9. 肝母细胞瘤声像图上显示肝内有一巨大团块，多强弱不均，并有液化和包膜，多位于肝右叶，常推移右肾，超声无特异性表现，应结合临床作出诊断。\n\n## 四、CT和MRI诊断\n\n计算机断层扫描（computed tomography，CT）和磁共振成像（magnetic resonance imaging，MRI）是目前肝脏病变影像诊断最主要的无创性检查技术，随着技术的不断发展和创新，CT和MRI机已发展成为多螺旋CT（16～32层/周扫描）与高场强超快速MRI机，扫描速度、密度和空间分辨率均明显提高，因此二者在肝脏疾病中具有很高诊断的敏感性和特异性，已在临床实践中得到广泛的应用。在肝癌的诊断中，特别是小肝癌（ $ \\leqslant 3.0\\mathrm{cm} $ ）和微小肝癌（ $ \\leqslant 1.0\\mathrm{cm} $ ）的检出和定性、治疗方案制定以及随访等是不可或缺的影像诊断技术。\n\n## （一）CT和MRI技术\n\n1. CT技术 检查前病人禁食8h以上较理想，或者至少4h以上。扫描前半小时口服1000~1500ml的水，以充盈胃肠道，这样可克服空气伪影，使肠道的肠腔和肠壁清晰显示，同时可了解肠道与其邻近结构的关系。一般腹部扫描均包括平扫和增强扫描，增强扫描几乎是必不可少的。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "对于胃癌患者，选择CT还是MRI作为首选影像学检查的依据是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 肝海绵状血管瘤：为肝内最常见的良性肿瘤，可单发，也可多发，大小数毫米至十几厘米不等。CT平扫为低密度，无包膜，边缘常清晰，单凭平扫与无包膜的小肝癌较难区分。在MRI SE序列 $ \\mathrm{T}_{1}\\mathrm{W} $像上为低信号， $ \\mathrm{T}_{2}\\mathrm{W} $像上，随着磁共振回波时间的不断延长，其信号也相应越来越高，似“电灯泡”随着功率瓦数的提高，则其亮度也越亮，这是肝海绵状血管瘤有别于其他肝肿瘤的特征之一。\n\n增强扫描无论CT还是MRI均具特征性，增强扫描动脉期，病灶边缘出现结节或点状的高密度或高信号强化区，类似于主动脉强化，随着时间推移，病灶增强的范围不断向中心扩展，在门脉期或（和）延迟期，病灶仍呈高密度或高信号。\n\n个别<1.0cm的血管瘤，动脉期扫描可类似小肝细胞癌的强化，区别的关键，血管瘤在门脉期或延迟期仍呈均匀的高密度/高信号的增强，而小肝细胞癌往往呈低密度/低信号，可资鉴别。\n\n有时血管瘤（常 $>5\\mathrm{cm}$ ）的中央，平扫CT见不规则更低密度的纤维瘢痕区和钙化影，MRI $ \\mathrm{T}_{1}\\mathrm{W} $和 $ \\mathrm{T}_{2}\\mathrm{W} $像上基本均为低信号，或 $ \\mathrm{T}_{2}\\mathrm{W} $像上稍高信号区。该纤维瘢痕区在增强CT和MRI上均无强化。\n\n(2) 肝腺瘤：国外文献报道较多，常好发于服用避孕药的中年妇女，国内少见。实际上，该肿瘤与分化好的肝细胞癌病理上鉴别有一定的难度。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "对于乳腺癌，CT增强扫描的典型表现有哪些？如何解读？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>分期</td><td>肿瘤大小</td><td>淋巴结转移</td><td>远处转移</td></tr><tr><td>I期</td><td>T1a</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"2\">II期</td><td>T1a</td><td>N1</td><td>M0</td></tr><tr><td>T1b</td><td>N0,N1</td><td>M0</td></tr><tr><td rowspan=\"2\">III期</td><td>T1a,T1b</td><td>N2</td><td>M0</td></tr><tr><td>T2</td><td>N0,N1</td><td>M0</td></tr><tr><td rowspan=\"3\">IVa期</td><td>T1a,T1b</td><td>N3</td><td>M0</td></tr><tr><td>T2</td><td>N2</td><td>M0</td></tr><tr><td>T3</td><td>N0,N1</td><td>M0</td></tr><tr><td rowspan=\"3\">IVb期</td><td>T2</td><td>N3</td><td>M0</td></tr><tr><td>T3</td><td>N2,N3</td><td>M0</td></tr><tr><td>任何T</td><td>任何N</td><td>M1</td></tr></table>\n\nN一一淋巴结转移。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "MRI在肾癌的软组织侵犯评估中相比CT有哪些优势？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. MR表现鼻咽肿瘤在 $ \\mathrm{T}_{1} $加权像呈中等、较低信号， $ \\mathrm{T}_{2} $加权像信号增高；注射造影剂后可见病灶实质部分强化。颅底骨质受累，表现为正常高信号的骨髓脂肪在 $ \\mathrm{T}_{1} $加权像为中、低信号的肿瘤所取代。肿瘤咽旁侵犯，表现为咽旁间隙正常高信号的脂肪变窄、消失，低信号的肌肉为较高信号的肿瘤取代。MR有较好的软组织分辨率和多方位成像优点，与CT相比较，MR有以下特点： $ \\textcircled{1} $MR对肿瘤信号改变较为敏感（尤其是 $ \\mathrm{T}_{2} $加权像），可发现较小病灶，能清晰地显示肿瘤的部位、大小、范围、浸润深度；可准确地区分肿瘤组织和淋巴结，特别是肿瘤侵犯咽旁和咽旁、咽后淋巴结的鉴别，临床分期更为准确。 $ \\textcircled{2} $能较好地评判鼻咽癌放疗后的情况，如局部复发或纤维变。放疗后纤维变在 $ \\mathrm{T}_{1} $和 $ \\mathrm{T}_{2} $加权像均呈低信号，而复发肿瘤于 $ \\mathrm{T}_{2} $加权像呈高信号，注射造影剂后见病灶强化。 $ \\textcircled{3} $MR更准确地显示放射性脑脊髓损伤的部位及范围。病灶在 $ \\mathrm{T}_{1} $加权像呈低信号， $ \\mathrm{T}_{2} $加权像呈高信号，形态不规则，可坏死囊性变。 $ \\textcircled{4} $能较好显示颅神经、脑膜以及颅内受侵情况。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在肝癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "闭合原发孔房缺。将涤纶片或用 $0.6\\%$ 的戊二醛浸泡 $30\\mathrm{min}$ 的自体心包片剪成“D”形，补片的直边与二尖瓣环、三尖瓣环缝合。用5-0或4-0无创伤双头针线从间隔嵴上瓣环的中点开始向2个方向连续缝合。为了避免损伤传导系统，缝补片时有2种缝法：$\\textcircled{1}$在室间隔嵴上多缝三尖瓣叶根部组织，少缝二尖瓣叶。当缝针邻近“危险区”时绕开二尖瓣环及冠状静脉窦，使缝线远离危险区，并将冠状静脉窦隔到左心房一边，术后冠脉回流将不受右心房压力的影响。缺损完全闭合前，按常规排尽左心内的气体后，将缝线打结。连续缝法固定补片，一般用于小儿及婴幼儿；$\\textcircled{2}$儿童或年轻患者，采用部分间断褥式和连续缝法固定房缺的补片。第1个褥式缝线用4-0或5-0带小垫片无创伤双头针线，在二尖瓣环与三尖瓣环会汇处缝在二尖瓣根部组织上，为了避免损伤传导系统，将第1个褥式缝针越过2个瓣环汇合处，缝在三尖瓣根部，然后顺时针方向在左心房侧壁上再缝几个褥式，并逐步缝向缺损下缘，各褥式针线穿过补片并打结后，利用两端的褥式缝针线连续缝法，将补片与缺损边缘完全缝合。按常规于左心排气后开放升主动脉阻断钳，在心脏复跳及并行循环下，经右心房切口，观察三尖瓣对合情况。一般三尖瓣不需再做任何处置。右心房切口用4-0无创伤缝线按常规方法闭合。\n\n## 【手术结果】\n\n部分性心内膜垫缺损手术的结果与单纯的房间隔缺损类似。影响手术效果的主要原因是二尖瓣反流的纠正情况。\n\n## 【并发症】\n\n1. 残余分流。\n\n2. 房室传导阻滞。\n\n3. 二尖瓣关闭不全。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在前列腺癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. MR扫描技术 采用头部表面线圈，病人取仰卧位，以平行听眦线作横断面扫描，平行脑干长轴作矢状面扫描，垂直颅底作冠状面扫描。横断面扫描，上缘包括蝶鞍，下缘包至口咽，扫描层厚 $3\\sim 6\\mathrm{mm}$ 。常用自旋回波序列， $\\mathrm{T}_{1}$ 加权及 $\\mathrm{T}_{2}$ 加权扫描。增强扫描：静脉注射顺磁性造影剂，如马根维显（magnevist），浓度 $0.5\\mathrm{mol / L}$ ，按 $0.1\\mathrm{mmol / kg}$ 给药，行横断面 $\\mathrm{T}_{1}$ 加权扫描。\n\n2. MR表现鼻咽肿瘤在 $ \\mathrm{T}_{1} $加权像呈中等、较低信号， $ \\mathrm{T}_{2} $加权像信号增高；注射造影剂后可见病灶实质部分强化。颅底骨质受累，表现为正常高信号的骨髓脂肪在 $ \\mathrm{T}_{1} $加权像为中、低信号的肿瘤所取代。肿瘤咽旁侵犯，表现为咽旁间隙正常高信号的脂肪变窄、消失，低信号的肌肉为较高信号的肿瘤取代。MR有较好的软组织分辨率和多方位成像优点，与CT相比较，MR有以下特点： $ \\textcircled{1} $MR对肿瘤信号改变较为敏感（尤其是 $ \\mathrm{T}_{2} $加权像），可发现较小病灶，能清晰地显示肿瘤的部位、大小、范围、浸润深度；可准确地区分肿瘤组织和淋巴结，特别是肿瘤侵犯咽旁和咽旁、咽后淋巴结的鉴别，临床分期更为准确。 $ \\textcircled{2} $能较好地评判鼻咽癌放疗后的情况，如局部复发或纤维变。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在乳腺癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "20世纪70年代末80年代初，微波技术最初应用于临床是以辅助外科手术的方式出现，微波刀主要用于各种术中止血或为肿瘤切除设定安全的凝固边界。20世纪90年代发展起来的经皮微波凝固治疗肝癌技术则与之截然不同，它将传统的微波技术赋予了新的生命，实现了经皮穿刺导入微波电极直接凝固治疗肝肿瘤。为发展这项技术，自20世纪90年代初国内外学者几乎同时开展了大量的研究。1994年，日本学者Seki等报道了超声引导经皮穿刺微波凝固治疗小肝癌（直径 $ \\leqslant 2\\mathrm{cm} $ ）获得成功。1996年董宝玮等对辐射电极进行了改进，使电极的组织匹配性、抗粘性、耐高温性及机械强度等技术指标大大改善。该技术单电极，在功率为60W作用时间为300s条件下，可形成稳定的 $ 3.7\\mathrm{cm}\\times 2.6\\mathrm{cm}\\times 2.6\\mathrm{cm} $ 的凝固体，多电极（2～4支）可形成直径6cm的凝固体，并且可调控有效高温区的形状，实现了对5cm以内肝癌的适形凝固灭活。作者报道用该方法治疗234例339个结节，这些病人大部分因种种情况不宜手术切除。微波治疗结果，肿瘤完全坏死率达 $ 92\\% $ ，随访最长达7年零7个月，其1、3、5年累积生存率分别为 $ 92.2\\% $ 、 $ 72.2\\% $ 以及 $ 56.7\\% $ ，取得了堪与根治性治疗相媲美的疗效。此外，日本学者Seki、我国学者吕明德等的报道，其基本结论与作者上述是一致的。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "对于口腔癌患者，选择CT还是MRI作为首选影像学检查的依据是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(5) 不典型增生结节（DN）：也称腺瘤样增生。目前比较一致认为是肝硬化再生结节与HCC的中间过渡期的结节改变。最大直径一般在 $0.8\\sim 2\\mathrm{cm}$ 范围内，很少超过 $3\\mathrm{cm}$ ，病理上进一步可分为低度DN和高度DN，同时高度DN中可含有极明显的HCC区域，称之为“灶中灶”。DN与HCC的鉴别，更多视其血供情况，即动脉期强化不明显，而门脉期强化明显，则倾向DN诊断，反之，则考虑HCC。同时， $\\mathrm{T}_{1}\\mathrm{WI}$ 上常呈稍高信号而 $\\mathrm{T}_{2}\\mathrm{WI}$ 上呈等信号或稍低信号，倾向DN诊断。但是有研究认为，小HCC与DN的磁共振信号有交叉重叠，并无特异性，有待今后作更多研究。\n\n## 4. 其他常见病变\n\n(1) 肝脓肿：肝脓肿的早期，有时与肝细胞癌鉴别困难，必须结合临床表现和实验室检查结果，进行综合判断，对于疑难病例，必要时可穿刺活检或积极抗炎后短期随访。对于脓肿形成期，CT平扫病灶为混合性低密度，边缘模糊；SE序列 $ \\mathrm{T}_{1}\\mathrm{W} $像上病灶中心为低信号， $ \\mathrm{T}_{2}\\mathrm{W} $像上病灶呈高信号。增强扫描CT和MRI较具特征性，可见脓肿呈同心圆状的“靶征”，即由中央无强化的坏死液化区、强化壁和壁周的环状水肿带组成；或者增强扫描图上病灶呈“蜂窝状”改变也颇具特征性。在CT图上，病灶内偶尔见到气体影，也有助于肝脓肿的诊断。此外，肝脓肿常伴有同侧胸腔少量液体。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "超声检查在肾癌的初步筛查中有何价值？与CT相比有何优劣？"
+        },
+        {
+          "role": "assistant",
+          "content": "(2) 肝硬化：肝硬化是以假小叶形成及广泛纤维结缔组织增生为特征的一类慢性肝病，病因甚多，国内以乙型、丙型肝炎为主要原因。CT和MRI表现为肝体积缩小，肝各叶比例大小失调，肝裂增宽和肝门区扩大。肝再生结节增生明显者，CT平扫见肝脏呈高低密度相间的结节状改变，动脉期增强扫描结节病灶无强化，门脉期扫描，结节消失，整个肝脏呈均匀一致的密度。肝脏再生结节在MRI上颇具特征性，即在SE序列上 $ \\mathrm{T}_{1}\\mathrm{W} $像上为稍高信号，而 $ \\mathrm{T}_{2}\\mathrm{W} $像上反呈低信号。GRE序列动态增强扫描类似于CT表现。此外，肝硬化的继发性的改变，包括脾肿大、腹水、门脉高压和侧支循环形成等，CT、MRI（包括CTA和MRA）可提供许多信息。\n\n(3) 脂肪肝：脂肪肝累及的部位，CT平扫密度降低，并且在密度降低的部位可见清晰的正常肝血管影，脂肪肝的增强方式与正常肝脏一致，但仍保持相对低密度。MRI上脂肪肝在SE序列 $ \\mathrm{T}_{1}\\mathrm{W} $和 $ \\mathrm{T}_{2}\\mathrm{W} $像可呈相对高信号。如果增加抑脂肪技术，则受累肝脏可为低信号，则更有利于脂肪肝的确诊。需要注意的是，\n\n当部分正常肝组织呈球状存在于脂肪肝中时，影像学上称之“肝岛”，超声常误为占位，而CT和MRI却不会误诊，关键表现为：增强扫描时，其变化规律与已经脂肪化肝组织的强化基本一致。\n\n(4) 血红蛋白沉着症：以铁质在体内长期过量蓄积为特征，可分为原发和继发两种类型。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在卵巢癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 肝细胞癌（hepatocellular carcinoma，HCC）：CT平扫，肝癌病灶常呈相对低密度影，边缘规则或不规则，有时病灶边缘可见更低密度的环状假包膜，这对诊断肝癌颇具特征性。大部分HCC，尤其小肝癌为富血供病灶——主要由肝动脉供血，增强扫描动脉期（主要动脉晚期），肿瘤强化十分明显，呈高密度，门脉期扫描肿瘤反呈低密度，这种“速升速降”的增强形式是肝癌CT诊断的特点。但是必须指出，不符合该规律，也不能完全否定HCC的诊断，特别是大肝癌，该\n\n特征并不明显。因为肿瘤的强化形式和程度受多种因素的影响，如扫描的时相、动脉供血的多寡、门脉参与供血、肿瘤出血坏死、肿瘤的生长方式（如外生型肝癌）、肿瘤的病理分型和恶性程度等，因此尚需结合其他征象和临床与实验室检查，综合作出诊断。\n\nMRI检查SE序列， $ \\mathrm{T}_{1}\\mathrm{W} $像上常呈低信号， $ \\mathrm{T}_{2}\\mathrm{W} $像呈稍高信号，MRI上发现肝癌假包膜的概率较CT为高，在 $ \\mathrm{T}_{1}\\mathrm{W} $和 $ \\mathrm{T}_{2}\\mathrm{W} $像上常为低信号的环状影，GRE序列动态增强扫描，肝癌的MRI表现类似CT增强，即动脉期强化明显呈高信号，门脉期扫描呈低信号。\n\n肝癌，特别大肝癌和浸润性肝癌易侵犯门静脉和肝静脉系统，也常可引起门静脉和（或）肝静脉乃至下腔静脉的癌栓。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "MRI在食管癌的软组织侵犯评估中相比CT有哪些优势？"
+        },
+        {
+          "role": "assistant",
+          "content": "(2) 肝腺瘤：国外文献报道较多，常好发于服用避孕药的中年妇女，国内少见。实际上，该肿瘤与分化好的肝细胞癌病理上鉴别有一定的难度。CT平扫常常呈低密度圆形影，肿瘤坏死少见，因此，肿瘤密度常较均匀，如果存在出血，可呈稍高密度影，也可呈更低密度的影，主要取决于出血的时间。肿瘤包膜常较明显，类似HCC的假包膜。CT增强扫描动脉期，肿瘤呈明显的高密度均匀强化，强化程度可基本同主动脉的强化，门脉期扫描，肿瘤病灶呈等密度或稍高密度改变，这一点区别于HCC。MRI表现具有多样性， $ \\mathrm{T}_{1}\\mathrm{WI} $上大部分均呈低信号，也可呈高信号和等信号； $ \\mathrm{T}_{2}\\mathrm{WI} $上多为稍高信号，少数为等信号和低信号。如果肿瘤内合并出血，则无论 $ \\mathrm{T}_{1}\\mathrm{WI} $还是 $ \\mathrm{T}_{2}\\mathrm{WI} $，其常呈混合信号。增强方式基本同CT表现，但在包膜显示上，MRI常较CT敏感。此外，有文献报道，糖原累积综合征患者常可合并肝腺瘤。\n\n(3) 血管平滑肌脂肪瘤：血管平滑肌脂肪瘤临床上并非少见，可发生于任何年龄，多见于女性成人。其组织学特点为成熟脂肪组织、平滑肌细胞和迂曲厚壁血管3种成分不同比例混杂。有明显脂肪组织者，肿瘤呈混合密度，形态可圆形或类圆形，边缘较清晰，在CT和MRI上可见脂肪密度或信号，则可明确诊断，甚至不用增强扫描即可确诊。\n\n对少脂肪组织或脂肪组织不明显者，有时CT和MRI明确诊断较困难，只能提供诊断参考。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在食管癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "融合成一团块，多伴有结石，有助于鉴别诊断。\n\n9. 肝母细胞瘤声像图上显示肝内有一巨大团块，多强弱不均，并有液化和包膜，多位于肝右叶，常推移右肾，超声无特异性表现，应结合临床作出诊断。\n\n## 四、CT和MRI诊断\n\n计算机断层扫描（computed tomography，CT）和磁共振成像（magnetic resonance imaging，MRI）是目前肝脏病变影像诊断最主要的无创性检查技术，随着技术的不断发展和创新，CT和MRI机已发展成为多螺旋CT（16～32层/周扫描）与高场强超快速MRI机，扫描速度、密度和空间分辨率均明显提高，因此二者在肝脏疾病中具有很高诊断的敏感性和特异性，已在临床实践中得到广泛的应用。在肝癌的诊断中，特别是小肝癌（ $ \\leqslant 3.0\\mathrm{cm} $ ）和微小肝癌（ $ \\leqslant 1.0\\mathrm{cm} $ ）的检出和定性、治疗方案制定以及随访等是不可或缺的影像诊断技术。\n\n## （一）CT和MRI技术\n\n1. CT技术 检查前病人禁食8h以上较理想，或者至少4h以上。扫描前半小时口服1000~1500ml的水，以充盈胃肠道，这样可克服空气伪影，使肠道的肠腔和肠壁清晰显示，同时可了解肠道与其邻近结构的关系。一般腹部扫描均包括平扫和增强扫描，增强扫描几乎是必不可少的。增强扫描一般经周围静脉注射碘造影剂后，根据造影剂主要分布在动脉、门脉血管（包括静脉）和脏器实质内，分别称为动脉期、门脉期或静脉期和实质期扫描。以前常规CT受扫描速度的限制，很难在动脉期完成某一部位的扫描，常常只能在门脉或实质期完成扫描。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "请对比CT和MRI在检测卵巢癌淋巴结转移中的敏感性和特异性。"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>报告人(年份)</td><td>手术例数</td><td>5年生存率</td></tr><tr><td>黄孝迈,等(1987)</td><td>765</td><td>33.6%</td></tr><tr><td>廖美琳,等(1988)</td><td>2636</td><td>40.6%</td></tr><tr><td>丁嘉安,等(1988)</td><td>2048</td><td>31.8%</td></tr><tr><td>裴广廷,等(1991)</td><td>1336</td><td>33.4%</td></tr><tr><td>李世业,等(1992)</td><td>3568</td><td>34.6%</td></tr><tr><td>张汝刚,等(1993)</td><td>2025</td><td>40.8%</td></tr><tr><td>吴一龙,等(1999)</td><td>1757</td><td>39.8%</td></tr><tr><td>方德康,等(1999)</td><td>1471</td><td>42.4%</td></tr></table>\n\n注：修改自孙燕等.内科肿瘤学.人民卫生出版社，2001,P658\n\n## （二）根据手术的彻底程度和性质，肺癌的手术可分为完全性切除、不完全性切除和剖胸探查3种\n\n完全性切除(completely resection)指的是将肺原发癌及其转移淋巴结完全切除干净，无肉眼或显微镜下癌残留的手术；不完全性切除(incompletely resection)指的是大部分病灶已被切除，但有肉眼或显微镜下癌残留的手术，有的学者还认为，最高纵隔淋巴结一旦证实为癌转移，不管该淋巴结是否切除，这样的\n\n肺癌手术应列为不完全性切除。剖胸探查术(explore"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在胃癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "对于胆管癌的影像学检查目前仍以超声检查为首选，CT等检查方式作为进一步明确诊断的手段来应用。联合使用影像学检查手段可明显提高胆管癌的术前确诊率。第三军医大学2001年探讨了206例肝门部胆管癌超声、CT、ERCP、PTC4种不同影像检查方法对肝门部胆管癌的诊断价值。结果表明，梗阻部位确诊率超声为 $91.1\\%$ ，CT为 $89.6\\%$ ，二者联合为 $97.3\\%$ 。梗阻性质确诊率超声为 $78.7\\%$ ，CT为 $72.8\\%$ ，二者联合为 $94.7\\%$ 。肿瘤显示率超声为 $60.9\\%$ ，CT为 $30.4\\%$ ，二者联合检查提高到 $80.5\\%$ 。并发症发生率ERCP和PTC分别为 $11.6\\%$ 及 $17.9\\%$ 。说明超声与CT联合检查可相互弥补不足，并明显提高了梗阻部位及梗阻性质确诊率，满足绝大多数肝门部胆管癌诊断要求。\n\n## （三）实验室检查\n\n大多患者因梗阻性黄疸可表现为血清总胆红素（TBIL）、直接胆红素（DBIL）升高。对于合并有肝功能损害的患者可检出血清间接胆红素（IBIL）也升高。标志胆管上皮细胞损伤的碱性磷酸酶（AKP）和 $\\gamma$ -谷胺酰转移酶（ $\\gamma$ -GT）均显著升高，大多患者可合并有肝细胞不同程度受损，表现为丙氨酸氨基转移酶（ALT）和天门冬酸氨基转移酶（AST）的相应升高。但ALT和AST一般只出现轻度异常，这种胆红素与转氨酶升高的不平衡现象有助于与病毒性肝炎相鉴别。但对于梗阻性黄疸时间较长、合并感染、肝功能损害严重的患者则可有转氨酶的明显升高。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在黑色素瘤的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. MRI技术检查前仅要求病人禁食4h以上，一般情况下，不需作特殊准备，也可口服磁共振阴性类造影剂（如稀钡）。目前磁共振检查常用自旋回波（spin echo，SE）和梯度回波（gradient echo，GE）技术。肝脏检查常规采用SE序列的 $ \\mathrm{T}_{1} $加权（ $ \\mathrm{T}_{1}\\mathrm{W} $ ）和 $ \\mathrm{T}_{2} $ 加权（ $ \\mathrm{T}_{2}\\mathrm{W} $ ）横断位像。MRI不同于CT，必要时尚可作冠状位、矢状位和任意切面的扫描，这对确定巨大占位病灶的起源部位以及与周围血管结构间关系的显示均十分重要。肝脏MRI检查现在更强调和注重增\n\n强扫描，增强扫描常规经周围静脉注射磁共振造影剂（钆喷酸葡胺，Gd-DTPA）后，可行SE序列的 $ \\mathrm{T}_{1}\\mathrm{W} $扫描，或者GE序列的快速扫描。由于SE序列扫描时间相对较长，不能完全显示病灶真正的血供情况，因而，不利于病灶的定性，甚至不利于发现病灶。GE序列扫描速度快，特别是最新高强场、高梯度场、高切换率和多通道采样的机型能够和螺旋CT一样，注射Gd-DTPA后，分别在动脉、门脉和脏器实质期完成扫描，同时根据临床病情需要，可作横断位或冠状位的增强扫描。所以，目前大家公认采用GE序列快速动态增强扫描，更有利于发现肝脏病灶和病灶的定性。以及了解病灶与周围结构的空间关系。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "PET-CT在喉癌的远处转移评估中扮演什么角色？"
+        },
+        {
+          "role": "assistant",
+          "content": "肝癌，特别大肝癌和浸润性肝癌易侵犯门静脉和肝静脉系统，也常可引起门静脉和（或）肝静脉乃至下腔静脉的癌栓。肝癌易发生血行转移，如肺转移和骨转移较常见；肝癌出现淋巴结转移较少见，仅占 $10\\% \\sim 20\\%$ ，主要为肝门、胰头周围和后腹膜的淋巴结肿大。肝癌侵犯肝包膜可出现“肝包膜凹陷征”或称“肝包膜收缩征”，对鉴别诊断有一定价值。另外还可引起破裂出血，临床呈急腹症，当CT和MRI发现肝包膜下出血时，如果能够排除外伤和血液系统疾病，则常常是肝癌所致的肝包膜下出血；肝包膜下出血常可掩盖肿瘤病灶本身，不易在CT和MRI图像上发现，应引起影像学和临床医师的重视。如果在CT和MRI动脉期扫描上能够发现肝动脉与门静脉存在异常交通的直接或间接征象，或者见异常肿瘤血管滋养病灶，则对诊断肝细胞癌有意义。肝癌伴有肉眼可见的胆管内癌栓较罕见，根据我院肝癌研究所资料仅为 $0.76\\%$ ；其次肝癌侵犯肝内或肝门区的胆管引起胆管的扩张也较为少见。\n\n总之，MRI较单螺旋CT发现肝癌灶的敏感性和特异性稍高，与多螺旋CT相仿。因此，两种方法互为补充和印证，从而能够提高肝癌的发现率和诊断的准确率。\n\n(2) 转移性肝癌：转移性肝癌可为单发或多发，胃肠道恶性肿瘤的转移最常见，其次是肺癌、乳癌、胰腺癌、胆囊癌、卵巢癌、肾癌、甲状腺癌和鼻咽癌等。CT平扫常呈低密度，偶见病灶中心点状稍高钙化或粘液影，对诊断转移性肝癌有极大帮助。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "结直肠癌的影像学鉴别诊断中，哪些特征有助于区分良性和恶性病变？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. 胆囊癌与胆囊息肉 早期胆囊癌与胆囊息肉不易鉴别，大多胆囊息肉为胆固醇性息肉，其他还有炎性息肉和腺肌性增生症。影像学检查发现广基、单个、直径>8mm、生长迅速的息肉，应考虑到胆囊癌的可能性。若患者为60岁以上的女性、合并有胆囊结石者，更应疑及胆囊癌。对于此类患者应积极考虑手术治疗，并在术中行病理检查以明确诊断。\n\n3. 胆囊癌与急性胆囊炎 约 1%的胆囊癌患者以急性胆囊炎为首发表现，其发病机制主要是由于胆囊癌伴发的胆囊结石在胆囊颈部形成嵌顿，或位于胆囊颈部的肿瘤阻塞胆囊管而引起急性胆囊炎的发生。此时需注意与单纯的急性胆囊炎相鉴别，B超和CT检查可发现胆囊内肿块或胆囊壁局部增厚，以及邻近器官受侵犯的情况。但对于急性化脓性胆囊炎和坏疽性胆囊炎，影像学检查可能显示不清。对于此类情况还需依赖于术中观察和病理检查的结果来明确诊断。\n\n4. 胆囊癌与黄色肉芽肿性胆囊炎（xanthogranulomatous cholecystitis, XGC）XGC是一种特殊类型的慢性胆囊炎症。由于该疾病可以形成类似恶性肿瘤的局部浸润，胆囊的轮廓不清、变形，胆囊腔缩窄、穿孔，甚至瘘管形成。从而使得该疾病在影像学、手术中、病理上都容易误诊为胆囊癌。故需在胆囊癌的诊断中加以注意。XGC的发病机制是由于炎症和阻塞的共同作用使胆囊壁的Rokitansky-Aschoff窦的粘膜发生溃疡或破裂。胆汁渗入胆囊壁内，致胆囊壁的单核巨噬细胞浸润并增生。胆汁中的脂质和胆固醇被单核巨噬细胞吞噬而形成泡沫细胞和多核巨细胞，并聚集形成肉芽肿性病变。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "超声检查在宫颈癌的初步筛查中有何价值？与CT相比有何优劣？"
+        },
+        {
+          "role": "assistant",
+          "content": "其中，BRAHMS PCT-Q是一种用于半定量检测PCT谱的检测法，是目前临床最常用的PCT检测方法。此方法可排除交叉反应，提高特异性，同时也有很高的灵敏度（ $ 0.1 \\mu\\mathrm{g} / \\mathrm{L} $）。是只需要 $ 30\\mathrm{min} $的检测系统，既不依赖仪器，又不需要校准。该测定是利用一个标记有胶体金的抗catacalcin单克隆小鼠抗体（示踪剂）和多克隆绵羊抗降钙素抗体（固相）做检测。病人的样品（血清或血浆）加到检测孔后，示踪元素就结合到样品中的PCT，形成标记的抗原抗体复合物。这个复合物在检测系统中借助于毛细作用移动通过含有检测带的区域，在此过程中，标记的抗原抗体复合物就结合到固相的抗PCT的抗体上，形成一个夹心式的复合物。当PCT浓度 $ \\geqslant0.5\\mathrm{ng} / \\mathrm{ml} $ ，这个复合物呈淡红色的条带。条带的颜色强度直接与样品中PCT的浓度成正比，与参考卡片上提供的PCT浓度范围相关。没有结合PCT的示踪剂扩散到对照条带区，在那里被固定，能产生非常强烈的红色条带，这个检测系统的功能是通过这条对照带来测定的。\n\nBRAHMS PCT LIA是对PCT浓度作定量测定的方法，在0.1ng/ml到 500ng/ml范围内有效。它是一种免疫化学发光检测试剂，用于人血浆中PCT浓度的定量分析。两种抗原特异性的单克隆抗体与PCT（抗原）的两个不同的结合位点（降钙素和降钙蛋白）结合，一种抗体是经化学发光标记（示踪剂），另一种固定在管腔内壁（包被管系统）。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "对于卵巢癌，CT增强扫描的典型表现有哪些？如何解读？"
+        },
+        {
+          "role": "assistant",
+          "content": "对少脂肪组织或脂肪组织不明显者，有时CT和MRI明确诊断较困难，只能提供诊断参考。一般情况，平扫CT几无特点，增强扫描动脉期，肿瘤呈不均匀的明显强化，门脉期和（或）延迟期肿瘤仍呈较明显的延迟强化，另外又具备 $ \\textcircled{1} $肿瘤中央可见迂曲的强化血管； $ \\textcircled{2} $门脉期肿瘤边缘变模糊； $ \\textcircled{3} $肿瘤未见包膜，则有助诊断。MRI增强扫描的强化形式基本同CT，但MRI平扫 $ \\mathrm{T}_{1}\\mathrm{WI} $上肿瘤常呈低信号， $ \\mathrm{T}_{2}\\mathrm{WI} $上肿瘤可呈稍高信号或高信号，特别利用抑脂技术，肿瘤内部分信号有所抑制，可提示诊断，同时如果可见肿瘤内部流空的血管影，则更有助于诊断。\n\n## 3. 肿瘤样病变\n\n(1) 局灶性结节增生（FNH）：局灶性结节增生常发生于无肝硬化的肝脏，以右叶多见，无年龄和性别倾向。病灶可单发，也可多发。镜下病变区为正常肝细胞，常可见到厚壁血管、纤维疤痕组织分隔肝组织，其间淋巴细胞浸润和胆小管增生，但无肝小叶结构及汇管区结构，特征性改变为中央星状瘢痕组织向周围辐射（实体型），个别中央星状瘢痕组织由扩张血管取代（毛细血管扩张型）。目前认为FNH是肝实质对先前存在的动脉血管畸形的反应性增生。\n\n对于典型的FNH病灶，CT和MRI均具特点，容易明确诊断。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "请对比CT和MRI在检测黑色素瘤淋巴结转移中的敏感性和特异性。"
+        },
+        {
+          "role": "assistant",
+          "content": "虽然在移植前考虑到并避免上述复发因素是预防复发的重要举措，但是，实际情况是往往考虑HSCT的安全性而限制了选择。作者的经验是在存在同基因HSCT的可能情况下首先选择同基因，它不但至少优于自体HSCT，而且患者在一年内要安全得多。所采集的细胞数的要求亦较少。与任何来源的配型不同的HSCT相比，有血缘或脐带血来源的造血干细胞亦较安全。输注供者淋巴细胞或供者白细胞（donor lymphocyte infusion，donor leukocyte infusion，DLI）能预防和治疗白血病复发。是由于供者的移植物中淋巴细胞进入患者体内的数量有限，更不论还能受到ATG及其他免疫抑制剂的影响。由移植物中造血干细胞所分化的幼稚淋巴细胞（naive lymphocyte）很容易被诱导成供者细胞，DLI在移植后经过一段时期才输入，所以实际是补充了对受者细胞有充足活性的淋巴细胞。其缺点往往是可能引起严重的急性和慢性GVHD。\n\n目前主张采用逐渐增加细胞数量的DLI，首次DLI的 $ \\mathrm{C D 3} \\leqslant 0. 2 \\times1 0^{8} / \\mathrm{k g} $，与单次高细胞数量的DLI相比，具有抗白血病作用相同而DLI相关的GVHD明显减轻的优点。DLI迄今尚未被临床采用作为一种常规措施。\n\n如果血液系统恶性肿瘤的复发来势迅猛，则一般需化疗再加DLI，必要时再行第二次 Allo-HSCT。由于第二次 Allo-HSCT 有较高的危险性，故折中的方法是患者（受者）先接受中等剂量的化疗再作DLI。这种DLI的特殊性是它在 HSCT 时采集并冻存备用。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在宫颈癌的术后随访中，CT和MRI的使用频率和指征有何不同？"
+        },
+        {
+          "role": "assistant",
+          "content": "## 【适应证】\n\n1. 细菌、真菌感染的早期诊断。\n\n2. 估计疾病的严重程度。\n\n3. 用于系统性炎症反应综合征（SIRS）、脓毒症（sepsis）、严重脓毒症（severe sepsis）和脓毒性休克（septic shock）的鉴别诊断，对ICU高危感染患者进行连续监测。\n\n4. 指导药物的正确应用。\n\n5. 早期预测 MODS 及 MOF 的发生。\n\n## 【禁忌证】\n\n血红蛋白浓度 $ < 5\\mathrm{g / dl} $会限制读数的准确性，以致影响检测结果。严重溶血的样品不能用于PCT的检测。脂肪和胆红素对检测结果没有影响。\n\n## 【检测方法与程序】\n\n许多学者曾用放射免疫分析法（RIA）和夹心免疫放射分析法对血浆PCT进行测定，虽然灵敏度较高，但放射性元素的污染致使此方法使用受限。近来PCT的检测方法已改进为半定量的双抗夹心免疫发光法（BRAHMS PCT-Q）和定量的免疫化学发光法（BRAHMS PCT LIA）。\n\n其中，BRAHMS PCT-Q是一种用于半定量检测PCT谱的检测法，是目前临床最常用的PCT检测方法。此方法可排除交叉反应，提高特异性，同时也有很高的灵敏度（ $ 0.1 \\mu\\mathrm{g} / \\mathrm{L} $）。是只需要 $ 30\\mathrm{min} $的检测系统，既不依赖仪器，又不需要校准。该测定是利用一个标记有胶体金的抗catacalcin单克隆小鼠抗体（示踪剂）和多克隆绵羊抗降钙素抗体（固相）做检测。病人的样品（血清或血浆）加到检测孔后，示踪元素就结合到样品中的PCT，形成标记的抗原抗体复合物。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "对于喉癌，CT增强扫描的典型表现有哪些？如何解读？"
+        },
+        {
+          "role": "assistant",
+          "content": "复发时间与治疗方案的选择有关，治疗后2个月内复发的，可选用异环磷酰胺、紫杉醇或多西紫杉醇等药物；如果超过2个月复发的，可选用的药物有拓普替康、伊立替康、吉西他滨、紫杉类、CAV方案、口服足叶乙苷等；超过6个月复发的，采用原方案治疗。\n\n## 第五章 随访\n\n迄今为止，在肺癌病人中治疗后的随访强度多少为好并没有确切的证据。有两个回顾性研究考察了随访强度和结果，结论是对总体生存期无影响。尽管如此，仍然主张治疗后病人随访时间安排为头两年每3个月一次，两年后每6个月1次，直到5年，以后每年一次。随访内容为病史和体检，特别应注意双锁骨上淋巴结情况；胸部X线平片也是必需的。从效价比角度，当病人有症状时，才相应进行胸腹部的CT、脑CT或MRI、骨扫描、支气管镜等检查，但特殊病例例外。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在乳腺癌的诊断中，CT和MRI各自的优势是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 干扰素（interferons，IFNs）临床主要用 IFN- $ \\alpha $ ，常用 3～5MU每周 2～ 3次皮下或肌注 3～6个月或更长。近年实验研究发现 IFN- $ \\alpha $ 能抑制肝癌血管，也有临床试验表明，有助于预防肝癌切除术后的复发，但需要进一步的多中心临床试验所证实。也有临床研究证实肝癌根治术后以 TACE联合 IFN- $ \\alpha $ （500万U，每周3次，维持3个月）显著降低一年复发率。另一组临床随机对照试验发现，根治术后长期大剂量给予 IFN- $ \\alpha $ （5MU，每周3次治疗18个月），可降低早期复发率。近年有关 IFN- $ \\alpha $ （6MU每周3次治疗 3～6个月）通过抑制HBV和HCV阻断临床肝癌发生和复发的作用也引起重视。\n\n2. 白细胞介素-2（interleukin2，IL-2）主要经肝动脉内局部连续灌注（总量可达数千万单位）或与肝动脉化疗栓塞联合应用治疗中晚期肝癌。临床多与 LAK或TIL细胞联合进行过继免疫治疗，尤适用于预防术后复发转移。也有报道每日或隔日皮下小剂量（10万～20万U）应用，可扩增体内NK细胞，而无明显毒性。\n\n3. 肿瘤坏死因子（tumor necrosis factors，TNF）临床常用 TNF- $ \\alpha $ 。多主张瘤体内直接注射或肝动脉内灌注（如 1M～1.5MU），疗效好且易耐受。但有实验发现TNF有促转移作用，故有待进一步探索。\n\n4. 其他细胞因子 如IL-12等正进行临床试验中。集落刺激因子可改善肝癌病人放、化疗后的骨髓造血功能。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "超声检查在鼻咽癌的初步筛查中有何价值？与CT相比有何优劣？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. 肝错构瘤 常规超声多为类圆形或椭圆形，边界多清晰，偶可见周围有一薄包膜。肿瘤以高回声多见，呈密集均匀的细小光点回声，类似高回声型血管瘤表现，但前者回声更高，更密集，并且后方多轻度衰减。亦可见内部混有低回声区，但分布仍较均匀者。彩色多普勒多无彩色血流信号显示，但低回声者可在周边部或内部显示的彩色血流信号，呈分支状或短线状，可测及静脉和动脉血流信号，阻力指数等常较低。\n\n6. 转移性肝癌 多为低回声不均质光团，可有晕圈等改变，后方回声稍强，有侧方声影，这类病灶常为多发，部分可呈高回声或混合回声。彩色多普勒可在病灶内出现少量血流信号，但阻力指数多较高。同时，周围肝实质回声多无肝硬化表现，可以资鉴别。\n\n7. 肝脓肿 较典型时，壁厚，内膜粗糙呈“虫蚀”状，为无回声或不均匀回声光团，诊断较容易。肝脓疡表现不典型时，用常规B超诊断较困难，需结合彩色多普勒超声和临床表现加以诊断。\n\n8. 胆囊癌 近年来有逐渐增多趋势，早期发现仍比较困难。在发现肝右叶癌肿且无肝硬化时，应仔细观察胆囊的情况，这类病人的胆囊因受压而变小，部分胆囊壁可不规则增厚而与右叶癌肿相连，甚至在胆囊癌实变时，可与右叶癌肿\n\n融合成一团块，多伴有结石，有助于鉴别诊断。\n\n9. 肝母细胞瘤声像图上显示肝内有一巨大团块，多强弱不均，并有液化和包膜，多位于肝右叶，常推移右肾，超声无特异性表现，应结合临床作出诊断。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "MRI在口腔癌的软组织侵犯评估中相比CT有哪些优势？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 破裂的动脉瘤 如病人全身情况较好，可耐受麻醉，技术可以达到治疗目的，可以行栓塞治疗。Hunt-Hess分级I～IV级应积极治疗，V级应酌情处理。\n\n2. 未破裂动脉瘤 病人全身情况可耐受麻醉，技术可以达到治疗目的，可以行栓塞治疗。\n\n## 【禁忌证】\n\n1. 全身情况差，不能耐受麻醉。\n\n2. 目前栓塞技术不能达到治疗目的。\n\n3. 病人和（或）家属拒绝栓塞治疗。\n\n4. 其他不适合进行栓塞治疗的情况。\n\n## 【术前准备】\n\n1. 血、尿常规及出凝血时间、肝肾功能、心电图等常规检查。\n\n2. CT、MRI或MRA、脑血管造影。\n\n## 【操作方法及程序】\n\n1. 动脉瘤囊内栓塞\n\n(1) 栓塞材料： $ 5\\sim 7 \\mathrm{F} $软头导引导管，导丝导引，微导管（10、14、18系列），与微导管配套的微导丝（10、14、18系列），可控解脱弹簧圈和解脱系统，液态栓塞材料及其栓塞系统。\n\n![](page=0,bbox=[1364, 140, 1401, 175])\n\n(2) 栓塞要点：尽可能采用全麻，也可局部麻醉、神经安定或辅以静脉麻醉。全身肝素化（蛛网膜下腔出血后4h之内除外）。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "对于骨肉瘤患者，选择CT还是MRI作为首选影像学检查的依据是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>顺序</td><td>HLA配型</td><td>供者</td></tr><tr><td>1</td><td>相合</td><td>亲属(兄弟姐妹等)</td></tr><tr><td>2.1</td><td>相合</td><td>非血缘</td></tr><tr><td>2.2</td><td>相合</td><td>脐血*</td></tr><tr><td>2.3</td><td>1/6不相合</td><td>亲属</td></tr><tr><td>3</td><td>1/6不相合</td><td>脐血*</td></tr><tr><td>4.1</td><td>2/6不相合</td><td>脐血*</td></tr><tr><td>4.2</td><td>半相合</td><td>子女与母亲之间/NIMA</td></tr></table>\n\n续表\n\n<table border=\"1\"><tr><td>顺序</td><td>HLA配型</td><td>供者</td></tr><tr><td>4.3</td><td>半相合</td><td>NIPA</td></tr><tr><td>5</td><td>半相合</td><td>父亲</td></tr></table>\n\n注：*需足够的细胞数量；NIMA与NIPA见文中解释\n\n## 第五节 造血干细胞移植的预处理方案和原则\n\n除 Syn-HSCT治疗重症再生障碍性贫血等非恶性疾病之外，接受 HSCT的患者必须先经过预处理，预处理方案的目的在于尽量清除恶性疾病患者体内的恶性细胞（如白血病细胞），同时又强有力地抑制患者体内的免疫系统，这样供者的骨髓或其他来源的HSC才不会被排斥。为达到以上目的必须应用大剂量的细胞毒药物，方案中还可能应用较大剂量的分次或一次性全身放射。20世纪70"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "在乳腺癌的术后随访中，CT和MRI的使用频率和指征有何不同？"
+        },
+        {
+          "role": "assistant",
+          "content": "(2) 转移性肝癌：转移性肝癌可为单发或多发，胃肠道恶性肿瘤的转移最常见，其次是肺癌、乳癌、胰腺癌、胆囊癌、卵巢癌、肾癌、甲状腺癌和鼻咽癌等。CT平扫常呈低密度，偶见病灶中心点状稍高钙化或粘液影，对诊断转移性肝癌有极大帮助。大部分转移灶为乏血供病灶，少数为富血供病灶，故增强扫描的动脉期一般强化不明显，或仅边缘环状强化，而增强扫描门脉期常常可见病灶典型的边缘环状强化，特别见到同心圆状的“牛眼征”或“靶征”，对诊断转移性肝癌有特征。\n\nMRI检查SE序列 $\\mathrm{T}_{1}\\mathrm{W}$ 像上常呈低信号， $\\mathrm{T}_{2}\\mathrm{W}$ 像上呈稍高信号，如果肿瘤内伴有明显的坏死或囊变，则 $\\mathrm{T}_{2}\\mathrm{W}$ 像上可呈明显的高信号。增强扫描也可见到边缘强化的“牛眼征”或“靶征”等。MRI，特别是 $\\mathrm{T}_{2}\\mathrm{W}$ 像和增强扫描发现病灶的敏感性高。另外转移性肝癌发生肝包膜下破裂出血和门脉癌栓的概率也很\n\n少，可资鉴别。同时发现肝门、腹腔和后腹膜肿大的淋巴结也呈环状强化，则有助于诊断。\n\n胆囊癌侵犯肝脏伴肝转移和肝细胞癌侵犯胆囊的鉴别诊断，除依据不同的强化特点和形式外，一般肝细胞癌侵犯胆囊较胆囊癌侵犯肝脏的机会为低，其次肝细胞癌侵犯胆囊还可见胆囊内壁基本光整，而胆囊癌则否。\n\n(3) 胆管细胞癌（cholangiocellular carcinoma）：肝内胆管细胞癌较为少见，根据其发生部位可分为周围型胆管细胞癌和肝门区胆管细胞癌。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "结直肠癌根治术术后感染的危险因素和预防措施是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 放疗前准备 放疗前必须明确诊断，对放射可能引起的疗效、副作用和并发症作一个权衡，以决定是否放疗。对准备作放疗的病人，首先要评估其肝脏的功能，特别是肝硬化的严重程度和肝脏的代偿功能，作为在设计放射治疗计划时的参考；其次要作双侧肾功能的检查，因为肾脏，特别是右肾不可避免地要受到照射，所以左侧肾功能的完好就显得十分重要。对原发肝癌的病人应该作甲胎蛋白的定量测定，以作评定疗效的参考指标。\n\n2. 放射技术 外放射是常用的放疗方法，常用 $ ^{60} $钴和直线加速器。\n\n(1) 肿瘤定位：肝内病灶的大小及范围的确定，对于已经手术探查的患者，可能会有比较明确的了解。手术切除后有残存者，则可在术中留置标记。对于多数未经手术的病人，可通过影像诊断如超声、CT、MRI、PET及血管造影等来确定肝内肿瘤的靶区以设置放射野。若肿瘤未被完全包括在放射野内，在放射治疗期间，肿瘤仍可继续生长，这是肝癌放射治疗失败的主要原因之一。\n\n(2) 设野：除了尽可能包括全部肿瘤外，注意保护肾脏也是很重要的。两肾\n\n同时照射的放射耐受量是 $23\\mathrm{Gy} / 4\\sim 5$ 周，低于肝脏的放射耐受量，在放疗中，至少要保护左肾，或1/2的双肾总体积，使其所受剂量不超过单肾照射的放射耐受量28Gy/8周。可采用斜野照射或楔形成角照射，或在前后相对野照射中，在后野照射时用 $2\\sim 4$ 个半价层的铅遮挡肾脏，以减少肾脏的放射剂量。 $ \\textcircled{1} $局部肿瘤照射：仅适用于病灶 $ < 10\\mathrm{cm}\\times 10\\mathrm{cm} $者。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝切除术术后深静脉血栓的预防策略包括哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "(6) 肝脏第I段切除术：肝脏第I段切除即尾状叶切除。第I肝段深藏于门静脉与下腔静脉之间，显露困难，其手术切除一直被认为难度高、风险大，手术方法迄今尚未定型。第I肝段左侧位置深，直接与下腔静脉的左侧壁接触，有时部分I段可绕至下腔静脉的背面，并有 $1\\sim 4$ 支肝短静脉直接注入肝后下腔静脉，第I肝段的门脉三联（门静脉、肝动脉和胆管）发自第一肝门，共有 $1\\sim 4$ 根。第I肝段手术切除入路有3种，根据肿瘤大小、位置不同，可采用左、中、右3种途径进入第I肝段。左侧入路法：为较常用的方法，分为先切除第Ⅱ、Ⅲ段或切除第Ⅱ、Ⅲ、N段，再切除第I肝段及游离Ⅱ、Ⅲ肝段向右侧翻起，再切除第I肝段。先钳夹、切断肝圆韧带，断端结扎、缝扎，切断镰状韧带、左三角韧带、左冠状韧带、肝胃韧带，充分游离左半肝。将左半肝向右上方牵拉，显露第I肝段，剪开第一肝门横沟下方之肝包膜，沿左半肝血管、胆管蒂下方分离、钳夹、切断、结扎第I肝段门静脉、动脉及胆管分支。仔细分离钳夹、切断第I肝段与下腔静脉间的肝短静脉，断端予以缝扎，以防滑脱导致大出血。分离、钳夹、切断第I肝段与左右肝的肝组织，移除第I肝段。在左半肝明显增大，显露第I肝段十分困难情况下，可先切除第Ⅱ、Ⅲ肝段或左半肝，也可先切除第IV肝段从中央入路，再行第I肝段切除。若肿瘤位置偏向第I肝段尾突，在门静脉与肝静脉之间，可从右侧入路。即病人左侧卧位 $90^{\\circ}$ ，先切断右三角韧带、肝肾韧带、肝结肠韧带及右冠状韧带，充分游离右半肝，切断肝圆韧带、肝镰状韧带，将右半肝向上翻起，显露第I肝段尾状突，按上述方法切除第I肝段。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肺癌切除术术后感染的危险因素和预防措施是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "6. 疗效及评价 氩氦刀冷冻治疗肿瘤始于20世纪90年代，目前在美国已广泛用于前列腺癌、肝癌、肺癌、胰腺癌等恶性肿瘤的治疗。国内亦有多家医院开展了这一冷冻治疗新项目。据报道，经皮穿刺氩氦刀治疗肝癌 $ < 3\\mathrm{cm} $的肿瘤术后一周CT复查全部坏死，而直径 $ > 3\\mathrm{cm} $的肿瘤则显示绝大部分被损毁，氩氦刀术后病人的免疫指标包括 $ \\mathrm{C D 3^{+}} $、 $ \\mathrm{C D 4^{+}} $、 $ \\mathrm{C D 8^{+}} $及NK细胞均有明显上升，提示冷冻治疗原位灭活肿瘤可刺激机体增强免疫功能。经皮穿刺氩氦刀治疗 $ \\leqslant 5\\mathrm{cm} $的肿瘤疗效确切，尤其是多刀组合应用，可以使肿瘤彻底毁损，而对于 $ > 5\\mathrm{cm} $的肿瘤则应多种治疗方式相结合，如TACE结合氩氦刀常能明显提高疗效。另外开腹行术中氩氦刀由于暴露好，术中B超监视清晰，冷冻范围易于监测，可以使用较粗的冷冻刀等，常使能耐受开腹手术的病人获得良\n\n好的疗效。\n\n由于氩氦刀冷冻治疗肝癌应用于临床时间并不长，术后病人随访时间亦较短，故远期疗效尚难下结论。但氩氦刀冷冻治疗肿瘤创伤小、恢复快，对机体免疫力无明显抑制则是肯定的。\n\n## （四）经皮微波治疗\n\n20世纪70年代末80年代初，微波技术最初应用于临床是以辅助外科手术的方式出现，微波刀主要用于各种术中止血或为肿瘤切除设定安全的凝固边界。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胃癌根治术术后发热的鉴别诊断和处理流程是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(2) 手术方法：右侧卧位，根据瘤体位置选左后外第4或第5肋间切口，必要时可切除相应肋骨，累及胸降主动脉全程者需用第4和第7两个切口。不要过分游离瘤壁与肺的粘连。先游离瘤体远端降主动脉穿带备用，再游离左锁骨下动脉，最后游离主动脉弓。阻断时与上述顺序相反，麻醉降压，先在左颈总动脉和左锁骨下动脉之间阻断，钳夹要轻柔，避免夹上阻断带和周围组织，阻断时用左手握住瘤体向前牵拉主动脉弓，同时注意瘤体震颤，在其消失后再钳紧一到两扣即可。阻断左锁骨下动脉和瘤体远端降主动脉后，纵切瘤体前壁，清除血栓，缝闭瘤体内的肋间动脉开口（最多只能闭合前4对），在动脉瘤颈部切断，置换相应口径的人工血管，先吻合近心端，用4-0或3-0Prolene连续缝合，如自体组织薄弱，可于腔内垫人造血管片。如前所述，缝合完近心端以后，可将阻断钳移至人工血管上，此时吻合口如有出血，可补缝之；远端吻合方法同上。缝合近完成时，开放远端阻断钳，排气打结。如远端吻合口有出血，可再阻断吻合口远端进行补针缝合，依次由远至近开放各阻断钳，开放后如血压过低，可将人工血管部分阻断维持上半身血压，待补足血容量以后完全开放，也可静脉注射少量收缩血管药物。注意检查肋间血管有无出血。可将瘤壁包裹缝合于人工血管上。如病变累及全胸降主动脉，近端人工血管移植同上，胸8以下肋间动脉必须保留，其方法有：缝闭前4对肋间动脉开口，将以后各对肋间动脉开口处胸主动脉剪去前壁，保留带有肋间动脉开口处的后壁，将其重新缝合成为直径 $1\\sim 1.5\\mathrm{cm}$ 的管道，与人工血管一分支吻合，恢复脊髓灌注。左腋中线第7肋间安放胸腔引流管，缝合切口各层。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌根治术术后常见并发症有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 冠状动脉病变 大动脉炎常侵及冠状动脉开口或主干，而很少累及其远端。冠状动脉旁路移植术（CABG）是治疗大动脉炎累及冠状动脉的有效方法。由于大动脉炎常同时侵及头臂动脉，从而累及乳内动脉。因此，大动脉炎不适宜使用乳内动脉或其他有可能受累的动脉，而尽可能应用全静脉化的CABG。\n\n![](page=0,bbox=[120, 156, 160, 193])\n\n## 5. 升主动脉瘤和主动脉瓣反流\n\n(1) 主动脉瓣替换术：术后极易发生瓣周漏，发生率为 14.5%～20%，预后极差。\n\n(2) 主动脉根部替换术：包括Bentall术、Cabrol术和David术，术后发生瓣周漏的概率少。改良Cabrol术不但减轻了冠脉吻合口的张力，降低了假性动脉瘤发生的概率，而且可同时扩大冠脉开口，有可能避免冠状动脉搭桥手术。改良David手术还保留了自体主动脉瓣，避免了抗凝并发症，提高了患者的生活质量。\n\n## 【术后处理】\n\n大动脉炎术后近、远期疗效决定于动脉炎症病变的进展、手术时机和方式的选择以及是否有并发症的发生。积极使用激素和其他抗感染治疗是维护长期疗效的重要因素。\n\n## 【注意事项】\n\n1. 大动脉炎为炎性血管病变，血管组织愈合能力差，严格掌握手术适应证，使用激素控制炎症，并避免感染的发生。\n\n2. 正确选择手术方式，应于相对正常的血管部位完成人工血管吻合。\n\n3. 术中避免周围血管、神经和其他组织的损伤。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱全切术术后深静脉血栓的预防策略包括哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "7. 各种不同心室辅助装置的特点见表 9-1。\n\n<div align=\"center\">\n\n表9-1 心室辅助装置\n\n### </div>\n\n<table border=\"1\"><tr><td>装置类型</td><td>Bio-medicus</td><td>Abiomed</td><td>Thoratec</td><td>Novacor</td><td>Heartmute</td><td>Cardio-west</td></tr><tr><td>推荐指征</td><td></td><td>心脏术后恢复</td><td>心脏术后恢复和心脏移植的过渡</td><td>心脏移植的过渡</td><td>心脏移植的过渡</td><td>心脏移植的过渡</td></tr><tr><td>植入部位</td><td>体外</td><td>体外</td><td>体外</td><td>体内</td><td>体内</td><td>体内</td></tr><tr><td>辅助心室</td><td>左/右全部</td><td>左/右全部</td><td>左/右全部</td><td>左</td><td>左</td><td>左/右</td></tr><tr><td>平均辅助时间</td><td>≤1个月</td><td>1个月至1年</td><td>1年以上</td><td>1年以上</td><td>1年以上</td><td>1年以上</td></tr><tr><td>能源</td><td>电动</td><td>气动</td><td>气动</td><td>电动</td><td>电动/气动</td><td>气动</td></tr><tr><td>缝合部位</td><td>主/肺动脉和左/右心房</td><td>主/肺动脉和左/右心房</td><td>主/肺动脉和心室</td><td>心室</td><t"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌根治术术后常见的神经系统并发症有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "夹、切断、结扎，至下腔静脉前、右侧壁时仔细分离肝实质及血管，直至完全切除第VII肝段。当遇第VII肝段基底较深在的肿瘤时，切肝前可分别游离出第一肝门区、肝上和肝下下腔静脉，并于此三处分别绕以细乳胶管或纱带，但不束紧。切肝前先阻断第一肝门区，然后着手切肝，如肿瘤紧贴或不慎损伤下腔静脉，此时再束紧肝下方和肝上方下腔静脉预置的乳胶管或纱带，此时全肝血流即阻断，快速切除肝段后修补下腔静脉，然后放松所有束带，恢复全肝血流。松除束带的次序为先松除肝上下腔静脉束带，再松除肝下下腔静脉束带，最后松除第一肝门区束带。第VII肝段切除后常遗留一大间隙，肝断面严密对拢缝合常有困难，为防渗血积聚其间，可用大块明胶海绵填塞，以封闭渗血点，然后松松地拉拢缝合几针，或用带蒂大网膜填塞；也可用一块游离的镰状韧带覆盖，四周用缝线固定，以加固切口，以免崩裂。\n\n(6) 肝脏第I段切除术：肝脏第I段切除即尾状叶切除。第I肝段深藏于门静脉与下腔静脉之间，显露困难，其手术切除一直被认为难度高、风险大，手术方法迄今尚未定型。第I肝段左侧位置深，直接与下腔静脉的左侧壁接触，有时部分I段可绕至下腔静脉的背面，并有 $1\\sim 4$ 支肝短静脉直接注入肝后下腔静脉，第I肝段的门脉三联（门静脉、肝动脉和胆管）发自第一肝门，共有 $1\\sim 4$ 根。第I肝段手术切除入路有3种，根据肿瘤大小、位置不同，可采用左、中、右3种途径进入第I肝段。左侧入路法：为较常用的方法，分为先切除第Ⅱ、Ⅲ段或切除第Ⅱ、Ⅲ、N段，再切除第I肝段及游离Ⅱ、Ⅲ肝段向右侧翻起，再切除第I肝段。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "结直肠癌根治术术后应如何监测生命体征和引流情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "![](page=0,bbox=[1401, 112, 1439, 150])\n\n(6) 腹部手术。改平卧位，重新消毒，做上腹正中切口。游离胃大、小弯，切断胃网膜左动脉、胃左动脉、胃短动脉及其分支。缝合器闭合、切断贲门，将胃经食管床上提至颈部。\n\n(7) 颈部手术。沿左胸锁乳突肌内缘做切口显露颈段食管，经切口将胸内食管拉出，完成食管、胃吻合。\n\n## 【注意事项】\n\n1. 食管癌胸腔镜手术适应证的选择十分重要，要注重肿瘤切除的彻底性。\n\n2. 术中注意要点。\n\n(1) 胸腔镜食管癌切除手术应当严防并发症，特别是大血管及周围脏器损伤。\n\n(2) 为了方便上1/3段食管游离和淋巴结清除，术中切断奇静脉是必要的。\n\n(3) 食管游离要从非肿瘤部位开始，尽量不用锐性分离，以防损伤胸导管和周围器官，凡遇到条索组织用钛钉夹闭或电凝后切断。\n\n(4) 在进行下段食管游离时，胸腔镜可移到上胸部前方切口，从下胸部切口插入器械，这样操作更方便。\n\n3. 术后处理与开胸食管癌切除常规处理相同。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胰腺十二指肠切除术术后常见并发症有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "切除外囊腔周边无功能的组织，然后用 $3\\%$ 过氧化氢溶液反复冲洗残腔及胸腔，再用甲硝唑（灭滴灵）及生理盐水冲洗。反复冲洗残腔后，用小圆针4号细线或可吸收缝线缝合支气管瘘，大的支气管瘘口应做 $2\\sim 3$ 层重叠包埋缝合。缝合支气管瘘时，要缝在正常肺组织上。进针过浅，缝在较脆弱水肿的肺组织上，术后肺膨胀、咳嗽时，线结易脱落而发生支气管瘘。如果囊腔较大应行多层重叠包埋缝合，这样一方面可以减小死腔，防止术后引流不畅而引发感染；另一方面，多层缝合使大多数位于残腔底部的支气管瘘口得以严密缝合，防止术后漏气。修补支气管瘘的过程中，用生理盐水充满残腔，肺内加压，支气管瘘口均可产生气泡，这样很容易发现支气管瘘口。这一试验可重复进行，直至严密缝合残腔内所有支气管瘘口。外囊腔周边修剪后，行“8”间断全周缝合，防止出血及漏气。使整个外囊形成一个浅碟状面，即所谓碟形手术。\n\n碟形手术的优点：可以采用前外侧切口，对肺功能干扰较小，患吸入性肺炎的机会降低；最大限度地保留了肺组织；便于修补支气管瘘；引流通畅，减小了胸腔积液与感染的可能性；简化了手术操作。\n\n$\\textcircled{2}$残腔封闭缝合：清除外囊腔囊皮内碎片及坏死的肺组织，反复冲洗囊腔，修剪囊周无功能组织后，修补支气管瘘口，由深至浅全部对拢缝合外囊腔，这样也可加固支气管瘘的修补，防止术后漏气。残腔封闭缝合术适用于较小的、无感染的残腔。感染较重的残腔术后易发生感染，不宜采用残腔封闭缝合，此法较碟形手术易导致肺功能损失。\n\n(4) 复杂性肺包虫病的处理：复杂性肺包虫病可分为以下几种。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝切除术术后早期下床活动的时机和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "动脉导管合并中等度肺动脉高压的闭合手术。较有经验的手术医师，可以在全麻下按常规方法进行导管闭合手术。但是在结扎导管之前，常需加深麻醉或者用适量的扩血管药（如硝普钠等），在导管张力稍许减低时，术者用手指或用镊子捏住导管的中段，暂时（1～3min）阻断导管的血流，并观察血压以及心电图（心律、心率及ST段等）变化，如不能肯定有无心功能代偿不良，应于恢复循环片刻之后，改用止血钳阻断导管，重新观察较长时间（10～20min），如出现心率增快、血压下降、心缩无力，进而出现心率减慢或心律失常等急性心力衰竭现象者，一般不宜将导管结扎，而应终止手术。经过试验确实可以做导管结扎的病例，于结扎术后，尽快采取措施使血压恢复正常。这类患者如在术中无特殊失血，应尽早开始控制静脉的液体入量，以防止术后发生高血压反应。\n\n3. 胸膜外导管闭合术 用钝器及纱布球逐渐扩大间隙的范围，找到迷走神经并辨认出动脉导管，用4-0丝线进行结扎。不进胸腔的手术，创伤轻，对肺组织干扰也轻，术后不需放引流管，康复快，对小儿更为有利。\n\n婴幼儿发生呼吸窘迫综合征需要做导管闭合术时，只需做简便的结扎，而不必加做贯穿结扎。导管结扎手术比切断缝合手术简便，其闭合效果也相同，但在结扎时要特别警惕，务必认清喉返神经（导管的标志），不要误将导管远侧的左肺动脉当作导管而结扎。婴儿的导管壁较脆，要轻而慢地结扎，以免丝线切断管壁发生大出\n\n血。\n\n4. 导管切断缝合术解剖出导管，在主动脉及肺动脉两端上两把导管阻断钳，假如导管较粗或肺动脉张力较高，为防止切断导管后血管残端滑脱，在每一把Pons钳的近动脉侧再加上一把阻断钳，在两组钳之间切断导管。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肺癌切除术术后深静脉血栓的预防策略包括哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "A2型：主动脉窦部直径 $ < 3.5\\mathrm{cm} $，夹层累及右冠状动脉导致其开口处内膜部分剥离或全部撕脱，有1个或2个主动脉瓣交界撕脱导致轻-中度主动脉瓣关闭不全。应根据其主动脉窦部受累的程度、主动脉瓣反流量大小和外科医师的技术水平选择不同的手术方式。如果窦部病变偏重，主动脉瓣有少到中量反流，外科医师有丰富的手术经验可以行部分主动脉窦部替换+主动脉瓣成形术或David手术。如果主动脉瓣有中到大量反流，医师的经验有限，手术应采用主动脉根部替换术（Bentall手术）。\n\nA3型：主动脉窦部直径 $>5\\mathrm{cm}$ 或直径为 $3.5\\sim 5\\mathrm{cm}$ 但窦管交界结构破坏，有严重主动脉瓣关闭不全。应行主动脉根部替换术（Bentall手术）。术中根据冠状动脉移位情况选择重建方式。主动脉窦部扩张和冠状动脉移位均不明显时可将冠状动脉开口修剪为“钮扣”样与人工血管吻合（Carrel术式）或行Cabrol手术。如果移位明显可以将冠状动脉直接与人工血管吻合。冠脉直接吻合时人工血管的开孔直径要合适，太小易导致冠脉开口受压变形，过大术后出现局部动脉瘤的可能性增加。\n\n主动脉远端处理原则：在处理近心端时继续降温，当鼻咽温度降至 $22\\sim 25^{\\circ}C$ 时，减低动脉灌注流量，分别阻断无名动脉、左颈总动脉和左锁骨下动脉近端。行单侧脑灌注、全身停循环。去除主动脉阻断钳，探查远心端，根据不同情况有以下两种处理方法：\n\n出现下列情况的病例为细化分型中的C型（complex type）应行全主动脉弓部替换术+象鼻技术。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱全切术术后早期下床活动的时机和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "重视围手术期处理对降低手术死亡和并发症的发生有重大意义。术前应特别注意： $ \\textcircled{1} $明确肿瘤的定性、定位和分期诊断，作出可切除性评价，制定手术方案； $ \\textcircled{2} $了解患者一般状况，积极纠正脏器功能不全，对手术风险作出评估； $ \\textcircled{3} $留置深静脉导管，进行肠内外营养，改善营养和免疫状况； $ \\textcircled{4} $术前进行短期的肠道准备； $ \\textcircled{5} $心理辅导，做好家属的解释说明工作，取得其支持和配合。\n\n术后应 $ \\textcircled{1} $进入ICU，监测生命体征，控制补液速度和总量； $ \\textcircled{2} $处理酸碱、水电解质平衡紊乱； $ \\textcircled{3} $使用广谱抗生素，根据药敏及时调整更换，并注意有无真菌感染发生； $ \\textcircled{4} $抑酶、制酸治疗； $ \\textcircled{5} $加强肠内外营养，纠正贫血和低蛋白血症； $ \\textcircled{6} $密切观察病情，及时发现并发症并予处理； $ \\textcircled{7} $保护各重要脏器功能，防止MODS出现； $ \\textcircled{8} $监测血糖，控制血糖在 6～10mmol/L之间； $ \\textcircled{9} $保证引流管通畅。\n\n## 二、辅助治疗\n\n## （一）术前辅助治疗\n\n1. 化学治疗 有利于控制肿瘤生长，抑制转移，提高手术切除率。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "前列腺癌根治术术后疼痛管理的原则和方法有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "吴一龙等的随机对照研究，将532例肺癌病人随机分为系统性纵隔淋巴结清扫术和纵隔淋巴结采样术，清扫组将气管支气管周围纵隔内的淋巴结连同脂肪组织作整块切除，采样组仅对肉眼有可疑转移的淋巴结切除。结果显示，系统性纵隔淋巴结清扫术的中位生存时间为59个月，采样术为34个月（ $ P= $ 0.0000），5年生存率在I期分别为 $ 82.16\\% $和 $ 57.49\\% $，Ⅱ期为 $ 50.42\\% $和 $ 34.05\\% $，Ⅲ期为 $ 26.98\\% $和 $ 6.18\\% $，差别均有统计学上的意义。杨浩贤等收集了文献上所有有关纵隔淋巴结系统清扫与否的临床随机对照研究，并作了详尽的meta分析，总样本量达977例，其中纵隔淋巴结清扫组481例，死亡194例，纵隔淋巴结采样组496例，死亡247例，合并 $ \\mathrm{OR} = 0.67,95\\% $可信区间 $ 0.52\\sim $ 0.87，其结论是，与肺叶（全肺）切除加纵隔淋巴结采样术相比，肺叶（全肺）切除加纵隔淋巴结清扫术可以延长患者的生存期，降低0.33的死亡危险。这两篇可信度高的文献，提示肺叶（全肺）切除加纵隔淋巴结清扫术应成为肺癌外科治疗的标准术式。\n\n6. 电视辅助胸腔镜外科（video-assisted thoracoscopic surgery，VATS）切除。\n\n对诊断未明的肺部周围性结节，特别适合做胸腔镜下的楔形切除。一组242例胸腔镜下楔形切除的手术，没有手术死亡率，并发症发生率也很低，肺不\n\n张、肺炎的发生率 $< 1\\%$ ，转为开胸手术的发生率约为 $20\\% \\sim 28\\%$ 。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胰腺十二指肠切除术术后常见的神经系统并发症有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 姑息切除术 姑息性胃癌切除术不仅可防止出血、穿孔等并发症，而且可提高病人的生存质量和生存期。应采取积极的态度，在病人全身条件及局部条件允许的情况下，其他主要脏器无较严重转移时，应试行姑息切除，但对姑息性全胃切除术应持慎重态度。\n\n2. 胃肠吻合术伴有幽门梗阻的胃下部癌，由于全身状态的局部条件，不能行姑息切除时，可行胃空肠吻合术。对于无幽门梗阻的胃下部癌，不主张做预防性的胃肠吻合术，因该手术不仅增加病人负担，而且不能延长生存期。\n\n3. 介入治疗 对于术前已诊断明确不适宜手术治疗的晚期病人，可采用不开腹的介入治疗。如贲门或幽门梗阻时的经皮穿刺置管胃造瘘术或肠造瘘术，胃癌出血时的内镜下激光、电灼术等，均可较好地解除晚期胃癌的各种并发症。\n\n## （六）各期胃癌外科治疗方案\n\n胃癌外科治疗应根据不同的病期，选择相应的个体化手术方案，见表6-3-8。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱全切术术后发热的鉴别诊断和处理流程是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 基本方法： $ \\textcircled{1} $全麻双腔气管插管，单纯阻断动脉瘤两端。一般要求在 30min 左右完成血管移植。为安全及节约用血，可配合血液回收动脉输入法。阻断动脉之前静脉注射肝素 $ 3\\mathrm{mg / kg} $ 。用体外循环机将术野出血吸入储血器中，需要时由泵管通过滤器输入股动脉。 $ \\textcircled{2} $如估计 30min 内不能完成血管移植可采用常温左心转流或股髂动脉-股髂静脉转流，需游离阻断动脉瘤两端。 $ \\textcircled{3} $深低温停循环：动脉瘤的某一端无法游离阻断时，需深低温停循环。此法全身干扰大，术中心、脑、肾的保护非常复杂，术后并发症多，应尽量少用。由左股动、静脉插管，必要时配合主肺动脉和左心耳插管。另备一只动脉灌注管，待近端吻合完成后插入人工血管，阻断其远端即可恢复体外循环，可明显缩短停循环时间和体外循环时间。\n\n(2) 手术方法：右侧卧位，根据瘤体位置选左后外第4或第5肋间切口，必要时可切除相应肋骨，累及胸降主动脉全程者需用第4和第7两个切口。不要过分游离瘤壁与肺的粘连。先游离瘤体远端降主动脉穿带备用，再游离左锁骨下动脉，最后游离主动脉弓。阻断时与上述顺序相反，麻醉降压，先在左颈总动脉和左锁骨下动脉之间阻断，钳夹要轻柔，避免夹上阻断带和周围组织，阻断时用左手握住瘤体向前牵拉主动脉弓，同时注意瘤体震颤，在其消失后再钳紧一到两扣即可。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胃癌根治术术后深静脉血栓的预防策略包括哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "(4) 食管吻合：食管吻合的原则是避免吻合口张力过大，注意保留食管下段的血运。吻合前将下段食管的顶端切除少许。顶端较尖较小，内腔很细时，可做斜行切口。吻合有$\\textcircled{1}$端端吻合法，又可分为单层缝合法与套叠缝合法。$\\textcircled{2}$端侧吻合法。不切断瘘管而仅做结扎，然后上、下段做端侧吻合。$\\textcircled{3}$肌层延长法。若食管两端距离较大，不能直接吻合或估计吻合后有张力，可在食管近端做肌层切开术，缩短食管端的间距。$\\textcircled{4}$延期缝合法。手术过程中若发现食管两端距离太远，则不能做一期吻合术。有两个选择，一是切断瘘管，在食管远端缝一金属标记物，尽量将食管两端对拢，另外施行胃造口以维持营养。1周后以探条或水银袋扩伸近端盲袋，待数月后食管两端接近时，再做食管吻合术。二是切断缝合食管气管瘘，上端食管经颈部切口外置做食管造口术，另在腹部行胃造口术做喂养。颈部造口处置一小袋储存分泌物。在此期间训练婴儿经口进食，虽然食物均进入口袋，但对以后进食起到心理训练的作用。待婴儿长至12个月左右，再选用空肠、结肠或胃大弯胃管为替代物做二期食管重建术。\n\n## 【注意事项】\n\n## 1. 术中注意要点\n\n(1) 术中要及时清除鼻咽部、食管盲端及气管内分泌物。\n\n(2) 胸膜外径路手术分离时须小心，防止胸膜破裂。\n\n(3) 气管侧的瘘管残端不宜保留过长，以免形成憩室，但也不宜紧贴气管处切断，以免气管狭窄。下段食管血运较差，游离不宜过多。\n\n(4) 经胸膜腔手术者，应将纵隔胸膜切口缝合并覆盖吻合口。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胰腺十二指肠切除术术后深静脉血栓的预防策略包括哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "$ \\textcircled{3} $右侧第10肋间胸膜外切开膈肌进路用于处理肝顶部包虫囊肿。B超定位下，选用右侧第10肋间适当部位依次切开皮肤、皮下组织、肋间肌后，小心游离，从胸膜外推开胸膜，切开膈肌处理肝顶部包虫囊肿。此径路不开胸，对心肺功能影响小，也可减小胸腔污染及感染的机会。\n\n## (2)手术方式\n\n$ \\textcircled{1} $全囊切除术：将包虫囊肿连同周围少量肺组织一并切除，仅用于肺边缘的小包虫囊肿。\n\n$\\textcircled{2}$内囊穿刺摘除术：为传统的手术方法，适用于伴有并发症或病变部位特殊，不宜行内囊完整摘除者。开胸后，分离胸腔内的粘连，暴露囊肿，在囊肿周围填塞数块大纱布垫，保护胸腔及肺组织，防止包虫破裂，周围污染。露在肺表面的外囊部分有灰白色纤维蛋白覆盖，无血管分布。备好两套吸引器，穿刺用的三通粗针。穿刺囊肿后，迅速吸出囊液。当吸出囊液后，内囊与外囊分离而塌陷，用爱利斯钳提起外囊壁，剪开外囊，伸入吸引器吸尽囊液，用卵圆钳或无齿镊取尽内囊壁。内囊易破碎，必须细心清除，用 $3\\%$ 过氧化氢溶液（双氧水）和高渗盐水擦洗囊腔。\n\n$\\textcircled{3}$内囊完整摘除术：适用于包虫囊肿突出肺表面达1/3以上，且未合并感染等并发症的病例。如摘除成功，可完全避免复发，为最理想的手术方法。在肺下方及胸腔内垫湿纱布垫，充分显露肺包虫囊肿。在灰白色外囊纤维壁上，以刀刃前部切开外囊壁，要求麻醉平稳或暂停呼吸，手术刀宜 $30^{\\circ}$ 倾斜，用力均匀。或用刀刃刮剥。用力过重易使内囊破裂。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺切除术术后疼痛管理的原则和方法有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 肾动脉下方腹主动脉瘤 全麻、术前置胃管和尿管。腹部正中切口，由剑突下至耻骨联合，或脐下弧形切口，自脐下2cm弧形切开达第12肋尖端下方 2cm。后者损伤较大，但显露好，适用于肥胖或紧急手术的病例。将大网膜和横结肠推向上方，将小肠推向右侧显露动脉瘤，解剖出肠系膜下动脉，试验阻断后如乙状结肠供血良好可结扎之，反之则需将其移植于人造血管上。游离出腹主动脉分叉部或双髂总动脉，最后在肾动脉下方游离出腹主动脉，静脉注射肝素0.5mg/kg。依次阻断瘤体近、远端腹主动脉，切开动脉瘤，清除血栓或粥样斑块，缝闭回血的腰动脉；在动脉瘤颈部切断主动脉。以相应口径的人造血管行移植术，用4-0Prolene全周连续缝合，吻合完近心端，可将阻断钳移至人造血管上，再吻合远心端，最后将人造血管相应部位开一1.5cm圆洞，移植肠系膜下动脉，吻合近完成时，开放远端阻断钳排气后打结，最后开放近心端阻断钳。检查腰动脉无出血，将瘤壁缝合\n\n于人造血管上。右下腹安置引流管，肠管复位，逐层缝合切口。\n\n2. 肾动脉上方腹主动脉瘤（胸腹主动脉瘤）此类动脉瘤手术范围大，需暂时阻断腹腔动脉、肠系膜上动脉、双肾动脉、肋间动脉和腰动脉的血液供应，故可影响这些脏器和脊髓的功能；阻断段内血管开口多，术中出血严重。因此手术风险大，并发症多且死亡率也高。近年来，笔者采用4分支人工血管替换胸腹主动脉，使手术更简化，更易止血。以下以累及全部胸腹主动脉及双侧髂动脉为例说明，如累及范围缩小，手术可相应简化。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺切除术术后出血的临床表现和处理原则是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "![](page=0,bbox=[120, 156, 160, 193])\n\n## 5. 升主动脉瘤和主动脉瓣反流\n\n(1) 主动脉瓣替换术：术后极易发生瓣周漏，发生率为 14.5%～20%，预后极差。\n\n(2) 主动脉根部替换术：包括Bentall术、Cabrol术和David术，术后发生瓣周漏的概率少。改良Cabrol术不但减轻了冠脉吻合口的张力，降低了假性动脉瘤发生的概率，而且可同时扩大冠脉开口，有可能避免冠状动脉搭桥手术。改良David手术还保留了自体主动脉瓣，避免了抗凝并发症，提高了患者的生活质量。\n\n## 【术后处理】\n\n大动脉炎术后近、远期疗效决定于动脉炎症病变的进展、手术时机和方式的选择以及是否有并发症的发生。积极使用激素和其他抗感染治疗是维护长期疗效的重要因素。\n\n## 【注意事项】\n\n1. 大动脉炎为炎性血管病变，血管组织愈合能力差，严格掌握手术适应证，使用激素控制炎症，并避免感染的发生。\n\n2. 正确选择手术方式，应于相对正常的血管部位完成人工血管吻合。\n\n3. 术中避免周围血管、神经和其他组织的损伤。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "全子宫切除术术后发热的鉴别诊断和处理流程是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 出血 大出血是主动脉外科常见而且最危险的并发症，在早年也是手术死亡的最主要原因，因此，出血的防治是主动脉手术，特别是主动脉夹层手术成功的关键。应注意以下几点：选择适宜的体外循环方法及脑保护方法，以便有良好的术野及充分的操作时间；手术操作轻柔精确，吻合口平顺，对位准确，避免夹层动脉壁撕裂、扭曲造成出血；出血时不应依赖人造止血材料填塞止血，因为动脉出血填塞效果不佳，且易感染或在局部形成假性动脉瘤。近端吻合口出血时，可用残余瘤壁包裹并与右心房分流，止血效果满意。出血量较小时，分流逐渐闭合。不致影响循环状态。\n\n2. 神经系统并发症 包括昏迷、苏醒延迟、定向力障碍、抽搐、偏瘫、双下肢肌力障碍等。发生上述情况与以下因素有关：\n\n(1) 术前原因：夹层累及头臂血管，高龄患者伴有颈动脉或脑血管病变。\n\n(2) 术中因素：气栓、血栓和动脉硬化斑块脱落引起栓塞，神经系统保护措施不当，术中灌注压过低或过高。\n\n(3) 术后原因：术后血压因各种原因过低或过高，头臂血管吻合口狭窄或血栓形成，夹层术后剥离累及头臂血管或加重头臂血管病变。在诸多因素中，神经系统保护措施不当和气栓造成神经系统并发症者最为常见。高龄和血压不稳是重要的危险因素。因此，选择适当的神经系统保护措施十分重要，如条件允许，尽量采用选择性脑灌注技术。术中注意排气和清除血栓，远端吻合时采用开放吻合技术，防止阻断段以远血栓或斑块脱落。围手术期注意控制血压，避免较大范围波动。胸主动脉人造血管替换时要注意重建肋间动脉供血。神经系统并发症目前无特效治\n\n疗，主要为脱水，提高胶体渗透压，维持血压平稳，应用神经细胞营养药物。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "前列腺癌根治术术后深静脉血栓的预防策略包括哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>分期</td><td>肿瘤大小</td><td>淋巴结转移</td><td>远处转移</td></tr><tr><td>I期</td><td>T1a</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"2\">II期</td><td>T1a</td><td>N1</td><td>M0</td></tr><tr><td>T1b</td><td>N0,N1</td><td>M0</td></tr><tr><td rowspan=\"2\">III期</td><td>T1a,T1b</td><td>N2</td><td>M0</td></tr><tr><td>T2</td><td>N0,N1</td><td>M0</td></tr><tr><td rowspan=\"3\">IVa期</td><td>T1a,T1b</td><td>N3</td><td>M0</td></tr><tr><td>T2</td><td>N2</td><td>M0</td></tr><tr><td>T3</td><td>N0,N1</td><td>M0</td></tr><tr><td rowspan=\"3\">IVb期</td><td>T2</td><td>N3</td><td>M0</td></tr><tr><td>T3</td><td>N2,N3</td><td>M0</td></tr><tr><td>任何T</td><td>任何N</td><td>M1</td></tr></table>\n\nN一一淋巴结转移。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "全子宫切除术术后吻合口漏的早期识别和处理方案是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td></td><td>肺功能</td><td>高危病人</td></tr><tr><td rowspan=\"4\">通气</td><td>呼吸频率(RR)</td><td>&gt;25/min</td></tr><tr><td>1s用力呼气容积(FEV1)</td><td>&lt;2.0L</td></tr><tr><td>最大通气量(MVV)</td><td>&lt;55%</td></tr><tr><td>无效腔容量/潮气量(VD/VT)</td><td>0.4~0.6</td></tr><tr><td rowspan=\"4\">气体交换</td><td>动脉氧分压(PaO2)</td><td>&lt;60mmHg</td></tr><tr><td>动脉二氧化碳分压(PaCO2)</td><td>&gt;50mmHg</td></tr><tr><td>肺泡-动脉氧分压差(A-a)DO2</td><td>&gt;200mmHg</td></tr><tr><td>分流</td><td>&gt;10%</td></tr><tr><td>循环</td><td>EKG</td><td>心肌缺血征</td></tr><tr><td>心肺储备</td><td>血红蛋白(Hb)</td><td>&gt;17g/L</td></tr><tr><td rowspan=\"2\">功能</td><td>登楼试验</td><td>1次&lt;3层</td></tr><tr><td>负荷后血气CO2</td><td>潴留或PaO2下降</td></tr></table>\n\n## 第8章 胸膜腔闭式引流术\n\n## 【适应证】\n\n1. 气胸、血胸经穿刺抽吸无效者。\n\n2. 急性脓胸需持续排脓者。\n\n3. 脓胸并发支气管胸膜瘘者。\n\n4. 胸外伤、肺及其他胸腔内"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺切除术术后深静脉血栓的预防策略包括哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "正中开胸，上、下腔静脉插管。上腔静脉插管不通过右心房，直接插入上腔静脉。下腔静脉尽可能靠近膈肌插管。切除右心耳。从切除的右心耳基底部中点做一侧方的切口，并向下延长 $ 3\\sim 4 \\mathrm{c m} $ 。从右上肺静脉向上朝房室沟方向在右心房前壁做一切口。将冲洗式射频探头运用于心内膜，产生： $ \\textcircled{1} $沿右心房外侧壁从上腔静脉入口到下腔静脉入口之间的透壁病损。 $ \\textcircled{2} $从右心耳基底部内侧向下至三尖瓣环的透壁病损。 $ \\textcircled{3} $从右心房切口的前部和三尖瓣环的透壁病损。完成上述操作后，心脏灌注冷停跳液。切除左心耳，切开房间隔。 $ \\textcircled{4} $分别于左、右肺静脉产生透壁病损。 $ \\textcircled{5} $在此2个透壁病损的上方用直线形透壁病损连接。 $ \\textcircled{6} $从左心耳至环绕左肺静脉的病损做一透壁病损。 $ \\textcircled{7} $从环绕左肺静脉的病损至二尖瓣后瓣环做一透壁病损。 $ \\textcircled{8} $从连接肺静脉至二尖瓣后瓣环的病损中点做一透壁病损返回房间隔。 $ \\textcircled{9} $在\n\n![](page=0,bbox=[118, 153, 159, 192])\n\n冠状静脉窦后方的房间隔上做一透壁病损。 $ \\textcircled{10} $从冠状静脉窦向下进入下腔静脉做一透壁病损。 $ \\textcircled{11} $从冠状静脉窦至三尖瓣后瓣环做最后一透壁病损。\n\n缝合心脏各切口。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肺癌切除术术后吻合口漏的早期识别和处理方案是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 重型病毒性肝炎，包括急性重型、亚急性重型和慢性重型肝炎，原则上以\n\n![](page=0,bbox=[141, 114, 178, 150])\n\n早、中期为好，凝血酶原活动度控制在 $20\\% \\sim 40\\%$ ，血小板 $>5\\times 10^{9} / \\mathrm{L}$ 者为宜，晚期重型肝炎和凝血酶原活动度 $< 20\\%$ 者也可进行治疗，但并发症多见，应慎重。\n\n2. 其他原因引起的肝功能衰竭（包括药物、毒物、手术、创伤、过敏等）。\n\n3. 晚期肝病肝移植围手术期的治疗。\n\n4. 各种原因引起的高胆红素血症（肝内胆汁淤积、术后高胆红素血症等），内科治疗无效者。\n\n5. 临床医师认为适合人工肝支持系统治疗的其他疾病。\n\n## 【禁忌证】\n\n1. 疾病晚期，出现难以逆转的呼吸衰竭、重度脑水肿伴有脑疝等濒危状态。\n\n2. 有严重全身循环功能衰竭。\n\n3. 伴有弥散性血管内凝血状态。\n\n4. 有较重的活动性出血者。\n\n5. 对治疗过程中所用药品如血浆、肝素、鱼精蛋白等高过敏者。\n\n6. 临床医师认为不能耐受治疗的其他情况患者。\n\n## 【操作方法及程序】\n\n1. 人工肝方法的选择国内应用的人工肝技术是包含血浆置换、血液透析、血液滤过、血液/血浆灌流、分子吸附循环系统、连续性血液净化治疗等联合应用治疗重型肝炎的技术和治疗方法。临床医师根据患者病情选择单用或联合应用以上技术。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "全子宫切除术术后出血的临床表现和处理原则是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "直视下，一般导管开口均可直接缝合，少数巨大的开口要用补片闭合。术者持反针用带小垫片的4-0无创伤针线，在肺动脉管腔内从导管开口的下缘进针，穿过开口上缘及肺动脉前壁，出针到血管的外面，同样缝第2针，穿到肺动脉外面的两根针线相互打结。一般缝2个带小垫片的褥式缝线即可将导管开口的大部分闭合，然后恢复正常灌注量，如导管开口的两犄角处漏血，可将血管腔外保留的缝针穿入腔内，再从内向外在局部连续补缝1～2针即可完全止血。肺动脉切口用连续缝法闭合。少数较大的导管开口，不宜直接缝合，剪一小块涤纶片或自体心包片，用4-0或5-0无创伤针线将补片固定在开口上。假如导管开口较小，也可直接连续缝合，最后缝针穿出到肺动脉血管壁外面打结。\n\n在体外循环并行循环下，假如能够解剖出导管的两侧面，并用阻断钳将导管阻断，则可在常规低温体外循环下，切开肺动脉前壁，显露导管的开口，用4-0或5-0无创伤双头针线，从开口的足侧向头侧连续缝合两道，最后缝线穿出血管壁及小垫片，在外面打结，撤掉阻断钳后，在正常灌流量下，如无漏血即可缝闭肺动脉切口。\n\n6. 体外循环下左前外切口（横断胸骨）导管闭合术 本法适用于导管手术后再通、动脉导管及胸主动脉发生钙化、细菌性心内膜炎、导管壁脆弱或局部粘连严重而无法应用常规闭合手术方法者。本法动脉导管显露佳，但心脏插管较困难。所以患者应仰卧位左侧垫高 $60^{\\circ}$ ，左胸前切口，沿第3肋间及切断第4肋骨后段剖胸。切口向右延长，横断胸骨但不进入右胸腔。剖胸后沿左膈神经前方切开心包囊，经右心耳向右心房腔插入1根34号或36号静脉引流管，动脉管插在升主动脉近心端的侧壁上。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱全切术术后常见的神经系统并发症有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "降低脑组织的温度，减缓其代谢速度，脑组织的需氧量下降，在脑灌注停止时减少或避免脑组织缺氧的损害。在大量研究与临床应用中发现，鼻咽温度为 $18\\sim 20^{\\circ}C$ 时，停循环时间超过 $40\\mathrm{min}$ ，脑并发症开始增加，超过 $60\\mathrm{min}$ 显著增加。因此深低温停循环的安全时限通常为 $30\\mathrm{min}$ 。如果温度降至 $15^{\\circ}C$ 时，脑组织耐受缺氧时可达 $60\\mathrm{min}$ 。但降温过程需耗时2h以上，复温则需要更多时间。体外循环时间延长，可造成凝血功能障碍和肺损伤以及低温引起的细胞膜泵功能异常。\n\n选择性脑灌注：分为双侧脑灌注和单侧脑灌注。\n\n双侧脑灌注，体外循环转机并行降温，待鼻咽温适宜时停循环，切开主动脉弓，自右无名动脉开口及左颈总动脉开口插管行双侧脑灌注。日本学者中有主张同时做左锁骨下动脉开口插管，即三支脑灌注。双侧脑灌注供血均匀。但在手术操作范围有多个管道，对操作有一定影响。此外，经头臂血管开口直接插管有可能造成气栓、血栓残渣脱落、夹层内膜撕裂、翻转等引起脑并发症。灌注量为 $10\\sim 30\\mathrm{ml} / (\\mathrm{min}\\cdot \\mathrm{kg})$ 。\n\n右锁骨下动脉插管单侧脑灌注，根据右锁骨下动脉、无名动脉和脑基底动脉环的解剖特点，采用单侧脑灌注，可减少和避免双侧脑灌注的并发症，同时简化了操作。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胰腺十二指肠切除术术后吻合口漏的早期识别和处理方案是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 全身反应：主要表现为头痛、眩晕、乏力、食欲不振、恶心、呕吐等以及血象变化。其反应程度与机体的神经类型、年龄、全身情况等均有关系。一般经对症治疗，并给高蛋白、多种维生素及易消化的饮食，多能继续放疗。\n\n(2) 直肠反应：表现为里急后重，排便疼痛，粘液便，腹泻，便血等。直肠镜检\n\n查可见宫颈水平附近的直肠前壁粘膜充血，水肿。必要时暂停放疗，给予对症治疗，待症状好转后，再恢复照射。\n\n(3) 膀胱反应：表现为尿急、尿频、尿痛、血尿，排尿困难等。经抗炎、止血及对症治疗，症状很快消退，必要时暂停放疗。\n\n## 2. 远期并发症\n\n(1) 放射性直肠炎：多数发生在放疗后半年至一年内，按病变程度分3度。\n\n1) 轻度：主要表现为少量便血。肛查可有触血但无明显水肿。\n\n2) 中度：便血量较多，可有里急后重、粘液血便。肛查有明显触血、水肿、肠壁增厚。\n\n3) 重度：肠管有明显溃疡、狭窄、肠梗阻或直肠阴道瘘形成。\n\n一般轻、中度放射性直肠炎以保守治疗为主，消炎、止血及对症处理，也可用药物保留灌肠。如以便血为主，可每次于灌肠液内加入 1%肾上腺素1ml。关于灌肠液的配方，仅举2例。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肺癌切除术术后常见的神经系统并发症有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. 肠造口缺血坏死 这是一种严重的早期并发症，往往发生在术后 24～ 48h。主要是由于损伤结肠边缘动脉、提出肠管时牵拉张力过大、扭曲及压迫肠系膜血管导致供血不足，或者因造口孔太小或缝合过紧，而影响肠壁血供。坏死皆因缺血所致，所以术后每天，特别是头两天，着意观察造口血运十分重要。缺血坏死可以分为3度：轻度者造口粘膜边缘暗红色或微呈黑色，但范围不超过造口粘膜外1/3，尚未有分泌物增多和异常臭味，造口皮肤无改变。此时应将围绕造口的碘仿纱布拆除，解除所有压迫造口的物品，用外用呋喃西林溶液或生理盐水清洗，生物频谱仪局部照射，每日两次，每次 30min，照射后用呋喃西林溶液或康复新溶液持续湿敷。中度者造口粘膜外中2/3呈紫黑色，有分泌物和异常臭味，但是造口中央粘膜仍呈淡红色或红色，用力摩擦可见粘膜出血。处理同前，待正常部分和坏死部分的表皮组织出现明确界线后，才能着手消除坏死组织，清除坏死组织后造成的缺口可用粉末状或膏状护肤剂进行适当填补，并可促进创口的二期愈合。重度者造口粘膜全部呈漆黑色，有多量异常臭味的分泌物，摩擦粘膜未见出血点，这时造口为严重缺血坏死，宜再行急诊手术，切除坏死肠段，重作肠造口。\n\n3. 肠造口感染 这是最常见的合并症之一，往往是皮肤切口感染，可发生在皮下或较深的腹壁层内，开始潮红、肿痛，继后形成脓肿，部分自行穿破流脓，愈合后形成疤痕，导致造口狭窄。亦有由脓肿演变为瘘管，长期不愈。发现早期感染要清洗和湿敷，加强抗炎治疗，形成脓肿则早期切开引流，消除线头。若已形成瘘管则常需作瘘管切除或重作肠造口。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝切除术术后常见并发症有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 鉴别诊断 CRP可以用来鉴别是细菌感染和病毒感染，检测疾病的活动情况和严重程度。当微生物培养较慢时，CRP的检测可快速（1h）帮助鉴别细菌或病毒的感染。最高水平的CRP可发生在革兰阴性菌感染，可高达 500mg/L，其次为革兰阳性菌，病毒感染通常不超过 50mg/L，一般 CRP>20mg/L可考虑为细菌感染。CRP配合血常规结果更有助于发热原因的分析。\n\n2. 抗生素的合理应用 监测抗生素治疗一段时间后的反应，可为有针对性指导用药提供治疗依据，避免了由于滥用抗生素引起的耐药菌株问题。\n\n3. 用于监控术后感染 如果发生术后并发症，CRP首先增高，常早于临床症状及白细胞增高。术后6d或6d后CRP>75mg/L明显提示有并发症的可能。连续测定CRP可有效观察感染的持续时间和治疗效果。\n\n4. 评估疾病活动性 CRP升高的程度可反应炎症组织的大小或活动性。此外肿瘤发生转移或并发细菌感染时，CRP也会增高。\n\n5. 预后价值 CRP在整个治疗过程中均 $ > 1 0 \\mathrm {m g} / \\mathrm {L} $，提示病人的预后不好。 CRP水平较低或存在降低趋势，提示病人的预后可能较好。\n\n（严静）（审稿人 詹庆元）\n\n## 第三节 前降钙素\n\n前降钙素（PCT）是无激素活性的降钙素（calcitonin，CT）前肽物质，是由116个氨基酸组成、分子质量为13kD的糖蛋白。PCT在体内外稳定性很好。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱全切术术后出血的临床表现和处理原则是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. 结果：有人比较了肺减容手术和肺移植的结果，在6个月内，平均 $ \\mathrm{FEV}_{1} $比术前增加了 79%（肺减容术）、231%（单肺移植）和 498%（双肺移植）。通过6min步行距离测量运动耐量，比术前提高了 28%（肺减容术）、47%（单肺移植）和 79% （双肺移植）。问题是功能改善可以持续多久。一些作者回顾了相关资料：在慢性阻塞性肺疾病患者，肺减容术后 $ \\mathrm{FEV}_{1} $改善的最佳时期是术后6个月，以后则按 15～20ml/年的速度减少，因此，对不适合进行肺移植的患者，肺减容术仍不失为一种治疗的手段；同时，也可以作为肺移植前的过渡性治疗。\n\n6. 死亡率：严格的筛选和围手术期康复治疗已经使呼吸衰竭的发生率保持在相对较低的水平。漏气严重，尤其是当漏气影响到有效换气时，尚须进行再探查手术。一般认为，再探查手术机会VATS比开放性手术少。据1995-1997年开展肺减容手术较多的医疗中心统计结果，手术死亡率在 $5\\% \\sim 10\\%$ ，多数病人死亡是因为呼吸功能不足、肺部感染或心脏并发症。呼吸衰竭通常是由于多种因素而引起，包括：持续漏气、肺部感染、营养不良、右心衰竭及心肌缺血等并发症。最近，有报道手术死亡率在 $5\\%$ 以下，严格的病人选择及熟练的手术操作无疑会带来好的结果。然而，在专业知识缺乏和开展病例较少的单位手术死亡率则会较高。\n\n7. 特殊问题。\n\n（1.）肺减容和肺癌：肺气肿和肺癌都属于常见疾病，两者有可能会并发于同一\n\n![](page=0,bbox=[1384, 108, 1420, 147])\n\n患者。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胰腺十二指肠切除术术后感染的危险因素和预防措施是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 主动脉瓣替换术：术后极易发生瓣周漏，发生率为 14.5%～20%，预后极差。\n\n(2) 主动脉根部替换术：包括Bentall术、Cabrol术和David术，术后发生瓣周漏的概率少。改良Cabrol术不但减轻了冠脉吻合口的张力，降低了假性动脉瘤发生的概率，而且可同时扩大冠脉开口，有可能避免冠状动脉搭桥手术。改良David手术还保留了自体主动脉瓣，避免了抗凝并发症，提高了患者的生活质量。\n\n## 【术后处理】\n\n大动脉炎术后近、远期疗效决定于动脉炎症病变的进展、手术时机和方式的选择以及是否有并发症的发生。积极使用激素和其他抗感染治疗是维护长期疗效的重要因素。\n\n## 【注意事项】\n\n1. 大动脉炎为炎性血管病变，血管组织愈合能力差，严格掌握手术适应证，使用激素控制炎症，并避免感染的发生。\n\n2. 正确选择手术方式，应于相对正常的血管部位完成人工血管吻合。\n\n3. 术中避免周围血管、神经和其他组织的损伤。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胃癌根治术术后疼痛管理的原则和方法有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "## 【注意事项】\n\n1. 食管癌胸腔镜手术适应证的选择十分重要，要注重肿瘤切除的彻底性。\n\n2. 术中注意要点。\n\n(1) 胸腔镜食管癌切除手术应当严防并发症，特别是大血管及周围脏器损伤。\n\n(2) 为了方便上1/3段食管游离和淋巴结清除，术中切断奇静脉是必要的。\n\n(3) 食管游离要从非肿瘤部位开始，尽量不用锐性分离，以防损伤胸导管和周围器官，凡遇到条索组织用钛钉夹闭或电凝后切断。\n\n(4) 在进行下段食管游离时，胸腔镜可移到上胸部前方切口，从下胸部切口插入器械，这样操作更方便。\n\n3. 术后处理与开胸食管癌切除常规处理相同。\n\n### （曲家骐 王 俊 刘 军）\n\n<table border=\"1\"><tr><td>[General Information]</td></tr><tr><td>书名：临床技术操作规范 胸外科学分册</td></tr><tr><td>作者：中华医学会编著</td></tr><tr><td>页数：117</td></tr><tr><td>出版社：北京市：人民军医出版社</td></tr><tr><td>出版日期：2009.10</td></tr><tr><td>简介：《临床技术操作规范·胸外科学分册》是国家卫生部委托中华医学会胸心血管外科学分会组织全国胸外科专家集体编写的权威性临床技术操作规范。全书系统介绍了胸外科基础技术操作及常见胸部疾病的外科治疗以及胸腔镜手术的适应证、禁忌证、术前准备、麻醉、操作方法及程序、注意事项、并发症。本书内容科学、技术实用，可操作性强，对于规范胸外科技术操作，提高医疗质量有重要的指导作用。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "结直肠癌根治术术后早期下床活动的时机和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 治疗。治疗时病人平卧于伽玛刀治疗床上，按照治疗计划书上所给的准直器和三维坐标，通过立体定向架将患者的头部固定在准直器头盔上。在治疗操作控制台设定照射时间，启动治疗开关，伽玛刀放射源主体结构自动开启防护门，移动式治疗床和准直器进入伽玛刀放射源系统。当准直器头盔与放射源系统的固定准直器精确吻合时，治疗即开始。第一个等中心点照射结束，治疗床返回原位，防护门关闭。医师调换下一个等中心点的三维坐标，进行第二等中心点的照射，如此往返这一过程，直至完成所有靶点的治疗。在C型伽玛刀治疗时，医师手控自动摆位系统（APS）按键，先将APS的坐标调整在泊位坐标，然后通过立体定向架将患者的头部固定在APS上并验证治疗时的伽玛角。通过APS手控键，让APS预先运行到每一个靶点的坐标并确认，之后开启控制台的开关，伽玛刀开始治疗。一个靶点照射完毕，治疗床向外移出 $30\\mathrm{cm}$，与此同时APS已开始自动调整三维坐标到下一个等中心点，坐标调整到位，治疗床前进到治疗位置开始第二等中心点的照射，如此往返这一过程，直至完成所有靶点的治疗。治疗结束拆除立体定向架包扎伤口。\n\n5. 治疗后常规给予 20%甘露醇 250ml和地塞米松 5mg静脉滴注，以减轻急性放射反应。多数病人观察一晚，次日出院。\n\n## 第三节 伽玛刀治疗后注意事项\n\n1. 立体定向放射外科优点是治疗后的早期病残率低，缺点为延迟性放射性并发症，如去除AVM病变的潜伏期长达1～3年，这一期间的病人仍然有出血的危险。\n\n2. 如果适应证掌握不当，正常组织受到较大范围照射，剂量过大，会出现不同\n\n的放射不良反应。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "前列腺癌根治术术后吻合口漏的早期识别和处理方案是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td></td><td>分期</td><td>治疗方案</td></tr><tr><td rowspan=\"4\">I期</td><td>IA&lt;20mm分化好的粘膜内癌</td><td>EMR</td></tr><tr><td>其他</td><td>改良根治术</td></tr><tr><td>IB&lt;20mmN1</td><td>改良根治术</td></tr><tr><td>其他T1N1,T2N0</td><td>标准式</td></tr><tr><td rowspan=\"2\">II期</td><td>T1N2,T2N1,T3N0</td><td>标准式</td></tr><tr><td>III A T2N2,T3N1</td><td>标准式</td></tr><tr><td rowspan=\"4\">III期</td><td>III B T3N2</td><td>标准式</td></tr><tr><td>III A T4N0</td><td>扩大切除</td></tr><tr><td>III B T4N1</td><td>扩大切除</td></tr><tr><td>IVA T1-3N3,T4N2,3,M(-)</td><td>扩大切除</td></tr><tr><td rowspan=\"2\">IV期</td><td>IVB M1,PS(0-2)</td><td>化疗、放疗、支持疗法</td></tr><tr><td>症状严重(出血、梗阻、营养不良)</td><td>姑息手术</td></tr></table>\n\n注：Ⅱ、Ⅲ、Ⅳ期胃癌应作术后辅助化疗；\n\nN2的病例是否作D3手术尚无定论，还拟作前瞻性随机研究。\n\n由于目前诊断水平尚难在术中对肿瘤的转移及浸润范围作精确的判别，临床诊断与病理诊断常会有一定差距。也因限于技术"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "全子宫切除术术后常见并发症有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 局麻下心包穿刺术 心包穿刺点可以选择剑突下或心尖。剑突下是经典的心包穿刺点。其优点是不会损伤肺和肋间动脉，避免由此导致的气胸和出血。当壁层心包明显扩大时，心尖部的肺叶被压向后方，心包壁层紧贴胸壁内侧。在一般成年患者，此时皮肤至心包腔的距离不超过常规肌内注射针头的长度。此穿刺点的优点是深度浅，心包腔内粘连轻，心尖无冠状动脉大分支，穿刺针不易损伤冠状动脉和心房等薄弱结构；缺点是可能损伤肺叶或肋间动脉。穿刺时可以将心电监护电极与穿刺针头相连接，根据心电示波的变化判断针尖是否触及心肌。目前临床多采用类似深静脉穿刺置管的“套管针-导丝-导管”的方法，将深静脉导管置\n\n![](page=0,bbox=[1377, 129, 1414, 167])\n\n于心包腔内。此法安全性极高，罕有损伤心脏者，且引流管路直径大，还可以适当保留，延长引流时间。\n\n2. 剑突下心包切开引流术 局麻下打开原胸骨正中切口的下端，经剑突下将手指探入心包腔，吸除心包积液，用手指轻柔地分离尚未机化的纤维间隔，置心包引流管后缝合切口。此方法的优点是无需全麻，操作简单，可在病房、急诊室等地方施行，手术痛苦小。但是，这种方法在拔除引流管后可能再次发生心包积液。如果患者手术后时间较长，心包腔内有紧密粘连，手指非直视下钝性分离，可能损伤右心房、右心室，造成大出血。\n\n3. 经侧胸壁切口行心包切开引流术 全麻气管插管下，在心尖部的胸壁行平行肋间的切口（通常是左侧腋前线第4、5肋间，成人的切口长度在 $10\\mathrm{cm}$ 以内），打开胸腔，切口下便是心包。在膈神经前方行心包开窗，吸除心包积液。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肺癌切除术术后出血的临床表现和处理原则是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(2) 手术方法：切开动脉瘤，显露冠状动脉开口灌注停跳液。清除瘤体内血栓，切除瘤壁，游离出左、右冠状动脉开口使之呈“钮扣”状。切除主动脉瓣以人造瓣膜和人造血管制成的人工组件行根部替换，近心端缝于主动脉瓣环上，用 $6\\times 14$ 双头针带垫片褥式缝法，每个瓣窦缝5个褥式，注意各交界部缝合严密，防止出血；如瓣环组织较牢固，可用连续缝合法，用2-0Prolene分别缝3个窦，最后推入人工组件，注意拉紧缝线，勿撕脱组织环造成出血。在与冠状动脉开口相对部位的人工血管侧壁上各切开 $1.0\\sim 1.5\\mathrm{cm}$ 小洞，用5-0Prolene连续缝合法与冠状动脉开口吻合，先吻合左冠状动脉，后吻合右冠状动脉。如瘤壁组织薄弱，或已形成夹层，则保留瘤壁不要游离冠状动脉开口，直接与人造血管相吻合。一旦术后出血，可将瘤壁包裹并与右心房分流。最后将人造血管远端与升主动脉近端行端-端吻合，用4-0Prolene或3-0Prolene连续缝合，如动脉壁薄弱可用垫片。排气开放主动脉阻断钳，以后处理同升主动脉瘤手术。\n\n## 3. 保留主动脉瓣的根部替换术（David手术）\n\n(1) 基本方法：同前。\n\n(2) 手术方法：对于非原发于主动脉瓣叶及瓣环的主动脉疾患，如主动脉瓣叶正常，可在行主动脉根部替换手术的同时保留主动脉瓣的正常结构和功能，实行保留主动脉瓣的主动脉根部替换术（简称David手术）。该手术能避免换瓣所致的出血、血栓等并发症。根据手术类型，大致可分为DavidI型、DavidⅡ型及在前两型基础上的各种改良术式。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱全切术术后疼痛管理的原则和方法有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "(3) 大动脉外通道直视闭合术：本法适用于主-肺动脉间的管道较细长以及管壁较厚的病例，从动脉外膜表面能大体分清其边界轮廓。在体外循环下，充分游离管道的四周，先切开管道的前壁，通过切口看清管道腔的范围，再用剪刀将管道的后壁剪断。按未闭动脉导管切断缝合术常规，用5-0无创针线先闭合肺动脉侧的残端，再缝合主动脉侧残端。按照上述先后顺序的缝合是必要的，因为首先处理因肺动脉高压而致管壁脆弱的肺动脉，可以避免组织撕破或止血钳滑落的危险。而\n\n![](page=0,bbox=[1359, 139, 1397, 174])\n\n且完成肺动脉残端闭合后，撤除止血钳再缝合主动脉侧残端时操作更为方便。\n\n## 【手术结果】\n\n不合并其他心脏畸形时，本病手术的死亡率很低。影响手术效果的主要因素是肺血管病变程度以及合并其他心脏畸形。\n\n北京阜外心血管病医院1979一2000年收治的21例患者，年龄1.5~14岁，平均6.5岁±3.8岁。除1例经左后外切口结扎PDA和APSD外，余20例患者均经胸骨正中切口在全麻低温体外循环下进行手术。术后早期死亡3例，均为重度肺动脉高压患者。15例患者平均随访4.5年±4.2年，心功能均为I级。\n\n## 【并发症】\n\n1. 出血。\n\n2. 肺动脉高压危象。\n\n## 【术后处理】\n\n同第18章中“动脉导管未闭术后处理”。\n\n![](page=0,bbox=[1362, 143, 1403, 180])\n\n瘘口的大小。右窦瘤的瘘口位置较深，很难在主动脉窦内直接缝合，因此修复手术多需经右心室切口进行。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺切除术术后常见并发症有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "修复二尖瓣裂。浅的（I～Ⅱ度）瓣裂，实际是左心房室隔叶的交界，如经过加压注水试验，瓣叶对合良好，无反流，可不必处理。Ⅲ度瓣裂需要缝合。用5-0无创针线在叶裂的根部缝一牵引线，在提拉牵引线同时用镊子提起叶裂的边缘，仔细看清下面的附着腱索。自瓣裂缘起缝第1针，将缝线打结后再缝第2针，一直缝到叶裂的最末端，每针都要缝在叶裂的边缘组织上。应尽量保存有效瓣叶面积，不宜过多地缝合瓣裂组织，以免缝合后使叶面变形或使下边的腱索缩短，引起狭窄或关\n\n![](page=0,bbox=[97, 155, 136, 193])\n\n闭不全。如瓣环明显扩大或瓣叶之间的间距过宽，可在局部将瓣环缝缩，使瓣叶进一步对合，消除瓣口反流。房室瓣成形术后，将心脏摆在自然的位置，然后从瓣口向左心室深处插入一根细塑料管加压注入生理盐水，观察膨起的瓣叶相对合的状态。如瓣叶之间基本能对合，瓣叶能保持膨起状态，则表明瓣叶成形有效。\n\n闭合原发孔房缺。将涤纶片或用 $0.6\\%$ 的戊二醛浸泡 $30\\mathrm{min}$ 的自体心包片剪成“D”形，补片的直边与二尖瓣环、三尖瓣环缝合。用5-0或4-0无创伤双头针线从间隔嵴上瓣环的中点开始向2个方向连续缝合。为了避免损伤传导系统，缝补片时有2种缝法：$\\textcircled{1}$在室间隔嵴上多缝三尖瓣叶根部组织，少缝二尖瓣叶。当缝针邻近“危险区”时绕开二尖瓣环及冠状静脉窦，使缝线远离危险区，并将冠状静脉窦隔到左心房一边，术后冠脉回流将不受右心房压力的影响。缺损完全闭合前，按常规排尽左心内的气体后，将缝线打结。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肺癌切除术术后应如何监测生命体征和引流情况？"
+        },
+        {
+          "role": "assistant",
+          "content": "(2) 颈前径路：取仰卧位，肩背部垫一软枕使头颈部后仰，头偏向健侧，患侧上肢外展。消毒术野，其范围上至乳突，下至剑突平面，内侧至健侧锁骨中线，外侧至腋中线。采用“L”形颈部切口，先沿胸锁乳突肌前缘向下，在锁骨下方转向水平至同侧胸三角肌沟。切开皮肤后用电刀逐层分离。切断胸锁乳突肌胸骨端，将锁骨端及同侧胸大肌上部止点自锁骨剥离，掀开肌皮瓣，充分显露颈部及颈胸连接部。切断肩胛舌骨肌下腹，切除斜角肌脂肪垫及其内的淋巴结，离断胸骨甲状肌和胸骨舌骨肌后术者用手沿气管食管沟探查同侧上纵隔，确认肿瘤可切除后再切除锁骨的近中1/2。先切断颈静脉，再依次切断至锁骨下静脉的各分支，左侧须结扎胸导管。切断颈内静脉、颈外静脉和颈前静脉远端有利于显露无名静脉的汇合处，缝扎颈内静脉可增加锁骨下静脉的显露。在第1肋斜角肌结节处电刀切断前斜角肌，若肿瘤侵及该肌肉上部则在颈至颈椎体横突附着点处切断。在处理前斜角肌前要注意隐神经的位置，以免造成不必要的损伤，影响术后恢复，要尽量保护。分离锁骨下动脉。切断锁骨下动脉分支以增加其活动度，椎动脉仅当其受侵犯或术前超声多普勒检测无明显颅外阻塞性疾病时方可离断。肿瘤贴附于锁骨下动脉时，可在血管外膜下解剖出；若血管壁受侵，肿瘤切除后血管重建行切断端的端端吻合，也可采用聚四氟乙烯人造血管间置。中斜角肌视肿瘤侵犯情况在其第1肋骨附着点或高位切断，尤其当肿瘤侵及胸廓上口中部时还应切断颈至颈椎体横突后结节的附着点。颈和胸神经根容易被确认并由外向内分离至其汇合成的臂丛下干。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌根治术术后早期下床活动的时机和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "治疗方面的因素包括： $ \\textcircled{1} $治疗的时机。通过Frezza总结的临床各期的5年生存率表明，对于胆囊癌的治疗应争取在Ⅱ期以前进行。Ⅲ期以上的胆囊癌预后一般不佳。 $ \\textcircled{2} $手术治疗方法的选择。手术切缘的阳性与否和肝十二指肠韧带淋巴结是否骨骼化清扫是决定病人5年生存率的至关重要的因素。Oroyama在资料分析后得出，T2期的淋巴结转移已达 $ 33\\% $ ，该期行单纯胆囊切除的5年生存率为 $ 20\\% \\sim 40\\% $ ，根治手术的5年生存率为 $ 80\\% $ 。该期行单纯胆囊切除后化疗未再手术的5年生存率为 $ 19\\% $ ，在单纯胆囊切除后再行根治手术的5年生存率为 $ 61\\% $ 。因此对于T2期胆囊癌病人最合理的治疗方法为根治手术。即肝段切除+肝十二指肠韧带淋巴结骨骼化清扫。对于Ⅲ期以上的病人我们主张进行扩大根治术。对于IV期以上的胆囊癌，仍应考虑积极手术治疗。或在术前应用放、化疗或免疫治疗，待病灶缩小后再考虑手术。对于肝十二指肠韧带淋巴结骨骼化清扫以及胆囊癌扩大根治术，有些医生望而却步，放弃了这些手术操作，是影响胆囊癌的预后的重要原因之一。 $ \\textcircled{3} $是否进行综合治疗。对于中晚期的胆囊癌病人，单一的手术治疗不易达到令人满意的疗效，综合治疗的应用则往往能达到延长生存期，缓解症状的结果。甚至有些晚期病人获得了根治性手术的机会。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺切除手术的适应证和禁忌证有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. 淋巴浆细胞性淋巴瘤（lymphoplasmacytic lymphoma，LPL）本型是小淋巴细胞、浆细胞样淋巴细胞和浆细胞构成的恶性肿瘤，临床少见。多发生于老年人，呈慢性的病程。淋巴浆细胞样淋巴瘤患者可表现外周淋巴结的肿大、肝脾肿大和骨髓侵犯，与小淋巴细胞淋巴瘤的临床表现相似。本亚型可出现慢性荨麻疹、吸收障碍、腹泻。当伴有 IgM 升高、视力的变化和外周神经病变等时，称 Schnitzler 综合征。当伴有单克隆的血清 IgM 升高（>3g/dl）时，本病被称为 Waldenstrom 巨球蛋白血症（Waldenstrom's macroglobulinemia）。IgM 的分子较大，增高时使血液粘稠度增加，产生一些相关的症状，包括严重的疲乏、头痛、视力模糊、精神状态的改变和粘膜出血等，有时称为“高粘综合征”（hyperviscosity syndrome）。有研究认为本型常伴有丙型肝炎病毒感染，也有转化为大细胞淋巴瘤的可能。\n\n4. 结外粘膜相关淋巴组织边缘区B细胞淋巴瘤，粘膜相关淋巴瘤（extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue type, MALT lymphoma）超过 $50\\%$ 的粘膜相关淋巴瘤侵犯胃部，与幽门螺旋杆菌的感染有关，患者可出现消化不良或非特征性的上消化道症状，包括腹痛、疲乏和体重减轻，也可以有慢性失血，B症状不常见。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺癌术后TSH抑制治疗的目标和原则是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>肿瘤类型</td><td>LTH</td><td>GH</td><td>ACTH</td><td>PSH/LH</td><td>FSH</td><td>CgA</td><td>NSE</td><td>KER</td></tr><tr><td>泌乳素细胞</td><td>+</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>+</td><td>+</td></tr><tr><td>生长激素细胞腺瘤</td><td>-</td><td>+</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>+</td></tr><tr><td>促皮质激素细胞腺瘤</td><td>-</td><td>-</td><td>+</td><td>-</td><td>-</td><td>-</td><td>+</td><td>+</td></tr><tr><td>促性腺激素细胞腺瘤</td><td>-</td><td>-</td><td>-</td><td>+</td><td>-</td><td>+</td><td>+</td><td>+/一</td></tr><tr><td>促甲状腺激素细胞腺瘤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>+</td><td>+</td><td>+</td><td>+/一</td></tr></table>\n\n(2) 胃肠道神经内分泌肿瘤：包括类癌、混合型腺癌-内分泌癌、小细胞神经内分泌癌、大细胞性神经内分泌癌，表达NSE、CgA、SY。\n\n(3) 胰腺内分泌肿瘤：包括 $ \\textcircled{1} $胰岛素瘤（Insulin+）；"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺癌靶向治疗的适应证和常用药物有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. 高度进展型淋巴瘤单用CHOP方案疗效不佳，如淋巴母细胞型淋巴瘤建议用BFM-90方案；小无裂Burkitt淋巴瘤建议用CODOX-M/IVAC或hyper-CVAD/MTX-Ara-C方案。正确采用这些高强度治疗方案仍有部分病例可望治愈。\n\n6. 复发进展型或高度进展型病例可用IMVP-16、DHAP、DICE、EPOCH和TT等挽救性方案，争取取得第二次完全缓解后加用干细胞支持下的超大剂量化疗。老年中高度恶性患者多以CHOP为标准治疗方案，B细胞型可考虑加用rituximab。\n\n## 二、外科治疗\n\n诊断性的手术或肿块活检对明确病理类型非常重要。结外的淋巴瘤原发在睾丸、乳腺、甲状腺、腮腺和部分胃肠道特别是容易穿孔者，手术切除后加化疗的综合治疗对提高病人的治愈率有一定的价值。巨脾或脾功能亢进者予以脾切除可能对改善预后有一定的帮助。但应注意，对非霍奇金淋巴瘤来说，全身系统化疗仍是主要治疗手段，一般不主张采用大面积的清扫或造成巨大伤残的根治性手术治疗。\n\n## 三、化学药物治疗\n\n## （一）惰性（低度恶性）淋巴瘤\n\n惰性（低度恶性）淋巴瘤的特征是肿瘤的生物学行为相对惰性，生存期较长。大多数病人诊断时疾病已经是晚期，只有大约 $10\\% \\sim 20\\%$ 的病人是I～Ⅱ期的病人。晚期（Ⅲ～Ⅳ期）患者很少有治愈的希望，治疗通常都是姑息性的。晚期惰性淋巴瘤的标准治疗仍然有争议，从保守的“观察等待”到联合化疗，甚至干细胞移植支持下的大剂量化疗。对CD20（+）的惰性淋巴瘤，特别是滤泡性淋巴瘤，化疗联合抗CD20单抗rituximab可望提高疗效。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺癌的病理分型及各型的临床特点是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "进展型和高度进展型淋巴瘤浅表淋巴结呈进行性不对称无痛性肿大，质韧而有弹性，早期不融合，后期相互融合。结外病变视侵犯部位不同可表现多种多样。咽淋巴环受侵：扁桃体肿大、口咽或鼻咽肿块、呼吸困难。纵隔和胸部器官受累：纵隔淋巴结肿大、上腔静脉压迫综合征、肺浸润、胸腔积液、心包积液。腹腔淋巴结受累：腹痛、腰痛、腹块和大小便困难。消化道粘膜下淋巴组织受累可表现为：腹痛、腹泻、便血、肠梗阻、肠穿孔和吸收不良综合征。肝脾肿大和肝功能异常，多见于晚期病人，可出现疲乏、黄疸等。骨骼病变，则常见于胸椎、腰椎骨，肋骨和颅骨次之，可出现骨痛和病理性骨折。骨髓侵犯，可表现为急淋白血病样骨髓象。皮肤病变：特异性病变发生在真皮内，表现多样化，丘疹、斑疹、浸润性斑块、溃疡、结节、肿块，非特异性病变仅为普通炎症样改变、瘙痒，也可伴发带状疱疹。神经系统病变：头痛、颅内压升高、颅神经瘫痪、脊髓压迫及截瘫。泌尿生殖系统病变：腰痛、肾区肿块、睾丸肿块、子宫和卵巢肿块。\n\n## 1. 进展型淋巴瘤\n\n(1) 弥漫性大B细胞淋巴瘤（diffuse large B-cell lymphoma）这是临床最常见的淋巴瘤类型，可见于各年龄层，中位年龄为55岁。病人可表现为淋巴结肿大或结外侵犯，常见的结外侵犯部位是胃肠道，Waldeyer's环，皮肤，骨髓等，也可侵犯鼻窦，泌尿生殖道，甲状腺和中枢神经系统。临床表现根据不同的起源部位、肿瘤的大小、类型、是否侵犯或压迫邻近器官和临床分期的不同而异。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺手术中喉返神经的保护策略有哪些？"
+        },
+        {
+          "role": "assistant",
+          "content": "甲状腺组织能特异性摄取 $ ^{131}\\mathrm{I} $及 $ ^{99}\\mathrm{m T c O}_{4} $ ，可根据显像情况判断甲状腺位置，形态，大小及甲状腺内的占位病变。可根据吸收锝或碘的功能差异，分成热结节、温结节、冷结节。热结节绝大多数为良性，如功能自主性腺瘤；温结节亦多为良性，如甲状腺瘤、结节性甲状腺肿等；冷结节约1/4为恶性，亦可能为囊腺瘤、亚急性甲状腺炎、桥本病。\n\n## 四、B超检查\n\n根据B超声图像可判断病变发生的部位、大小、物理性质（实性或囊性），亦可为定性提供参考。甲状腺腺瘤多呈圆形或椭圆形，边界清，形状规则，包膜完整，薄厚不一，厚壁多为强回声反射。瘤内以低回声为主，少数为等回声。恶性肿瘤边界不清，内回声不均匀，多呈实质性低弱回声，后方回声减弱，瘤体内常见钙化强回声。\n\n## 五、针吸细胞学检查\n\n本法对定性诊断有一定参考价值，临床已广泛应用。但诊断可靠性取决于穿刺取材技术及阅片经验。甲状腺腺瘤的细胞学表现为瘤细胞较小，其形态一致，排列成滤泡状，核染色质致密，胞浆少，偶见小核仁。乳头状癌，瘤细胞成乳头状排列，核明显畸形，核内可见圆形、大而空亮的包涵体，也可出现酸性合体细胞、砂粒体泡沫细胞，偶见核大小不一，染色质深染，核仁大。滤泡癌与滤泡腺瘤很难鉴别。未分化癌常出现大量瘤巨细胞，核圆或不规则，染色质致密，胞浆嗜酸性多空泡。\n\n## 六、其他检查\n\n## （一）降钙素的检测\n\n对诊断甲状腺髓样癌，观察术后动态变化，确定其复发及转移具有重要参考价值。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺癌术后复发的高危因素和随访策略是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. 肿瘤表面皮肤（肿瘤与皮肤交界处）1~2块。\n\n4. 肿瘤深面乳腺组织和与其毗邻的肌筋膜或胸肌 1~2 块。\n\n5. 其他病变（包括囊肿、结节等）处适量取材。\n\n6. 乳腺无肉眼病变处，四个象限区域各取1块。\n\n7. 乳腺肿瘤的淋巴结。参见上述的“（四）”项“6. 剥离淋巴结”；另参见本节 “四、肿瘤（包括软组织检材）的一般性肉眼检查”和“三十四、淋巴结”。\n\n## 三十、甲状腺\n\n## （一）检材基本类型\n\n1. 切取的小块组织。\n\n2. 穿刺获取的细小组织。\n\n3. 手术切除。\n\n## （二）有关的主要疾病\n\n1. 结节性甲状腺肿。\n\n2. 肿瘤（甲状腺癌等）。\n\n3. 甲状腺炎。\n\n4. 甲状腺功能亢进。\n\n## （三）常用术式\n\n1. 肿物单纯摘除。\n\n2. 腺叶切除。\n\n3. 峡部切除。\n\n4. 次全切除。\n\n5. 全甲状腺切除。\n\n6. 肿物摘除。\n\n## （四）肉眼检查\n\n1. 表面的形状（正常、变形），三维长度，肿大（弥漫型、结节性、肿物突出），质量，色泽，质地（实性、囊性），被膜，囊肿，囊肿破裂，纤维性粘连。\n\n2. 在甲状腺周围的脂肪组织中仔细寻找有无甲状旁腺，参见本节“三十一、甲状旁腺”。\n\n3. 切面。按解剖位置摆好甲状腺后，通过甲状腺检材最宽处纵行切开，然后平行地纵切数面（每面间隔 2~5mm，勿将其底面切断以保持腺体的完整）。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺癌术后甲状旁腺功能减退的预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "纤维肉瘤是较常见的软组织恶性肿瘤，尤其在20世纪80年代以前，纤维肉瘤常列为软组织恶性肿瘤的第一、二位。上海复旦大学肿瘤医院曾报告582例软组织肉瘤中，纤维肉瘤的发病率最高。Russell等分析了1215例各类型的软组织肉瘤，纤维肉瘤居第二位。近年来，由于诊断的改进将梭形细胞构成的肿瘤，诊断又分为恶性纤维组织细胞瘤、恶性神经鞘瘤、纤维型滑膜肉瘤等。另外将以往认为的高分化纤维肉瘤归属于侵袭性纤维瘤病，因此纤维肉瘤的诊断日趋减少，目前有些病理学家甚至认为真性纤维肉瘤并不多见。但临床仍时有此诊断。\n\n## 【临床表现】\n\n纤维肉瘤的多发年龄为 30～55岁，国外中间年龄为45岁，但本院报道214例，平均年龄为38岁。男性高于女性。Scott于1989年报道132例，男性占 61%。本院214例中，男143例，女性71例，男女之比为2：1。纤维肉瘤可发生于全身各部位，但以肢体多见。下肢最多见，其次为躯干、四肢末端，包括前臂及小腿。位于腹膜后、头颈部较少，也有发生于鼻腔、鼻窦、甲状腺、乳房等处的个案报道。\n\n纤维肉瘤缓慢生长，病程长短不等，从数周到数十年，平均为3年余。最长就诊时间长达34年。主要症状系单发性肿块，直径可达十几厘米或更大。下肢及臀部肿瘤常较大，有时巨大纤维肉瘤常累及一侧臀肌，甚至伸入闭孔肌生长，以至于临床体检无法推动整个肿块。此时已经压迫坐骨神经，引起下肢疼痛，行走困难，严重者患肢水肿。表浅性肿块疼痛常不明显，上海复旦大学肿瘤医院197例根治术中，疼痛仅54例（27.4%），而98例（49.7%）为无痛性，其余不详。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺结节的良恶性鉴别诊断流程是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "10. 肾上腺 左、右侧各1块（包括包膜、皮质、髓质）。\n\n## 11. 脑\n\n(1) 非脑病变的病例：取顶叶（包括前后中央回）、基底核（包括豆状核、尾状核、丘脑、内囊）、小脑叶各1块。\n\n(2) 明显局限性病变的病例：在病变处、病变与毗邻脑组织交界处取材。\n\n(3) 弥漫性病变病例：取额叶、顶叶、枕叶、基底核、海马旁回、中脑、脑桥、延髓、小脑、颈髓各1块。\n\n12. 其他 睾丸和卵巢各取1块，垂体、脾脏、甲状腺、子宫颈、子宫内膜各取1块。胸腺、胆囊、膀胱、输尿管、前列腺、睾丸、子宫（包括子宫颈、子宫内膜、子宫肌壁）、输卵管、卵巢、甲状腺、垂体、骨髓、椎骨等，视需要各取1块。\n\n## （二）病变处取材\n\n心、脑以外各器官的病变处取材参见本章第四节。\n\n## 七、尸检的其他事项\n\n尸检组织切片的光学显微镜检查和病理学诊断的形成、尸检记录、尸检诊断报告书及其签发、尸检资料的管理等参见第2章第四节。\n\n## 第四节 病理标本的肉眼检查和组织学切片取材技术\n\n## 一、概述\n\n1. 本节内容适用于活检和尸检标本（检材）的肉眼检查（巨检）和组织学取材。\n\n2. 标本取材可在其固定前或固定后进行。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺全切术后长期管理包括哪些内容？"
+        },
+        {
+          "role": "assistant",
+          "content": "尽管大多数的霍奇金淋巴瘤能被首次的放化疗综合治疗而治愈，仍然有约 20%左右的患者用首次治疗失败， 30%的患者治疗完全缓解后复发。自体干细胞移植支持下的超大剂量化疗已经成为复发患者再次缓解后巩固治疗的选择。而对难治或晚期高危患者（按 IPI $ \\geqslant3 $ 个因素）的治疗，加用超大剂量化疗也有改善预后的希望。\n\n## （三）化疗后的远期毒性\n\n1. 第二种恶性肿瘤 用MOPP方案治愈的霍奇金淋巴瘤患者，特别是并用大面积放射治疗者，发生第二种恶性肿瘤的可能性约为 10% ，包括白血病、非霍奇金淋巴瘤和其他实体瘤。故目前多推荐ABVD方案为霍奇金淋巴瘤治疗的一线方案，特别是年轻的患者或儿童。\n\n2. 性腺功能障碍 MOPP或COPP方案治疗后性腺功能障碍也很常见，男性患者治疗后出现精子缺乏，女性病人表现为闭经。ABVD方案治疗后性腺功能障碍较轻，多可恢复。\n\n3. 其他 包括甲状腺功能低下、心肌病、缺血性心脏病等。博莱霉素可致肺纤维化，并用胸部放疗者尤为明显。ABVD方案引起的心肺功能障碍较 MOPP方案多见。儿童患者放疗后可能影响局部肌群或骨骼发育障碍。\n\n## 四、放射治疗\n\n高能放射治疗如能覆盖所有受侵犯部位，对霍奇金淋巴瘤有治愈效果。治疗失败的主要原因为遗漏本病累及的某些部位。由于高剂量放疗的毒性以及化学治疗疗效的进步，目前多提倡放化疗结合的综合治疗，单纯放疗已少用，而剖腹分期手术也基本上被放弃。\n\n1. 单纯放疗 IA期无预后不良因素（年龄 $ \\geqslant $50岁、巨大肿块、血沉升高、"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "分化型甲状腺癌术后放射性碘治疗的适应证是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 次全切除。\n\n5. 全甲状腺切除。\n\n6. 肿物摘除。\n\n## （四）肉眼检查\n\n1. 表面的形状（正常、变形），三维长度，肿大（弥漫型、结节性、肿物突出），质量，色泽，质地（实性、囊性），被膜，囊肿，囊肿破裂，纤维性粘连。\n\n2. 在甲状腺周围的脂肪组织中仔细寻找有无甲状旁腺，参见本节“三十一、甲状旁腺”。\n\n3. 切面。按解剖位置摆好甲状腺后，通过甲状腺检材最宽处纵行切开，然后平行地纵切数面（每面间隔 2~5mm，勿将其底面切断以保持腺体的完整）。观察： $ \\textcircled{1} $甲状腺包膜（完整、厚度）； $ \\textcircled{2} $囊肿、结节、肿瘤的数目，大小，部位，与切缘的距离，色泽，实性、囊性、囊-实性（两者比例），纤维化，侵犯包膜，浸润范围； $ \\textcircled{3} $囊壁光滑、乳头样物及其所占比例，囊内容：胶样物、出血、坏死、钙化。\n\n## （五）切片取材\n\n(1) 弥漫型或炎性病变：每叶3块，峡部1块。\n\n(2) 囊性肿物：光滑性囊壁1块，囊壁粗糙（乳头状生长）处酌量取材（至少1～ 2块）；取材应包括囊周甲状腺组织。\n\n(3) 实性肿物： $ \\textcircled{1} $直径 $ < 5\\mathrm{cm} $者，应全周长取材（包括了肿物的整个边界）。 $ \\textcircled{2} $直径 $ > 5\\mathrm{cm} $者，其直径每增加1cm增加1块取材。应有尽量多的取材包括肿物的包膜（或边缘）及其周围组织。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肺癌化疗期间常见不良反应有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "2) 常用的抗痫药物包括卡马西平（100mg，口服，每日3次）、苯妥英钠（100mg，口服，每日3次）和德巴金（500mg，口服，每日2次，数天后血药浓度达到有效范围后可改为每日1次）。\n\n3) 手术结束前30分钟即开始抗癫痫治疗。\n\n4) 术前无癫痫者，术后视情况口服抗癫痫药 $3\\sim 6$ 个月，如术后出现癫痫者服用 $6\\sim 12$ 个月，如手术前后均有发作者则服用 $1\\sim 2$ 年。\n\n5) 原则上以一种抗癫痫药物为主，联合用药时不同抗癫痫药物间可出现拮抗作用。\n\n6) 用药期间注意相关药物的不良反应，如皮疹、肝功能损害、血细胞下\n\n降等。长期用药时每月至少定期复查一次相关指标。\n\n7) 停药时应逐渐减量。\n\n3. 放射治疗 回顾性研究显示放射治疗可以延长肿瘤未完全切除的病人的缓解期和生存期。因此术后放射治疗是必要的，具体放射治疗计划最好由放射科医师制定。\n\n4. 化疗 通常情况下到肿瘤发展时才采用（表3-3），PCV（procarbazine，CCNU和长春新碱）常可在一定程度上控制肿瘤的生长。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "宫颈癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>药物种类</td><td>药物名称</td><td>剂量(mg)</td><td>间隔时间</td></tr><tr><td rowspan=\"2\">抗抑郁类</td><td>阿米替林</td><td>10~50</td><td>hs</td></tr><tr><td>去甲替林</td><td>10~50</td><td>hs</td></tr><tr><td rowspan=\"2\">抗惊厥类</td><td>卡马西平(酰胺咪嗪)</td><td>100</td><td>bid</td></tr><tr><td>丙戊酸</td><td>250</td><td>bid</td></tr><tr><td rowspan=\"2\">皮质类固醇</td><td>泼尼松</td><td>5~60</td><td>qd</td></tr><tr><td>地塞米松</td><td>0.75~8</td><td>qd</td></tr></table>\n\n1. 皮质类固醇 对臂丛、腰骶丛疼痛与阿片类合用效果良好。对肝转移及内脏转移的牵拉痛，头颈、腹部、盆腔肿瘤的浸润性酸痛及脉管阻塞的胀痛亦有效。与非甾体类抗炎药合用要注意副作用的叠加问题。\n\n2. 抗惊厥药 对神经损伤致撕裂痛及烧灼痛有效，如臂丛、骶丛、带状疱疹引起的疼痛，化疗药外漏所致疼痛。\n\n3. 抗抑郁药 增加阿片类药物的镇痛效果或有直接镇痛作用，对神经痛特别是持续的灼痛更有效。改善心情，对神经源性疼痛效佳。\n\n4. NMDA受体拮抗剂 NMDA受体和疼痛的传递与调节有密切关系。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "骨肉瘤化疗期间常见不良反应有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. 有严重伴随病（如心脏病、高血压、糖尿病等）患者；\n\n6. 有明确诊断的精神病患者。\n\n## （二）单药化疗\n\n到目前为止已评价20多种药物治疗食管癌的疗效（表5-3-1）。其中DDP、 5-FU、TAX、MTX是治疗食管癌仍有发展潜力的药物。主要适用于治疗食管鳞癌。近年来随着发达国家食管腺癌发病率的增加，新型抗肿瘤化疗药如 Taxol、CPT-11等的单药临床试验，包括了一定数量的食管腺癌。这些药物对食管癌只表现出中度抗瘤活性，很少有获完全缓解者，且缓解期较短。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "抗肿瘤药物的配伍禁忌和输液顺序有哪些注意事项？"
+        },
+        {
+          "role": "assistant",
+          "content": "$ \\textcircled{2} $芬太尼透皮贴剂的初始剂量滴定：芬太尼透皮贴剂 $ 2 5 \\mu\\mathrm{g} / \\mathrm{h} $，同时口服即释吗啡 $ 1 0 \\mathrm{m g} \\mathrm{q 4 h} \\times2 $次。用芬太尼透皮贴剂治疗期，备用即释吗啡，用于滴定剂量或突发性疼痛的解救治疗。\n\n4) 阿片类药物等效剂量换算：见附录1。\n\n4. 戒断症状的预防 当患者突然停用阿片类药物或从口服吗啡换用芬太尼透皮贴剂治疗时，患者出现寒战、出汗、恶心、呕吐、腹部绞痛和腹泻等症状称\n\n戒断症状。\n\n预防方法：如需减少或停用阿片类药物，则采用逐渐减量法，即先减量 30%。2d后再减少 25% ，直到每天剂量相当于口服 30mg 吗啡的药量，继续服用2d后即可停药。\n\n如从吗啡换用芬太尼透皮贴剂治疗，则需在使用芬太尼透皮贴剂时以吗啡原用剂量同时使用 6~12h，方可停用吗啡。\n\n## 【辅助用药】\n\n辅助用药可用于癌痛三阶梯治疗的任何一个阶段。它还可针对特殊类型疼痛产生独特的效果。常用止痛治疗的辅助药物见表12-1-1及表12-1-2。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝癌标准化疗方案包括哪些药物？各自的剂量和给药方式是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>药物</td><td>常用剂量(mg/d)</td><td>途径</td><td>适应证</td><td>主要不良反应</td></tr><tr><td>皮质醇类</td><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">地塞米松</td><td>16~36</td><td>静注</td><td>脑转移,脊髓压迫,脉管阻塞性疼痛</td><td>体重增加,胃溃疡,高血压,水肿,易感染,兴奋,情绪不稳定</td></tr><tr><td>2~4</td><td>口服</td><td>改善食欲和心情</td><td></td></tr><tr><td>抗惊厥药</td><td></td><td></td><td></td><td></td></tr><tr><td>卡马西平</td><td>300~600</td><td>口服</td><td>神经损伤撕裂痛,放电样痛,烧灼痛,化疗药外漏或外渗所致疼痛</td><td>头昏,困倦,视力模糊,复视,平衡障碍,脊髓抑制,肝损害,皮疹</td></tr><tr><td>抗抑郁药</td><td></td><td></td><td></td><td></td></tr><tr><td>阿米替林</td><td>25~250</td><td>口服</td><td>增强阿片类药效,改善心情</td><td>口干,便秘,视物不清,排尿困难,心动过速</td></tr><tr><td>多虑平</td><td>25~200</td><td>口服</td><td>增强阿片类药效,改善心情</td><td>少见(偶见)纳差、不安、失眠</td></tr><tr><td>NMDA受体拮抗剂</td><td></td><td></t"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "脑胶质瘤靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "到目前为止已评价20多种药物治疗食管癌的疗效（表5-3-1）。其中DDP、 5-FU、TAX、MTX是治疗食管癌仍有发展潜力的药物。主要适用于治疗食管鳞癌。近年来随着发达国家食管腺癌发病率的增加，新型抗肿瘤化疗药如 Taxol、CPT-11等的单药临床试验，包括了一定数量的食管腺癌。这些药物对食管癌只表现出中度抗瘤活性，很少有获完全缓解者，且缓解期较短。\n\n<div align=\"center\">\n\n表5-3-1 食管癌的单药化疗疗效\n\n### </div>\n\n<table border=\"1\"><tr><td>药物</td><td>病人总数</td><td>有效人数(率)</td></tr><tr><td>阿霉素(ADM)</td><td>38</td><td>7</td></tr><tr><td>博莱霉素(BLM)</td><td>81</td><td>24(30%)</td></tr><tr><td>平阳霉素(PYM)</td><td>19</td><td>4(21%)</td></tr><tr><td>匹来霉素(PLM)</td><td>10</td><td>2(20%)</td></tr><tr><td>丝裂霉素(MMC)</td><td>58</td><td>15(26%)</td></tr><tr><td>卡铂(CBP)</td><td>30</td><td>2</td></tr><tr><td>顺铂(DDP)</td><td>231</td><td>56(24%)</td></tr><tr><td>Nedaplatin(NDP)</td><td>40</td><td>10(25%)</td></tr><tr><td>足叶乙甙(VP-16)</td><td>46</td><td>5(11%)</td></tr><tr><td>异环磷酰胺(IFO)</td><t"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "骨肉瘤标准化疗方案包括哪些药物？各自的剂量和给药方式是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>药物</td><td>作用持续时间(h)</td><td>适应证</td><td>剂量</td><td>等效剂量</td><td>剂型</td><td>副作用</td><td>药物相互作用</td></tr><tr><td>哌替啶</td><td>2~3</td><td>重度疼痛</td><td>对慢性癌痛无标准剂量</td><td>75mg sc=吗啡10mg sc,300mgpo=吗啡30mgpo</td><td>片剂,针剂</td><td>与其他阿片类药物相似,便秘轻微,因去甲哌替啶的蓄积产生中枢神经系统中毒症状,焦躁,震颤,肌阵挛,癫痫</td><td>与单胺氧化酶抑制剂合用:兴奋,高热,癫痫;吩噻嗪可增加哌替啶毒性</td></tr><tr><td>曲马多</td><td>4~6</td><td>轻至中度疼痛</td><td>50~100mgpo q4~6h或100~200mgsr(缓释剂)poq12h</td><td>80mg sc=吗啡30mg sc,120mgpo=吗啡30mgpo</td><td>片剂,胶囊、缓释片剂,水剂,针剂</td><td>与可待因相似,但便秘较轻微</td><td></td></tr><tr><td>芬太尼</td><td>0.5~1h(胃肠外),72h(经皮)</td><td>中至重度疼痛,不能口服用药,无法耐受吗啡,肾功衰竭</td><td>起始剂量的计算根据使用前24h口服吗啡的量或相当于此吗啡量的其他药物用量</td><td>0.1mg sc=吗啡10mg sc,2.5mg经皮(td)=吗啡50mgpo</td><td>针剂,经皮贴剂</td><td>与吗啡相似,但便秘发生率明显低于吗啡</td><td></td></tr><tr><td>氢吗啡酮</td><td>3~4<"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "化疗后骨髓抑制的分级标准和处理原则是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>姓名</td><td>年龄</td><td>住院号</td><td>WD-18编号</td></tr><tr><td>诊断</td><td></td><td>治疗开始日期</td><td>治疗结束日期</td></tr><tr><td colspan=\"2\">治疗日期 第次</td><td colspan=\"2\">治疗日期 第次</td></tr><tr><td colspan=\"2\">治疗方式</td><td colspan=\"2\">治疗方式</td></tr><tr><td colspan=\"2\">宫腔阴道组织间其他</td><td colspan=\"2\">宫腔阴道组织间其他</td></tr><tr><td colspan=\"2\">容器放置过程</td><td colspan=\"2\">容器放置过程</td></tr><tr><td colspan=\"2\">宫腔位置</td><td colspan=\"2\">宫腔位置</td></tr><tr><td colspan=\"2\">阴道塞子(有无防护)治疗长度cm</td><td colspan=\"2\">阴道塞子(有无防护)治疗长度cm</td></tr><tr><td colspan=\"2\">其它阴道容器</td><td colspan=\"2\">其他阴道容器</td></tr><tr><td colspan=\"2\">针</td><td colspan=\"2\">针</td></tr><tr><td colspan=\"2\">麻醉表局浸全身无</td><td colspan=\"2\">麻醉表局浸全身无</td></tr><tr><td colspan=\"2\">程序码</td><td colspan=\"2\">程序码</td></tr><tr><td colspan=\"2\">治疗经过</"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "免疫检查点抑制剂在黑色素瘤治疗中的应用和不良反应管理？"
+        },
+        {
+          "role": "assistant",
+          "content": "4) 术前无癫痫者，术后视情况口服抗癫痫药 $3\\sim 6$ 个月，如术后出现癫痫者服用 $6\\sim 12$ 个月，如手术前后均有发作者则服用 $1\\sim 2$ 年。\n\n5) 原则上以一种抗癫痫药物为主，联合用药时不同抗癫痫药物间可出现拮抗作用。\n\n6) 用药期间注意相关药物的不良反应，如皮疹、肝功能损害、血细胞下\n\n降等。长期用药时每月至少定期复查一次相关指标。\n\n7) 停药时应逐渐减量。\n\n3. 放射治疗 回顾性研究显示放射治疗可以延长肿瘤未完全切除的病人的缓解期和生存期。因此术后放射治疗是必要的，具体放射治疗计划最好由放射科医师制定。\n\n4. 化疗 通常情况下到肿瘤发展时才采用（表3-3），PCV（procarbazine，CCNU和长春新碱）常可在一定程度上控制肿瘤的生长。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "食管癌标准化疗方案包括哪些药物？各自的剂量和给药方式是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "4) 阿片类药物等效剂量换算：见附录1。\n\n4. 戒断症状的预防 当患者突然停用阿片类药物或从口服吗啡换用芬太尼透皮贴剂治疗时，患者出现寒战、出汗、恶心、呕吐、腹部绞痛和腹泻等症状称\n\n戒断症状。\n\n预防方法：如需减少或停用阿片类药物，则采用逐渐减量法，即先减量 30%。2d后再减少 25% ，直到每天剂量相当于口服 30mg 吗啡的药量，继续服用2d后即可停药。\n\n如从吗啡换用芬太尼透皮贴剂治疗，则需在使用芬太尼透皮贴剂时以吗啡原用剂量同时使用 6~12h，方可停用吗啡。\n\n## 【辅助用药】\n\n辅助用药可用于癌痛三阶梯治疗的任何一个阶段。它还可针对特殊类型疼痛产生独特的效果。常用止痛治疗的辅助药物见表12-1-1及表12-1-2。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "化疗药物外渗的预防措施和应急预案是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>因子</td><td>Log危险比率</td><td>P值</td><td>相对危险性</td></tr><tr><td>血清白蛋白&lt;4g/dl</td><td>0.40±0.10</td><td>&lt;0.00</td><td>1.49</td></tr><tr><td>血红蛋白&lt;10.5g/dl</td><td>0.30±0.11</td><td>0.006</td><td>1.35</td></tr><tr><td>男性</td><td>0.30±0.09</td><td>0.001</td><td>1.35</td></tr><tr><td>临床IV期</td><td>0.23±0.09</td><td>0.011</td><td>1.26</td></tr><tr><td>年龄≥45岁</td><td>0.33±0.10</td><td>0.001</td><td>1.39</td></tr><tr><td>白细胞计数≥15000/mm3</td><td>0.34±0.11</td><td>0.001</td><td>1.41</td></tr><tr><td>淋巴细胞计数&lt;600/mm3或&lt;白细胞计数8%</td><td>0.31±0.10</td><td>0.002</td><td>1.38</td></tr></table>\n\n注：危险比率和相对危险性都是相对于没有该项危险因子而言\n\n## 【治疗方案及原则】\n\n霍奇金淋巴瘤的治疗包括放射治疗、化疗和造血干细胞移植。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "膀胱癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td rowspan=\"2\">预后因素</td><td colspan=\"4\">评分</td></tr><tr><td>0</td><td>1</td><td>2</td><td>4</td></tr><tr><td>年龄(岁)</td><td>≤39</td><td>&gt;39</td><td></td><td></td></tr><tr><td>先行妊娠</td><td>葡萄胎</td><td>流产</td><td>足月产</td><td></td></tr><tr><td>病程(月)</td><td>&lt;4</td><td>4~6</td><td>7~12</td><td>≥13</td></tr><tr><td>HCG(IU/L)</td><td>&lt;10^{3}$</td><td>$10^{3}\\sim 10^{4}$</td><td>$10^{4}\\sim 10^{5}$</td><td>$≥10^{5}$</td></tr><tr><td>肿瘤大小(cm)</td><td></td><td>&lt;5</td><td>≥5</td><td></td></tr><tr><td>转移部位</td><td></td><td>脾、肾</td><td>消化道</td><td>肝、脑</td></tr><tr><td>转移个数</td><td></td><td>1~4</td><td>5~8</td><td>&gt;8</td></tr><tr><td>以前化疗</td><td></td><td></td><td>单一药</td><td>二药以上</td></tr></table>\n\n## 第二节 治疗\n\n## 一、治疗原则\n\n侵蚀性葡萄胎和早期绒癌，一般单用化疗即可得到根治。晚期和耐药绒癌则以全身化疗为主，配合局部"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "甲状腺癌化疗期间常见不良反应有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 戒断症状的预防 当患者突然停用阿片类药物或从口服吗啡换用芬太尼透皮贴剂治疗时，患者出现寒战、出汗、恶心、呕吐、腹部绞痛和腹泻等症状称\n\n戒断症状。\n\n预防方法：如需减少或停用阿片类药物，则采用逐渐减量法，即先减量 30%。2d后再减少 25% ，直到每天剂量相当于口服 30mg 吗啡的药量，继续服用2d后即可停药。\n\n如从吗啡换用芬太尼透皮贴剂治疗，则需在使用芬太尼透皮贴剂时以吗啡原用剂量同时使用 6~12h，方可停用吗啡。\n\n## 【辅助用药】\n\n辅助用药可用于癌痛三阶梯治疗的任何一个阶段。它还可针对特殊类型疼痛产生独特的效果。常用止痛治疗的辅助药物见表12-1-1及表12-1-2。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤化疗药物的剂量调整原则是什么？肝肾功能不全时如何调整？"
+        },
+        {
+          "role": "assistant",
+          "content": "关于胆囊癌术前放射治疗的报道较少。尽管有报道放疗可缓解症状及延长生存期，但大多数报道涉及病例少，而且都只作为辅助治疗。因此目前还需进行进一步的有权威性的大宗病例的研究调查。还存在的另一个问题是精确地判断肿瘤的大小和累及的范围较为困难，因此不能正确地控制放疗的剂量。因此，开展术中局部放疗将是一种更为安全、合理的辅助性的治疗方法。照射范围应包括手术切面、肝十二指肠韧带和可疑有残留癌组织的部位。目前较多采用的是术后放疗，放疗范围应包括原发灶和区域淋巴结。首先在术中明确肿瘤的部位及大小，并放置金属夹作为术后放疗的引导。术后一般外部照射4～5周，每周5d，每天一次，每次 $1.8\\sim 2.0\\mathrm{Gy}$ ，总剂量约为 $40\\sim 50\\mathrm{Gy}$ 。综合各家术后放疗结果报道，接受术后放疗的病人中位生存期均高于对照组，尤其是对于TNMⅢ、IV期或非根治性切除的病例，相对疗效更为明显。\n\n## （四）介入治疗\n\n主要用于手术无法切除的晚期病例。经股动脉插管行超选择性动脉内灌注化疗药物，对胆囊癌的治疗有一定的疗效。具体方法是通过选择性腹腔动脉造影，将导管插入肝总动脉，30min内持续输注丝裂霉素20mg，每隔6周重复一次。从第二次起，每次丝裂霉素剂量为 $10\\sim 15\\mathrm{mg}$ ，至少进行5～7次治疗，总剂量为 $75\\sim 85\\mathrm{mg}$ 。高选择性动脉内化疗对局限于胆囊壁的肿瘤效果好，当癌肿侵犯胆囊壁以外时，插管化疗的效果大大下降。有报道经动脉内注射丝裂霉素化疗，胆囊癌病人的中位生存期达14个月，而对照组为5个月。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>消毒方法</td><td>操作程序</td></tr><tr><td rowspan=\"5\">清洗机</td><td>(1)预洗4min</td></tr><tr><td>(2)清洗:$\\textcircled{1}$35℃药洗3min;$\\textcircled{2}$70℃清洗</td></tr><tr><td>(3)漂洗:分2次热洗各2min</td></tr><tr><td>(4)漂洗热消毒烘干93℃热值3000,烘干19min,温度从95~65</td></tr><tr><td>(5)保存备用</td></tr><tr><td rowspan=\"4\">化学消毒法</td><td>(1)0.2%过氧乙酸(过醋酸)浸泡1h</td></tr><tr><td>(2)无菌蒸馏水冲洗晾干</td></tr><tr><td>(3)放入甲醛与高锰酸钾熏箱内熏蒸4h</td></tr><tr><td>(4)消毒后挥发气味保存备用</td></tr><tr><td rowspan=\"3\">高压蒸气法</td><td>(1)适用于耐高温耐高压物品</td></tr><tr><td>(2)先将管路清洁</td></tr><tr><td>(3)高压蒸气灭菌后保存备用</td></tr><tr><td rowspan=\"3\">戊二醛灭菌柜熏蒸法</td><td>(1)先将物品清洁晾干</td></tr><tr><td>(2)2%强化戊二醛灭菌柜熏蒸5h</td></tr><tr><td>(3)熏蒸后挥发气味保存备用</td></tr></table>\n\n## 【注意事项】\n\n1. 呼吸机清洁维护应定岗定人。\n\n2. 用后及时清洁保养。\n\n3. 清洁消毒后应保证安装正确，正常运转备用状态。\n\n4. 根据呼吸机各部件材质选择合适的消毒方法。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "前列腺癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "非药物治疗：自我控制疼痛、父母双亲关怀、视觉意想催眠法、理疗法、触摸法、冷敷、牵引术等。儿童癌痛治疗还可以根据患儿的具体情况给予非药物治疗及心理治疗等辅助性止痛治疗。药物止痛治疗与非药物止痛治疗相结合，可能更有效地控制疼痛。分散注意、引起注意、形象化的描述、放松和行为治疗等辅助治疗技术，不仅可以让患儿逐步适应及配合止痛治疗，而且还可以减轻患儿的焦虑等合并症。抗癌治疗可能从根本上缓解疼痛，但是某些创伤\n\n性抗癌治疗本身也会导致疼痛。对于癌症疼痛的儿童，应尽量避免或减少医疗治疗本身可能引起的疼痛。对于临终期癌症疼痛的儿童，应尽可能减轻患儿的疼痛及所有痛苦症状。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 肿瘤专业工作者已共同关注和正在从事的工作 肿瘤的姑息治疗手段的实施，如非根治性内科、外科、放疗科、介入科、中医药、同位素等治疗。加之近年迅速发展的分子靶向治疗、逆转恶性细胞表型、诱导分化、促进凋亡等。\n\n肿瘤伴随或治疗所致的并发症及症状的诊断、评估、预防和治疗，如上腔静脉综合征、深静脉血栓、高钙血症、骨髓抑制、肿瘤脏器转移等。\n\n非癌性躯体疾病的诊治。\n\n2. 癌痛控制与症状处理是被肿瘤医生忽视，但又必须强调的内容：\n\n(1) 癌痛的控制：相信患者的主诉，还患者以无痛的权利。了解癌症的诊治过程，疼痛的原因、性质、强度。遵循规范化疼痛处理的原则，相信正确地选择治疗手段与药物，正确的时间给药，正确的滴定剂量，正确地选择辅助用药， $90\\%$ 以上的癌痛可以根除。相信阿片类止痛药是控制中、重度癌痛不可替代的药物。这样就能达到有效的消除疼痛，限制药物的不良反应，将疼痛及治疗带来的心理负担降到最低，最大限度地提高患者生活质量的目的。这是WHO对癌痛治疗的政策和指南，国际已证实了癌症疼痛三阶梯止痛原则的正确性、有效性和可行性。近8\n\n年来我国同道也发表了很多文章，对阿片类药物的个体化治疗、药物剂量的滴定、不良反应的处理、治疗前后对疼痛的评价等有了进一步体会。如近二年连续发表了二篇多中心协作的文章。分别对3791位及941位接受芬太尼透皮贴剂治疗的中、重度癌痛患者进行了观察。发现用药后1d疼痛开始减轻，6d则疼痛稳定，15d则 $96.8\\%$ 患者达中度以上缓解。多数患者用药剂量在 $50\\mu \\mathrm{g / h}$ 以下，且生活质量也有改善。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "铂类药物在肾癌化疗中的应用和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "预防方法：如需减少或停用阿片类药物，则采用逐渐减量法，即先减量 30%。2d后再减少 25% ，直到每天剂量相当于口服 30mg 吗啡的药量，继续服用2d后即可停药。\n\n如从吗啡换用芬太尼透皮贴剂治疗，则需在使用芬太尼透皮贴剂时以吗啡原用剂量同时使用 6~12h，方可停用吗啡。\n\n## 【辅助用药】\n\n辅助用药可用于癌痛三阶梯治疗的任何一个阶段。它还可针对特殊类型疼痛产生独特的效果。常用止痛治疗的辅助药物见表12-1-1及表12-1-2。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "卵巢癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "7) 停药时应逐渐减量。\n\n3. 放射治疗 回顾性研究显示放射治疗可以延长肿瘤未完全切除的病人的缓解期和生存期。因此术后放射治疗是必要的，具体放射治疗计划最好由放射科医师制定。\n\n4. 化疗 通常情况下到肿瘤发展时才采用（表3-3），PCV（procarbazine，CCNU和长春新碱）常可在一定程度上控制肿瘤的生长。\n\n### <div align=\"center\">\n\n表3-3低级别星形细胞瘤化疗药物及其作用机制\n\n### </div>\n\n<table border=\"1\"><tr><td></td><td>化疗药物</td><td>作用机制</td></tr><tr><td>A</td><td>亚硝基脲：卡莫司汀（BCNU），CONU（lomustine），ACNU（nimustine）</td><td>DNA交联，氨基团甲基化</td></tr><tr><td>B</td><td>烷基化（甲基化）药物：甲（基）苄肼，替莫唑胺</td><td>DNA碱基化，干扰蛋白合成</td></tr><tr><td>C</td><td>卡铂，顺铂</td><td>通过链内交联产生螯合作用</td></tr><tr><td>D</td><td>氮芥：环磷酰胺，isofamide，癌得星</td><td>DNA碱基化，正碳离子形成</td></tr><tr><td>E</td><td>长春花生物碱：长春新碱，长春碱，紫杉醇</td><td>微管功能抑制剂</td></tr><tr><td>F</td><td>epidophyllotoxins（ETOP-oside，VP16，替尼泊昔，VM26）</td><td>拓扑异构酶Ⅱ抑制剂</td></tr><tr><td>G</td><td>topotecan，irinotecan（CPT-11）</td><td>拓扑异构酶Ⅰ抑制剂</td"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "食管癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. 定位扫描。立体定向架的矩形框上有4个小圆孔，通过这些圆孔和固定卡扣将定位盒固定在立体定向架上，然后让病人仰卧于MRI或CT的移动床上，定向架置于定位适配器的卡坐上，最后进行MRI或CT扫描。根据病变的性质和部位可选择CT、MRI或DSA作为伽玛刀术前定位方式。肿瘤病灶多选用MRI定位，但是当肿瘤位于顶叶、枕叶或额叶上部也可选用CT定位。MRI定位优点是无金属伪影，病灶与周围组织的边界清晰。AVM多选用CT+DSA或MRI+DSA联合定位。CT和MRI的扫描层厚为 $2\\sim 3\\mathrm{mm}$ 。在CT、MRI和DSA定位片上除了显示病灶和邻近的正常组织外，还显示用于确定靶点和颅内三维空间位置\n\n![](page=0,bbox=[136, 145, 173, 180])\n\n的定位参考标志点。\n\n3. 剂量计划。过网络、光磁盘或扫描仪将定位片（CT、MRI或DSA片）输入到LGP内。在LGP上设定剂量矩阵范围、照射时的角度、等剂量曲线。然后选择不同直径准直器设计剂量计划。在LGP上设计的照射范围直接叠加在定位图像内的病灶上，在定位片上清晰看到设计的照射范围与病灶的吻合程度，调整照射靶点坐标，使伽玛刀照射范围与颅内病灶的形态基本吻合一致，然后根据病变性质、病灶大小以及病灶周围结构制定中心剂量和周边剂量。根据病灶大小可使用一个等中心点（照射点）或多个等中心点，通常选用 $50\\%$ 的等剂量曲线覆盖病灶的周边。剂量计划设计完毕，计算机将打印出一份包括照射剂量、每一照射等中心点所使用的准直器、三维坐标、照射时间等内容的治疗计划书。\n\n4. 治疗。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "卵巢癌新辅助化疗和辅助化疗的适应证和时机选择有何不同？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. 顺铂(cisplatin）能和DNA形成分子内或分子间形成共价交联，在复制的过程中导致DNA链的断裂。抗瘤谱广，用于各种实体瘤和淋巴瘤。常用剂量为每疗程 $80\\sim 160\\mathrm{mg / m^2}$ ，将该剂量分为每天静脉滴注，比一次性静脉滴注能使病人对该剂量的耐受性提高。肌酐清除率 $< 60\\mathrm{ml / min}$ 时，应减少剂量。肾脏和外周神经损害限制了剂量的提高，骨髓抑制作用不明显。恶心、呕吐常见。卡铂（caboplatin）是顺铂的衍生物，其肾毒性和消化道反应较顺铂轻，骨髓抑制制作\n\n用较顺铂大。\n\n4. 丝裂霉素C（mitomycin C）属于抗肿瘤抗生素，抑制DNA和RNA合成。常用于胃癌和胰腺癌，也可用于肝癌。常用剂量为每 6~8周 10~20mg/m $ ^{2} $ ，骨髓抑制作用比较明显，为剂量限制性，用药4周后，白细胞降低最明显，完全恢复需要 6~7周的时间。恶心、呕吐、厌食为常见的副作用。少见的副作用为肝脏静脉阻塞性疾病、溶血、间质性肺炎。\n\n5. 其他用于肝癌治疗的化疗药物尚有羟基喜树碱等。\n\n## （二）全身化疗\n\n全身化疗无论是单药或是联合化疗，以往的临床试验结果多无明显的效果客观缓解率少有超过 20%者。近年来一些临床试验的效果似较过去有所提高，但多为单中心的结果，有待进一步重复验证。\n\n全身化疗主要用于因有门静脉癌栓或有远处转移而不适合做动脉栓塞或局部治疗的病例，或用于手术切除后的辅助化疗。\n\n就单药化疗而言，几乎所有上市的化疗药物都曾用于肝癌的化疗，但临床试验结果均不理想。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胃癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>研究者</td><td>病例数</td><td>放射程式</td><td>CR+PR(%)</td><td>2年生存率(%)</td></tr><tr><td>Perez,等</td><td>103</td><td>40Gy常规放疗</td><td>47</td><td>12</td></tr><tr><td>Perez,等</td><td>85</td><td>60Gy常规放疗</td><td>65</td><td>20</td></tr><tr><td>Komaki,等</td><td>154</td><td>69.6GyHART</td><td></td><td>24</td></tr><tr><td>傅小龙,等</td><td>59</td><td>75.9GyHART</td><td></td><td>47</td></tr><tr><td>Sanuders,等</td><td>338</td><td>54GyCHART</td><td></td><td>29</td></tr></table>\n\n注：修改自 Russo SM，等. Diagnosis and treatment of lung cancer, 2001:156\n\n## （七）三维适形放射治疗\n\n三维适形放射治疗（3-dimensional conformal radiation therapy，3DCRT）最大的优势是放射治疗的高剂量区分布形状在三维方向上与病变（靶区）的形状一\n\n致，正常组织受量显著减少。调强适形放疗则能更好地保护重要器官。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "黑色素瘤靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 结外粘膜相关淋巴组织边缘区B细胞淋巴瘤，粘膜相关淋巴瘤（extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue type, MALT lymphoma）超过 $50\\%$ 的粘膜相关淋巴瘤侵犯胃部，与幽门螺旋杆菌的感染有关，患者可出现消化不良或非特征性的上消化道症状，包括腹痛、疲乏和体重减轻，也可以有慢性失血，B症状不常见。粘膜相关淋巴瘤也发生于其他部位，如肠道、结膜、乳腺、肺部、甲状腺、唾液腺和皮肤等，并可伴随其他一些自身免疫性或炎症性的疾病如唾液腺的Sjögren综合征或甲状腺的Hashimoto甲状腺炎。原发皮肤的MALT淋巴瘤可能与borrelia burgdorferi的感染有关。胃\n\nMALT淋巴瘤常对抗幽门螺旋杆菌的治疗（如应用多种抗生素）有效。部分 MALT淋巴瘤可转化为恶性度更高的大细胞淋巴瘤。\n\n5. 淋巴结边缘区B细胞淋巴瘤（nodal marginal zone B-cell lymphoma， NMZBL）结边缘区B细胞淋巴瘤比较少见，中数年龄为64岁，女性多见。此型好发于颈部和腹股沟的淋巴结，可表现为局限或广泛的周围淋巴结肿大，2/3和1/4的患者可累及脾脏和肝脏，约 70%左右的病例出现骨髓侵犯， 20%有B症状，可伴自身免疫性疾病。化疗有效但易复发，中位生存期约5年左右。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "喉癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. 血气分析 术前血气检查，血样的采取要求：静息状态下，吸入空气 30min后，采取动脉血液，抗凝后送检。\n\n【肺功能检测异常者手术前准备措施】\n\n1. 强心、利尿。\n\n2. 戒烟。\n\n3. 药物治疗。包括舒张支气管、祛痰、分泌物引流，应用抗菌药物，雾化吸入等。\n\n4. 体疗。包括训练咳嗽、锻炼腹式呼吸、吹气球进行呼吸肌锻炼等。\n\n5. 改善营养。\n\n## 【术后防治措施】\n\n1. 密切观察患者神志、呼吸。\n\n2. 监测外周血氧饱和度及血气变化。\n\n4. 病情稳定后尽早活动和下床。\n\n3. 加强呼吸道管理，翻身拍背、体位引流、雾化吸入。\n\n5. 疼痛治疗，早期使用镇痛药物。\n\n![](page=0,bbox=[119, 156, 160, 194])\n\n6. 营养支持。\n\n7. 拔管后早期呼吸困难征象者间断应用无创通气辅助。\n\n【高危患者的肺功能状态】见表7-1。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "免疫检查点抑制剂在结直肠癌治疗中的应用和不良反应管理？"
+        },
+        {
+          "role": "assistant",
+          "content": "蛋白质摄入量，限制在 $ 1 \\mathrm{g} / (\\mathrm{k g} \\cdot \\mathrm{d}) $左右。不进高嘌呤食物（心、肝、肾、沙丁鱼等），严格戒酒，避免诱发因素。鼓励多饮水，使尿量在 $ 2 0 0 0 \\mathrm {m l} / \\mathrm {d} $以上。当尿 $ \\mathrm{H}^{+} $浓度在 $ 1 0 0 0 \\mathrm {n m o l} / \\mathrm {L} (\\mathrm{p H} 6. 0 $以下）时，宜服碱性药物，如碳酸氢钠 $ 1\\sim 2 \\mathrm{g} $ 3次/日，使尿 $ \\mathrm{H}^{+} $浓度维持在 $ 6 3 0. 9\\sim 3 1 6. 3 \\mathrm {n m o l} / \\mathrm {L} $ （ $ \\mathrm{p H} 6. 2\\sim 6. 5 $ ）为宜。若晨尿呈酸性时，晚上加服乙酰唑胺 $ 2 5 0 \\mathrm {m g} $ ，可使尿保持碱性，增加尿酸溶解度，防止结石形成。同时，不应使用抑制尿酸排泄的药物，如双氢克尿塞、呋塞米、乙胺丁醇、吡嗪酰胺和烟酸等。\n\n## （二）急性关节炎期的治疗\n\n应绝对卧床休息，抬高患肢，避免受累关节负重，持续至关节疼痛缓解后72小时左右方可逐渐活动。应尽早应用下列药物控制关节炎，缓解症状。\n\n1. 秋水仙碱 对控制痛风性关节炎具显著性疗效，当为首选。一般于服药后 6～12h症状减轻，24～48h内约 90%以上的患者可得到缓解。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "铂类药物在宫颈癌化疗中的应用和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>气道管理及氧供设备</td><td>One tuch及毛糖试纸</td></tr><tr><td>便携式人工呼吸器</td><td>其他治疗用设备</td></tr><tr><td>与呼吸器相配备的面罩</td><td>输液泵</td></tr><tr><td>连接人工呼吸器和气管套管的软接管</td><td>输液加压袋</td></tr><tr><td>Magil钳</td><td>静脉穿刺用的束带</td></tr><tr><td>喉镜及备用喉镜电池和灯泡</td><td>乙醇棉棒</td></tr><tr><td>鼻插管</td><td>静脉输液管</td></tr><tr><td>通气道</td><td>“Y”形输液接驳口</td></tr><tr><td>气管切开用手术刀和刀片</td><td>延长管</td></tr><tr><td>环甲膜穿刺包</td><td>三通开关</td></tr><tr><td>气管切开套管</td><td>套管针</td></tr><tr><td>水溶性润滑剂</td><td>60ml注射器和针头</td></tr><tr><td>鼻导管</td><td>止血钳</td></tr><tr><td>氧气管</td><td>皮下注射器及针头</td></tr><tr><td>可调节型呼气末正压阀</td><td>经鼻胃管</td></tr><tr><td>氧气袋或便携式氧气瓶</td><td>低压负吸装置</td></tr><tr><td>体检用具及生命体征监护设备</td><td>吸引器</td></tr><tr><td>袖带式血压计</td><td>吸引导管</td></tr><tr><td>听诊器</td><td>冲洗用的灭菌生理盐水</td></tr><tr><td>手电筒和备"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "黑色素瘤新辅助化疗和辅助化疗的适应证和时机选择有何不同？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td></td><td>分期</td><td>治疗方案</td></tr><tr><td rowspan=\"4\">I期</td><td>IA&lt;20mm分化好的粘膜内癌</td><td>EMR</td></tr><tr><td>其他</td><td>改良根治术</td></tr><tr><td>IB&lt;20mmN1</td><td>改良根治术</td></tr><tr><td>其他T1N1,T2N0</td><td>标准式</td></tr><tr><td rowspan=\"2\">II期</td><td>T1N2,T2N1,T3N0</td><td>标准式</td></tr><tr><td>III A T2N2,T3N1</td><td>标准式</td></tr><tr><td rowspan=\"4\">III期</td><td>III B T3N2</td><td>标准式</td></tr><tr><td>III A T4N0</td><td>扩大切除</td></tr><tr><td>III B T4N1</td><td>扩大切除</td></tr><tr><td>IVA T1-3N3,T4N2,3,M(-)</td><td>扩大切除</td></tr><tr><td rowspan=\"2\">IV期</td><td>IVB M1,PS(0-2)</td><td>化疗、放疗、支持疗法</td></tr><tr><td>症状严重(出血、梗阻、营养不良)</td><td>姑息手术</td></tr></table>\n\n注：Ⅱ、Ⅲ、Ⅳ期胃癌应作术后辅助化疗；\n\nN2的病例是否作D3手术尚无定论，还拟作前瞻性随机研究。\n\n由于目前诊断水平尚难在术中对肿瘤的转移及浸润范围作精确的判别，临床诊断与病理诊断常会有一定差距。也因限于技术"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌标准化疗方案包括哪些药物？各自的剂量和给药方式是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>Stage 0:</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>StageⅠ:</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"3\">StageⅡa:</td><td>T0</td><td>N1</td><td>M0</td></tr><tr><td>T1</td><td>N1</td><td>M0</td></tr><tr><td>T2</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"2\">StageⅡb:</td><td>T2</td><td>N1</td><td>M0</td></tr><tr><td>T3</td><td>N0</td><td>M0</td></tr><tr><td rowspan=\"4\">StageⅢa:</td><td>T0</td><td>N2</td><td>M0</td></tr><tr><td>T1</td><td>N2</td><td>M0</td></tr><tr><td>T2</td><td>N2</td><td>M0</td></tr><tr><td>T3</td><td>N1-2</td><td>M0</td></tr></table>\n\nStage III b: T4 任何 N M0\n\n### 任何 T N3 M0\n\nStage IV: 任何 T 任何 N M1\n\n## 第一节 综合治疗\n\n乳腺癌是好发血行转移的恶性肿瘤，治疗失败主要由于远处转移未得控制所致，因此，治疗本病除采用局部治疗方法（外科手术或放射治疗）以清除其原发癌灶（包括区域淋巴结转移癌）外，还需兼顾全身治疗（化疗或内分泌治疗），以控制其体内"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "铂类药物在鼻咽癌化疗中的应用和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "WHO提出儿童癌症疼痛药物止痛治疗的基本原则：按阶梯给药；按时给药；选择适当的给药途径；根据儿童具体情况个体化止痛治疗。按阶梯给药是指选择最简单及最有效的药物以达到理想止痛效果，轻度疼痛选择非甾体类抗炎药，中度及重度疼痛选择阿片类止痛药。按时给药是指根据药物类型的药代\n\n动力学特点按时给药。适当途径给药是指选择无痛、无创性或创伤性最小的给药途径。个体化治疗是指根据儿童具体情况进行止痛治疗。总之，儿童止痛治疗应尽可能选择最简单、最有效的止痛药及创伤性最小的给药途径。止痛治疗的具体方案应根据患儿个体病情、疼痛的程度、类型、既往止痛治疗史、准备选用药物的药理学特点等因素决定。\n\n1. 非甾体类抗炎药 该类止痛药为非阿片类止痛药，常用于轻度癌症疼痛，也常与阿片类止痛药联合用于中重度癌症疼痛。该类药物用药剂量有封顶效应，当达到一定剂量水平时，提高用药剂量不增加止痛效果，相反不良反应却明显增加。常用于儿童癌痛的非甾体类抗炎药包括对乙酰氨基酚、布洛芬、萘普生等。\n\n2. 阿片类强阿片类止痛药用于重度癌痛治疗，其用药剂量无限定的上限剂量。正确的用药剂量是理想控制疼痛及尽可能少的不良反应所需要的治疗剂量。吗啡、氢吗啡、美沙酮、芬太尼等阿片类止痛药常用。不推荐使用哌替啶，因该药物的毒性代谢产物对中枢神经系统有毒性作用。\n\n如何合理使用阿片类止痛药是儿童癌痛治疗的难点。阿片类止痛药是重度疼痛治疗的首选药物，用药剂量无封顶效应。由于恐惧成瘾，人们常常把阿片类镇痛药当成治疗的最后一招，其结果导致许多重度疼痛的病儿不能得到有效的镇痛药物。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "食管癌新辅助化疗和辅助化疗的适应证和时机选择有何不同？"
+        },
+        {
+          "role": "assistant",
+          "content": "肿瘤伴随或治疗所致的并发症及症状的诊断、评估、预防和治疗，如上腔静脉综合征、深静脉血栓、高钙血症、骨髓抑制、肿瘤脏器转移等。\n\n非癌性躯体疾病的诊治。\n\n2. 癌痛控制与症状处理是被肿瘤医生忽视，但又必须强调的内容：\n\n(1) 癌痛的控制：相信患者的主诉，还患者以无痛的权利。了解癌症的诊治过程，疼痛的原因、性质、强度。遵循规范化疼痛处理的原则，相信正确地选择治疗手段与药物，正确的时间给药，正确的滴定剂量，正确地选择辅助用药， $90\\%$ 以上的癌痛可以根除。相信阿片类止痛药是控制中、重度癌痛不可替代的药物。这样就能达到有效的消除疼痛，限制药物的不良反应，将疼痛及治疗带来的心理负担降到最低，最大限度地提高患者生活质量的目的。这是WHO对癌痛治疗的政策和指南，国际已证实了癌症疼痛三阶梯止痛原则的正确性、有效性和可行性。近8\n\n年来我国同道也发表了很多文章，对阿片类药物的个体化治疗、药物剂量的滴定、不良反应的处理、治疗前后对疼痛的评价等有了进一步体会。如近二年连续发表了二篇多中心协作的文章。分别对3791位及941位接受芬太尼透皮贴剂治疗的中、重度癌痛患者进行了观察。发现用药后1d疼痛开始减轻，6d则疼痛稳定，15d则 $96.8\\%$ 患者达中度以上缓解。多数患者用药剂量在 $50\\mu \\mathrm{g / h}$ 以下，且生活质量也有改善。主要不良反应为恶心、头晕、便秘、嗜睡，但均可耐受。证明了该药的有效性和安全性。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "卵巢癌标准化疗方案包括哪些药物？各自的剂量和给药方式是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>药物</td><td>类型</td><td>适应证</td><td>剂量</td><td>副作用</td></tr><tr><td>阿米替林曲唑酮氯西汀</td><td>抗抑郁药</td><td>神经源性疼痛，抑郁</td><td>25~150mg/d50~150mg/d20~40mg/d</td><td>精神不振，口干，便秘镇静、疲劳、口干、头晕口干、食欲减退、恶心、失眠、乏力</td></tr><tr><td>卡马西平丙戊酸钠苯妥英钠</td><td>抗惊厥药</td><td>对神经损伤造成的撕裂样及烧灼样痛，肌阵挛反射</td><td>200~1600mg/d200~1200mg/d300~500mg/d</td><td>头晕、嗜睡、恶心、乏力、骨髓抑制恶心、消化不良、体重增加困倦、头晕、恶心、皮疹</td></tr><tr><td>地塞米松强的松甲基强的松龙</td><td>皮质类固醇</td><td>脑转移和硬膜外脊髓压迫引起疼痛，减轻脑、脊髓水肿，止吐、增强食欲</td><td>16~24mg/d40~100mg/d125~250mg/d</td><td>胃肠道溃疡、感染、体液潴留、高血糖、失眠</td></tr><tr><td>安定</td><td>抗焦虑药</td><td>辅助阿片类药物止痛，缓解焦虑、失眠、恶心</td><td>10~30mg/d300~450mg/d</td><td>嗜睡、运动失调镇静、过度兴奋、多发性肌痉挛</td></tr><tr><td>可乐定</td><td>α2肾上腺素能拮抗剂</td><td>其他方法治疗无效的难治性神经性疼痛</td><td>0.3mg/d</td><td>低血压，镇静</td></tr><tr><td>右苯丙胺</td><td>精神兴奋药</td><td>"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "铂类药物在脑胶质瘤化疗中的应用和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. PNET的鉴别诊断 主要和Ewing瘤等小细胞肿瘤鉴别，PNET发病年龄较大，发生于躯干的比例高。但主要靠病理学来鉴别，PNET的诊断单凭HE切片较困难，与其他一些常见的软组织小细胞肿瘤不易鉴别。PNET的形态学特点：除由小圆细胞构成并呈巢状排列外，常见有H-W菊形团。O13于细胞膜上的染色对确定Ewing和PNET显示较高的特异性，这一点对于区别其他常见软组织的小圆细胞类肿瘤，如恶性淋巴瘤、胚胎型横纹肌肉瘤的鉴别有意义。PNET在免疫组化诊断上至少含有2种以上不同神经标记的表达和或经电镜检查细胞内含有神经内分泌颗粒。Ewing瘤则为小圆细胞弥漫分布，无H-W菊形团，一种神经标记表达，电镜检查无神经内分泌颗粒。\n\n## 【治疗方案及原则】\n\nPNET的治疗，包括全身治疗和局部治疗。许多PNET患者就诊时，已产生广泛的亚临床转移，即使手术或放疗达到局部的有效控制，但多数患者仍在数月内发生转移。因此，目前多采用新辅助化疗方案，即在手术前便开始化疗，手术后继续化疗，目的在于防止复发和转移。这种新辅助化疗方法不仅能消灭亚\n\n临床转移，还能使原发瘤的体积缩小，使得广泛切除能施行，达到局部根治的目的。常用的化疗方案有静脉CAV法（CTX+ADM+VCR），CYVADIC法 （CTX+ADM+VCR+DTIC）和大剂量顺铂（DDP）法。我院采用动脉插管大剂量DDP局部用药，效果较全身用药好。术前化疗效果不好者，术后可以改用异环磷酰胺（IFO）和足叶乙甙（VP-16）化疗。对于软组织巨大的肿瘤，局部切除有困难者，术前可以先行20Gy以内的局部放疗，以增加手术的切除率。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "结直肠癌靶向治疗药物的选择依据是什么？需要检测哪些生物标志物？"
+        },
+        {
+          "role": "assistant",
+          "content": "儿童癌症疼痛评估：对儿童癌症疼痛及相关因素评估不足，是导致止痛治疗效果差的主要原因。在制定儿童癌症疼痛个体化止痛治疗方案前，医务人员首先应该正确理解和认识儿童对疼痛的感受，对癌痛病情进行全面正确的评估。儿童癌痛评估的内容包括疼痛原因、部位、疼痛程度、对生活质量的影响等。许多儿童癌症疼痛患者，尤其是年龄幼小的患者往往不会表达自己疼痛的感受。因此，应该认识儿童对自己疼痛病情表达和交流的特殊性，针对患儿的年龄及表达能力选择适当的方法评估疼痛程度。儿童疼痛评估方法：患儿行为观察法（如面部表情、哭），患儿自我评估量表法（如面部表情评估法，见图12-1-1；疼痛程度数字评估法，见表12-1-5）。对于不会讲话及语言表达能力有限的患儿，主要通过观察行为表现判断患儿是否有疼痛、疼痛的程度及类型。例如，癌症疼痛阵发性发作的患儿可能表现为突发哭闹或面部表情痛苦。持续性疼痛则表现为患儿不愿活动、活动障碍、对周围事物不感兴趣、注意力不集中、睡眠困难等。对于有一定表达能力的患儿，可根据年龄及表达能力选择相应的患儿自我评估量表法。教患儿学会用划线法或面部表情图表达自己的疼痛程度。也可根据具体情况家长和医护人员同时配合使用行为观察法。\n\n![](page=0,bbox=[240, 1659, 1208, 1889])\n\n<div align=\"center\">\n\n图12-1-1 疼痛程度面部表情评估图\n\n### </div>\n\n![](page=0,bbox=[325, 179, 1249, 336])\n\n## （二）儿童癌痛治疗原则及方法\n\n儿童癌症疼痛治疗的基本步骤见表12-1-6。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "铂类药物在骨肉瘤化疗中的应用和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>药物名称</td><td>常用剂量</td><td>给药途径</td><td>给药天数</td></tr><tr><td>环磷酰胺(CY)</td><td>400~800mg/m2</td><td>静注</td><td>每周2次</td></tr><tr><td>甲氨蝶呤(MTX)</td><td>10~30mg/m2</td><td>静注或口服</td><td>每周1~2次</td></tr><tr><td>长春新碱(VCR)</td><td>1.5mg/m2</td><td>静滴</td><td>每周1次</td></tr><tr><td>左旋门冬酰胺酶(L-asp)</td><td>6000U/m2</td><td>静滴</td><td>每天或隔天1次</td></tr><tr><td>替尼泊苷(VM26)</td><td>165mg/m2</td><td>静滴</td><td>每周2次</td></tr><tr><td>泼尼松</td><td>40~60mg/m2</td><td>口服</td><td>每天</td></tr></table>\n\n蒽环类、阿糖胞苷、6MP、6TG等其他药物的用法，详见本指南中急性髓系白血病一节。\n\n### (2) 常用化疗方案\n\n1) 前体B-ALL和前体T-ALL：\n\nA. 诱导缓解治疗：通常采用VCR、泼尼松和蒽环类（主要是DNR）为主的常规诱导缓解方案，在上述三药方案基础上还可加用L-asp和（或）CY （T-ALL亦可加用AraC），治疗周期一般为4~6周。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "淋巴瘤标准化疗方案包括哪些药物？各自的剂量和给药方式是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "上述各类可单用或联合应用（两种或三种），并可与胰岛素合用，联合用药时各制剂均应减少剂量。对每一患者药物的恰当选择，取决于病情（血糖高低，系空腹或餐后高血糖，胰岛功能，肝、肾功能，并发症，肥胖与消瘦）、药物特点、病人对药物的反应、年龄、价格、货源等因素。\n\n(2) 胰岛素：常用胰岛素制剂的使用见表3。\n\n1) 适应证：1型糖尿病；2型糖尿病胰岛功能差，饮食控制及口服降糖药不能使代谢控制达标者；2型糖尿病患者遇严重应激时（如较大手术、较严重感染、心肌梗死、脑血管意外等）；妊娠糖尿病或2型糖尿病伴妊娠和分娩时；2型糖尿病有严重心、眼、肾、神经等并发症；2型糖尿病合并急性并发症，如酮症酸中毒、高渗综合征；以及禁忌使用口服降糖药时，可改用胰岛素。\n\n2) 剂量：剂量根据病情先给予 10~30U/d，以后根据血糖控制情况逐步调整。\n\n3) 用法：一般于餐前 30min 皮下注射。 $ \\textcircled{1} $轻型患者可将每日剂量早上一次注射（通常长效和短效胰岛素各占1/3和2/3，或用预混胰岛素）； $ \\textcircled{2} $病情较重或胰岛素用量大于 30U/d者，应每日早晚各1次或每餐前各1次；严重者每日 3～ 4次或使用胰岛素泵。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "免疫检查点抑制剂在肺癌治疗中的应用和不良反应管理？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td colspan=\"2\">配方Ⅰ</td></tr><tr><td>鸦片酊</td><td>0.5ml</td></tr><tr><td>颠茄酊</td><td>0.5ml</td></tr><tr><td>庆大霉素</td><td>12万U</td></tr><tr><td>强的松</td><td>10mg</td></tr><tr><td>加米汤至</td><td>30ml</td></tr><tr><td colspan=\"2\">保留灌肠，每次30ml，bid</td></tr><tr><td colspan=\"2\">配方Ⅱ</td></tr><tr><td>西黄芪胶</td><td>5g</td></tr><tr><td>氢化可的松</td><td>100mg</td></tr><tr><td>痢特灵</td><td>1.5g</td></tr><tr><td>止血粉</td><td>30g</td></tr><tr><td>象皮粉</td><td>10g</td></tr><tr><td>肾上腺素</td><td>0.5mg</td></tr><tr><td>加水至</td><td>100ml</td></tr></table>\n\n### 保留灌肠，每次 60ml，qd\n\n(2) 放射性膀胱炎：多数发生在放疗后一年以上，按临床表现分为3度。\n\n1) 轻度：有尿急、尿频、尿痛等症状，膀胱镜检，可见粘膜充血、水肿。\n\n2) 中度：膀胱粘膜充血、糜烂、毛细血管扩张甚至破裂，血尿可反复发作，有时膀胱壁可有溃疡。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "宫颈癌标准化疗方案包括哪些药物？各自的剂量和给药方式是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "## （二）MR检查\n\n1. MR扫描技术 采用头部表面线圈，病人取仰卧位，以平行听眦线作横断面扫描，平行脑干长轴作矢状面扫描，垂直颅底作冠状面扫描。横断面扫描，上缘包括蝶鞍，下缘包至口咽，扫描层厚 $3\\sim 6\\mathrm{mm}$ 。常用自旋回波序列， $\\mathrm{T}_{1}$ 加权及 $\\mathrm{T}_{2}$ 加权扫描。增强扫描：静脉注射顺磁性造影剂，如马根维显（magnevist），浓度 $0.5\\mathrm{mol / L}$ ，按 $0.1\\mathrm{mmol / kg}$ 给药，行横断面 $\\mathrm{T}_{1}$ 加权扫描。\n\n2. MR表现鼻咽肿瘤在 $ \\mathrm{T}_{1} $加权像呈中等、较低信号， $ \\mathrm{T}_{2} $加权像信号增高；注射造影剂后可见病灶实质部分强化。颅底骨质受累，表现为正常高信号的骨髓脂肪在 $ \\mathrm{T}_{1} $加权像为中、低信号的肿瘤所取代。肿瘤咽旁侵犯，表现为咽旁间隙正常高信号的脂肪变窄、消失，低信号的肌肉为较高信号的肿瘤取代。MR有较好的软组织分辨率和多方位成像优点，与CT相比较，MR有以下特点： $ \\textcircled{1} $MR对肿瘤信号改变较为敏感（尤其是 $ \\mathrm{T}_{2} $加权像），可发现较小病灶，能清晰地显示肿瘤的部位、大小、范围、浸润深度；可准确地区分肿瘤组织和淋巴结，特别是肿瘤侵犯咽旁和咽旁、咽后淋巴结的鉴别，临床分期更为准确。 $ \\textcircled{2} $能较好地评判鼻咽癌放疗后的情况，如局部复发或纤维变。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝癌化疗期间常见不良反应有哪些？如何预防和处理？"
+        },
+        {
+          "role": "assistant",
+          "content": "(2) 头孢菌素类：对铜绿假单胞菌有特效（MIC $0.78\\sim 1.56\\mu \\mathrm{g / ml}$），其抗菌谱太窄，如有混合感染，宜加用其他抗生素如噻乙胺磺唑头孢菌素，CTM（cefotiam） $0.5\\sim 2\\mathrm{g / d}$，CFS成人用量 $2\\sim 4\\mathrm{g / d}$，儿童 $30\\sim 60\\mathrm{mg / (kg}\\cdot \\mathrm{d)}$。第三代头孢菌素以其强大的抗铜绿假单胞菌著称，头孢哌酮（cefoperzone）成人 $2\\sim 4\\mathrm{g / d}$，儿童 $100\\sim 200\\mathrm{mg / (kg}\\cdot \\mathrm{d)}$。头孢噻肟（cefotaxime）成人 $2\\sim 4\\mathrm{g / d}$，儿童 $80\\sim 100\\mathrm{mg / (kg}\\cdot \\mathrm{d)}$。头孢他啶（ceftazidime，fortum）成人 $1\\mathrm{g}q8\\mathrm{h}$，儿童 $100\\sim 150\\mathrm{mg / (kg}\\cdot \\mathrm{d)}$，其抗菌活性相当于CFS，且抗菌谱广。第四代头孢菌素如头孢吡肟，推荐剂量成人 $2\\mathrm{g / d}$。\n\n## 8. 厌氧菌感染\n\n(1) 厌氧菌脑脓肿：常继发于慢性中耳炎、慢性鼻窦炎，致病菌大多为脆弱拟杆菌；其次继发于肺胸膜感染，致病菌大多为梭菌族（ $15\\%$ ），经血行途径入颅。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "铂类药物在喉癌化疗中的应用和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. 产前预防 G6PD缺乏的孕妇，于产前2~4周服用苯巴比妥，可减轻新生患儿出生后的高胆红素血症。\n\n## 4. 特殊处理\n\n(1) 溶血危象期：输血，输液，抗感染，防治休克与急性肾衰竭。\n\n### (2) 新生儿黄疸的治疗\n\n1) 光照疗法：波长 420～440nm的蓝色荧光灯，照射至黄疸明显减退 （<140 $ \\mu\\mathrm{m o l}/\\mathrm{L} $）。光疗的副作用有腹泻、脱水及青铜症等，应注意补液。\n\n2) 换血疗法：起效快，适用于胆红素脑病早期、血清胆红素 $ \\geqslant 2 0 0 \\mu \\mathrm {m o l} / $ L者。\n\n3) 药物治疗：促胆红素转化、结合与排泄。常选用苯巴比妥、白蛋白、中药复方茵陈蒿汤和 10%葡萄糖等制剂。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "铂类药物在卵巢癌化疗中的应用和注意事项是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>肿瘤本身所致</td><td>抗肿瘤治疗所致</td></tr><tr><td>肿瘤侵犯骨骼</td><td>手术后疼痛</td></tr><tr><td>肿瘤侵犯软组织</td><td>放疗导致的疼痛</td></tr><tr><td>肿瘤侵犯内脏</td><td>由反复呕吐导致的胃炎</td></tr><tr><td>肿瘤侵犯中枢或周围神经(包括脊髓压迫引起的疼痛)</td><td>腰椎穿刺后延迟的头痛 甾体激素引起的骨质改变</td></tr><tr><td>医疗操作所致</td><td>神经痛(包括患肢痛和药物引起的神经改变)</td></tr><tr><td>刺破手指</td><td>感染</td></tr><tr><td>静脉穿刺</td><td>粘膜损伤</td></tr><tr><td>注射</td><td>粘膜炎</td></tr><tr><td>腰椎穿刺</td><td>非癌症因素所致</td></tr><tr><td>骨髓穿刺和活检</td><td>创伤</td></tr><tr><td></td><td>其他</td></tr></table>\n\n儿童癌症疼痛评估：对儿童癌症疼痛及相关因素评估不足，是导致止痛治疗效果差的主要原因。在制定儿童癌症疼痛个体化止痛治疗方案前，医务人员首先应该正确理解和认识儿童对疼痛的感受，对癌痛病情进行全面正确的评估。儿童癌痛评估的内容包括疼痛原因、部位、疼痛程度、对生活质量的影响等。许多儿童癌症疼痛患者，尤其是年龄幼小的患者往往不会表达自己疼痛的感受。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "手术部位感染的预防控制措施包括哪些关键环节？"
+        },
+        {
+          "role": "assistant",
+          "content": "胰腺炎是术后最常见的并发症之一，主要与手术损伤、缺血再灌注损伤、肠液或尿液反流、排斥反应、感染、进食不当等因素有关。多为水肿性，但也可发展为出血、坏死以致移植胰丢失。临床表现为移植部位腹壁区疼痛、腹胀、压痛、血、尿淀粉酶显著升高。如果高水平的血淀粉酶突然下降，要警惕移植胰大面积坏死或并发移植胰血栓形成，及时作移植胰影像学检查。预防方法在于胰腺切取时采用无损伤技术、缩短缺血时间、应用UW保存液、保持胰周引流通畅。治疗为： $ \\textcircled{1} $移植术后禁食，采用全胃肠外营养，进食后需限制蛋白和脂肪饮食； $ \\textcircled{2} $选用胰外分泌抑制剂如生长抑素（somatostatin，商品名为 Stilamin，思他宁）持续静脉注射，6mg/d，5～7天；或奥曲肽（octreotide，商品名为 Sandostatin，善得定），0.1mg，每6小时皮下注射1次，5～7天； $ \\textcircled{3} $治疗腹腔感染； $ \\textcircled{4} $怀疑坏死性胰腺炎时，应及早手术，清除移植胰及周围坏死组织并充分引流。\n\n## （三）胰漏与胰瘘\n\n供胰修剪时胰腺实质的损伤、植入胰胰腺炎、排斥反应、血供障碍导致的胰腺组织或十二指肠残端坏死、移植胰周围感染、输出道狭窄或梗阻均可引起\n\n胰漏，胰漏局限后形成假性胰腺囊肿或胰瘘。胰漏发生后，受者应禁食、给予静脉内营养及胰液分泌抑制剂，并及时引流移植胰周围积液、积极控制局部感染、留置Foley导尿管，以减少瘘口流量。如胰周引流通畅，一般几周后胰瘘大多可自行闭合。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "导管相关血流感染的预防措施和监测标准是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td colspan=\"2\">抗真菌药物</td><td>适应证</td><td>常用剂量</td><td>疗程</td></tr><tr><td rowspan=\"4\">三唑类</td><td>伏立康唑</td><td>治疗侵袭性曲霉病；治疗非中性粒细胞减少患者的念珠菌血症；治疗对氟康唑耐药的念珠菌引起的严重侵袭性感染（包括克柔念珠菌）；治疗由足放线病菌属和镰刀菌属引起的严重感染；本品应主要用于治疗患有进展性、可能威胁生命的感染的患者</td><td>静脉滴注：每天2次；第1天，每次6mg/kg，以后改为每次4mg/kg；口服给药：每天2次；第1天，每次400mg，以后改为每次200mg</td><td>疗程视患者用药后的临床和微生物学反应而定</td></tr><tr><td rowspan=\"2\">泊沙康唑</td><td>用于预防13岁及以上高危患者曲霉菌和念珠菌感染</td><td>1天3次，每次200mg</td><td>粒细胞缺乏前开始使用，直到中性粒细胞计数增加≥500个/mm3后7天</td></tr><tr><td>治疗口咽念珠菌感染用于曲霉病、镰刀菌病和接合菌病引起的难治性、对其他药物不能耐受或对其他药物耐药的真菌感染</td><td>首剂200mg，然后100mg/d1天2次，每次400mg，或1天4次，每次200mg</td><td>疗程依据患者基础疾病的严重程度及患者免疫抑制状态的恢复、临床疗效等决定</td></tr><tr><td rowspan=\"2\">棘白菌素类</td><td>卡泊芬净</td><td>对其他治疗无效或不能耐受的侵袭性曲霉菌病</td><td>第1天70mg，以后改为50mg/d</td><td>取决于患者疾病的严重程度、被抑制的免疫功能恢复情况以及对治疗的临床反应</td>"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "内镜清洗消毒的操作规范和质控标准是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "60 （mg·h）/L（表19-1）。\n\n(1) 当MPA-AUC<30（mg·h）/L时，提示MPA可能暴露不足，尤其在肾移植后早期，排斥反应的概率将加大，MMF剂量可能需要增加。\n\n(2) 当MPA-AUC>60（mg·h）/L时，提示MPA可能暴露过度，药物相关的不良事件概率可能增加，MMF剂量可能需要减少。\n\n3. MMF TDM的频率在移植后第7天、第10~14天中的1天和第3周或第 4周中的1天进行共3次TDM检测；当免疫抑制方案有重要改变时，如药物减量或转换；当出现重要的临床不良事件，如：排斥反应、感染、腹泻等情况时。\n\n4. MPA测定方法 可采用HPLC（高效液相）或EMIT（全酶免疫分析法）方法，但与HPLC相比，EMIT测定的MPA数值要高 30%左右，主要是因为MPA与醋酸葡萄糖苷M-2之间存在交叉反应所致，而后者也具有药理活性，可抑制IMPDH-Ⅱ。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "多重耐药菌感染患者的隔离措施和消毒要求是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "目前临床应用的抗真菌药物有多烯类、三唑类、棘白菌素类和氟胞嘧啶。各类药物的适应证、常用剂量、疗程见表10-1。\n\n### <div align=\"center\">\n\n表10-1各类抗真菌药物的适应证、常用剂量、疗程\n\n### </div>\n\n<table border=\"1\"><tr><td colspan=\"2\">抗真菌药物</td><td>适应证</td><td>常用剂量</td><td>疗程</td></tr><tr><td rowspan=\"2\">多烯类</td><td>两性霉素B</td><td>适用于敏感真菌所致的深部真菌感染且病情呈进行性发展者，如败血症、心内膜炎、脑膜炎（隐球菌及其他真菌）、腹腔感染（包括与透析相关者）、肺部感染、尿路感染和眼内炎等</td><td>先试以1~5mg给药，每5mg/d逐渐增加，当增至一次0.6~0.7mg/kg时即可暂停增加剂量</td><td>疗程1~3个月，也可长至6个月，视病情及疾病种类而定</td></tr><tr><td>两性霉素B脂质体</td><td></td><td>维持剂量3~5mg/(kg·d)，从小剂量开始逐渐增量</td><td>疗程视病种、病情而定</td></tr><tr><td rowspan=\"5\">三唑类</td><td rowspan=\"5\">氟康唑</td><td>全身性念珠菌病</td><td>第1天400mg，以后200mg/d</td><td>视临床反应而定</td></tr><tr><td>隐球菌病</td><td>第1天400mg，以后200~400mg/d</td><td>视临床及真菌学反应而定；隐球菌性脑膜炎疗期为脑脊液细菌检查转阴后再持续6~8周</td></tr><tr><td>黏膜念珠菌病</td><td>建议首剂200mg/d，以后100mg/d</td><td>口咽"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "重症监护病房(ICU)的医院感染防控特点是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "$\\textcircled{3}$内囊完整摘除术：适用于包虫囊肿突出肺表面达1/3以上，且未合并感染等并发症的病例。如摘除成功，可完全避免复发，为最理想的手术方法。在肺下方及胸腔内垫湿纱布垫，充分显露肺包虫囊肿。在灰白色外囊纤维壁上，以刀刃前部切开外囊壁，要求麻醉平稳或暂停呼吸，手术刀宜 $30^{\\circ}$ 倾斜，用力均匀。或用刀刃刮剥。用力过重易使内囊破裂。刚切开外囊小口时，术者要用手指保护内囊，然后迅速用剪刀扩大切口防止外囊切口突然减压，而内囊局部压力骤然增高，引起内囊破裂。扩大的外囊切口应略大于内囊直径，亦可作“十”字切口。在剥离内、外囊粘连时，剥离器或手指应着力于外囊内面，避免挤压内囊。内外囊完全分离后，请麻醉师鼓肺，借助内囊四周（特别是内囊底面）不同方向的气流和肺膨胀的推力，整个囊肿就可坠入到盛有生理盐水的盆中。有报道一组内囊完整摘除手术，其成功率为 $90.5\\%$ （211/233）。成功的经验是：麻醉要平稳，切口暴露要充分；切开外囊前，用大纱布巾尽量垫高病肺，使囊肿接近或超出切口的一端；切开外囊时，要求暂停通气；外囊切口要够大，便于囊肿移出；麻醉师逐渐鼓肺并协助变换病人的体位，使囊肿易于移出胸腔。直径在 $10\\mathrm{cm}$ 左右的包虫囊肿完整摘除成功率很高。失败的病例囊肿直径均 $< 5\\mathrm{cm}$ ，囊肿壁相对较薄，而且常常位于肺内较深部位，暴露差，易于破裂。\n\n(3) 外囊残腔的处理：内囊摘除后留下的外囊残腔有几种处理方法，目前常采用以下两种方法。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "抗菌药物分级管理制度的具体内容是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "12. 套细胞淋巴瘤（mantle cell lymphoma）一种由单一的小到中等大小，核不规则的细胞所组成的B细胞肿瘤。瘤细胞类似中心细胞或小裂细胞，但核的不规则性较轻。也有些病例超出套细胞区，核增大，染色体更不规则，有丝分裂增加，被称为母细胞样套细胞淋巴瘤（blastoid mantle cell lymphoma）。免疫表型： $ \\mathrm{C D 7 9} \\alpha^{+} $ 、 $ \\mathrm{C D 2 0}^{+} $ 、 $ \\mathrm{C D 5}^{+} $ 、cyclin D1 $ ^{+} $ 、 $ \\mathrm{C D 1 0}^{-} $ 、 $ \\mathrm{C D 2 3}^{-} $ 、 $ \\mathrm{C D 4 3}^{+} $ 、 $ \\mathrm{I g M}^{+} $ $ \\pm $ $ \\mathrm{I g D}^{+} $ 。遗传学特征：t(11;14)(q13;q32)。套细胞淋巴瘤主要累及淋巴结，也可累及脾和骨髓，累及其他结外部位最常见为胃肠道和口咽环。大多数胃肠的多发性淋巴瘤性息肉病为套细胞淋巴瘤。\n\n13. 弥漫性大B细胞淋巴瘤（diffuse large B-cell lymphoma）一种细胞核\n\n等同于或超过正常巨噬细胞核或超过正常小淋巴细胞核2倍的大B淋巴细胞弥漫增生所形成的肿瘤。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "医疗废物的分类、收集和处置要求是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "的外科并发症明显高于肾、肝、心等脏器移植。外科并发症是胰肾联合移植失败的主要原因。据施行胰腺移植例数最多的明尼苏达大学报告，236例胰肾联合移植术后的再手术率为 $36\\%$ 。施行胰肾联合移植例数较少的移植中心，再手术率高达 $57\\%$ 。需行再次手术的主要外科并发症为胰腺炎与腹腔感染（ $15.3\\%$ ）、吻合口漏（ $6\\%$ ）和血栓形成（ $7\\%$ ）。胰肾联合移植后再次手术的病例，约 $80\\%$ 需切除移植胰，明显降低移植胰1年生存率。因此，提高胰肾联合移植的成功率，关键在于预防术后早期与胰腺外分泌相关并发症，避免移植后的再次手术。\n\n## （一）术后出血\n\n术后腹腔内出血的主要原因为术中止血不彻底、抗凝治疗过量、移植胰胰腺炎和局部感染等。出血可发生在移植胰、胰膀胱吻合口、十二指肠节段和血管吻合口等部位。预防术后腹腔内出血应注意： $ \\textcircled{1} $术中精心操作，仔细止血； $ \\textcircled{2} $术后抗凝治疗应严密监测凝血机制、血凝流变学指标并及时调整抗凝用药方案； $ \\textcircled{3} $加强抗感染治疗。并发腹腔内出血时，应立即调整或停用抗凝剂，及时输血、控制高血压。为防止发生血栓形成，一般不主张使用止血药，但凝血功能异常时，可适量输入冷沉淀、凝血酶原复合物、血小板或新鲜血浆等，及时纠正凝血功能紊乱。如出血量大或经输血等保守治疗无效，应急诊手术探查，及时处理。\n\n## （二）移植胰胰腺炎\n\n胰腺炎是术后最常见的并发症之一，主要与手术损伤、缺血再灌注损伤、肠液或尿液反流、排斥反应、感染、进食不当等因素有关。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "医务人员手卫生的五个关键时刻是什么？各需采用什么方法？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>药物</td><td>类型</td><td>适应证</td><td>剂量</td><td>副作用</td></tr><tr><td>阿米替林曲唑酮氯西汀</td><td>抗抑郁药</td><td>神经源性疼痛，抑郁</td><td>25~150mg/d50~150mg/d20~40mg/d</td><td>精神不振，口干，便秘镇静、疲劳、口干、头晕口干、食欲减退、恶心、失眠、乏力</td></tr><tr><td>卡马西平丙戊酸钠苯妥英钠</td><td>抗惊厥药</td><td>对神经损伤造成的撕裂样及烧灼样痛，肌阵挛反射</td><td>200~1600mg/d200~1200mg/d300~500mg/d</td><td>头晕、嗜睡、恶心、乏力、骨髓抑制恶心、消化不良、体重增加困倦、头晕、恶心、皮疹</td></tr><tr><td>地塞米松强的松甲基强的松龙</td><td>皮质类固醇</td><td>脑转移和硬膜外脊髓压迫引起疼痛，减轻脑、脊髓水肿，止吐、增强食欲</td><td>16~24mg/d40~100mg/d125~250mg/d</td><td>胃肠道溃疡、感染、体液潴留、高血糖、失眠</td></tr><tr><td>安定</td><td>抗焦虑药</td><td>辅助阿片类药物止痛，缓解焦虑、失眠、恶心</td><td>10~30mg/d300~450mg/d</td><td>嗜睡、运动失调镇静、过度兴奋、多发性肌痉挛</td></tr><tr><td>可乐定</td><td>α2肾上腺素能拮抗剂</td><td>其他方法治疗无效的难治性神经性疼痛</td><td>0.3mg/d</td><td>低血压，镇静</td></tr><tr><td>右苯丙胺</td><td>精神兴奋药</td><td>"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "医院获得性肺炎的预防策略和护理要点是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>肿瘤本身所致</td><td>抗肿瘤治疗所致</td></tr><tr><td>肿瘤侵犯骨骼</td><td>手术后疼痛</td></tr><tr><td>肿瘤侵犯软组织</td><td>放疗导致的疼痛</td></tr><tr><td>肿瘤侵犯内脏</td><td>由反复呕吐导致的胃炎</td></tr><tr><td>肿瘤侵犯中枢或周围神经(包括脊髓压迫引起的疼痛)</td><td>腰椎穿刺后延迟的头痛 甾体激素引起的骨质改变</td></tr><tr><td>医疗操作所致</td><td>神经痛(包括患肢痛和药物引起的神经改变)</td></tr><tr><td>刺破手指</td><td>感染</td></tr><tr><td>静脉穿刺</td><td>粘膜损伤</td></tr><tr><td>注射</td><td>粘膜炎</td></tr><tr><td>腰椎穿刺</td><td>非癌症因素所致</td></tr><tr><td>骨髓穿刺和活检</td><td>创伤</td></tr><tr><td></td><td>其他</td></tr></table>\n\n儿童癌症疼痛评估：对儿童癌症疼痛及相关因素评估不足，是导致止痛治疗效果差的主要原因。在制定儿童癌症疼痛个体化止痛治疗方案前，医务人员首先应该正确理解和认识儿童对疼痛的感受，对癌痛病情进行全面正确的评估。儿童癌痛评估的内容包括疼痛原因、部位、疼痛程度、对生活质量的影响等。许多儿童癌症疼痛患者，尤其是年龄幼小的患者往往不会表达自己疼痛的感受。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "医院感染暴发的定义、报告流程和应急处置步骤是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "癌症患者肌萎缩的主要原因是因肿瘤直接或间接导致肌源性疾病和神经源性肌病所致。恶病质、营养不良、坏死性肌病、炎性肌病、外伤性肌病、内分泌功能紊乱性肌病、代谢性肌病等病变，导致肌膜功能障碍、肌肉结构异常、神经-肌肉障碍或直接损伤，从而发生肌源性肌萎缩；肿瘤直接或间接损伤脑神经或脊神经导致运动神经元病变，将引起肌肉神经营养障碍性肌萎缩或废用性肌萎缩。全身性骨骼肌萎缩常发生于晚期癌症患者，严重肌萎缩是晚期癌症恶病质主要特征性表现。癌症恶病质发生肌萎缩的机制与除因进食量少及蛋白合成代谢减低外，主要还与蛋白分解代谢亢进有关。癌症患者分解代谢亢进的确切机制不明。据研究发现，肌萎缩时某些细胞因子及肌纤维蛋白降解酶的活性增高，如白细胞介素6（IL-6）、白细胞介素6受体（IL-6R）、组织蛋白酶B、组织蛋白酶L、泛\n\n肽；某些促肌球蛋白合成的酶活性降低，如肌肉特异性钙激活蛋白酶（钙激活蛋白酶3）。\n\n## （三）临床表现\n\n主要表现为受累肌肉易疲劳、肌肉无力感。体检发现病损肌肉萎缩、变细、肌腹变平、不丰满、肌肉张力减退、肌肉腱反向减低。\n\n## （四）处理方法\n\n治疗：针对癌症、感染、缺血、压迫等病因治疗。加强饮食营养，必要时补充蛋白质、氨基酸、脂肪、糖类和维生素等。大剂量维生素和能量合剂可在一定程度上改善神经营养。给予强的松龙、肾上腺皮质激素、孕激素等激素类药物可改善癌症恶病质患者的厌食症状，增加体重。雄性激素可在一定程度上促进蛋白质合成。癌症恶病质性肌萎缩接受肠外营养支持治疗的作用十分有限。实验研究发现， $ \\beta $肾上腺素能激动剂及抗白细胞介素6受体的抗体治疗肌萎缩有一定疗效。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "如何鉴别诊断肺癌与其他类似临床表现的疾病？"
+        },
+        {
+          "role": "assistant",
+          "content": "8. 先天性肾上腺皮质增生症治疗后引起性早熟 先天性肾上腺皮质增生症如 $11\\beta$ -羟化酶和21-羟化酶缺陷症患者，经糖皮质激素或同时盐皮质激素治疗后，血浆ACTH水平受抑制，肾上腺产生的性腺类固醇减少，但由于此期延误诊断和治疗，患者骨龄提前，如已达到青春期启动的界限值，患者可出现下丘脑一垂体一性腺轴功能的激活，引起性早熟，同样，以往曾用性腺类固醇治疗的患者也可如此。\n\n## （二）假性性早熟\n\n假性性早熟的临床表现与真性相比最主要的区别在于其性发育、成熟属于不完全性，即仅表现为某些副性征的发育表现，但无生殖细胞（精子和卵泡）成\n\n熟，无生育能力。\n\n## 【实验室检查】\n\n## （一）垂体促性腺激素测定\n\nLH/FSH脉冲性分泌，有助于鉴别性早熟是否为促性腺激素依赖性。血浆 FSH、LH、HCG、 $ \\mathrm{E}_{2} $和睾酮等测定以及必要时加用LHRH刺激试验，有助于各种性早熟的鉴别。详见表2。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在宫颈癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>级别</td><td>功能</td><td>表现</td></tr><tr><td rowspan=\"4\">1</td><td rowspan=\"4\">正常</td><td>面部各部位功能正常</td></tr><tr><td>A.大体:仔细检查可见轻瘫,可有轻微连带运动</td></tr><tr><td>B.静止:双侧对称</td></tr><tr><td>C.运动:</td></tr><tr><td rowspan=\"3\">2</td><td rowspan=\"3\">轻度异常</td><td>1.前额:轻-中度运动</td></tr><tr><td>2.眼:用力可完全闭合</td></tr><tr><td>3.嘴:轻微不对称</td></tr><tr><td rowspan=\"7\">3</td><td rowspan=\"7\">中度异常</td><td>A.大体:明显但无变形性不对称,可见但不严重的连带运动</td></tr><tr><td>B.运动:</td></tr><tr><td>1.前额:轻-中度运动</td></tr><tr><td>2.眼:用力可完全闭合</td></tr><tr><td>3.嘴:用力时轻微力弱</td></tr><tr><td>A.大体:明显力弱和(或)变形性不对称</td></tr><tr><td>B.运动:</td></tr><tr><td rowspan=\"6\">4</td><td rowspan=\"6\">中-重度异常</td><td>1.前额:无</td></tr><tr><td>2.眼:不完全闭合</td></tr><tr><td>3.嘴:尽力仍不对称</td></tr><tr><td>A.大体:几乎感觉不到运动</td></tr><tr><td>B.静息时:不对称</td></t"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "如何鉴别诊断骨肉瘤与其他类似临床表现的疾病？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. 禁水试验是最常用的有助于诊断垂体性尿崩症的功能试验。方法：试验前测体重、血压、尿量、尿比重、尿渗透压。以后每小时排尿，测尿量、尿比重、尿渗透压、体重、血压等，至尿量无变化、尿比重及尿渗透压持续两次不再上升为止。抽血测定血浆渗透压，并皮下注射抗利尿激素（水剂）5U，每小时再收集尿量，测尿比重、尿渗透压 $1\\sim 2$ 次。一般需禁水 $8\\sim 12\\mathrm{h}$ 以上。如血压有下降、体重减轻 $3\\mathrm{kg}$ 以上时，应终止试验。正常人或精神性烦渴者，禁水后尿量减少，尿比重、尿渗透压升高，故血压、体重常无明显变化，血浆渗透压也不会超过 $300\\mathrm{mmol / L}$ ，注射抗利尿激素后尿量不会继续减少，尿比重、尿渗透压不再继续增加。垂体性尿崩症禁水后尿量减少不明显，尿比重、尿渗透压无明显升高，尤其是完全性垂体性尿崩症，可出现体重和血压明显下降，血浆渗透压升高（大于 $300\\mathrm{mmol / L}$ ），注射抗利尿激素后尿量明显减少，尿比重、尿渗透压成倍增高。部分性垂体性尿崩症变化不如完全性垂体性尿崩症显著，有时与精神性烦渴不易鉴别。肾性尿崩症患者禁水和肌注抗利尿激素，均不能使尿量减少及尿液浓缩。\n\n4. 颅部及鞍区CT、磁共振检查 有助于该区域器质性病变的诊断和鉴别诊断。\n\n## 【治疗方案及原则】\n\n部分性垂体性尿崩症可给予氢氯噻嗪（双氢克尿塞） $ 2 5 \\sim 5 0 \\mathrm{m g} $ ，口服，3次/日。同时忌饮咖啡等。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "多学科讨论(MDT)在鼻咽癌诊断和治疗决策中的价值和流程？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. bcl-2。\n\n2. c-erbB-2。\n\n3. p53。\n\n4. p16（多肿瘤抑制基因）。\n\n5. nm23。\n\n## （十二）病原体标记物\n\n1. Myocobacterium Bovis（分枝杆菌，抗卡介苗）。\n\n2. HBsAg（乙型肝炎病毒表面抗原）。\n\n3. HBcAg（乙型肝炎病毒核心抗原）。\n\n4. HPV（人乳头状瘤病毒）。\n\n5. HTLV-1（人类T细胞白血病病毒）。\n\n## 四、免疫组织化学染色在鉴别肿瘤组织来源方面的应用（举例）\n\n1. 小蓝圆细胞肿瘤的免疫组织化学鉴别诊断见表4-1。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肝癌的临床诊断标准包括哪些？确诊需要哪些检查？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. nm23。\n\n## （十二）病原体标记物\n\n1. Myocobacterium Bovis（分枝杆菌，抗卡介苗）。\n\n2. HBsAg（乙型肝炎病毒表面抗原）。\n\n3. HBcAg（乙型肝炎病毒核心抗原）。\n\n4. HPV（人乳头状瘤病毒）。\n\n5. HTLV-1（人类T细胞白血病病毒）。\n\n## 四、免疫组织化学染色在鉴别肿瘤组织来源方面的应用（举例）\n\n1. 小蓝圆细胞肿瘤的免疫组织化学鉴别诊断见表4-1。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在脑胶质瘤诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<div align=\"center\">\n\n# 第二十三章 异位激素分泌综合征\n\n### </div>\n\n## 【概述】\n\n异位激素分泌综合征是指某些非经典内分泌组织的肿瘤，表达和分泌了一种或多种激素、激素前体物或（和）激素样物质，或起源于经典内分泌组织的肿瘤，不仅表达和分泌其正常功能时分泌的激素，而且表达和分泌其他正常时不分泌的激素，导致表现为原位肿瘤和分泌激素过多所引起的临床综合征。\n\n异位激素分泌综合征按异位分泌的激素种类而命名，如异位ACTH综合征、异位TSH综合征和异位GH综合征等。\n\n## 【临床表现】\n\n各种异位激素分泌综合征的临床表现取决于产生该异位激素肿瘤的组织来源和该异位激素的功能、性质和分泌水平。详见表1。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "骨肉瘤的临床诊断标准包括哪些？确诊需要哪些检查？"
+        },
+        {
+          "role": "assistant",
+          "content": "部分性垂体性尿崩症可给予氢氯噻嗪（双氢克尿塞） $ 2 5 \\sim 5 0 \\mathrm{m g} $ ，口服，3次/日。同时忌饮咖啡等。氯贝丁酯（安妥明） $ 0.2 5 \\sim 0. 5 \\mathrm{g} $ ，口服，3次/日。卡马西平0.1g，口服，3次/日，可有白细胞降低、肝损伤、嗜睡、眩晕、皮疹等不良反应。完全性垂体性尿崩症应补充抗利尿激素，常用有油剂鞣酸加压素（长效尿崩停） （5U/ml），从0.1ml开始，深部肌注，一般用 $ 0.3 \\sim 0. 5 \\mathrm{ml} $ ，以维持5d左右为宜。不良反应有头痛、血压升高、腹痛等。粉剂尿崩停（50U/ml） $ 5 \\sim 1 0 \\mathrm {U} $ ，鼻吸，每 $ 4 \\sim 6 \\mathrm{h} $一次，可引起慢性鼻炎而影响疗效。1-半胱氨酸-8-右旋精氨酸加压素增加抗利尿活性，减少不良反应。从 $ 0.1 \\mathrm{mg} / \\mathrm{d} $开始，根据尿量逐渐增加剂量，调整至尿量在 $ 2 0 0 0 \\mathrm {m l} / \\mathrm {d} $左右的剂量为维持量，一般为 $ 0.1 \\sim 0. 2 \\mathrm {m g} $ ，口服，2～3次/日，或 $ 4 \\mathrm {m g} / \\mathrm {m l} $ ，肌注，2～3次/日，警惕过量引起水中毒，如面部苍白、腹痛、血压升高。因肿瘤引起者，宜手术或放射治疗。肾性尿崩症也可试用氢氯噻嗪，剂量同前。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤急症的识别和处理原则是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "# 第二十三章 异位激素分泌综合征\n\n### </div>\n\n## 【概述】\n\n异位激素分泌综合征是指某些非经典内分泌组织的肿瘤，表达和分泌了一种或多种激素、激素前体物或（和）激素样物质，或起源于经典内分泌组织的肿瘤，不仅表达和分泌其正常功能时分泌的激素，而且表达和分泌其他正常时不分泌的激素，导致表现为原位肿瘤和分泌激素过多所引起的临床综合征。\n\n异位激素分泌综合征按异位分泌的激素种类而命名，如异位ACTH综合征、异位TSH综合征和异位GH综合征等。\n\n## 【临床表现】\n\n各种异位激素分泌综合征的临床表现取决于产生该异位激素肿瘤的组织来源和该异位激素的功能、性质和分泌水平。详见表1。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "如何根据临床表现和辅助检查结果综合判断黑色素瘤的分期？"
+        },
+        {
+          "role": "assistant",
+          "content": "异位激素分泌综合征是指某些非经典内分泌组织的肿瘤，表达和分泌了一种或多种激素、激素前体物或（和）激素样物质，或起源于经典内分泌组织的肿瘤，不仅表达和分泌其正常功能时分泌的激素，而且表达和分泌其他正常时不分泌的激素，导致表现为原位肿瘤和分泌激素过多所引起的临床综合征。\n\n异位激素分泌综合征按异位分泌的激素种类而命名，如异位ACTH综合征、异位TSH综合征和异位GH综合征等。\n\n## 【临床表现】\n\n各种异位激素分泌综合征的临床表现取决于产生该异位激素肿瘤的组织来源和该异位激素的功能、性质和分泌水平。详见表1。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "食管癌的临床诊断标准包括哪些？确诊需要哪些检查？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td></td><td>分期</td><td>治疗方案</td></tr><tr><td rowspan=\"4\">I期</td><td>IA&lt;20mm分化好的粘膜内癌</td><td>EMR</td></tr><tr><td>其他</td><td>改良根治术</td></tr><tr><td>IB&lt;20mmN1</td><td>改良根治术</td></tr><tr><td>其他T1N1,T2N0</td><td>标准式</td></tr><tr><td rowspan=\"2\">II期</td><td>T1N2,T2N1,T3N0</td><td>标准式</td></tr><tr><td>III A T2N2,T3N1</td><td>标准式</td></tr><tr><td rowspan=\"4\">III期</td><td>III B T3N2</td><td>标准式</td></tr><tr><td>III A T4N0</td><td>扩大切除</td></tr><tr><td>III B T4N1</td><td>扩大切除</td></tr><tr><td>IVA T1-3N3,T4N2,3,M(-)</td><td>扩大切除</td></tr><tr><td rowspan=\"2\">IV期</td><td>IVB M1,PS(0-2)</td><td>化疗、放疗、支持疗法</td></tr><tr><td>症状严重(出血、梗阻、营养不良)</td><td>姑息手术</td></tr></table>\n\n注：Ⅱ、Ⅲ、Ⅳ期胃癌应作术后辅助化疗；\n\nN2的病例是否作D3手术尚无定论，还拟作前瞻性随机研究。\n\n由于目前诊断水平尚难在术中对肿瘤的转移及浸润范围作精确的判别，临床诊断与病理诊断常会有一定差距。也因限于技术"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "液体活检在卵巢癌的诊断和复发监测中的应用进展？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>亚型</td><td>外周血</td><td>骨髓</td></tr><tr><td>难治性贫血伴有环状</td><td>贫血</td><td>仅有红系发育异常*</td></tr><tr><td>铁粒幼细胞(RARS)</td><td>无原始细胞或罕见</td><td>环状铁粒幼细胞≥15%原始细胞&lt;5%</td></tr><tr><td>难治性血细胞减少伴有多系发育异常(ROVD)</td><td>血细胞减少(两系减少或全血细胞减少)无原始细胞或罕见无Auer小体单核细胞&lt;1×109/L</td><td>髓系中≥2个系别中发育异常的细胞≥10%原始细胞&lt;5%无Auer小体环状铁粒幼细胞&lt;15%</td></tr><tr><td>难治性血细胞减少伴有多系发育异常和环状铁粒幼细胞(RC-MD-RS)</td><td>同ROVD</td><td>除环状铁粒幼细胞≥15%外,余同ROVD</td></tr><tr><td>难治性贫血伴有原始细胞过多I(RAEB-I)</td><td>血细胞减少原始细胞&lt;5%无Auer小体单核细胞&lt;1×109/L</td><td>一系或多系发育异常原始细胞5%~9%无Auer小体</td></tr><tr><td>难治性贫血伴有原始细胞过多II(RAEB-II)</td><td>血细胞减少原始细胞5%~19%有或无Auer小体单核细胞&lt;1×109/L</td><td>原始细胞10%~19%余同RAEB-I</td></tr><tr><td>MDS不能分类(MDS-U)</td><td>血细胞减少无原始细胞或罕见无Auer小体</td><td>粒系或巨核系一系发育异常原始细胞&lt;5%无Auer小体</td></tr></table>\n\n注：\"表中发育异"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在膀胱癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "非霍奇金淋巴瘤的全身症状与霍奇金淋巴瘤类似，可无明显症状，也有约 10%～15%的患者发生发热（一个月内不明原因发热 $ 38^{\\circ} \\mathrm{C} $以上 $ \\geqslant 3 \\mathrm{d} $）、盗汗、体重减轻（6个月内减轻超过 10%以上，无其他可解释的原因）等B症状。但更多病人发生结外器官的侵犯，产生相应的症状。过去临床上常将非霍奇金淋巴瘤按自然病情发展的速度，分成三大类：惰性（indolent）、进展型（aggressive）和高度进展型（highly aggresive）。1994年的REAL分型及2001年的WHO分型则将NHL从细胞来源区分为B细胞或T/NK细胞肿瘤，又各自区分为前驱细胞型及成熟细胞型两大类，每一大类按其形态学、免疫表型、生物学规律和临床特点等进一步分出数十种独立的淋巴瘤病种（disease entity）。WHO分型强调不论是病理学家或临床肿瘤专家，均应分别掌握这些独立病种的特征，不应满足于简单的临床归类。但上述的临床归类仍对临床医生有一定的参考意义。\n\n## （二）惰性淋巴瘤的临床特征\n\n1. 滤泡性淋巴瘤（follicular lymphoma，FL）本亚型在欧美常见，在中国较少见。多发生于40岁以上的成人，男女比例相近。无痛性，缓慢的外周淋巴结肿大是滤泡性淋巴瘤病人最常见的临床表现。病人可有淋巴结时大时小（wax\n\nand wane)现象。部分患者可有腹痛或疲乏的表现。早期原发的结外侵犯和B症状少见，然而在晚期阶段两者都是常见的。晚期滤泡性淋巴瘤可侵犯骨髓，有时引起血细胞减少。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "如何鉴别诊断甲状腺癌与其他类似临床表现的疾病？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>种类</td><td>体格检查</td><td>淋巴结</td><td>淋巴结团块</td><td>骨髓</td></tr><tr><td>OR</td><td>正常</td><td>正常</td><td>正常</td><td>正常</td></tr><tr><td rowspan=\"2\">ORu</td><td>正常</td><td>正常</td><td>正常</td><td>不确定</td></tr><tr><td>正常</td><td>正常</td><td>缩小&gt;75%</td><td>正常或不确定</td></tr><tr><td rowspan=\"3\">PR</td><td>正常</td><td>正常</td><td>正常</td><td>受累</td></tr><tr><td>正常</td><td>缩小≥50%</td><td>缩小≥50%</td><td>不定</td></tr><tr><td>肝、脾缩小</td><td>缩小≥50%</td><td>缩小≥50%</td><td>不定</td></tr><tr><td>复发/进展</td><td>肝、脾肿大，新病灶</td><td>新病灶或增加</td><td>新病灶或增加</td><td>重新出现异常</td></tr></table>\n\n## 第四节 弥漫大B细胞淋巴瘤\n\n## 【概述】\n\n弥漫大B细胞淋巴瘤（diffuse large B-cell lymphoma，B-DLCL）是高度侵袭性淋巴瘤，在NHL中是最常见的一种亚型，约占NHL总病例数的 30%。患者的病情常表现为迅速进展型，并常伴有局部或全身症状（B症状）。大部分患者在疾病确诊时处于临床分期Ⅲ或Ⅳ期。病灶局限的早期患者，通过联合治疗，疾病可达到治愈，但进展期患者，疗效则显著降低。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "液体活检在肾癌的诊断和复发监测中的应用进展？"
+        },
+        {
+          "role": "assistant",
+          "content": "润。多数病例细胞丰富程度中等，由成片的圆形或多边形单核细胞组成，破骨样多核巨细胞散布于单核细胞之间，数量不一，由单核细胞融合而成，核的数目3～ 4至 50～60个，大多数病例中还可见到形态不一的裂隙、假腺腔或假腺泡，其内可见散在的单核细胞和多核巨细胞，黄色瘤细胞多呈散在片状或地图状分布，细胞内可见含铁血黄素性颗粒。单核细胞表达CD68、HAM56、Mac387、PG-M1和 FX $ ^{\\mathrm{III}} $ a， $ 50\\% $ 表达 desmin。细胞遗传学研究显示 t(1;2）（p11;q35-36）。\n\n## 【治疗方案及原则】\n\n本病系良性肿瘤，但可复发，复发率为 10%～20%，特别是细胞丰富及有较多核分裂相者，以及仅作肿瘤摘除术而有残留者。手术原则应尽量彻底，临床上可见多次复发转为恶性者。\n\n## 第二节 恶性腱鞘巨细胞瘤\n\n## 【概述】\n\n恶性腱鞘巨细胞瘤(malignant giant cell tumor of tendon sheath)是一种极其罕见的肿瘤，由伴有肉瘤性区域的良性腱鞘巨细胞瘤组成，肉瘤性区域通常类似于巨细胞型恶性纤维组织细胞瘤。\n\n## 【临床表现】\n\n患者多为中老年人，年龄范围为12～79岁，平均56岁，男女均可发生。多发生于膝部，其次可见于足背、踝、大腿及大腿关节和颞颌关节等处。临床表现为局部肿胀，部分患者可伴有疼痛，病程为7个月至17年。影像学检查显示软组织内大肿块，部分病例中于肿块的边缘可见钙化区。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "胃癌的癌前病变有哪些？如何进行筛查和早期诊断？"
+        },
+        {
+          "role": "assistant",
+          "content": "胞在骨髓中释放某些细胞因子和生长因子，导致骨髓成纤维细胞过度增殖。异常造血细胞尚可随血流定植于其他髓外器官或部位，表现为髓外造血。本病的病因未明，约 60%的患者可有骨髓造血细胞遗传学异常，最常见的异常包括 del（13q）、del（20q）等，Ph染色体阴性，BCR/ABL融合基因阴性。临床呈慢性疾病经过，早期为前纤维化期，也称细胞期，骨髓造血活跃，网状纤维沉积不明显；后期为骨髓纤维化期，骨髓网状纤维和胶原纤维明显增多，经常伴发骨硬化，此期外周血出现幼红、幼粒细胞，成熟红细胞异形性明显，可见较多泪滴形红细胞。另外，髓外造血明显，肝、脾明显肿大并随疾病进展而加重。晚期患者表现为骨髓衰竭，或转化为急性白血病。\n\n## 【临床表现】\n\n本病好发于中老年，中位年龄60岁，偶见于青年或儿童，发病无性别差异。起病潜隐， $30\\%$ 的患者诊断时无明显症状，由常规体检发现脾大或血常规检查出现贫血或血小板升高等而进一步检查得以诊断。多数患者病程进展缓慢，早期可表现为乏力、气短、体重减轻、盗汗、低热等高代谢症候群。随病情进展渐出现脾大，左上腹隐痛、胀满不适，稍进食即感饱胀。后期以骨髓衰竭和髓外造血症状为主，贫血、出血，明显消瘦，肝、脾肿大，偶可出现肝、脾、淋巴结以外其他部位的髓外造血，呈相应的临床表现。患者的病程依疾病诊断早晚而差异极大，可1～20年，平均4～6年。主要死因为骨髓衰竭、血栓、门脉高压、心功能衰竭，约 $5\\% \\sim 30\\%$ 的患者最终转化为急性白血病。\n\n## 【诊断要点】\n\n主要根据骨髓活检，病理显示网状纤维及胶原纤维增生，并除外继发性骨髓纤维化可诊断本病。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "多学科讨论(MDT)在肾癌诊断和治疗决策中的价值和流程？"
+        },
+        {
+          "role": "assistant",
+          "content": "3. 止痛药物治疗骨转移病灶区的破骨细胞活性增高，局部前列腺素及炎性因子增多是导致疼痛的因素之一。因此骨转移疼痛的药物止痛治疗时，最好合用非甾体类抗炎药及双膦酸盐类药物。双膦酸盐类药物具有明显抑制破骨细胞活性，减少骨吸收的作用。骨转移患者使用骨膦、帕米磷酸二钠等双磷酸盐类药物，可以减轻疼痛，减少病理性骨折的危险。\n\n4. 其他抗癌治疗 骨转移患者是否接受化疗、内分泌治疗等抗癌治疗，需根据患者的具体情况而定。内分泌治疗是乳腺癌、前列腺癌骨转移的有效治疗手段。\n\n骨转移疼痛的难治性问题：一是突发性（爆发性）疼痛，二是骨转移累及神经，患者出现躯体疼痛与神经性疼痛的复合性疼痛，需要认真处理。\n\n## 【神经性疼痛】\n\n神经性疼痛（neuropathic pain）又称神经病理性疼痛或神经源性痛，属于难治性疼痛。晚期癌症疼痛往往属于这种疼痛。它也被认为是一种复杂的局部疼痛综合征。\n\n神经性疼痛临床表现的特点：痛觉过敏及异常疼痛。疼痛性质可描述为灼痛、电击样痛、轻轻触摸性疼痛、压迫感、紧缩感、坠胀感、里急后重感等。体格检查可能发现患者所描述的疼痛部位无明显损伤性病变，疼痛甚至可能出现在体格检查的感觉缺失区，可能在局部损伤后较长时间延迟出现，并且长期持续存在。合理使用辅助用药，如抗抑郁、抗惊厥、局部麻醉剂、糖皮质激素等药物，有助于治疗神经病理性疼痛。\n\n灼痛：辅助用药最好选用三环类抗抑郁药。抗抑郁药物不仅有助于控制患者的疼痛，而且还能帮助患者解除抑郁及失眠问题。用于神经病理性疼痛治疗的抗抑郁药物包括：去甲替林(nortriptylin）、阿米替林、多虑平、去甲丙咪嗪。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在肝癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "4. 结果评定 荧光显微镜下，ER阳性呈苹果绿荧光，PR阳性呈橘红色荧光。荧光主要位于胞浆内，偶见胞核或核仁阳性细胞。受体阳性强度可分4级，以正常乳腺或增生乳腺导管上皮细胞内所显荧光强度为评定阳性的标准：乳腺癌细胞荧光强度与之相似者为阳性（++），超过者为（+++），不及者为弱阳性（+），不显荧光者为阴性。ER阳性是指（++）和（+++）者。荧光标记的切片与HE染色片中，全片内癌细胞的百分数分为 10%，20%，30%...90%各级，作为半定量的计数表明受体阳性细胞的多少。\n\n## （三）免疫组化染色基本方法\n\n免疫组化染色方法主要原理是利用标记抗体和抗原抗体特异性反应，借助不同的染色方法，对细胞或组织内的相应抗原进行定性、定位或定量检测。目前免疫组化以辣根过氧化物酶（HRP）系统和DAB显色最为常用。根据其染色步骤可将免疫组化分为：直接法（酶标法）、间接法、IGS法（免疫金法）、IGSS法（免疫金银法）、SP二步法、PAP法、ABC法（卵白素-生物素-过氧化物酶连结法）、SP法（链霉菌抗生物素蛋白-过氧化物酶连结法）等，在临床病理诊断中常用 ABC法和SP法。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在前列腺癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "NLPHD是结节性（或结节和弥漫性）多形性增生为特征的单克隆性B细胞肿瘤，肿瘤组织中散布恶性细胞往往与典型的HRS细胞形态有别，常为较巨大的单个核细胞，胞浆稀少，核常呈折叠或分叶状，被称为爆米花(popcorn)细胞，或L&H细胞，淋巴细胞性和（或)组织细胞性R-S变型细胞。这些L/H细胞位于充满非肿瘤性淋巴细胞的滤泡树突细胞突起形成的大球形网之中。目前尚不清楚是否存在纯弥漫性淋巴细胞为主型的霍奇金淋巴瘤，部分结节性淋巴细胞为主型霍奇金淋巴瘤可能会发展为富于T细胞的弥漫性大B细胞淋巴瘤。免疫表型：L/H细胞 $\\mathrm{CD20^{+}}$ 、 $\\mathrm{CD79\\alpha^{+}}$ 、BCL $6^{+}$ 、 $\\mathrm{CD45^{+}}$ 、 $\\mathrm{EMA}^{+ / -}$ 、 $\\mathrm{CD15^{-}}$ 、 $\\mathrm{CD30^{-}}$ 大多数L/H细胞被 $\\mathrm{CD3^{+}}$ 、 $\\mathrm{CD57^{+}}$ T细胞围绕。遗传学特征：分离单个L/H细胞的DNA可检出Ig基因重排。临床表现为颈、腋窝或腹股沟的淋巴结肿大，进展缓慢，但较易复发。\n\n## （二）经典型霍奇金淋巴瘤\n\n经典型HD的特点是肿瘤组织中可见典型的Reed-Sternberg细胞或单核 Hodgkin细胞，肿瘤细胞的免疫表型CD30为阳性，CD15也多数阳性。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在乳腺癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 上皮样囊肿 CT 为低密度（CT值为 $-14\\sim 14\\mathrm{Hu}$），略高于 CSF，边界清楚，形态多不规则，易沿邻近脑池生长，邻近脑室受压变形、移位。瘤体和囊壁本身不强化。强化提示可能有恶性上皮细胞成分，部分病人出现骨侵蚀。MRI 在 $\\mathrm{T}_{1}$ 加权像上信号稍高于 CSF，$\\mathrm{T}_{2}$ 加权像上肿瘤与 CSF 信号相似。但由于肿瘤内容的成分多变，其表现出的信号特点也多变，这是此类肿瘤的特点。如肿瘤含液态胆固醇以及甘油三酯时，表现为在 $\\mathrm{T}_{1}$ 加权像上呈高信号。\n\n2. 皮样囊肿 头颅CT可显示颅后窝中线区圆形或类圆形低密度肿物。\n\nCT值： $ - 1 5 \\sim 1 0 \\mathrm {H u}。 $ 边界清楚，可见钙化斑。脑室受压移位，可伴幕上脑积水；一般肿瘤不强化，但当反复感染时，窦道和瘤壁可因肉芽组织增生而强化。MRI表现为颅后窝中线区类圆形肿物，呈脂肪性短 $\\mathrm{T}_{1}$ 信号特征，因为皮样囊肿内含有部分液态的胆固醇。\n\n## 【鉴别诊断】\n\n见表3-13、3-14。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "口腔癌的癌前病变有哪些？如何进行筛查和早期诊断？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 肝细胞癌（hepatocellular carcinoma，HCC）：CT平扫，肝癌病灶常呈相对低密度影，边缘规则或不规则，有时病灶边缘可见更低密度的环状假包膜，这对诊断肝癌颇具特征性。大部分HCC，尤其小肝癌为富血供病灶——主要由肝动脉供血，增强扫描动脉期（主要动脉晚期），肿瘤强化十分明显，呈高密度，门脉期扫描肿瘤反呈低密度，这种“速升速降”的增强形式是肝癌CT诊断的特点。但是必须指出，不符合该规律，也不能完全否定HCC的诊断，特别是大肝癌，该\n\n特征并不明显。因为肿瘤的强化形式和程度受多种因素的影响，如扫描的时相、动脉供血的多寡、门脉参与供血、肿瘤出血坏死、肿瘤的生长方式（如外生型肝癌）、肿瘤的病理分型和恶性程度等，因此尚需结合其他征象和临床与实验室检查，综合作出诊断。\n\nMRI检查SE序列， $ \\mathrm{T}_{1}\\mathrm{W} $像上常呈低信号， $ \\mathrm{T}_{2}\\mathrm{W} $像呈稍高信号，MRI上发现肝癌假包膜的概率较CT为高，在 $ \\mathrm{T}_{1}\\mathrm{W} $和 $ \\mathrm{T}_{2}\\mathrm{W} $像上常为低信号的环状影，GRE序列动态增强扫描，肝癌的MRI表现类似CT增强，即动脉期强化明显呈高信号，门脉期扫描呈低信号。\n\n肝癌，特别大肝癌和浸润性肝癌易侵犯门静脉和肝静脉系统，也常可引起门静脉和（或）肝静脉乃至下腔静脉的癌栓。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肾癌的组织病理学诊断要点和免疫组化标志物是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "2) 经皮内镜椎间盘切除术（ISPs）：将椎间盘中央的内容物切除，通过减少椎间盘内的压力来解除椎间盘脱出部分对神经根的压力。当存在严重的神经损害时，不推荐使用。\n\n## 3. 手术治疗的并发症\n\n(1) 感染。\n\n(2) 神经根损伤出现感觉、运动功能障碍。\n\n(3) 硬脊膜意外开放：可能导致脑脊液漏，绝大多数不需要修补；假性脊膜膨出。\n\n(4) 椎间盘突出复发。\n\n## 二、颈椎间盘突出\n\n与腰椎不同，颈部神经根位于相同数目椎体椎弓根的上方，颈神经根与椎弓根的下表面关系密切，椎间隙与椎弓根的下部邻近。\n\n## 【诊断】\n\n## （一）临床表现\n\n1. 神经根症状通常侵害突出平面椎间孔发出的神经（表5-2），如 $\\mathrm{C}_{6-7}$ 通常造成 $\\mathrm{C}_7$ 神经根病变。 $\\mathrm{C}_8$ 和 $\\mathrm{T}_{1}$ 神经根受累可以产生部分Horner综合征。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在卵巢癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "定量体层扫描（quantitative computed tomography，QCT）提高了测量的精密度，可测量较小的骨内小梁骨体积，并可选择性地测量某一部分的骨密度，如小梁骨或皮质骨。双能定量CT可减少此误差，但又增加了射线暴露量和降低了机器的精确度。超声骨密度测定是近年来出现的一种新的骨密度测定方法，其优点是无创无射线辐射、方便，但只能做表面骨如髌骨和跟骨，也可做桡骨和胫骨。\n\n骨质疏松症的诊断标准，一般为骨密度值低于同性别健康人平均骨峰值的 2个标准差。\n\n## （六）骨活检和骨计量学检查\n\n因此检查属创伤性，一般不作常规检查用。\n\n骨计量学检查或定量组织形态测量（quantitative histomorphometry）能观察骨代谢及骨量的细微改变。一般多自髂骨横向取材，常用部位距髂前上棘后方及下方各 2cm处，可同时得到两层皮质骨及其中间的小梁骨，可以帮助鉴别其他骨代谢疾患如甲状旁腺功能亢进、骨软化、多发性骨髓瘤或转移瘤。\n\n骨质疏松症的诊断主要根据临床表现（特别是年龄、性别和非暴力性骨折史）和骨密度检查，同时排除骨形成刺激剂，包括活性维生素D、氟化物、合成类固醇等。\n\n## 【治疗方案及原则】\n\n## （一）一般治疗\n\n均衡、富含钙膳食，增加户外活动，适度加强腰背部肌肉锻炼，谨防跌倒等外伤，戒烟、少饮酒等。\n\n## （二）药物治疗\n\n1. 雌激素 雌激素缺乏是引起I型骨质疏松症的关键因素之一。适时适量地补充雌激素有利于抑制破骨细胞的活性，减少骨吸收，达到增加骨量的目的。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "多学科讨论(MDT)在食管癌诊断和治疗决策中的价值和流程？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. 其他治疗 糖皮质激素、环孢素可用于伴有免疫性溶血性贫血的患者；沙利度胺能抑制VEGF和bFGF依赖性骨髓血管新生和肿瘤坏死因子，与小剂量糖皮质激素合用能改善患者的贫血和血小板减少，缩小脾脏。\n\n## 第一节 淋巴瘤的病理分型和临床分期\n\n## 【概述】\n\n淋巴瘤（lymphoma）是原发于淋巴结和淋巴组织的恶性肿瘤。根据病理组织学类型，可将淋巴瘤分为霍奇金病（Hodgkin's disease，HD）和非霍奇金淋巴瘤（non-Hodgkin's lymphoma，NHL）两大类。无痛性、进行性淋巴结肿大是淋巴瘤最为典型的临床表现。常见的症状还有肝、脾肿大和全身症状，如发热、盗汗和体重减轻等。NHL的发病率远较HD高，NHL是一组典型的异质性疾病，以结外病变多见，病灶更易向远处播散。淋巴瘤的预后与疾病的病理类型、细胞或分子遗传学改变、临床分期和治疗等因素有关。\n\n### 【分型】\n\n任何疾病的正确诊断是成功治疗的首要条件，诊断淋巴瘤最重要的第一步是作出明确的疾病病理诊断。HD的病理分型标准在数十年来几乎没有大的改动，而对NHL的分类不断深入和改进，其发病的分子机制也不断得到阐明，因此，分型不断精细，对拟订治疗方案和判断疾病预后有越来越实际的意义。1966年的Rappaport分类（表3-1）主要依据细胞形态学，其后，Lukes&Collins分类结合细胞形态学和免疫表型，对NHL的各型进行了重新分类。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在食管癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "原发皮肤CD30+淋巴增殖性疾病是一组临床进展缓慢、预后良好的疾病。对病灶有自发消长的患者可以不做任何治疗，选择观察等待；对孤立性或局限性短期内不消退而有进展的皮肤病灶，局部放疗是最佳选择；对于无皮肤外病灶，但皮肤病变广泛并且无自发消退趋势的患者，可选用小剂量MTX或\n\nPUVA治疗；联合化疗仅适用于诊断时已存在或以后发展成皮肤外病灶的患者，可以选用以蒽环类药物为基础的联合化疗。\n\n## 二、原发系统型间变大细胞淋巴瘤\n\n## 【概述】\n\n原发系统型间变大细胞淋巴瘤是相对于原发皮肤型而言，病变可以累及皮肤但不仅限于皮肤。与原发皮肤型不同，大部分患者有 t（2；5）（p23；q35）改变，并表达ALK，但也有一部分患者不表达ALK，这部分患者需与原发皮肤型者鉴别。ALK+者的预后较ALK一者好。\n\n## 【临床表现】\n\nALK+ALCL主要发生于30岁以下，以男性多见，尤其在10～30岁的患者中，男、女发病比例为6.5：1。发病时疾病常处于Ⅲ或Ⅳ期， 75%的患者有B症状，尤其是高热。 60%的患者有结外累及， 40%的患者有2个或以上结外病灶。\n\nALK一ALCL常发生在老年患者，男、女发病比例为0.9，Ⅲ或IV期病例和结外累及少见。但也有不同的报道。\n\n## 【诊断要点】\n\n目前，对本病的诊断尚缺乏特异的指标，必须结合细胞形态学、细胞免疫组化、细胞遗传学和分子生物学等多项技术检测的综合指标分析。\n\n首先，在细胞形态学方面，大部分病例具有ALCL的“特征性”细胞，即瘤细胞体积大，呈圆、卵圆形或多形，核异型多样，染色质粗，核仁大，分裂象多。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "分子病理检测在卵巢癌精准诊断和治疗中的作用是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "对于胆管癌的影像学检查目前仍以超声检查为首选，CT等检查方式作为进一步明确诊断的手段来应用。联合使用影像学检查手段可明显提高胆管癌的术前确诊率。第三军医大学2001年探讨了206例肝门部胆管癌超声、CT、ERCP、PTC4种不同影像检查方法对肝门部胆管癌的诊断价值。结果表明，梗阻部位确诊率超声为 $91.1\\%$ ，CT为 $89.6\\%$ ，二者联合为 $97.3\\%$ 。梗阻性质确诊率超声为 $78.7\\%$ ，CT为 $72.8\\%$ ，二者联合为 $94.7\\%$ 。肿瘤显示率超声为 $60.9\\%$ ，CT为 $30.4\\%$ ，二者联合检查提高到 $80.5\\%$ 。并发症发生率ERCP和PTC分别为 $11.6\\%$ 及 $17.9\\%$ 。说明超声与CT联合检查可相互弥补不足，并明显提高了梗阻部位及梗阻性质确诊率，满足绝大多数肝门部胆管癌诊断要求。\n\n## （三）实验室检查\n\n大多患者因梗阻性黄疸可表现为血清总胆红素（TBIL）、直接胆红素（DBIL）升高。对于合并有肝功能损害的患者可检出血清间接胆红素（IBIL）也升高。标志胆管上皮细胞损伤的碱性磷酸酶（AKP）和 $\\gamma$ -谷胺酰转移酶（ $\\gamma$ -GT）均显著升高，大多患者可合并有肝细胞不同程度受损，表现为丙氨酸氨基转移酶（ALT）和天门冬酸氨基转移酶（AST）的相应升高。但ALT和AST一般只出现轻度异常，这种胆红素与转氨酶升高的不平衡现象有助于与病毒性肝炎相鉴别。但对于梗阻性黄疸时间较长、合并感染、肝功能损害严重的患者则可有转氨酶的明显升高。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在胃癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>分期</td><td>特征</td></tr><tr><td>A</td><td>淋巴细胞增多&gt;15000/μl，骨髓中淋巴细胞&gt;40% 无贫血，无血小板减少，淋巴结肿大少于3个部位</td></tr><tr><td>B</td><td>A期伴3个或更多淋巴结肿大，包括肝和脾</td></tr><tr><td>C</td><td>血红蛋白&lt;11.0g/dl（男），&lt;10.0g/dl（女）或血小板&lt;100000/μl</td></tr></table>\n\n## 第二节 霍奇金淋巴瘤\n\n## 【概述】\n\n霍奇金淋巴瘤（Hodgkin's lymphoma，HL）是淋巴网状组织的恶性肿瘤，常发生于一组淋巴结而扩散到其他淋巴结和（或）淋巴器官或组织。肿瘤组织成分复杂，包括肿瘤性和反应性两种，往往呈肉芽肿样改变，具有特征性的里-斯细胞。霍奇金淋巴瘤好发于年轻成人或年龄大于55岁者。儿童也有发病。在获得性免疫缺陷综合征（AIDS）患者中也有发生，称为AIDS相关霍奇金淋巴瘤。后两者的治疗与前者不同。\n\n## 【临床表现】\n\n1. 无痛性淋巴结肿大 是最常见的临床表现，其中浅表淋巴结肿大最多见，如颈、腋下和腹股沟；\n\n2. 皮肤瘙痒；\n\n3. 肝、脾肿大；\n\n4. 全身症状 如发热和盗汗，乏力，体重减轻。\n\n如果上述表现持续2周以上，应该考虑进一步检查，如肿大淋巴结活检。\n\n## 【诊断要点】\n\n1. 疾病确诊 本病的确诊主要依赖病变淋巴结或肿块的病理活检。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在黑色素瘤诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "肿瘤转移较早，约2/3的患者就诊时就已出现远处转移，最常见于骨、淋巴结、肝脏和皮肤。约 1%～2%可自发性消退或成熟化，主要发生在1岁以下的婴儿。下列指标提示预后较好：年龄<2岁，临床分期为I、Ⅱ和IV-S期，组织学上为分化型，无N-myc扩增，低血清铁蛋白，高双倍体，香草扁桃酸与高香草酸比值>1.5等。如患者年龄大，临床处于进展期，肿瘤分化差，肿块位置深及对化疗不敏感，提示预后不佳。\n\n## 第二节 骨外尤文肉瘤\n\n## 【概述】\n\n骨外尤文肉瘤（extraskeletal Ewing's sarcoma）是一种发生于软组织的小圆细胞肉瘤，其形态与发生于骨内的尤文氏肉瘤相似，由成片或模糊小叶状分布的原始小圆细胞组成。\n\n## 【临床表现】\n\n好发于青年人，年龄范围多在15～30岁，很少超过40岁，男性略多见。主要发生在脊椎旁和胸壁，与椎骨和肋骨密切相连，也可发生于下肢，少数位于盆腔、臀部、腹膜后和上肢。临床上表现为软组织深部生长迅速的肿块，1/3的患者伴有疼痛，如脊索受累及，可产生进展性感觉和运动功能障碍。CT或MRI有助于确认为骨外病变。\n\n## 【诊断要点】\n\n1. 大体形态呈多结节状或分叶状，质软或脆，直径一般不超过 10cm。切面呈灰黄色或灰红色，常伴有坏死、囊肿形成或出血，但钙化少见。\n\n2. 组织学形态 镜下由紧密成片或呈小叶状分布的小圆细胞组成，核形较规则，圆形或卵圆形，核膜清晰，核染色质细致、均匀，似粉尘样，核分裂相多少不等，胞质少或呈不规则小空泡状，PAS染色阳性，不耐淀粉酶消化，提示存在糖原。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "肿瘤标志物在喉癌诊断和监测中的价值和局限性是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "本症的早期诊断尤其是产前诊断，对CAH某些类型的预后至关重要。\n\n### （罗敏）\n\n## 【概述】\n\n嗜铬细胞瘤是由于嗜铬细胞肿瘤或增生并分泌过多儿茶酚胺所致的疾病。肿瘤细胞大多来源于肾上腺髓质，少数来源于肾上腺外的嗜铬细胞。由于肿瘤或增生细胞阵发或持续性分泌过量的儿茶酚胺（CA）及其他激素（如血清素、血管活性肠肽、肾上腺髓质素和神经肽Y等），而导致血压异常（常表现为高血压）与代谢紊乱症候群。某些患者可因长期高血压致严重的心、脑、肾损害或因突发严重高血压而导致危象，危及生命，但如能及时、早期获得诊断和治疗，又是一种可治愈的继发性高血压病。\n\n## 【临床表现】\n\n本病的临床表现个体差异甚大：从无症状和体征至突然发生恶性高血压、心衰或脑出血等。其常见症状和体征如下：\n\n## （一）心血管系统\n\n1. 高血压为本症的主要和特征性表现，可呈间歇性或持续性发作。典型的阵发性发作常表现为血压突然升高，可达 $200\\sim 300 / 130\\sim 180\\mathrm{mmHg}$ ，伴剧烈头痛，全身大汗淋漓、心悸、心动过速、心律失常，心前区和上腹部紧迫感、疼痛感、焦虑、恐惧或有濒死感、皮肤苍白、恶心、呕吐、腹痛或胸痛、视力模糊、复视，严重者可致急性左心衰竭或心脑血管意外。发作终止后，可出现面部及全身皮肤潮红、发热、流涎、瞳孔缩小等迷走神经兴奋症状和尿量增多。阵发性发作可由情绪激动、体位改变、创伤、灌肠、大小便、腹部触诊、术前麻醉或某些药物（如组胺、胍乙啶、胰高糖素、多巴胺拮抗剂、安非他命、儿茶酚胺再摄取阻断剂和单胺氧化酶抑制剂等）促发。发作持续时间不一，短至数秒或长至数小时以上。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "如何根据临床表现和辅助检查结果综合判断结直肠癌的分期？"
+        },
+        {
+          "role": "assistant",
+          "content": "(1) 脑室穿刺脑脊液外引流（脑室造口引流术）：适用于急性SAH后脑积水，或严重的脑室内出血，以及Hunt&Hess3级以上的病人。通过外引流装置可以测量颅内压并同时引流血性脑脊液，进而可能改善病人的症状，但同时也可能增加未行病因治疗的动脉瘤的再出血危险。当进行脑室穿刺引流术时建议保持颅内压在 $150\\sim 250\\mathrm{mmH}_2\\mathrm{O}$ 范围内，避免压力迅速下降（除非绝对必要），以减少脑室外引流诱发动脉瘤再出血的危险。如果颅内压升高，可用甘露醇以及连续腰椎穿刺来治疗。连续腰椎穿刺可作为脑室外引流的替代方法，但应谨慎地降低颅压，防止诱发颅内动脉瘤破裂的危险。\n\n(2) 脑脊液分流术：常用脑室-腹腔分流术，主要适用于SAH后的慢性脑积水。如颅内动脉瘤术后存在症状性脑积水可采用此方法。\n\n## 第二节 脑动静脉畸形\n\n脑动静脉畸形（AVM）是脑血管畸形中的一个主要类型，其形成是由于胚胎期脑原始动脉及静脉并行，紧密相连，中间隔以两层血管内皮细胞。如两者之间发生瘘道，血液就直接从动脉流入静脉，形成血流短路，而引起脑血流动力学改变。显微镜下畸形组织呈一大堆较成熟的大小不等的血管结构，其间夹杂有硬化的脑组织。\n\n## 【诊断】\n\n## （一）临床表现\n\n1. 头痛 多数病人的主要症状为长期头痛，常为偏头痛样，但部位并不固定而且与病变的定位无关。当畸形出血时，头痛加剧，且伴有呕吐。\n\n2. 癫痫 约1/3以上的病人以癫痫发作起病，多呈局限性抽搐。该症状有一定的定位意义。确诊年龄越小，越容易出现癫痫症状。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "宫颈癌的组织病理学诊断要点和免疫组化标志物是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "2. 组织学形态病变位于皮下或真皮内，境界清楚，偶可累及深部的软组织。由略呈分叶状的成簇毛细血管型小血管组成，小血管多围绕中等大小的营养性血管生长。多数血管衬以上皮样的内皮细胞，边缘呈扇贝样突入血管腔内，类似“墓碑”。内皮细胞含圆形或分叶状核，胞质丰富，嗜伊红色，有时含有空泡，拟形成原始脉管腔。增生的血管周围常伴有慢性炎症细胞浸润，特别是酸性粒细胞，也可见淋巴细胞、肥大细胞和浆细胞。\n\n## 【治疗方案及原则】\n\n局部切除为主，有时要明确边界较为困难，临床应注意区分肿瘤与正常组织的界限。\n\n## 第二节 上皮样血管内皮瘤\n\n## 【概述】\n\n上皮样血管内皮瘤(epithelioid hemangioendothelioma)是一种血管中心性\n\n血管肿瘤，由呈短索状和巢状排列的上皮样内皮细胞组成，基质呈粘液透明样，有时可见灶性的钙化或骨化。\n\n## 【临床表现】\n\n患者多为成年人，儿童罕见。好发于四肢的浅表和深部的软组织，相当一部分病例发生在前纵隔，部分病例可位于实质性脏器，如肺、肝、骨和大脑。发生于软组织者多表现为孤立性结节，多伴有轻微疼痛感；发生于肺和肝者常为多灶性，且以女性为多见；发生于骨者一半以上为多灶性。约1/2的肿瘤与较大的静脉关系密切或直接起源于血管，临床上可引起缺血性疼痛，引起血管阻塞时，可导致水肿或血栓性静脉炎。\n\n## 【诊断要点】\n\n1. 大体形态 呈灰白或灰红色肿块，质地坚实，纤维样，位置深及体积较大的肿瘤内有时可见钙化。\n\n2. 组织学形态 起源于血管者，血管扩张，可见肿瘤呈离心状从血管腔向周围软组织内生长。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "分子病理检测在黑色素瘤精准诊断和治疗中的作用是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "(4) 可调式通气面罩：虽然可提供 $40\\%$ 以上的氧浓度，但其精确度明显下降，与实测值可相差 $10\\%$ 。低浓度时仅相差 $1\\% \\sim 2\\%$ 。有以下优点。 $ \\textcircled{1} $如使用得当，该装置可提供较恒定的 $ \\mathrm{F i O_{2}} $； $ \\textcircled{2} $由于喷射入面罩的气体流速超过患者吸气时的最高流速和潮气量，所以，患者通气模式变化不会影响 $ \\mathrm{F i O_{2}} $； $ \\textcircled{3} $无需湿化，不受张口呼吸的影响； $ \\textcircled{4} $高流速气体迫使面罩中呼出气的 $ \\mathrm{C O_{2}} $排出，基本无 $ \\mathrm{C O_{2}} $潴留产生。故适用于低氧血症伴高碳酸血症的患者。\n\n(5) 评价氧疗效果，主要包括2个方面： $ \\textcircled{1} $呼吸循环系统的临床表现； $ \\textcircled{2} $动脉血\n\n![](page=0,bbox=[1428, 123, 1466, 157])\n\n气监测。\n\n(6) 避免氧疗的副作用： $ \\textcircled{1} $去氮性肺不张， $ \\mathrm{F i O_{2}} $高于 50%可引起去氮性肺不张，导致解剖样分流增加。预防方法为 $ \\mathrm{F i O_{2}} $不宜超过 50%；进行机械通气时，加用呼气末正压（PEEP）； $ \\textcircled{2} $鼓励患者排痰，减少气道堵塞；注意吸入气体的加湿和加温。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "液体活检在宫颈癌的诊断和复发监测中的应用进展？"
+        },
+        {
+          "role": "assistant",
+          "content": "5. 肝错构瘤 常规超声多为类圆形或椭圆形，边界多清晰，偶可见周围有一薄包膜。肿瘤以高回声多见，呈密集均匀的细小光点回声，类似高回声型血管瘤表现，但前者回声更高，更密集，并且后方多轻度衰减。亦可见内部混有低回声区，但分布仍较均匀者。彩色多普勒多无彩色血流信号显示，但低回声者可在周边部或内部显示的彩色血流信号，呈分支状或短线状，可测及静脉和动脉血流信号，阻力指数等常较低。\n\n6. 转移性肝癌 多为低回声不均质光团，可有晕圈等改变，后方回声稍强，有侧方声影，这类病灶常为多发，部分可呈高回声或混合回声。彩色多普勒可在病灶内出现少量血流信号，但阻力指数多较高。同时，周围肝实质回声多无肝硬化表现，可以资鉴别。\n\n7. 肝脓肿 较典型时，壁厚，内膜粗糙呈“虫蚀”状，为无回声或不均匀回声光团，诊断较容易。肝脓疡表现不典型时，用常规B超诊断较困难，需结合彩色多普勒超声和临床表现加以诊断。\n\n8. 胆囊癌 近年来有逐渐增多趋势，早期发现仍比较困难。在发现肝右叶癌肿且无肝硬化时，应仔细观察胆囊的情况，这类病人的胆囊因受压而变小，部分胆囊壁可不规则增厚而与右叶癌肿相连，甚至在胆囊癌实变时，可与右叶癌肿\n\n融合成一团块，多伴有结石，有助于鉴别诊断。\n\n9. 肝母细胞瘤声像图上显示肝内有一巨大团块，多强弱不均，并有液化和包膜，多位于肝右叶，常推移右肾，超声无特异性表现，应结合临床作出诊断。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "乳腺癌的临床诊断标准包括哪些？确诊需要哪些检查？"
+        },
+        {
+          "role": "assistant",
+          "content": "1. 慢性关节炎 多见于未经治疗或治疗不规则、反复发作者。其病理基础是痛风石在骨关节周围组织中形成并引起关节的慢性损伤，称为痛风性慢性关节炎。此期关节炎发作较频，间歇期缩短，疼痛日益加剧，甚至发作后不能完全缓解。痛风石的形成是由于尿酸盐沉积在软骨、滑膜、肌腱和软组织的结果，为本期常见的特征性表现。痛风石常见于耳廓、跖趾、指间、掌指、肘等关节附近，亦可见于尺骨鹰嘴滑车和跟腱内。痛风本身虽然不痛，但若痛风石形成过多并毁损关节可致手足畸形、功能障碍。痛风石表面的皮肤可变得十分薄弱，一旦溃破可排出白色粉末状尿酸盐结晶，此时病变一般已至晚期。\n\n## 2. 肾脏病变 病程较长的痛风患者约1/3有肾脏损害，表现为三种形式：\n\n(1) 痛风性肾病：为过多的尿酸盐沉积在肾间质内所致。早期可仅有间歇性蛋白尿和显微镜下血尿，随着病程进展逐渐转为持续性蛋白尿，肾浓缩功能受损，出现夜尿增多、等渗尿等。晚期发展为慢性肾功能不全。部分患者以痛风性肾病为最先的临床表现，而关节炎症状不明显，易与肾小球肾炎和原发性高血压合并肾病混淆。\n\n(2) 尿酸性肾结石：部分患者可以尿酸性肾结石为首发表现。若为细小泥沙样结石，因可随尿液排出故可无症状，而较大结石则常引起肾绞痛、血尿及尿路感染等症状。\n\n(3) 急性肾衰竭：由于大量尿酸盐结晶堵塞在肾小管、肾盂及输尿管内，引起尿路梗塞。患者突然出现少尿甚至无尿，如不及时处理，可迅速发展为急性肾衰竭。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "鼻咽癌的组织病理学诊断要点和免疫组化标志物是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "### （罗敏）\n\n## 【概述】\n\n嗜铬细胞瘤是由于嗜铬细胞肿瘤或增生并分泌过多儿茶酚胺所致的疾病。肿瘤细胞大多来源于肾上腺髓质，少数来源于肾上腺外的嗜铬细胞。由于肿瘤或增生细胞阵发或持续性分泌过量的儿茶酚胺（CA）及其他激素（如血清素、血管活性肠肽、肾上腺髓质素和神经肽Y等），而导致血压异常（常表现为高血压）与代谢紊乱症候群。某些患者可因长期高血压致严重的心、脑、肾损害或因突发严重高血压而导致危象，危及生命，但如能及时、早期获得诊断和治疗，又是一种可治愈的继发性高血压病。\n\n## 【临床表现】\n\n本病的临床表现个体差异甚大：从无症状和体征至突然发生恶性高血压、心衰或脑出血等。其常见症状和体征如下：\n\n## （一）心血管系统\n\n1. 高血压为本症的主要和特征性表现，可呈间歇性或持续性发作。典型的阵发性发作常表现为血压突然升高，可达 $200\\sim 300 / 130\\sim 180\\mathrm{mmHg}$ ，伴剧烈头痛，全身大汗淋漓、心悸、心动过速、心律失常，心前区和上腹部紧迫感、疼痛感、焦虑、恐惧或有濒死感、皮肤苍白、恶心、呕吐、腹痛或胸痛、视力模糊、复视，严重者可致急性左心衰竭或心脑血管意外。发作终止后，可出现面部及全身皮肤潮红、发热、流涎、瞳孔缩小等迷走神经兴奋症状和尿量增多。阵发性发作可由情绪激动、体位改变、创伤、灌肠、大小便、腹部触诊、术前麻醉或某些药物（如组胺、胍乙啶、胰高糖素、多巴胺拮抗剂、安非他命、儿茶酚胺再摄取阻断剂和单胺氧化酶抑制剂等）促发。发作持续时间不一，短至数秒或长至数小时以上。发作频率不一，多者一日数次，少者数月一次。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "多学科讨论(MDT)在口腔癌诊断和治疗决策中的价值和流程？"
+        },
+        {
+          "role": "assistant",
+          "content": "进展型和高度进展型淋巴瘤浅表淋巴结呈进行性不对称无痛性肿大，质韧而有弹性，早期不融合，后期相互融合。结外病变视侵犯部位不同可表现多种多样。咽淋巴环受侵：扁桃体肿大、口咽或鼻咽肿块、呼吸困难。纵隔和胸部器官受累：纵隔淋巴结肿大、上腔静脉压迫综合征、肺浸润、胸腔积液、心包积液。腹腔淋巴结受累：腹痛、腰痛、腹块和大小便困难。消化道粘膜下淋巴组织受累可表现为：腹痛、腹泻、便血、肠梗阻、肠穿孔和吸收不良综合征。肝脾肿大和肝功能异常，多见于晚期病人，可出现疲乏、黄疸等。骨骼病变，则常见于胸椎、腰椎骨，肋骨和颅骨次之，可出现骨痛和病理性骨折。骨髓侵犯，可表现为急淋白血病样骨髓象。皮肤病变：特异性病变发生在真皮内，表现多样化，丘疹、斑疹、浸润性斑块、溃疡、结节、肿块，非特异性病变仅为普通炎症样改变、瘙痒，也可伴发带状疱疹。神经系统病变：头痛、颅内压升高、颅神经瘫痪、脊髓压迫及截瘫。泌尿生殖系统病变：腰痛、肾区肿块、睾丸肿块、子宫和卵巢肿块。\n\n## 1. 进展型淋巴瘤\n\n(1) 弥漫性大B细胞淋巴瘤（diffuse large B-cell lymphoma）这是临床最常见的淋巴瘤类型，可见于各年龄层，中位年龄为55岁。病人可表现为淋巴结肿大或结外侵犯，常见的结外侵犯部位是胃肠道，Waldeyer's环，皮肤，骨髓等，也可侵犯鼻窦，泌尿生殖道，甲状腺和中枢神经系统。临床表现根据不同的起源部位、肿瘤的大小、类型、是否侵犯或压迫邻近器官和临床分期的不同而异。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "骨肉瘤的癌前病变有哪些？如何进行筛查和早期诊断？"
+        },
+        {
+          "role": "assistant",
+          "content": "滑膜肉瘤(synovial sarcoma)自1936年Knox描述以来，曾系20世纪 $50\\sim$ 60年代最为常见的恶性软组织肿瘤之一。原上海医科大学肿瘤医院1951～ 1979年就积累有824例。20世纪70年代后，随着免疫组化及电镜技术的进展，医学界逐渐认识到滑膜肉瘤的诊断有所不妥，因此近来滑膜肉瘤的诊断率较前明显下降。多年来众多学者认为滑膜肉瘤起源于间叶组织，与关节囊内的滑膜组织无直接关系，故滑膜肉瘤很少发生于关节内，甚至发生于毫无滑膜组织的舌、咽旁及腹壁等部位。免疫组化标记常提示滑膜肉瘤细胞角蛋白阳性，电镜下肿瘤细胞与正常的滑膜组织也不相同，因此有作者建议取消滑膜肉瘤的诊断，并认为属“癌肉瘤”的范畴。在国际新分类中，已将此肿瘤称为“恶性腱鞘巨细胞瘤”，但目前仍采用传统的滑膜肉瘤名称，避免造成不必要的混乱。随着时间的推移，滑膜肉瘤的真正属性将进一步清晰。\n\n滑膜肉瘤属高分化肉瘤，多累及青壮年的四肢大关节附近，临床诊疗困难，易发生复发及肺转移，一旦发生，至今尚无十分有效的治疗方法。\n\n国外统计，滑膜肉瘤在软组织肉瘤中居第4位，位于恶性纤维组织细胞瘤、脂肪肉瘤、横纹肌肉瘤之后。但张仁元报道居第2位。国内也有资料统计滑膜肉瘤占软组织肿瘤的 12%。\n\n## 【临床表现】\n\n该肿瘤多发生于青壮年，以 20～40岁多见，平均年龄33岁。中青年病例约占滑膜肉瘤全部病例的 80%。儿童及50岁以上者少见。儿童如发病，可较早发生淋巴结转移，男性较女性多见，约1.2：1。\n\n创伤可能与滑膜肉瘤发病有关。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "液体活检在乳腺癌的诊断和复发监测中的应用进展？"
+        },
+        {
+          "role": "assistant",
+          "content": "性功能障碍是导致癌症患者生活质量下降的重要因素，性功能的改善是患者生活质量提高的重要标志。癌症患者性功能障碍的发生率较高，其相关因素很多：年龄、肿瘤分期、体力状况、生殖系统恶性肿瘤、针对癌症的各种治疗（手术、化疗和放疗等）以及治疗后内分泌的改变、患者夫妻关系状况、病前的性功能状态以及不同的性格特征、应付能力和接受能力，以及对性问题的认知等因素，都会对其性功能产生影响。\n\n雄激素缺乏使患者性欲望和性唤起能力下降；三苯氧胺等药物常会引起卵巢功能的衰退，导致卵巢分泌的雌、雄激素均减少。化疗和抗雌激素治疗常导致患者雌激素减少而出现过早绝经和阴道萎缩。\n\n目前，改善癌症患者性功能的治疗方法正在不断发展，肿瘤的治疗也开始注意保护患者的性功能。但在性功能恢复的干预方式和药物治疗方法上还都存在不少问题，有待于今后的医疗实践加以探索。\n\n## （二）临床表现\n\n男性：勃起功能障碍（阳痿），早泄，射精障碍；女性：阴道痉挛，性交疼痛，性欲丧失（性冷淡）；男女共同：性高潮障碍。\n\n## （三）诊断要点\n\n以患者主诉症状、体征符合以上任一临床表现，并主动寻求帮助者，经确定非器质性问题（器质性障碍可由泌尿外科等酌情处理）后，作为治疗对象。询问病史，如男性勃起障碍者有无自发勃起等；辅助检查包括血睾酮、雌二醇化验。\n\n## （四）治疗方案及原则\n\n性功能障碍的处置方法主要包括行为心理治疗和药物治疗两方面。其中行为心理治疗是占主导地位的。\n\n1. 行为心理治疗 对性欲问题的治疗是一个渐进的过程，首先应该降低患者对性问题的焦虑程度并诊治患者的抑郁症。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "分子病理检测在食管癌精准诊断和治疗中的作用是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "真性红细胞增多症是一种由于多能造血干细胞克隆异常，导致红细胞异常增殖为主的慢性骨髓增生性疾病。其病因未明。由于红细胞数量增多，临床表现为多血质、高血压、脾脏肿大、血栓形成及出血倾向等。实验室检查除红细胞数量增多外，伴白细胞和血小板增多。确定诊断靠同位素红细胞容量测定。真性红细胞增多症起病隐袭，进展缓慢，晚期可有各种转化，包括肝、脾髓样化生及门静脉高压症。\n\n临床上，红细胞增多分为绝对增多和相对增多两种。红细胞绝对增多时红细胞容量是增加的，红细胞相对增多时则否。红细胞绝对增多又分为原发性（真性）红细胞增多和继发性红细胞增多两种。继发性红细胞增多是由于心、肺疾病造成的缺氧所致。真性红细胞增多症由于有白细胞增多和脾脏肿大，临床上应与慢性粒细胞白血病及骨髓纤维化相鉴别。\n\n## 【临床表现】\n\n1. 早期表现 头痛、耳鸣、健忘、易激惹。\n\n2. 多血质表现 口唇、面颊、鼻尖、耳轮和肢端发绀。\n\n3. 出血倾向 鼻出血，齿龈出血，皮肤黏膜淤点、淤斑，也有消化道及泌尿道出血。\n\n4. 脾肿大。\n\n5. 血栓形成 多发于静脉，但也有脑动脉、冠状动脉和肢体动脉血栓。\n\n## 【诊断要点】\n\n1. 红细胞增多的临床表现 多血质表现，脾脏肿大，血栓形成及出血倾向。\n\n## 2. 实验室检查\n\n(1) 血常规：红细胞计数，男性 $ \\geqslant 6. 5 \\times 1 0^{1 2} / \\mathrm {L} $女性 $ \\geqslant 6. 0 \\times 1 0^{1 2} / \\mathrm {L} $。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "卵巢癌的临床诊断标准包括哪些？确诊需要哪些检查？"
+        },
+        {
+          "role": "assistant",
+          "content": "<table border=\"1\"><tr><td>TNM分期</td><td>T</td><td>N</td><td>M</td></tr><tr><td>0</td><td>Tis</td><td>N0</td><td>M0</td></tr><tr><td>Ⅰ</td><td>T1</td><td>N0</td><td>M0</td></tr><tr><td>Ⅱ</td><td>T2</td><td>N0</td><td>M0</td></tr><tr><td>Ⅲ</td><td>T1~2</td><td>N1~2</td><td>M0</td></tr><tr><td>ⅣA</td><td>T3</td><td>任何N</td><td>M0</td></tr><tr><td>ⅣB</td><td>任何T</td><td>任何N</td><td>M0</td></tr></table>\n\n## （六）胆管癌的诊断步骤及鉴别诊断\n\n1. 诊断步骤 胆管癌的诊断同其他恶性肿瘤一样，应争取早期诊断。但目前尚缺乏有效的筛查手段。临床上对于进行性加重的阻塞性黄疸患者应首先考虑胆道恶性梗阻的可能，应及时行超声检查进一步明确梗阻的原因，必要时行CT、MRI等检查。联合应用影像学检查可以提高胆管癌的检出率。最终明确诊断仍有赖于手术探查和病理诊断。\n\n## 2. 鉴别诊断 胆管癌须与下列疾病进行鉴别诊断：\n\n(1) 病毒性肝炎：一些病毒性肝炎也可出现进行性加重的黄疸，但一般ALT和AST均有明显升高。而血清中的直接胆红素和间接胆红素均有明显升高，不同于胆管癌以直接胆红素升高为主的现象。"
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "user",
+          "content": "脑胶质瘤的组织病理学诊断要点和免疫组化标志物是什么？"
+        },
+        {
+          "role": "assistant",
+          "content": "烟雾病（Moyamoya disease）的病因不明，以儿童发病多见。其病理解剖基础表现为颈内动脉末端或其分支大脑前、中动脉起始段进行性狭窄或闭塞，伴大脑基底异常纤细的新生血管网形成，以及广泛的颅内动脉之间和颅内外动脉之间形成血管吻合为特征的脑血管疾病。\n\n## 【诊断】\n\n## （一）临床表现\n\n1. 青少年型 缺血症状常见，包括短暂性脑缺血发作（TIA）、可逆性缺血性神经功能缺损（RINDs），严重者可出现脑梗死。可因用力或过度换气（如吹奏乐器、哭喊）而诱发。一般在10岁左右病理变化明显，之后逐渐稳定。典型的临床表现有交替性肢体偏瘫。也可表现为癫痫发作、感觉障碍、智力迟钝和头痛。\n\n2. 成年型 出血更常见。可表现为卒中样发作、癫痫发作和不自主动作等。多由于脆弱的颅底烟雾状血管或伴发的微小动脉瘤破裂而产生。出血部位为基底节、丘脑或脑室出血或有蛛网膜下腔出血（SAH）。\n\n## （二）辅助检查\n\n1. 影像学检查\n\n(1) 全脑血管造影（DSA）：是确诊本病的主要检查方法（表4-4）。"
         }
       ]
     }

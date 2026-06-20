@@ -119,14 +119,9 @@ class PolicyPredictor:
         if self.model is None:
             raise RuntimeError("Model not trained.")
         fc = feature_cols or self.feature_names
-        X = df.select(fc).to_pandas()
-        for col in X.columns:
-            dtype = str(X[col].dtype)
-            if dtype not in ("int8","int16","int32","int64","float32","float64","bool"):
-                X[col] = X[col].astype(float)
+        X = df.select(fc).to_numpy()
         return np.clip(
-            self.model.predict(X, num_iteration=self.best_iteration,
-                               predict_disable_shape_check=True),
+            self.model.predict(X, num_iteration=self.best_iteration),
             0, None)
 
     def save(self, model_dir: str | Path, name: str = "l2_policy") -> Path:
