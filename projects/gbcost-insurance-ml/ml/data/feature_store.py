@@ -522,6 +522,27 @@ def build_features(
             )
         logger.info("  Enriched with %d label columns from agent_state", len(label_cols))
 
+    # ================================================================
+    # 9. LSTM predictions (P3 — sequential modeling)
+    # ================================================================
+    lstm_cache = Path("data/ml_cache/lstm_predictions.parquet")
+    if lstm_cache.exists() and "policy_grp_name" in feature_lf.collect_schema().names():
+        lstm_lf = pl.scan_parquet(str(lstm_cache))
+        # Join on policy_grp_name and year_month (truncated medical_start_date)
+        feature_lf = feature_lf.with_columns(
+            pl.col("medical_start_date").dt.truncate("1mo").alias("_join_month")
+        )
+        feature_lf = feature_lf.join(
+            lstm_lf,
+            left_on=["policy_grp_name", "_join_month"],
+            right_on=["policy_grp_name", "year_month"],
+            how="left",
+        )
+        feature_lf = feature_lf.with_columns(
+            pl.col("lstm_pred").fill_null(pl.col("lstm_pred").mean())
+        )
+        logger.info("  Enriched with LSTM predictions as feature")
+
     logger.info("Feature LazyFrame built (not yet collected)")
     return feature_lf
 
