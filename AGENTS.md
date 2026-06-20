@@ -47,7 +47,9 @@ cd projects/gbcost-insurance-ml && python -m pytest tests/ -v   # 4549 用例
 
 ### 2. 医疗文本生成（中文医学 LLM）
 
-- **当前最佳模型**: `output_17b_inst_v2/best_model` (Qwen3-1.7B + LoRA, val_loss=1.8879)。
+- **当前最佳模型**: `output_17b_inst_v1/best_model` (Qwen3-1.7B + LoRA, val_loss=2.046)。
+- **DPO 实验**: v3 最优 (380 对清洗数据, beta=0.05, epochs=1), 0 坍塌, 10.2s/题。
+- **DPO 关键陷阱**: chosen/rejected 长度差 >50% 会导致模式坍塌。必须过滤长度偏差。
 - **训练阶段**: 必须先续写微调（阶段1）再指令微调（阶段2）。`--resume_from` 加载阶段1 LoRA 权重。
 - **训练脚本已内置早停和过拟合检测**：`--early_stopping_patience 30 --min_delta 0.001 --overfit_gap_threshold 0.5`。
 - **指令微调推荐参数**: `--lr 1e-5 --instruction_ratio 0.4 --epochs 1 --max_length 512`。
