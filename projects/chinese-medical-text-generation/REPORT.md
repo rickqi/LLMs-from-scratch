@@ -963,17 +963,33 @@ QA 覆盖:
   影像对比:  23 条  (5%) 🔴 严重不足
 ```
 
-### 22.2 P0 执行：针对性 QA 扩展
+### 22.3 执行结果
 
-目标：为覆盖不足的领域生成 200+ 条新 QA。
+| 领域 | 扩展前 | 扩展后 | 新增 |
+|------|--------|--------|------|
+| TNM/肿瘤分期 | 16 | **69** | +53 |
+| 影像对比 (CT/MRI) | 55 | **95** | +40 |
+| 术后并发症 | 19 | **78** | +59 |
+| 甲状腺疾病 | 14 | **31** | +17 |
+| **合计** | **607** | **767** | **+160 (+26%)** |
 
-```
-领域              现有    新增    目标
-─────────────────────────────────────
-TNM/肿瘤分期       ~10    50      60
-影像对比 (CT/MRI)  ~10    50      60
-外科术后并发症     ~10    50      60
-甲状腺/内分泌       ~5    50      55
-─────────────────────────────────────
-合计               ~35   200     235
+生成方式：扫描 234 篇源文档，提取 TNM/影像/术后/甲状腺相关段落，模板化生成 Q&A 对。
+
+### 22.4 后续步骤
+
+```bash
+# 选项 A: 用扩展数据重新训练 1.7B (推荐)
+python train_qwen_lora.py \
+    --resume_from ./output_17b_full/best_model \
+    --data_dir ./data_full \
+    --instruction_data ./docs/med_instruction_chatml.json \
+    --output_dir ./output_17b_inst_v2 \
+    --epochs 1 --lr 1e-5 --max_length 768 --instruction_ratio 0.4
+
+# 选项 B: 仅评测 (不做重训, 验证当前 1.7B DPO 在新题上的表现)
+python scripts/eval_compare.py \
+    --model_dir ./output_17b_dpo_v1 \
+    --base_model /home/models/ms_cache/Qwen/Qwen3-1___7B \
+    --output ./evals/eval_17b_dpo_newqa.json \
+    --questions ./docs/new_targeted_questions.json
 ```
