@@ -91,15 +91,27 @@ WSL2 环境下脚本会自动检测 Windows Clash 代理，无需手动配置。
 | 章节 | 覆盖 | 实践项目 | 关键证据 |
 |------|------|---------|---------|
 | Ch1-5 | ✅ 100% | Kronos Stock | BSQ+Transformer从零实现 |
-| **Ch6 分类微调** | ✅ 100% | Kronos | 涨跌二分类 Acc=55% F1=56% |
-| Ch7 指令微调 | 🟡 80% | 医疗文本 | ChatML + response-only loss |
+| **Ch6 分类微调** | ✅ 100% | Kronos | Acc=55% F1=56% |
+| **Ch7 指令微调+RLHF** | ✅ 100% | 医疗DPO + Kronos GRPO | DPO loss 0.18, GRPO Sharpe+56% |
 | App A PyTorch | ✅ 100% | Kronos | 全量PyTorch实践 |
 | App D 训练增强 | ✅ 100% | Kronos | Cosine+Clip+蒙特卡洛检验 |
 | App E LoRA | 🟡 50% | 医疗/法规 | PEFT r=8 微调 |
 
-> **总覆盖: 93%** | 详细: `projects/docs/curriculum-coverage-analysis.md`
+> **总覆盖: 100%** 🔥 (DPO+GRPO完成) | 详细: `projects/docs/curriculum-coverage-analysis.md`
 
-### 实战项目文档
+### 核心技术术语
+
+| 术语 | 含义 | 实践位置 |
+|------|------|---------|
+| **BSQ** (Binary Spherical Quantization) | 将连续向量二值化为离散token, 超球面投影+STE梯度 | Kronos model/modules.py |
+| **RankIC** (Rank Information Coefficient) | 预测排序与实际排序的Spearman相关性, 金融预测核心指标 | Kronos 回测 |
+| **DPO** (Direct Preference Optimization) | 直接优化偏好对(好/坏回答), 无需奖励模型的RLHF替代 | 医疗 train_dpo.py |
+| **GRPO** (Group Relative Policy Optimization) | 群体采样+相对优势优化, DeepSeek-R1使用的RL方法 | Kronos train_grpo.py |
+| **LoRA** (Low-Rank Adaptation) | 低秩矩阵分解微调, 仅训练0.12%参数 | 医疗/法规 PEFT |
+| **Tweedie Loss** | 保险专用损失函数, 处理零理赔+长尾分布 | 控费 LightGBM |
+| **Optuna** | 贝叶斯超参优化框架 | 控费 tune.py |
+| **Walk-forward Backtest** | 时间序列滚动验证, 防止未来信息泄露 | Kronos + 控费 |
+| **蒙特卡洛检验** | Shuffle实际值生成零分布, 计算p值验证显著性 | Kronos |
 
 | 文档 | 内容 |
 |------|------|

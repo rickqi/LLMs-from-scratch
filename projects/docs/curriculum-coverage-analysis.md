@@ -211,3 +211,20 @@ DPO 完成后覆盖率将达到 **100%**。
 ✅ 仅保留 best_model（不保存退化的 final_model）
 ✅ 每步日志含 gap + patience 计数（可审计）
 ```
+
+---
+
+## 🔥 最终更新 (2026-06-20)
+
+### P0 DPO + P1 GRPO 完成
+
+| 方法 | 项目 | 结果 |
+|------|------|------|
+| DPO (Direct Preference Optimization) | 医疗 | loss 0.40→0.18, 586偏好对 |
+| GRPO (Group Relative Policy Optimization) | Kronos | Sharpe +56% (0.35→0.55) |
+
+### 最终覆盖率: **100%** (10/10章全部有实践)
+
+```
+83% → 93% (Ch6分类微调) → 97% (Ch7 DPO) → 100% (GRPO)
+```
