@@ -505,6 +505,23 @@ def build_features(
 
     feature_lf = feature_lf.with_columns(target_exprs)
 
+    # ================================================================
+    # 8. Enriched labels from agent_state (P3 — closed loop)
+    # ================================================================
+    label_cache = Path("data/ml_cache/enriched_labels.parquet")
+    if label_cache.exists() and "case_no" in feature_lf.collect_schema().names():
+        label_lf = pl.scan_parquet(str(label_cache))
+        label_cols = [c for c in label_lf.collect_schema().names() if c != "case_no"]
+        feature_lf = feature_lf.join(
+            label_lf,
+            on="case_no", how="left",
+        )
+        for _col in label_cols:
+            feature_lf = feature_lf.with_columns(
+                pl.col(_col).fill_null(0).alias(_col)
+            )
+        logger.info("  Enriched with %d label columns from agent_state", len(label_cols))
+
     logger.info("Feature LazyFrame built (not yet collected)")
     return feature_lf
 
