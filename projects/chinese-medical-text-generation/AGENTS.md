@@ -4,10 +4,10 @@
 
 ## 项目概述
 
-基于 Qwen3-0.6B + LoRA 的中文医学文本生成，两阶段训练：
+基于 Qwen3-0.6B/1.7B + LoRA 的中文医学文本生成，两阶段训练：
 
-1. **阶段1**: 纯续写微调 — 412 篇医学文档 → 领域语言适应 (训练中)
-2. **阶段2**: 指令微调 — 449 条 ChatML QA 对 → 问答能力 (待执行)
+1. **阶段1**: 纯续写微调 — 412 篇医学文档 → 领域语言适应 ✅ (0.6B + **1.7B** 均完成)
+2. **阶段2**: 指令微调 — 607 条 ChatML QA 对 → 问答能力 ✅ (1.7B v2: val=1.8879, 含早停+过拟合检测)
 
 ## 关键文件索引
 
@@ -25,74 +25,58 @@
 
 ## 当前状态
 
-| 组件 | 状态 | 位置 |
-|------|------|------|
-| 阶段1 训练 | 🔄 进行中 | `output_full/` (Epoch 1/5) |
-| 指令数据 | ✅ 449 对 | `docs/med_qa_cases.json` |
-| COS 备份 | ✅ 已备份 | `LLMs-from-scratch/projects/chinese-medical-text-generation/` |
-| 阶段2 训练 | ⏳ 待执行 | 等阶段1 完成后 |
+| 组件 | 状态 | 位置 | 关键指标 |
+|------|------|------|---------|
+| 0.6B 阶段1 续写 | ✅ 完成 | `output_full/` | val_loss=2.4033, 5 epoch |
+| **1.7B 阶段1 续写** | ✅ 完成 | `output_17b_full/` | **val_loss=2.1135**, 5 epoch, 19h |
+| 0.6B 阶段2 指令 | ✅ 完成 | `output_inst_v3/` | val_loss=2.3938, 4 epoch |
+| **1.7B 阶段2 指令 v2** | ✅ 完成 | `output_17b_inst_v2/` | **val_loss=1.8879**, 11min(早停), 640步 |
+| 指令数据 | ✅ 607 对 | `docs/med_instruction_chatml.json` | train=557, val=50 (hold-out) |
+| COS 备份 | ✅ 已备份 | `ins-kq6zz7wo-1313469539` | — |
+| 训练标准 | ✅ 已植入 | `train_qwen_lora.py` | 早停+过拟合检测+独立验证集 |
+| DPO 偏好对齐 | ⏳ 待执行 | — | 覆盖率 98%→100% 的关键缺口 |
+| SwiReasoning | ⏳ 待执行 | `docs/swir_integration.md` | 推理增强 |
+
+## 最佳模型
+
+```
+Qwen3-1.7B
+  └── 阶段1: 续写微调 ✅  val=2.1135, 19h
+        └── 阶段2: 指令微调 v2 ✅  val=1.8879, 11min
+              └── 产出: output_17b_inst_v2/best_model ← 当前最佳
+```
 
 ## 行动路线图
 
-### 当前步骤：等待阶段1 完成
+### 当前步骤：DPO 偏好对齐 (教程覆盖 98% → 100%)
 
-```
-阶段1 训练完成 (output_full/best_model 生成)
-        │
-        ▼
-[ ] Step 1: COS 备份阶段1 LoRA 权重
-    python scripts/cos_backup.py pre-ft-backup
-        │
-        ▼
-[ ] Step 2: 改造训练脚本 (按 instruction_ft_plan.md §四 实施)
-    - 新增 InstructionDataset (ChatML + loss masking)
-    - 新增 MixedDataset (80% 指令 + 20% 续写)
-    - 新增 --resume_from 参数 (PeftModel.from_pretrained)
-    - 新增 --instruction_data / --instruction_ratio 参数
-        │
-        ▼
-[ ] Step 3: 执行指令微调训练
-    python train_qwen_lora.py \
-        --resume_from ./output_full/best_model \
-        --data_dir ./data_full \
-        --instruction_data ./docs/med_instruction_chatml.json \
-        --output_dir ./output_inst_v1 \
-        --epochs 3 --lr 5e-5 --max_length 768 \
-        --instruction_ratio 0.8
-        │
-        ▼
-[ ] Step 4: 推理验证
-    python generate.py --model_dir ./output_inst_v1/best_model --interactive
+```bash
+cd projects/chinese-medical-text-generation
+# Step 1: 构造偏好数据
+python scripts/prepare_dpo_data.py
+# Step 2: DPO 训练 (基于最佳指令模型)
+python train_dpo.py --base_model ./output_17b_inst_v2/best_model --preference_data ./data/dpo_pairs.json
+# Step 3: 评估
+python scripts/eval_compare.py --model_before ./output_17b_inst_v2 --model_after ./output_dpo
 ```
 
-### 阶段2 完成后：下一步行动
+### P0 之后：可选增强
 
-按优先级排序，无需顺序执行：
+按优先级排序：
 
 ```
-阶段2 完成 (output_inst_v1/best_model)
+DPO 完成 (覆盖率 100%)
         │
         ├── [P1] SwiReasoning 推理增强
-        │   详见 docs/swir_integration.md
-        │   - git clone https://github.com/sdc17/SwiReasoning.git external/SwiReasoning
-        │   - 验证 Qwen3-0.6B 兼容性 (hidden_dim=1024 需实测)
-        │   - 创建 scripts/generate_swir.py (Wrapper 模式)
-        │   - 对比评估: 8 个标准 prompt 有/无 SwiReasoning
-        │   - 预期: hard 推理 +2-3%, easy 问题 Token -40-60%
+        │   - 验证 Qwen3 兼容性
+        │   - 对比评估: 有/无 SwiReasoning
         │
-        ├── [P2] 数据扩展 (按需)
+        ├── [P2] 数据扩展
         │   python scripts/med_qa_generator.py generate --tier large
-        │   当前 449 对 → 目标 560+ 对
-        │   适用场景: 指令微调效果不足，需要更多样化数据
+        │   607 对 → 目标 700+ 对
         │
-        ├── [P3] 质量基准评估
-        │   建立标准测试集: 50 个医学 QA (含标准答案)
-        │   评分维度: 准确性 / 完整性 / 格式规范性 / 可追溯性
-        │   对比: 纯续写模型 vs 指令微调模型 vs +SwiReasoning
-        │
-        └── [P4] DPO 偏好对齐 (可选)
-            流程: 收集好/坏回答对 → DPO 训练 → 输出质量优化
-            前提: 指令微调效果满意，需要进一步对齐
+        └── [P3] 质量基准评估
+            建立标准测试集 + 多模型对比
 ```
 
 ## 开发约定

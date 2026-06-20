@@ -14,7 +14,7 @@ from peft import PeftModel, LoraConfig, get_peft_model, TaskType
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s")
 logger = logging.getLogger()
 
-MODEL_NAME = "/home/models/ms_cache/Qwen/Qwen3-0___6B"
+MODEL_NAME = "Qwen/Qwen3-0.6B"  # HF cache or download
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 
