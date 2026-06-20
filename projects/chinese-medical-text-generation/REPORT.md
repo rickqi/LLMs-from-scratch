@@ -894,3 +894,40 @@ Model               Q1  Q2  Q3  Q4  Q5  Q6  Q7  Q8  Q9  TOTAL  AVG tok  AVG time
 | **速度优先** | 0.6B DPO v3 | 10.2s/题, 0 坍塌, 最稳定 DPO |
 | **兼容性** | 0.6B Inst-V3 | 最稳定 baseline, 无任何坍塌 |
 | **禁用** | 0.6B Inst-V2 | Q2 反向医学建议, 存在安全隐患 |
+
+---
+
+## 二十一、下一步执行计划
+
+### 21.1 优先级路线图
+
+| 优先级 | 方案 | 投入 | 预期收益 |
+|--------|------|------|---------|
+| 🔴 P0 | **1.7B DPO** ← 当前执行中 | ~5min | 最优模型 + 偏好对齐 |
+| 🟠 P1 | 针对性 QA 扩展 (TNM/影像/外科) | ~2h | 准确率 62%→80%+ |
+| 🟠 P1 | CoT 思维链训练数据 | ~1h | `<think>` 标签激活 |
+| 🟡 P2 | 50 题标准评测集 | ~2h | 可量化迭代 |
+| 🟢 P3 | SwiReasoning 推理增强 | ~3h | hard 问题 +2-3% |
+
+### 21.2 P0 执行命令
+
+```bash
+# 1.7B DPO 训练
+python train_dpo.py \
+    --model_name /home/models/ms_cache/Qwen/Qwen3-1___7B \
+    --base_model ./output_17b_inst_v1/best_model \
+    --preference_data ./data/dpo_pairs_cleaned_v2.json \
+    --output_dir ./output_17b_dpo_v1 \
+    --epochs 1 --beta 0.05 --batch_size 2
+
+# 评测
+python scripts/eval_compare.py \
+    --model_dir ./output_17b_dpo_v1 \
+    --base_model /home/models/ms_cache/Qwen/Qwen3-1___7B \
+    --output ./evals/eval_17b_dpo_v1.json
+
+# 对比
+python scripts/eval_compare.py --compare \
+    --baseline ./evals/eval_17b_inst_v1.json \
+    --target ./evals/eval_17b_dpo_v1.json
+```

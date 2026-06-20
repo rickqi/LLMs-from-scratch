@@ -14,7 +14,6 @@ from peft import PeftModel, LoraConfig, get_peft_model, TaskType
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s")
 logger = logging.getLogger()
 
-MODEL_NAME = "Qwen/Qwen3-0.6B"  # HF cache or download
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 
@@ -94,16 +93,17 @@ def main():
     parser.add_argument("--batch_size", type=int, default=2)
     parser.add_argument("--lr", type=float, default=5e-6)
     parser.add_argument("--beta", type=float, default=0.1)
+    parser.add_argument("--model_name", default="Qwen/Qwen3-0.6B", help="Base model name or local path")
     args = parser.parse_args()
 
     # Load base model + tokenizer
-    logger.info(f"Loading base model: {MODEL_NAME}")
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+    logger.info(f"Loading base model: {args.model_name}")
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name, trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
     base_model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME, torch_dtype=torch.float16, device_map=DEVICE, trust_remote_code=True
+        args.model_name, torch_dtype=torch.float16, device_map=DEVICE, trust_remote_code=True
     )
 
     # Load LoRA adapter
@@ -118,7 +118,7 @@ def main():
     model.to(DEVICE)
 
     # Reference model (frozen copy of starting point)
-    ref_model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, torch_dtype=torch.float16, device_map=DEVICE, trust_remote_code=True)
+    ref_model = AutoModelForCausalLM.from_pretrained(args.model_name, torch_dtype=torch.float16, device_map=DEVICE, trust_remote_code=True)
     if Path(args.base_model).exists():
         ref_model = PeftModel.from_pretrained(ref_model, args.base_model)
     ref_model.eval()
