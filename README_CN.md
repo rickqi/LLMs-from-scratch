@@ -208,6 +208,19 @@ git clone --depth 1 https://github.com/rasbt/LLMs-from-scratch.git
 
 <br>
 
+## 📂 实战项目
+
+基于本书知识体系构建的 4 个独立 ML 项目，覆盖 **100% 教程知识点**：
+
+| 项目 | 领域 | 模型 | 亮点 | 文档 |
+|------|------|------|------|------|
+| [**Kronos Stock**](projects/kronos-stock-predictor/) | 金融时序 | LSTM + BSQ | 波动率 RankIC=+0.58 | [详细](projects/docs/kronos-stock-predictor.md) |
+| [**医疗文本**](projects/chinese-medical-text-generation/) | 医学文本 | Qwen3+LoRA+DPO | 0.7M极低资源 | [详细](projects/docs/chinese-medical-text-generation.md) |
+| [**法规文本**](projects/company-regulations-training/) | 法规文本 | Qwen3+LoRA | 329行最简 | [详细](projects/docs/company-regulations-training.md) |
+| [**控费ML**](projects/gbcost-insurance-ml/) | 保险理赔 | LightGBM+Optuna | Tweedie+贝叶斯 | [详细](projects/docs/gbcost-insurance-ml.md) |
+
+> 📊 [项目总览](projects/docs/README.md) | [教程覆盖分析](projects/docs/curriculum-coverage-analysis.md) | [综合技术分析](projects/docs/comprehensive-analysis.md)
+
 ## 引用
 
 如果你觉得本书或代码对你的研究有帮助，请考虑引用。
