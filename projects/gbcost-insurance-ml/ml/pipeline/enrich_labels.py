@@ -72,15 +72,11 @@ def main(argv: list[str] | None = None) -> int:
     import polars as pl
     stats = {
         "total_cases": len(labels),
-        "anomaly_pct": float((labels["anomaly_level"] > 0).mean() * 100),
         "fwa_pct": float(labels["fwa_flag"].mean() * 100),
         "drg_pct": float(labels["drg_over_budget"].mean() * 100),
         "medical_pct": float(labels["medical_irrational"].mean() * 100),
         "avg_hosp_z": float(labels["hospital_z_score"].mean()),
         "label_distribution": {
-            "anomaly_L1": int((labels["anomaly_level"] == 1).sum()),
-            "anomaly_L2": int((labels["anomaly_level"] == 2).sum()),
-            "anomaly_L3": int((labels["anomaly_level"] == 3).sum()),
             "fwa": int(labels["fwa_flag"].sum()),
             "drg_over": int(labels["drg_over_budget"].sum()),
             "medical": int(labels["medical_irrational"].sum()),
@@ -90,8 +86,8 @@ def main(argv: list[str] | None = None) -> int:
     stats_path = output_dir / "enriched_labels_stats.json"
     stats_path.write_text(json.dumps(stats, indent=2, ensure_ascii=False), encoding="utf-8")
     logger.info("Stats saved: %s", stats_path)
-    logger.info("Label distribution: anomaly=%.1f%%, fwa=%.1f%%, drg=%.1f%%, medical=%.1f%%",
-                 stats["anomaly_pct"], stats["fwa_pct"], stats["drg_pct"], stats["medical_pct"])
+    logger.info("Label distribution: fwa=%.1f%%, drg=%.1f%%, medical=%.1f%%",
+                 stats["fwa_pct"], stats["drg_pct"], stats["medical_pct"])
 
     return 0
 

@@ -223,11 +223,23 @@ def batch_extract_labels(
                     "fwa_risk_score": pl.Float64, "hospital_z_score": pl.Float64,
                     "drg_cost_ratio": pl.Float64}
     cast_labels = []
+    all_cols = {"case_no", "fwa_flag", "fwa_type", "fwa_rule",
+                "fwa_high_risk", "fwa_risk_score", "drg_over_budget",
+                "drg_cost_ratio", "medical_irrational", "hospital_z_score",
+                "hospital_anomaly"}
     for df in all_labels:
+        # Ensure all expected columns exist
+        for col in all_cols:
+            if col not in df.columns:
+                dtype = pl.Int64 if col in ("fwa_flag","fwa_high_risk","drg_over_budget",
+                                            "medical_irrational","hospital_anomaly") else (
+                    pl.Float64 if col in ("fwa_risk_score","hospital_z_score","drg_cost_ratio") else pl.Utf8)
+                df = df.with_columns(pl.lit(None).cast(dtype).alias(col))
+        # Cast to consistent types
         for col, dtype in numeric_cols.items():
             if col in df.columns:
                 df = df.with_columns(pl.col(col).cast(dtype))
-        cast_labels.append(df)
+        cast_labels.append(df.select(sorted(df.columns)))
 
     combined = pl.concat(cast_labels, how="vertical").unique(subset=["case_no"], keep="last")
     logger.info("Total: %d unique cases labeled across %d files",
