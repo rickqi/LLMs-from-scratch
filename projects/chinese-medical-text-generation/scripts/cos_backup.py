@@ -97,6 +97,7 @@ TRAINING_DATA = [
 # 评估结果
 EVAL_DATA = [
     "evals/eval_06b_instruct_v3.json",
+    "evals/eval_17b_inst_v1.json",
     "scripts/eval_compare.py",
 ]
 
