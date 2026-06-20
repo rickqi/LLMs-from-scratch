@@ -516,17 +516,17 @@
     ]
   ],
   "best_val_loss": 1.887926425933838,
-  "total_time_seconds": 672.3068730831146,
+  "total_time_seconds": 672.1540143489838,
   "global_step": 640,
   "config": {
     "model": "/home/models/ms_cache/Qwen/Qwen3-1___7B",
     "lora_r": 8,
     "lora_alpha": 16,
     "lora_dropout": 0.05,
-    "batch_size": 2,
+    "batch_size": 1,
     "gradient_accumulation_steps": 4,
     "learning_rate": 1e-05,
     "epochs": 1,
-    "max_length": 512
+    "max_length": 768
   }
 }
