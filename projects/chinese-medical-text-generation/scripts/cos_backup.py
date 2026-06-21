@@ -54,38 +54,82 @@ COS_PREFIX = "LLMs-from-scratch/projects/chinese-medical-text-generation/"
 
 # LoRA 权重目录（备份整个目录）
 LORA_DIRS = [
-    # 0.6B Phase 1
-    "output_full/best_model",
-    "output_full/final_model",
-    "output_full/checkpoint",
-    # 0.6B Phase 2
-    "output_inst_v1/best_model",
-    "output_inst_v2/best_model",
-    "output_inst_v3/best_model",
-    # 1.7B Phase 1
-    "output_17b_full/best_model",
-    "output_17b_full/final_model",
-    # 1.7B Phase 2 (in-progress snapshot)
+    # 0.6B
+    "output_full/best_model", "output_full/final_model", "output_full/checkpoint",
+    "output_inst_v1/best_model", "output_inst_v2/best_model", "output_inst_v3/best_model",
+    # 1.7B 续写
+    "output_17b_full/best_model", "output_17b_full/final_model", "output_17b_full/checkpoint",
+    # 1.7B 指令微调 (完整历史)
     "output_17b_inst_v1/best_model",
+    "output_17b_inst_v2/best_model",
+    "output_17b_inst_v3/best_model",
+    "output_17b_inst_v4/best_model",
+    "output_17b_inst_v5/best_model",
+    "output_17b_inst_v6/best_model",
+    "output_17b_inst_v7/best_model",
+    # 1.7B DPO
+    "output_17b_dpo_v1/best_model",
+    "output_17b_dpo_v2/best_model",
+    "output_17b_dpo_v7/best_model",
+    # 0.6B DPO
+    "output_dpo_v3/best_model",
+    # DPO 检查点
+    "output_17b_dpo_v2/checkpoint",
+    "output_17b_dpo_v7/checkpoint",
 ]
 
 # 指令微调相关数据文件
 INSTRUCTION_FILES = [
     "docs/med_qa_cases.json",
+    "docs/med_qa_cases.json.bak",
     "docs/med_instruction_chatml.json",
+    "docs/med_instruction_chatml_mixed_987.json.bak",
+    "docs/med_instruction_train_chatml.json",
+    "docs/med_instruction_val_chatml.json",
     "docs/med_instruction_alpaca.json",
     "docs/med_qa_report.md",
     "docs/instruction_ft_plan.md",
     "scripts/med_qa_generator.py",
+    "scripts/gen_targeted_qa.py",
+    "scripts/gen_qa_docsearch.py",
+    "scripts/docsearch_questions_batch2.txt",
+    "scripts/docsearch_questions_batch3.txt",
+    "scripts/docsearch_questions_batch4.txt",
+]
+
+# doc-search 检索增强 QA 批次
+DOCSEARCH_BATCHES = [
+    "docs/med_instruction_docsearch_chatml.json",
+    "docs/med_instruction_docsearch_batch2_chatml.json",
+    "docs/med_instruction_docsearch_batch3_chatml.json",
+    "docs/med_instruction_docsearch_batch4_chatml.json",
+    "docs/med_instruction_docsearch_batch5_chatml.json",
+    "docs/med_instruction_docsearch_batch6_chatml.json",
+    "docs/med_instruction_docsearch_batch7_chatml.json",
+    "docs/med_instruction_docsearch_batch8_chatml.json",
+    "docs/med_instruction_docsearch_retry_chatml.json",
+    "docs/med_instruction_docsearch_batch9_chatml.json",
+    "docs/med_instruction_docsearch_batch10_chatml.json",
+    "docs/med_instruction_docsearch_batch11_chatml.json",
+    "docs/med_instruction_docsearch_batch12_chatml.json",
+    "docs/med_instruction_docsearch_batch13_chatml.json",
+    "docs/med_instruction_docsearch_batch14_chatml.json",
+    "docs/med_instruction_docsearch_batch15_chatml.json",
 ]
 
 # 训练日志
 TRAINING_LOGS = [
-    "train_full.log",
-    "output_full/training_log.json",
-    "train_17b_full.log",
-    "train_17b_inst.log",
-    "train_inst_v3.log",
+    "train_full.log", "train_inst_v3.log", "train_inst.log",
+    "train_17b_full.log", "train_17b_inst.log", "train_17b_compare.log",
+    "train_17b_inst_v2.log", "train_17b_inst_v3.log",
+    "train_17b_inst_v4.log", "train_17b_inst_v5.log",
+    "train_17b_inst_v6.log", "train_17b_inst_v7.log",
+    "train_17b_dpo_v2.log", "train_17b_dpo_v7.log",
+    "output_full/training_log.json", "output_17b_full/training_log.json",
+    "output_17b_inst_v2/training_log.json", "output_17b_inst_v3/training_log.json",
+    "output_17b_inst_v4/training_log.json", "output_17b_inst_v5/training_log.json",
+    "output_17b_inst_v6/training_log.json", "output_17b_inst_v7/training_log.json",
+    "output_17b_dpo_v2/training_log.json", "output_17b_dpo_v7/training_log.json",
 ]
 
 # 训练数据 (关键 — 无此无法复现训练)
@@ -94,20 +138,29 @@ TRAINING_DATA = [
     "data_full/val.txt",
 ]
 
+# DPO 偏好数据
+DPO_DATA = [
+    "data/dpo_pairs.json",
+    "data/dpo_pairs_cleaned.json",
+    "data/dpo_pairs_cleaned_v2.json",
+    "data/dpo_pairs_filtered.json",
+]
+
 # 评估结果
 EVAL_DATA = [
     "evals/eval_06b_instruct_v3.json",
     "evals/eval_17b_inst_v1.json",
+    "eval_v6_vs_v2.json",
+    "eval_dpo_comparison.json",
     "scripts/eval_compare.py",
+    "test_questions.py",
 ]
 
 # 核心运行时脚本
 RUNTIME_SCRIPTS = [
-    "train_qwen_lora.py",
-    "data_prep.py",
-    "generate.py",
-    "run.sh",
-    "requirements.txt",
+    "train_qwen_lora.py", "train_dpo.py",
+    "data_prep.py", "generate.py",
+    "run.sh", "requirements.txt",
     "train_qwen_lora.ipynb",
     "scripts/cos_backup.py",
 ]
@@ -193,6 +246,13 @@ def collect_backup_files(lora_only: bool = False, data_only: bool = False) -> li
                 files.append(f)
                 print(f"   📈 {ed} ({f.stat().st_size:,} bytes)")
 
+        # DPO 偏好数据
+        for dp in DPO_DATA:
+            f = PROJECT_ROOT / dp
+            if f.exists():
+                files.append(f)
+                print(f"   🎯 {dp} ({f.stat().st_size:,} bytes)")
+
         # 运行时脚本
         for rs in RUNTIME_SCRIPTS:
             f = PROJECT_ROOT / rs
@@ -207,6 +267,13 @@ def collect_backup_files(lora_only: bool = False, data_only: bool = False) -> li
             if f.exists():
                 files.append(f)
                 print(f"   📄 {inf} ({f.stat().st_size:,} bytes)")
+
+        # doc-search QA 批次
+        for db in DOCSEARCH_BATCHES:
+            f = PROJECT_ROOT / db
+            if f.exists():
+                files.append(f)
+                print(f"   🔍 {db} ({f.stat().st_size:,} bytes)")
 
         # 项目文档
         for pd in PROJECT_DOCS:
