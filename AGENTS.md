@@ -1,6 +1,6 @@
 # AGENTS.md — LLMs-from-scratch 项目群
 
-> 书籍配套代码 + 4个独立实战项目。中文优先。2026-06-19 更新。
+> 书籍配套代码 + 4个独立实战项目。中文优先。2026-06-21 更新。
 
 ## 仓库结构（两个独立层）
 
@@ -86,8 +86,9 @@ cd projects/gbcost-insurance-ml && python -m pytest tests/ -v   # 4549 用例
 
 ## 教程覆盖度追踪
 
-- 总览文档: `projects/docs/curriculum-coverage-analysis.md`（当前 98%）
-- 缺口: Ch7 DPO 偏好对齐（完成后 100%）
+- 总览文档: `projects/docs/curriculum-coverage-analysis.md`（当前 100%）
+- 恢复指南: `projects/docs/medical-model-restore-guide.md`（COS备份恢复）
+- 数据获取方法论: `projects/docs/data-acquisition-methodology.md`（跨领域复用）
 - 更新覆盖度时同步更新此文件，不要另建新文件
 
 ## 通用陷阱

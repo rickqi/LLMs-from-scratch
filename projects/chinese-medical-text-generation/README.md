@@ -1,12 +1,19 @@
 # 中文医学诊疗指南文本生成
 
-基于 **Qwen3-0.6B + LoRA** 的中文医学文本生成项目，两阶段训练：纯续写领域适应 → 指令微调。
+基于 **Qwen3-1.7B + LoRA** 的中文医学文本生成项目，两阶段训练：纯续写领域适应 → 指令微调。
+
+当前最佳模型: `output_17b_inst_v7` (val=1.552, 973 QA, 21.7min训练)
 
 ## 快速开始
 
 ```bash
 # 环境
 pip install torch transformers peft datasets accelerate
+
+# 推理 (最佳模型)
+python generate.py --model_dir ./output_17b_inst_v7/best_model \
+    --base_model /home/models/ms_cache/Qwen/Qwen3-1___7B \
+    --instruct --prompt "问题"
 
 # 一键运行 (样本数据 → 训练 → 推理)
 bash run.sh
