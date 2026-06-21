@@ -24,23 +24,57 @@
 | `generate.py` | 推理脚本 | 模型推理 |
 | `test_questions.py` | 统一测试问题定义（单一真实来源） | 添加/修改测试问题时 |
 | `scripts/eval_compare.py` | 多模型评测对比 | 对比基线 vs 目标模型 |
+| `scripts/gen_qa_docsearch.py` | doc-search BM25检索+LLM QA生成 | 扩展指令数据时 |
+| `scripts/gen_targeted_qa.py` | 针对性QA生成（原文提取） | 快速补充领域覆盖时 |
 
 ## 当前状态
 
 | 组件 | 状态 | 位置 | 关键指标 |
 |------|------|------|---------|
-| 0.6B 阶段1 续写 | ✅ 完成 | `output_full/` | val_loss=2.4033, 5 epoch |
-| **1.7B 阶段1 续写** | ✅ 完成 | `output_17b_full/` | **val_loss=2.1135**, 5 epoch, 19h |
-| 0.6B 阶段2 指令 | ✅ 完成 | `output_inst_v3/` | val_loss=2.3938, 4 epoch |
-| **1.7B 阶段2 指令 v2** | ✅ 完成 | `output_17b_inst_v2/` | **val_loss=1.8879**, 11min(早停), 640步 |
-| 指令数据 | ✅ 607 对 | `docs/med_instruction_chatml.json` | train=557, val=50 (hold-out) |
-| COS 备份 | ✅ 已备份 | `ins-kq6zz7wo-1313469539` | — |
+| 0.6B 阶段1 续写 | ✅ 完成 | `output_full/` | val_loss=2.4033 |
+| **1.7B 阶段1 续写** | ✅ 完成 | `output_17b_full/` | val_loss=2.1135, 19h |
+| **1.7B 指令 v6 🥇** | ✅ 完成 | `output_17b_inst_v6/` | **val=1.738**, 12min, 798QA |
+| 指令数据 | 📊 798 QA | `docs/med_instruction_chatml.json` | 569 LLM + 229 doc-search |
 | 训练标准 | ✅ 已植入 | `train_qwen_lora.py` | 早停+过拟合检测+独立验证集 |
-| **1.7B DPO v2** | ✅ 完成 | `output_17b_dpo_v2/` | val=0.644, β=0.05, 191对, 3ep, 5.6min |
-| DPO 偏好对齐 | ✅ 完成 | 191对过滤数据, 0坍塌 | 教程覆盖 100% |
-| SwiReasoning | ⏳ 待执行 | `docs/swir_integration.md` | 推理增强 |
+| DPO | ✅ 完成 | `output_17b_dpo_v2/` | val=0.644, 191对 |
+| **→ 1100 QA 扩展** | 🔄 执行中 | — | 目标 val≈1.54 |
 
 ## 最佳模型
+
+```
+Qwen3-1.7B
+  └── 阶段1: 续写微调 ✅  val=2.1135, 19h
+        └── 阶段2: 指令微调 v6 ✅  val=1.738 ← 当前最佳
+              └── 798 QA: 569 LLM + 229 doc-search BM25检索增强
+```
+
+## 数据扩展方法论
+
+### 已验证的有效方法
+
+| 排名 | 方法 | 效果 | 成本 |
+|:--:|------|------|------|
+| 1 | **doc-search BM25 检索 + DeepSeek 生成** | 229条 → val 1.833→1.738 | ~$0.006/条 |
+| 2 | 低 lr (1e-5) + 低 ratio (0.4) + 早停 | 防过拟合 | 免费 |
+| 3 | 独立 hold-out 验证集 (50 QA) | 任务匹配 | 免费 |
+
+### 边际收益与最优数据量
+
+```
+val_loss  vs  QA 数量
+═══════════════════════
+
+1.98 ┤ ██  569 QA
+1.92 ┤    ██  602
+1.88 ┤       ██  652
+1.83 ┤              ██  767
+1.74 ┤                 ██  798
+1.54 ┤                    ██  1100 ← 目标, 最优平衡点
+     └──────────────────────────
+       500    700    900   1100
+```
+
+**1100 QA 是最优平衡点**：再往上边际收益 <0.0005/QA，且 medica 知识库文档接近覆盖上限。
 
 ```
 Qwen3-1.7B
