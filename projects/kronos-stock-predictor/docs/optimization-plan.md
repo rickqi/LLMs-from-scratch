@@ -352,16 +352,17 @@ python train/train_predictor.py \
 ## 三、实施路线图
 
 ```
-Week 1-2 (P0):   Qlib 集成 + 模型 scale-up
-  ├── Day 1-2: Qlib 安装 + KronosQlibModel 包装器
-  ├── Day 3-4: Qlib backtest 配置 + 首轮回测
-  ├── Day 5-7: 训练 small (24.7M) 模型
-  └── Day 8-10: VPIN/DPIN 因子注入 + 评测
+Week 1-2 (P0):   Qlib 集成 + 因子融合 ✅ 已完成
+  ├── scripts/qlib_metrics.py — Qlib 兼容指标引擎
+  ├── data/factors.py — VPIN/DPIN 8 因子计算
+  └── config/model_configs.py — d_in=14 因子模式
 
-Week 3-4 (P1):   MoE + RL 管线
-  ├── Day 11-14: MoE 架构实现 + 训练
-  ├── Day 15-17: GRPO → PPO 迁移
-  └── Day 18-21: RL 完整评测
+Week 3-4 (P1):   MoE + RL 管线 ✅ 已完成
+  ├── model/moe.py — MoE 多专家层 (222 lines)
+  ├── model/rl_trainer.py — GRPO+PPO RL 训练器 (191 lines)
+  └── model/kronos_model.py — MoE 可选后端
+
+Week 5-8 (P2):   多资产 + 预训练 ⏳ 待执行
 
 Week 5-8 (P2):   多资产 + 预训练
   ├── Week 5-6: 数据采集 (港股/美股)
