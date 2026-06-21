@@ -132,11 +132,6 @@ def collect_backup_files(model_only: bool = False, data_only: bool = False) -> l
             if f.exists():
                 files.append(f)
                 print(f"   [日志] {log}")
-        elif not data_only:
-            for log in TRAINING_LOGS:
-                f = PROJECT_ROOT / log
-                if f.exists():
-                    files.append(f)
 
     if not data_only:
         # LoRA 权重目录
@@ -297,6 +292,98 @@ def cmd_list():
         print(f"  {size_str:>10}  {key}")
 
 
+def cmd_download(data_only: bool = False, model_only: bool = False,
+                 output_dir: str = None):
+    """从 COS 下载备份数据"""
+    client = get_cos_client()
+
+    if output_dir:
+        target = Path(output_dir)
+    else:
+        target = PROJECT_ROOT
+    target.mkdir(parents=True, exist_ok=True)
+
+    # 确定下载范围
+    prefixes = []
+    if model_only:
+        prefixes = [COS_PREFIX + "output/"]
+    elif data_only:
+        prefixes = [COS_PREFIX + "data/", COS_PREFIX + "train.log"]
+    else:
+        prefixes = [COS_PREFIX]
+
+    all_keys = []
+    for prefix in prefixes:
+        marker = ""
+        while True:
+            resp = client.list_objects(
+                Bucket=COS_BUCKET, Prefix=prefix, Marker=marker, MaxKeys=1000
+            )
+            contents = resp.get("Contents", [])
+            if contents:
+                all_keys.extend(contents)
+            if resp.get("IsTruncated") == "true":
+                marker = resp.get("NextMarker", contents[-1]["Key"])
+            else:
+                break
+
+    if not all_keys:
+        print("\nCOS 上没有找到可下载的文件。")
+        return
+
+    total_size = sum(int(obj["Size"]) for obj in all_keys)
+    print(f"\n{'='*60}")
+    print(f"从 COS 下载: cos://{COS_BUCKET}/{COS_PREFIX}")
+    print(f"文件数: {len(all_keys)}, 总大小: {total_size/1024/1024:.1f} MB")
+    print(f"目标目录: {target}")
+    print(f"{'='*60}\n")
+
+    ok = skip = fail = 0
+    downloaded_bytes = 0
+    start = time.time()
+
+    for obj in sorted(all_keys, key=lambda x: x["Key"]):
+        key = obj["Key"]
+        size = int(obj["Size"])
+        # 去除 COS 前缀 → 本地相对路径
+        rel_path = key[len(COS_PREFIX):] if key.startswith(COS_PREFIX) else key
+        local_file = target / rel_path
+        local_file.parent.mkdir(parents=True, exist_ok=True)
+
+        # 跳过已存在且大小相同的文件
+        if local_file.exists() and local_file.stat().st_size == size:
+            skip += 1
+            continue
+
+        size_str = f"{size/1024/1024:.1f}MB" if size > 1024*1024 else f"{size/1024:.0f}KB"
+        try:
+            print(f"  {size_str:>10}  {rel_path}", end="", flush=True)
+            client.download_file(
+                Bucket=COS_BUCKET, Key=key, DestFilePath=str(local_file)
+            )
+            print(" OK")
+            ok += 1
+            downloaded_bytes += size
+        except Exception as e:
+            print(f" FAIL: {e}")
+            fail += 1
+
+    elapsed = time.time() - start
+    speed = downloaded_bytes / elapsed / 1024 if elapsed > 0 else 0
+
+    print(f"\n{'='*60}")
+    parts = [f"OK: {ok}"]
+    if skip:
+        parts.append(f"SKIP: {skip}")
+    if fail:
+        parts.append(f"FAIL: {fail}")
+    parts.append(f"{elapsed:.0f}s")
+    if downloaded_bytes > 0:
+        parts.append(f"{speed:.0f}KB/s")
+    print(" | ".join(parts))
+    print(f"{'='*60}")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="COS 云备份 — 公司规章制度训练数据/模型",
@@ -309,6 +396,9 @@ def main():
   python scripts/cos_backup.py backup --incremental   # 增量备份
   python scripts/cos_backup.py backup --dry-run       # 预览
   python scripts/cos_backup.py list                   # 查看远程文件
+  python scripts/cos_backup.py download               # 全量下载
+  python scripts/cos_backup.py download --data-only   # 仅下载数据
+  python scripts/cos_backup.py download --model-only  # 仅下载模型
         """,
     )
     sub = parser.add_subparsers(dest="command")
@@ -323,6 +413,11 @@ def main():
     # list
     sub.add_parser("list", help="列出 COS 远程文件")
 
+    dp = sub.add_parser("download", help="从 COS 下载备份")
+    dp.add_argument("--model-only", action="store_true", help="仅下载 LoRA 权重")
+    dp.add_argument("--data-only", action="store_true", help="仅下载数据")
+    dp.add_argument("--output", type=str, default=None, help="下载目标目录 (默认: 项目根)")
+
     args = parser.parse_args()
 
     if args.command == "backup":
@@ -334,6 +429,12 @@ def main():
         )
     elif args.command == "list":
         cmd_list()
+    elif args.command == "download":
+        cmd_download(
+            data_only=args.data_only,
+            model_only=args.model_only,
+            output_dir=args.output,
+        )
     else:
         parser.print_help()
 
