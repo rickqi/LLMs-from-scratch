@@ -57,15 +57,27 @@ DATA_FILES = [
 
 # LoRA 权重目录（备份整个目录）
 MODEL_DIRS = [
+    "output_stage1/best_model",
+    "output_stage1/final_model",
+    "output_stage1/checkpoint",
+    "output_inst_v2/best_model",
+    "output_inst_v2/checkpoint",
     "output/best_model",
     "output/final_model",
     "output/checkpoint",
+    "output_inst/best_model",
+    "output_inst/checkpoint",
 ]
 
 # 训练日志
 TRAINING_LOGS = [
     "output/training_log.json",
+    "output_stage1/training_log.json",
+    "output_inst_v2/training_log.json",
     "train.log",
+    "train_stage1.log",
+    "train_inst_v2.log",
+    "train_inst.log",
 ]
 
 

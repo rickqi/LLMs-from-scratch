@@ -1,5 +1,49 @@
 # 更新记录
 
+## 2026-06-21: RTX 5080 完整两阶段训练
+
+### 硬件迁移
+- 训练从 AMD Radeon 890M (6.1GB) 迁移到 **NVIDIA RTX 5080 Laptop (16GB)**
+- 速度提升 ~20x (AMD seq=256 每 epoch 13h → RTX 5080 seq=512 每 epoch 41min)
+
+### Stage 1: 续写微调 (commit d6650a0)
+- 参数: max_length=512, batch_size=4, lr=2e-4, epochs=3, grad_accum=4
+- 训练样本: 36,199 (512-token chunks), 9049 batches/epoch
+- Train loss: 3.33 → 1.33 | Val loss: 2.61 → **1.49**
+- 耗时: ~2h (RTX 5080), 输出: `output_stage1/`
+
+### Stage 2: 指令微调
+- 从 `output_stage1/best_model` 续训 LoRA 权重
+- 参数: max_length=768, batch_size=2, lr=5e-5, epochs=3, instruction_ratio=0.8
+- 指令数据: 3619 QA + 续写数据混合 (190 hold-out 验证)
+- Val loss: 1.91 → **1.48** (best=1.4807)
+- 耗时: 47 min, 输出: `output_inst_v2/`, 含早停 + 过拟合检测
+- 训练脚本: `train_qwen_lora_inst.py` (从医学项目移植)
+
+### COS 备份系统 (commit d6650a0 → 本次)
+- `scripts/cos_backup.py`: 修复语法错误 + 新增 `download` 命令
+- 新增 `generate_inst.py`: ChatML 格式指令推理 (交互/单次)
+- COS 全量备份: 67 文件, 303.6 MB
+
+### 模型产出
+| 模型 | 路径 | Val Loss | 用途 |
+|------|------|:------:|------|
+| Stage 1 续写 | `output_stage1/best_model/` | 1.49 | 纯续写生成 |
+| Stage 2 指令 | `output_inst_v2/best_model/` | 1.48 | ChatML 问答 |
+
+### 使用方法
+```bash
+# 续写推理
+python generate.py --model_dir ./output_stage1/best_model --interactive
+
+# 指令推理
+python generate_inst.py --model_dir ./output_inst_v2/best_model
+
+# COS 备份/恢复
+python scripts/cos_backup.py backup     # 上传
+python scripts/cos_backup.py download   # 下载
+```
+
 ## 2026-06-16: 训练启动 + LoRA 影响分析
 
 ### 训练状态
