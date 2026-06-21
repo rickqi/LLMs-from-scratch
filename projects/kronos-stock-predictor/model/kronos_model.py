@@ -167,6 +167,9 @@ class Kronos(nn.Module, PyTorchModelHubMixin):
         resid_dropout_p: float = 0.1,
         token_dropout_p: float = 0.1,
         learn_te: bool = True,
+        use_moe: bool = False,
+        num_experts: int = 4,
+        moe_top_k: int = 2,
     ):
         super().__init__()
 
@@ -181,6 +184,9 @@ class Kronos(nn.Module, PyTorchModelHubMixin):
         self.resid_dropout_p = resid_dropout_p
         self.token_dropout_p = token_dropout_p
         self.learn_te = learn_te
+        self.use_moe = use_moe
+        self.num_experts = num_experts
+        self.moe_top_k = moe_top_k
 
         self.s1_vocab_size = 2 ** s1_bits
         self.s2_vocab_size = 2 ** s2_bits
@@ -190,11 +196,22 @@ class Kronos(nn.Module, PyTorchModelHubMixin):
         self.time_emb = TemporalEmbedding(d_model, learn_te)
         self.token_drop = nn.Dropout(token_dropout_p)
 
-        # Transformer backbone
-        self.transformer = nn.ModuleList([
-            TransformerBlock(d_model, n_heads, ff_dim, ffn_dropout_p, attn_dropout_p, resid_dropout_p)
-            for _ in range(n_layers)
-        ])
+        # Transformer backbone (with optional MoE)
+        use_moe = getattr(self, 'use_moe', False)
+        if use_moe:
+            from model.moe import MoETransformerBlock
+            num_experts = getattr(self, 'num_experts', 4)
+            moe_top_k = getattr(self, 'moe_top_k', 2)
+            self.transformer = nn.ModuleList([
+                MoETransformerBlock(d_model, n_heads, ff_dim, ffn_dropout_p, attn_dropout_p, resid_dropout_p,
+                                    use_moe=True, num_experts=num_experts, moe_top_k=moe_top_k)
+                for _ in range(n_layers)
+            ])
+        else:
+            self.transformer = nn.ModuleList([
+                TransformerBlock(d_model, n_heads, ff_dim, ffn_dropout_p, attn_dropout_p, resid_dropout_p)
+                for _ in range(n_layers)
+            ])
         self.norm = RMSNorm(d_model)
 
         # Hierarchical prediction heads

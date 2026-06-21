@@ -37,6 +37,10 @@ MODEL_CONFIGS = {
         "learn_te": True,
         "context_len": 2048,
         "params": "4.1M",
+        # MoE settings (set use_moe=True to enable)
+        "use_moe": False,
+        "num_experts": 4,
+        "moe_top_k": 2,
         "tokenizer_d_model": 64,      # Tokenizer 内部的 d_model
         "tokenizer_ff_dim": 256,
         "tokenizer_n_heads": 4,
