@@ -266,6 +266,92 @@ Stage 3: DPO 偏好对齐（380 清洗对, β=0.05, 1 epoch）
 4. **P2**: ONNX 模型导出 (生产部署加速 5x)
 5. **P2**: 评测体系强化 (RankIC per group, ⭐⭐⭐→⭐⭐⭐⭐)
 
+### 3.4.1 下一步优化详细评估
+
+| # | 优化项 | 优先级 | 投入 | 技术难度 | 预期收益 | 风险 | ROI |
+|---|--------|:---:|:---:|:---:|------|------|:---:|
+| 1 | 过拟合监控 | 🔴 P0 | 1h | 低 | Gini +0.02~0.05 | 低 | ⭐⭐⭐⭐⭐ |
+| 2 | TimeSeriesCV | 🔴 P0 | 2h | 中 | 评估可靠性 +30% | 中 | ⭐⭐⭐⭐ |
+| 3 | Optuna 自动化 | 🟠 P1 | 2h | 低 | Gini +0.03~0.05 | 低 | ⭐⭐⭐⭐ |
+| 4 | ONNX 导出 | 🟡 P2 | 1h | 低 | 推理速度 3-5x | 低 | ⭐⭐⭐ |
+| 5 | 评测强化 | 🟡 P2 | 1h | 低 | 可复现性提升 | 低 | ⭐⭐⭐ |
+
+**① 过拟合监控 (P0)** — 最高 ROI，最低风险
+
+```
+问题:  当前仅用 early_stopping=50，无法检测 train/val 发散
+参考:  Medical 项目使用 overfit_gap_threshold=0.5
+       当 |train_loss - val_loss| > 0.5 时自动停止训练
+
+实现:  在 LightGBM callback 中计算 train/val l1 gap
+       gap = |train_l1 - val_l1| / max(val_l1, 1)
+       if gap > 0.5: 停止训练 + 回滚到 best_iteration
+
+影响:  防止 1600 棵树过拟合 (chunked training 教训)
+       确保模型泛化能力，自动选择最优树数
+```
+
+**② 时间序列交叉验证 (P0)** — 评估可靠性
+
+```
+问题:  当前 Walk-forward 回测仅 4 轮 (train_months=18, test_months=3)
+       缺少系统性的时间序列 CV 评估
+参考:  Kronos 的 Walk-forward + 15 组实验对比
+
+实现:  TimeSeriesSplit(n_splits=5) 滚动窗口
+      每轮: train[end-24:end-6] → val[end-6:end]
+      指标: Gini/R²/MAE ± std across 5 folds
+
+影响:  提供模型的时序稳定性置信区间
+       识别数据漂移 (某段验证集 Gini 突降)
+```
+
+**③ Optuna 自动化调优 (P1)** — 参数空间探索
+
+```
+问题:  当前仅运行 1 次 Optuna (50 trials)
+       新增 71+ 特征后，最优参数可能变化
+参考:  Kronos 的 15 组网格搜索实验
+
+实现:  optuna.create_study(storage="sqlite:///optuna.db", load_if_exists=True)
+       搜索空间: tweedie_power [1.05-1.8], num_leaves [31-255], 
+                learning_rate [0.01-0.2], subsample [0.5-1.0],
+                colsample_bytree [0.5-1.0], 交叉特征交互
+
+影响:  Gini 提升 0.03~0.05 (从 Optuna 历史经验)
+       支持断点续传，50 trials 中断不丢失
+```
+
+**④ ONNX 导出 (P2)** — 生产加速
+
+```
+问题:  LightGBM .txt 模型需要 Python 运行时
+       推理延迟 ~10ms/case (含特征编码)
+参考:  Insurance-Claims-Prediction-ML 项目使用 ONNX 部署
+
+实现:  lightgbm→ONNX 转换 (onnxmltools)
+       推理: onnxruntime (C++ 后端, 无需 Python)
+       速度: 3-5x (batch predict), 内存: -60%
+
+影响:  生产环境可直接嵌入 .NET/Java
+       月度预测 1181 万行从 ~3min → ~40s
+```
+
+**⑤ 评测体系强化 (P2)** — 可复现性
+
+```
+问题:  评测 ⭐⭐⭐，缺 RankIC per group 和自动报告
+参考:  Kronos 的 RankIC 按板块分组评估
+
+实现:  compute_group_rank_ic(y_true, y_pred, groups)
+       按 policy_grp_name 分组计算 RankIC
+       识别 RankIC < 0 的保单组 (模型失效组)
+       + 自动化月度评测报告 (Markdown + JSON)
+
+影响:  可复现性 ⭐⭐⭐→⭐⭐⭐⭐
+       快速定位模型在哪些保单上失效
+```
+
 ---
 
 ## 四、跨项目对比矩阵
@@ -326,8 +412,6 @@ Stage 3: DPO 偏好对齐（380 清洗对, β=0.05, 1 epoch）
 | 🟡 P2 | Medical | RL 阶段 (GRPO/PPO) | ~6h | 质量进一步提升 | 待执行 |
 | 🟡 P2 | Regulations | RAG + 安全护栏 | ~4h | 输出可靠性 | 待执行 |
 | 🟡 P2 | GBCost | ONNX 导出 + 评测强化 | ~2h | 推理 5x + RankIC | 待执行 |
-| 🟢 P3 | Kronos | 多资产 + 预训练 | ~38h | 跨市场泛化 | 待执行 |
-| 🟢 P3 | All | COS 自动备份 CI | ~2h | 数据安全 | 待执行 |
 
 ### 5.2 Medical 项目完整路线（最成熟项目，优先推进）
 
