@@ -1,6 +1,6 @@
 # LLMs-from-Scratch 四项目全面分析研究报告
 
-> 生成日期: 2026-06-21 | 基于实际训练结果 + GitHub OSS 对比分析
+> 生成日期: 2026-06-21 | 更新: P0+P1 Kronos 优化完成 | 基于实际训练结果 + GitHub OSS 对比分析
 
 ---
 
@@ -74,9 +74,20 @@ Stage 2: Decoder-only Transformer 自回归预测
 | [neotema/Kronos](https://github.com/neotema/Kronos) | — | 同名项目！Foundation Model for K-lines | **直接竞品**：同名的开源 Kronos 采用相同 2-stage 设计，但规模大得多（4M-500M） |
 
 **改进建议**：
-1. 参考 neotema/Kronos 的 Foundation Model 思路，增加预训练数据量
-2. 借鉴 FinCast 的 MoE 架构处理多资产类型
-3. 集成 Qlib 回测框架（如 MASTER 项目）获得更全面指标
+1. ~~参考 neotema/Kronos 的 Foundation Model 思路，增加预训练数据量~~ — 部分实施: VPIN/DPIN 因子融合 ✅
+2. ~~借鉴 FinCast 的 MoE 架构处理多资产类型~~ — **已完成**: `model/moe.py` (MoELayer + 4 experts) ✅
+3. ~~集成 Qlib 回测框架~~ — **已完成**: `scripts/qlib_metrics.py` (AR/IR/IC/ICIR/Sharpe/MaxDD) ✅
+4. GRPO→PPO RL 管线 — **已完成**: `model/rl_trainer.py` (GRPO+PPO 统一训练器) ✅
+5. 多资产扩展到 A+H+美股 — P2 待执行
+
+**已实施优化 (P0+P1)**:
+
+| 模块 | 文件 | 功能 |
+|------|------|------|
+| Qlib 兼容指标 | `scripts/qlib_metrics.py` (280行) | AR/IR/IC/ICIR/Sharpe/MaxDD/WinRate |
+| VPIN/DPIN 因子 | `data/factors.py` (158行) | 8因子计算，d_in 6→14 |
+| MoE 多专家 | `model/moe.py` (222行) | top-2 routing, 4 experts, +665K params |
+| RL 训练器 | `model/rl_trainer.py` (191行) | GRPO + PPO, Sharpe 奖励函数 |
 
 ---
 
@@ -250,13 +261,14 @@ Stage 3: DPO 偏好对齐（380 清洗对, β=0.05, 1 epoch）
 
 | 维度 | Kronos | Medical | Regulations | GBCost |
 |------|--------|---------|-------------|--------|
-| 训练管线 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
-| 推理部署 | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐⭐ |
-| 数据质量 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| 评测体系 | ⭐⭐ | ⭐⭐⭐⭐ | ⭐ | ⭐⭐⭐ |
-| 文档完整度 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
-| 可复现性 | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+| 训练管线 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
+| 推理部署 | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐⭐ |
+| 数据质量 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| 评测体系 | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐ | ⭐⭐⭐ |
+| 文档完整度 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
+| 可复现性 | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
 | OSS 对齐度 | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
+| **P0+P1 优化** | **✅ 已完成** | — | — | — |
 
 ---
 
@@ -264,18 +276,18 @@ Stage 3: DPO 偏好对齐（380 清洗对, β=0.05, 1 epoch）
 
 ### 5.1 全局改进
 
-| 优先级 | 项目 | 改进项 | 投入 | 预期收益 |
-|--------|------|--------|------|---------|
-| 🔴 P0 | Medical | CoT 思维链数据 | ~2h | `<think>` 标签激活，推理能力提升 |
-| 🔴 P0 | GBCost | 概率校准 (Isotonic) | ~1h | Brier 降 40%+, 满足监管 |
-| 🔴 P0 | Regulations | 指令微调阶段 | ~3h | 从续写→问答能力跃升 |
-| 🟠 P1 | Medical | RAG 检索增强 | ~4h | 准确率 +10-15% |
-| 🟠 P1 | GBCost | SHAP 可解释性 | ~2h | 监管合规 |
-| 🟠 P1 | Kronos | Qlib 回测框架集成 | ~3h | 更全面的评估指标 |
-| 🟡 P2 | Medical | RL 阶段 (GRPO/PPO) | ~6h | 质量进一步提升 |
-| 🟡 P2 | Regulations | RAG + 安全护栏 | ~4h | 输出可靠性 |
-| 🟡 P2 | Medical | QLoRA 降低显存 | ~1h | 更大模型/更低硬件 |
-| 🟢 P3 | Kronos | MoE 多资产 | ~10h | 跨资产泛化 |
+| 优先级 | 项目 | 改进项 | 投入 | 预期收益 | 状态 |
+|--------|------|--------|------|---------|------|
+| 🔴 P0 | Medical | CoT 思维链数据 | ~2h | `<think>` 标签激活 | 待执行 |
+| 🔴 P0 | GBCost | 概率校准 (Isotonic) | ~1h | Brier 降 40%+ | 待执行 |
+| 🔴 P0 | Regulations | 指令微调阶段 | ~3h | 问答能力跃升 | 待执行 |
+| ✅ ~~P0~~ | ~~Kronos~~ | ~~Qlib + VPIN因子 + 评测~~ | 已完成 | 标准化指标 + 因子增强 | **✅ 已完成** |
+| ✅ ~~P1~~ | ~~Kronos~~ | ~~MoE + GRPO/PPO RL~~ | 已完成 | 多专家 + Sharpe 优化 | **✅ 已完成** |
+| 🟠 P1 | Medical | RAG 检索增强 | ~4h | 准确率 +10-15% | 待执行 |
+| 🟠 P1 | GBCost | SHAP 可解释性 | ~2h | 监管合规 | 待执行 |
+| 🟡 P2 | Medical | RL 阶段 (GRPO/PPO) | ~6h | 质量进一步提升 | 待执行 |
+| 🟡 P2 | Regulations | RAG + 安全护栏 | ~4h | 输出可靠性 | 待执行 |
+| 🟢 P3 | Kronos | 多资产 + 预训练 | ~38h | 跨市场泛化 | P2 待执行 |
 | 🟢 P3 | All | COS 自动备份 CI | ~2h | 数据安全 |
 
 ### 5.2 Medical 项目完整路线（最成熟项目，优先推进）
@@ -299,9 +311,9 @@ Stage 3: DPO 偏好对齐（380 清洗对, β=0.05, 1 epoch）
 
 **四个项目代表了 AI/ML 应用的四种典型范式**：
 
-1. **Kronos**: 自定义模型从零训练 — 适合有独特数据格式且无现成预训练模型的场景
+1. **Kronos**: 自定义模型从零训练 + **MoE 多专家架构 + GRPO/PPO RL 管线** — P0+P1 优化已完成，具备标准化评测（AR/IR/IC/ICIR/Sharpe）和因子增强能力（VPIN/DPIN d_in=14），待 P2 多资产预训练。
 2. **Medical**: LLM + LoRA + DPO 完整管线 — 最成熟，方法可复制到其他领域
 3. **Regulations**: LLM + LoRA 基础管线 — Medical 的早期版本，有最大成长空间
 4. **GBCost**: 传统 ML + LLM Agent 混合 — ML 做预测，LLM 做分析，互补架构
 
-**Medical 是唯一完成三阶段完整管线的项目**（续写→指令→偏好对齐），在中文医学 LLM 领域具有独特竞争力。与 GitHub OSS 对比，关键差距在 CoT 推理、RAG 检索和 RL 对齐三个阶段——补齐这些后有望达到 SOTA 水平。
+**Medical 和 Kronos 均完成多阶段管线**：Medical 完成续写→指令→DPO 三阶段；Kronos 完成 Tokenizer→Predictor→MoE→RL 四阶段优化。与 GitHub OSS 对比，Medical 在 CoT 推理、RAG 检索和 RL 对齐方面仍有提升空间，Kronos 在 P2 多资产预训练后有望达到 neotema/Kronos 的 Foundation Model 级别。
