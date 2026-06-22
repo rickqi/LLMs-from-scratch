@@ -197,7 +197,8 @@ def main():
     from config.model_configs import build_tokenizer_config
     tokenizer_cfg = build_tokenizer_config(args.model_size)
     if args.feature_dim is not None:
-        tokenizer_cfg["d'_in"] = args.feature_dim
+        tokenizer_cfg["d_in"] = args.feature_dim
+        config.feature_list = ["open","high","low","close","vol","amt","vpin_vol","vpin_ret","intraday_rev","dpin_stable","vol_ratio","ret_skew","vol_trend","price_mom"]
     tokenizer = KronosTokenizer(**tokenizer_cfg)
     tokenizer.to(device)
 
