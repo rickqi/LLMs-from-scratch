@@ -97,6 +97,7 @@ class StockDataset(Dataset):
         if isinstance(df, pd.DataFrame):
             win = df.iloc[start_idx:end_idx]
             x = win[self.feature_list].values.astype(np.float32)
+            x = np.nan_to_num(x, nan=0.0)
 
             # Extract or compute time features
             stamp_cols = []
@@ -112,6 +113,7 @@ class StockDataset(Dataset):
         else:
             # dict format
             feats = np.stack([np.array(df[f])[start_idx:end_idx] for f in self.feature_list], axis=-1).astype(np.float32)
+            feats = np.nan_to_num(feats, nan=0.0)
             stamps = np.stack([np.array(df.get(t, [0]*len(feats)))[start_idx:end_idx] for t in self.time_feature_list], axis=-1).astype(np.float32)
             x = feats
             x_stamp = stamps

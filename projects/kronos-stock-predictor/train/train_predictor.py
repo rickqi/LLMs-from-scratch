@@ -177,6 +177,7 @@ def main():
     parser.add_argument("--min_delta", type=float, default=0.01)
     parser.add_argument("--resume", type=str, default=None)
     parser.add_argument("--device", type=str, default=None)
+    parser.add_argument("--feature_dim", type=int, default=None, help="覆盖输入特征维度")
     args = parser.parse_args()
 
     config = Config()
@@ -195,6 +196,8 @@ def main():
     mc = get_model_config(args.model_size)
     from config.model_configs import build_tokenizer_config
     tokenizer_cfg = build_tokenizer_config(args.model_size)
+    if args.feature_dim is not None:
+        tokenizer_cfg["d'_in"] = args.feature_dim
     tokenizer = KronosTokenizer(**tokenizer_cfg)
     tokenizer.to(device)
 
